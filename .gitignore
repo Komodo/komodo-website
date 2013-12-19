@@ -1,0 +1,7 @@
+node_modules/
+out/
+src/public/vendor/
+.komodotools
+*.komodoproject
+.docpad.db
+.jshintrc

@@ -1,0 +1,21 @@
+{
+  "name": "komodo-website",
+  "version": "0.0.0",
+  "authors": [
+    "Nathan Rijksen <nathanr@activestate.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ink": "https://github.com/sapo/Ink.git#2.2.1",
+    "jquery": "~2.0.3",
+    "consolelog": "*",
+    "modernizr": "~2.7.1"
+  }
+}
