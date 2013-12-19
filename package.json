@@ -1,33 +1,9 @@
 {
-  "name": "html5-boilerplate-frontend.docpad",
-  "version": "0.1.0",
+  "name": "komodo-website.docpad",
+  "version": "0.0.0",
   "private": true,
-  "description": "HTML5 Boilerplate skeleton for DocPad. Bare essentials for building a modern website with best practices. Adds frontend plugins asset compilation.",
   "homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
-  "keywords": [
-    "docpad-skeleton",
-    "docpad",
-    "website",
-    "skeleton",
-    "html5 boilerplate",
-    "h5bp",
-    "grunt"
-  ],
-  "author": "Bevry Pty Ltd <us@bevry.me> (http://bevry.me)",
-  "maintainers": [
-    "Luke Karrys (http://lukekarrys.com)"
-  ],
-  "contributors": [
-    "Benjamin Lupton <b@lupton.cc> (http://balupton.com)",
-    "Luke Karrys (http://lukekarrys.com)"
-  ],
-  "bugs": {
-    "url": "https://github.com/lukekarrys/html5-boilerplate.docpad/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/lukekarrys/html5-boilerplate.docpad.git"
-  },
+  "author": "Nathan Rijksen <nathanr@activestate.com>",
   "engines": {
     "node": "0.8.x",
     "npm": "1.1.x"
