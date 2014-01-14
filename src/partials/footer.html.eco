@@ -1,0 +1,30 @@
+<div class="ink-grid half-top-space">
+    <div class="column-group">
+        <div class="large-20">
+            <h3>Navigation</h3>
+            <%- @getAsList(@db.footer.nav.navigation, "unstyled") %>
+        </div>
+        <div class="large-20">
+            <h3>Support</h3>
+            <%- @getAsList(@db.footer.nav.support, "unstyled") %>
+            
+            <h3>ActiveState</h3>
+            <%- @getAsList(@db.footer.nav.activestate, "unstyled") %>
+        </div>
+        <div class="large-35">
+            <%- @getAsList(@db.footer.nav.social, "unstyled inline social clearfix") %>
+
+            <h3 class="half-top-space">Communicate</h3>
+            <%- @getAsList(@db.footer.nav.communicate, "unstyled") %>
+        </div>
+        <div class="large-25">
+            <form class="ink-form">
+                <h3>Newsletter Sign Up</h3>
+                <input class="large-100 half-top-space" type="text" placeholder="Enter your E-Mail address"/>
+            </form>
+
+            <h3 class="half-top-space">Contact</h3>
+            <%- @getAsList(@db.footer.nav.contact, "unstyled") %>
+        </div>
+    </div>
+</div>

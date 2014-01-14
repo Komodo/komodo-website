@@ -9,7 +9,7 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "docpad": "~6.59.2",
+    "docpad": "~6.59.6",
     "docpad-plugin-coffeescript": "~2.2.3",
     "docpad-plugin-eco": "~2.0.3",
     "docpad-plugin-marked": "~2.1.2",
@@ -21,11 +21,12 @@
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
     "less": "~1.5.1",
-    "docpad-plugin-less": "~2.3.0",
-    "grunt-contrib-copy": "~0.3.2"
+    "docpad-plugin-less": "~2.4.0",
+    "grunt-contrib-copy": "~0.3.2",
+    "requirefresh": "~1.1.2"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.5.4"
+    "docpad-plugin-livereload": "~2.5.5"
   },
   "main": "node_modules/docpad/bin/docpad-server"
 }

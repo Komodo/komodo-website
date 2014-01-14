@@ -1,0 +1,54 @@
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: @font-base;
+    font-weight: 300;
+    font-size: 11pt;
+
+    color: @color-base-text;
+    background: @color-base-background;
+}
+
+#container
+{
+    .background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(206,206,206,1) 500px));
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -270px; /* the bottom margin is the negative value of the footer's height */
+}
+
+section[role="main"]
+{
+    /* Force float as for some reason the clearfix won't cut it */
+    float: left;
+}
+
+aside
+{
+    position: relative;
+    min-height: 100px;
+}
+
+#side-border
+{
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+    width: 6px;
+    min-height: 100%;
+
+    .background-image(  linear-gradient(right bottom,
+                        rgba(75,132,130,0.6) 0%,
+                        rgba(75,132,130,0.6) 15%,
+                        rgba(255,255,255,0) 15%,
+                        rgba(255,255,255,0) 50%,
+                        rgba(75,132,130,0.6) 50%,
+                        rgba(75,132,130,0.6) 65%,
+                        rgba(255,255,255,0) 65%));
+    background-size: 4px 4px;
+}

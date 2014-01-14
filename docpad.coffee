@@ -1,14 +1,27 @@
+_ = require 'underscore'
+{requireFresh} = require 'requirefresh'
+
 # The DocPad Configuration File
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
-	ignoreCustomPatterns: /public\/vendor/
+	regenerateDelay: 50
+
+	watchOptions:
+		catchupDelay: 0
+	
+	# live
+	ignoreCustomPatterns: /public\/vendor|src\/partials|src\/databases|\/_/
 
 	# =================================
 	# Template Data
 	# These are variables that will be accessible via our templates
 	# To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
 	templateData:
+
+		db:
+			header: requireFresh(__dirname + '/src/databases/header.coffee')
+			footer: requireFresh(__dirname + '/src/databases/footer.coffee')
 
 		# Specify some site properties
 		site:
@@ -58,7 +71,6 @@ docpadConfig = {
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
 		getGruntedStyles: ->
-			_ = require 'underscore'
 			styles = []
 			gruntConfig = require('./grunt-config.json')
 
@@ -74,7 +86,6 @@ docpadConfig = {
 				return value.replace 'out', ''
 
 		getGruntedScripts: ->
-			_ = require 'underscore'
 			scripts = []
 			gruntConfig = require('./grunt-config.json')
 			
@@ -85,12 +96,31 @@ docpadConfig = {
 					scripts = scripts.concat _.flatten _.pluck value, 'dest'
 				scripts = _.filter scripts, (value) ->
 					return value.indexOf('.min.js') > -1
-				
+
 			_.map scripts, (value) ->
 				return value.replace 'out', ''
 
+		getAsList: (ob, classAttr = "") ->
+			latestConfig = docpad.getConfig()
+			imgPath = latestConfig.templateData.site.url + "images/"
+
+			r = ['<ul class="' + (classAttr) + '">']
+			_.each ob, (value, key) ->
+
+				r.push '<li><a href="' + (value.link || value.name.toLowerCase() + ".html") +
+							'" title="' + value.name +
+							'" target="' + (value.target || "_self") + '">'
+				r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img
+				r.push '<span class="link-name">' + value.name + '</span>'
+				r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
+				r.push '</a></li>'
+
+			r.push "</ul>"
+			return r.join("");
+
 	environments:
 		development:
+			ignoreCustomPatterns: /public\/vendor/
 			templateData:
 				site:
 					url: "/"
@@ -132,7 +162,6 @@ docpadConfig = {
 
 			rootPath = docpad.config.rootPath
 			balUtil = require 'bal-util'
-			_ = require 'underscore'
 
 			# Make sure to register a grunt `default` task
 			command = ["#{rootPath}/node_modules/.bin/grunt",
