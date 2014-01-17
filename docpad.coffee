@@ -13,6 +13,8 @@ docpadConfig = {
 	# live
 	ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
 
+	env: "development"
+
 	# =================================
 	# Template Data
 	# These are variables that will be accessible via our templates
@@ -82,8 +84,9 @@ docpadConfig = {
 				styles = _.filter styles, (value) ->
 					return value && value.indexOf('.min.css') > -1
 
+			site = @site
 			_.map styles, (value) ->
-				return @site.url + value.replace 'out', ''
+				return site.url + value.replace 'out/', ''
 
 		getGruntedScripts: ->
 			scripts = []
@@ -97,12 +100,13 @@ docpadConfig = {
 				scripts = _.filter scripts, (value) ->
 					return value && value.indexOf('.min.js') > -1
 
+			site = @site
 			_.map scripts, (value) ->
-				return @site.url + value.replace 'out', ''
+				return site.url + value.replace 'out/', ''
 
 		getAsList: (ob, classAttr = "") ->
 			latestConfig = docpad.getConfig()
-			imgPath = latestConfig.templateData.site.url + "images/"
+			imgPath = @site.url + "images/"
 
 			r = ['<ul class="' + (classAttr) + '">']
 			_.each ob, (value, key) ->
