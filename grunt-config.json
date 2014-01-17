@@ -1,17 +1,23 @@
 {
   "min": {
     "js": {
-      "src": ["out/vendor/jquery/jquery.js",
+      "src": ["out/vendor/underscore/underscore.js",
+              "out/vendor/jquery/jquery.js",
+              "out/vendor/jReject/js/jquery.reject.js",
+              "out/vendor/jquery-cookie/jquery.cookie.js",
               "out/vendor/consolelog/consolelog.js",
               "out/vendor/modernizr/modernizr.js",
               "out/vendor/Ink/js/ink-all.js",
-              "out/scripts/script.js"],
+              "out/scripts/script.js",
+              "out/scripts/splash.js"],
       "dest": "out/scripts/all.min.js"
     }
   },
   "concat": {
     "css": {
-      "src": ["out/styles/ink.css",
+      "src": ["out/vendor/github-fork-ribbon-css/gh-fork-ribbon.css",
+              "out/vendor/jReject/css/jquery.reject.css",
+              "out/styles/ink.css",
               "out/styles/style.css"],
       "dest": "out/styles/all.css"
     }

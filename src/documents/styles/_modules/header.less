@@ -3,11 +3,27 @@ header
     position: relative;
     width: 100%;
     min-height: 75px;
+    color: @color-header-base;
 
     .background-image(
         linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
         url(../images/layout/header-bg.png)
     );
+
+    h1, h2, h3
+    {
+        color: @color-header-textheading;
+    }
+
+    a
+    {
+        color: @color-header-link;
+
+        &:hover
+        {
+            color: @color-header-link-hover;
+        }
+    }
 
     .wrapper
     {
@@ -16,7 +32,7 @@ header
     }
 
     /* Logo */
-    figure
+    figure#header-logo
     {
         position: relative;
         top: 8px;
@@ -35,15 +51,15 @@ header
 
         ul li a
         {
-            font-family: 'Source Sans Pro';
+            font-family: @font-header-nav;
             font-weight: 400;
             font-size: 13pt;
-            color: @color-header-link;
+            color: @color-header-nav-link;
             text-transform: uppercase;
 
             &:hover
             {
-                color: @color-header-link-hover;
+                color: @color-header-nav-link-hover;
                 text-decoration: none;
             }
         }
@@ -68,3 +84,4 @@ header
         background-size: 4px 4px;
     }
 }
+

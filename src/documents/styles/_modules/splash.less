@@ -1,0 +1,250 @@
+#splash-header
+{
+    p
+    {
+        margin: 0;
+    }
+
+    h2
+    {
+        text-shadow: 1px 1px 0 rgba(0,0,0,0.50);
+    }
+
+    #splash-screenshots
+    {
+        position: relative;
+        height: 420px;
+
+        figure
+        {
+            position: absolute;
+            z-index: 2;
+            top: -90px;
+            left: 50%;
+
+            margin: 0;
+            margin-left: -419px;
+            width: 838px;
+            height: 598px;
+
+            background-repeat: no-repeat;
+
+            .box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
+            .transform(scale(0.6));
+            .transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);
+
+            &.primary
+            {
+                .transform(scale(0.7));
+                z-index: 10;
+
+                &.on-top
+                {
+                    z-index: 5;
+                }
+            }
+
+            &.secondary
+            {
+                margin-left: -629px;
+            }
+
+            &.tertiary
+            {
+                margin-left: -210px;
+            }
+
+            &:hover
+            {
+                .transform(scale(0.7));
+                z-index: 20;
+            }
+
+            &.primary:hover
+            {
+                .transform(scale(0.8));
+            }
+
+            &.splash-windows
+            {
+                background-image: url(../images/screenshots/editor-ui-windows.png);
+            }
+
+            &.splash-linux
+            {
+                background-image: url(../images/screenshots/editor-ui-linux.png);
+            }
+
+            &.splash-osx
+            {
+                background-image: url(../images/screenshots/editor-ui-osx.png);
+            }
+        }
+    }
+
+    /* Download Buttons */
+    .button-group
+    {
+        display: inline-block;
+        .border-radius(3px);
+        .box-shadow(0 0 8px 0 rgba(0,0,0,0.3));
+
+        &:hover button
+        {
+            opacity: 0.7;
+
+            i {
+                opacity: 0.5;
+            }
+
+            &:hover
+            {
+                opacity: 1.0;
+
+                i {
+                    opacity: 1.0;
+                }
+            }
+        }
+
+        button
+        {
+            font-family: @font-impact;
+            font-size: 16pt;
+            text-transform: uppercase;
+            font-weight: 900;
+            padding: 15px;
+            letter-spacing: -1px;
+            margin-top: 0;
+            margin-bottom: 0;
+            .transition(box-shadow 0.2s, opacity 0.2s);
+            width: 200px;
+
+            span
+            {
+                font-size: 13pt;
+            }
+
+            i /* icon */
+            {
+                vertical-align: middle;
+                font-size: 24pt;
+                text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
+                margin-right: 7px;
+                .transition(opacity 0.2s);
+            }
+
+            /* Green Button - Komodo IDE */
+            &:first-child
+            {
+                .button-green();
+                .box-shadow(
+                     inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                     inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                     inset 0 -1px 0 0 rgba(0,0,0, 0.3)
+                );
+
+                &:hover
+                {
+                    .box-shadow(
+                         inset 0 1px 0 0 rgba(255,255,255, 0.3),
+                         inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                         inset 0 -1px 0 0 rgba(0,0,0, 0.3),
+                         inset 0 -1px 6px 0 rgba(0,0,0, 0.3)
+                    );
+                }
+
+                i /* icon */
+                {
+                    color: rgba(31,64,63,0.7);
+                }
+            }
+
+            /* Grey Button - Komodo Edit */
+            &:not(:first-child)
+            {
+                .button-grey();
+                .box-shadow(
+                     inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                     inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                     inset 0 -1px 0 0 rgba(0,0,0, 0.2)
+                );
+
+                &:hover
+                {
+                    .box-shadow(
+                        inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                        inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                        inset 0 -1px 0 0 rgba(0,0,0, 0.2),
+                        inset 0 -1px 6px 0 rgba(0,0,0, 0.3)
+                    );
+                }
+
+                i /* icon */
+                {
+                    color: rgba(30,30,30,0.7);
+                }
+            }
+        }
+    }
+
+    #splash-download-under
+    {
+        margin-top: -10px;
+        font-size: 8pt;
+        font-weight: bold;
+
+        & > span
+        {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+    }
+
+}
+
+#splash-features
+{
+
+    h1 a
+    {
+        font-size: 12pt;
+    }
+
+    li > strong
+    {
+        font-size: 8pt;
+        float: right;
+        display: block;
+        padding: 3px 20px 0 0;
+    }
+
+    strong
+    {
+        
+    }
+
+    .feature-column
+    {
+        p
+        {
+            margin-top: 8px;
+            font-size: 10pt;
+        }
+
+        li:not(.clearfix)
+        {
+            float: left;
+            width: 49%;
+            margin: 0;
+            padding-right: 10px;
+        }
+    }
+
+    .textured-box
+    {
+        padding-bottom: 15px;
+    }
+
+}

@@ -20,10 +20,44 @@
         <!-- Styles -->
         <%- @getBlock('styles').add(@getGruntedStyles()).toHTML() %>
 
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
     </head>
     <body>
+
+        <!-- GitHub Ribbon -->
+        <div class="github-fork-ribbon-wrapper right">
+            <div class="github-fork-ribbon">
+                <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Fork us on GitHub</a>
+            </div>
+        </div>
+
+        <!-- Under Construction Message -- TODO: Remove for production -->
+        <a href="#" id="under-construction-tape">
+            Under Construction
+        </a>
+        <div id="under-construction" class="hide-all">
+            <div class="modal-header">
+                <button class="modal-close ink-dismiss"></button>
+                <h5>Heads Up</h5>
+            </div>
+            <div class="modal-body" id="modalContent">
+                <p>
+                    This site is under construction, please bear this in mind.
+                </p>
+                <p>
+                    Please consider reporting any issues you run into on our
+                    <a href="https://github.com/Komodo/komodo-website">GitHub repository</a>.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <div class="push-right">
+                    <button class="ink-button caution ink-dismiss">Close</button>
+                </div>
+            </div>
+        </div>
+
         <div id="container">
         <header>
             <div class="wrapper">
@@ -35,7 +69,7 @@
             <div class="underline"></div>
         </header>
         
-        <div class="ink-grid half-top-space">
+        <div class="ink-grid half-top-space" id="content">
             <div class="column-group half-gutters">
                 <section role="main" class="<% if @document.sidebar: %>large-80<% else: %>large-100<% end %>">
                     <article>

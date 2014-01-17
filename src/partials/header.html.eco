@@ -8,5 +8,5 @@
     </nav>
 
     <!-- Logo -->
-    <a href="<%- @site.url %>"><figure></figure></a>
+    <a href="<%- @site.url %>"><figure id="header-logo"></figure></a>
 </div>

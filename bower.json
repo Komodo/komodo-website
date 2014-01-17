@@ -17,6 +17,10 @@
     "jquery": "~2.0.3",
     "consolelog": "*",
     "modernizr": "~2.7.1",
-    "lesshat": "~2.0.13"
+    "lesshat": "~2.0.13",
+    "github-fork-ribbon-css": "~0.1.0",
+    "jReject": "https://github.com/TurnWheel/jReject.git#~1.0.2",
+    "underscore": "~1.5.2",
+    "jquery-cookie": "~1.4.0"
   }
 }
