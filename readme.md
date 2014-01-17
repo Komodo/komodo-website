@@ -10,7 +10,7 @@ http://komodo.github.io/komodo-website/
 
 ## Getting Started
 
-* `git clone git@github.com:Komodo/komodo-website.git`
+* `git clone https://github.com/Komodo/komodo-website.git`
 * `cd komodo-website`
 * `npm update`
 * `bower install`
