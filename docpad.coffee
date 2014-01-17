@@ -11,7 +11,7 @@ docpadConfig = {
 		catchupDelay: 0
 	
 	# live
-	ignoreCustomPatterns: /public\/vendor|src\/partials|src\/databases|\/_/
+	ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
 
 	# =================================
 	# Template Data
@@ -26,7 +26,7 @@ docpadConfig = {
 		# Specify some site properties
 		site:
 			# The production url of our website
-			url: "http://komodoide.com"
+			url: "/"
 
 			# Here are some old site urls that you would like to redirect from
 			oldUrls: [
@@ -80,10 +80,10 @@ docpadConfig = {
 				_.each gruntConfig, (value, key) ->
 					styles = styles.concat _.flatten _.pluck value, 'dest'
 				styles = _.filter styles, (value) ->
-					return value.indexOf('.min.css') > -1
+					return value && value.indexOf('.min.css') > -1
 
 			_.map styles, (value) ->
-				return value.replace 'out', ''
+				return @site.url + value.replace 'out', ''
 
 		getGruntedScripts: ->
 			scripts = []
@@ -95,10 +95,10 @@ docpadConfig = {
 				_.each gruntConfig, (value, key) ->
 					scripts = scripts.concat _.flatten _.pluck value, 'dest'
 				scripts = _.filter scripts, (value) ->
-					return value.indexOf('.min.js') > -1
+					return value && value.indexOf('.min.js') > -1
 
 			_.map scripts, (value) ->
-				return value.replace 'out', ''
+				return @site.url + value.replace 'out', ''
 
 		getAsList: (ob, classAttr = "") ->
 			latestConfig = docpad.getConfig()
@@ -124,7 +124,16 @@ docpadConfig = {
 			templateData:
 				site:
 					url: "/"
+		
+		static: # ghpages
+			templateData:
+				site:
+					url: "/komodo-website/"
 
+	plugins:
+		ghpages:
+			deployRemote: 'origin'
+			deployBranch: 'gh-pages'
 
 	# =================================
 	# DocPad Events
