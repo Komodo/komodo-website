@@ -191,7 +191,7 @@ docpadConfig = {
 						balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
 					balUtil.spawn ['find', '.', '-type', 'd', '-empty', '-exec', 'rmdir', '{}', '\;'], {cwd:rootPath+'/out', output:false}, ->
 			
-			next()
+				next()
 
 			# Chain
 			@
