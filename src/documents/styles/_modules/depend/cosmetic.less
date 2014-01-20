@@ -9,8 +9,6 @@
     border: 0;
     .box-shadow(
          inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset -1px 0px 0px 0px rgba(255,255,255, 0.2),
-         inset 1px 0px 0px 0px rgba(0,0,0, 0.3),
          inset 0px -1px 0px 0px rgba(0,0,0, 0.3)
     );
     .gradient-green();
@@ -23,11 +21,22 @@
     border: 0;
     .box-shadow(
          inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset -1px 0px 0px 0px rgba(255,255,255, 0.2),
-         inset 1px 0px 0px 0px rgba(0,0,0, 0.2),
          inset 0px -1px 0px 0px rgba(0,0,0, 0.2)
     );
     .gradient-grey();
+    .transition(box-shadow 0.2s ease-in-out);
+}
+
+.button-grey, .button-green
+{
+    &:hover
+    {
+        .box-shadow(
+             inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+             inset 0px -1px 0px 0px rgba(0,0,0, 0.2),
+             inset 0 0 0 500px rgba(255,255,255,0.05)
+        );
+    }
 }
 
 .textured-box

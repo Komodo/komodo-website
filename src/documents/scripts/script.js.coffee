@@ -29,7 +29,9 @@ jQuery ->
     # Show Under Construction Warning - TODO: Remove for production
     showUcoModal = ->
         new Ink.UI.Modal( '#under-construction', {width: "400px", height: "250px", closeOnClick: true} );
+
     jq("#under-construction-tape").click showUcoModal
+    
     if not jq.cookie "ucoWarning"
         showUcoModal()
         jq.cookie "ucoWarning", true
