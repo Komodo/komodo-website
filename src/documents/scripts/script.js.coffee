@@ -28,7 +28,24 @@ jQuery ->
 
     # Show Under Construction Warning - TODO: Remove for production
     showUcoModal = ->
-        new Ink.UI.Modal( '#under-construction', {width: "400px", height: "250px", closeOnClick: true} );
+        jq('#under-construction').dialog(
+            modal: true
+            draggable: false
+            closeOnEscape: true
+            show:
+                effect: "fade"
+                duration:500
+                easing:"easeOutExpo"
+            hide:
+                effect: "drop"
+                direction: "down"
+                distance:100
+                duration:500
+                easing:"easeOutExpo"
+            open: ->
+                jq('.ui-widget-overlay').click ->
+                    jq('#under-construction').dialog "close"
+        )
 
     jq("#under-construction-tape").click showUcoModal
     

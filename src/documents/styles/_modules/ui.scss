@@ -1,0 +1,68 @@
+@import "../vendor/jquery-ui/themes/base/jquery.ui.base.css";
+
+/* Icon Wrappers */
+
+.ui-button-icon-only
+{
+    border: 0;
+    background: transparent;
+}
+
+.ui-icon
+{
+    text-indent: inherit;
+    overflow: auto;
+}
+
+.ui-button-icon-only .ui-icon
+{
+    position: inherit;
+    top: auto;
+    left: auto;
+    margin: 0;
+}
+
+/* Icon Definitions */
+
+.ui-icon-closethick
+{
+    @include icon($fa-var-times);
+}
+
+/* Dialogs */
+
+.ui-dialog
+{
+    border: 1px solid #494949;
+    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+    @include border-radius(3px);
+    @include linear-gradient(#F2F2F2, #EAEAEA);
+
+    .ui-dialog-titlebar
+    {
+        font-weight: bold;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+
+    .ui-dialog-titlebar-close
+    {
+        position: inherit;
+        top: auto;
+        right: auto;
+        float: right;
+        margin: 0 -10px 0 0;
+        padding: 0;
+    }
+
+    .ui-dialog-content
+    {
+        font-size: 10pt;
+    }
+}
+
+/* Wrapper - blackout */
+
+.ui-widget-overlay
+{
+    background: rgba(0,0,0,0.5);
+}

@@ -3,25 +3,25 @@ header
     position: relative;
     width: 100%;
     min-height: 75px;
-    color: @color-header-base;
+    color: $color-header-base;
 
-    .background-image(
+    @include background-image(
         linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
         url(../images/layout/header-bg.png)
     );
 
     h1, h2, h3
     {
-        color: @color-header-textheading;
+        color: $color-header-textheading;
     }
 
     a
     {
-        color: @color-header-link;
+        color: $color-header-link;
 
         &:hover
         {
-            color: @color-header-link-hover;
+            color: $color-header-link-hover;
         }
     }
 
@@ -51,15 +51,15 @@ header
 
         ul li a
         {
-            font-family: @font-header-nav;
+            font-family: $font-header-nav;
             font-weight: 400;
             font-size: 13pt;
-            color: @color-header-nav-link;
+            color: $color-header-nav-link;
             text-transform: uppercase;
 
             &:hover
             {
-                color: @color-header-nav-link-hover;
+                color: $color-header-nav-link-hover;
                 text-decoration: none;
             }
         }
@@ -73,7 +73,7 @@ header
         width: 100%;
         height: 6px;
 
-        .background-image(  linear-gradient(right bottom,
+        @include background-image(  linear-gradient(right bottom,
                             rgba(255,255,255,0.15) 0%,
                             rgba(255,255,255,0.15) 15%,
                             rgba(255,255,255,0) 15%,

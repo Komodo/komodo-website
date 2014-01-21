@@ -29,13 +29,13 @@
 
             background-repeat: no-repeat;
 
-            .box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
-            .transform(scale(0.6));
-            .transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);
+            @include box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
+            @include transform(scale(0.6));
+            @include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);
 
             &.primary
             {
-                .transform(scale(0.7));
+                @include transform(scale(0.7));
                 z-index: 10;
 
                 &.on-top
@@ -56,13 +56,13 @@
 
             &:hover
             {
-                .transform(scale(0.7));
+                @include transform(scale(0.7));
                 z-index: 20;
             }
 
             &.primary:hover
             {
-                .transform(scale(0.8));
+                @include transform(scale(0.8));
             }
 
             &.splash-windows
@@ -86,8 +86,8 @@
     .button-group
     {
         display: inline-block;
-        .border-radius(3px);
-        .box-shadow(0 0 8px 0 rgba(0,0,0,0.3));
+        @include border-radius(3px);
+        @include box-shadow(0 0 8px 0 rgba(0,0,0,0.3));
 
         &:hover button
         {
@@ -109,7 +109,7 @@
 
         button
         {
-            font-family: @font-impact;
+            font-family: $font-impact;
             font-size: 16pt;
             text-transform: uppercase;
             font-weight: 900;
@@ -117,7 +117,7 @@
             letter-spacing: -1px;
             margin-top: 0;
             margin-bottom: 0;
-            .transition(box-shadow 0.2s, opacity 0.2s);
+            @include transition(box-shadow 0.2s, opacity 0.2s);
             width: 200px;
 
             span
@@ -131,14 +131,14 @@
                 font-size: 24pt;
                 text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
                 margin-right: 7px;
-                .transition(opacity 0.2s);
+                @include transition(opacity 0.2s);
             }
 
             /* Green Button - Komodo IDE */
             &:first-child
             {
-                .button-green();
-                .box-shadow(
+                @include button-green;
+                @include box-shadow(
                      inset 0 1px 0 0 rgba(255,255,255, 0.2),
                      inset -1px 0 0 0 rgba(255,255,255, 0.15),
                      inset 0 -1px 0 0 rgba(0,0,0, 0.3)
@@ -146,7 +146,7 @@
 
                 &:hover
                 {
-                    .box-shadow(
+                    @include box-shadow(
                          inset 0 1px 0 0 rgba(255,255,255, 0.3),
                          inset -1px 0 0 0 rgba(255,255,255, 0.15),
                          inset 0 -1px 0 0 rgba(0,0,0, 0.3),
@@ -163,8 +163,8 @@
             /* Grey Button - Komodo Edit */
             &:not(:first-child)
             {
-                .button-grey();
-                .box-shadow(
+                @include button-grey;
+                @include box-shadow(
                      inset 0 1px 0 0 rgba(255,255,255, 0.2),
                      inset 1px 0 0 0 rgba(0,0,0, 0.2),
                      inset 0 -1px 0 0 rgba(0,0,0, 0.2)
@@ -172,7 +172,7 @@
 
                 &:hover
                 {
-                    .box-shadow(
+                    @include box-shadow(
                         inset 0 1px 0 0 rgba(255,255,255, 0.2),
                         inset 1px 0 0 0 rgba(0,0,0, 0.2),
                         inset 0 -1px 0 0 rgba(0,0,0, 0.2),
@@ -245,6 +245,7 @@
     .textured-box
     {
         padding-bottom: 15px;
+        @include textured-box;
     }
 
 }
@@ -259,9 +260,9 @@
     padding: 20px 0 5px;
     min-height: 200px;
     background-color: #254e54;
-    .background-image(url(../images/layout/blueprint-pattern.png),
+    @include background-image(url(../images/layout/blueprint-pattern.png),
                       linear-gradient(to bottom, rgba(50,102,109,1) 0%,rgba(21,53,54,1) 100%));
-    .box-shadow(inset 0px 10px 5px -10px rgba(0, 0, 0, 0.5),
+    @include box-shadow(inset 0px 10px 5px -10px rgba(0, 0, 0, 0.5),
                 inset 0px -10px 5px -10px rgba(0, 0, 0, 0.5));
 
     .addon
@@ -269,8 +270,8 @@
         padding: 5px;
         text-align: center;
         background: rgba(42,42,42,0.5);
-        .box-shadow(inset 0 0 4px 0 rgba(0,0,0,0.3));
-        .border-radius(3px);
+        @include box-shadow(inset 0 0 4px 0 rgba(0,0,0,0.3));
+        @include border-radius(3px);
 
         h3
         {
@@ -289,7 +290,7 @@
         button
         {
             margin: 15px 0;
-            .button-grey();
+            @include button-grey;
         }
     }
 }

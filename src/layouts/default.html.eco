@@ -37,25 +37,14 @@
         <a href="#" id="under-construction-tape">
             Under Construction
         </a>
-        <div id="under-construction" class="hide-all">
-            <div class="modal-header">
-                <button class="modal-close ink-dismiss"></button>
-                <h5>Heads Up</h5>
-            </div>
-            <div class="modal-body" id="modalContent">
-                <p>
-                    This site is under construction, please bear this in mind.
-                </p>
-                <p>
-                    Please consider reporting any issues you run into on our
-                    <a href="https://github.com/Komodo/komodo-website">GitHub repository</a>.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <div class="push-right">
-                    <button class="ink-button caution ink-dismiss">Close</button>
-                </div>
-            </div>
+        <div id="under-construction" title="Heads Up">
+            <p>
+                This site is under construction, please bear this in mind.
+            </p>
+            <p>
+                Please consider reporting any issues you run into on our
+                <a href="https://github.com/Komodo/komodo-website">GitHub repository</a>.
+            </p>
         </div>
 
         <div id="container">

@@ -5,6 +5,8 @@ http://komodo.github.io/komodo-website/
  * DocPad - http://docpad.org/
  * Bower - http://bower.io/
  * Grunt - http://gruntjs.com/
+ * Ruby (for SASS & Compass)
+   * Bundler
 
 # How to Use
 
@@ -13,6 +15,7 @@ http://komodo.github.io/komodo-website/
 * `git clone https://github.com/Komodo/komodo-website.git`
 * `cd komodo-website`
 * `npm update`
+* `bundle install` 
 * `bower install`
 * `docpad run`
 

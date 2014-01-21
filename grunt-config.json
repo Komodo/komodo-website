@@ -10,6 +10,7 @@
     "js": {
       "src": ["out/vendor/underscore/underscore.js",
               "out/vendor/jquery/jquery.js",
+              "out/vendor/jquery-ui/ui/jquery-ui.js",
               "out/vendor/jReject/js/jquery.reject.js",
               "out/vendor/jquery-cookie/jquery.cookie.js",
               "out/vendor/consolelog/consolelog.js",

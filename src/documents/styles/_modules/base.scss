@@ -1,3 +1,8 @@
+*
+{
+    @include box-sizing(border-box);
+}
+
 html, body
 {
     height: 100%;
@@ -5,28 +10,28 @@ html, body
 
 body
 {
-    font-family: @font-base;
+    font-family: $font-base;
     font-weight: 300;
     font-size: 11pt;
 
-    color: @color-base-text;
-    background: @color-base-background;
+    color: $color-base-text;
+    background: $color-base-background;
 }
 
 a
 {
-    .transition(color 0.2s);
-    color: @color-base-link;
+    @include transition(color 0.2s);
+    color: $color-base-link;
 
     &:hover
     {
-        color: @color-base-link-hover;
+        color: $color-base-link-hover;
     }
 }
 
 #container
 {
-    .background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(206,206,206,1) 500px));
+    @include background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(206,206,206,1) 500px));
     min-height: 100%;
     height: auto !important;
     height: 100%;
@@ -52,7 +57,8 @@ aside
 
 h1
 {
-    font-size: 16pt
+    font-size: 16pt;
+    font-weight: bold;
 }
 
 h2
@@ -67,6 +73,16 @@ h3
     font-weight: normal;
 }
 
+p
+{
+    line-height: 1.5;
+}
+
+ul, ol
+{
+    line-height: 1.4;
+}
+
 #side-border
 {
     position: absolute;
@@ -75,7 +91,7 @@ h3
     width: 6px;
     min-height: 100%;
 
-    .background-image(  linear-gradient(right bottom,
+    @include background-image(  linear-gradient(right bottom,
                         rgba(75,132,130,0.6) 0%,
                         rgba(75,132,130,0.6) 15%,
                         rgba(255,255,255,0) 15%,
@@ -103,8 +119,14 @@ h3
     text-transform: uppercase;
     border: 0 solid #000;
     border-width: 2px 0;
-    .transform(rotate(-45deg));
-    .box-shadow(0 0 4px 0 rgba(0,0,0,0.3));
+    padding: 2px;
+    @include transform(rotate(-45deg));
+    @include box-shadow(0 0 4px 0 rgba(0,0,0,0.3));
     /* Thanks http://brettrawlins.com/css-background-patterns/ */
-    .background-image(repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px));
+    @include background-image(repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px));
+}
+
+#under-construction
+{
+    display: none;
 }

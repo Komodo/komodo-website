@@ -1,37 +1,12 @@
-@font-base: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-@font-header-nav: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-@font-impact: "Open Sans", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+$font-base: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$font-header-nav: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$font-impact: "Open Sans", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 
-.button-green
-{
-    color: #FFF;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
-    border: 0;
-    .box-shadow(
-         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset 0px -1px 0px 0px rgba(0,0,0, 0.3)
-    );
-    .gradient-green();
-}
-
-.button-grey
-{
-    color: #FFF;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
-    border: 0;
-    .box-shadow(
-         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset 0px -1px 0px 0px rgba(0,0,0, 0.2)
-    );
-    .gradient-grey();
-    .transition(box-shadow 0.2s ease-in-out);
-}
-
-.button-grey, .button-green
+@mixin button-hover
 {
     &:hover
     {
-        .box-shadow(
+        @include box-shadow(
              inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
              inset 0px -1px 0px 0px rgba(0,0,0, 0.2),
              inset 0 0 0 500px rgba(255,255,255,0.05)
@@ -39,16 +14,42 @@
     }
 }
 
-.textured-box
+@mixin button-green
+{
+    color: #FFF;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
+    border: 0;
+    @include box-shadow(
+         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+         inset 0px -1px 0px 0px rgba(0,0,0, 0.3)
+    );
+    @include gradient-green;
+    @include button-hover;
+}
+
+@mixin button-grey
+{
+    color: #FFF;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
+    border: 0;
+    @include box-shadow(
+         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+         inset 0px -1px 0px 0px rgba(0,0,0, 0.2)
+    );
+    @include gradient-grey;
+    @include transition(box-shadow 0.2s ease-in-out);
+    @include button-hover;
+}
+
+@mixin textured-box
 {
     text-align: center;
-
     border-radius: 3px;
-    .background-image(
+    @include background-image(
         linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(53,100,99,0.3) 45%,rgba(53,100,99,0.3) 55%,rgba(0,0,0,0.4) 100%),
-        url(../images/layout/header-bg.png)
+        url("../images/layout/header-bg.png")
     );
-    .box-shadow(0 0 6px 1px rgba(0,0,0,0.2));
+    @include box-shadow(0 0 6px 1px rgba(0,0,0,0.2));
 
     &, h1, h2, h3
     {
