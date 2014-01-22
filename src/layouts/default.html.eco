@@ -49,8 +49,10 @@
 
         <div id="container">
             <header>
-                <div class="wrapper">
-                    <%- @partial('header.html', @) %>
+                <div class="outer">
+                    <div class="inner">
+                        <%- @partial('header.html', @) %>
+                    </div>
                 </div>
                 <% if @document.headerAppend: %>
                     <%- @partial(@document.headerAppend, @) %>
@@ -58,28 +60,21 @@
                 <div class="underline"></div>
             </header>
 
-            <% if @document.dontWrap: %>
-            <div class="half-top-space" id="content">
-                <div>
-            <% else: %>
-            <div class="ink-grid half-top-space" id="content">
-                <div class="column-group half-gutters">
-            <% end %>
-                    <section role="main" class="<% if @document.sidebar: %>large-80<% else: %>large-100<% end %>">
-                        <article>
-                            <%- @content %>
-                        </article>
-                    </section>
-                    <% if @document.sidebar: %>
-                        <aside class="large-20">
-                            <div id="side-border"></div>
-                            <%- @partial('sidebars/' + @document.sidebar, @) %>
-                        </aside>
-                    <% end %>
-                </div>
+            <div id="content" class="document-<%= @document.name.replace(/(.*)\.[^.]+$/,'$1') %>
+                                     <%= 'sidebar' unless ! @document.sidebar %>
+                                     <%= @document.classNames %>">
+                <section role="main">
+                    <article>
+                        <%- @content %>
+                    </article>
+                </section>
+                <% if @document.sidebar: %>
+                    <aside>
+                        <div id="side-border"></div>
+                        <%- @partial('sidebars/' + @document.sidebar, @) %>
+                    </aside>
+                <% end %>
             </div>
-
-            <div class="clearfix"></div>
         </div>
         
         <footer><%- @partial('footer.html', @) %></footer>

@@ -13,7 +13,6 @@
     "tests"
   ],
   "dependencies": {
-    "Ink": "https://github.com/sapo/Ink.git#2.2.1",
     "jquery": "~2.0.3",
     "consolelog": "*",
     "modernizr": "~2.7.1",

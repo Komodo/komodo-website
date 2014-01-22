@@ -1,5 +1,6 @@
 footer
 {
+    padding-top: 15px;
     margin: 0 !important;
     width: 100%;
     height: 270px;
@@ -10,12 +11,40 @@ footer
 
     color: $color-footer-text;
 
+    .columns
+    {
+        @include outer-container;
+
+        & > .navigation
+        {
+            @include span-columns(2);
+        }
+
+        & > .support
+        {
+            @include shift(0.5);
+            @include span-columns(2);
+        }
+
+        & > .communicate
+        {
+            @include shift(0.5);
+            @include span-columns(3);
+        }
+
+        & > .newsletter
+        {
+            @include span-columns(4);
+        }
+    }
+
     h3
     {
         font-size: 12pt;
         color: $color-footer-text;
         font-weight: bold;
         text-shadow: 1px 1px 0 rgba(0,0,0,0.50);
+        margin-bottom: 10px;
     }
 
     ul
@@ -32,16 +61,21 @@ footer
             font-style: italic;
         }
 
-        &.social li
+        &.social
         {
-            &:not(:last-child)
-            {
-                margin-right: 3px;
-            }
+            @include inline-block-list;
 
-            span.link-name
+            li
             {
-                display: none;
+                &:not(:last-child)
+                {
+                    margin-right: 3px;
+                }
+
+                span.link-name
+                {
+                    display: none;
+                }
             }
         }
 
@@ -53,6 +87,7 @@ footer
         a
         {
             color: $color-footer-link;
+            text-decoration: none;
 
             &:hover
             {
@@ -61,8 +96,13 @@ footer
         }
     }
 
-    .ink-form input[type="text"],
-    .ink-form input[type="text"]:focus
+    div > * + h3
+    {
+        margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="text"]:focus
     {
 
         &,&:focus
@@ -71,8 +111,8 @@ footer
             font-weight: 400;
             padding: 4px;
             border: 1px solid #262626;
-            border-radius: 2px;
-            @include box-shadow(inset 1px 1px 6px 0 rgba(0,0,0,0.3), 1px 1px 0 0 rgba(255,255,255,0.2));
+            @include border-radius(2px);
+            @include box-shadow(inset 1px 1px 6px 0 rgba(0,0,0,1), 1px 1px 0 0 rgba(255,255,255,0.2));
             @include background-image(linear-gradient(to bottom, rgba(227,227,227,1) 0%,rgba(255,255,255,1) 100%));
         }
 

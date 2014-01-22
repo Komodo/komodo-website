@@ -2,8 +2,15 @@ $font-base: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Gra
 $font-header-nav: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 $font-impact: "Open Sans", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 
-@mixin button-hover
+%button
 {
+    padding: 4px;
+    color: #FFF;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
+    border: 0;
+    cursor: pointer;
+    @include transition(box-shadow 0.2s ease-in-out);
+    @include border-radius(2px);
     &:hover
     {
         @include box-shadow(
@@ -14,34 +21,27 @@ $font-impact: "Open Sans", Impact, Haettenschweiler, "Franklin Gothic Bold", Cha
     }
 }
 
-@mixin button-green
+%button-green
 {
-    color: #FFF;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
-    border: 0;
+    @extend %button;
     @include box-shadow(
          inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
          inset 0px -1px 0px 0px rgba(0,0,0, 0.3)
     );
     @include gradient-green;
-    @include button-hover;
 }
 
-@mixin button-grey
+%button-grey
 {
-    color: #FFF;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
-    border: 0;
+    @extend %button;
     @include box-shadow(
          inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
          inset 0px -1px 0px 0px rgba(0,0,0, 0.2)
     );
     @include gradient-grey;
-    @include transition(box-shadow 0.2s ease-in-out);
-    @include button-hover;
 }
 
-@mixin textured-box
+%textured-box
 {
     text-align: center;
     border-radius: 3px;

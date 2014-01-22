@@ -1,3 +1,5 @@
+@import "compass/typography/lists";
+
 header
 {
     position: relative;
@@ -25,17 +27,21 @@ header
         }
     }
 
-    .wrapper
+    .outer
     {
         background: rgba(0,0,0,0.2);
         min-height: 75px;
+
+        .inner
+        {
+            @include outer-container;
+        }
     }
 
     /* Logo */
     figure#header-logo
     {
-        position: relative;
-        top: 8px;
+        margin-top: 8px;
         width: 284px;
         height: 59px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
@@ -44,25 +50,34 @@ header
     nav
     {
         position: relative;
-        top: 15px;
+        margin-top: 24px;
 
         float: right;
         margin-left: 300px;
 
-        ul li a
+        ul
         {
-            font-family: $font-header-nav;
-            font-weight: 400;
-            font-size: 13pt;
-            color: $color-header-nav-link;
-            text-transform: uppercase;
+            @include inline-block-list;
 
-            &:hover
+            li a
             {
-                color: $color-header-nav-link-hover;
+                display: block;
+                font-family: $font-header-nav;
+                font-weight: 400;
+                font-size: 13pt;
+                color: $color-header-nav-link;
+                text-transform: uppercase;
                 text-decoration: none;
+                padding: 0 1em;
+
+                &:hover
+                {
+                    color: $color-header-nav-link-hover;
+                    text-decoration: none;
+                }
             }
         }
+
     }
 
     .underline

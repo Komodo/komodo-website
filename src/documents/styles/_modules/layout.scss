@@ -1,0 +1,93 @@
+#container
+{
+    @include background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(206,206,206,1) 500px));
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -270px; /* the bottom margin is the negative value of the footer's height */
+}
+
+#content
+{
+    padding: 25px 0;
+    margin-bottom: 270px;
+
+    &:not(.no-grid){
+        @include outer-container;
+
+        &.sidebar
+        {
+            & > section
+            {
+                @include span-columns(9);
+            }
+
+            & > aside
+            {
+                @include span-columns(3);
+            }
+        }
+
+        &:not(.sidebar)
+        {
+            & > section
+            {
+                @include span-columns(12);
+            }
+        }
+    }
+}
+
+aside
+{
+    position: relative;
+    min-height: 100px;
+
+    #side-border
+    {
+        position: absolute;
+        left: -15px;
+        bottom: 0;
+        width: 6px;
+        min-height: 100%;
+
+        @include background-image(  linear-gradient(right bottom,
+                            rgba(75,132,130,0.6) 0%,
+                            rgba(75,132,130,0.6) 15%,
+                            rgba(255,255,255,0) 15%,
+                            rgba(255,255,255,0) 50%,
+                            rgba(75,132,130,0.6) 50%,
+                            rgba(75,132,130,0.6) 65%,
+                            rgba(255,255,255,0) 65%));
+        background-size: 4px 4px;
+    }
+}
+
+/* Under Construction Tape - TODO: Remove for production */
+#under-construction-tape
+{
+    display: block;
+    position: fixed;
+    z-index: 100;
+    top: 100px;
+    left: -80px;
+    width: 400px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18pt;
+    text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    text-transform: uppercase;
+    border: 0 solid #000;
+    border-width: 2px 0;
+    padding: 2px;
+    @include transform(rotate(-45deg));
+    @include box-shadow(0 0 4px 0 rgba(0,0,0,0.3));
+    /* Thanks http://brettrawlins.com/css-background-patterns/ */
+    @include background-image(repeating-linear-gradient(135deg, #ebd007, #ebd007 30px, #555 30px, #555 60px));
+}
+
+#under-construction
+{
+    display: none;
+}

@@ -1,21 +1,21 @@
-<div class="content-center top-space" id="splash-header">
+<div id="splash-header">
     <h2>IDE for Professional Developers</h2>
-    <div id="splash-description" class="quarter-top-space">
+    <div id="splash-description">
         <p>Komodo is the professional IDE for major web languages, including Python,
         PHP, Ruby, Perl, HTML, CSS and JavaScript. </p>
         <p>You'll enjoy developing faster with Komodo IDE's complete set of tools.</p>
     </div>
 
-    <div id="splash-screenshots" class="top-space">
+    <div id="splash-screenshots">
         <figure class="splash-windows secondary"></figure>
         <figure class="splash-osx primary"></figure>
         <figure class="splash-linux tertiary"></figure>
     </div>
 
     <h2>DOWNLOAD</h2>
-    <div class="button-group quarter-top-space">
-        <button class="ink-button"><i class="icon-download"></i> K<span>omodo</span> IDE</button>
-        <button class="ink-button"><i class="icon-download"></i> K<span>omodo</span> Edit</button>
+    <div id="splash-download-buttons">
+        <button><i class="icon icon-download"></i> K<span>omodo</span> IDE</button>
+        <button><i class="icon icon-download"></i> K<span>omodo</span> Edit</button>
     </div>
     <div id="splash-download-under">
         <span>
@@ -24,10 +24,8 @@
         <span>
             Open-Source - <a href="#">View GitHub</a>
         </span>
-        <div class="quarter-top-space">
+        <div>
             Version 8.5.3, Mac OS X 64bit <!-- TODO: Dynamically detect -->
         </div>
     </div>
-
-    <div class="clearfix vertical-space"></div>
 </div>

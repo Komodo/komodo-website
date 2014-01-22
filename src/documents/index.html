@@ -2,144 +2,145 @@
 layout: default
 title: Komodo IDE & Edit
 headerAppend: header-splash
-dontWrap: true
+classNames: no-grid
 ---
 
-<div id="splash-features" class="ink-grid">
+<div id="splash-features">
     <h1>Komodo Features <!--<a href="#">view more</a>--></h1>
 
-    <div class="column-group quarter-top-space">
+    <!-- Column 1 - Feature List -->
+    <div id="splash-feature-column">
+        <ul>
+            <li>
+                <h2>Advanced Editor</h2>
+                <p>
+                    Code folding, split view, multi-window editing, smart syntax
+                    checking and highlighting. Powerful snippets and macros, toolbox
+                    and more productivity-enhancing features.
+                </p>
+            </li>
+            <li>
+                <h2>Code Intelligence</h2>
+                <p>
+                    Auto-complete and calltips. Fast code navigation with Code
+                    Browser. <strong>IDE ONLY:</strong> Transform projects easily
+                    with Code Refactoring - rename class members, extract methods.
+                </p>
+            </li>
+            <li class="clearfix"></li>
+            <li>
+                <strong>IDE ONLY</strong>
+                <h2>Integrated Tools</h2>
+                <p>
+                    Version control integration for Subversion, Mercurial, Git,
+                    Perforce, Bazaar, CVS. Integrated unit testing. Database
+                    Explorer. Code Profiling for Python and PHP.
+                </p>
+            </li>
+            <li>
+                <h2>Clean User Interface</h2>
+                <p>
+                    Sleek UI frees up editing space. Undock and move side panes.
+                    Scroll code via minimap. Navigate previous files with
+                    Breadcrumbs. Sort and group open files.
+                </p>
+            </li>
+            <li class="clearfix"></li>
+            <li>
+                <strong>IDE ONLY</strong>
+                <h2>Team Capabilities</h2>
+                <p>
+                    Edit with multiple users simultaneously with Code Collaboration.
+                    Deploy and debug to a shared cloud environment with Stackato
+                    Platform-as-a-Service (PaaS).
+                </p>
+            </li>
+            <li>
+                <h2>Cross-Platform</h2>
+                <p>
+                    Identical features for Mac, Linux and Windows. User-based
+                    license: you can install on as many computers and platforms as
+                    you use.
+                </p>
+            </li>
+            <li class="clearfix"></li>
+            <li>
+                <strong>IDE ONLY</strong>
+                <h2>Graphical Debugging</h2>
+                <p>
+                    Debug PHP, Python, Perl, Ruby, Tcl, Node.js. Debug locally and
+                    remotely. Configure breakpoints. Create and debug regular
+                    expressions with Rx Toolkit.
+                </p>
+            </li>
+            <li>
+                <h2>Add-Ons and Customization</h2>
+                <p>
+                    Vi and emacs key bindings. Install Add-ons for specific
+                    features. Sync settings across multiple machines. Customize
+                    preferences and skins. Includes Abyss, new dark UI theme.
+                </p>
+            </li>
+        </ul>
+    </div>
 
-        <!-- Column 1 - Feature List -->
-        <div class="large-65 feature-column">
-            <ul class="unstyled">
-                <li>
-                    <h2>Advanced Editor</h2>
-                    <p>
-                        Code folding, split view, multi-window editing, smart syntax
-                        checking and highlighting. Powerful snippets and macros, toolbox
-                        and more productivity-enhancing features.
-                    </p>
-                </li>
-                <li>
-                    <h2>Code Intelligence</h2>
-                    <p>
-                        Auto-complete and calltips. Fast code navigation with Code
-                        Browser. <strong>IDE ONLY:</strong> Transform projects easily
-                        with Code Refactoring - rename class members, extract methods.
-                    </p>
-                </li>
-                <li class="clearfix"></li>
-                <li>
-                    <strong>IDE ONLY</strong>
-                    <h2>Integrated Tools</h2>
-                    <p>
-                        Version control integration for Subversion, Mercurial, Git,
-                        Perforce, Bazaar, CVS. Integrated unit testing. Database
-                        Explorer. Code Profiling for Python and PHP.
-                    </p>
-                </li>
-                <li>
-                    <h2>Clean User Interface</h2>
-                    <p>
-                        Sleek UI frees up editing space. Undock and move side panes.
-                        Scroll code via minimap. Navigate previous files with
-                        Breadcrumbs. Sort and group open files.
-                    </p>
-                </li>
-                <li class="clearfix"></li>
-                <li>
-                    <strong>IDE ONLY</strong>
-                    <h2>Team Capabilities</h2>
-                    <p>
-                        Edit with multiple users simultaneously with Code Collaboration.
-                        Deploy and debug to a shared cloud environment with Stackato
-                        Platform-as-a-Service (PaaS).
-                    </p>
-                </li>
-                <li>
-                    <h2>Cross-Platform</h2>
-                    <p>
-                        Identical features for Mac, Linux and Windows. User-based
-                        license: you can install on as many computers and platforms as
-                        you use.
-                    </p>
-                </li>
-                <li class="clearfix"></li>
-                <li>
-                    <strong>IDE ONLY</strong>
-                    <h2>Graphical Debugging</h2>
-                    <p>
-                        Debug PHP, Python, Perl, Ruby, Tcl, Node.js. Debug locally and
-                        remotely. Configure breakpoints. Create and debug regular
-                        expressions with Rx Toolkit.
-                    </p>
-                </li>
-                <li>
-                    <h2>Add-Ons and Customization</h2>
-                    <p>
-                        Vi and emacs key bindings. Install Add-ons for specific
-                        features. Sync settings across multiple machines. Customize
-                        preferences and skins. Includes Abyss, new dark UI theme.
-                    </p>
-                </li>
-            </ul>
-        </div>
-
-        <div class="large-5"></div>
-
-        <!-- Column 3 - "Sidebar" -->
-        <div class="large-30 textured-box">
-            <h1 class="half-top-space">New in 8.5</h1>
-            <ul class="unstyled push-center">
-                <li>Code Refactoring</li>
-                <li>Multiple Selections</li>
-                <li>Breadcrumbs Navigation</li>
-                <li>Sort and Group Open Files</li>
-                <li>Abyss Dark Theme</li>
-                <li>Unified Menu Button</li>
-                <li>CodeIntel Out-Of-Process</li>
-                <li>Performance Improvements</li>
-                <li>Python Symbols, PHP 5.5 Support</li>
-                <li>Updated Platform</li>
-            </ul>
-        </div>
+    <!-- Column 3 - "Sidebar" -->
+    <div id="splash-features-sidebar">
+        <h1>New in 8.5</h1>
+        <ul>
+            <li>Code Refactoring</li>
+            <li>Multiple Selections</li>
+            <li>Breadcrumbs Navigation</li>
+            <li>Sort and Group Open Files</li>
+            <li>Abyss Dark Theme</li>
+            <li>Unified Menu Button</li>
+            <li>CodeIntel Out-Of-Process</li>
+            <li>Performance Improvements</li>
+            <li>Python Symbols, PHP 5.5 Support</li>
+            <li>Updated Platform</li>
+        </ul>
     </div>
 </div>
 
-<div id="splash-addons" class="vertical-space">
-    <div class="ink-grid">
+<div id="splash-addons">
+    <div class="inner">
         <h1>Featured Addons</h1>
 
-        <div class="column-group quarter-top-space bottom-space">
-            <div class="large-30 addon">
-                <h3>Abyss Skin</h3>
-                <figure></figure>
-                <p>
-                    Komodo with a touch of darkness.<br>
-                    A dark skin for Komodo
-                </p>
-                <button class="ink-button">Download</button>
-            </div>
-            <div class="large-5"></div>
-            <div class="large-30 addon">
-                <h3>Abyss Skin</h3>
-                <figure></figure>
-                <p>
-                    Komodo with a touch of darkness.<br>
-                    A dark skin for Komodo
-                </p>
-                <button class="ink-button">Download</button>
-            </div>
-            <div class="large-5"></div>
-            <div class="large-30 addon">
-                <h3>Abyss Skin</h3>
-                <figure></figure>
-                <p>
-                    Komodo with a touch of darkness.<br>
-                    A dark skin for Komodo
-                </p>
-                <button class="ink-button">Download</button>
-            </div>
+        <div>
+            <h2>Abyss Skin</h2>
+            <figure></figure>
+            <p>
+                Komodo with a touch of darkness.<br>
+                A dark skin for Komodo
+            </p>
+            <button>Download</button>
         </div>
+        <div>
+            <h2>Abyss Skin</h2>
+            <figure></figure>
+            <p>
+                Komodo with a touch of darkness.<br>
+                A dark skin for Komodo
+            </p>
+            <button>Download</button>
+        </div>
+        <div>
+            <h2>Abyss Skin</h2>
+            <figure></figure>
+            <p>
+                Komodo with a touch of darkness.<br>
+                A dark skin for Komodo
+            </p>
+            <button>Download</button>
+        </div>
+        <div>
+            <h2>Abyss Skin</h2>
+            <figure></figure>
+            <p>
+                Komodo with a touch of darkness.<br>
+                A dark skin for Komodo
+            </p>
+            <button>Download</button>
+        </div>
+    </div>
 </div>

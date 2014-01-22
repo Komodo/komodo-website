@@ -1,12 +1,9 @@
-<div class="ink-grid">
+<!-- Navigation -->
+<nav>
+    <ul>
+        <%- @getAsList(@db.header.navigation, "unstyled") %>
+    </ul>
+</nav>
 
-    <!-- Navigation -->
-    <nav class="ink-navigation pull-right">
-        <ul class="menu horizontal">
-            <%- @getAsList(@db.header.navigation, "unstyled") %>
-        </ul>
-    </nav>
-
-    <!-- Logo -->
-    <a href="<%- @site.url %>"><figure id="header-logo"></figure></a>
-</div>
+<!-- Logo -->
+<a href="<%- @site.url %>"><figure id="header-logo"></figure></a>
