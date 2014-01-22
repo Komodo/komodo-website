@@ -1,0 +1,70 @@
+#splash-features
+{
+    @include outer-container;
+
+    h1 a
+    {
+        font-size: 12pt;
+    }
+
+    li > strong
+    {
+        font-size: 8pt;
+        float: right;
+        display: block;
+        padding: 3px 20px 0 0;
+    }
+
+    strong
+    {
+
+    }
+
+    #splash-feature-column
+    {
+        @include span-columns(8.5);
+
+        h2
+        {
+            margin: 10px 0 5px;
+        }
+
+        strong
+        {
+            font-weight: bold;
+        }
+
+        p
+        {
+            font-size: 10pt;
+        }
+
+        li:not(.clearfix)
+        {
+            float: left;
+            width: 49%;
+            margin: 0;
+            padding-right: 40px;
+        }
+    }
+
+    #splash-features-sidebar
+    {
+        padding: 15px 0;
+        text-align: center;
+        @extend %textured-box;
+        @include span-columns(3.5);
+
+        h1
+        {
+            margin-bottom: 15px;
+        }
+
+        ul
+        {
+            display: inline-block;
+            margin: auto;
+        }
+    }
+
+}

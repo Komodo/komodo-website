@@ -134,6 +134,11 @@ docpadConfig = {
 				site:
 					url: "/komodo-website/"
 
+
+	collections:
+		splash: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:'splash'}, [basename: 1])
+
 	plugins:
 		ghpages:
 			deployRemote: 'origin'

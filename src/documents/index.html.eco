@@ -1,0 +1,10 @@
+---
+layout: default
+title: Komodo IDE & Edit
+headerAppend: header-splash
+classNames: no-grid
+---
+
+<% for document in @getCollection('splash').findAll().toJSON(): %>
+<%- document.source %>
+<% end %>

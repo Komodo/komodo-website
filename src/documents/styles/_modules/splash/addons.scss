@@ -1,0 +1,76 @@
+#splash-addons
+{
+    &, h1, h2, h3
+    {
+        color: #F0F0F0;
+    }
+
+    position: relative;
+    margin: 25px 0;
+    padding: 20px 0 35px;
+    min-height: 200px;
+    background-color: #254e54;
+    @include background-image(url(../images/layout/blueprint-pattern.png),
+                      linear-gradient(to bottom, rgba(50,102,109,1) 0%,rgba(21,53,54,1) 100%));
+    @include box-shadow(inset 0px 10px 5px -10px rgba(0, 0, 0, 0.5),
+                inset 0px -10px 5px -10px rgba(0, 0, 0, 0.5));
+
+    .inner
+    {
+        @include outer-container;
+
+        & > div
+        {
+            padding: 5px;
+            text-align: center;
+            background: rgba(42,42,42,0.5);
+            @include box-shadow(inset 0 0 4px 0 rgba(0,0,0,0.3));
+            @include border-radius(3px);
+            @include span-columns(3);
+
+            h2
+            {
+                font-weight: bold;
+                margin: 10px 0 15px;
+            }
+
+            p
+            {
+                font-size: 11pt;
+                line-height: 1.3;
+            }
+
+            figure
+            {
+                background: rgba(255,255,255,0.1);
+                width: 95%;
+                height: 150px;
+                margin: 0 auto 15px;
+            }
+
+            button
+            {
+                @extend %button-grey;
+                @extend %button-grey-text-inset;
+                font-weight: bold;
+
+                margin: 15px 0;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    & > button
+    {
+        position: absolute;
+        width: 150px;
+        bottom: -15px;
+        left: 50%;
+        margin-left: -75px;
+        text-transform: uppercase;
+        font-size: 14pt;
+        font-weight: bold;
+        @extend %button-green;
+        @extend %button-green-text-inset;
+    }
+}
