@@ -36,6 +36,22 @@
     }
 }
 
+/* Links */
+
+@mixin link($color, $color-hover)
+{
+    @include transition(color 0.2s ease-in-out, border 0.3s ease-in-out);
+    color: $color;
+    text-decoration: none;
+    border-bottom: 1px solid fade-out($color-hover, 1);
+
+    &:hover
+    {
+        color: $color-hover;
+        border-bottom: 1px solid fade-out($color-hover, 0.4);
+    }
+}
+
 /* Class Helpers */
 
 /* Clearfix by - http://nicolasgallagher.com/micro-clearfix-hack/ */

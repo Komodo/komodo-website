@@ -49,15 +49,8 @@
 
     a
     {
-        @include transition(color 0.2s);
-        color: $color-base-link;
-        text-decoration: none;
-
-        &:hover
-        {
-            color: $color-base-link-hover;
-            text-decoration: underline;
-        }
+        @include link($color-base-link, $color-base-link-hover);
+        display: inline;
     }
 }
 

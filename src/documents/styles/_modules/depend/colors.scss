@@ -1,7 +1,7 @@
 $color-base-text:           #404040;
 $color-base-background:     rgba(206,206,206,1);
 $color-base-link:           #2E7A75;
-$color-base-link-hover:     lighten($color-base-link, 5%);
+$color-base-link-hover:     darken($color-base-link, 10%);
 
 $color-footer-text:         #CECECE;
 $color-footer-link:         #98bbbd;

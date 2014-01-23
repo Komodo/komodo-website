@@ -86,13 +86,7 @@ footer
 
         a
         {
-            color: $color-footer-link;
-            text-decoration: none;
-
-            &:hover
-            {
-                color: darken($color-footer-link, 20%);
-            }
+            @include link($color-footer-link, darken($color-footer-link, 20%));
         }
     }
 

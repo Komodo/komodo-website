@@ -1,0 +1,117 @@
+#splash-news
+{
+    @include outer-container;
+
+    h1
+    {
+        padding-bottom: 15px;
+    }
+
+    #splash-news-blogs
+    {
+        @include span-columns(5);
+
+        dl
+        {
+            font-size: 10pt;
+            line-height: 1.5;
+
+            dt
+            {
+                font-weight: 400;
+            }
+
+            dd:not(last-child)
+            {
+                padding-bottom: 10px;
+                font-size: 9pt;
+                color: lighten($color-base-text, 10%);
+            }
+        }
+    }
+
+    #splash-news-testimonials
+    {
+        blockquote
+        {
+            position: relative;
+            line-height: 1.2;
+            text-align: center;
+            padding: 0 30px 10px;
+            font-size: 16pt;
+            font-style: italic;
+        }
+
+        span
+        {
+            display: block;
+            text-align: center;
+            font-size: 9pt;
+        }
+
+        %quotes
+        {
+            position: absolute;
+            font-size: 30pt;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        blockquote:after
+        {
+            @extend %quotes;
+            content: "”";
+            right: 0;
+            bottom: -10px;
+        }
+
+        blockquote:before
+        {
+            @extend %quotes;
+            content: "“";
+            left: 0;
+            top: 0;
+        }
+    }
+
+    #splash-news-testimonials,
+    #splash-news-screencasts
+    {
+        @include span-columns(7);
+        margin-right: 0;
+    }
+
+    #splash-news-screencasts
+    {
+        margin-top: 25px;
+        text-align: center;
+
+        h1
+        {
+            text-align: left;
+        }
+
+        @include outer-container;
+
+        a
+        {
+            @include span-columns(4);
+
+            display: inline-block;
+            margin: 0 auto 15px;
+            font-weight: bold;
+
+            figure
+            {
+                display: block;
+                width: 95%;
+                height: 0;
+                padding-bottom: 60%;
+                margin-bottom: 5px;
+                background-size: cover;
+
+                @include box-shadow(0 0 6px 0 rgba(0,0,0,0.1));
+            }
+        }
+    }
+}

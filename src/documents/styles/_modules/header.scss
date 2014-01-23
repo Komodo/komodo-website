@@ -19,12 +19,7 @@ header
 
     a
     {
-        color: $color-header-link;
-
-        &:hover
-        {
-            color: $color-header-link-hover;
-        }
+        @include link($color-header-link, $color-header-link-hover);
     }
 
     .outer
@@ -69,11 +64,13 @@ header
                 text-transform: uppercase;
                 text-decoration: none;
                 padding: 0 1em;
+                border: 0;
 
                 &:hover
                 {
                     color: $color-header-nav-link-hover;
                     text-decoration: none;
+                    border: 0;
                 }
             }
         }

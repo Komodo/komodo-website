@@ -6,7 +6,7 @@
     }
 
     position: relative;
-    margin: 25px 0;
+    margin: 25px 0 45px;
     padding: 20px 0 35px;
     min-height: 200px;
     background-color: #254e54;
@@ -42,9 +42,10 @@
 
             figure
             {
-                background: rgba(255,255,255,0.1);
+                background-size: cover;
                 width: 95%;
-                height: 150px;
+                height: 0;
+                padding-bottom: 55%;
                 margin: 0 auto 15px;
             }
 

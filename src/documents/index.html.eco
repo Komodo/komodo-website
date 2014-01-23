@@ -6,5 +6,5 @@ classNames: no-grid
 ---
 
 <% for document in @getCollection('splash').findAll().toJSON(): %>
-<%- document.source %>
+<%- document.contentRendered %>
 <% end %>

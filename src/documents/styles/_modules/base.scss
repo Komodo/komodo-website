@@ -20,13 +20,7 @@ body
 
 a
 {
-    @include transition(color 0.2s);
-    color: $color-base-link;
-
-    &:hover
-    {
-        color: $color-base-link-hover;
-    }
+    @include link($color-base-link, $color-base-link-hover);
 }
 
 h1
