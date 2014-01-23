@@ -77,32 +77,28 @@ docpadConfig = {
 			gruntConfig = require('./grunt-config.json')
 
 			if docpad.getEnvironment() is "development"
-				styles = gruntConfig.concat.css.src
+				styles = _.flatten gruntConfig.cssmin.combine.files
 			else
-				_.each gruntConfig, (value, key) ->
-					styles = styles.concat _.flatten _.pluck value, 'dest'
-				styles = _.filter styles, (value) ->
-					return value && value.indexOf('.min.css') > -1
+				minify = gruntConfig.cssmin.minify
+				_.each minify.src, (value) ->
+					styles.push minify.cwd + value.replace(/.css$/, minify.ext)
 
 			site = @site
 			_.map styles, (value) ->
-				return site.url + value.replace 'out/', ''
+				site.url + value.replace 'out/', ''
 
 		getGruntedScripts: ->
 			scripts = []
 			gruntConfig = require('./grunt-config.json')
-			
+
 			if docpad.getEnvironment() is "development"
-				scripts = gruntConfig.min.js.src
+				scripts = _.flatten gruntConfig.uglify.scripts.files
 			else
-				_.each gruntConfig, (value, key) ->
-					scripts = scripts.concat _.flatten _.pluck value, 'dest'
-				scripts = _.filter scripts, (value) ->
-					return value && value.indexOf('.min.js') > -1
+				scripts = _.keys gruntConfig.uglify.scripts.files
 
 			site = @site
 			_.map scripts, (value) ->
-				return site.url + value.replace 'out/', ''
+				site.url + value.replace 'out/', ''
 
 		getAsList: (ob, classAttr = "") ->
 			latestConfig = docpad.getConfig()
@@ -187,15 +183,7 @@ docpadConfig = {
 
 			# Execute
 			balUtil.spawn command, {cwd:rootPath,output:true}, ->
-				unless docpad.getEnvironment() is "development"
-					src = []
-					gruntConfig = require './grunt-config.json'
-					_.each gruntConfig, (value, key) ->
-						src = src.concat _.flatten _.pluck value, 'src'
-					_.each src, (value) ->
-						balUtil.spawn ['rm', value], {cwd:rootPath, output:false}, ->
-					balUtil.spawn ['find', '.', '-type', 'd', '-empty', '-exec', 'rmdir', '{}', '\;'], {cwd:rootPath+'/out', output:false}, ->
-			
+				# TODO: Cleanup?
 				next()
 
 			# Chain

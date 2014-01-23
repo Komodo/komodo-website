@@ -1,37 +1,52 @@
 {
   "copy": {
-    "dist": {
-      "files": {
-        "out/vendor/": "src/public/vendor/**"
-      }
+    "main": {
+      "expand": true,
+        "cwd": "src/public/",
+        "src": "vendor/**",
+        "dest": "out/"
     }
   },
-  "min": {
-    "js": {
-      "src": ["out/vendor/underscore/underscore.js",
-              "out/vendor/jquery/jquery.js",
-              "out/vendor/jquery-ui/ui/jquery-ui.js",
-              "out/vendor/jReject/js/jquery.reject.js",
-              "out/vendor/jquery-cookie/jquery.cookie.js",
-              "out/vendor/consolelog/consolelog.js",
-              "out/vendor/modernizr/modernizr.js",
-              "out/scripts/script.js",
-              "out/scripts/splash.js"],
-      "dest": "out/scripts/all.min.js"
-    }
-  },
-  "concat": {
-    "css": {
-      "src": ["out/vendor/github-fork-ribbon-css/gh-fork-ribbon.css",
-              "out/vendor/jReject/css/jquery.reject.css",
-              "out/styles/style.css"],
-      "dest": "out/styles/all.css"
+
+  "uglify": {
+    "scripts": {
+        "files": {
+          "out/scripts/all.min.js": [
+            "out/vendor/underscore/underscore.js",
+            "out/vendor/jquery/jquery.js",
+            "out/vendor/jquery-ui/ui/jquery-ui.js",
+            "out/vendor/jReject/js/jquery.reject.js",
+            "out/vendor/jquery-cookie/jquery.cookie.js",
+            "out/vendor/consolelog/consolelog.js",
+            "out/vendor/modernizr/modernizr.js",
+            "out/scripts/script.js",
+            "out/scripts/splash.js"
+          ]
+        },
+        "options": {
+          "mangle": true,
+          "compress": true
+        }
     }
   },
   "cssmin": {
-    "all": {
-      "src": ["out/styles/all.css"],
-      "dest": "out/styles/all.min.css"
+    "combine": {
+      "files": {
+        "out/styles/all.css": [
+          "out/vendor/github-fork-ribbon-css/gh-fork-ribbon.css",
+          "out/vendor/jReject/css/jquery.reject.css",
+          "out/vendor/jquery-ui/themes/base/jquery.ui.base.css",
+          "out/styles/style.css"
+        ]
+      }
+    },
+    "minify": {
+      "expand": true,
+      "cwd": "out/styles/",
+      "src": ["all.css"],
+      "dest": "out/styles/",
+      "ext": ".min.css",
+      "report": "gzip"
     }
   }
 }
