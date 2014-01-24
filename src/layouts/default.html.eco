@@ -75,10 +75,10 @@
                     </aside>
                 <% end %>
             </div>
+            <div id="footer_push"></div>
         </div>
-        
         <footer><%- @partial('footer.html', @) %></footer>
-
+        
         <!-- Scripts -->
         <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
     </body>
