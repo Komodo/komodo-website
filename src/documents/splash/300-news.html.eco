@@ -20,11 +20,11 @@
     </div>
     <div id="splash-news-screencasts">
         <h1>Screencasts</h1>
-        <% for num in [1..6]: %>
-        <a href="#">
-            <figure style="background-image: url(http://dummyimage.com/220x135/b3b3b3/ffffff.png&text=Screencast)"></figure>
-            <span>Komodo 8.5 Overview</span>
-        </a>
-        <% end %>
+            <% for k,item of @_.first(@youtubeFeedItems, 6): %>
+            <a href="<%= @site.url %>screencasts/<%= item.id %>.html">
+                <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
+                <span><%= item.title %></span>
+            </a>
+            <% end %>
     </div>
 </div>

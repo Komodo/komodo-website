@@ -2,12 +2,6 @@ jQuery ->
     jq = jQuery
     main = jq "section[role=main]"
 
-    # Force Sidebar Min Height
-    sidebar = jq "aside"
-    if sidebar.length and sidebar.height() < main.height()
-        sidebar.css "min-height", main.height()
-
-
     # Reject Older Browsers
     reject = ["msie5", "msie6", "msie7", "msie8", "firefox1", "firefox2",
               "firefox3", "konqueror", "safari2", "safari3"]

@@ -1,6 +1,6 @@
 #container
 {
-    @include background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0%,rgba(206,206,206,1) 500px));
+    @include background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0px,rgba(206,206,206,1) 330px,rgba(206,206,206,1) 660px,rgba(237,237,237,1) 1000px));
     
     min-height: 100%;
     height: auto !important;

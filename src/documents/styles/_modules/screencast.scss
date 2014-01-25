@@ -1,0 +1,70 @@
+.screencast-outer
+{
+    .screencast-inner
+    {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        padding-top: 35px;
+        height: 0;
+
+        iframe
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+        }
+    }
+}
+
+.document-screencast
+{
+    h1
+    {
+        margin: 25px 0 10px;
+    }
+
+    hr
+    {
+        margin: 15px 0;
+    }
+}
+
+aside.sidebar-screencasts
+{
+    text-align: center;
+    a
+    {
+        width: 90%;
+        display: block;
+        margin: 0 auto 15px;
+        font-weight: bold;
+        font-size: 10pt;
+        line-height: 1.3;
+
+        span
+        {
+            display: block;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        figure
+        {
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            margin-bottom: 5px;
+            background-size: cover;
+            background-position: 0 -20px;
+
+            @include box-shadow(0 0 6px 0 rgba(0,0,0,0.1));
+        }
+    }
+}

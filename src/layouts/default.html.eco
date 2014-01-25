@@ -60,7 +60,7 @@
                 <div class="underline"></div>
             </header>
 
-            <div id="content" class="document-<%= @document.name.replace(/(.*)\.[^.]+$/,'$1') %>
+            <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>
                                      <%= 'sidebar' unless ! @document.sidebar %>
                                      <%= @document.classNames %>">
                 <section role="main">
@@ -69,7 +69,7 @@
                     </article>
                 </section>
                 <% if @document.sidebar: %>
-                    <aside>
+                    <aside class="sidebar-<%= @document.sidebar %>">
                         <div id="side-border"></div>
                         <%- @partial('sidebars/' + @document.sidebar, @) %>
                     </aside>

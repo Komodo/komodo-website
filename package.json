@@ -24,11 +24,13 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-cli": "~0.1.12"
+    "grunt-cli": "~0.1.12",
+    "fast-feed": "0.0.12",
+    "request": "~2.33.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.5.6",
-    "docpad-plugin-ghpages": "~2.4.2"
+    "docpad-plugin-ghpages": "~2.4.3"
   },
   "main": "node_modules/docpad/bin/docpad-server"
 }

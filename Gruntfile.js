@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   var gruntConfig = require('./grunt-config.json');
   grunt.initConfig(gruntConfig);
 
-  grunt.registerTask('default', Object.keys(gruntConfig));
+  grunt.registerTask('static', Object.keys(gruntConfig));
+  grunt.registerTask('production', Object.keys(gruntConfig));
   grunt.registerTask('development', 'copy');
 };
