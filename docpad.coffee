@@ -24,13 +24,9 @@ docpadConfig = {
 		_: require('underscore')
 
 		db:
-			config: requireFresh(__dirname + '/src/databases/config.coffee')
 			header: requireFresh(__dirname + '/src/databases/header.coffee')
 			footer: requireFresh(__dirname + '/src/databases/footer.coffee')
 			placeholders: requireFresh(__dirname + '/src/databases/placeholders.coffee')
-
-		# Dirtyyy.. TODO: clean up
-		youtubeFeedItems: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
 
 		# Specify some site properties
 		site:
@@ -131,6 +127,11 @@ docpadConfig = {
 			templateData:
 				site:
 					url: "/"
+				youtubeFeeds:
+					screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
+			plugins:
+				youtubefeed:
+					dontParse: ['screencasts']
 		
 		static: # ghpages
 			templateData:
@@ -146,6 +147,14 @@ docpadConfig = {
 		ghpages:
 			deployRemote: 'origin'
 			deployBranch: 'gh-pages'
+
+		youtubefeed:
+			feeds: [
+				name: "screencasts"
+				url: "http://gdata.youtube.com/feeds/api/playlists/PLItFfEv4fl3uW7T8-BC_Wb0HXZoH__pIs"
+				outFilename: "screencast.html.eco"
+				outPath: "screencasts"
+			]
 
 	# =================================
 	# DocPad Events
@@ -174,90 +183,6 @@ docpadConfig = {
 					res.redirect(newUrl+req.url, 301)
 				else
 					next()
-
-		generateBefore: (opts,next) ->
-			if docpad.getEnvironment() is "development"
-				next()
-				return @
-
-			try
-				latestConfig = docpad.getConfig()
-
-				# Generate Youtube Feed Data
-				feedParser = require 'fast-feed'
-				request = require 'request'
-
-				request(latestConfig.templateData.db.config.youtube.screencasts, (error, response, body) ->
-					items = feedParser.parse(body).items
-					_.each items, (item) -> item.id = item.link.match(/watch\?v=([a-z0-9]*?)\&/i)[1]
-					latestConfig.templateData.youtubeFeedItems = items
-					next()
-				)
-			catch e
-				console.log e
-
-			@
-
-		# Generate Screencast pages
-		# TODO: Cleanup and turn into plugin
-		renderBeforePriority: 550
-		renderBefore: (opts,next) ->
-			try
-				docpad = @docpad
-				{collection,templateData} = opts
-				database = docpad.getDatabase()
-
-				latestConfig = docpad.getConfig()
-				templateDoc = docpad.getCollection('documents').findOne(
-					filename: "screencast.html.eco"
-					relativeOutDirPath: "screencasts"
-				)
-
-				feed = latestConfig.templateData.youtubeFeedItems
-
-				renderFile = (index) ->
-					item = feed[index]
-
-					doc = docpad.cloneModel templateDoc
-
-					filename = item.id + ".html"
-					attr =
-						basenameOrig: doc.get "basename"
-						title: item.title
-						outFilename: filename
-						outPath: doc.get("outDirPath") + "/" + filename
-						fullPath: null # treat it as a virtual document
-						relativePath: doc.get("relativeDirPath") + "/" + filename
-						filename: filename
-						outFilename: filename
-
-					doc.set attr
-					doc.set "screencast", item
-					doc.setMeta attr
-
-					doc.normalize (err) ->
-						# Check
-						return _next(err) if err
-
-						# Add it to the database
-						collection.add(doc)
-						database.add(doc)
-
-						_next()
-
-				renderedItems = 0
-				_next = (err) ->
-					if err or renderedItems == feed.length
-						next(err)
-					else
-						renderFile(renderedItems++)
-
-				_next()
-
-			catch e
-				console.log e
-
-			@
 
 		# Write After
 		# Used to minify our assets with grunt

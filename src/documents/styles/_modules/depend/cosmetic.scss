@@ -2,6 +2,13 @@ $font-base: "Merriweather Sans", "Helvetica Neue", Helvetica, Arial, "Lucida Gra
 $font-header-nav: "Source Sans Pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 $font-impact: "Open Sans", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
 
+*
+{
+    /* Fix bold looking text on OSX */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 %button
 {
     padding: 4px;

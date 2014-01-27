@@ -2,14 +2,14 @@
 layout: default
 sidebar: screencasts
 ---
-<% if @document.screencast: %>
+<% if @document.feedItem: %>
     <div class="screencast-outer">
         <div class="screencast-inner">
-            <iframe width="560" height="315" src="http://www.youtube.com/embed/<%= @document.screencast.id %>?vq=hd720&modestbranding=1&rel=0&showinfo=0&theme=light&color=white&autohide=0" frameborder="0"></iframe>
+            <iframe width="560" height="315" src="http://www.youtube.com/embed/<%= @document.feedItem.id %>?vq=hd720&modestbranding=1&rel=0&showinfo=0&theme=light&color=white&autohide=0" frameborder="0"></iframe>
         </div>
     </div>
-    <h1><%= @document.screencast.title %></h1>
-    <p><%= @document.screencast.content %></p>
+    <h1><%= @document.feedItem.title %></h1>
+    <p><%= @document.feedItem.content %></p>
 
     <hr>
 

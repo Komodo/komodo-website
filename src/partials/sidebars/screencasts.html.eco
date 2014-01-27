@@ -1,4 +1,4 @@
-<% for k,item of @_.first(@youtubeFeedItems, 6): %>
+<% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
 <a href="<%= @site.url %>screencasts/<%= item.id %>.html">
     <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
     <span><%= item.title %></span>
