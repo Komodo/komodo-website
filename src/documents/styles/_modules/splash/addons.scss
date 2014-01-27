@@ -48,25 +48,31 @@
                 margin: 0 auto 15px;
             }
 
-            button
+            a
             {
                 @extend %button-grey;
                 @extend %button-grey-text-inset;
+                display: inline-block;
                 font-weight: bold;
+                font-size: 9pt;
 
                 margin: 15px 0;
+                padding: 8px;
                 text-transform: uppercase;
             }
         }
     }
 
-    & > button
+    & > a
     {
+        display: inline-block;
+        text-align: center;
         position: absolute;
         width: 150px;
         bottom: -15px;
         left: 50%;
         margin-left: -75px;
+        padding: 8px 0;
         text-transform: uppercase;
         font-size: 14pt;
         font-weight: bold;

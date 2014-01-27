@@ -1,0 +1,18 @@
+<div id="splash-addons">
+    <div class="inner">
+        <h1>Featured Addons</h1>
+
+        <% for k,addon of @_.first(@db.addons.featured, 4): %>
+        <div>
+            <h2><%= addon.name %></h2>
+            <figure style="background-image: url('<%= @site.url %>images/addons/<%= addon.img %>')"></figure>
+            <p>
+                <%- addon.description %>
+            </p>
+            <a href="<%= addon.link %>">Download</a>
+        </div>
+        <% end %>
+    </div>
+
+    <a href="http://community.activestate.com/addons">Find More</a>
+</div>

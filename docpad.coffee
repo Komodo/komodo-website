@@ -26,6 +26,7 @@ docpadConfig = {
 		db:
 			header: requireFresh(__dirname + '/src/databases/header.coffee')
 			footer: requireFresh(__dirname + '/src/databases/footer.coffee')
+			addons: requireFresh(__dirname + '/src/databases/addons.coffee')
 			placeholders: requireFresh(__dirname + '/src/databases/placeholders.coffee')
 
 		# Specify some site properties
