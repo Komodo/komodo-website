@@ -40,7 +40,7 @@
 
 @mixin link($color, $color-hover)
 {
-    @include transition(color 0.2s ease-in-out, border 0.3s ease-in-out);
+    @include transition(color 0.2s ease-in-out, border 0.1s ease-in-out);
     color: $color;
     text-decoration: none;
     border-bottom: 1px solid fade-out($color-hover, 1);
