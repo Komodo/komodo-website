@@ -1,5 +1,3 @@
-http://komodo.github.io/komodo-website/
-
 # Requirements
 
  * DocPad - http://docpad.org/
