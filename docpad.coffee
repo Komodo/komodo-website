@@ -9,6 +9,11 @@ docpadConfig = {
 
 	watchOptions:
 		catchupDelay: 0
+
+	documentsPaths: [
+		'documents',
+		'pages'
+	]
 	
 	# live
 	ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
