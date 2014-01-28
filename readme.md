@@ -21,7 +21,7 @@ http://komodo.github.io/komodo-website/
 
 ## Testing Production
 
-`docpad run --env static`
+`docpad run --env production`
 
 ## Deploy to GitHub
 
