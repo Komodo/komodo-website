@@ -88,6 +88,9 @@ module.exports = (BasePlugin) ->
 
             doc = @docpad.cloneModel @templateDoc
 
+            fs = require 'fs' # TODO: Properly implement this
+            return next() if fs.existsSync doc.get("outDirPath") + "/" + filename
+
             filename = item.id + ".html"
             attr =
                 basenameOrig: doc.get "basename"
