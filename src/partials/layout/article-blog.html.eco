@@ -1,0 +1,15 @@
+<article class="<%= 'normalize' unless @document.dontNormalize %>">
+    <h1><%= @document.title %></h1>
+    <span class="blog-title-under">
+        by <a href="#"><%= @document.author %></a> / tags
+        <% for tag in @document.meta.tags: %>
+        <a href="<%= @site.url %>blog/tags.html#<%= tag %>"><%= tag %></a>
+        <% end %>
+        / <%= @document.humanDate %>
+    </span>
+    
+    <%- @content %>
+    <% if @document.comments: %>
+    <%- @partial('comments.html', @) %>
+    <% end %>
+</article>

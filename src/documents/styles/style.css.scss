@@ -1,3 +1,6 @@
+---
+referencesOthers: true
+---
 @import "_modules/depend/variables";
 
 @import "compass/reset";
@@ -18,6 +21,9 @@
 @import "_modules/footer";
 
 @import "_modules/screencast";
+@import "_modules/blog";
+
+@import "_modules/highlightjs";
 
 html, body
 {

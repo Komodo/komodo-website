@@ -1,9 +1,0 @@
-<!-- Navigation -->
-<nav>
-    <ul>
-        <%- @getAsList(@db.header.navigation, "unstyled") %>
-    </ul>
-</nav>
-
-<!-- Logo -->
-<a href="<%- @site.url %>"><figure id="header-logo"></figure></a>

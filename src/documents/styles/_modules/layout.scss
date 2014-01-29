@@ -1,6 +1,8 @@
 #container
 {
-    @include background-image(linear-gradient(to bottom, rgba(237,237,237,1) 0px,rgba(206,206,206,1) 330px,rgba(206,206,206,1) 660px,rgba(237,237,237,1) 1000px));
+    $c1: $color-base-gradient-1;
+    $c2: $color-base-gradient-2;
+    @include background-image(linear-gradient(to bottom, $c1 0px,$c2 330px,$c2 660px,$c1 1000px));
     
     min-height: 100%;
     height: auto !important;
@@ -19,12 +21,12 @@
         {
             & > section
             {
-                @include span-columns(9);
+                @include span-columns(8);
             }
 
             & > aside
             {
-                @include span-columns(3);
+                @include span-columns(4);
             }
         }
 

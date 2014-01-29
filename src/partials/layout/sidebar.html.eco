@@ -1,0 +1,4 @@
+<aside class="sidebar-<%= @document.sidebar %>">
+    <div id="side-border"></div>
+    <%- @partial('sidebars/' + @document.sidebar, @) %>
+</aside>

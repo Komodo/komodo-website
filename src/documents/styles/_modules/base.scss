@@ -51,4 +51,61 @@ ul, ol
     line-height: 1.4;
 }
 
+.normalize
+{
+    @import "normalize";
 
+    ol
+    {
+        list-style-type: decimal;
+
+        & > li
+        {
+            margin-left: 15px;
+        }
+    }
+
+    em
+    {
+        font-style: italic;
+    }
+
+    table
+    {
+        @include border-radius(3px);
+        display: inline-block;
+        margin: 10px;
+        background: #FEFEFE;
+        border: 1px solid rgb(193, 193, 193);
+        
+        th, td
+        {
+            padding: 8px;
+        }
+
+        th
+        {
+            background: rgba(0,0,0,0.05);
+            border-bottom: 2px solid rgb(193, 193, 193);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) td
+        {
+            background: rgba(0,0,0,0.02);
+        }
+
+        tr:not(:last-child) td
+        {
+            border-bottom: 1px solid rgb(193, 193, 193);
+        }
+    }
+
+    hr
+    {
+        height: 0;
+        border: 0;
+        border-top: 1px solid rgba(0,0,0,0.3);
+        border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+}

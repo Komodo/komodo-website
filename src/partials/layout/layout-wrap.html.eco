@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title><%= @getPreparedTitle() %></title>
+        <meta name="description" content="<%= @getPreparedDescription() %>" />
+        <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+
+        <!-- Meta -->
+        <%- @getBlock('meta').toHTML() %>
+
+        <!-- Styles -->
+        <%- @getBlock('styles').add(@getGruntedStyles()).toHTML() %>
+
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic,800' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <%- @partial('layout/container-prepend.html', @) %>
+
+        <div id="container">
+            <%- @partial('layout/header.html', @) %>
+
+            <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>
+                                     <%= 'sidebar' unless ! @document.sidebar %>
+                                     <%= @document.classNames %>">
+                <section role="main">
+                <%- @partial('layout/' + (@document.articleTemplate || 'article') + '.html', @) %>
+                </section>
+                <% if @document.sidebar: %>
+                    <%- @partial('layout/sidebar.html', @) %>
+                <% end %>
+            </div>
+            <div id="footer_push"></div>
+        </div>
+        <%- @partial('layout/footer.html', @) %>
+
+        <!-- Scripts -->
+        <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
+    </body>
+</html>

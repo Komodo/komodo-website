@@ -9,10 +9,9 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "docpad": "~6.61.0",
+    "docpad": "~6.63.0",
     "docpad-plugin-coffeescript": "~2.2.3",
     "docpad-plugin-eco": "~2.0.3",
-    "docpad-plugin-marked": "~2.2.0",
     "docpad-plugin-partials": "~2.8.1",
     "docpad-plugin-stylus": "~2.5.0",
     "docpad-plugin-text": "~2.3.2",
@@ -24,7 +23,11 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-cli": "~0.1.12"
+    "grunt-cli": "~0.1.12",
+    "docpad-plugin-moment": "~2.0.2",
+    "docpad-plugin-tags": "~2.0.7",
+    "docpad-plugin-robotskirt": "~2.0.3",
+    "docpad-plugin-coffeekup": "~2.2.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.5.6",

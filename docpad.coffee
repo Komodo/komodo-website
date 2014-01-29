@@ -110,13 +110,14 @@ docpadConfig = {
 				site.url + value.replace 'out/', ''
 
 		getAsList: (ob, classAttr = "") ->
+			site = @site
 			latestConfig = docpad.getConfig()
 			imgPath = @site.url + "images/"
 
 			r = ['<ul class="' + (classAttr) + '">']
 			_.each ob, (value, key) ->
 
-				r.push '<li><a href="' + (value.link || value.name.toLowerCase() + ".html") +
+				r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase() + ".html") +
 							'" title="' + value.name +
 							'" target="' + (value.target || "_self") + '">'
 				r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img
@@ -126,6 +127,11 @@ docpadConfig = {
 
 			r.push "</ul>"
 			return r.join("");
+
+		getExcerpt: (text) ->
+			Parser = new DOMParser
+			Parser.parseFromString(text)
+			Parser.querySelector
 
 	environments:
 		development:
@@ -148,6 +154,8 @@ docpadConfig = {
 	collections:
 		splash: ->
 			@getCollection('documents').findAllLive({relativeOutDirPath:'splash'}, [basename: 1])
+		blog: ->
+			@getCollection('documents').findAllLive({relativeOutDirPath:/blog[\/\\]\w+/}, [date: -1])
 
 	plugins:
 		ghpages:
@@ -161,6 +169,23 @@ docpadConfig = {
 				outFilename: "screencast.html.eco"
 				outPath: "screencasts"
 			]
+		sass:
+			requireLibraries: [
+				'compass'
+				'compass-normalize'
+			]
+		moment:
+			formats: [
+				{raw: 'date', format: 'MMMM Do, YYYY', formatted: 'humanDate'}
+			]
+		robotskirt:
+			highlight: (code, lang)->
+				tags = { '&': '&amp;', '<': '&lt;', '>': '&gt;' }
+				code = code.replace /[&<>]/g, (tag) -> tags[tag] || tag
+				if lang
+					return '<pre><code class="hljs ' + lang + '">' + code + '</code></pre>';
+				else
+					return '<pre><code>' + code + '</code></pre>';
 
 	# =================================
 	# DocPad Events

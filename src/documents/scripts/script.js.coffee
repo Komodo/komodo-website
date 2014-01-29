@@ -20,6 +20,9 @@ jQuery ->
             safari:
                 text: 'Safari'
 
+    # Highlight Code
+    jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
+
     # Show Under Construction Warning - TODO: Remove for production
     showUcoModal = ->
         jq('#under-construction').dialog(
