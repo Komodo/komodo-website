@@ -13,6 +13,7 @@
         <title><%= @getPreparedTitle() %></title>
         <meta name="description" content="<%= @getPreparedDescription() %>" />
         <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+        <link rel="icon"  type="image/png" href="<%= @site.url %>images/favicon.png">
 
         <!-- Meta -->
         <%- @getBlock('meta').toHTML() %>
