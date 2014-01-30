@@ -4,7 +4,7 @@
             <!-- Navigation -->
             <nav>
                 <ul>
-                    <%- @getAsList(@db.header.navigation, "unstyled") %>
+                    <%- @getAsList(@db.header().navigation, "unstyled") %>
                 </ul>
             </nav>
 

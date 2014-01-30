@@ -2,20 +2,20 @@
     <div class="columns">
         <div class="navigation">
             <h3>Navigation</h3>
-            <%- @getAsList(@db.footer.nav.navigation) %>
+            <%- @getAsList(@db.footer().nav.navigation) %>
         </div>
         <div class="support">
             <h3>Support</h3>
-            <%- @getAsList(@db.footer.nav.support) %>
+            <%- @getAsList(@db.footer().nav.support) %>
 
             <h3>ActiveState</h3>
-            <%- @getAsList(@db.footer.nav.activestate) %>
+            <%- @getAsList(@db.footer().nav.activestate) %>
         </div>
         <div class="communicate">
-            <%- @getAsList(@db.footer.nav.social, "social") %>
+            <%- @getAsList(@db.footer().nav.social, "social") %>
 
             <h3>Communicate</h3>
-            <%- @getAsList(@db.footer.nav.communicate) %>
+            <%- @getAsList(@db.footer().nav.communicate) %>
         </div>
         <div class="newsletter">
             <form>
@@ -24,7 +24,7 @@
             </form>
 
             <h3>Contact</h3>
-            <%- @getAsList(@db.footer.nav.contact) %>
+            <%- @getAsList(@db.footer().nav.contact) %>
         </div>
     </div>
 </footer>

@@ -26,10 +26,16 @@ docpadConfig = {
         _: _
 
         db:
-            header: requireFresh(__dirname + '/src/databases/header.coffee')
-            footer: requireFresh(__dirname + '/src/databases/footer.coffee')
-            addons: requireFresh(__dirname + '/src/databases/addons.coffee')
-            placeholders: requireFresh(__dirname + '/src/databases/placeholders.coffee')
+            header: -> @require('header')
+            footer: -> @require('footer')
+            addons: -> @require('addons')
+            testimonials: -> @require('testimonials')
+            placeholders: -> @require('placeholders')
+
+            cache: {}
+            require: (name) ->
+                return @cache[name] if @cache[name]
+                requireFresh(__dirname + '/src/databases/' + name + '.coffee')
 
         site:
             url: "/"

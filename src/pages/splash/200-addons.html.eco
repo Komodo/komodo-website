@@ -2,7 +2,7 @@
     <div class="inner">
         <h1>Featured Addons</h1>
 
-        <% for k,addon of @_.first(@db.addons.featured, 4): %>
+        <% for k,addon of @_.first(@db.addons().featured, 4): %>
         <div>
             <h2><%= addon.name %></h2>
             <figure style="background-image: url('<%= @site.url %>images/addons/<%= addon.img %>')"></figure>
