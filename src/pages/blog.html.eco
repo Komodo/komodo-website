@@ -5,26 +5,4 @@ layout: default
 sidebar: blog
 ---
 
-<% for document in @getCollection('blog').findAll().toJSON(): %>
-<div class="entry">
-    <h1>
-        <a href="<%= @site.url %><%= document.relativeOutPath %>">
-            <%= document.title %>
-        </a>
-    </h1>
-    <span class="blog-title-under">
-        by <a href="#"><%= document.author %></a> / tags
-        <% for tag in document.meta.tags: %>
-        <a href="<%= @site.url %>blog/tags.html#<%= tag %>"><%= tag %></a>
-        <% end %>
-        / <%= document.humanDate %>
-    </span>
-    <p>
-        <img src="<%= @site.url %>images/authors/<%= document.author %>.jpg">
-        <%- document.excerpt %>
-    </p>
-    <p>
-        <a href="<%= @site.url %><%= document.relativeOutPath %>">Read More...</a>
-    </p>
-</div>
-<% end %>
+<%- @partial('blog-list.html', @) %>

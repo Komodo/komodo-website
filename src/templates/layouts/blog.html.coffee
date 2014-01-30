@@ -5,4 +5,4 @@ defaultMeta =
     comments: true
 
 @document = @_.extend defaultMeta, @document
-text @partial('layout/layout-wrap.html', @)
+text @partial('layouts/layout-wrap.html', @)

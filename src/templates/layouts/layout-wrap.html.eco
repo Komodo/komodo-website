@@ -26,16 +26,16 @@
     </head>
     <body>
 
-        <%- @partial('layout/container-prepend.html', @) %>
+        <%- @partial('layouts/partials/container-prepend.html', @) %>
 
         <div id="container">
-            <%- @partial('layout/header.html', @) %>
+            <%- @partial('layouts/partials/header.html', @) %>
 
             <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>
                                      <%= 'sidebar' unless ! @document.sidebar %>
                                      <%= @document.classNames %>">
                 <section role="main">
-                <%- @partial('layout/' + (@document.articleTemplate || 'article') + '.html', @) %>
+                <%- @partial('articles/' + (@document.articleTemplate || 'article') + '.html', @) %>
                 </section>
                 <% if @document.sidebar: %>
                 <aside class="sidebar-<%= @document.sidebar %> normalize">
@@ -46,7 +46,7 @@
             </div>
             <div id="footer_push"></div>
         </div>
-        <%- @partial('layout/footer.html', @) %>
+        <%- @partial('layouts/partials/footer.html', @) %>
 
         <!-- Scripts -->
         <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>

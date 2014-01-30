@@ -14,7 +14,11 @@ docpadConfig = {
 		'documents',
 		'pages'
 	]
-	
+
+	layoutsPaths: [  # default
+		'templates/layouts'
+	]
+
 	# live
 	ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
 
@@ -186,6 +190,8 @@ docpadConfig = {
 					return '<pre><code class="hljs ' + lang + '">' + code + '</code></pre>';
 				else
 					return '<pre><code>' + code + '</code></pre>';
+		partials:
+			partialsPath: 'templates'
 
 	# =================================
 	# DocPad Events
