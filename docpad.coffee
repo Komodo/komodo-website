@@ -1,246 +1,175 @@
 _ = require 'underscore'
 {requireFresh} = require 'requirefresh'
 
-# The DocPad Configuration File
-# It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
-	regenerateDelay: 50
+    # Optimization
+    regenerateDelay: 50
+    watchOptions:
+        catchupDelay: 0
 
-	watchOptions:
-		catchupDelay: 0
+    # Paths
+    documentsPaths: [
+        'documents',
+        'pages'
+    ]
+    layoutsPaths: [  # default
+        'templates/layouts'
+    ]
+    ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
 
-	documentsPaths: [
-		'documents',
-		'pages'
-	]
+    # Default Env
+    env: "development"
 
-	layoutsPaths: [  # default
-		'templates/layouts'
-	]
+    templateData:
 
-	# live
-	ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
+        _: _
 
-	env: "development"
+        db:
+            header: requireFresh(__dirname + '/src/databases/header.coffee')
+            footer: requireFresh(__dirname + '/src/databases/footer.coffee')
+            addons: requireFresh(__dirname + '/src/databases/addons.coffee')
+            placeholders: requireFresh(__dirname + '/src/databases/placeholders.coffee')
 
-	# =================================
-	# Template Data
-	# These are variables that will be accessible via our templates
-	# To access one of these within our templates, refer to the FAQ: https://github.com/bevry/docpad/wiki/FAQ
-	templateData:
+        site:
+            url: "/"
+            title: "Komodo IDE"
+            description: """
 
-		_: require('underscore')
+                """
+            keywords: """
 
-		db:
-			header: requireFresh(__dirname + '/src/databases/header.coffee')
-			footer: requireFresh(__dirname + '/src/databases/footer.coffee')
-			addons: requireFresh(__dirname + '/src/databases/addons.coffee')
-			placeholders: requireFresh(__dirname + '/src/databases/placeholders.coffee')
+                """
 
-		# Specify some site properties
-		site:
-			# The production url of our website
-			url: "/"
+        getPreparedTitle: ->
+            if @document.title then "#{@document.title} | #{@site.title}" else @site.title
 
-			# Here are some old site urls that you would like to redirect from
-			oldUrls: [
-			]
+        getPreparedDescription: ->
+            @document.description or @site.description
 
-			# The default title of our website
-			title: "Komodo IDE"
+        getPreparedKeywords: ->
+            @site.keywords.concat(@document.keywords or []).join(', ')
 
-			# The website description (for SEO)
-			description: """
+        getGruntedStyles: ->
+            styles = []
+            gruntConfig = require('./grunt-config.json')
 
-				"""
+            if docpad.getEnvironment() is "development"
+                styles = _.flatten gruntConfig.cssmin.combine.files
+            else
+                minify = gruntConfig.cssmin.minify
+                _.each minify.src, (value) ->
+                    styles.push minify.cwd + value.replace(/.css$/, minify.ext)
 
-			# The website keywords (for SEO) separated by commas
-			keywords: """
+            site = @site
+            _.map styles, (value) ->
+                site.url + value.replace 'out/', ''
 
-				"""
+        getGruntedScripts: ->
+            scripts = []
+            gruntConfig = require('./grunt-config.json')
 
+            if docpad.getEnvironment() is "development"
+                scripts = _.flatten gruntConfig.uglify.scripts.files
+            else
+                scripts = _.keys gruntConfig.uglify.scripts.files
 
-		# -----------------------------
-		# Helper Functions
+            site = @site
+            _.map scripts, (value) ->
+                site.url + value.replace 'out/', ''
 
-		# Get the prepared site/document title
-		# Often we would like to specify particular formatting to our page's title
-		# we can apply that formatting here
-		getPreparedTitle: ->
-			# if we have a document title, then we should use that and suffix the site's title onto it
-			if @document.title
-				"#{@document.title} | #{@site.title}"
-			# if our document does not have it's own title, then we should just use the site's title
-			else
-				@site.title
+        getAsList: (ob, classAttr = "") ->
+            site = @site
+            latestConfig = docpad.getConfig()
+            imgPath = @site.url + "images/"
 
-		# Get the prepared site/document description
-		getPreparedDescription: ->
-			# if we have a document description, then we should use that, otherwise use the site's description
-			@document.description or @site.description
+            r = ['<ul class="' + (classAttr) + '">']
+            _.each ob, (value, key) ->
 
-		# Get the prepared site/document keywords
-		getPreparedKeywords: ->
-			# Merge the document keywords with the site keywords
-			@site.keywords.concat(@document.keywords or []).join(', ')
+                r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase() + ".html") +
+                            '" title="' + value.name +
+                            '" target="' + (value.target || "_self") + '">'
+                r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img
+                r.push '<span class="link-name">' + value.name + '</span>'
+                r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
+                r.push '</a></li>'
 
-		getGruntedStyles: ->
-			styles = []
-			gruntConfig = require('./grunt-config.json')
+            r.push "</ul>"
+            r.join("")
 
-			if docpad.getEnvironment() is "development"
-				styles = _.flatten gruntConfig.cssmin.combine.files
-			else
-				minify = gruntConfig.cssmin.minify
-				_.each minify.src, (value) ->
-					styles.push minify.cwd + value.replace(/.css$/, minify.ext)
+    environments:
+        development:
+            ignoreCustomPatterns: /public\/vendor/
+            templateData:
+                site:
+                    url: "/"
+                youtubeFeeds:
+                    screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
+            plugins:
+                youtubefeed:
+                    dontParse: ['screencasts']
 
-			site = @site
-			_.map styles, (value) ->
-				site.url + value.replace 'out/', ''
-
-		getGruntedScripts: ->
-			scripts = []
-			gruntConfig = require('./grunt-config.json')
-
-			if docpad.getEnvironment() is "development"
-				scripts = _.flatten gruntConfig.uglify.scripts.files
-			else
-				scripts = _.keys gruntConfig.uglify.scripts.files
-
-			site = @site
-			_.map scripts, (value) ->
-				site.url + value.replace 'out/', ''
-
-		getAsList: (ob, classAttr = "") ->
-			site = @site
-			latestConfig = docpad.getConfig()
-			imgPath = @site.url + "images/"
-
-			r = ['<ul class="' + (classAttr) + '">']
-			_.each ob, (value, key) ->
-
-				r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase() + ".html") +
-							'" title="' + value.name +
-							'" target="' + (value.target || "_self") + '">'
-				r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img
-				r.push '<span class="link-name">' + value.name + '</span>'
-				r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
-				r.push '</a></li>'
-
-			r.push "</ul>"
-			return r.join("");
-
-		getExcerpt: (text) ->
-			Parser = new DOMParser
-			Parser.parseFromString(text)
-			Parser.querySelector
-
-	environments:
-		development:
-			ignoreCustomPatterns: /public\/vendor/
-			templateData:
-				site:
-					url: "/"
-				youtubeFeeds:
-					screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
-			plugins:
-				youtubefeed:
-					dontParse: ['screencasts']
-		
-		static: # ghpages
-			templateData:
-				site:
-					url: "/"
+        static: # ghpages
+            templateData:
+                site:
+                    url: "/"
 
 
-	collections:
-		splash: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath:'splash'}, [basename: 1])
-		blog: ->
-			@getCollection('documents').findAllLive({relativeOutDirPath:/blog[\/\\]\w+/}, [date: -1])
+    collections:
+        splash: ->
+            @getCollection('documents').findAllLive({relativeOutDirPath:'splash'}, [basename: 1])
+        blog: ->
+            @getCollection('documents').findAllLive({relativeOutDirPath:/blog[\/\\]\w+/}, [date: -1])
 
-	plugins:
-		ghpages:
-			deployRemote: 'origin'
-			deployBranch: 'gh-pages'
+    plugins:
+        ghpages:
+            deployRemote: 'origin'
+            deployBranch: 'gh-pages'
 
-		youtubefeed:
-			feeds: [
-				name: "screencasts"
-				url: "http://gdata.youtube.com/feeds/api/playlists/PLItFfEv4fl3uW7T8-BC_Wb0HXZoH__pIs"
-				outFilename: "screencast.html.eco"
-				outPath: "screencasts"
-			]
-		sass:
-			requireLibraries: [
-				'compass'
-				'compass-normalize'
-			]
-		moment:
-			formats: [
-				{raw: 'date', format: 'MMMM Do, YYYY', formatted: 'humanDate'}
-			]
-		robotskirt:
-			highlight: (code, lang)->
-				tags = { '&': '&amp;', '<': '&lt;', '>': '&gt;' }
-				code = code.replace /[&<>]/g, (tag) -> tags[tag] || tag
-				if lang
-					return '<pre><code class="hljs ' + lang + '">' + code + '</code></pre>';
-				else
-					return '<pre><code>' + code + '</code></pre>';
-		partials:
-			partialsPath: 'templates'
+        youtubefeed:
+            feeds: [
+                name: "screencasts"
+                url: "http://gdata.youtube.com/feeds/api/playlists/PLItFfEv4fl3uW7T8-BC_Wb0HXZoH__pIs"
+                outFilename: "screencast.html.eco"
+                outPath: "screencasts"
+            ]
+        sass:
+            requireLibraries: [
+                'compass'
+                'compass-normalize'
+            ]
+        moment:
+            formats: [
+                {raw: 'date', format: 'MMMM Do, YYYY', formatted: 'humanDate'}
+            ]
+        robotskirt:
+            highlight: (code, lang)->
+                tags = { '&': '&amp;', '<': '&lt;', '>': '&gt;' }
+                code = code.replace /[&<>]/g, (tag) -> tags[tag] || tag
+                if lang
+                    return '<pre><code class="hljs ' + lang + '">' + code + '</code></pre>';
+                else
+                    return '<pre><code>' + code + '</code></pre>';
+        partials:
+            partialsPath: 'templates'
 
-	# =================================
-	# DocPad Events
+    events:
 
-	# Here we can define handlers for events that DocPad fires
-	# You can find a full listing of events on the DocPad Wiki
-	events:
+        # Write After
+        # Used to minify our assets with grunt
+        writeAfter: (opts,next) ->
+            docpad = @docpad
 
-		# Server Extend
-		# Used to add our own custom routes to the server before the docpad routes are added
-		serverExtend: (opts) ->
-			# Extract the server from the options
-			{server} = opts
-			docpad = @docpad
+            rootPath = docpad.config.rootPath
+            balUtil = require 'bal-util'
 
-			# As we are now running in an event,
-			# ensure we are using the latest copy of the docpad configuraiton
-			# and fetch our urls from it
-			latestConfig = docpad.getConfig()
-			oldUrls = latestConfig.templateData.site.oldUrls or []
-			newUrl = latestConfig.templateData.site.url
+            command = ["#{rootPath}/node_modules/.bin/grunt", docpad.getEnvironment()]
 
-			# Redirect any requests accessing one of our sites oldUrls to the new site url
-			server.use (req,res,next) ->
-				if req.headers.host in oldUrls
-					res.redirect(newUrl+req.url, 301)
-				else
-					next()
+            balUtil.spawn command, {cwd:rootPath,output:true}, ->
+                # TODO: Cleanup?
+                next()
 
-		# Write After
-		# Used to minify our assets with grunt
-		writeAfter: (opts,next) ->
-			# Prepare
-			docpad = @docpad
-
-			rootPath = docpad.config.rootPath
-			balUtil = require 'bal-util'
-
-			# Make sure to register a grunt `default` task
-			command = ["#{rootPath}/node_modules/.bin/grunt", docpad.getEnvironment()]
-
-			# Execute
-			balUtil.spawn command, {cwd:rootPath,output:true}, ->
-				# TODO: Cleanup?
-				next()
-
-			# Chain
-			@
+            @
 }
 
-# Export our DocPad Configuration
 module.exports = docpadConfig
