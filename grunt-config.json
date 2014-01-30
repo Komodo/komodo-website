@@ -17,6 +17,7 @@
             "out/vendor/jquery-ui/ui/jquery-ui.js",
             "out/vendor/jReject/js/jquery.reject.js",
             "out/vendor/jquery-cookie/jquery.cookie.js",
+            "out/vendor/textFit/textFit.js",
             "out/vendor/consolelog/consolelog.js",
             "out/vendor/modernizr/modernizr.js",
             "out/vendor/highlightjs/highlight.pack.js",

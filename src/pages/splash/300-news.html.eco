@@ -18,13 +18,15 @@
     </div>
     <div id="splash-news-testimonials">
         <h1>Testimonials</h1>
-        <blockquote>
-            @ActiveState Sweetttt, you beautiful sons-of-$&^%@, Komodo 8 now has
-            all the features I've wanted in an IDE since I was 2 years old. #thanx
-        </blockquote>
-        <span>
-            <a href="#">ANAIO</a> via <a href="#">Twitter</a>
-        </span>
+        <div class="testimonial">
+            <blockquote data-field="comment">
+                @ActiveState Sweetttt, you beautiful sons-of-$&^%@, Komodo 8 now has
+                all the features I've wanted in an IDE since I was 2 years old. #thanx
+            </blockquote>
+            <span>
+                <span data-field="name"><a href="#">ANAIO</a></span> via <span data-field="source"><a href="#">Twitter</a></span>
+            </span>
+        </div>
     </div>
     <div id="splash-news-screencasts">
         <h1>Screencasts</h1>
