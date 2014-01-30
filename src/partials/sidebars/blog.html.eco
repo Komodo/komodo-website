@@ -1,0 +1,41 @@
+<button class="primary submit-content">
+    Submit Content
+</button>
+<% if @document.layout is 'blog': %>
+<div class="info">
+    <h1>Blog Info</h1>
+
+    <img src="<%= @site.url %>images/authors/<%= @document.author %>.jpg">
+    <p><strong>By:</strong> <a href="#"><%= @document.author %></a></p>
+
+    <p>
+        <strong>Tags: </strong>
+        <% for tag in (@document.meta.tags || []): %>
+        <a href="<%= @site.url %>blog/tags.html#<%= tag %>"><%= tag %></a>
+        <% end %>
+    </p>
+    <p><strong>Date Posted: </strong><%= @document.humanDate %></p>
+</div>
+<div class="clearfix"></div>
+<% end %>
+<div class="blogs">
+    <h1>Recent Blogs</h1>
+    <ul>
+        <% for document in @_.first @getCollection('blog').findAll().toJSON(), 10: %>
+        <li>
+            <a href="<%= @site.url %><%= document.relativeOutPath %>">
+                <%= document.title %>
+            </a>
+        </li>
+        <% end %>
+    </ul>
+</div>
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    <% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
+    <a href="<%= @site.url %>screencasts/<%= item.id %>.html">
+        <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
+        <span><%= item.title %></span>
+    </a>
+    <% end %>
+</div>

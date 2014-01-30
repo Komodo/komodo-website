@@ -31,14 +31,14 @@ h1
 
 h2
 {
-    font-size: 14pt;
-    font-weight: normal;
+    font-size: 13pt;
+    font-weight: 400;
 }
 
 h3
 {
     font-size: 12pt;
-    font-weight: normal;
+    font-weight: 400;
 }
 
 p
@@ -107,5 +107,18 @@ ul, ol
         border: 0;
         border-top: 1px solid rgba(0,0,0,0.3);
         border-bottom: 1px solid rgba(255,255,255,0.7);
+    }
+}
+
+.normalize button
+{
+    &:not(.primary)
+    {
+        @extend %button-grey;
+    }
+
+    &.primary
+    {
+        @extend %button-green;
     }
 }

@@ -38,7 +38,10 @@
                 <%- @partial('layout/' + (@document.articleTemplate || 'article') + '.html', @) %>
                 </section>
                 <% if @document.sidebar: %>
-                    <%- @partial('layout/sidebar.html', @) %>
+                <aside class="sidebar-<%= @document.sidebar %> normalize">
+                    <div id="side-border"></div>
+                    <%- @partial('sidebars/' + @document.sidebar, @) %>
+                </aside>
                 <% end %>
             </div>
             <div id="footer_push"></div>

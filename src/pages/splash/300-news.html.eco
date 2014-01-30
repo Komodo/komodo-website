@@ -1,12 +1,20 @@
 <div id="splash-news">
     <div id="splash-news-blogs">
         <h1>Latest Blogs</h1>
-        <% for num in [1..10]: %>
+        <% for document in @_.first @getCollection('blog').findAll().toJSON(), 10: %>
         <dl>
-            <dt><a href="#">Komodo 8.5: Productivity with a Touch of Darkness</a></dt>
-            <dd>By Todd Whiteman, September 12, 2013</dd>
+            <dt>
+                <a href="<%= @site.url %><%= document.relativeOutPath %>">
+                    <%= document.title %>
+                </a>
+            </dt>
+            <dd>
+                By <%= document.author %>, <%= document.humanDate %>
+            </dd>
         </dl>
         <% end %>
+        <h2><a href="<%= @site.url %>blog.html">View More..</a></h2>
+
     </div>
     <div id="splash-news-testimonials">
         <h1>Testimonials</h1>

@@ -63,16 +63,7 @@ aside
         bottom: 0;
         width: 6px;
         min-height: 100%;
-
-        @include background-image(  linear-gradient(right bottom,
-                            rgba(75,132,130,0.6) 0%,
-                            rgba(75,132,130,0.6) 15%,
-                            rgba(255,255,255,0) 15%,
-                            rgba(255,255,255,0) 50%,
-                            rgba(75,132,130,0.6) 50%,
-                            rgba(75,132,130,0.6) 65%,
-                            rgba(255,255,255,0) 65%));
-        background-size: 4px 4px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJUlEQVQYlWNgQAPnz5//j8zfu3fv/0GnAB1gU4BiCB0UMDAwAADQyTuz783q7AAAAABJRU5ErkJggg==) repeat;
     }
 }
 

@@ -7,8 +7,6 @@ excerpt: A user complained that when he loaded a particular PHP file into Komodo
 layout: blog
 ---
 
-# strlen Considered Dangerous
-
 A user complained that when he loaded a particular PHP file into Komodo, the editor would become unresponsive, and there would be no code intelligence. A quick check outside the editor showed most of what I needed to know about this file:
 
 ```

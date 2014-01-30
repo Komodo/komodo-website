@@ -12,7 +12,9 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 
 %button
 {
-    padding: 4px;
+    font-size: 9.5pt;
+    font-weight: bold;
+    padding: 8px;
     color: #FFF;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
     border: 0;
