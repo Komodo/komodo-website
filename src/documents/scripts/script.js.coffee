@@ -95,6 +95,5 @@ jQuery ->
             href = a.attr("href")
             href = href.substr(href.indexOf("#")+1) if href.indexOf("framed.html#") != -1
             if href.indexOf("activestate.com") != -1
-                console.log "push " + href
                 _gaq.push(['_link', href])
 
