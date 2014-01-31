@@ -42,7 +42,10 @@
 
             @include box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
             @include transform(scale(0.6));
-            @include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);
+            /*@include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);*/
+            @include transition-property (transform, z-index);
+            @include transition-duration(0.2s, 0.2s);
+            @include transition-timing-function(ease-in-out);
 
             &.primary
             {
