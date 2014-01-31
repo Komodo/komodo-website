@@ -14,18 +14,24 @@
 
     <h2>DOWNLOAD</h2>
     <div id="splash-download-buttons">
-        <button><i class="icon icon-download"></i> K<span>omodo</span> IDE</button>
-        <button><i class="icon icon-download"></i> K<span>omodo</span> Edit</button>
+        <a class="button" href="/framed.html#http://www.activestate.com/komodo-ide/downloads">
+            <i class="icon icon-download"></i> K<span>omodo</span> IDE
+        </a>
+        <a class="button" href="/framed.html#http://www.activestate.com/komodo-edit/downloads">
+            <i class="icon icon-download"></i> K<span>omodo</span> Edit
+        </a>
     </div>
     <div id="splash-download-under">
         <span>
-            21 day free trial - <a href="#">Pricing</a>
+            21 day free trial - <a href="/framed.html#https://store.activestate.com/komodo-ide">Pricing</a>
         </span>
         <span>
-            Open-Source - <a href="#">View GitHub</a>
+            Open-Source - <a href="https://github.com/Komodo/KomodoEdit">View GitHub</a>
         </span>
+        <!--TODO: Dynamically detect
         <div>
-            Version 8.5.3, Mac OS X 64bit <!-- TODO: Dynamically detect -->
+            Version 8.5.3, Mac OS X 64bit 
         </div>
+        -->
     </div>
 </div>

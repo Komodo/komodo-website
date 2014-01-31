@@ -110,15 +110,24 @@ ul, ol
     }
 }
 
-.normalize button
+.normalize
 {
-    &:not(.primary)
+    button,
+    a.button
     {
-        @extend %button-grey;
+        &:not(.primary)
+        {
+            @extend %button-grey;
+        }
+
+        &.primary
+        {
+            @extend %button-green;
+        }
     }
 
-    &.primary
+    a.button
     {
-        @extend %button-green;
+        display: inline-block;
     }
 }

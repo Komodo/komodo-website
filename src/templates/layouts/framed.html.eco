@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <%- @partial('layouts/partials/head.html', @) %>
+    </head>
+    <body class="framed">
+        <header>
+            <div class="outer normalize">
+                <div class="buttons">
+                    <a class="button">Close this Frame</a>
+                    <a class="button primary" href="<%= @site.url %>">Back to KomodoIDE.com</a>
+                </div>
+                <div class="warning">
+                    <% if @content.trim().length: %>
+                    <%- @content %>
+                    <% else: %>
+                    <p>
+                        <strong>Heads up: </strong>
+                        KomodoIDE.com is still under development, as such not all
+                        sections have transitioned from our corporate site yet. You are
+                        being directed to our corporate site.
+                    </p>
+                    <% end %>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="underline"></div>
+        </header>
+        <iframe <%= if @document.frameSrc then 'src="' + @document.frameSrc + '"' else "" %>></iframe>
+
+        <!-- Scripts -->
+        <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
+    </body>
+</html>

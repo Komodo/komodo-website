@@ -1,0 +1,20 @@
+<!-- Standard Meta -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Site Properities -->
+<title><%= @getPreparedTitle() %></title>
+<meta name="description" content="<%= @getPreparedDescription() %>" />
+<meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+<link rel="icon"  type="image/png" href="<%= @site.url %>images/favicon.png">
+
+<!-- Meta -->
+<%- @getBlock('meta').toHTML() %>
+
+<!-- Styles -->
+<%- @getBlock('styles').add(@getGruntedStyles()).toHTML() %>
+
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,400italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic,700,700italic,800' rel='stylesheet' type='text/css'>

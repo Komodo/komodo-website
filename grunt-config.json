@@ -22,7 +22,8 @@
             "out/vendor/modernizr/modernizr.js",
             "out/vendor/highlightjs/highlight.pack.js",
             "out/scripts/script.js",
-            "out/scripts/splash.js"
+            "out/scripts/splash.js",
+            "out/scripts/framed.js"
           ]
         },
         "options": {

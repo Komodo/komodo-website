@@ -18,13 +18,33 @@
             <%- @getAsList(@db.footer().nav.communicate) %>
         </div>
         <div class="newsletter">
+            <!--
             <form>
                 <h3>Newsletter Sign Up</h3>
                 <input type="text" placeholder="Enter your E-Mail address"/>
             </form>
+            -->
 
-            <h3>Contact</h3>
-            <%- @getAsList(@db.footer().nav.contact) %>
+            <p>
+                ActiveState Software Inc.
+                Suite 1700-409 Granville St.,
+                Vancouver, BC,
+                V6C 1T2, Canada
+            </p>
+            <p>&nbsp;</p>
+            <p>
+                General Enquiries: 778.786.1100 <br>
+                Fax: 778.786.1133 <br>
+                Sales: 1.866.631.4581
+            </p>
+            <p>&nbsp;</p>
+            <p class="copytrade">
+                © 2014 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl®, and Stackato® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+            </p>
+            <p>&nbsp;</p>
+            <p>
+                <a href="/privacy.html">Privacy Policy</a>
+            </p>
         </div>
     </div>
 </footer>

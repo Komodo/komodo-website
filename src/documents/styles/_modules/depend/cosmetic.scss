@@ -19,6 +19,7 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
     border: 0;
     cursor: pointer;
+    display: inline-block;
     @include transition(box-shadow 0.2s ease-in-out, color 0.2s ease-in-out);
     @include border-radius(2px);
     &:hover

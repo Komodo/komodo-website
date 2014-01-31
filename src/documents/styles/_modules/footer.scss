@@ -89,6 +89,17 @@ footer
         }
     }
 
+    p
+    {
+        font-size: 9.5pt;
+        line-height: 1.2;
+
+        &.copytrade
+        {
+            font-size: 8pt;
+        }
+    }
+
     div > * + h3
     {
         margin-top: 15px;
