@@ -32,6 +32,7 @@
         <iframe <%= if @document.frameSrc then 'src="' + @document.frameSrc + '"' else "" %>></iframe>
 
         <!-- Scripts -->
+        <%- @partial('layouts/partials/tracking.html', @) %>
         <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
     </body>
 </html>

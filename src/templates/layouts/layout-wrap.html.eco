@@ -31,6 +31,7 @@
         <%- @partial('layouts/partials/footer.html', @) %>
 
         <!-- Scripts -->
+        <%- @partial('layouts/partials/tracking.html', @) %>
         <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
     </body>
 </html>

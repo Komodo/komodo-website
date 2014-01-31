@@ -1,10 +1,20 @@
 {
   "copy": {
     "main": {
-      "expand": true,
-        "cwd": "src/public/",
-        "src": "vendor/**",
-        "dest": "out/"
+      "files": [
+        {
+          "expand": true,
+          "cwd": "src/public/",
+          "src": "vendor/**",
+          "dest": "out/"
+        },
+        {
+          "expand": true,
+          "cwd": "src/public/",
+          "src": "images/**",
+          "dest": "out/"
+        }
+      ]
     }
   },
 

@@ -16,7 +16,7 @@ docpadConfig = {
     layoutsPaths: [  # default
         'templates/layouts'
     ]
-    ignoreCustomPatterns: /public\/vendor|src\/databases|\/_/
+    ignoreCustomPatterns: /public\/vendor|public\/images|src\/databases|\/_/
 
     # Default Env
     env: "development"
@@ -105,7 +105,7 @@ docpadConfig = {
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor/
+            ignoreCustomPatterns: /public\/vendor|public\/images/
             templateData:
                 site:
                     url: "/"
