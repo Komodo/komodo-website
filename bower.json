@@ -24,6 +24,8 @@
     "bourbon": "~3.1.8",
     "neat": "~1.5.0",
     "highlightjs": "~8.0.0",
-    "textFit": "~2.1.0"
+    "textFit": "~2.1.0",
+    "tooltipster": "~3.0.5",
+    "magnific-popup": "~0.9.9"
   }
 }

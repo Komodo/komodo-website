@@ -1,0 +1,119 @@
+.document-features
+{
+    font-weight: 400;
+    
+    article
+    {
+        @include outer-container;
+        overflow: inherit;
+
+        h1
+        {
+            margin-top: 0;
+        }
+
+        a.button.primary
+        {
+            font-size: 16pt;
+        }
+
+        & > div
+        {
+            @include span-columns(5.7);
+            
+            float: none;
+            display: inline-block;
+
+            vertical-align: top;
+
+            &:nth-child(even)
+            {
+                @include shift(0.5);
+                margin-right: 0;
+            }
+
+            & > img
+            {
+                float: left;
+                margin: 10px 5px 0 0;
+            }
+
+            ul
+            {
+                @include outer-container;
+                padding: 0;
+                padding-left: 4.5%;
+                overflow: inherit;
+
+                li
+                {
+                    @include span-columns(5.5);
+
+                    float: none;
+                    display: inline-block;
+
+                    vertical-align: top;
+                    margin-bottom: 5px;
+
+                    a
+                    {
+                        cursor: default;
+                    }
+
+                    strong, p
+                    {
+                        display: none;
+                    }
+                }
+            }
+
+            div
+            {
+                a
+                {
+                    border: 0;
+                }
+
+                img
+                {
+                    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.1));
+                    @include border-radius(2px);
+                    
+                    @include transition-property (transform, box-shadow);
+                    @include transition-duration(0.2s, 0.2s);
+                    @include transition-timing-function(ease-in-out);
+
+                    border: 1px solid rgba(0,0,0,0.2);
+                    width: 32%;
+
+                    &:hover
+                    {
+                        @include box-shadow(0 4px 10px 0 rgba(0,0,0,0.15));
+                        @include transform(scale(1.2));
+                    }
+                }
+            }
+        }
+
+        & > div.group-languages
+        {
+            img
+            {
+                display: none;
+            }
+            
+            ul
+            {
+                a
+                {
+                    display: none;
+                }
+
+                strong, p
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+}

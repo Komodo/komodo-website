@@ -31,6 +31,8 @@
             "out/vendor/consolelog/consolelog.js",
             "out/vendor/modernizr/modernizr.js",
             "out/vendor/highlightjs/highlight.pack.js",
+            "out/vendor/tooltipster/js/jquery.tooltipster.js",
+            "out/vendor/magnific-popup/dist/jquery.magnific-popup.js",
             "out/scripts/script.js",
             "out/scripts/splash.js",
             "out/scripts/framed.js"
@@ -49,6 +51,8 @@
           "out/vendor/github-fork-ribbon-css/gh-fork-ribbon.css",
           "out/vendor/jReject/css/jquery.reject.css",
           "out/vendor/jquery-ui/themes/base/jquery.ui.base.css",
+          "out/vendor/tooltipster/css/tooltipster.css",
+          "out/vendor/magnific-popup/dist/magnific-popup.css",
           "out/styles/style.css"
         ]
       }

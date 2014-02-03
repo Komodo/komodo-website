@@ -89,7 +89,7 @@ jQuery ->
         jq.cookie "ucoWarning", true
 
     # Analytics
-    if _gaq
+    if _gaq?
         jq("a").click ->
             a = jq this
             href = a.attr("href")
@@ -97,3 +97,18 @@ jQuery ->
             if href.indexOf("activestate.com") != -1
                 _gaq.push(['_link', href])
 
+    # Tooltips
+    jq('.tooltip').tooltipster
+        contentAsHTML: true
+        position: 'right'
+        maxWidth: 250
+        functionReady: (origin, tooltip) ->
+            arrow = tooltip.find(".tooltipster-arrow")
+            if arrow.hasClass "tooltipster-arrow-right"
+                arrow.find("span").css "left", "-8px"
+            if arrow.hasClass "tooltipster-arrow-left"
+                arrow.find("span").css "right", "-8px"
+
+    jq('a.lightbox').magnificPopup
+        type:'image'
+        removalDelay: 500

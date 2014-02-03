@@ -4,7 +4,6 @@ module.exports = {
             link: "/"
         ,
             name: "Features"
-            link: "/framed.html#http://www.activestate.com/komodo-ide/features"
         ,
             name: "Pricing"
             link: "/framed.html#https://store.activestate.com/komodo-ide"

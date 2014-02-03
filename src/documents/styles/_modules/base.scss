@@ -41,7 +41,7 @@ h3
     font-weight: 400;
 }
 
-p
+p, strong, em
 {
     line-height: 1.5;
 }
@@ -49,6 +49,42 @@ p
 ul, ol
 {
     line-height: 1.4;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.push-left
+{
+    float: left;
+}
+
+.push-right
+{
+    float: right;
+}
+
+.badge
+{
+    @include box-shadow(
+         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+         inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
+         0 0 6px 0 rgba(0,0,0,0.3)
+    );
+    @include gradient-green;
+    @include border-radius(2px);
+
+    color: #FFF;
+    font-weight: bold;
+    font-size: 8pt;
+    padding: 0 2px;
 }
 
 .normalize
@@ -110,6 +146,11 @@ ul, ol
     }
 }
 
+article.normalize > h1:first-child
+{
+    margin-top: 0;
+}
+
 .normalize
 {
     button,
@@ -123,6 +164,19 @@ ul, ol
         &.primary
         {
             @extend %button-green;
+        }
+
+        &.embedded
+        {
+            &:not(.primary)
+            {
+                @extend %button-grey-text-inset;
+            }
+
+            &.primary
+            {
+                @extend %button-green-text-inset;
+            }
         }
     }
 

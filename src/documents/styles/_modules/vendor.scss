@@ -93,3 +93,63 @@ html.wait
         color: #7F7F7F;
     }
 }
+
+/* Tooltips */
+.tooltipster-default
+{
+    @include border-radius(2px);
+    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+
+    border: 0;
+    background: rgba(0,0,0,0.8);
+    color: #EAEAEA;
+
+    tooltipster-content
+    {
+        padding: 4px;
+    }
+
+    .tooltipster-arrow .tooltipster-arrow-border
+    {
+        border: 0;
+    }
+}
+
+/* Lightbox */
+.mfp-bg
+{
+    opacity: 0;
+    @include transition(all 0.2s ease-in-out);
+
+    &.mfp-ready
+    {
+        opacity: 0.7;
+    }
+
+    &.mfp-removing
+    {
+        opacity: 0;
+    }
+}
+
+.mfp-wrap
+{
+    .mfp-content
+    {
+        @include transition(all 0.2s ease-in-out);
+        @include transform(scale(0.8));
+        opacity: 0;
+    }
+
+    &.mfp-ready .mfp-content
+    {
+        @include transform(scale(1));
+        opacity: 1;
+    }
+
+    &.mfp-removing .mfp-content
+    {
+        @include transition(all 0.1s ease-in-out);
+        opacity: 0;
+    }
+}
