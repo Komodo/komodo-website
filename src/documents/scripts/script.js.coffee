@@ -90,7 +90,7 @@ jQuery ->
 
     # Analytics
     if _gaq?
-        jq("a").click ->
+        jq("a[href]").click ->
             a = jq this
             href = a.attr("href")
             href = href.substr(href.indexOf("#")+1) if href.indexOf("framed.html#") != -1
