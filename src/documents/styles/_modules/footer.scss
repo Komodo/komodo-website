@@ -43,13 +43,13 @@ footer
         color: $color-footer-text;
         font-weight: bold;
         text-shadow: 1px 1px 0 rgba(0,0,0,0.50);
-        margin-bottom: 10px;
+        margin: 0 0 10px 0;
     }
 
     ul
     {
-        margin-top: 0;
-        margin-left: 5px;
+        margin: 0 0 0 5px;
+        padding: 0;
         font-size: 10pt;
         font-weight: 400;
         text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
@@ -66,6 +66,9 @@ footer
 
             li
             {
+                margin: 0;
+                padding: 0;
+                
                 &:not(:last-child)
                 {
                     margin-right: 3px;
@@ -93,6 +96,7 @@ footer
     {
         font-size: 9.5pt;
         line-height: 1.2;
+        margin: 0;
 
         &.copytrade
         {

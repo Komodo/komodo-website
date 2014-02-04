@@ -7,6 +7,11 @@
         padding-bottom: 15px;
     }
 
+    h1, h2, h3
+    {
+        margin: 0;
+    }
+
     #splash-news-blogs
     {
         @include span-columns(5);
@@ -15,18 +20,25 @@
         {
             font-size: 10pt;
             line-height: 1.5;
+            margin: 0;
 
             dt
             {
                 font-weight: 400;
             }
 
-            dd:not(last-child)
+            dd
             {
-                padding-bottom: 10px;
-                font-size: 9pt;
-                color: lighten($color-base-text, 10%);
+                margin: 0;
+                
+                &:not(last-child)
+                {
+                    padding-bottom: 10px;
+                    font-size: 9pt;
+                    color: lighten($color-base-text, 10%);
+                }
             }
+
         }
     }
 

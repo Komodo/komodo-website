@@ -3,11 +3,43 @@
 @import 'splash/addons';
 @import 'splash/news';
 
-.document-index article
+#splash-header, .document-index
 {
-    & > div > h1,
-    .inner > h1
+    h1
     {
-        margin-bottom: 15px;
+        font-size: 16pt;
+    }
+
+    h2
+    {
+        font-size: 13pt;
+    }
+
+    h3
+    {
+        font-size: 12pt;
+    }
+}
+
+.document-index
+{
+    ul
+    {
+        padding: 0;
+        margin: 0;
+    }
+
+    p
+    {
+        margin: 0;
+    }
+
+    article
+    {
+        & > div > h1,
+        .inner > h1
+        {
+            margin: 0 0 15px 0;
+        }
     }
 }
