@@ -108,19 +108,11 @@ docpadConfig = {
         development:
             ignoreCustomPatterns: /public\/vendor|public\/images/
             templateData:
-                site:
-                    url: "/"
                 youtubeFeeds:
                     screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
             plugins:
                 youtubefeed:
                     dontParse: ['screencasts']
-
-        static: # ghpages
-            templateData:
-                site:
-                    url: "/"
-
 
     collections:
         splash: ->
