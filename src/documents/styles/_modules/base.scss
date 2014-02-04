@@ -79,6 +79,11 @@ strong
     float: right;
 }
 
+.spacer
+{
+    height: 15px;
+}
+
 .badge
 {
     @include box-shadow(

@@ -1,0 +1,132 @@
+---
+title: Pricing
+layout: default
+---
+
+<h1>Komodo IDE Pricing</h1>
+
+<div class="assistance">
+    <div id="lpButDivID-1279824964197"></div>
+</div>
+
+<div class="spacer clearfix"></div>
+
+<div class="pricing-outer">
+<div class="pricing-inner">
+
+    <span class="currency">
+        All prices are in US dollars
+    </span>
+    
+    <span class="testimonials">
+        On the fence? Check out our
+        <a href="/framed.html#http://www.activestate.com/company/testimonials#block-views-testimonials-block_8">
+            Testimonials!
+        </a>
+    </span>
+
+    <ul class="pricing-block">
+        <li class="enterprise">
+            <h2>Professional</h2>
+            <figure>$295</figure>
+
+            <p>Companies & Personal</p>
+            <p>
+                Upgrade for <strong class="tooltip" title="Note that upgrades are free with a subscription">$168</strong><br>
+                or
+                <a href="/framed.html#http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
+                    Subscribe for <strong>$87</strong>
+                </a>
+            </p>
+
+            <div class="buttons">
+                <a class="button" href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart">
+                    Buy 5-Pack
+                    <figure class="deal-badge">
+                        <i class="icon icon-certificate"></i>
+                        <span>25%</span>
+                    </figure>
+                </a>
+                <a class="button" href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart">Buy Now</a>
+            </div>
+        </li>
+        <!-- Soon ... sssh
+        <li class="individual">
+            <h2>Individual</h2>
+            <figure>$???</figure>
+
+            <p>Individuals & Freelancers</p>
+            <p>Upgrade for <strong>$???</strong></p>
+
+            <div class="buttons">
+                <a class="button">Buy Now</a>
+            </div>
+        </li>
+        -->
+        <li class="educational">
+            <h2>Educational</h2>
+            <figure>$100~</figure>
+
+            <p>Teachers & Students</p>
+            <p>
+                Our educational licenses are handled by
+                <a href="http://www.studica.com/activestate" target="_blank">Studica</a>
+            </p>
+
+            <div class="buttons">
+                <a class="button" href="http://www.studica.com/activestate">Buy Now</a>
+            </div>
+        </li>
+        <li class="goodwill">
+            <h2>Goodwill</h2>
+            <figure>Free</figure>
+
+            <p>
+                Charities, Schools,<br>
+                Open Source Initiatives
+            </p>
+            <p>Evaluated on a case-by-case basis</p>
+
+            <div class="buttons">
+                <a class="button" href="mailto:sales@activestate.com?subject=KomodoIDE%20Goodwill%20License">Contact Us</a>
+            </div>
+        </li>
+    </ul>
+
+    <div class="questions">
+        <p>
+            Got questions? Need more than 30 licenses?
+        </p>
+        <p>
+            Call <span class="number">779.786.1103</span> (1.866.631.4581 toll-free within North America).
+        </p>
+        <p>
+            <em>Monday - Friday 8:30am - 5pm PT</em>
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="komodo-edit">
+    <p>Don't need all this advanced functionality?</p>
+    <p><a href="/framed.html#http://www.activestate.com/komodo-edit">Komodo Edit</a> is completely
+    <span>free</span> and
+    <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Open-Source!</a></p>
+</div>
+
+<div class="contract-holder">
+    <img src="/images/misc/gsa-adv-logo.png">
+    <p>
+        <strong>US Government purchaser?</strong> If you are a US Government purchaser
+        (federal and local/state agency), please note that ActiveState is a GSA
+        Contract Holder (GSA #GS-35F-0097X). You can
+        <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:0activestate&db=0&searchType=1" target="_blank">
+        search for our products on the GSA Advantage site</a> for GSA pricing,
+        or contact us for a quote at <a href="mailto:sales@activestate.com">
+        sales@activestate.com</a> or 1.866.631.4581.
+    </p>
+</div>
+
+<!-- LivePerson -->
+<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/88203588/?cmd=mTagRepstate&site=88203588&buttonID=12&divID=lpButDivID-1279824964197&bt=1&c=1"></script>
+

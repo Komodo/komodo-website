@@ -82,7 +82,7 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     text-align: center;
     border-radius: 3px;
     @include background-image(
-        linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(53,100,99,0.3) 45%,rgba(53,100,99,0.3) 55%,rgba(0,0,0,0.4) 100%),
+        linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(75, 104, 103, 0.3) 45%,rgba(75, 104, 103,0.3) 55%,rgba(0,0,0,0.4) 100%),
         url("../images/layout/header-bg.png")
     );
     @include box-shadow(0 0 6px 1px rgba(0,0,0,0.2));
