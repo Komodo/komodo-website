@@ -8,7 +8,6 @@ module.exports = {
             name: "Features"
         ,
             name: "Pricing"
-            link: "/framed.html#https://store.activestate.com/komodo-ide"
         ,
             name: "Download"
             link: "/framed.html#http://www.activestate.com/komodo-ide/downloads"
