@@ -64,3 +64,32 @@
 {
     background: rgba(0,0,0,0.5);
 }
+
+/* Tabs */
+
+.ui-tabs
+{
+    ul
+    {
+        border-bottom: 2px solid lighten($color-base-text, 10%);
+
+        li
+        {
+            a
+            {
+                border: 0;
+                color: lighten($color-base-text, 15%);
+                font-weight: bold;
+                opacity: 0.6;
+
+                @include transition(opacity 0.2s ease-in-out);
+            }
+
+            &.ui-tabs-active a,
+            &:hover a
+            {
+                opacity: 1;
+            }
+        }
+    }
+}

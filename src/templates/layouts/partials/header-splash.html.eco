@@ -14,10 +14,10 @@
 
     <h2>DOWNLOAD</h2>
     <div id="splash-download-buttons">
-        <a class="button" href="/framed.html#http://www.activestate.com/komodo-ide/downloads">
+        <a class="button" href="/download.html">
             <i class="icon icon-download"></i> K<span>omodo</span> IDE
         </a>
-        <a class="button" href="/framed.html#http://www.activestate.com/komodo-edit/downloads">
+        <a class="button" href="/download.html#edit">
             <i class="icon icon-download"></i> K<span>omodo</span> Edit
         </a>
     </div>

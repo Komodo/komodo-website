@@ -45,7 +45,6 @@ header
     nav
     {
         position: relative;
-        margin-top: 24px;
 
         float: right;
         margin-left: 300px;
@@ -54,12 +53,14 @@ header
         {
             @include inline-block-list;
 
-            li a
+            li a[href]
             {
                 display: block;
                 font-family: $font-header-nav;
                 font-weight: 400;
                 font-size: 13pt;
+                line-height: 75px;
+                vertical-align: middle;
                 color: $color-header-nav-link;
                 text-transform: uppercase;
                 text-decoration: none;

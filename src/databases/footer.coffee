@@ -10,7 +10,6 @@ module.exports = {
             name: "Pricing"
         ,
             name: "Download"
-            link: "/framed.html#http://www.activestate.com/komodo-ide/downloads"
             sub: [
                 name: "Archive"
                 link: "/framed.html#http://downloads.activestate.com/Komodo/"

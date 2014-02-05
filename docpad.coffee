@@ -149,6 +149,26 @@ docpadConfig = {
                     return '<pre><code class="hljs ' + lang + '">' + code + '</code></pre>';
                 else
                     return '<pre><code>' + code + '</code></pre>';
+            robotskirtOptions:
+                EXT_AUTOLINK: true
+                EXT_FENCED_CODE: true
+                EXT_LAX_SPACING: true
+                EXT_NO_INTRA_EMPHASIS: true
+                EXT_SPACE_HEADERS: true
+                EXT_STRIKETHROUGH: true
+                EXT_SUPERSCRIPT: true
+                EXT_TABLES: true
+                HTML_SKIP_HTML: false
+                HTML_SKIP_STYLE: false
+                HTML_SKIP_IMAGES: false
+                HTML_SKIP_LINKS: false
+                HTML_EXPAND_TABS: false
+                HTML_SAFELINK: false
+                HTML_TOC: false
+                HTML_HARD_WRAP: false
+                HTML_USE_XHTML: true
+                HTML_ESCAPE: false
+
         partials:
             partialsPath: 'templates'
 

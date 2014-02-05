@@ -1,0 +1,76 @@
+.document-download
+{
+    .tabs
+    {
+        text-align: center;
+
+        ul
+        {
+            margin: auto;
+            max-width: 600px;
+            
+            li
+            {
+                display: inline-block;
+                float: none;
+
+                a
+                {
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        & > div
+        {
+            p:first-child
+            {
+                margin-top: 0;
+            }
+
+            a.button.primary
+            {
+                text-align: left;
+                line-height: 16pt;
+                
+                span.os
+                {
+                    font-size: 12pt;
+                    font-weight: 400;
+                    display: block;
+                }
+
+                i
+                {
+                    @extend %button-green-text-inset;
+                    float: left;
+                    vertical-align: middle;
+                    font-size: 22pt;
+                    line-height: 30pt;
+                    margin-right: 10px;
+                }
+            }
+
+            a.button:not(.primary)
+            {
+                width: 240px;
+                text-align: right;
+                
+                span.product
+                {
+                    display: none;
+                }
+
+                i
+                {
+                    @extend %button-grey-text-inset;
+                    float: left;
+                    vertical-align: middle;
+                    font-size: 14pt;
+                    line-height: 14pt;
+                }
+            }
+        }
+
+    }
+}

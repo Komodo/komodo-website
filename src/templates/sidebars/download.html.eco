@@ -1,0 +1,74 @@
+<% unless @document.basename is "download": %>
+
+<div class="centered">
+    <a href="/download.html" class="button primary big">Download Komodo</a>
+</div>
+
+<% end %>
+
+<h2>Releases</h2>
+
+<ul class="disc">
+    <li>
+        Komodo IDE/Edit 8.5.3 -
+        <a href="/framed.html#http://downloads.activestate.com/Komodo/releases/8.5.3/">archive</a>
+        |
+        <a href="/changelog/latest.html">changelog</a>
+    </li>
+    <li>
+        Komodo IDE/Edit 8.0.2 -
+        <a href="/framed.html#http://downloads.activestate.com/Komodo/releases/archive/8.x/8.0.2/">archive</a>
+        |
+        <a href="/changelog/latest.html">changelog</a>
+    </li>
+    <li>
+        Komodo IDE/Edit 7.1.3 -
+        <a href="/framed.html#http://downloads.activestate.com/Komodo/releases/7.1.3/">archive</a>
+        |
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-7.html">changelog</a>
+    </li>
+</ul>
+<a href="/framed.html#http://downloads.activestate.com/Komodo/releases/">
+    View Full Archive
+</a>
+
+<h2>Changelogs</h2>
+
+<ul class="disc">
+    <li>
+        <a href="/changelog/latest.html">Komodo IDE/Edit 8.5.* (Sept 2013)</a>
+    </li>
+    <li>
+        <a href="/changelog/latest.html">Komodo IDE/Edit 8.* (March 2013)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-7.html">Komodo IDE/Edit 7.* (February 2012)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-6.1.html">Komodo IDE/Edit 6.1.* (February 2011)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-6.0.html">Komodo IDE/Edit 6.0.* (October 2010)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-5.2.html">Komodo IDE/Edit 5.2.* (August 2009)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-5.1.html">Komodo IDE/Edit 5.1.* (March 2009)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-5.0.html">Komodo IDE/Edit 5.0.* (November 4, 2008)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-4.4.html">Komodo IDE/Edit 4.4.* (June 24, 2008)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-4.3.html">Komodo IDE/Edit 4.3.* (March 6, 2008)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/ide-4.2.html">Komodo IDE/Edit 4.2.* (September 17, 2007)</a>
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/releases/old.html#ko41">Komodo IDE/Edit 1.1 to 4.1.1</a>
+    </li>
+</ul>

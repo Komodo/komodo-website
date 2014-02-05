@@ -86,7 +86,7 @@ footer
             margin: 0;
         }
 
-        a
+        a[href]
         {
             @include link($color-footer-link, darken($color-footer-link, 20%));
         }

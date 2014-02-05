@@ -26,9 +26,18 @@ article
     }
 }
 
-a
+a,
 {
     @include link($color-base-link, $color-base-link-hover);
+}
+
+a[name]:not([href])
+{
+    &, &:hover
+    {
+        color: $color-base-text;
+        border: 0;
+    }
 }
 
 h1
@@ -47,6 +56,29 @@ h3
 {
     font-size: 12pt;
     font-weight: 400;
+}
+
+.small-text article
+{
+    font-size: 8.5pt;
+
+    h1
+    {
+        font-size: 16pt;
+        font-weight: bold;
+    }
+
+    h2
+    {
+        font-size: 14pt;
+        font-weight: 400;
+    }
+
+    h3
+    {
+        font-size: 11pt;
+        font-weight: 400;
+    }
 }
 
 p, strong, em
@@ -100,14 +132,16 @@ strong
     padding: 0 2px;
 }
 
-ol
+ul.disc,
+.markdown article ul
+{
+    list-style-type: disc;
+}
+
+ol.decimal,
+.markdown article ol
 {
     list-style-type: decimal;
-
-    & > li
-    {
-        margin-left: 15px;
-    }
 }
 
 em

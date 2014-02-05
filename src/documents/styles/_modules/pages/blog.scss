@@ -29,7 +29,7 @@
         font-size: 14pt;
         margin: 0 0 4px;
 
-        a
+        a[href]
         {
             @include link($color-base-text, $color-base-link-hover);
             border-bottom: 0 !important;
