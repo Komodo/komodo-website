@@ -78,6 +78,11 @@
                     font-weight: 400;
                 }
 
+                tbody th, tbody td
+                {
+                    padding: 4px 8px;
+                }
+
                 thead, td
                 {
                     text-align: center;
