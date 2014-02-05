@@ -18,14 +18,14 @@ referencesOthers: true
 @import "_modules/base";
 @import "_modules/layout";
 @import "_modules/header";
-@import "_modules/splash";
 @import "_modules/footer";
 @import "_modules/framed";
 
-@import "_modules/screencast";
-@import "_modules/blog";
-@import "_modules/features";
-@import "_modules/pricing";
+@import "_modules/pages/splash";
+@import "_modules/pages/screencast";
+@import "_modules/pages/blog";
+@import "_modules/pages/features";
+@import "_modules/pages/pricing";
 
 @import "_modules/highlightjs";
 
