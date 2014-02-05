@@ -1,0 +1,100 @@
+.document-komodo-edit article
+{
+    text-align: center;
+
+    a.button
+    {
+        font-family: $font-impact;
+        font-size: 14pt;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        padding: 15px 20px;
+
+        @include box-shadow(
+            inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
+            inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
+            inset 0 0 0 500px rgba(255,255,255,0.0),
+            0 0 12px 4px rgba(0,0,0,0.4)
+        );
+
+        &:hover
+        {
+            @include box-shadow(
+                inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
+                inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
+                inset 0 0 0 500px rgba(255,255,255,0.1),
+                0 0 12px 5px rgba(0,0,0,0.5)
+            );
+        }
+
+        i
+        {
+            @extend %button-green-text-inset;
+        }
+    }
+
+    .details
+    {
+        @include outer-container;
+        margin-top: 30px;
+
+        & > div
+        {
+            @include span-columns(5.8);
+
+            &.opensource
+            {
+                @include shift(0.4);
+            }
+        }
+
+        .comparison
+        {
+            & > h2
+            {
+                text-align: left;
+            }
+
+            & > a
+            {
+                float: right;
+                margin-top: -33px;
+            }
+
+            table
+            {
+                @extend %textured-box-bare;
+                display: table;
+                width: 100%;
+
+                tr, th, td
+                {
+                    background-color: transparent;
+                    border: 0;
+                }
+
+                tbody th
+                {
+                    font-weight: 400;
+                }
+
+                thead, td
+                {
+                    text-align: center;
+                }
+
+                td
+                {
+                    font-size: 14pt;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .opensource
+        {
+            text-align: left;
+        }
+    }
+
+}

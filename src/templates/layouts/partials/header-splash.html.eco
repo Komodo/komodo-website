@@ -28,10 +28,8 @@
         <span>
             Open-Source - <a href="https://github.com/Komodo/KomodoEdit">View GitHub</a>
         </span>
-        <!--TODO: Dynamically detect
         <div>
-            Version 8.5.3, Mac OS X 64bit 
+            <h3><a href="/komodo-edit.html">What's Different About Komodo Edit?</a></h3>
         </div>
-        -->
     </div>
 </div>

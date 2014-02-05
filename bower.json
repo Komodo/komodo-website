@@ -26,6 +26,7 @@
     "highlightjs": "~8.0.0",
     "textFit": "~2.1.0",
     "tooltipster": "~3.0.5",
-    "magnific-popup": "~0.9.9"
+    "magnific-popup": "~0.9.9",
+    "github.commits.widget": "https://github.com/Komodo/github-commits-widget.git"
   }
 }

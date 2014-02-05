@@ -24,42 +24,43 @@ jQuery ->
     jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
 
     # Load Testimonials
-    textFit(jq(".testimonial blockquote"))
-    jq.getJSON("/json/testimonials.json").done (data) ->
-        pos = 0
-        data = _.shuffle data
-        template = jq("#splash-news-testimonials .testimonial").clone()
-        setInterval (->
-            pos = 0 if pos == data.length
+    if jq(".testimonial blockquote").length
+        textFit(jq(".testimonial blockquote"))
+        jq.getJSON("/json/testimonials.json").done (data) ->
+            pos = 0
+            data = _.shuffle data
+            template = jq("#splash-news-testimonials .testimonial").clone()
+            setInterval (->
+                pos = 0 if pos == data.length
 
-            entry = _.clone data[pos]
-            currentEntry = jq("#splash-news-testimonials .testimonial")
-            newEntry = template.clone()
+                entry = _.clone data[pos]
+                currentEntry = jq("#splash-news-testimonials .testimonial")
+                newEntry = template.clone()
 
-            if entry.source_name
-                if entry.source
-                    entry.source = '<a href="' + entry.source + '" target="_blank">' + entry.source_name + '</a>'
-                else
-                    entry.source = entry.source_name
+                if entry.source_name
+                    if entry.source
+                        entry.source = '<a href="' + entry.source + '" target="_blank">' + entry.source_name + '</a>'
+                    else
+                        entry.source = entry.source_name
 
-            if entry.source_name == "Twitter"
-                entry.name = '<a href="https://twitter.com/activestate' + entry.name + '" target="_blank">' + entry.name + '</a>'
+                if entry.source_name == "Twitter"
+                    entry.name = '<a href="https://twitter.com/activestate' + entry.name + '" target="_blank">' + entry.name + '</a>'
 
-            newEntry.find("*[data-field]").each ->
-                elem = jq(this)
-                elem.show()
-                elem.hide() unless entry[elem.data("field")]
-                elem.html(entry[elem.data("field")])
+                newEntry.find("*[data-field]").each ->
+                    elem = jq(this)
+                    elem.show()
+                    elem.hide() unless entry[elem.data("field")]
+                    elem.html(entry[elem.data("field")])
 
-            newEntry.hide().appendTo(currentEntry.parent())
-            currentEntry.fadeOut ->
-                newEntry.fadeIn()
-                textFit(newEntry.find("blockquote"), {alignVert: true})
-                currentEntry.remove()
-                currentEntry = newEntry
+                newEntry.hide().appendTo(currentEntry.parent())
+                currentEntry.fadeOut ->
+                    newEntry.fadeIn()
+                    textFit(newEntry.find("blockquote"), {alignVert: true})
+                    currentEntry.remove()
+                    currentEntry = newEntry
 
-            pos++
-        ), 10000
+                pos++
+            ), 10000
 
     # Show Under Construction Warning - TODO: Remove for production
     showUcoModal = ->
@@ -112,3 +113,13 @@ jQuery ->
     jq('a.lightbox').magnificPopup
         type:'image'
         removalDelay: 500
+
+    # Github commits widget
+    jq(".github-commits").each ->
+        el = jq this
+        el.githubInfoWidget
+            user: el.data("gh-user") || "Komodo"
+            repo: el.data("gh-repo") || "KomodoEdit"
+            branch: el.data("gh-branch") || "trunk"
+            last: el.data("gh-amount") || 5
+            avatarSize: el.data("gh-avatarSize") || 16

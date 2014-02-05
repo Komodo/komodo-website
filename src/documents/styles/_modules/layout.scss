@@ -95,3 +95,74 @@ aside
 {
     display: none;
 }
+
+/* Github Widgets */
+.github-repositories
+{
+    h3
+    {
+        margin-bottom: 0;
+    }
+
+    p
+    {
+        margin-top: 0;
+        color: lighten($color-base-text, 10%);
+    }
+}
+
+.github-commits-wrap
+{
+    .github-commits
+    {
+        font-size: 9pt;
+
+        ul
+        {
+            padding: 0;
+
+            li
+            {
+                display: block;
+                margin-bottom: 5px;
+                min-width: 0;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        .github-user
+        {
+            img
+            {
+                margin-right: 3px;
+                vertical-align: middle;
+                border: 1px solid rgba(0,0,0,0.4);
+            }
+
+            a
+            {
+                font-weight: bold;
+            }
+
+            &:after
+            {
+                content: ":";
+                margin-right: 5px;
+            }
+        }
+
+        .github-commit
+        {
+            color: $color-base-text;
+            border: 0;
+        }
+
+        .github-commit-date
+        {
+            display: none;
+        }
+    }
+
+}

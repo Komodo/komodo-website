@@ -109,7 +109,7 @@ layout: default
 
 <div class="komodo-edit">
     <p>Don't need all this advanced functionality?</p>
-    <p><a href="/framed.html#http://www.activestate.com/komodo-edit">Komodo Edit</a> is completely
+    <p><a href="/komodo-edit.html">Komodo Edit</a> is completely
     <span>free</span> and
     <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Open-Source!</a></p>
 </div>
