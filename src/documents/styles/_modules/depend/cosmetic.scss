@@ -8,6 +8,9 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     /* Fix bold looking text on OSX */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    /* Partially fix text not being anti-aliased on chrome-windows */
+    -webkit-text-stroke: 1px rgba(0,0,0,0.1);
 }
 
 %button
