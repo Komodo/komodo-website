@@ -83,7 +83,7 @@ jQuery ->
                     jq('#under-construction').dialog "close"
         )
 
-    jq("#under-construction-tape").click showUcoModal
+    jq("#under-construction-tape a").click showUcoModal
     
     if not jq.cookie "ucoWarning"
         showUcoModal()
