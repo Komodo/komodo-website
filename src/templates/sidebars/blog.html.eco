@@ -1,4 +1,4 @@
-<button class="primary submit-content">
+<button class="button big primary submit-content tooltip" title="Under Construction">
     Submit Content
 </button>
 <% if @document.layout is 'blog': %>
