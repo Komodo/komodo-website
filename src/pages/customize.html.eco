@@ -59,6 +59,10 @@ sidebar: opensource
 
 <ul class="disc">
     <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/extensions.html">
+            Komodo Extension Documentation
+        </a>
+    <li>
         <a href="/framed.html#http://community.activestate.com/faq/tools-developing-komodo-add-ons-extensions" target="_blank">
             Tools for Developing Komodo Add-Ons
         </a>
