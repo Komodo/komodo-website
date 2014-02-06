@@ -11,6 +11,7 @@
         <%- @partial('layouts/partials/container-prepend.html', @) %>
 
         <div id="container">
+            <a name="top"></a>
             <%- @partial('layouts/partials/header.html', @) %>
 
             <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>

@@ -1,0 +1,93 @@
+.document-customize article
+{
+    .intro
+    {
+        text-align: center;
+
+        & > img
+        {
+            width: 75%;
+        }
+
+        & > p
+        {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .addons
+    {
+        @include outer-container;
+
+        & > a
+        {
+            @include span-columns(2.8);
+            padding: 5px;
+            text-align: center;
+            border: 0;
+            display: inline-block;
+            height: 150px;
+
+            &:not(.more)
+            {
+                color: $color-base-text;
+            }
+
+            &.more
+            {
+                line-height: 150px;
+                vertical-align: middle;
+
+                &:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+
+            h3
+            {
+                @extend %ellipsis;
+                @include transition(all 0.2s ease-in-out);
+            }
+
+            figure
+            {
+                @include border-radius(2px);
+                @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+                @include transition(all 0.2s ease-in-out);
+                border: 1px solid rgba(0,0,0,0.3);
+                background-size: cover;
+                width: 95%;
+                height: 0;
+                padding-bottom: 55%;
+                margin: 0 auto 15px;
+            }
+
+            &:hover
+            {
+                h3
+                {
+                    color: $color-base-link-hover;
+                }
+
+                figure
+                {
+                    @include box-shadow(0 0 6px 1px rgba(0,0,0,0.25));
+                    border-color: $color-base-link-hover;
+                }
+            }
+        }
+    }
+
+    .contributing
+    {
+        @include outer-container;
+
+        & > div
+        {
+            @include span-columns(5.8);
+        }
+    }
+}

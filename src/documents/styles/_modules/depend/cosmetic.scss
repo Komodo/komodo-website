@@ -152,3 +152,10 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
         }
     }
 }
+
+%ellipsis
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

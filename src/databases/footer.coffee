@@ -16,13 +16,12 @@ module.exports = {
             ]
         ,
             name: "Customize"
-            link: "/framed.html#http://community.activestate.com/addons"
             sub: [
                 name: "Discover"
                 link: "/framed.html#http://community.activestate.com/addons"
             ,
                 name: "Get Involved"
-                link: "#"
+                link: "/customize.html#contributing"
             ]
         ,
             name: "Support"

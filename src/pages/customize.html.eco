@@ -1,0 +1,240 @@
+---
+title: Customize
+layout: default
+sidebar: opensource
+---
+
+<div class="intro">
+    <h1>Customize Komodo</h1>
+
+    <p>
+        Komodo is by far the most customizable IDE out there. It is built on top
+        of the Mozilla framework, allowing it to be customized in nearly any way you
+        wish.
+    </p>
+
+    <img src="/images/layout/customizable.png">
+
+    <p>
+        <strong>Did you know?</strong><br>
+        Komodo is largely made up out of JavaScript,
+        CSS and XUL (HTML for the Desktop).
+    </p>
+</div>
+
+<a name="addons"></a>
+<h2>Addons</h2>
+
+<p>
+    Komodo is easily extendible with addons. Addons are created and packaged the same
+    as they are for other Mozilla powered products, eg. Thunderbird, Firefox, etc.
+</p>
+
+<div class="addons">
+    <% for k,addon of @_.first(@db.addons().featured, 3): %>
+    <a href="<%= addon.link %>">
+        <h3 class="tooltip" title="<%= addon.name %>"><%= addon.name %></h3>
+        <figure style="background-image: url('<%= @site.url %>images/addons/<%= addon.img %>')" class="tooltip" title="<%= addon.description %>"></figure>
+    </a>
+    <% end %>
+    <a class="more" href="/framed.html#http://community.activestate.com/addons">
+        More..
+    </a>
+</div>
+
+<a name="create-addons"></a>
+<h3>Create Your Own Addons</h3>
+
+<p>
+    To create your own Addons all you really need is some basic knowledge
+    in JavaScript. If you want to mess with some UI you'll need to know how XUL
+    works, which is basically HTML for Desktop applications and won't take you
+    long to wrap your head around.
+</p>
+
+<p>
+    Here are some links to get you started whilst we flesh out the documentation
+    on our new website:
+</p>
+
+<ul class="disc">
+    <li>
+        <a href="/framed.html#http://community.activestate.com/faq/tools-developing-komodo-add-ons-extensions" target="_blank">
+            Tools for Developing Komodo Add-Ons
+        </a>
+    </li>
+    <li>
+        <a href="/framed.html#http://community.activestate.com/many-ways-extending-komodo" target="_blank">
+            The Many Ways of Extending Komodo
+        </a>
+        (slightly out of date)
+    </li>
+    <li>
+        <a href="/framed.html#http://community.activestate.com/forum/introduction-building-komodo-extension" target="_blank">
+            Introduction to Building a Komodo Extension
+        </a>
+        (slightly out of date)
+    </li>
+    <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Building_an_Extension" target="_blank">
+            Building a Mozilla Extension
+        </a>
+    </li>
+</ul>
+
+<hr>
+<small><a href="#top" class="push-right">Back to Top</a></small>
+
+<a name="macros"></a>
+<h2>Macros</h2>
+
+<p>
+    Macros are essentially just JavaScript snippets that automate how you work
+    with Komodo by utilising the Komodo API.
+</p>
+
+<p>
+    There are multiple ways to create macros. You can;
+</p>
+<ul class="disc">
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/macros.html#macros_writing">
+            Write your own Macros
+        </a>
+        via the toolbox
+    </li>
+    <li>
+        <a href="/framed.html#http://community.activestate.com/forums/komodo/komodo-macros-and-extensions">
+            Find Macros
+        </a>
+        that were shared by the community
+    </li>
+    <li>
+        <a href="/framed.html#http://docs.activestate.com/komodo/8.5/macros.html#macros_recording">
+            Record a Macro
+        </a>
+        right from inside Komodo
+    </li>
+</ul>
+
+<p>
+    For more information about Macros and how they work, please check the
+    <a href="/framed.html#http://docs.activestate.com/komodo/8.5/macros.html">
+        documentation
+    </a>.
+</p>
+
+<hr>
+<small><a href="#top" class="push-right">Back to Top</a></small>
+
+<a name="contributing"></a>
+<h2>Contributing</h2>
+
+<p>
+    Interested in contributing? You rock! There are several ways that you can
+    help out the Komodo project.
+</p>
+
+<div class="contributing">
+    <div>
+        <a name="documentation"></a>
+        <h3><i class="icon icon-question-circle"></i> Documentation</h3>
+
+        <p>
+            Writing documentation is a big part of any software project. We plan to put
+            a lot of focus on this with the new website. Unfortunately as it stands
+            the documentation is still located on our old repositories. We plan to have
+            this moved over to GitHub soon to make contributions as easy as can be.
+        </p>
+
+        <p>
+            For now you can find our documentation on our
+            <a href="http://svn.openkomodo.com/openkomodo/browse/komododoc/trunk/en-US" target="_blank">
+            SVN repository</a>, which is soon to be deprecated.
+        </p>
+
+        <a name="report-bugs"></a>
+        <h3><i class="icon icon-bug"></i> Reporting Bugs</h3>
+
+        <p>
+            The most obvious way to help any software project is to
+            <a href="/framed.html#http://bugs.activestate.com/enter_bug.cgi?product=Komodo">report bugs</a>.
+        </p>
+
+        <p>
+            If you really want to help out with this we'd encourage you to try our
+            <a href="/framed.html#http://downloads.activestate.com/Komodo/nightly/">
+            nightly builds</a> and help us catch bugs early.
+        </p>
+    </div>
+    <div>
+        <a name="solve-bugs"></a>
+        <h3><i class="icon icon-check-circle"></i> Solving Bugs</h3>
+
+        <p>
+            Want to get your hands dirty? You can
+            <a href="/framed.html#http://bugs.activestate.com/query.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&list_id=57713&product=Komodo&query_format=advanced">
+                search for open bugs on our Bug Tracker
+            </a>.
+        </p>
+
+        <p>
+            To be able to fix a bug you'll need to get your own build of Komodo Edit
+            running, you can
+            <a href="https://github.com/Komodo/KomodoEdit">
+                obtain the source and instructions from our GitHub repository
+            </a>.
+        </p>
+
+        <p>
+            To avoid working on a bug that is already being worked on by someone else,
+            please express your intend in the bug report before starting.
+        </p>
+
+        <a name="implement"></a>
+        <h3><i class="icon icon-puzzle-piece"></i> Implementing Features</h3>
+
+        <p>
+            Just like with bugs, you can
+            <a href="/framed.html#http://bugs.activestate.com/query.cgi?bug_severity=7-enhancement&bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&list_id=57713&product=Komodo&query_format=advanced">
+                search our Bug Tracker
+            </a>
+            for open Enhancement requests.
+        </p>
+        <p>
+            If you have your own idea for a feature that you would like to implement
+            that you think should be part of the core Komodo experience, please
+            <a href="/framed.html#bugs.activestate.com/enter_bug.cgi?product=Komodo&bug_severity=7-enhancement">
+            file an enhancement request</a> for it and express your intend to implement it.
+        </p>
+    </div>
+
+</div>
+
+<hr>
+<small><a href="#top" class="push-right">Back to Top</a></small>
+
+<a name="help"></a>
+<h2>Need Help?</h2>
+
+<p>
+    Got stuck somewhere? There are several ways to get into contact with the devs
+    and the community:
+</p>
+
+<ul class="disc">
+    <li>
+        <a href="http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor">Join us on IRC</a>
+        - #Komodo on irc.mozilla.org
+    </li>
+    <li>
+        <a href="/framed.html#http://community.activestate.com/forums/komodo">
+            Post your question on the Forums
+        </a>
+    </li>
+    <li>
+        <a href="http://stackoverflow.com/questions/tagged/komodo">
+            Ask on StackOverflow
+        </a>
+    </li>
+</ul>

@@ -10,7 +10,6 @@ module.exports = {
             name: "Download"
         ,
             name: "Customize"
-            link: "/framed.html#http://community.activestate.com/addons"
         ,
             name: "Blog"
         ,

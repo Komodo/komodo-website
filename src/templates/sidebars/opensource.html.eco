@@ -1,24 +1,61 @@
+<% if @document.basename is 'customize': %>
+<h2>Contents</h2>
+<ul class="toc disc">
+    <li>
+        <a href="#addons">Addons</a>
+        <ul>
+            <li>
+                <a href="#create_addons">Create Your Own Addons</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#macros">Macros</a>
+    </li>
+    <li>
+        <a href="#contributing">Contributing</a>
+        <ul>
+            <li>
+                <a href="#documentation">Documentation</a>
+            </li>
+            <li>
+                <a href="#report-bugs">Reporting Bugs</a>
+            </li>
+            <li>
+                <a href="#solve-bugs">Solving Bugs</a>
+            </li>
+            <li>
+                <a href="#implement">Implementing Features</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#help">Need Help?</a>
+    </li>
+</ul>
+<% end %>
+
 <div class="github-repositories">
-    <h1><i class="icon icon-github"></i> Repositories</h1>
-    <h2><a target="_blank" href="https://github.com/Komodo/KomodoEdit">KomodoEdit</a></h2>
+    <h2><i class="icon icon-github"></i> Repositories</h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/KomodoEdit">KomodoEdit</a></h3>
     <p>Komodo Edit a free, fast and multi-language code editor</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/komodo">komodo-website</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/komodo">komodo-website</a></h3>
     <p>The new Komodo website - Currently still under heavy construction</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/Abyss">Abyss-Skin</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/Abyss">Abyss-Skin</a></h3>
     <p>A dark skin for Komodo Edit/IDE</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/Classic">Classic-Skin</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/Classic">Classic-Skin</a></h3>
     <p>Classic skin for Komodo, uses as much native OS styling as possible (so nothing too fancy).</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/Todo">Todo</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/Todo">Todo</a></h3>
     <p>A Komodo add-on that displays TODO markers in your source code</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/Mel">Mel</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/Mel">Mel</a></h3>
     <p>Maya Embedded Language (MEL) scripting support for Komodo</p>
 
-    <h2><a target="_blank" href="https://github.com/Komodo/SideBySideDiff">SideBySideDiff</a></h2>
+    <h3><a target="_blank" href="https://github.com/Komodo/SideBySideDiff">SideBySideDiff</a></h3>
     <p>Provides the ability to use side-by-side diffs inside of Komodo</p>
 
     <p>
@@ -30,7 +67,7 @@
 
 
 <div class="github-commits-wrap">
-    <h1><i class="icon icon-github"></i> Commits</h1>
+    <h2><i class="icon icon-github"></i> Commits</h2>
     <div class="github-commits">
         Loading ...
     </div>
