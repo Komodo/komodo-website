@@ -1,21 +1,16 @@
 .document-features
 {
     font-weight: 400;
+
+    article > .button + h1
+    {
+        margin-top: 0;
+    }
     
-    article
+    .groups
     {
         @include outer-container;
         overflow: inherit;
-
-        h1
-        {
-            margin-top: 0;
-        }
-
-        a.button.primary
-        {
-            font-size: 16pt;
-        }
 
         & > div
         {
