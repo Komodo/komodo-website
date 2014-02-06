@@ -23,7 +23,7 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     border: 0;
     cursor: pointer;
     display: inline-block;
-    @include transition(all 0.2s ease-in-out);
+    @include transition(box-shadow 0.2s ease-in-out, color 0.2s ease-in-out);
     @include border-radius(2px);
 
     &:hover
