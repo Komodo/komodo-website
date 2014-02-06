@@ -10,6 +10,12 @@
 {
     font-weight: 400;
 
+    .share
+    {
+        float: right;
+        margin: 10px 0 10px 10px;
+    }
+
     & > h1:first-child
     {
         margin: 0;
