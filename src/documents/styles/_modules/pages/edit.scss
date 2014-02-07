@@ -2,6 +2,12 @@
 {
     text-align: center;
 
+    & > img
+    {
+        width: 90%;
+        max-width: 794px;
+    }
+
     a.button
     {
         font-family: $font-impact;
@@ -91,6 +97,11 @@
                     text-align: center;
                 }
 
+                thead th
+                {
+                    white-space: nowrap;
+                }
+
                 td
                 {
                     font-size: 14pt;
@@ -102,6 +113,47 @@
         .opensource
         {
             text-align: left;
+        }
+
+        $tablet: new-breakpoint(max-width 960px min-width 750px);
+        @include media($tablet)
+        {
+            .comparison table
+            {
+                thead th
+                {
+                    font-size: 9pt;
+                }
+
+                th, tbody th, tbody td
+                {
+                    padding: 2px 4px;
+                }
+
+                th
+                {
+                    font-size: 9.5pt;
+                }
+
+                td
+                {
+                    font-size: 12pt;
+                }
+            }
+        }
+
+        $mobile: new-breakpoint(max-width 750px);
+        @include media($mobile)
+        {
+            & > div
+            {
+                @include span-columns(11.8);
+
+                &.opensource
+                {
+                    @include shift(0);
+                }
+            }
         }
     }
 
