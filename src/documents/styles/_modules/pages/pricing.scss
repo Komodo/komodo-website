@@ -6,6 +6,16 @@
         float: right;
         margin-top: -40px;
 
+        @include media(max-width 1300px)
+        {
+            margin-right: 60px;
+        }
+
+        @include media(max-width 650px)
+        {
+            display: none;
+        }
+
         table, tr, td, a
         {
             border: 0;
