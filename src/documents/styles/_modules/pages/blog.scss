@@ -10,10 +10,27 @@
 {
     font-weight: 400;
 
+    & > div:first-child + h1
+    {
+        margin-top: 0;
+    }
+
+    & > .content > :first-child,
+    & > .content > img[align="right"]:first-child + *
+    {
+        margin-top: 0;
+    }
+
     .share
     {
+        position: relative;
+        z-index: 110;
         float: right;
-        margin: 10px 0 10px 10px;
+
+        @include media($sidebar-collapse)
+        {
+            margin-right: 40px;
+        }
     }
 
     & > h1:first-child
