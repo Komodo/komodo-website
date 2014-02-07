@@ -14,8 +14,15 @@
 {
     padding: 25px 0;
 
-    &:not(.no-grid){
+    &:not(.no-grid)
+    {
         @include outer-container;
+
+        article
+        {
+            padding: 10px;
+            
+        }
 
         &.sidebar
         {

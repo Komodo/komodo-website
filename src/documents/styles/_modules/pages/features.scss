@@ -2,6 +2,18 @@
 {
     font-weight: 400;
 
+    .button
+    {
+        position: relative;
+        z-index: 110;
+        margin-right: 60px;
+
+        @include media($mobile)
+        {
+            display: none;
+        }
+    }
+
     article > .button + h1
     {
         margin-top: 0;
@@ -15,7 +27,7 @@
         & > div
         {
             @include span-columns(5.7);
-            
+
             float: none;
             display: inline-block;
 
@@ -42,7 +54,7 @@
 
                 li
                 {
-                    @include span-columns(5.5);
+                    @include span-columns(5.8);
 
                     float: none;
                     display: inline-block;
@@ -64,6 +76,8 @@
 
             div
             {
+                padding-left: 4.5%;
+                
                 a
                 {
                     border: 0;
@@ -80,6 +94,7 @@
 
                     border: 1px solid rgba(0,0,0,0.2);
                     width: 32%;
+                    max-width: 170px;
 
                     &:hover
                     {
@@ -110,5 +125,33 @@
                 }
             }
         }
+
+        @include media($tablet)
+        {
+            & > div
+            {
+                @include span-columns(12);
+
+                &:nth-child(even)
+                {
+                    @include shift(0);
+                }
+
+                ul li
+                {
+                    @include span-columns(4.5);
+                }
+            }
+        }
+
+        @include media($mobile)
+        {
+            & > div ul li
+            {
+                @include span-columns(5.8);
+            }
+        }
+
     }
+
 }
