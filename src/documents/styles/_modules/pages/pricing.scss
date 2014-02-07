@@ -185,6 +185,16 @@
                         }
                     }
                 }
+
+                @include media($mobile)
+                {
+                    height: 320px;
+
+                    h2
+                    {
+                        font-size: 11pt;
+                    }
+                }
             }
 
             li.personal > figure
