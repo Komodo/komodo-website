@@ -166,7 +166,21 @@ jQuery ->
             jq("#splash-screenshots").css('transform','')
             jq("#splash-screenshots").height("")
 
-    jq(window).resize splashResizeHandler
-    splashResizeHandler()
+    if ss.length
+        jq(window).resize splashResizeHandler
+        splashResizeHandler()
+
+    # Sidebar collapser
+    sideCollapse = jq("#side-collapse")
+    sideInner = jq("aside .inner")
+    sideCollapse.click ->
+        sideCollapse.fadeOut("fast", ->
+            sideInner.toggle("slide", {direction: 'right'}, ->
+                sideCollapse.fadeIn "fast"
+                sideInner.css("display", "")
+            )
+            jq("aside").toggleClass("expand")
+        )
+    #jq("aside").toggleClass "expand"
 
 

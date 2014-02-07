@@ -23,7 +23,13 @@
                 <% if @document.sidebar: %>
                 <aside class="sidebar-<%= @document.sidebar %> normalize">
                     <div id="side-border"></div>
-                    <%- @partial('sidebars/' + @document.sidebar, @) %>
+                    <button id="side-collapse" class="button big">
+                        <i class="icon icon-chevron-left"></i>
+                        <i class="icon icon-chevron-right"></i>
+                    </button>
+                    <div class="inner">
+                        <%- @partial('sidebars/' + @document.sidebar, @) %>
+                    </div>
                 </aside>
                 <% end %>
             </div>

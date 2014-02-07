@@ -1,4 +1,9 @@
 /* GitHub Ribbon  */
+.github-fork-ribbon-wrapper
+{
+    z-index: 100;
+}
+
 .github-fork-ribbon
 {
     background-color: $color-github-ribbon;

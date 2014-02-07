@@ -26,6 +26,8 @@
 
         &.sidebar
         {
+            position: relative;
+            
             & > section
             {
                 @include span-columns(8);
@@ -34,6 +36,21 @@
             & > aside
             {
                 @include span-columns(4);
+            }
+
+
+            @include media($sidebar-collapse)
+            {
+                & > section
+                {
+                    @include span-columns(12);
+                }
+
+                & > aside
+                {
+                    position: absolute;
+                    z-index: 110;
+                }
             }
         }
 
@@ -44,6 +61,7 @@
                 @include span-columns(12);
             }
         }
+
     }
 }
 
