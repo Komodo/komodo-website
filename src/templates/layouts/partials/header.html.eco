@@ -1,12 +1,18 @@
 <header>
     <div class="outer">
+        <div class="nav-push"></div>
         <div class="inner">
-            <!-- Navigation -->
-            <nav>
-                <ul>
-                    <%- @getAsList(@db.header().navigation, "unstyled") %>
-                </ul>
-            </nav>
+            <div class="nav-wrap">
+                <span class="collapser button primary">
+                    <i class="icon icon-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul>
+                        <%- @getAsList(@db.header().navigation, "unstyled") %>
+                    </ul>
+                </nav>
+            </div>
 
             <!-- Logo -->
             <a href="<%- @site.url %>"><figure id="header-logo"></figure></a>

@@ -148,3 +148,25 @@ jQuery ->
             el.addClass "big primary"
             el.parent().insertBefore(oldPrimary)
 
+    # Nav Collapse
+    jq("header .collapser").click -> jq("header nav").toggleClass "expanded"
+
+    # Responsive Scripts
+
+    ss = jq("#splash-screenshots")
+    ssf = jq("#splash-screenshots figure.primary")
+
+    splashResizeHandler = ->
+        if (jq(window).width() < 960)
+            ratio = jq(window).width()/1050
+            ss.css('transform','scale('+(ratio)+')')
+            ss.height(ssf[0].getBoundingClientRect().height)
+
+        if (jq(window).width() > 960)
+            jq("#splash-screenshots").css('transform','')
+            jq("#splash-screenshots").height("")
+
+    jq(window).resize splashResizeHandler
+    splashResizeHandler()
+
+

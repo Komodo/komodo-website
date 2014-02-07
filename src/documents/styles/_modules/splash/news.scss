@@ -1,6 +1,7 @@
 #splash-news
 {
     @include outer-container;
+    padding: 0 10px;
 
     h1
     {
@@ -140,6 +141,39 @@
 
                 @include box-shadow(0 0 6px 0 rgba(0,0,0,0.1));
             }
+        }
+    }
+
+    @include media($tablet)
+    {
+        #splash-news-blogs,
+        #splash-news-testimonials
+        {
+            @include span-columns(5.8);
+        }
+
+        #splash-news-screencasts
+        {
+            @include span-columns(12);
+        }
+    }
+
+    @include media($mobile)
+    {
+        #splash-news-blogs,
+        #splash-news-testimonials
+        {
+            @include span-columns(12);
+        }
+
+        #splash-news-testimonials h1
+        {
+            margin-top: 25px;
+        }
+
+        #splash-news-screencasts a
+        {
+            @include span-columns(5.7);
         }
     }
 }

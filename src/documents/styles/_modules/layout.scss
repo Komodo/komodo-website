@@ -51,6 +51,19 @@ footer, #footer_push
     height: 270px;
 }
 
+@include media($footer-reduce)
+{
+    #container
+    {
+        margin-bottom: -440px;
+    }
+
+    footer, #footer_push
+    {
+        height: 440px;
+    }
+}
+
 aside
 {
     position: relative;
@@ -75,8 +88,8 @@ aside
     top: 0;
     right: 0;
     overflow: hidden;
-    width: 400px;
-    height: 400px;
+    width: 180px;
+    height: 180px;
 
     .inner
     {
@@ -113,6 +126,14 @@ aside
 #under-construction
 {
     display: none;
+}
+
+@include media($mobile)
+{
+    #under-construction-tape
+    {
+        display: none;
+    }
 }
 
 /* Github Widgets */

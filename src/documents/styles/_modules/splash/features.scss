@@ -1,6 +1,7 @@
 #splash-features
 {
     @include outer-container;
+    padding: 0 10px;
 
     h1 a
     {
@@ -65,6 +66,42 @@
         {
             display: inline-block;
             margin: auto;
+        }
+    }
+
+    @include media($tablet)
+    {
+        #splash-feature-column
+        {
+            @include span-columns(6);
+
+            li:not(.clearfix)
+            {
+                float: none;
+                width: auto;
+                padding-right: 0;
+            }
+        }
+
+        #splash-features-sidebar
+        {
+            @include span-columns(5.5);
+            @include shift(0.5);
+        }
+    }
+
+    @include media($mobile)
+    {
+        #splash-feature-column
+        {
+            @include span-columns(12);
+        }
+
+        #splash-features-sidebar
+        {
+            @include span-columns(12);
+            @include shift(0);
+            margin-top: 15px;
         }
     }
 

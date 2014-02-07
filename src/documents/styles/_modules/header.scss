@@ -36,24 +36,36 @@ header
     /* Logo */
     figure#header-logo
     {
+        margin-left: 5px;
         margin-top: 8px;
         width: 284px;
         height: 59px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
+        background-size: 100%;
+    }
+
+    .nav-push
+    {
+        height: 20px;
+        width: 170px;
+        float: right;
+    }
+
+    .button.collapser
+    {
+        display: none;
     }
 
     nav
     {
         position: relative;
-
         float: right;
-        margin-left: 300px;
 
         ul
         {
             @include inline-block-list;
 
-            li a[href]
+            li a
             {
                 display: block;
                 font-family: $font-header-nav;
@@ -64,7 +76,7 @@ header
                 color: $color-header-nav-link;
                 text-transform: uppercase;
                 text-decoration: none;
-                padding: 0 1em;
+                padding: 0 15px;
                 border: 0;
 
                 &:hover
@@ -75,7 +87,98 @@ header
                 }
             }
         }
+    }
 
+    @include media($nav-reduce)
+    {
+        nav ul li a
+        {
+            font-size: 12pt;
+            padding: 0 10px;
+        }
+    }
+
+    @include media($nav-reduce-further)
+    {
+        figure#header-logo
+        {
+            margin-top: 15px;
+            width: 227px;
+            height: 47px;
+        }
+
+        nav ul li a
+        {
+            font-size: 11.5pt;
+            padding: 0 8px;
+        }
+    }
+
+    @include media($nav-collapse)
+    {
+        .nav-wrap
+        {
+            display: relative;
+
+            .collapser
+            {
+                position: relative;
+                z-index: 110;
+                display: block;
+                font-size: 30px;
+                margin-top: 15px;
+                float: right;
+            }
+
+            nav:not(.expanded)
+            {
+                display: none;
+            }
+
+            nav
+            {
+                @include border-radius(2px);
+                position: absolute;
+                z-index: 999;
+                background: rgba(39, 45, 44, 0.9);
+                text-align: right;
+
+                top: 15px;
+                right: 245px;
+
+                li
+                {
+                    display: block;
+                    width: 150px;
+
+                    a
+                    {
+                        @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
+                        line-height: 45px;
+                        font-size: 16pt;
+                        font-weight: 300;
+
+                        &:hover
+                        {
+                            background: rgba(255,255,255,0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media($mobile)
+    {
+        nav
+        {
+            right: 55px !important;
+        }
+
+        .nav-push
+        {
+            width: 10px;
+        }
     }
 
     .underline

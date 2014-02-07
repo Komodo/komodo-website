@@ -10,6 +10,14 @@
     }
 }
 
+@include media($mobile)
+{
+    .github-fork-ribbon
+    {
+        display: none;
+    }
+}
+
 /* Browser Requirement Popup */
 #jr_inner, #jr_header, #jr_footer
 {

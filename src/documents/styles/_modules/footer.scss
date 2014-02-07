@@ -1,6 +1,6 @@
 footer
 {
-    padding-top: 15px;
+    padding: 15px 10px 0;
     margin: 0 !important;
     width: 100%;
     @include background-image(linear-gradient(to bottom, rgba(85,85,85,1) 0%,rgba(41,41,41,1) 300px));
@@ -129,6 +129,57 @@ footer
             @include box-shadow(inset 1px 1px 6px 0 rgba(0,0,0,0.15),
                         1px 1px 0 0 rgba(255,255,255,0.2),
                         0 0 6px 2px $color-shadow-highlight);
+        }
+    }
+
+    @include media($tablet)
+    {
+        h3
+        {
+            font-size: 11pt;
+        }
+
+        ul
+        {
+            font-size: 9pt;
+        }
+
+        p
+        {
+            font-size: 8.5pt;
+
+            &.copytrade
+            {
+                font-size: 7pt;
+            }
+        }
+
+    }
+
+    @include media($footer-reduce)
+    {
+        .columns
+        {
+            & > .navigation
+            {
+                @include span-columns(3);
+            }
+
+            & > .support
+            {
+                @include span-columns(3);
+            }
+
+            & > .communicate
+            {
+                @include span-columns(4.5);
+            }
+
+            & > .newsletter
+            {
+                @include span-columns(12);
+                margin-top: 25px;
+            }
         }
     }
 

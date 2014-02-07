@@ -22,11 +22,24 @@
         }
     }
 
+    #splash-description
+    {
+        text-align: center;
+        
+        p
+        {
+            margin: auto;
+            width: 80%;
+        }
+    }
+
     #splash-screenshots
     {
         position: relative;
         height: 420px;
         margin: 25px auto;
+
+        @include transform-origin(50% 0);
 
         figure
         {
@@ -209,6 +222,36 @@
                 }
             }
         }
+
+        @include media($mobile)
+        {
+            a.button
+            {
+                font-size: 13pt !important;
+                width: 170px;
+
+                &:first-child
+                {
+                    padding: 14px 10px 11px 6px;
+                }
+
+                &:not(:first-child)
+                {
+                    padding: 14px 10px 11px;
+                }
+            }
+
+            span
+            {
+                font-size: 10.5pt;
+            }
+
+            i
+            {
+                font-size: 16pt !important;
+                margin-right: 4px;
+            }
+        }
     }
 
     #splash-download-under
@@ -222,6 +265,11 @@
             display: inline-block;
             width: 200px;
             text-align: center;
+
+            @include media($mobile)
+            {
+                width: 170px;
+            }
 
             & + div
             {

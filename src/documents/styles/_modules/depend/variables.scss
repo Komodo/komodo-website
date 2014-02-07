@@ -1,4 +1,13 @@
 $fa-font-path: "../vendor/Font-Awesome/fonts";
 $fa-css-prefix: "icon";
 
+$tablet: new-breakpoint(max-width 960px);
+$mobile: new-breakpoint(max-width 550px);
+
+$footer-reduce: new-breakpoint(max-width 650px);
+
+$nav-reduce: new-breakpoint(max-width 1180px);
+$nav-reduce-further: new-breakpoint(max-width 1080px);
+$nav-collapse: new-breakpoint(max-width 980px);
+
 $max-width: 1200px;
