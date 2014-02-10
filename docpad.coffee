@@ -32,6 +32,7 @@ docpadConfig = {
             testimonials: -> @requireDb('testimonials')
             placeholders: -> @requireDb('placeholders')
             features: -> @requireDb('features')
+            startpage: -> @requireDb('startpage')
 
             cache: {}
             requireDb: (name) ->

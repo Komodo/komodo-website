@@ -1,0 +1,24 @@
+<div class="featured-wrap">
+    <div class="featured">
+        <%- @content %>
+    </div>
+    <img src="/images/misc/komodo256.ide.png" align="right">
+    <div class="links">
+        <%- @getAsList(@db.startpage().links, "unstyled") %>
+    </div>
+</div>
+<div class="news">
+    <% for document in @_.first @getCollection('blog').findAll().toJSON(), 4: %>
+    <dl>
+        <dt>
+            <a href="<%= @site.url %><%= document.relativeOutPath %>">
+                <%= document.title %>
+            </a>
+        </dt>
+        <dd>
+            By <%= document.author %>, <%= document.humanDate %>
+        </dd>
+    </dl>
+    <% end %>
+    <p><a href="<%= @site.url %>blog.html">View More..</a></p>
+</div>
