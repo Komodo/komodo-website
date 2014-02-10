@@ -38,7 +38,7 @@
 
 /* Links */
 
-@mixin link($color, $color-hover)
+@mixin link($color: $color-base-link, $color-hover: $color-base-link-hover)
 {
     @include transition(color 0.2s ease-in-out, border 0.1s ease-in-out);
     color: $color;
@@ -49,6 +49,28 @@
     {
         color: $color-hover;
         border-bottom: 1px solid fade-out($color-hover, 0.4);
+    }
+}
+
+@mixin block-link($color: $color-base-link-block, $color-hover: $color-base-link-block-hover)
+{
+    border: 0;
+    
+    & > img,
+    & > figure,
+    & > div
+    {
+        @include transition(border 0.2s ease-in-out);
+        @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+        border: 1px solid $color;
+    }
+
+    &:hover > img,
+    &:hover > figure,
+    &:hover > div
+    {
+        @include box-shadow(0 0 6px 1px rgba(0,0,0,0.25));
+        border: 1px solid $color-hover;
     }
 }
 
