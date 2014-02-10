@@ -1,6 +1,6 @@
 ---
 layout: default
-sidebar: screencasts
+sidebar: blog
 comments: true
 ---
 <% if @document.feedItem: %>
