@@ -155,6 +155,7 @@
             @include block-link();
 
             width: 30%;
+            position: relative;
             display: inline-block;
             margin: 0 auto 15px;
             font-weight: bold;
@@ -164,6 +165,16 @@
             &:not(:nth-child(4)):not(:nth-child(7))
             {
                 margin-right: 2%;
+            }
+
+            i
+            {
+                position: absolute;
+                font-size: 36px;
+                left: 50%;
+                top: 50%;
+                margin-left: -16px;
+                margin-top: -24px;
             }
 
             span
