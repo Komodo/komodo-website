@@ -23,10 +23,10 @@
 
         & > a
         {
+            @include block-link();
             @include span-columns(2.8);
             padding: 5px;
             text-align: center;
-            border: 0;
             display: inline-block;
             height: 150px;
 
@@ -54,9 +54,6 @@
 
             figure
             {
-                @include block-link();
-                @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
-                @include transition(all 0.2s ease-in-out);
                 background-size: cover;
                 width: 95%;
                 height: 0;

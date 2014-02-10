@@ -9,10 +9,10 @@
             <p>
                 <%- addon.description %>
             </p>
-            <a href="<%= addon.link %>">Download</a>
+            <a href="<%= addon.link %>" class="button">Download</a>
         </div>
         <% end %>
     </div>
 
-    <a href="/framed.html#http://community.activestate.com/addons">Find More</a>
+    <a href="/framed.html#http://community.activestate.com/addons" class="button primary big">Find More</a>
 </div>

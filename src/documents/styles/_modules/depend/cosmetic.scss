@@ -23,16 +23,21 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     border: 0;
     cursor: pointer;
     display: inline-block;
-    @include transition(box-shadow 0.2s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out);
+    @include transition(box-shadow 0.3s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out);
     @include border-radius(2px);
+
+    @include box-shadow(
+        inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+        inset 0px 0px 0px 0px rgba(255,255,255,0.0),
+        1px 1px 1px 0 rgba(0,0,0,0.3)
+    );
 
     &:hover
     {
         @include box-shadow(
             inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-            inset 0px -1px 0px 0px rgba(0,0,0, 0.2),
-            inset 0 0 0 500px rgba(255,255,255,0.05),
-            0 0 6px 0 rgba(0,0,0,0.3)
+            inset -10px 10px 15px 0px rgba(255,255,255,0.1),
+            1px 1px 1px 0 rgba(0,0,0,0.3)
         );
     }
 
@@ -43,19 +48,15 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
         padding: 15px 20px;
 
         @include box-shadow(
-            inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
-            inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-            inset 0 0 0 500px rgba(255,255,255,0.0),
-            0 0 12px 4px rgba(0,0,0,0.4)
+            inset 0px 0px 0px 0px rgba(255,255,255,0.0),
+            1px 1px 1px 0 rgba(0,0,0,0.3)
         );
 
         &:hover
         {
             @include box-shadow(
-                inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
-                inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-                inset 0 0 0 500px rgba(255,255,255,0.1),
-                0 0 12px 5px rgba(0,0,0,0.5)
+                inset -25px 15px 30px 0px rgba(255,255,255,0.1),
+                1px 1px 1px 0 rgba(0,0,0,0.3)
             );
         }
     }
@@ -86,24 +87,12 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 %button-green
 {
     @extend %button;
-    @include box-shadow(
-         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-         inset 0 0 0 500px rgba(255,255,255,0.0),
-         0 0 6px 0 rgba(0,0,0,0.3)
-    );
     @include gradient-green;
 }
 
 %button-grey
 {
     @extend %button;
-    @include box-shadow(
-         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset 0px -1px 0px 0px rgba(0,0,0, 0.2),
-         inset 0 0 0 500px rgba(255,255,255,0.0),
-         0 0 6px 0 rgba(0,0,0,0.3)
-    );
     @include gradient-grey;
 }
 

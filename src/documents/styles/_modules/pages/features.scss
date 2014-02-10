@@ -85,14 +85,13 @@
 
                 img
                 {
-                    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.1));
-                    @include border-radius(2px);
+                    @include box-shadow(0 0 6px 0 rgba(0,0,0,0));
                     
-                    @include transition-property (transform, box-shadow);
-                    @include transition-duration(0.2s, 0.2s);
+                    @include transition-property (transform, box-shadow, border);
+                    @include transition-duration(0.2s, 0.2s, 0.2s);
                     @include transition-timing-function(ease-in-out);
 
-                    border: 1px solid rgba(0,0,0,0.2);
+                    border: 1px solid $color-base-link-block;
                     width: 32%;
                     max-width: 170px;
 
@@ -100,6 +99,7 @@
                     {
                         @include box-shadow(0 4px 10px 0 rgba(0,0,0,0.15));
                         @include transform(scale(1.2));
+                        border-color: $color-base-link-block-hover;
                     }
                 }
             }

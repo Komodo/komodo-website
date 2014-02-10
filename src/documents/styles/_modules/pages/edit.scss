@@ -14,25 +14,7 @@
         font-size: 14pt;
         text-transform: uppercase;
         letter-spacing: -1px;
-        padding: 15px 20px;
-
-        @include box-shadow(
-            inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
-            inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-            inset 0 0 0 500px rgba(255,255,255,0.0),
-            0 0 12px 4px rgba(0,0,0,0.4)
-        );
-
-        &:hover
-        {
-            @include box-shadow(
-                inset 0px 1px 0px 0px rgba(255,255,255, 0.5),
-                inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-                inset 0 0 0 500px rgba(255,255,255,0.1),
-                0 0 12px 5px rgba(0,0,0,0.5)
-            );
-        }
-
+        
         i
         {
             @extend %button-green-text-inset;
