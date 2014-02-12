@@ -3,7 +3,7 @@ title: Features
 layout: default
 ---
 
-<a href="/download.html" class="button primary big pull-right">Download Komodo</a>
+<a href="/download" class="button primary big pull-right">Download Komodo</a>
 
 <h1>Komodo Features</h1>
 

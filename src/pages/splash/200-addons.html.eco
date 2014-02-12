@@ -14,5 +14,5 @@
         <% end %>
     </div>
 
-    <a href="/framed.html#http://community.activestate.com/addons" class="button primary big">Find More</a>
+    <a href="/framed#http://community.activestate.com/addons" class="button primary big">Find More</a>
 </div>

@@ -27,7 +27,8 @@
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-tags": "~2.0.7",
     "docpad-plugin-robotskirt": "~2.0.3",
-    "docpad-plugin-coffeekup": "~2.2.0"
+    "docpad-plugin-coffeekup": "~2.2.0",
+    "docpad-plugin-cleanurls": "~2.6.2"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.5.6",

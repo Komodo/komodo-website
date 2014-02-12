@@ -20,7 +20,7 @@ layout: default
     
     <span class="testimonials">
         On the fence? Check out our
-        <a href="/framed.html#http://www.activestate.com/company/testimonials#block-views-testimonials-block_8">
+        <a href="/framed#http://www.activestate.com/company/testimonials#block-views-testimonials-block_8">
             Testimonials!
         </a>
     </span>
@@ -34,7 +34,7 @@ layout: default
             <p>
                 Upgrade for <strong class="tooltip" title="Note that upgrades are free with a subscription">$168</strong><br>
                 or
-                <a href="/framed.html#http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
+                <a href="/framed#http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
                     Subscribe for <strong>$87</strong>
                 </a>
             </p>
@@ -109,7 +109,7 @@ layout: default
 
 <div class="komodo-edit">
     <p>Don't need all this advanced functionality?</p>
-    <p><a href="/komodo-edit.html">Komodo Edit</a> is completely
+    <p><a href="/komodo-edit">Komodo Edit</a> is completely
     <span>free</span> and
     <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Open-Source!</a></p>
 </div>

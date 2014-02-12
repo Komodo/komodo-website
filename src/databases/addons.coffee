@@ -3,22 +3,22 @@ module.exports =
 
         name:   "New Source Tree",
         img:    "NST.png" # TODO: Take proper screenshots
-        link:   "/framed.html#http://community.activestate.com/xpi/nst-new-source-tree"
+        link:   "/framed#http://community.activestate.com/xpi/nst-new-source-tree"
         description: "Adds a source tree panel for Komodo Edit users."
     ,
         name:   "TODO Helper",
         img:    "TODO.png"
-        link:   "/framed.html#http://community.activestate.com/xpi/todo-helper"
+        link:   "/framed#http://community.activestate.com/xpi/todo-helper"
         description: "Display TODO items found in active files & projects."
     ,
         name:   "MySQL Database Explorer",
         img:    "DBEX.png"
-        link:   "/framed.html#http://community.activestate.com/xpi/mysql-database-explorer"
+        link:   "/framed#http://community.activestate.com/xpi/mysql-database-explorer"
         description: "Adds support for MySQL to Komodo's DB Explorer."
     ,
         name:   "Side by Side Diff",
         img:    "DIFF.png"
-        link:   "/framed.html#http://community.activestate.com/xpi/side-side-diff"
+        link:   "/framed#http://community.activestate.com/xpi/side-side-diff"
         description: "Provides a side-by-side layout for viewing diffs."
 
     ]

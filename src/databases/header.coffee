@@ -14,6 +14,6 @@ module.exports = {
             name: "Blog"
         ,
             name: "Community"
-            link: "/framed.html#http://community.activestate.com/forums/komodo"
+            link: "/framed#http://community.activestate.com/forums/komodo"
     ]
 }

@@ -94,7 +94,7 @@ docpadConfig = {
             r = ['<ul class="' + (classAttr) + '">']
             _.each ob, (value, key) ->
 
-                r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase() + ".html") +
+                r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase()) +
                             '" title="' + value.name +
                             '" target="' + (value.target || "_self") + '">'
                 r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img

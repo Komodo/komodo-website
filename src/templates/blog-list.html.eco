@@ -1,14 +1,14 @@
 <% for document in @getCollection('blog').findAll().toJSON(): %>
 <div class="entry">
     <h1>
-        <a href="<%= @site.url %><%= document.relativeOutPath %>">
+        <a href="<%= document.url %>">
             <%= document.title %>
         </a>
     </h1>
     <span class="blog-title-under">
         by <a href="#"><%= document.author %></a> / tags
         <% for tag in document.meta.tags: %>
-        <a href="<%= @site.url %>blog/tags.html#<%= tag %>"><%= tag %></a>
+        <a href="<%= @site.url %>blog/tags#<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>
@@ -17,7 +17,7 @@
         <%- document.excerpt %>
     </p>
     <p>
-        <a href="<%= @site.url %><%= document.relativeOutPath %>">Read More...</a>
+        <a href="<%= document.url%>">Read More...</a>
     </p>
 </div>
 <% end %>

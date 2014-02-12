@@ -20,5 +20,5 @@
         </dd>
     </dl>
     <% end %>
-    <p><a href="<%= @site.url %>blog.html">View More..</a></p>
+    <p><a href="<%= @site.url %>blog">View More..</a></p>
 </div>

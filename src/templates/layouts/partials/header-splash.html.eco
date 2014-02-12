@@ -14,22 +14,22 @@
 
     <h2>DOWNLOAD</h2>
     <div id="splash-download-buttons">
-        <a class="button primary big" href="/download.html">
+        <a class="button primary big" href="/download">
             <i class="icon icon-download"></i> K<span>omodo</span> IDE
         </a>
-        <a class="button big" href="/download.html#edit">
+        <a class="button big" href="/download#edit">
             <i class="icon icon-download"></i> K<span>omodo</span> Edit
         </a>
     </div>
     <div id="splash-download-under">
         <span>
-            21 day free trial - <a href="/framed.html#https://store.activestate.com/komodo-ide">Pricing</a>
+            21 day free trial - <a href="/framed#https://store.activestate.com/komodo-ide">Pricing</a>
         </span>
         <span>
             Open-Source - <a href="https://github.com/Komodo/KomodoEdit">View GitHub</a>
         </span>
         <div>
-            <h3><a href="/komodo-edit.html">What's Different About Komodo Edit?</a></h3>
+            <h3><a href="/komodo-edit">What's Komodo Edit?</a></h3>
         </div>
     </div>
 </div>
