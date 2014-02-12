@@ -4,7 +4,7 @@
         <% for document in @_.first @getCollection('blog').findAll().toJSON(), 10: %>
         <dl>
             <dt>
-                <a href="<%= @site.url %><%= document.url %>">
+                <a href="/<%= document.url %>">
                     <%= document.title %>
                 </a>
             </dt>
@@ -13,7 +13,7 @@
             </dd>
         </dl>
         <% end %>
-        <h2><a href="<%= @site.url %>blog">View More..</a></h2>
+        <h2><a href="/blog">View More..</a></h2>
 
     </div>
     <div id="splash-news-testimonials">
@@ -31,7 +31,7 @@
     <div id="splash-news-screencasts">
         <h1>Screencasts</h1>
             <% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
-            <a href="<%= @site.url %>screencasts/<%= item.id %>">
+            <a href="/screencasts/<%= item.id %>">
                 <i class="icon icon-youtube-play"></i>
                 <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
                 <span><%= item.title %></span>

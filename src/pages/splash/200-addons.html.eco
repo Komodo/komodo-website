@@ -5,7 +5,7 @@
         <% for k,addon of @_.first(@db.addons().featured, 4): %>
         <div>
             <h2><%= addon.name %></h2>
-            <figure style="background-image: url('<%= @site.url %>images/addons/<%= addon.img %>')"></figure>
+            <figure style="background-image: url('/images/addons/<%= addon.img %>')"></figure>
             <p>
                 <%- addon.description %>
             </p>

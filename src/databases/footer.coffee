@@ -21,7 +21,7 @@ module.exports = {
                 link: "/framed#http://community.activestate.com/addons"
             ,
                 name: "Get Involved"
-                link: "/customize.html#contributing"
+                link: "/customize#contributing"
             ]
         ,
             name: "Support"

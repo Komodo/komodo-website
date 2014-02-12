@@ -8,12 +8,12 @@
     <span class="blog-title-under">
         by <a href="#"><%= document.author %></a> / tags
         <% for tag in document.meta.tags: %>
-        <a href="<%= @site.url %>blog/tags#<%= tag %>"><%= tag %></a>
+        <a href="/blog/tags#<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>
     <p>
-        <img src="<%= @site.url %>images/authors/<%= document.author %>.jpg">
+        <img src="/images/authors/<%= document.author %>.jpg">
         <%- document.excerpt %>
     </p>
     <p>

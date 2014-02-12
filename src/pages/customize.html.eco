@@ -34,7 +34,7 @@ sidebar: opensource
     <% for k,addon of @_.first(@db.addons().featured, 3): %>
     <a href="<%= addon.link %>">
         <h3 class="tooltip" title="<%= addon.name %>"><%= addon.name %></h3>
-        <figure style="background-image: url('<%= @site.url %>images/addons/<%= addon.img %>')" class="tooltip" title="<%= addon.description %>"></figure>
+        <figure style="background-image: url('/images/addons/<%= addon.img %>')" class="tooltip" title="<%= addon.description %>"></figure>
     </a>
     <% end %>
     <a class="more" href="/framed#http://community.activestate.com/addons">
