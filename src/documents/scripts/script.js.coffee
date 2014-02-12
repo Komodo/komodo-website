@@ -185,6 +185,9 @@ jQuery ->
         return false
 
     if window.location.hash
-        elem = jq(window.location.hash)
-        openModal(elem) unless elem.data("modal") == undefined
+        try
+            elem = jq(window.location.hash)
+            openModal(elem) unless elem.data("modal") == undefined
+        catch e
+            # Suppress
 
