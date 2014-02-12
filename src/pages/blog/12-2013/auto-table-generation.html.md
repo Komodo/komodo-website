@@ -3,7 +3,7 @@ title: Auto-table Generation with Snippets, EJS and Komodo
 author: Carey Hoffman
 date: 2013-12-3
 tags: [macro, EJS, HTML tables]
-excerpt: I hate laying out tedious HTML tables. I know you do too. In fact, I'm sure you have a better way of doing it then typing it out tag for closing tag. This post is to show you how you can easily write a snippet in Komodo that does that for you.
+description: I hate laying out tedious HTML tables. I know you do too. In fact, I'm sure you have a better way of doing it then typing it out tag for closing tag. This post is to show you how you can easily write a snippet in Komodo that does that for you.
 layout: blog
 ---
 

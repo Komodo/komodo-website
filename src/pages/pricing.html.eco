@@ -1,6 +1,7 @@
 ---
 title: Pricing
 layout: default
+description: Komodo IDE pricing and licensing
 ---
 
 <h1>Komodo IDE Pricing</h1>
@@ -82,8 +83,7 @@ layout: default
             <figure>Free</figure>
 
             <p>
-                Charities, Schools,<br>
-                Open Source Initiatives
+                Charities & Open Source Initiatives
             </p>
             <p>Evaluated on a case-by-case basis</p>
 

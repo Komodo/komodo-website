@@ -43,10 +43,10 @@ docpadConfig = {
             url: "/"
             title: "Komodo IDE"
             description: """
-
+One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python, PHP, Ruby, Perl, HTML, CSS and JavaScript.
                 """
             keywords: """
-
+komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestate comodo,kumodo ide,active state komodo,perl komodo ide,ide software,perl ide,python ide,ide python,tcl ide,integrated development environment,development environment,activetstate,komodo linux,komodo mac
                 """
 
         getPreparedTitle: ->

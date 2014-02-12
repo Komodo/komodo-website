@@ -14,7 +14,7 @@
     </span>
     <p>
         <img src="/images/authors/<%= document.author %>.jpg">
-        <%- document.excerpt %>
+        <%- document.description %>
     </p>
     <p>
         <a href="<%= document.url%>">Read More...</a>

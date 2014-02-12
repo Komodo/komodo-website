@@ -3,7 +3,7 @@ title: Strlen Considered Dangerous
 author: Eric Promislow
 date: 2013-10-29
 tags: [bug, php]
-excerpt: A user complained that when he loaded a particular PHP file into Komodo, the editor would become unresponsive, and there would be no code intelligence. A quick check outside the editor showed most of what I needed to know about this file..
+description: A user complained that when he loaded a particular PHP file into Komodo, the editor would become unresponsive, and there would be no code intelligence. A quick check outside the editor showed most of what I needed to know about this file..
 layout: blog
 ---
 

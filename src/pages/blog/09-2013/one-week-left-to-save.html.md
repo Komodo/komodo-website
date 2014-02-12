@@ -3,7 +3,7 @@ title: One Week Left to Save on Komodo IDE 8.5
 author: Michael Kanasoot
 date: 2013-09-23
 tags: [sale]
-excerpt: Dev Tools $50 off until Sep. 30, 2013Our Komodo 8.5/Back to Work promotion is coming to a close next Monday, September 30.<br>Now is the time to get licenses of Perl Dev Kit, Tcl Dev Kit, Komodo IDE or Pro Studio, as we rarely offer discounts on our developer tools.
+description: Dev Tools $50 off until Sep. 30, 2013Our Komodo 8.5/Back to Work promotion is coming to a close next Monday, September 30.<br>Now is the time to get licenses of Perl Dev Kit, Tcl Dev Kit, Komodo IDE or Pro Studio, as we rarely offer discounts on our developer tools.
 layout: blog
 ---
 
