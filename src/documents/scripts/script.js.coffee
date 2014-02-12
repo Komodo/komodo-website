@@ -183,4 +183,35 @@ jQuery ->
         )
     #jq("aside").toggleClass "expand"
 
+    # JS Dialogs
+    openModal = (elem) ->
+        elem.dialog(
+            modal: true
+            draggable: false
+            closeOnEscape: true
+            minWidth: jq(window).width() / 3
+            maxHeight: jq(window).height() / 1.5
+            show:
+                effect: "fade"
+                duration:500
+                easing:"easeOutExpo"
+            hide:
+                effect: "drop"
+                direction: "down"
+                distance:100
+                duration:500
+                easing:"easeOutExpo"
+            open: ->
+                jq('.ui-widget-overlay').click ->
+                    elem.dialog "close"
+        )
+
+    jq("a[data-modal]").click ->
+        elem = jq(jq(this).attr("href"))
+        openModal(elem)
+        return false
+
+    if window.location.hash
+        elem = jq(window.location.hash)
+        openModal(elem) unless elem.data("modal") == undefined
 

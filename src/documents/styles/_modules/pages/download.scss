@@ -4,7 +4,7 @@
     {
         text-align: center;
 
-        ul
+        & > ul
         {
             margin: auto;
             max-width: 600px;
@@ -23,6 +23,15 @@
 
         & > div
         {
+            margin: auto;
+            max-width: 600px;
+            padding-bottom: 0;
+            
+            &:not(:first-child)
+            {
+                display: none;
+            }
+
             p:first-child
             {
                 margin-top: 0;
@@ -72,5 +81,10 @@
             }
         }
 
+    }
+
+    #requirements
+    {
+        display: none;
     }
 }

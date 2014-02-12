@@ -69,7 +69,7 @@
 
 .ui-tabs
 {
-    ul
+    & > ul
     {
         border-bottom: 2px solid lighten($color-base-text, 10%);
 
