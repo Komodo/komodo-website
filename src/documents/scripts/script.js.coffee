@@ -62,10 +62,6 @@ jQuery ->
                 pos++
             ), 10000
     
-    if not jq.cookie "ucoWarning"
-        showUcoModal()
-        jq.cookie "ucoWarning", true
-
     # Analytics
     if _gaq?
         jq("a[href]").click ->
