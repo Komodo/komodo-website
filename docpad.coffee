@@ -105,6 +105,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             r.push "</ul>"
             r.join("")
 
+        getBlogsFiltered: (filters, add) ->
+            if add
+                filters = _.extend filters, add
+                
+            @getCollection('blog').findAll(filters).toJSON()
+
     environments:
         development:
             ignoreCustomPatterns: /public\/vendor|public\/images/
@@ -172,6 +178,19 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         partials:
             partialsPath: 'templates'
+        tags:
+            extension: '.html.eco'
+            relativeDirPath: 'tagged'
+            injectDocumentHelper: (document) ->
+                document.setMeta(
+                    layout: 'default'
+                    sidebar: 'blog'
+                    classNames: 'document-blog'
+                    data: """
+                        <%- @partial('tag', @) %>
+                        """
+                )
+
 
     events:
 

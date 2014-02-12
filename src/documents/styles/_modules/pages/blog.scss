@@ -45,6 +45,11 @@
 }
 
 /* Blog List */
+.document-blog article > h1 + a.push-right
+{
+    margin-top: -30px;
+}
+
 .document-blog .entry
 {
     & > h1
@@ -113,6 +118,7 @@
         img
         {
             max-width: 100px;
+            border: 1px solid #AAAAAA;
             float: right;
         }
 

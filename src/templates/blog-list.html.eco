@@ -1,4 +1,4 @@
-<% for document in @getCollection('blog').findAll().toJSON(): %>
+<% for document in @getBlogsFiltered({}, @_filters): %>
 <div class="entry">
     <h1>
         <a href="<%= document.url %>">
@@ -8,7 +8,7 @@
     <span class="blog-title-under">
         by <a href="#"><%= document.author %></a> / tags
         <% for tag in document.meta.tags: %>
-        <a href="/blog/tags#<%= tag %>"><%= tag %></a>
+        <a href="/tagged/<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>

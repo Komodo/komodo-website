@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Komodo Blog
-layout: default
 sidebar: blog
 description: A blog about the latest news and events related to Komodo IDE and Komodo Edit
 ---
