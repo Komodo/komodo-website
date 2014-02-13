@@ -8,7 +8,7 @@
     </div>
 </div>
 <div class="news">
-    <% for document in @_.first @getCollection('blog').findAll().toJSON(), 4: %>
+    <% for document in @_.first @getBlogsFiltered(), 4: %>
     <dl>
         <dt>
             <a href="/<%= document.relativeOutPath %>">

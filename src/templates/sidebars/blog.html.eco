@@ -21,7 +21,7 @@
 <div class="blogs">
     <h1>Recent Blogs</h1>
     <ul>
-        <% for document in @_.first @getCollection('blog').findAll().toJSON(), 10: %>
+        <% for document in @_.first @getBlogsFiltered(), 10: %>
         <li>
             <a href="/<%= document.relativeOutPath %>">
                 <%= document.title %>

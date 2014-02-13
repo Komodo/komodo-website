@@ -23,10 +23,10 @@
     </div>
     <div id="splash-download-under">
         <span>
-            21 day free trial - <a href="/framed#https://store.activestate.com/komodo-ide">Pricing</a>
+            21 day free trial - <a href="/pricing">Pricing</a>
         </span>
         <span>
-            Open-Source - <a href="https://github.com/Komodo/KomodoEdit">View GitHub</a>
+            Open-Source - <a href="https://github.com/Komodo/KomodoEdit"><i class="icon icon-github"></i>View GitHub</a>
         </span>
         <div>
             <h3><a href="/komodo-edit">What's Komodo Edit?</a></h3>

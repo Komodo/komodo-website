@@ -105,11 +105,16 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             r.push "</ul>"
             r.join("")
 
-        getBlogsFiltered: (filters, add) ->
+        getBlogsFiltered: (filters = {}, add = false) ->
             if add
                 filters = _.extend filters, add
                 
-            @getCollection('blog').findAll(filters).toJSON()
+            moment = require 'moment'
+
+            entries = @getCollection('blog').findAll(filters).toJSON()
+            entries = _.filter entries, (entry) -> moment().diff(entry.date) > 0
+            return entries
+
 
     environments:
         development:
