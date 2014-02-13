@@ -23,6 +23,32 @@ jQuery ->
     # Highlight Code
     jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
 
+    # Splash Screenshots
+    ss = jq("#splash-screenshots")
+    if ss.length
+        platform = window.navigator.platform.toLowerCase()
+
+        if platform.indexOf "linux" != -1
+            platform = "linux"
+        else if platform.indexOf "win" != -1
+            platform = "windows"
+        else if platform.indexOf "mac" != -1
+            platform = "osx"
+
+        elem = ss.find(".splash-" + platform)
+        oldPrimary = ss.find(".primary")
+
+        if elem and elem != oldPrimary
+            if elem.hasClass("secondary")
+                elemClass = "secondary"
+            else
+                elemClass = "tertiary"
+
+            elem.removeClass elemClass
+            elem.addClass "primary"
+            oldPrimary.removeClass "primary"
+            oldPrimary.addClass elemClass
+
     # Load Testimonials
     if jq(".testimonial blockquote").length
         textFit(jq(".testimonial blockquote"))
