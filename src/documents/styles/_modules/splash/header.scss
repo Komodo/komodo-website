@@ -49,10 +49,11 @@
             left: 50%;
 
             margin: 0;
-            margin-left: -419px;
-            width: 838px;
-            height: 598px;
+            margin-left: -412px;
+            width: 825px;
+            height: 578px;
 
+            background-size: 100%;
             background-repeat: no-repeat;
 
             @include box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
@@ -75,12 +76,12 @@
 
             &.secondary
             {
-                margin-left: -629px;
+                margin-left: -618px;
             }
 
             &.tertiary
             {
-                margin-left: -210px;
+                margin-left: -206px;
             }
 
             &:hover
