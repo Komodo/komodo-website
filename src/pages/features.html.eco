@@ -20,7 +20,7 @@ description: Find out about the countless features Komodo offers
         <div>
             <% for _k,featured of group.featured: %>
             <a href="/images/screenshots/features/<%= featured.image %>.png" title="<%= featured.name %><% if featured.description?: %><%= ' - ' + featured.description %><% end %>" class="lightbox">
-                <img src="/images/screenshots/features/<%= featured.image %>-small.png">
+                <img src="/images/screenshots/features/<%= featured.image %>-small.png" alt="<%= featured.name %><% if featured.description?: %><%= ' - ' + featured.description %><% end %>">
             </a>
             <% end %>
         </div>

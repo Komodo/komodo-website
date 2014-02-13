@@ -13,7 +13,7 @@
         / <%= document.humanDate %>
     </span>
     <p>
-        <img src="/images/authors/<%= document.author %>.jpg">
+        <img src="/images/authors/<%= document.author %>.jpg" alt="<%= document.author %>">
         <%- document.description %>
     </p>
     <p>

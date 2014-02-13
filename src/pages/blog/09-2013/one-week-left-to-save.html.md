@@ -13,7 +13,7 @@ Now is the time to get licenses of Perl Dev Kit, Tcl Dev Kit, Komodo IDE or Pro 
 
 This week only, take advantage of the following promotional pricing:
 
-<img src="/images/blog/09-2013/dev-tools-on-sale.png" align="right">
+<img src="/images/blog/09-2013/dev-tools-on-sale.png" align="right" alt="Dev Tools On Sale">
 
 **[Perl Dev Kit (PDK)][2] and [Tcl Dev Kit (TDK)][3]**
 

@@ -5,7 +5,7 @@
 <div class="info">
     <h1>Blog Info</h1>
 
-    <img src="/images/authors/<%= @document.author %>.jpg">
+    <img src="/images/authors/<%= @document.author %>.jpg" alt="<%= @document.author %>">
     <p><strong>By:</strong> <a href="#"><%= @document.author %></a></p>
 
     <p>

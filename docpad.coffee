@@ -97,7 +97,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase()) +
                             '" title="' + value.name +
                             '" target="' + (value.target || "_self") + '">'
-                r.push '<img src="' + imgPath + value.img + '"/>' unless ! value.img
+                r.push '<img src="' + imgPath + value.img + '" alt="' + value.name + '"/>' unless ! value.img
                 r.push '<span class="link-name">' + value.name + '</span>'
                 r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
                 r.push '</a></li>'
