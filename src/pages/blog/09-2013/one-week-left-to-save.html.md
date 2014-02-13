@@ -46,4 +46,4 @@ We appreciate your business and support of our developer tools. Happy coding!
 [4]: https://store.activestate.com/komodo-ide?utm_source=blog&amp;utm_medium=&amp;utm_term=&amp;utm_content=&amp;utm_campaign=komodo-8-5
 [5]: https://store.activestate.com/activeperl-pro-studio?utm_source=blog&amp;utm_medium=&amp;utm_term=&amp;utm_content=&amp;utm_campaign=komodo-8-5
 [6]: https://store.activestate.com/activetcl-pro-studio?utm_source=blog&amp;utm_medium=&amp;utm_term=&amp;utm_content=&amp;utm_campaign=komodo-8-5
-[7]: /downloads?utm_source=blog&amp;utm_medium=&amp;utm_term=&amp;utm_content=&amp;utm_campaign=komodo-8-5
+[7]: /download

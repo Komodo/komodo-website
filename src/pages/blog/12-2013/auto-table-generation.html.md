@@ -9,7 +9,7 @@ layout: blog
 
 I hate laying out tedious HTML tables. I know you do too. In fact, I'm sure you have a better way of doing it then typing it out tag for closing tag. This post is to show you how you can easily write a snippet in Komodo that does that for you.
 
-By using EJS in our snippets which was [implemented by EricP in Komodo 8](/blog/2012/12/saving-keystrokes-macro-snippets) you can now perform processing tasks within your [snippets](http://docs.activestate.com/komodo/8.5/snippets.html#snippets_top) as well as the [existing interpolation ](http://docs.activestate.com/komodo/8.5/komodo-js-api.html#ko.interpolate)in snippets and other features.
+By using EJS in our snippets which was [implemented by EricP in Komodo 8](/framed#http://activestate.com/blog/2012/12/saving-keystrokes-macro-snippets) you can now perform processing tasks within your [snippets](http://docs.activestate.com/komodo/8.5/snippets.html#snippets_top) as well as the [existing interpolation ](http://docs.activestate.com/komodo/8.5/komodo-js-api.html#ko.interpolate)in snippets and other features.
 
 Here's the code for the HTML table generating snippet I promised:
 
