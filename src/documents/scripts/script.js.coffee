@@ -150,18 +150,18 @@ jQuery ->
     # Nav Collapse
     jq("header .collapser").click -> jq("header nav").toggleClass "expanded"
 
-    # Responsive Scripts
+    # Responsive Scripts - TODO: Replace with pure CSS solution
 
     ss = jq("#splash-screenshots")
     ssf = jq("#splash-screenshots figure.primary")
 
     splashResizeHandler = ->
-        if (jq(window).width() < 960)
-            ratio = jq(window).width()/1050
+        if (jq(window).width() < 1100)
+            ratio = jq(window).width()/1150
             ss.css('transform','scale('+(ratio)+')')
-            ss.height(ssf[0].getBoundingClientRect().height)
+            ss.height(ssf[0].getBoundingClientRect().height + 25)
 
-        if (jq(window).width() > 960)
+        if (jq(window).width() > 1100)
             jq("#splash-screenshots").css('transform','')
             jq("#splash-screenshots").height("")
 
