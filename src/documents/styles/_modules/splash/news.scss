@@ -11,12 +11,25 @@
     h1, h2, h3
     {
         margin: 0;
+
+        a
+        {
+            @include link($color-base-text, $color-base-link-hover);
+        }
+    }
+
+    & > div:first-child
+    {
+        @include span-columns(5);
+    }
+
+    & > div:not(:first-child)
+    {
+        @include span-columns(7);
     }
 
     #splash-news-blogs
     {
-        @include span-columns(5);
-
         dl
         {
             font-size: 10pt;
@@ -41,6 +54,72 @@
             }
 
         }
+    }
+
+    #splash-news-tweets
+    {
+        margin-top: 25px;
+
+        iframe
+        {
+            margin-bottom: -4px;
+        }
+
+        li
+        {
+            clear: both;
+            font-size: 9.5pt;
+            padding: 5px 0;
+
+            & > a > img
+            {
+                width: 24px;
+                border: 1px solid rgb(150,150,150);
+                margin: 0 5px 5px 0;
+                @include border-radius(2px);
+            }
+
+            .tweet
+            {
+                display: block;
+                margin-left: 29px;
+            }
+
+            .icons
+            {
+                float: right;
+                opacity: 0.2;
+                max-width: 24px;
+                line-height: 10pt;
+                text-align: center;
+
+                @include transition(opacity 0.2s ease-in-out);
+
+                .icon-twitter
+                {
+                    font-size: 24px;
+                }
+
+                .icon-retweet
+                {
+                    cursor: default;
+                }
+
+                a
+                {
+                    border: 0;
+                }
+            }
+
+            &:hover
+            {
+                .icons
+                {
+                    opacity: 1;
+                }
+            }
+        }
+
     }
 
     #splash-news-testimonials .testimonial
@@ -94,7 +173,6 @@
     #splash-news-testimonials,
     #splash-news-screencasts
     {
-        @include span-columns(7);
         margin-right: 0;
     }
 
@@ -157,27 +235,50 @@
 
     @include media($tablet)
     {
-        #splash-news-blogs,
-        #splash-news-testimonials
-        {
-            @include span-columns(5.8);
-        }
-
-        #splash-news-screencasts
+        & > div:first-child,
+        & > div:not(:first-child)
         {
             @include span-columns(12);
+        }
+
+        & > div:first-child
+        {
+            @include outer-container();
+
+            & > div
+            {
+                @include span-columns(6);
+            }
+        }
+
+        #splash-news-tweets
+        {
+            margin-top: 0;
+        }
+
+        #splash-news-testimonials h1
+        {
+            margin-top: 25px;
         }
     }
 
     @include media($mobile)
     {
-        #splash-news-blogs,
-        #splash-news-testimonials
+        & > div:first-child,
+        & > div:not(:first-child)
         {
             @include span-columns(12);
         }
 
-        #splash-news-testimonials h1
+        & > div:first-child
+        {
+            & > div
+            {
+                @include span-columns(12);
+            }
+        }
+
+        #splash-news-tweets
         {
             margin-top: 25px;
         }
@@ -187,4 +288,5 @@
             @include span-columns(5.7);
         }
     }
+
 }

@@ -29,7 +29,8 @@
     "docpad-plugin-robotskirt": "~2.0.3",
     "docpad-plugin-coffeekup": "~2.2.0",
     "docpad-plugin-cleanurls": "~2.6.2",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "docpad-plugin-feedr": "~2.7.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.5.6",

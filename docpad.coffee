@@ -115,7 +115,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             entries = _.filter entries, (entry) -> moment().diff(entry.date) > 0
             return entries
 
-
     environments:
         development:
             ignoreCustomPatterns: /public\/vendor|public\/images/
@@ -195,7 +194,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                         <%- @partial('tag', @) %>
                         """
                 )
-
 
     events:
 

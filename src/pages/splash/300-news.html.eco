@@ -1,41 +1,70 @@
 <div id="splash-news">
-    <div id="splash-news-blogs">
-        <h1>Latest Blogs</h1>
-        <% for document in @_.first @getBlogsFiltered(), 10: %>
-        <dl>
-            <dt>
-                <a href="/<%= document.url %>">
-                    <%= document.title %>
-                </a>
-            </dt>
-            <dd>
-                By <%= document.author %>, <%= document.humanDate %>
-            </dd>
-        </dl>
-        <% end %>
-        <h2><a href="/blog">View More..</a></h2>
+    <div>
+        <div id="splash-news-blogs">
+            <h1><a href="/blog">Blogs</a></h1>
+            <% for document in @_.first @getBlogsFiltered(), 4: %>
+            <dl>
+                <dt>
+                    <a href="/<%= document.url %>">
+                        <%= document.title %>
+                    </a>
+                </dt>
+                <dd>
+                    By <%= document.author %>, <%= document.humanDate %>
+                </dd>
+            </dl>
+            <% end %>
+        </div>
+        <div id="splash-news-tweets">
+            <h1>
+                <a href="http://twitter.com/KomodoIDE" target="_blank">Tweets</a>
 
-    </div>
-    <div id="splash-news-testimonials">
-        <h1>Testimonials</h1>
-        <div class="testimonial">
-            <blockquote data-field="comment">
-                @ActiveState Sweetttt, you beautiful sons-of-$&^%@, Komodo 8 now has
-                all the features I've wanted in an IDE since I was 2 years old. #thanx
-            </blockquote>
-            <span>
-                <span data-field="name"><a href="#">ANAIO</a></span> via <span data-field="source"><a href="#">Twitter</a></span>
-            </span>
+                <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </h1>
+            <ul>
+                <script id="tweet-template" type="text/x-handlebars-template">
+                    <li>
+                        <div class="icons">
+                            <a href="{{link}}" target="_blank"><i class="icon icon-twitter"></i></a>
+                            {{#if retweet}}
+                                <i class="icon icon-retweet tooltip" title="Retweeted by {{retweet.author}}"></i>
+                            {{/if}}
+                        </div>
+
+                        <a href="{{author_link}}" title="{{author}} ({{nick}})" target="_blank">
+                            <img src="{{avatar}}" align="left">
+                        </a>
+                        <span class="tweet">
+                            {{{tweet}}}
+                        </span>
+                    </li>
+                </script>
+            </ul>
         </div>
     </div>
-    <div id="splash-news-screencasts">
-        <h1>Screencasts</h1>
-            <% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
-            <a href="/screencasts/<%= item.id %>">
-                <i class="icon icon-youtube-play"></i>
-                <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
-                <span><%= item.title %></span>
-            </a>
-            <% end %>
+    <div>
+        <div id="splash-news-testimonials">
+            <h1>Testimonials</h1>
+            <div class="testimonial">
+                <blockquote data-field="comment">
+                    @ActiveState Sweetttt, you beautiful sons-of-$&^%@, Komodo 8 now has
+                    all the features I've wanted in an IDE since I was 2 years old. #thanx
+                </blockquote>
+                <span>
+                    <span data-field="name"><a href="#">ANAIO</a></span> via <span data-field="source"><a href="#">Twitter</a></span>
+                </span>
+            </div>
+        </div>
+        <div id="splash-news-screencasts">
+            <h1>Screencasts</h1>
+                <% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
+                <a href="/screencasts/<%= item.id %>">
+                    <i class="icon icon-youtube-play"></i>
+                    <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
+                    <span><%= item.title %></span>
+                </a>
+                <% end %>
+        </div>
     </div>
 </div>

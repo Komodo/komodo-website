@@ -34,9 +34,12 @@
             "out/vendor/tooltipster/js/jquery.tooltipster.js",
             "out/vendor/magnific-popup/dist/jquery.magnific-popup.js",
             "out/vendor/github.commits.widget/js/github.commits.widget.js",
+            "out/vendor/handlebars/handlebars.js",
+            "out/scripts/helpers/localStorage.js",
             "out/scripts/script.js",
             "out/scripts/splash.js",
-            "out/scripts/framed.js"
+            "out/scripts/framed.js",
+            "out/scripts/twitter.js"
           ]
         },
         "options": {

@@ -98,16 +98,18 @@ jQuery ->
                 _gaq.push(['_link', href])
 
     # Tooltips
-    jq('.tooltip').tooltipster
-        contentAsHTML: true
-        position: 'right'
-        maxWidth: 250
-        functionReady: (origin, tooltip) ->
-            arrow = tooltip.find(".tooltipster-arrow")
-            if arrow.hasClass "tooltipster-arrow-right"
-                arrow.find("span").css "left", "-8px"
-            if arrow.hasClass "tooltipster-arrow-left"
-                arrow.find("span").css "right", "-8px"
+    bindTooltips = ->
+        jq('.tooltip').tooltipster
+            contentAsHTML: true
+            position: 'right'
+            maxWidth: 250
+            functionReady: (origin, tooltip) ->
+                arrow = tooltip.find(".tooltipster-arrow")
+                if arrow.hasClass "tooltipster-arrow-right"
+                    arrow.find("span").css "left", "-8px"
+                if arrow.hasClass "tooltipster-arrow-left"
+                    arrow.find("span").css "right", "-8px"
+    bindTooltips()
 
     jq('a.lightbox').magnificPopup
         type:'image'
@@ -216,4 +218,9 @@ jQuery ->
             openModal(elem) unless elem.data("modal") == undefined
         catch e
             # Suppress
+
+    # Twitter Feed
+    twitterTemplate = jq("#tweet-template")
+    if twitterTemplate.length
+        new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
 
