@@ -101,6 +101,17 @@ strong
 .centered
 {
     text-align: center;
+
+    & > div,
+    & > iframe
+    {
+        margin: auto;
+    }
+
+    & > .twitter-tweet
+    {
+        margin: auto !important;
+    }
 }
 
 .push-left
