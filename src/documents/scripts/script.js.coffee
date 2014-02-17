@@ -158,12 +158,12 @@ jQuery ->
     ssf = jq("#splash-screenshots figure.primary")
 
     splashResizeHandler = ->
-        if (jq(window).width() < 1100)
-            ratio = jq(window).width()/1150
+        if (jq(document).width() < 1100)
+            ratio = jq(document).width()/1150
             ss.css('transform','scale('+(ratio)+')')
             ss.height(ssf[0].getBoundingClientRect().height + 25)
 
-        if (jq(window).width() > 1100)
+        if (jq(document).width() > 1100)
             jq("#splash-screenshots").css('transform','')
             jq("#splash-screenshots").height("")
 
