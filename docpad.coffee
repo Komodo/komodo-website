@@ -112,7 +112,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             moment = require 'moment'
 
             entries = @getCollection('blog').findAll(filters).toJSON()
-            entries = _.filter entries, (entry) -> moment().diff(entry.date) > 0
+
+            unless docpad.getEnvironment() is "development"
+                entries = _.filter entries, (entry) -> moment().diff(entry.date) > 0
+            else
+                entries = _.filter entries, (entry) -> true
+
             return entries
 
     environments:
