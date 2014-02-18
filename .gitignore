@@ -5,3 +5,4 @@ src/public/vendor/
 *.komodoproject
 .docpad.db
 .jshintrc
+.sass-cache
