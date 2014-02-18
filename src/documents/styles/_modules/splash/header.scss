@@ -57,7 +57,7 @@
             background-size: 100%;
             background-repeat: no-repeat;
 
-            @include box-shadow(0 0 20px 6px rgba(0,0,0,0.4));
+            box-shadow: 0 0 20px 6px rgba(0,0,0,0.4);
             @include transform(scale(0.55));
             /*@include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);*/
             @include transition-property (transform, z-index);
@@ -117,8 +117,8 @@
     #splash-download-buttons
     {
         display: inline-block;
-        @include border-radius(3px);
-        @include box-shadow(0 0 8px 0 rgba(0,0,0,0.3));
+        border-radius: 3px;
+        box-shadow: 0 0 8px 0 rgba(0,0,0,0.3);
 
         a.big.button
         {
@@ -152,22 +152,18 @@
             {
                 padding: 18px 15px 16px 10px;
                 @extend %button-green;
-                @include border-radius(3px 0 0 3px);
-                @include box-shadow(
-                    inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                    inset -1px 0 0 0 rgba(255,255,255, 0.15),
-                    inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                    inset 0 0 0 0 rgba(255,255,255,0)
-                );
+                border-radius: 3px 0 0 3px;
+                box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                            inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                            inset 0 -1px 0 0 rgba(0,0,0, 0.3),
+                            inset 0 0 0 0 rgba(255,255,255,0);
 
                 &:hover
                 {
-                    @include box-shadow(
-                        inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                        inset -1px 0 0 0 rgba(255,255,255, 0.15),
-                        inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                        inset -25px 15px 30px 0px rgba(255,255,255,0.1)
-                    );
+                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                                inset 0 -1px 0 0 rgba(0,0,0, 0.3),
+                                inset -25px 15px 30px 0px rgba(255,255,255,0.1);
                 }
 
                 i /* icon */
@@ -182,22 +178,18 @@
                 padding: 18px 15px 16px;
                 margin-left: -4px;
                 @extend %button-grey;
-                @include border-radius(0 3px 3px 0);
-                @include box-shadow(
-                    inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                    inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                    inset 0 -1px 0 0 rgba(0,0,0, 0.2),
-                    inset 0 0 0 0 rgba(255,255,255,0.0)
-                );
+                border-radius: 0 3px 3px 0;
+                box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                            inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                            inset 0 -1px 0 0 rgba(0,0,0, 0.2),
+                            inset 0 0 0 0 rgba(255,255,255,0.0);
 
                 &:hover
                 {
-                    @include box-shadow(
-                        inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                        inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                        inset 0 -1px 0 0 rgba(0,0,0, 0.2),
-                        inset -25px 15px 30px 0px rgba(255,255,255,0.1)
-                    );
+                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                                inset 0 -1px 0 0 rgba(0,0,0, 0.2),
+                                inset -25px 15px 30px 0px rgba(255,255,255,0.1);
                 }
 
                 i /* icon */

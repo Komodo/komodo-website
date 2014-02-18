@@ -85,7 +85,7 @@
 
                 img
                 {
-                    @include box-shadow(0 0 6px 0 rgba(0,0,0,0));
+                    box-shadow: 0 0 6px 0 rgba(0,0,0,0);
                     
                     @include transition-property (transform, box-shadow, border);
                     @include transition-duration(0.2s, 0.2s, 0.2s);
@@ -97,7 +97,7 @@
 
                     &:hover
                     {
-                        @include box-shadow(0 4px 10px 0 rgba(0,0,0,0.15));
+                        box-shadow: 0 4px 10px 0 rgba(0,0,0,0.15);
                         @include transform(scale(1.2));
                         border-color: $color-base-link-block-hover;
                     }

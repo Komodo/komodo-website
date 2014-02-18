@@ -134,16 +134,14 @@ aside
         padding: 2px;
         @include transition(box-shadow 0.2s ease-in-out);
         @include transform(rotate(45deg));
-        @include box-shadow(0 0 6px 0 rgba(0,0,0,0.5));
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
         /* Thanks http://brettrawlins.com/css-background-patterns/ */
         @include background-image(repeating-linear-gradient(135deg, #827B55, #827B55 15px, #555 15px, #555 30px));
 
         &:hover
         {
-            @include box-shadow(
-                0 0 6px 0 rgba(0,0,0,0.5),
-                inset 0 0 0 400px rgba(0,0,0,0.2)
-            );
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5),
+                        inset 0 0 0 400px rgba(0,0,0,0.2);
         }
     }
 }

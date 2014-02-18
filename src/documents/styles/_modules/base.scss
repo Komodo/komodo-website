@@ -131,13 +131,11 @@ strong
 
 .badge
 {
-    @include box-shadow(
-         inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-         inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
-         0 0 6px 0 rgba(0,0,0,0.3)
-    );
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+                inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
+                0 0 6px 0 rgba(0,0,0,0.3);
     @include gradient-green;
-    @include border-radius(2px);
+    border-radius: 2px;
 
     color: #FFF;
     font-weight: bold;
@@ -177,7 +175,7 @@ em
 
 table
 {
-    @include border-radius(3px);
+    border-radius: 3px;
     display: inline-block;
     margin: 10px;
     background: #FEFEFE;

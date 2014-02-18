@@ -32,8 +32,8 @@
 .ui-dialog
 {
     border: 1px solid #494949;
-    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
-    @include border-radius(3px);
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
     @include linear-gradient(#F2F2F2, #EAEAEA);
 
     .ui-dialog-titlebar

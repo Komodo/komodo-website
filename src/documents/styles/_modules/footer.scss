@@ -6,7 +6,7 @@ footer
     @include background-image(linear-gradient(to bottom, rgba(85,85,85,1) 0%,rgba(41,41,41,1) 300px));
 
     border-top: 0;
-    @include box-shadow(0 -1px 0 0 #898989, 0 -2px 0 0 #3D3D3D);
+    box-shadow: 0 -1px 0 0 #898989, 0 -2px 0 0 #3D3D3D;
 
     color: $color-footer-text;
 
@@ -53,6 +53,7 @@ footer
         font-size: 10pt;
         font-weight: 400;
         text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
+        list-style: none;
 
         ul
         {
@@ -62,12 +63,15 @@ footer
 
         &.social
         {
-            @include inline-block-list;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
             li
             {
                 margin: 0;
                 padding: 0;
+                display: inline-block;
                 
                 &:not(:last-child)
                 {
@@ -119,16 +123,16 @@ footer
             font-weight: 400;
             padding: 4px;
             border: 1px solid #262626;
-            @include border-radius(2px);
-            @include box-shadow(inset 1px 1px 6px 0 rgba(0,0,0,1), 1px 1px 0 0 rgba(255,255,255,0.2));
+            border-radius: 2px;
+            box-shadow: inset 1px 1px 6px 0 rgba(0,0,0,1), 1px 1px 0 0 rgba(255,255,255,0.2);
             @include background-image(linear-gradient(to bottom, rgba(227,227,227,1) 0%,rgba(255,255,255,1) 100%));
         }
 
         &:focus
         {
-            @include box-shadow(inset 1px 1px 6px 0 rgba(0,0,0,0.15),
+            box-shadow: inset 1px 1px 6px 0 rgba(0,0,0,0.15),
                         1px 1px 0 0 rgba(255,255,255,0.2),
-                        0 0 6px 2px $color-shadow-highlight);
+                        0 0 6px 2px $color-shadow-highlight;
         }
     }
 

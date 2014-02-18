@@ -76,7 +76,7 @@
                 width: 24px;
                 border: 1px solid rgb(150,150,150);
                 margin: 0 5px 5px 0;
-                @include border-radius(2px);
+                border-radius: 2px;
             }
 
             .tweet

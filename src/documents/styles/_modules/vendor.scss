@@ -70,7 +70,7 @@
 #jr_inner
 {
     max-width: 620px !important;
-    @include border-radius(3px);
+    border-radius: 3px;
 }
 
 #jr_close
@@ -110,8 +110,8 @@ html.wait
 /* Tooltips */
 .tooltipster-default
 {
-    @include border-radius(2px);
-    @include box-shadow(0 0 6px 0 rgba(0,0,0,0.2));
+    border-radius: 2px;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.2);
 
     border: 0;
     background: rgba(0,0,0,0.8);

@@ -1,5 +1,3 @@
-@import "compass/typography/lists";
-
 header
 {
     position: relative;
@@ -63,8 +61,15 @@ header
 
         ul
         {
-            @include inline-block-list;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
+            li
+            {
+                display: inline-block;
+            }
+            
             li a
             {
                 display: block;
@@ -137,7 +142,7 @@ header
 
             nav
             {
-                @include border-radius(2px);
+                border-radius: 2px;
                 position: absolute;
                 z-index: 999;
                 background: rgba(39, 45, 44, 0.9);
