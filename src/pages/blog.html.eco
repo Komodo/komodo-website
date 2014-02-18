@@ -12,4 +12,16 @@ pagePathPrefix: page
 
 <%- @partial('blog-list.html', @) %>
 
+<% if @document.page.number is @document.page.count-1: %>
+
+<h3 class="centered">
+    You've reached the end.<br>
+    Note that you can access our
+    <a href="http://www.activestate.com/blog/category/blog-categories/komodo" target="_blank">
+        older blog archives on the ActiveState website
+    </a>.
+</h3>
+
+<% end %>
+
 <%- @partial('pagination.html', @) %>
