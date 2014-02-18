@@ -241,3 +241,5 @@ jQuery ->
     if twitterTemplate.length
         new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
 
+    # Open external links in a new window
+    jq("a[href^='http://']").attr("target", "_blank")
