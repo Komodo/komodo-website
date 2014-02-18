@@ -30,7 +30,8 @@
     "docpad-plugin-cleanurls": "~2.7.0",
     "moment": "~2.5.1",
     "docpad-plugin-feedr": "~2.7.0",
-    "docpad-plugin-tags": "~2.0.7"
+    "docpad-plugin-tags": "~2.0.7",
+    "docpad-plugin-paged": "https://github.com/ervwalter/docpad-plugin-paged/tarball/compiled"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",

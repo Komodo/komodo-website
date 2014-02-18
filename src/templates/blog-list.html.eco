@@ -1,4 +1,4 @@
-<% for document in @getBlogsFiltered({}, @_filters): %>
+<% for document in @getBlogsFiltered({}, @_filters, @document): %>
 <div class="entry">
     <h1>
         <a href="<%= document.url %>">
@@ -6,14 +6,14 @@
         </a>
     </h1>
     <span class="blog-title-under">
-        by <a href="#"><%= document.author %></a> / tags
+        by <a href="/authors#<%= document.author.replace(/[^a-zA-Z]/g,'') %>"><%= document.author %></a> / tags
         <% for tag in document.meta.tags: %>
         <a href="/tagged/<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>
     <p>
-        <img src="/images/authors/<%= document.author %>.jpg" alt="<%= document.author %>">
+        <img src="/images/authors/<%= document.author.replace(/[^a-zA-Z]/g,'') %>.jpg" alt="<%= document.author %>">
         <%- document.description %>
     </p>
     <p>

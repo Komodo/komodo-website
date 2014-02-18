@@ -1,0 +1,24 @@
+
+<!-- Page Listing -->
+<div class="pagination">
+    <ul>
+        <!-- Previous Page Button -->
+        <% if @hasPrevPage(): %>
+            <li><a href="<%= @getPrevPage() %>">Prev</a></li>
+        <% end %>
+
+        <!-- Page Number Buttons -->
+        <% for pageNumber in [0..@document.page.count-1]: %>
+            <% if @document.page.number is pageNumber: %>
+                <li class="active"><span><%= pageNumber + 1 %></span></li>
+            <% else: %>
+                <li><a href="<%= @getPageUrl(pageNumber) %>"><%= pageNumber + 1 %></a></li>
+            <% end %>
+        <% end %>
+
+        <!-- Next Page Button -->
+        <% if @hasNextPage(): %>
+            <li><a href="<%= @getNextPage() %>">Next</a></li>
+        <% end %>
+    </ul>
+</div>

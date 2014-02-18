@@ -115,6 +115,23 @@ jQuery ->
         type:'image'
         removalDelay: 500
 
+    jq('div.lightbox').magnificPopup
+        delegate: 'a'
+        type:'image'
+        removalDelay: 500
+        gallery:
+           enabled: true
+           navigateByImgClick: true
+           preload: [0,1]
+
+    jq('.slideshow').each ->
+        elem = jq this
+        elem.slideshow
+            caption: elem.data("caption") == "true"
+            width: elem.data("width")
+            height: elem.data("height")
+            pauseSeconds: elem.data("pause") || 6
+
     # Github commits widget
     jq(".github-commits").each ->
         el = jq this

@@ -1,0 +1,70 @@
+---
+layout: blog
+update_from_drupal: true
+title: Solving the Wedged Web App Problem with Komodo's Rx Toolkit
+description: As part of the beta launch for ActiveState's Stackato cloud platform, we've written a Rails app that tracks the tweet activity on some of the players in the upcoming American presidential election (only less than 16 months away as I write this!). You can read more about CandidateBuzz here.
+disqus_identifier: node/3110
+author: Eric Promislow
+date: July 18, 2011
+tags:
+- regex
+- ruby
+- rx toolkit
+- stackato
+---
+
+<div>
+  		
+          <p>As part of the beta launch for ActiveState's <a href="http://www.activestate.com/cloud">Stackato</a> cloud platform, we've written a Rails app that tracks the tweet activity on some of the players in the upcoming American presidential election (only less than 16 months away as I write this!). You can <a href="http://www.activestate.com/blog/2011/07/favorite-twitter-based-app-stackato-candidate-buzz">read more about CandidateBuzz here</a>.</p>
+  
+  <p>This post is on how I quickly solved a technical problem with one of my favorite development tools. The crux of the back-end work on this app was parsing a Twitter flow, and culling the incoming tweets to separate each unique tweet from a barrage of copies and retweets. For example, I wanted to discover that the second tweet in this list was derived from the first:</p>
+  
+  <pre>
+  Using Komodo and Stackato to build a cool web app
+  http://bit.ly/jcRTvD #candidateBuzz
+  
+  RT @cnn RT @TheKomodoKid: Using Komodo and Stackato to build a coolweb app
+  http://bit.ly/jcRTvD #candidateBuzz #thisiscool
+  </pre>
+  
+  <p>Occasionally, the backend would hang, or as one of the testers diplomatically put it, "it would get wedged", and I would have to restart the application. That sent me on a hunt for the cause.</p>
+  
+  <p>First, I realized that I hadn't done a thorough <abbr title="Read the Fine Manual">RTFM</abbr>. <a href="http://cloudfoundry.org/">Cloud Foundry</a>, the basis for Stackato, runs Rails apps by default with <a href="http://www.ruby-doc.org/stdlib/libdoc/webrick/rdoc/index.html">Webrick</a>, a web server written in pure Ruby. I've found that while Webrick isn't the fastest way to run a Rails app, I've never questioned its stability. I added "<code><a href="http://code.macournoyer.com/thin/">gem 'thin'</a></code>" to the app's Gemfile, restarted the app, worked on some other things, and waited for a hang. Out of curiousity, I ran a '<code>tail -f</code>' in a window that was monitoring the flow of parsed tweets, and left it open. And at some point, I saw a tweet that contained this nugget:</p>
+  
+  <pre>
+  Cher Has Had It Up To Her With Michele Bachmann [Tweet Beat]:
+  \t\t\t\t\t\t\t\t\t\t
+  \t\t\t\t\t
+  \t\t\t\t\t\t
+  \t\t\t\t\t\t\t\t\t
+  \t\t\t\tToday in Tw... http://bit.ly/pD0qup
+  </pre>
+  
+  <p>Each '<code>\t</code>' denotes a tab character, and the link is real (<abbr title="Not Suitable for Work Depending on Where You Work">NSFWDOWYW</abbr>). And the tail program was paused. There was no other activity, where I was expecting a fast flow of parsed tweets and diagnostic messages. I had found the wedge point! Now I hadn't used the Komodo <a href="http://docs.activestate.com/komodo/6.1/regex.html">Rx Toolkit</a> to develop the patterns I used to write the tweet parser. I've been doing pattern-matching for so long, sometimes the regexes feel like they write themselves. But I was suspicious, so I fired it up and pasted in the tweet above. I then pasted this tweet-parsing regex into the toolkit (making sure the verbose and single-line options were on):</p>
+  <pre>
+  \A(\s*(?:(?:RT\b[\s:]*)?(?:@[a-zA-Z][\w\-.]*[,:\s]*))*)
+  (.*?)
+  ((?:http:\/\/.*?\/\S+|[\#\@][a-zA-Z][\w\-.]*|\s+)*)\Z
+  </pre>
+  
+  <p>In English, I'm looking for all the "RT" indicators at the start of a tweet, followed by the body of the tweet, followed by any links, hashtags, and mentions of other users. I found I couldn't count links as part of a message, because some people will copy a tweet, regenerate their own private shortened URL of a link, and then republish the tweet as their own. I could have gone to the trouble of using timestamps to determine which tweet was the true original, but I didn't care; I just wanted to make sure I wasn't recording two uniques where one was a copy.</p>
+  
+  <p>Back from that digression, I used the Rx Toolkit language selector to have it evaluate the expression with Ruby, and watched the Results box say "Pattern-match in progress...", just like you see in the screenshot. When I switched the language to Python, I got the same behavior. PHP and JavaScript both told me "Your regular expression does not match the search text". And Perl, the granddaddy of text-parsing languages, came up with the correct result immediately.</p>
+  
+  <p>A possible culprit was the "near-infinite backtracking" problem, where the algorithm constantly backtracks to the same sub-pattern. This can happen when you're looking for something like </p>
+  <pre>((x*)+)y$</pre> where the text has a large number of "x"s, but the algorithm doesn't check to see if it ends with a "y". The pattern did contain something like that, so I tried this revision:
+  
+  <pre>
+  \A(\s*(?:(?:RT\b[\s:]*)?(?:@[a-zA-Z][\w\-.]*[,:\s]*))*)
+  (.*?)
+  ((?:http:\/\/.*?\/\S+|[\#\@][a-zA-Z][\w\-.]*|\s)*)\Z
+  </pre>
+  
+  <p>...and Ruby and Python both found the answer immediately, and even PHP found it. (If you don't see the difference, it's near the end of the regex, where I changed "...\s+)*" to "...\s)*".) I pushed the changes to my local web server, ran it for a while, saw that it had successfully processed the Cher tweet, pushed the change to the main server, and Candidate Buzz has been running without needing a restart since that point.</p>
+  
+  <p>So by using the Rx Toolkit, I was able to quickly find out that my regex didn't behave the same way in five different languages, and was able to quickly fix the regex so that it would work correctly not only in Ruby, but any other language, should I need to redeploy CandidateBuzz on a different framework.</p>
+  
+  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/rx-toolkit-screenshot.png">
+       <img title="Komodo IDE: Rx Toolkit" alt="Komodo IDE: Rx Toolkit" style="width: auto" src="/images/blog/2011-07/rx-toolkit-screenshot.png" class="as_feature_img as_left"></a>
+  
+</div>

@@ -3,4 +3,6 @@
 <div class="spacer"></div>
 <a href="/blog" class="push-right">View All</a>
 <% @_filters = {tags: $has: @document.tag} %>
+
 <%- @partial('blog-list.html', @) %>
+

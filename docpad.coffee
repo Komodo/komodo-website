@@ -105,10 +105,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             r.push "</ul>"
             r.join("")
 
-        getBlogsFiltered: (filters = {}, add = false) ->
+        getBlogsFiltered: (filters = {}, add = false, document = false) ->
             if add
                 filters = _.extend filters, add
-                
+
+            filters.isPagedAuto = $ne: true
+
             moment = require 'moment'
 
             entries = @getCollection('blog').findAll(filters).toJSON()
@@ -118,17 +120,22 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             else
                 entries = _.filter entries, (entry) -> true
 
-            return entries
+            if document and document.page
+                return entries[document.page.startIdx...document.page.endIdx]
+            else
+                return entries
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0|styles/
+            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|styles/
             templateData:
                 youtubeFeeds:
                     screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
             plugins:
                 youtubefeed:
                     dontParse: ['screencasts']
+            enabledPlugins:
+                tags: false
 
     collections:
         splash: ->
@@ -194,6 +201,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                         <%- @partial('tag', @) %>
                         """
                 )
+        paged:
+            cleanurl: true
+            startingPageNumber: 2
 
     events:
 

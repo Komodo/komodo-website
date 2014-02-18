@@ -144,7 +144,8 @@ strong
 }
 
 ul.disc,
-.markdown article ul
+.markdown article ul,
+.drupal-import article ul
 {
     list-style-type: disc;
 
@@ -157,7 +158,8 @@ ul.disc,
 }
 
 ol.decimal,
-.markdown article ol
+.markdown article ol,
+.drupal-import article ol
 {
     list-style-type: decimal;
 

@@ -1,0 +1,40 @@
+---
+layout: blog
+update_from_drupal: true
+title: Using Komodo IDE's new Stackato Tools
+description: We've been writing a fair bit about Stackato recently, but mostly with IT managers and sysadmins in mind. We thought it was time to evangelize a bit to the Komodo community. Since it's developers who will be the day-to-day users of this platform, we'd like to get you involved a bit more and hear your feedback.
+disqus_identifier: node/3127
+author: Troy Topnik
+date: August 9, 2011
+tags:
+- komodo 7
+- micro-cloud
+- stackato
+---
+
+<div>
+  		
+          <p>We've been <a href="http://www.activestate.com/blog/2011/07/stackato-now-officially-beta-come-create-your-own-private-paas-our-cloud-platform">writing a fair bit</a> about <a href="http://www.activestate.com/cloud">Stackato</a> recently, but mostly with IT managers and sysadmins in mind. We thought it was time to evangelize a bit to the Komodo community. Since it's <em>developers</em> who will be the day-to-day users of this platform, we'd like to get you involved a bit more and hear your feedback.</p>
+  
+  <p>We've just released Komodo 7 Alpha 4 (<a href="http://docs.activestate.com/komodo/7.0/releases/ide.html">release notes</a>). If you look in the right sidebar, you'll see a new Stackato Tools toolbox with some interesting looking macros. These are there to help you deploy, update, and manage Perl, Python, Ruby, and Node applications on Stackato.</p>
+  
+  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/images/misc/stackato-tools.png">
+       <img title="Stackato Toolbox" alt="Stackato Toolbox" style="width: auto; float: right" src="/images/blog/2011-08/stackato-tools.png" class="as_feature_img as_right"></a>
+  
+  <p>To use these, you'll need to do a few things:</p>
+  
+  <ol>
+  <li>Get <a href="http://downloads.activestate.com/Komodo/releases/7.0.0a4/">Komodo IDE 7.0 Alpha 4</a>
+  </li>
+    <li>Get access to Stackato Beta by filling out the form on the <a href="http://www.activestate.com/cloud">Stackato home page</a>.</li>
+    <li>Install the 'stackato' client. This can be installed with 'pypm install stackato' or downloaded from the <a href="http://community.activestate.com/stackato">Stackato Beta section of the Community site</a>.</li>
+    <li>Get and set-up a Stackato micro-cloud or cluster. For most people this will be just downloading and starting a Stackato VM for VMWarePlayer/Fusion or VirtualBox.</li>
+  </ol>
+  <p>There's a <a href="http://www.youtube.com/watch?v=fezAKWSTUuw#t=5m12s">demo</a> in a screencast from a previous post that will give you an idea what's involved. In the screencast I use the stackato command-line client, but once you've got the client set up in the Komodo preferences, you can start using the Stackato toolbox in Komodo IDE instead.</p>
+  
+  <p>There are <em>lots</em> of commands available in the toolbox, and you'll probably end up using some more than others (e.g. start, stop, update, crashlogs). For these, you can create your own <a href="http://docs.activestate.com/komodo/7.0/tutorial/tourlet_custtoolbar.html#custtoolbar_top">custom toolbar</a>, <a href="http://docs.activestate.com/komodo/7.0/tutorial/tourlet_keybinding.html#keybinding_top">custom keybindings</a>, or use "Invoke Tool" (Ctrl+Shift+K) to run it by name.</p>
+   
+  <p>Komodo 7 is still Alpha software, so things will change. There's currently no '<code>stackato target ...</code>' macro, so you'll need to do that from the command line. Likewise, some of the macros call up interactive sessions that are also handled in a console rather than in Komodo natively.</p>
+  
+  <p>Let us know what you think! Post your feedback on Stackato itself in the <a href="http://community.activestate.com/forum/stackato/feedback">Stackato Feedback forum</a>, and feedback on Komodo 7 Alpha in the <a href="http://community.activestate.com/forums/komodo/komodo-beta">Komodo Beta forum</a>.</p>
+</div>

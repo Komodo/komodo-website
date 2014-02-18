@@ -1,0 +1,52 @@
+---
+layout: blog
+update_from_drupal: true
+title: Node.js support in Komodo 7 Alpha 3
+description: After months of hearing the question "When are you adding Node.js support to Komodo?" I'm very pleased to announce that Node.js autocomplete and debugging are available in Komodo IDE 7 Alpha 3.
+disqus_identifier: node/3090
+author: Troy Topnik
+date: June 23, 2011
+tags:
+- komodo 7
+- alpha
+- autocomplete
+- debugging
+- javascript
+- nodejs
+---
+
+<div>
+  		
+               <img title="Node support in Komodo" alt="Node support in Komodo" style="width: auto" src="/images/blog/2011-06/node2.jpg" class="as_feature_img as_left"><p>After months of hearing the question "When are you adding Node.js support to Komodo?" I'm very pleased to announce that Node.js autocomplete and debugging are available in <a href="http://www.activestate.com/komodo-ide/downloads">Komodo IDE 7 Alpha 3</a>.</p>
+  
+  <h2 style="clear:both">Code intelligence</h2>
+       
+  <p style="float: left">Tucked between JavaScript and Perl is a language preference pane for Node.js, where you can set the path to your <code>node</code> executable and add library search paths.</p>
+  
+  <img title="Komodo IDE: Node Settings" alt="Komodo IDE: Node Settings" style="width: auto; float: right;" src="/images/blog/2011-06/node-prefs.png" class="as_feature_img as_right"><p>Without any configuration, Komodo should find node if it's on your path, and give you autocompletion for everything in the core library. The recursive scanning of node library directories is not quite there yet, so you'll have to manually add the path of each npm module you want to use. Once you have, you'll get autocomplete for those third-party modules as well.</p>
+  
+  <p style="clear:both">As far as I'm aware, Komodo is the first IDE to provide this feature for Node.</p>
+  
+    <img title="Komodo IDE: Node.js Autocomplete" alt="Komodo IDE: Node.js Autocomplete" style="width: auto" src="/images/blog/2011-06/node-autocomplete.png" class="as_feature_img as_left"><p>Komodo uses heuristicts (i.e. looking for things like '<code>require('foo')</code>' or '<code>#!/usr/bin/node</code>' in the file) to detect when a JavaScript file is actually Node.js. If for some reason you're not getting autocompletion in the Node namespaces, check the language detection panel of the status bar on the bottom right and override the detected language if necessary.</p>
+  
+  <h2>Debugging</h2>
+  
+  <p>We've also added Node debugging!</p>
+  
+  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/node-debug.png">
+       <img title="Komodo IDE: Node Debugging" alt="Komodo IDE: Node Debugging" style="width: auto" src="/images/blog/2011-06/node-debug-500.png" class="as_feature_img as_left"></a>
+  
+  <p>You can run and step through the code, set breakpoints, examine and edit variables, and all of the things you can do when debugging Python, PHP, Perl, Ruby or Tcl in Komodo.</p>
+  
+  <p>When starting the debugger, you may be prompted to create a <a href="http://docs.activestate.com/komodo/7.0/debugger.html#remote_uri_mapping">mapped URI</a> for linking the URI provided by the debugger with the file system location (e.g. <code>file://127.0.0.1/path/to/file --&gt; file://path/to/file</code>), but once you save the mapping things should work fine. Like the recursive code intelligence scanning, we'll fix this so it all happens automatically in future releases.</p>
+  
+  <h2>Stackato integration and movable panes</h2>
+  
+  <p>Along with the Node features, we've also fulfilled a very long standing feature request: the ability to move the tabs in the sidebars and bottom pane around. If you want to put the Toolbox in the left sidebar, and the Debugger in the right - go for it.</p>
+  
+  <p>There's also integration with our cloud platform, <a href="http://www.activestate.com/cloud">Stackato</a>. That takes a bit more explaining, so I'll make it the subject of it's own upcoming blog post.</p>
+  
+  <h2>Upgrades and support</h2>
+  
+  <p>For those of you who are torn between buying Komodo 6 now vs. waiting for the official Komodo 7 release, you can essentially get both (think of it as "upgrade insurance") by getting the <a href="http://www.activestate.com/upgrade-support-terms">Upgrades &amp; Support subscription</a>. When Komodo 7 is released, you'll be good to go.</p>
+</div>

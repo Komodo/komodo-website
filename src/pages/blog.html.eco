@@ -3,6 +3,13 @@ layout: default
 title: Komodo Blog
 sidebar: blog
 description: A blog about the latest news and events related to Komodo IDE and Komodo Edit
+basenameOrig: blog
+isPaged: true
+pagedCollection: 'blog'
+pageSize: 5
+pagePathPrefix: page
 ---
 
 <%- @partial('blog-list.html', @) %>
+
+<%- @partial('pagination.html', @) %>

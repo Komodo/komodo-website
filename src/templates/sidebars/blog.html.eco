@@ -5,8 +5,8 @@
 <div class="info">
     <h1>Blog Info</h1>
 
-    <img src="/images/authors/<%= @document.author %>.jpg" alt="<%= @document.author %>">
-    <p><strong>By:</strong> <a href="#"><%= @document.author %></a></p>
+    <img src="/images/authors/<%= @document.author.replace(/[^a-zA-Z]/g,'') %>.jpg" alt="<%= @document.author %>">
+    <p><strong>By:</strong> <a href="/authors#<%= @document.author.replace(/[^a-zA-Z]/g,'') %>"><%= @document.author %></a></p>
 
     <p>
         <strong>Tags: </strong>

@@ -42,6 +42,20 @@
     }
 }
 
+.document-blog-entry.drupal-import
+{
+    .content > div:first-child > p:first-child img,
+    .content > div:first-child > img:first-child
+    {
+        float: right;
+    }
+
+    img
+    {
+        max-width: 100%;
+    }
+}
+
 /* Blog List */
 .document-blog article > h1 + a.push-right
 {
