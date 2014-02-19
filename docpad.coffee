@@ -127,7 +127,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|styles/
+            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0|styles/
             templateData:
                 youtubeFeeds:
                     screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
