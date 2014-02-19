@@ -1,11 +1,10 @@
 ---
 title: New Website! Win a Copy of Komodo!
 author: Nathan Rijksen
-date: 2024-02-18
+date: 2014-02-19
 tags: [website, contest, twitter]
 description: After weeks of hard work we can finally present to you our new web site! It's been a long time coming and although a lot of work has been done thus far a lot more is still to come. We're working hard not just on Komodo but also on the infrastructure surrounding Komodo: community, addons, support, documentation, etc.
 layout: blog
-sitemap: false
 ---
 
 After weeks of hard work we can finally present to you our new web site! It's
@@ -61,12 +60,12 @@ the "fan" way (your chances are in our hands). Or, you know, do both!
 
 ### The Simple Way (Follow & Retweet)
 
-Follow <a href="http://twitter.com/">@KomodoIDE</a> on Twitter and retweet:
+Follow <a href="http://twitter.com/KomodoIDE">@KomodoIDE</a> on Twitter and retweet:
 
--- Twitter Embed to Follow, you're too fast! --
+<blockquote class="twitter-tweet" lang="en"><p>Win a copy of Komodo! Follow &amp; Retweet <a href="https://twitter.com/komodoide">@KomodoIDE</a> <a href="https://twitter.com/search?q=%23KomodoIDEdotCom&amp;src=hash">#KomodoIDEdotCom</a> or increase your chances by .. <a href="http://t.co/tJawubNKVK">http://t.co/tJawubNKVK</a></p>&mdash; Komodo IDE &amp; Edit (@komodoide) <a href="https://twitter.com/komodoide/statuses/436246722856378369">February 19, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-We will give away one copy of Komodo to the participant who wins in the random draw
-at the end of the contest.
+We will give away one copy of Komodo to the participant who wins in the random draw.
 
 Doesn't get any simpler! But that's what everyone will be doing, so maybe you should try ..
 
@@ -81,7 +80,8 @@ We will give away 2 copies of Komodo to our favourite submissions!
 
 ### Period
 
-You will have until the end of March to participate in our contest.
+We will give away one license every week for 3 weeks, starting on Feb 28th and
+every Friday from then on.
 
 
    [Drupal]: https://drupal.org/ "Drupal - Open Source CMS"
