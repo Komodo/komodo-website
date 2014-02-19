@@ -8,6 +8,7 @@ isPaged: true
 pagedCollection: 'blog'
 pageSize: 5
 pagePathPrefix: page
+priority: 0.6
 ---
 
 <%- @partial('blog-list.html', @) %>

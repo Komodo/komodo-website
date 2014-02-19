@@ -5,6 +5,7 @@ date: 2024-02-18
 tags: [website, contest, twitter]
 description: After weeks of hard work we can finally present to you our new web site! It's been a long time coming and although a lot of work has been done thus far a lot more is still to come. We're working hard not just on Komodo but also on the infrastructure surrounding Komodo: community, addons, support, documentation, etc.
 layout: blog
+sitemap: false
 ---
 
 After weeks of hard work we can finally present to you our new web site! It's

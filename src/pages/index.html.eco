@@ -4,6 +4,7 @@ title: Komodo IDE & Edit
 headerAppend: header-splash
 classNames: no-grid
 dontNormalize: true
+priority: 1.0
 ---
 
 <% for document in @getCollection('splash').findAll().toJSON(): %>

@@ -2,6 +2,7 @@
 title: Features
 layout: default
 description: Find out about the countless features Komodo offers
+priority: 0.8
 ---
 
 <a href="/download" class="button primary big pull-right">Download Komodo</a>

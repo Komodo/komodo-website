@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 layout: default
+priority: 0.1
 ---
 Version effective date: January 17, 2014
 

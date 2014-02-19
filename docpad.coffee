@@ -40,7 +40,7 @@ docpadConfig = {
                 requireFresh(__dirname + '/src/databases/' + name + '.coffee')
 
         site:
-            url: "/"
+            url: ""
             title: "Komodo IDE"
             description: """
 One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python, PHP, Ruby, Perl, HTML, CSS and JavaScript.
@@ -197,6 +197,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                     layout: 'default'
                     sidebar: 'blog'
                     classNames: 'document-blog'
+                    sitemap: false
                     data: """
                         <%- @partial('tag', @) %>
                         """
@@ -204,6 +205,11 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         paged:
             cleanurl: true
             startingPageNumber: 2
+
+        sitemap:
+            changefreq: 'weekly'
+            priority: 0.5
+            hostname: 'http://komodoide.com'
 
     events:
 
