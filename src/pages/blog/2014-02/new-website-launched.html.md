@@ -31,8 +31,8 @@ to that end we decided [DocPad] would be the best fit for us.
 
 So why [DocPad]? Why not [Jekyll] or one of the huge variety of other [static site generators][generators]
 out there? Well first off I don't want to undersell the "competition", they all
-bring their own unique twist to the table, but Komodo being largely written in
-JavaScript we liked the idea of a [NodeJS] powered static site generator. Aside from
+bring their own unique twist to the table, but since the Komodo code base uses
+a lot of JavaScript we liked the idea of a [NodeJS] powered static site generator. Aside from
 that simple fact; [Benjamin Lupton][balupton], the creator of [DocPad], has done an amazing job
 in making [DocPad] an incredibly versatile tool that can be easily modeled to ones
 preferences. Prefer to use [ResText] rather than [Markdown] for your blogs? [No problem][restextPlugin]!
@@ -43,13 +43,13 @@ amazing tool and so far it's been a lot of fun to use.
 
 A big new website doesn't come without it's problems, and so there are sure to be
 some minor issues here and there. If you run into any and don't mind sparing a few
-minutes of your time, please [report them on github][report]. Thank you!
+minutes of your time, please [report them on github][report].
 
-### Thank You!
+### Acknowledgements
 
 Before I move on to the contest, I'd like to thank [Benjamin Arthur (balupton)][balupton] not only
 for his amazing work on [DocPad] but also for assisting us with some occasional issues
-via [IRC]. Thanks Benjamin! Furthermore I'd also like to thank everyone that contributed
+via [IRC]. Furthermore I'd also like to thank everyone that contributed
 to DocPad since it's inception -- Thank you!
 
 <a name="contest"></a>
