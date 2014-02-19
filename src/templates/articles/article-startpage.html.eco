@@ -11,7 +11,7 @@
     <% for document in @_.first @getBlogsFiltered(), 4: %>
     <dl>
         <dt>
-            <a href="/<%= document.relativeOutPath %>">
+            <a href="<%= document.url %>">
                 <%= document.title %>
             </a>
         </dt>
