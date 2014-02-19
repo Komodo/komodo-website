@@ -11,7 +11,7 @@ class TwitterFeed
             cacheTimestamp = window.localStorage.getItem("twitterFeedCacheAge")
             cache = window.localStorage.getItem("twitterFeedCache")
 
-            if cache and cacheTimestamp and (cacheTimestamp - timestamp) < 300
+            if cache and cacheTimestamp and (timestamp - cacheTimestamp) < 300
                 return @processWidgetData(cache, callback)
 
         jq.ajax(url: url, dataType: "text").done (responseText) ->
