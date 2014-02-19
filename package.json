@@ -30,7 +30,8 @@
     "docpad-plugin-tags": "~2.0.7",
     "docpad-plugin-paged": "https://github.com/ervwalter/docpad-plugin-paged/tarball/compiled",
     "docpad-plugin-sitemap": "~2.2.0",
-    "docpad-plugin-related": "~2.2.2"
+    "docpad-plugin-related": "~2.2.2",
+    "docpad-plugin-scheduling": "https://github.com/Komodo/docpad-plugin-scheduling/tarball/compiled"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",

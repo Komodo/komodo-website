@@ -111,14 +111,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             filters.isPagedAuto = $ne: true
 
-            moment = require 'moment'
-
             entries = @getCollection('blog').findAll(filters).toJSON()
-
-            unless docpad.getEnvironment() is "development"
-                entries = _.filter entries, (entry) -> moment().diff(entry.date) > 0
-            else
-                entries = _.filter entries, (entry) -> true
 
             if document and document.page
                 return entries[document.page.startIdx...document.page.endIdx]
@@ -136,6 +129,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                     dontParse: ['screencasts']
             enabledPlugins:
                 tags: false
+                paged: false
 
     collections:
         splash: ->
@@ -210,6 +204,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             changefreq: 'weekly'
             priority: 0.5
             hostname: 'http://komodoide.com'
+        scheduling:
+            defaultScheduling: true
+            devScheduling: false
 
     events:
 

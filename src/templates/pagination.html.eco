@@ -1,4 +1,4 @@
-
+<% if @document.page: %>
 <!-- Page Listing -->
 <div class="pagination">
     <ul>
@@ -22,3 +22,4 @@
         <% end %>
     </ul>
 </div>
+<% end %>

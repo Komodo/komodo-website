@@ -13,7 +13,7 @@ priority: 0.6
 
 <%- @partial('blog-list.html', @) %>
 
-<% if @document.page.number is @document.page.count-1: %>
+<% if @document.page and @document.page.number is @document.page.count-1: %>
 
 <h3 class="centered">
     You've reached the end.<br>
