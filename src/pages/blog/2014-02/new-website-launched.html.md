@@ -73,7 +73,7 @@ Doesn't get any simpler! But that's what everyone will be doing, so maybe you sh
 ### The Fan Way (Screenshot your setup to us)
 
 Tweet a screenshot that shows off your Komodo setup and use the hashtag
-#KomodoIDEdotCom. The reason we say "your chances are in your hands"
+\#KomodoIDEdotCom. The reason we say "your chances are in your hands"
 is because we will pick our favourite submissions ourselves, so **the more you
 stand out - the bigger the chances you'll win!**
 
