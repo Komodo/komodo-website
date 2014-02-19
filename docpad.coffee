@@ -197,7 +197,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                     layout: 'default'
                     sidebar: 'blog'
                     classNames: 'document-blog'
-                    sitemap: false
+                    priority: 0.2
                     data: """
                         <%- @partial('tag', @) %>
                         """
