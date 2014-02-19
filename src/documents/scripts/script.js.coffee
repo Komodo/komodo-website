@@ -28,17 +28,17 @@ jQuery ->
     if ss.length
         platform = window.navigator.platform.toLowerCase()
 
-        if platform.indexOf "linux" != -1
+        if platform.indexOf("linux") != -1
             platform = "linux"
-        else if platform.indexOf "win" != -1
+        else if platform.indexOf("win") != -1
             platform = "windows"
-        else if platform.indexOf "mac" != -1
+        else if platform.indexOf("mac") != -1
             platform = "osx"
 
         elem = ss.find(".splash-" + platform)
         oldPrimary = ss.find(".primary")
 
-        if elem and elem != oldPrimary
+        if elem and !elem.hasClass("primary")
             if elem.hasClass("secondary")
                 elemClass = "secondary"
             else
