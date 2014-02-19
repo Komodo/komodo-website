@@ -58,7 +58,7 @@ To celebrate the launch of the new website we're giving away 3 copies of Komodo 
 There are 2 ways to win a copy, the simple way (but less chance of winning) or
 the "fan" way (your chances are in our hands). Or, you know, do both!
 
-### The Simple Way (Follow & Retweet)
+### The Simple Way (Read on to increase your chances)
 
 Follow <a href="http://twitter.com/KomodoIDE">@KomodoIDE</a> on Twitter and retweet:
 
