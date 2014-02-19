@@ -5,7 +5,8 @@ jQuery ->
     iframe = jq("iframe")
 
     unless iframe.attr "src"
-        iframe.attr("src", window.location.hash.substr(1))
+        href = window.location.href
+        iframe.attr("src", href.substr(href.indexOf("framed/?")+8))
 
     jq("a.button:not(.primary)").click ->
         window.location = iframe.attr "src"

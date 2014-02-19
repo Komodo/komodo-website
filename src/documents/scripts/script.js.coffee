@@ -93,7 +93,7 @@ jQuery ->
         jq("a[href]").click ->
             a = jq this
             href = a.attr("href")
-            href = href.substr(href.indexOf("#")+1) if href.indexOf("framed#") != -1
+            href = href.substr(href.indexOf("framed/?")+8) if href.indexOf("framed/?") != -1
             if href.indexOf("activestate.com") != -1
                 _gaq.push(['_link', href])
 

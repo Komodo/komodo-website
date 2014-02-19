@@ -12,44 +12,46 @@ module.exports = {
             name: "Download"
             sub: [
                 name: "Archive"
-                link: "/framed#http://downloads.activestate.com/Komodo/"
+                link: "/framed/?http://downloads.activestate.com/Komodo/"
             ]
         ,
             name: "Customize"
             sub: [
                 name: "Discover"
-                link: "/framed#http://community.activestate.com/addons"
+                link: "/framed/?http://community.activestate.com/addons"
             ,
                 name: "Get Involved"
                 link: "/customize#contributing"
             ]
         ,
             name: "Support"
-            link: "/framed#http://community.activestate.com/forums/komodo/komodo-support"
+            link: "/framed/?http://community.activestate.com/forums/komodo/komodo-support"
             sub: [
                 name: "Documentation"
-                link: "/framed#http://docs.activestate.com/komodo"
+                link: "/framed/?http://docs.activestate.com/komodo"
             ,
                 name: "Report Bug"
-                link: "/framed#http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
+                link: "http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
+                target: "_blank"
             ]
         ]
 
         support: [
             name: "Documentation"
-            link: "/framed#http://docs.activestate.com/komodo"
+            link: "/framed/?http://docs.activestate.com/komodo"
         ,
             name: "API Reference"
-            link: "/framed#http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_top"
+            link: "/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_top"
         ,
             name: "&nbsp;"
             link: "#"
         ,
             name: "Report a Bug"
-            link: "/framed#http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
+            link: "http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
+            target: "_blank"
         ,
             name: "Ask the Community"
-            link: "/framed#http://community.activestate.com/forums/komodo/komodo-support"
+            link: "/framed/?http://community.activestate.com/forums/komodo/komodo-support"
         ]
 
         activestate: [
@@ -68,19 +70,19 @@ module.exports = {
 
         communicate: [
             name: "Contact Us"
-            link: "/framed#http://www.activestate.com/company/contact-us"
+            link: "/framed/?http://www.activestate.com/company/contact-us"
         ,
             name: "Blog"
         ,
             name: "Forums"
-            link: "/framed#http://community.activestate.com/forums/komodo"
+            link: "/framed/?http://community.activestate.com/forums/komodo"
         ,
             name: "IRC"
             link: "http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor"
             target: "_blank"
         ,
             name: "Mailing Lists"
-            link: "/framed#http://code.activestate.com/lists#ActiveState"
+            link: "/framed/?http://code.activestate.com/lists#ActiveState"
         ]
 
         social: [

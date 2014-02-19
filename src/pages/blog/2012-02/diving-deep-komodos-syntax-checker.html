@@ -18,7 +18,7 @@ tags:
       dl { clear: both; } dt { float: left; clear: left; width: 100px; text-align: right; font-weight: bold; }
       dt:after { content: ":"; } dd { margin: 0 0 0 110px; padding: 0 0 0.5em 0; }
     </style>
-  <p>The <a href="/framed#http://activestate.com/blog/2012/02/syntax-checking-revisited-komodo-7">previous post on Komodo's new syntax checker</a> showed how it works out of the box. This post shows how to take more control of the system and add your own syntax checkers. There are a few bits of code in this piece, and if you aren't familiar with the Komodo/Mozilla extension system, you might want to first have a look at an introduction. As of this writing, <a href="https://developer.mozilla.org/en/Building_an_Extension">https://developer.mozilla.org/en/Building_an_Extension</a> contains a good overview.</p>
+  <p>The <a href="/framed/?http://activestate.com/blog/2012/02/syntax-checking-revisited-komodo-7">previous post on Komodo's new syntax checker</a> showed how it works out of the box. This post shows how to take more control of the system and add your own syntax checkers. There are a few bits of code in this piece, and if you aren't familiar with the Komodo/Mozilla extension system, you might want to first have a look at an introduction. As of this writing, <a href="https://developer.mozilla.org/en/Building_an_Extension">https://developer.mozilla.org/en/Building_an_Extension</a> contains a good overview.</p>
   
   <p>When we first shipped the UDL syntax-description language for Komodo, I wrote a blog post showing how to use it to add Haml support for Komodo. The blog post has been lost to the sands of time and typepad, but Haml support still hasn't made it to core Komodo, so it's a good choice to show how to add a syntax checker to it. If you aren't familiar with Haml, it's a bracket-free preprocessor for HTML most often used in Rails apps. You can read more at <a href="haml-lang.com">haml-lang.com</a>.</p>
   
@@ -26,11 +26,11 @@ tags:
   
   <h2>Building an Instant Extension</h2>
   
-  <p>It's almost all code and keystrokes from here on in, so fire up <a target="_new" title="Download Komodo IDE 7" href="/framed#http://activestate.com/komodo-ide/downloads">Komodo 7.0</a>, and start clicking away.</p>
+  <p>It's almost all code and keystrokes from here on in, so fire up <a target="_new" title="Download Komodo IDE 7" href="/framed/?http://activestate.com/komodo-ide/downloads">Komodo 7.0</a>, and start clicking away.</p>
   
   <p>Komodo has had project templates for quickly building Komodo and Mozilla extensions for a long time, but they've changed slightly with version 7. To create a new extension, create a project via the menu item [Project | New From Template | Create Komodo Extension Project]. Create a new directory to house this project, and call the project file haml.komodoproject.</p>
   
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image1_newKoExt.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image1_newKoExt.png">
        <img title="Project|New From Template|Create Komodo Extension" alt="Project|New From Template|Create Komodo Extension" style="width: auto" src="/images/blog/2012-02/image1-newkoext.png" class="as_feature_img as_left"></a>
   
   
@@ -61,7 +61,7 @@ tags:
   
     <dd>You can leave this blank.</dd>
   </dl>
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image2_koExtConfig.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image2_koExtConfig.png">
        <img title="Sample Komodo Extension configuration box" alt="Sample Komodo Extension configuration box" style="width: auto" src="/images/blog/2012-02/image2-koextconfig.png" class="as_feature_img as_left"></a>
   
   <p style="clear:both">If you bring up the Toolbox (menu [Views | Tabs &amp; Sidebars | Toolbox]) you'll notice that the new project has its own toolbox icon, which should contain two items: Build and Reconfigure. The Reconfigure item will let you revisit the configuration box. We'll be using that Build icon later to build the new extension. When you close the haml project this toolbox will be closed as well. Conversely, if you find these tools aren't available after a restart, it probably means you need to reopen the haml project.</p>
@@ -76,13 +76,13 @@ tags:
   
   <p>Download <a href="http://community.activestate.com/files/haml_bundle.zip">haml_bundle.zip</a>, unzip haml_bundle.zip, delete it as well as haml_language-0.1.0-ko.xpi, and unzip and then delete the haml.zip file. It should produce a udl directory containing four .udl files -- move this udl directory to the same level as the "content" folder in the haml directory.</p>
   
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image3_overview.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image3_overview.png">
        <img title="Overview with files" alt="Overview with files" style="width: auto" src="/images/blog/2012-02/image3-overview.png" class="as_feature_img as_left"></a>
   
   
   <p style="clear:both">The UDL files describe the colorizer, but we also need to tell Komodo a bit about the Haml language. Create a folder next to the "content" folder called "components", and create a Python XPCOM file by right-clicking on the folder, choosing "New File From Template...". In that dialog choose "Mozilla Development" on the left side, "XPCOM Component (Python)" on the right side, and giving the file a name like "koHamlLanguage.py". The directory field should already be pointing at the components folder.</p>
   
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image4_newComponent.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image4_newComponent.png">
        <img title="Creating a new component file" alt="Creating a new component file" style="width: auto" src="/images/blog/2012-02/image4-newcomponent.png" class="as_feature_img as_left"></a>
   
   
@@ -129,7 +129,7 @@ tags:
   
     <li> Assuming there are no errors, there should be a new file in the Places folder with a name like "haml-0.1-ko.xpi". Double-clicking on this should bring up the Add-ons Manager window, with a green notice that the extension was successfully installed. Press the "Restart now" button, which will install the extension and, as the button implies, restart Komodo.
       
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image5_new_ext.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image5_new_ext.png">
        <img title="New Extension Dialog" alt="New Extension Dialog" style="width: auto" src="/images/blog/2012-02/image5-new-ext.png" class="as_feature_img as_left"></a>
     </li>
   
@@ -155,7 +155,7 @@ tags:
   
   <p>You should see something similar to the image in the screenshot, with at least the leading "%" and "#' characters showing up in one color, and element names showing up in another.</p>
   
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image6_haml_coloring.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image6_haml_coloring.png">
        <img title="Sample Coloring" alt="Sample Coloring" style="width: auto" src="/images/blog/2012-02/image6-haml-coloring.png" class="as_feature_img as_left"></a>
   
   <h2>Adding the Syntax Checker</h2>
@@ -267,7 +267,7 @@ tags:
   
   <p>Run the Build tool again, and this time double-click on hamlextension-0.2-ko.xpi. Komodo should highlight a line that the Haml interpreter isn't happy about. The Syntax Checking Status box is showing that in Haml you can't provide content both on the same line as a p element, and nested within it. Delete either the braced content or the inner line, and the squiggly should disappear.</p>
   
-  <a rel="shadowbox[Screenshots]" href="/framed#http://activestate.com/sites/default/files/blog_import_images/image7_error_highlighting.png">
+  <a rel="shadowbox[Screenshots]" href="/framed/?http://activestate.com/sites/default/files/blog_import_images/image7_error_highlighting.png">
        <img title="sample error highlighting" alt="Sample error highlighting" style="width: auto" src="/images/blog/2012-02/image7-error-highlighting.png" class="as_feature_img as_left"></a>
   
   <h3>Troubleshooting</h3>
