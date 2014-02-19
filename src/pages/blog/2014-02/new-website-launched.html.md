@@ -55,27 +55,29 @@ to DocPad since it's inception -- Thank you!
 <a name="contest"></a>
 ## Let's Celebrate - Win a Copy of Komodo!
 
-To celebrate the launch of the new website we're giving away 2 copies of Komodo IDE.
+To celebrate the launch of the new website we're giving away 3 copies of Komodo IDE.
 There are 2 ways to win a copy, the simple way (but less chance of winning) or
 the "fan" way (your chances are in our hands). Or, you know, do both!
 
-### The Simple Way
+### The Simple Way (Follow & Retweet)
 
 Follow <a href="http://twitter.com/">@KomodoIDE</a> on Twitter and retweet:
 
-<div class="centered">
-<blockquote class="twitter-tweet" lang="en"><p>Win a copy of my fave IDE: Komodo! Just follow <a href="https://twitter.com/komodoide">@KomodoIDE</a> &amp; Retweet <a href="https://twitter.com/search?q=%23KomodoContest&amp;src=hash">#KomodoContest</a> <a href="http://t.co/0R6UmCTn20">http://t.co/0R6UmCTn20</a></p>&mdash; Komodo IDE &amp; Edit (@komodoide) <a href="https://twitter.com/komodoide/statuses/413407251773550592">December 18, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+-- Twitter Embed to Follow, you're too fast! --
+
+We will give away one copy of Komodo to the participant who wins in the random draw
+at the end of the contest.
 
 Doesn't get any simpler! But that's what everyone will be doing, so maybe you should try ..
 
-### The Fan Way
+### The Fan Way (Screenshot your setup to us)
 
 Tweet a screenshot that shows off your Komodo setup and use the hashtag
 #KomodoIDEdotCom. The reason we say "your chances are in your hands"
-is because we will pick our favourite submission ourselves, so **the more you
+is because we will pick our favourite submissions ourselves, so **the more you
 stand out - the bigger the chances you'll win!**
+
+We will give away 2 copies of Komodo to our favourite submissions!
 
 ### Period
 
