@@ -102,8 +102,8 @@ module.exports = (BasePlugin) ->
         # TODO: Properly use collections so that DocPad handles this stuff
         sortByTitle: (a,b) ->
             return 0 if a.title == b.title
-            return -1 if a.title > b.title
-            return 1 if a.title < b.title
+            return -1 if a.title < b.title
+            return 1 if a.title > b.title
 
         sortById: (a,b) ->
             aid = parseInt(a.id)
