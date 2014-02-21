@@ -89,12 +89,11 @@ module.exports = (BasePlugin) ->
                 videos = JSON.parse(body)
                 _.each videos, (video) ->
                     video.title_sane = self.makeSane video.title
+                    album.videos.push video
 
                     unless self.videosImported[video.id]?
-                        album.videos.push video
+                        templateData.vimeoFeeds.videos.push video
                         self.videosImported[video.id] = true
-                        
-                    templateData.vimeoFeeds.videos.push video
 
                 next()
             )
