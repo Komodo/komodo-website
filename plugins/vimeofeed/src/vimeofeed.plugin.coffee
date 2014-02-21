@@ -142,11 +142,12 @@ module.exports = (BasePlugin) ->
             if item.total_videos #Album
                 doc = @docpad.cloneModel @templateAlbum
                 outSuffix = 'category'
+                filename = item.title_sane + ".html"
             else # Video
                 doc = @docpad.cloneModel @templateVideo
                 outSuffix = 'watch'
+                filename = item.id + "-" + item.title_sane + ".html"
 
-            filename = item.title_sane + ".html"
             outPath = doc.get("outDirPath") + "/" + outSuffix + "/" + filename
 
             attr =

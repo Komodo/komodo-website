@@ -59,7 +59,7 @@
         <div id="splash-news-screencasts">
             <h1><a href="/screencasts">Screencasts</a></h1>
                 <% for k,item of @_.first(@vimeoFeeds.videos, 6): %>
-                <a href="/screencasts/watch/<%= item.title_sane %>">
+                <a href="/screencasts/watch/<%= item.id %>-<%= item.title_sane %>">
                     <i class="icon icon-youtube-play"></i>
                     <figure style="background-image: url('<%= item.thumbnail_large %>')"></figure>
                     <span><%= item.title %></span>

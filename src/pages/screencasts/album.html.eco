@@ -8,7 +8,7 @@ basenameOrig: screencast-album
     <ul class="screencasts">
         <% for k,item of @document.feedItem.videos: %>
         <li>
-            <a href="/screencasts/watch/<%= item.title_sane %>">
+            <a href="/screencasts/watch/<%= item.id %>-<%= item.title_sane %>">
                 <i class="icon icon-youtube-play"></i>
                 <figure style="background-image: url('<%= item.thumbnail_large %>')"></figure>
                 <div class="inner">
