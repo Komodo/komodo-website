@@ -101,60 +101,6 @@ aside
     }
 }
 
-/* Under Construction Tape - TODO: Remove for production */
-#under-construction-tape
-{
-    position: absolute;
-    z-index: 100;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-    width: 180px;
-    height: 180px;
-
-    .inner
-    {
-        position: absolute;
-        top: 70px;
-        right: -120px;
-        display: block;
-        width: 400px;
-        text-align: center;
-        color: #FFF;
-        font-weight: bold;
-        font-size: 9pt;
-        text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
-        text-transform: uppercase;
-        border: 0 solid #000;
-        border-width: 1px 0;
-        padding: 2px;
-        @include transition(box-shadow 0.2s ease-in-out);
-        @include transform(rotate(45deg));
-        box-shadow: 0 0 6px 0 rgba(0,0,0,0.5);
-        /* Thanks http://brettrawlins.com/css-background-patterns/ */
-        @include background-image(repeating-linear-gradient(135deg, #827B55, #827B55 15px, #555 15px, #555 30px));
-
-        &:hover
-        {
-            box-shadow: 0 0 6px 0 rgba(0,0,0,0.5),
-                        inset 0 0 0 400px rgba(0,0,0,0.2);
-        }
-    }
-}
-
-#under-construction
-{
-    display: none;
-}
-
-@include media($mobile)
-{
-    #under-construction-tape
-    {
-        display: none;
-    }
-}
-
 /* Github Widgets */
 .github-repositories
 {
