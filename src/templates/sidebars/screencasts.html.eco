@@ -1,6 +1,6 @@
-<% for k,item of @_.first(@youtubeFeeds.screencasts, 6): %>
-<a href="/screencasts/<%= item.id %>">
-    <figure style="background-image: url('http://img.youtube.com/vi/<%= item.id %>/hqdefault.jpg')"></figure>
+<% for k,item of @_.first(@vimeoFeeds.videos, 6): %>
+<a href="/screencasts/watch/<%= item.title_sane %>">
+    <figure style="background-image: url('<%= item.thumbnail_large %>')"></figure>
     <span><%= item.title %></span>
 </a>
 <% end %>

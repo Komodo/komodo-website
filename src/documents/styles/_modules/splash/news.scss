@@ -188,7 +188,7 @@
 
         @include outer-container;
 
-        a
+        & > a
         {
             @include span-columns(3.8);
             @include shift(0.1);
@@ -227,8 +227,7 @@
                 height: 0;
                 padding-bottom: 55%;
                 margin-bottom: 5px;
-                background-size: cover;
-                background-position: 0 -20px;
+                background-size: 100%;
             }
         }
     }
@@ -283,7 +282,7 @@
             margin-top: 25px;
         }
 
-        #splash-news-screencasts a
+        #splash-news-screencasts > a
         {
             @include span-columns(5.7);
         }

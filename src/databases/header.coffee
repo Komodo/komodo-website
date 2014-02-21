@@ -13,6 +13,8 @@ module.exports = {
         ,
             name: "Blog"
         ,
+            name: "Screencasts"
+        ,
             name: "Community"
             link: "/framed/?http://community.activestate.com/forums/komodo"
     ]

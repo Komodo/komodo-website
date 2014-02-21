@@ -1,0 +1,33 @@
+---
+layout: default
+basenameOrig: screencast-album
+---
+<% if @document.feedItem: %>
+    <h1><a href="/screencasts">Screencasts</a>: <%= @document.feedItem.title %></h1>
+
+    <ul class="screencasts">
+        <% for k,item of @document.feedItem.videos: %>
+        <li>
+            <a href="/screencasts/watch/<%= item.title_sane %>">
+                <i class="icon icon-youtube-play"></i>
+                <figure style="background-image: url('<%= item.thumbnail_large %>')"></figure>
+                <div class="inner">
+                    <span class="title"><%= item.title %></span>
+                    <span class="date">
+                        <i class="icon icon-calendar"></i>
+                        <%= item.upload_date %>
+                    </span>
+                    <span class="duration">
+                        <i class="icon icon-clock-o"></i>
+                        <%= @getDuration(item.duration) %>
+                    </span>
+                </div>
+            </a>
+            <div class="description">
+                <%- item.description %>
+            </div>
+        </li>
+        <% end %>
+
+    </ul>
+<% end %>

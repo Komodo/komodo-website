@@ -1,0 +1,168 @@
+.document-screencasts article
+{
+
+    ul
+    {
+        @include outer-container();
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li
+        {
+            @include span-columns(5.8);
+            display: inline-block;
+            text-align: center;
+
+            @include media($mobile)
+            {
+                @include span-columns(12);
+            }
+
+            a
+            {
+                display: block;
+                color: #FFF;
+                background: $color-base-text;
+                margin-bottom: 20px;
+                border-radius: 3px;
+                position: relative;
+
+                @include transition(background 0.2s ease-in-out);
+
+                &:hover
+                {
+                    background: $color-base-link-hover;
+                }
+
+                span.title
+                {
+                    font-size: 16pt;
+                    line-height: 48pt;
+                    text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+
+                    @extend %ellipsis;
+                }
+
+                span.stat
+                {
+                    position: absolute;
+                    bottom: 5px;
+                    display: block;
+                    width: 100%;
+
+                    font-size: 9.5pt;
+                    line-height: 9.5pt;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+}
+
+.document-screencasts-album,
+.document-album
+{
+    ul.screencasts
+    {
+        @include outer-container;
+        margin: 0;
+        padding: 0;
+
+        li
+        {
+            @include span-columns(3.8);
+            @include shift(0.1);
+            margin-bottom: 20px;
+
+            @include media($tablet)
+            {
+                @include span-columns(5.7);
+            }
+
+            @include media($mobile)
+            {
+                @include span-columns(12);
+                @include shift(0);
+            }
+        }
+
+        a
+        {
+            @include block-link();
+
+            position: relative;
+            display: block;
+            font-weight: bold;
+
+            .inner
+            {
+                width: 100%;
+                padding: 4px;
+                border: 0 !important;
+
+                span.title
+                {
+                    @extend %ellipsis;
+                    display: block;
+                    font-size: 12pt;
+                }
+
+                span:not(.title)
+                {
+                    color: $color-base-text;
+                    font-weight: 300;
+                    font-size: 9pt;
+                }
+
+                span.duration
+                {
+                    float: right;
+                }
+            }
+
+            i.icon-youtube-play
+            {
+                position: absolute;
+                font-size: 48px;
+                left: 50%;
+                top: 50%;
+                margin-left: -24px;
+                margin-top: -38px;
+            }
+
+            figure
+            {
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 55%;
+                margin-bottom: 5px;
+                background-size: 100%;
+            }
+        }
+
+        .description
+        {
+            font-size: 10pt;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+
+            &:after
+            {
+                position: absolute;
+                top: 30px;
+                content: " ";
+                display: block;
+                height: 70px;
+                width: 100%;
+
+                @include linear-gradient(top, rgba($color-base-background, 0) 0%, rgba($color-base-background, 1) 90%);
+            }
+        }
+    }
+
+}

@@ -1,9 +1,5 @@
 #container
 {
-    $c1: $color-base-gradient-1;
-    $c2: $color-base-gradient-2;
-    @include background-image(linear-gradient(to bottom, $c1 0px,$c2 330px,$c2 660px,$c1 1000px));
-    
     min-height: 100%;
     height: auto !important;
     height: 100%;

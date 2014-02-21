@@ -101,9 +101,9 @@ module.exports = {
             link: "https://plus.google.com/u/0/115431120071336108525/posts",
             target: "_blank"
         ,
-            name: "YouTube",
-            img: "icons/sm/youtube-24x24.png",
-            link: "http://www.youtube.com/user/ActiveStateSoftware",
+            name: "Vimeo",
+            img: "icons/sm/vimeo-24x24.png",
+            link: "https://vimeo.com/channels/komodo",
             target: "_blank"
         ,
             name: "GitHub",

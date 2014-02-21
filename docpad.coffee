@@ -118,18 +118,26 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             else
                 return entries
 
+        getDuration: (seconds) ->
+            min = Math.floor(seconds / 60)
+            sec = seconds - (min * 60)
+            if sec < 10
+                sec = "0" + sec
+            return min + ":" + sec
+
     environments:
         development:
             ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0|styles/
             templateData:
-                youtubeFeeds:
-                    screencasts: requireFresh(__dirname + '/src/databases/placeholders.coffee').screencasts
+                vimeoFeeds:
+                    requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
             plugins:
-                youtubefeed:
-                    dontParse: ['screencasts']
+                vimeofeed:
+                    dontParse: true
             enabledPlugins:
                 tags: false
                 paged: false
+                youtubefeed: false
 
     collections:
         splash: ->
@@ -142,13 +150,11 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             deployRemote: 'origin'
             deployBranch: 'gh-pages'
 
-        youtubefeed:
-            feeds: [
-                name: "screencasts"
-                url: "http://gdata.youtube.com/feeds/api/playlists/PLItFfEv4fl3uW7T8-BC_Wb0HXZoH__pIs"
-                outFilename: "screencast.html.eco"
-                outPath: "screencasts"
-            ]
+        vimeofeed:
+            user: "komodoide"
+            templateAlbum: "album.html.eco"
+            templateVideo: "video.html.eco"
+            outPath: "screencasts"
         moment:
             formats: [
                 {raw: 'date', format: 'MMMM Do, YYYY', formatted: 'humanDate'}

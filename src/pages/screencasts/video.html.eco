@@ -1,0 +1,15 @@
+---
+layout: default
+sidebar: blog
+comments: true
+---
+<% if @document.feedItem: %>
+    <div class="screencast-outer">
+        <div class="screencast-inner">
+            <iframe src="//player.vimeo.com/video/87287634" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+    <h1><a href="/screencasts">Screencasts</a>: <%= @document.feedItem.title %></h1>
+    <p><%- @document.feedItem.description %></p>
+
+<% end %>
