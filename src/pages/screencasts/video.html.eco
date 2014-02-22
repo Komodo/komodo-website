@@ -2,6 +2,7 @@
 layout: default
 sidebar: blog
 comments: true
+referencesOthers: false
 ---
 <% if @document.feedItem: %>
     <div class="screencast-outer">

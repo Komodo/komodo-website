@@ -3,6 +3,7 @@ defaultMeta =
     sidebar: "blog"
     classNames: "document-blog-entry"
     comments: true
+    referencesOthers: false
 
 if @document.update_from_drupal
     defaultMeta.classNames += " drupal-import"

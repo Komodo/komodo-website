@@ -111,7 +111,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             filters.isPagedAuto = $ne: true
 
-            entries = @getCollection('blog').findAll(filters).toJSON()
+            entries = @getCollection('blog').findAllLive(filters).toJSON()
 
             if document and document.page
                 return entries[document.page.startIdx...document.page.endIdx]
@@ -127,13 +127,23 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0|styles/
+            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
             templateData:
                 vimeoFeeds:
                     requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
+                referencesOthers: (flag) ->
+                    document = @getDocument()
+
+                    # Respect the documents meta, if any was set
+                    unless document.attributes.referencesOthers == false
+                        document.referencesOthers()
+
+                    return null
             plugins:
                 vimeofeed:
                     dontParse: true
+                partials:
+                    referenceOthers: false
             enabledPlugins:
                 tags: false
                 paged: false
@@ -231,6 +241,13 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 next()
 
             @
+
+        render: (opts) ->
+
+            {file} = opts
+
+            if file.attributes.fullDirPath.indexOf("templates") == -1
+                @docpad.log "info", "Rendering: " + file.attributes.relativePath
 }
 
 module.exports = docpadConfig
