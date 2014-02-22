@@ -55,9 +55,10 @@ allowing you to insert additional follow-on characters as required, I've typed
 ## Installation
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your Komodo toolbox. Once in your toolbox double click the macro to
-activate it. The macro will automatically activate itself the next time you
-start Komodo, you only need to do this manually the first time.
+file into your [Komodo toolbox](/framed/?http://docs.activestate.com/komodo/8.5/toolbox.html).
+Once in your toolbox double click the macro to activate it. The macro will
+automatically activate itself the next time you start Komodo, you only need to
+do this manually the first time.
 
 <div class="inline centered">
 <a href="/files/macros/Column_Incremental_Numbering.komodotool" class="button primary">
@@ -86,12 +87,12 @@ APIs and style using CSS.
 
 ## Related Materials
 
-* [DOM Inspector](http://community.activestate.com/xpi/dom-inspector)
+* [DOM Inspector](/framed/?http://community.activestate.com/xpi/dom-inspector)
   - to navigate and find existing Komodo UI elements
   - tweak CSS styling for the Komodo user interface
-* [Komodo Developer Extension](http://community.activestate.com/xpi/dom-inspector)
+* [Komodo Developer Extension](/framed/?http://community.activestate.com/xpi/dom-inspector)
   - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](http://docs.activestate.com/komodo/8.5/macroapi.html)
+* [Komodo Macro API](/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html)
   - to programatically interact with the Komodo editor
 * [Scintilla API](http://www.scintilla.org/ScintillaDoc.html)
   - the Komodo editor provides a wrapper around the Scintilla API
