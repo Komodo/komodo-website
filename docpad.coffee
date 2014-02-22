@@ -223,6 +223,8 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         scheduling:
             defaultScheduling: true
             devScheduling: false
+        consolidate:
+            ect: true
 
     events:
 

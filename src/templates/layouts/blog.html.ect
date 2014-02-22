@@ -1,3 +1,4 @@
+<%
 defaultMeta =
     articleTemplate: "article-blog"
     sidebar: "blog"
@@ -9,4 +10,5 @@ if @document.update_from_drupal
     defaultMeta.classNames += " drupal-import"
 
 @document = @_.extend defaultMeta, @document
-text @partial('layouts/layout-wrap.html', @)
+%>
+<%- @partial('layouts/layout-wrap.html', @) %>
