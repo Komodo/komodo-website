@@ -114,6 +114,11 @@ strong
     }
 }
 
+.inline
+{
+    display: inline-block;
+}
+
 .push-left
 {
     float: left;
@@ -127,6 +132,16 @@ strong
 .spacer
 {
     height: 15px;
+}
+
+.spacer-half
+{
+    height: 10px;
+}
+
+.spacer-quarter
+{
+    height: 5px;
 }
 
 .badge
@@ -144,6 +159,7 @@ strong
 }
 
 ul.disc,
+.document-blog-entry article ul,
 .markdown article ul,
 .drupal-import article ul
 {
@@ -158,6 +174,7 @@ ul.disc,
 }
 
 ol.decimal,
+.document-blog-entry article ol,
 .markdown article ol,
 .drupal-import article ol
 {

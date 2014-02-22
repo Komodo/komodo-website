@@ -6,7 +6,7 @@ comments: true
 <% if @document.feedItem: %>
     <div class="screencast-outer">
         <div class="screencast-inner">
-            <iframe src="//player.vimeo.com/video/87287634" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src="//player.vimeo.com/video/<%= @document.feedItem.id %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
     </div>
     <h1><a href="/screencasts">Screencasts</a>: <%= @document.feedItem.title %></h1>

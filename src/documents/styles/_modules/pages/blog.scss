@@ -24,10 +24,11 @@
         position: relative;
         z-index: 110;
         float: right;
+        margin-right: -30px;
 
         @include media($sidebar-collapse)
         {
-            margin-right: 40px;
+            margin-right: 20px;
         }
     }
 
