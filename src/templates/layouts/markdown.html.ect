@@ -1,7 +1,10 @@
+---
+layout: default
+---
 <%
 defaultMeta =
     classNames: "markdown"
 
 @document = @_.extend defaultMeta, @document
 %>
-<%- @partial('layouts/layout-wrap.html', @) %>
+<%- @content %>

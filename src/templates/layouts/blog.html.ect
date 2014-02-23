@@ -1,3 +1,6 @@
+---
+layout: default
+---
 <%
 defaultMeta =
     articleTemplate: "article-blog"
@@ -11,4 +14,4 @@ if @document.update_from_drupal
 
 @document = @_.extend defaultMeta, @document
 %>
-<%- @partial('layouts/layout-wrap.html', @) %>
+<%- @content %>
