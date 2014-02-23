@@ -49,6 +49,8 @@ jQuery ->
             oldPrimary.removeClass "primary"
             oldPrimary.addClass elemClass
 
+            ss.find(".promotion").appendTo elem
+
     # Load Testimonials
     if jq(".testimonial blockquote").length
         textFit(jq(".testimonial blockquote"))
