@@ -35,7 +35,7 @@ These are temporary workarounds in the interest of productivity.
 
 ## Deploy to GitHub
 
-`docpad deploy-ghpages --env static`
+`docpad clean && docpad deploy-ghpages --env static`
 
 ## Troubleshooting
 
