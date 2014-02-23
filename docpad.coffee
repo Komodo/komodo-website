@@ -62,7 +62,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             styles = []
             gruntConfig = require('./grunt-config.json')
 
-            if docpad.getEnvironment() is "development"
+            if docpad.getEnvironment().indexOf("dev") == 0
                 styles = _.flatten gruntConfig.cssmin.combine.files
             else
                 minify = gruntConfig.cssmin.minify
@@ -77,7 +77,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             scripts = []
             gruntConfig = require('./grunt-config.json')
 
-            if docpad.getEnvironment() is "development"
+            if docpad.getEnvironment().indexOf("dev") == 0
                 scripts = _.flatten gruntConfig.uglify.scripts.files
             else
                 scripts = _.keys gruntConfig.uglify.scripts.files
@@ -111,7 +111,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             filters.isPagedAuto = $ne: true
 
-            entries = @getCollection('blog').findAllLive(filters).toJSON()
+            entries = docpad.getCollection('blog').findAllLive(filters).toJSON()
 
             if document and document.page
                 return entries[document.page.startIdx...document.page.endIdx]
@@ -131,14 +131,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             templateData:
                 vimeoFeeds:
                     requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
-                referencesOthers: (flag) ->
-                    document = @getDocument()
-
-                    # Respect the documents meta, if any was set
-                    unless document.attributes.referencesOthers == false
-                        document.referencesOthers()
-
-                    return null
             plugins:
                 vimeofeed:
                     dontParse: true
@@ -147,7 +139,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             enabledPlugins:
                 tags: false
                 paged: false
-                youtubefeed: false
+
+        dev_full:
+            ignoreCustomPatterns: /public\/vendor|public\/images/
 
     collections:
         splash: ->
@@ -162,8 +156,8 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         vimeofeed:
             user: "komodoide"
-            templateAlbum: "album.html.eco"
-            templateVideo: "video.html.eco"
+            templateAlbum: "album.html.ect"
+            templateVideo: "video.html.ect"
             outPath: "screencasts"
         moment:
             formats: [
@@ -200,7 +194,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         partials:
             partialsPath: 'templates'
         tags:
-            extension: '.html.eco'
+            extension: '.html.ect'
             relativeDirPath: 'tagged'
             injectDocumentHelper: (document) ->
                 document.setMeta(
@@ -226,6 +220,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         consolidate:
             ect: true
 
+    enabledPlugins:
+        youtubefeed: false
+
     events:
 
         # Write After
@@ -244,12 +241,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             @
 
-        render: (opts) ->
-
-            {file} = opts
-
-            if file.attributes.fullDirPath.indexOf("templates") == -1
-                @docpad.log "info", "Rendering: " + file.attributes.relativePath
+        #render: (opts) ->
+        #
+        #    {file} = opts
+        #
+        #    if file.attributes.fullDirPath.indexOf("templates") == -1
+        #        @docpad.log "info", "Rendering: " + file.attributes.relativePath
 }
 
 module.exports = docpadConfig
