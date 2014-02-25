@@ -151,13 +151,13 @@ jQuery ->
     if jq(".document-download").length
         platform = window.navigator.platform.toLowerCase()
 
-        if platform.indexOf "linux" != -1 and platform.indexOf "86_64" != -1
+        if platform.indexOf("linux") != -1 and platform.indexOf("86_64") != -1
             platform = "linux-64"
-        else if platform.indexOf "linux" != -1 or platform.indexOf "x11" != -1
+        else if platform.indexOf("linux") != -1 or platform.indexOf("x11") != -1
             platform = "linux"
-        else if platform.indexOf "win" != -1
+        else if platform.indexOf("win") != -1
             platform = "windows"
-        else if platform.indexOf "mac" != -1
+        else if platform.indexOf("mac") != -1
             platform = "mac"
 
         jq(".dl-button.dl-" + platform + ":not(.primary)").each ->
