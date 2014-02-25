@@ -49,7 +49,7 @@ jQuery ->
             oldPrimary.removeClass "primary"
             oldPrimary.addClass elemClass
 
-            ss.find(".promotion").appendTo elem
+        ss.find(".promotion").appendTo ss.find(".primary")
 
     # Load Testimonials
     if jq(".testimonial blockquote").length
