@@ -19,7 +19,7 @@ docpadConfig = {
     ignoreCustomPatterns: /public\/vendor|public\/images|src\/databases|\/_/
 
     # Default Env
-    env: "development"
+    env: process.env.DOCPAD_ENV or "development"
 
     templateData:
 
@@ -140,8 +140,10 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 tags: false
                 paged: false
 
-        dev_full:
-            ignoreCustomPatterns: /public\/vendor|public\/images/
+        qa:
+            plugins:
+                livereload:
+                    enabled: true
 
     collections:
         splash: ->
@@ -240,6 +242,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 next()
 
             @
+
+        serverExtend: (opts) ->
+            {server} = opts
+            docpad = @docpad
+
+            require(__dirname + '/routes.coffee')({docpad, server})
 
         #render: (opts) ->
         #

@@ -7,7 +7,6 @@ module.exports = function(grunt) {
   grunt.initConfig(gruntConfig);
 
   grunt.registerTask('static', Object.keys(gruntConfig));
-  grunt.registerTask('production', Object.keys(gruntConfig));
+  grunt.registerTask('qa', Object.keys(gruntConfig));
   grunt.registerTask('development', 'copy');
-  grunt.registerTask('dev_full', 'copy');
 };
