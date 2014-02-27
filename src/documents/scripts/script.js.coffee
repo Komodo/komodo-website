@@ -222,6 +222,14 @@ jQuery ->
                 duration:500
                 easing:"easeOutExpo"
             open: ->
+                elem.find("[data-enable-after]").each ->
+                    el = jq this
+                    el.attr "disabled", true
+                    setTimeout(
+                        -> el.removeAttr "disabled",
+                        parseInt(el.data("enable-after")) * 1000
+                    )
+
                 jq('.ui-widget-overlay').click ->
                     elem.dialog "close"
         )

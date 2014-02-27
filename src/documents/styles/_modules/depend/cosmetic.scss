@@ -52,6 +52,11 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
                         1px 1px 1px 0 rgba(0,0,0,0.3);
         }
     }
+
+    &[disabled]
+    {
+        opacity: 0.5;
+    }
 }
 
 %button-green-text-inset
