@@ -8,7 +8,7 @@ DAEMON_PATH="/home/komodo-website/qa"
 
 DAEMON="./node_modules/docpad/bin/docpad-server"
 
-NAME=docpad-server
+NAME="docpad-server"
 PIDFILE="$DAEMON_PATH/$NAME.pid"
 LOGFILE="$DAEMON_PATH/$NAME.log"
 
