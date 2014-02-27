@@ -12,11 +12,13 @@ NAME=docpad-server
 PIDFILE="$DAEMON_PATH/$NAME.pid"
 LOGFILE="$DAEMON_PATH/$NAME.log"
 ENVIRONMENT="qa"
+HOME="/home/komodo-website"
 
 case "$1" in
 start)
     printf "%-50s" "Starting $NAME..."
     export DOCPAD_ENV=$ENVIRONMENT
+    export HOME=$HOME
     cd $DAEMON_PATH
     PID=`$DAEMON > $LOGFILE 2>&1 & echo $!`
 
