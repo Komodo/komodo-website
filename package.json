@@ -31,7 +31,8 @@
     "docpad-plugin-scheduling": "https://github.com/Komodo/docpad-plugin-scheduling/tarball/compiled",
     "docpad-plugin-partials": "https://github.com/Komodo/docpad-plugin-partials/tarball/compiled",
     "docpad-plugin-consolidate": "~2.1.0",
-    "ect": "^0.5.6"
+    "ect": "^0.5.6",
+    "request": "^2.34.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",
