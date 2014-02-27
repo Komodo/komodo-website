@@ -9,7 +9,7 @@ module.exports = ({server, docpad}) ->
 
             exec = require('child_process').exec
 
-            payload = JSON.parse res.body.payload
+            payload = JSON.parse req.body.payload
             branch = payload.ref.split("/")[2]
 
             if branch == 'master'
