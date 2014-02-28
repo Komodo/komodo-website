@@ -14,7 +14,7 @@ module.exports = ({server, docpad}) ->
 
             docpad.log "info", "Received github push event for branch: " + branch
 
-            if branch == 'master'
+            if branch == 'production'
 
                 exec 'git pull', {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
                     if error
@@ -22,15 +22,10 @@ module.exports = ({server, docpad}) ->
                         docpad.log "stderr", stderr
                     else
                         cmd = 'docpad clean && docpad deploy-ghpages --env static > deploy.log'
-                        exec cmd, {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
-                            if error
-                                docpad.log "error", error
-                                docpad.log "stderr", stderr
-
-                            docpad.log "info", stdout
+                        exec cmd, {cwd: rootPath + "/../deploy"}
 
 
-            else if branch == 'development'
+            else if branch == 'master'
                 exec 'git pull', {cwd: rootPath}, (error, stdout, stderr) ->
                     if error
                         docpad.log "error", error
