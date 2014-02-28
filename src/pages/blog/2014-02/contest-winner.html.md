@@ -38,7 +38,7 @@ hope you enjoy your Komodo IDE license Ron!
 <a name="nottoolate"></a>
 ## It's Not Too Late To Win!
 
-The contest is [still going on][Contest for another 2 weeks, so be sure to submit
+The contest is [still going on][Contest] for another 2 weeks, so be sure to submit
 your Komodo setup to us!
 
 Want to stand a better chance of winning? This is what you can do to really stand
