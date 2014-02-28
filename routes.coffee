@@ -14,12 +14,12 @@ module.exports = ({server, docpad}) ->
 
             if branch == 'master'
 
-                exec 'git pull', {cwd: rootPath + "../deploy"}, (error, stdout, stderr) ->
+                exec 'git pull', {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
                     if error
                         docpad.log "error", error
                     else
                         cmd = 'docpad clean && docpad deploy-ghpages --env static'
-                        exec cmd, {cwd: rootPath + "../deploy"}, (error, stdout, stderr) ->
+                        exec cmd, {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
                             if error
                                 docpad.log "error", error
                             else
