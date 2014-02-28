@@ -12,18 +12,22 @@ module.exports = ({server, docpad}) ->
             payload = JSON.parse req.body.payload
             branch = payload.ref.split("/")[2]
 
+            docpad.log "info", "Received github push event for branch: " + branch
+
             if branch == 'master'
 
                 exec 'git pull', {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
                     if error
                         docpad.log "error", error
+                        docpad.log "stderr", stderr
                     else
-                        cmd = 'docpad clean && docpad deploy-ghpages --env static'
+                        cmd = 'docpad clean && docpad deploy-ghpages --env static > deploy.log'
                         exec cmd, {cwd: rootPath + "/../deploy"}, (error, stdout, stderr) ->
                             if error
                                 docpad.log "error", error
-                            else
-                                docpad.log "info", stdout
+                                docpad.log "stderr", stderr
+
+                            docpad.log "info", stdout
 
 
             else if branch == 'development'
