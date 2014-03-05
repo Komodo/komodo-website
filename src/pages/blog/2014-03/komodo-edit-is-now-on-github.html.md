@@ -1,14 +1,17 @@
 ---
-title: Komodo and Git
+title: Komodo Edit Is Now On GitHub!
 author: Todd Whiteman
 date: 2014-03-05
 tags: [git, github]
-description: Both Git and GitHub are playing an increasing role in Komodo's development process. See how, why and where the Komodo team are using Git for source code control facilitation.
+description: Both Git and GitHub are playing an increasing role in Komodo's development process. See how, why and where the Komodo team are using Git for source code control.
 layout: blog
 ---
 
-The source code for Komodo Edit is now available on GitHub:
-<https://github.com/Komodo/KomodoEdit>
+<a style="font-size: 128px; margin: 10px;" href="https://github.com/Komodo/KomodoEdit" class="push-right">
+    <i class="icon icon-github"></i>
+</a>
+
+The source code for Komodo Edit is [now available on GitHub][github]. It has been for a short while now but we never quite anounced it, as we're still moving over parts of our codebase.
 
 Komodo is a huge supporter of open source software, and we are proud to show
 that Komodo Edit has been open source for 7 years (since 2007) - licensed
@@ -85,6 +88,8 @@ details on how that works, check out Nathan's
     Numbering](https://github.com/Komodo/macros#incremental-numbering) - inserts
     a number into a column selection, incrementing the number for every line
 
+For a more complete overview of our repos, check out [our GitHub Organization page][github org].
+
 ## Git Functionality inside Komodo
 
 *What about Komodo itself - does it support Git?*
@@ -96,10 +101,13 @@ actions like clone, pull, add, remove, diff, revert, commit, log and push.
 Here's screenshots of the Open Files pane showing source code control status and
 the commit dialog ready to check in modified files:
 
-<div style="display: inline-block; margin-right: 8px">
+<div class="centered">
     <img alt="SCC File Status" src="/images/blog/2014-03/scc_file_status.png">
     <img alt="SCC Commit"      src="/images/blog/2014-03/scc_commit.png">
 </div>
 
 Please let us know if there are more things you'd like to see in Komodo with
 regards to Git.
+
+   [github]: https://github.com/Komodo/KomodoEdit "Komodo Edit on GitHub"
+   [github org]: https://github.com/Komodo/ "The Komodo Organization on GitHub"
