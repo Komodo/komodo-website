@@ -83,6 +83,11 @@ We will give away 2 copies of Komodo to our favourite submissions!
 We will give away one license every week for 3 weeks, starting on Feb 28th and
 every Friday from then on.
 
+## *Contest Update*
+
+We've selected our [first winner]! There are still 2 copies left to win so it's not
+too late to participate!
+
 
    [Drupal]: https://drupal.org/ "Drupal - Open Source CMS"
    [DocPad]: http://docpad.org/ "DocPad - Streamlined Web Development"
@@ -98,3 +103,4 @@ every Friday from then on.
    [CoffeeScript]: https://github.com/docpad/docpad-plugin-coffeescript "CoffeeScript plugin for DocPad"
    [IRC]: irc://irc.freenode.net/#docpad "Visit #DocPad on Freenode"
    [report]: https://github.com/Komodo/komodo-website/issues
+   [first winner]: /blog/2014-02/contest-winner "Our First Contest Winner"
