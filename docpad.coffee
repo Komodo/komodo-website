@@ -131,7 +131,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
+            ignoreCustomPatterns: /public\/vendor|public\/images/
             templateData:
                 vimeoFeeds:
                     requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
@@ -141,7 +141,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 partials:
                     referenceOthers: false
             enabledPlugins:
-                tags: false
                 paged: false
 
         qa:
@@ -201,19 +200,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         partials:
             partialsPath: 'templates'
-        tags:
-            extension: '.html.ect'
-            relativeDirPath: 'tagged'
-            injectDocumentHelper: (document) ->
-                document.setMeta(
-                    layout: 'default'
-                    sidebar: 'blog'
-                    classNames: 'document-blog'
-                    priority: 0.2
-                    data: """
-                        <%- @partial('tag', @) %>
-                        """
-                )
         paged:
             cleanurl: true
             startingPageNumber: 2

@@ -32,7 +32,8 @@
     "docpad-plugin-partials": "https://github.com/Komodo/docpad-plugin-partials/tarball/compiled",
     "docpad-plugin-consolidate": "~2.1.0",
     "ect": "^0.5.6",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "docpad-plugin-coffeekup": "~2.2.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",

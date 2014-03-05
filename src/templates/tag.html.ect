@@ -1,8 +1,0 @@
-<h1>Blogs tagged: <%= @document.tag %></h1>
-<hr>
-<div class="spacer"></div>
-<a href="/blog" class="push-right">View All</a>
-<% @_filters = {tags: $has: @document.tag} %>
-
-<%- @partial('blog-list.html', @) %>
-
