@@ -142,6 +142,8 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         qa:
             plugins:
+                scheduling:
+                    defaultScheduling: false
                 livereload:
                     enabled: true
 
