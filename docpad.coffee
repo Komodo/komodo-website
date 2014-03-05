@@ -131,7 +131,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images/
+            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
             templateData:
                 vimeoFeeds:
                     requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
