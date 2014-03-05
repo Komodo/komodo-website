@@ -1,0 +1,30 @@
+---
+title: Tagged Blogs
+layout: default
+sidebar: blog
+---
+<script id="tag-template" type="text/x-handlebars-template">
+<h1>Blogs tagged "{{tag}}"</h1>
+<ul class="disc tagged">
+    {{#each documents}}
+    <li>
+        <strong><a href="{{url}}">{{title}}</a></strong> by <a href="{{author_url}}">{{author}}</a> on <em>{{dateFormat date}}</em>
+    </li>
+    {{/each}}
+</ul>
+
+<h2>Tag Cloud</h2>
+<ul id="tag-cloud">
+    {{#each tags}}
+        <li style="font-size: {{weight}}%">
+            <a href="?{{name}}">
+                {{name}}
+            </a>
+        </li>
+    {{/each}}
+</ul>
+</script>
+
+<div class="loading centered">
+    Loading tag..
+</div>
