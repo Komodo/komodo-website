@@ -113,6 +113,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 filters = _.extend filters, add
 
             filters.isPagedAuto = $ne: true
+            filters.dontList = $ne: true
 
             entries = docpad.getCollection('blog').findAllLive(filters).toJSON()
 
