@@ -90,7 +90,7 @@ APIs and style using CSS.
 * [DOM Inspector](/framed/?http://community.activestate.com/xpi/dom-inspector)
   - to navigate and find existing Komodo UI elements
   - tweak CSS styling for the Komodo user interface
-* [Komodo Developer Extension](/framed/?http://community.activestate.com/xpi/dom-inspector)
+* [Komodo Developer Extension](/framed/?http://community.activestate.com/node/1824)
   - play around with JavaScript or Python code in the context of the Komodo window
 * [Komodo Macro API](/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html)
   - to programatically interact with the Komodo editor
