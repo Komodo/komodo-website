@@ -8,7 +8,7 @@
     <span class="blog-title-under">
         by <a href="/authors#<%= document.author.replace(/[^a-zA-Z]/g,'') %>"><%= document.author %></a> / tags
         <% for tag in document.meta.tags: %>
-        <a href="/tagged/<%= tag %>"><%= tag %></a>
+        <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>
