@@ -40,6 +40,7 @@
     img
     {
         margin: 10px;
+        max-width: 95%;
     }
 }
 
@@ -49,11 +50,6 @@
     .content > div:first-child > img:first-child
     {
         float: right;
-    }
-
-    img
-    {
-        max-width: 100%;
     }
 }
 

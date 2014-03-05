@@ -1,9 +1,9 @@
 ---
 title: Adding Custom Snippets to Komodo With Macros
 author: Carey Hoffman
-date: 2014-03-04
-tags: [macro, javascript, editor, snippets, komodo core]
-description: Does Komodo not come with a snippet you need?  Carey is going to show you how to create that snippet with one keybinding using Komodo macro's.  We heard you liked keybindings too, so we're gonna put a keybinding in that keybindinged snippet.
+date: 2014-03-11
+tags: [macro, javascript, editor]
+description: Does Komodo not come with a snippet you need?  I'll show you how to create that snippet with one keybinding using Komodo macro's.  We heard you liked keybindings too, so we're gonna put a keybinding in that keybound snippet.
 layout: blog
 ---
 
@@ -37,7 +37,7 @@ We use [{OpenGrok}](http://opengrok.github.io/OpenGrok/) to
 [grok Komodo source](http://opengrok.activestate.com/source/) and you should too.
 
 I started simple; I opened [Komodos Extension Developer](http://community.activestate.com/node/1824),
-and opened Komodos OpenGrok in a browser and search for something obvious...
+and opened Komodos OpenGrok in a browser and searched for something obvious...
 
 ![Step 1](/images/blog/2014-03/carey-addsnippet.PNG)
 
