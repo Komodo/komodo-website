@@ -1,4 +1,4 @@
-#return if docpad.getEnvironment() == 'development'
+return if docpad.getEnvironment() == 'development'
 
 tags = {}
 maxWeight = 0
