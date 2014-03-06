@@ -27,7 +27,7 @@ However I still had to manually add the keybinding and the name.  Since the abil
 snippet from text already existed in Komodo given the existing commands, I
 decided to try to augment.
 
-## Komodo Tools and Code
+## Exploring Komodo
 
 The interesting thing about Komodo is that it's almost entirely controlled by
 Javascript and Python.  Our macros can be written entirely in those languages and
@@ -60,7 +60,7 @@ into the `ko.projects` object, I can try this command in the [Komodos Extension 
 ko.projects.addSnippetF //press TAB here to get completions.
 ```
 
-### Komodo Macro API
+### Using the Macro API
 
 Now I need some text to pass into my function.  This is where the [Komodo Macro]((http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_js))
 API comes in handy. Komodo Scimoz is the current buffer, the code you currently
