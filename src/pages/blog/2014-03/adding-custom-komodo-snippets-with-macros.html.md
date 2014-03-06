@@ -20,7 +20,7 @@ could automatically generate snippets from selected code then add a keybinding a
 name.  This was already partially possible through Drap and Drop and the
 _"Add as snippet into Toolbox"_ command under **Preferences > Editor > Keybindings**.
 I just had to add the keybinding and the name.  Since the ability to generate a
-snippet from text must already existed in Komodo given the existing commands, I
+snippet from text must already exist in Komodo given the existing commands, I
 decided to try to augment.
 
 
@@ -28,7 +28,7 @@ decided to try to augment.
 
 The interesting thing about Komodo is that it's almost entirely controlled by
 Javascript and Python.  Our macros can be written entirely in those languages and
-are run side by side all the core Komodo code. This means any function within Komodo
+are run alongside all the core Komodo code. This means any function within Komodo
 is accessible to you through macros.  You can easily search the [Komodo Edit code base](https://github.com/Komodo/KomodoEdit)
 now that [it's on github](http://komodoide.com/blog/2014-03/komodo-edit-is-now-on-github/).
 
@@ -93,14 +93,14 @@ This is what i'm pretending I had selected in a file
 Now I need a name.  Why not ask the user what they want to call it?  That's where
 [Komodo Interpolation function](http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_interpolate)
 comes in handy with its [interpolation shortcuts](http://docs.activestate.com/komodo/8.5/shortcuts.html#shortcuts_top).
-I won't pretend like I nailed this down first try but it's straigh forward
+I won't pretend like I nailed this down first try but it's straight forward
 once you get the syntax worked out.  There are lots of examples in the [Komodo Community Forums](http://community.activestate.com/forums/komodo)
 but you can also [check out the code I used for this snippet](https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js#L24).
 
 Try it out in the Javascript shell:
 
 ```javascript
-ko.interpolate.interpolateStrings("%(ask:Snippet Name: PIZZA")
+ko.interpolate.interpolateString("%(ask:Snippet Name: PIZZA)")
 ```
 
 ### Open Snippet Propeties
@@ -118,7 +118,7 @@ this.snippetProperties = function snippet_editProperties (item)
 }
 ```
 
-Well why don't I pass my new snippet to this function as `item`:
+Well, why don't I pass my new snippet object to this function as `item`:
 
 ```javascript
 ko.projects.snippetProperties(snippet)
@@ -141,7 +141,7 @@ var d = new  Date();
 // Create a unique default name string
 var defaultName = "New Snippet - " + d.toLocaleTimeString().substr(0,8).trim()
 // Ask for a name or provide the unique default
-var name = ko.interpolate.interpolateStrings("%(ask:Snippet Name: " +
+var name = ko.interpolate.interpolateString("%(ask:Snippet Name: " +
                                              defaultName + ")")
 // Assign the name to the snippet name attribute
 snip.name = name;
