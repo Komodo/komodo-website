@@ -1,18 +1,11 @@
 ---
 title: Adding Custom Snippets to Komodo With Macros
 author: Carey Hoffman
-date: 2014-03-11
+date: 2014-02-30
 tags: [macro, javascript, editor]
 description: Does Komodo not come with a snippet you need?  I'll show you how to create that snippet with one keybinding using Komodo macro's.  We heard you liked keybindings too, so we're gonna put a keybinding in that keybound snippet.
 layout: blog
 ---
-
-An interesting question came up on the Komodo community forums.
-
-_In Komodo has so many preinstalled code snippets that are SO HANDY, but I need
-THIS one *highlights text*.  I wish I could just press a button and Komodo would
-create a new snippet for me!?_
-
 
 ## The Story Behind The Macro
 
@@ -24,91 +17,118 @@ Needless to I was excited!  I dove right into analyzing the obviously well organ
 thought out questions from the user.
 
 
-## The Method
+## Komodo Tools and Functions
 
 The part that grabbed my attention the most was the request for a macro that
-could automatically generate snippets from selected code.  This was already
-possible through _In drap and drop?_ but I found this keybound suggestion
-interesting.  Since the drag and drop method must use some function to generate
-a snippet I knew it already existed in Komodo.  Komodo is that is almost entirely
-controlled by Javascript (and Python), and our macros can be written in Javascript
-(or Python) so any function within Komodo is accessible to you through macros.
-We use [{OpenGrok}](http://opengrok.github.io/OpenGrok/) to
-[grok Komodo source](http://opengrok.activestate.com/source/) and you should too.
+could automatically generate snippets from selected code, add a keybinding then a
+name.  This was already partially possible through _In drap and drop ?_, and the
+"Add as snippet into Toolbox" command under _In Preferences > Editor > Keybindings ?_.
+I just had to add the keybinding and the name.  Since the ability to generate a
+snippet from text must already existed in Komodo given the existing commands, I
+decided to try to augment.
 
-I started simple; I opened [Komodos Extension Developer](http://community.activestate.com/node/1824),
-and opened Komodos OpenGrok in a browser and searched for something obvious...
+### Create a Snippet Object
 
-![Step 1](/images/blog/2014-03/carey-addsnippet.PNG)
+The interesting thing about Komodo is that it's almost entirely controlled by
+Javascript and Python.  Our macros can be written entirely in those languages and
+are run side by side all the core Komodo code. This means any function within Komodo
+is accessible to you through macros.  You can easily search the [Komodo Edit code base](https://github.com/Komodo/KomodoEdit)
+now that [it's on github](http://komodoide.com/blog/2014-03/komodo-edit-is-now-on-github/). 
 
-the second result looked promising...
+I started simple; I opened [Komodos Extension Developer](http://community.activestate.com/node/1824)
+Javascript Shell and Komodo Github then searched for _In addsnipet ?_...
 
-![Step 1](/images/blog/2014-03/carey-addsnippet-results.PNG)
+![Find the function](/images/blog/2014-03/carey-addsnippet.PNG)
 
-Clicking _Inthis.addSnippet...?_ took me right to that code.  As promising as that
-function looked I thought _Inthis.addSnippetFromText?_ looked even more interesting.
+that first result looked promising... When I enter the code though I see something
+even more interesting, _In this.addSnippetFromText ?_.  I think we found our
+function.  I can try this command in the Javascript Shell I mentioned that comes
+with The Extention Developer addon; Tools > Extension Developer > Javascript Shell.
+Note there is some JSFu going on in this file; at the bottom, line ~563, you'll see
 
-Now I need some text
+    }).apply(ko.projects);
+    
+which means "this" is being "applied" to the ko.project object.  To run the
+function in the JS Shell just descend into the _In ko.projects ?_ object:
 
+    ko.projects.addSnippetF //press TAB here to get completions.
 
-## Seeing It Work
+### Komodo Macro API
 
-First, in an editor file I make a rectangular selection. I used the
-Ctrl+Alt+Arrow keyboard movements, but you can also hold down Alt (Cmd on Mac,
-Alt on Linux) key and Mouse select the rectangular region.
+Now I need some text...This is where the Komodo Macro API comes in handy.  The Komodo
+Scimoz Javascript interface [Komodo Macro API, JS Macros](http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_js).
+Scimoz is the current buffer, the code you current see in your editor screen.
+The Scimoz object has a [selText property](http://docs.activestate.com/komodo/8.5/macroapi.html#selText)
+which is exactly what I'm looking for.
+Try it in the JS Shell with a file open (select some text...):
 
-![Step 1](/images/blog/2014-02/incremental_number_screenshot_1.png)
+    scimoz = ko.views.manager.currentView.scimoz
+    scimoz.selText
+     This is what i'm pretending I had selected in a file
+So now I can create a snippet object from selected text:
 
-then use the **Tools > Insert Column Numbers** menu to bring up the interface,
+    snippet = ko.projects.addSnippetFromText(scimoz.selText)
+     [xpconnect wrapped (nsISupports, nsIObserver, koIPart_Common, koITool)]
+     
+    snippet.type
+     snippet
+    
+![Create Snippet in Console](/images/blog/2014-03/create-snippet-console.PNG)
 
-![Step 2](/images/blog/2014-02/incremental_number_screenshot_2.png)
+Now I need a name.  Why not ask the user what they want to call it?  That's where
+[Komodo Interpolation function](http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_interpolate)
+comes in handy with its [interpolation shortcuts](http://docs.activestate.com/komodo/8.5/shortcuts.html#shortcuts_top).
+I won't pretend like I nailed down that usage first try.  There are lots of examples
+in the [Komodo Community Forums](http://community.activestate.com/forums/komodo)
+but you can also just [check out the code I used for this snippet](https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js#L24).
 
-customize the values as necessary and press ENTER (or click OK)
+### Open Snippet Propeties
 
-![Step 3](/images/blog/2014-02/incremental_number_screenshot_3.png)
+The last step was to access the snippet properties so I could add a keybinding
+quickly (sorry softmoon-webware, it was too much work to catch keybindings randomly).
+I've got my snippet object already.  There must be a way to open snippet properties
+now.  I went out on a limb and checked the [peSnippets.js file](https://github.com/Komodo/KomodoEdit/blob/9bd4f2abe7f1263f4328d5f1248759056a33e2bd/src/chrome/komodo/content/project/peSnippet.js#L113),
+searching _In snippetProperties ?_ with Ctrl + F:
 
-which inserts the numbers as required and maintains the selection positions
+    this.snippetProperties = function snippet_editProperties (item)
+    {
+        var obj = new Object();
+        obj.item = item;
+        obj.task = 'edit';
+        window.openDialog(
+            "chrome://komodo/content/project/snippetProperties.xul",
+            "Komodo:SnippetProperties",
+            "chrome,close=yes,dependent=no,resizable=yes,centerscreen",
+            obj);
+    }
 
-![Step 4](/images/blog/2014-02/incremental_number_screenshot_4.png)
+Well why don't I just pass my new snippet to this function as _In item ?_:
 
-allowing you to insert additional follow-on characters as required, I've typed
-". " which results in the final text looking like this
+    ko.projects.snippetProperties(snippet)
+    
+BAM!
 
-![Step 5](/images/blog/2014-02/incremental_number_screenshot_5.png)
+![Find the function](/images/blog/2014-03/snippet-properties.png)
 
+Putting all those pieces together in macro in Komodo and I was done:
 
-## Installation
-
-To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox](/framed/?http://docs.activestate.com/komodo/8.5/toolbox.html).
-Once in your toolbox double click the macro to activate it. The macro will
-automatically activate itself the next time you start Komodo, you only need to
-do this manually the first time.
-
-<div class="inline centered">
-<a href="/files/macros/Column_Incremental_Numbering.komodotool" class="button primary">
-    <i class="icon icon-download"></i>
-    Download Macro
-</a>
-<div class="spacer-half"></div>
-<span>
-    <i class="icon icon-github"></i>
-    <a href="https://github.com/Komodo/macros/blob/master/column_incremental_numbering.js" target="_blank">View Source</a>
-</span>
-</div>
-
-## How Does it Work?
-
-The macro is designed to be run once at Komodo startup - which is set through
-the macro properties dialog. When it executes, it stores JavaScript functions
-under the **extensions.columnnumber.** namespace and then sets up a new Tools
-menu item that will launch the UI.
-
-When the UI is launched, it creates the textboxes, labels, button elements, and
-then listens for user interactions. Note that the Komodo UI is much like a web
-page, it has a DOM based structure which you can interact with using JavaScript
-APIs and style using CSS.
-
+    // Create a base snippet with the selected text
+    scimoz = ko.views.manager.currentView.scimoz;
+    var snip =
+       ko.projects.addSnippetFromText(scimoz.selText);
+    //create a date to be used as a unique name on the snippet
+    var d = new  Date();
+    // Create a unique default name string
+    var defaultName = "New Snippet - " + d.toLocaleTimeString().substr(0,8).trim()
+    // Ask for a name or provide the unique default
+    var name = ko.interpolate.interpolateStrings("%(ask:Snippet Name: " +
+                                                 defaultName + ")")
+    // Assign the name to the snippet name attribute
+    snip.name = name;
+    // Open the snippet options to set a keybinding
+    ko.projects.snippetProperties(snip);
+    
+Another day, another macro.  It's fun making your tools sharper.
 
 ## Related Materials
 
