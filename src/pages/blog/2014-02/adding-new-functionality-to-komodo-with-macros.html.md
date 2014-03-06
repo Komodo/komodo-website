@@ -29,7 +29,7 @@ it will also be able to programatically control the editor.
 ## Seeing It Work
 
 First, in an editor file I make a rectangular selection. I used the
-Ctrl+Alt+Arrow keyboard movements, but you can also hold down Alt (Cmd on Mac,
+Alt+Shift+Arrow keyboard movements, but you can also hold down Alt (Cmd on Mac,
 Alt on Linux) key and Mouse select the rectangular region.
 
 ![Step 1](/images/blog/2014-02/incremental_number_screenshot_1.png)
