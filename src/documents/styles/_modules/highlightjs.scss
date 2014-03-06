@@ -5,8 +5,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 */
 
 code {
-  box-shadow: inset 1px 1px 6px 0 rgba(0,0,0,0.05);
-  border-radius: 3px;
+  border-radius: 2px;
   font-family: $font-mono;
   color: #333;
   background: #FAFAFA;
@@ -15,10 +14,11 @@ code {
 }
 
 pre code {
-  border: 2px solid rgba(0,0,0,0.2);
   display: block;
   padding: 0.5em;
   line-height: 1.5;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .hljs-comment,
