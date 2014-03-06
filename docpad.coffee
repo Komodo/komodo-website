@@ -58,6 +58,15 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         getPreparedDescription: ->
             @document.description or @site.description
 
+        getPreparedSocialDescription: ->
+            if @document.socialDescription
+                return @document.socialDescription
+
+            if @document.layout is 'blog'
+                return @document.title + ' via @KomodoIDE'
+
+            return @site.socialDescription
+
         getPreparedKeywords: ->
             @site.keywords.concat(@document.keywords or []).join(', ')
 
