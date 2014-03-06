@@ -27,7 +27,7 @@ However I still had to manually add the keybinding and the name.  Since the abil
 snippet from text already existed in Komodo given the existing commands, I
 decided to try to augment.
 
-### Accessing The Komodo API
+## Komodo Tools and Code
 
 The interesting thing about Komodo is that it's almost entirely controlled by
 Javascript and Python.  Our macros can be written entirely in those languages and
@@ -37,7 +37,8 @@ now that [it's on github](http://komodoide.com/blog/2014-03/komodo-edit-is-now-o
 
 ### Creating the Snippet
 
-I started simple; I opened [Komodo Edit on Github](https://github.com/Komodo/KomodoEdit) then searched for _addsnippet_...
+I started simple; I opened [Komodo Edit on Github](https://github.com/Komodo/KomodoEdit)
+then searched for _addsnippet_...
 
 ![Find the function](/images/blog/2014-03/carey-addsnippet.PNG)
 
@@ -59,7 +60,7 @@ into the `ko.projects` object, I can try this command in the [Komodos Extension 
 ko.projects.addSnippetF //press TAB here to get completions.
 ```
 
-### Putting it Together
+### Komodo Macro API
 
 Now I need some text to pass into my function.  This is where the [Komodo Macro]((http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_js))
 API comes in handy. Komodo Scimoz is the current buffer, the code you currently
@@ -105,8 +106,8 @@ ko.interpolate.interpolateString("%(ask:Snippet Name: PIZZA")
 
 The last step was to access the snippet properties so I could add a keybinding
 quickly. I had my snippet object already.  There had to be a way to open a snippets properties
-now.  I went out on a limb and checked the [peSnippets.js file,
-and found "snippetProperties"](https://github.com/Komodo/KomodoEdit/blob/9bd4f2abe7f1263f4328d5f1248759056a33e2bd/src/chrome/komodo/content/project/peSnippet.js#L113). Well why don't I pass my new snippet to this function:
+now.  I went out on a limb and checked the [peSnippets.js file,and found "snippetProperties"](https://github.com/Komodo/KomodoEdit/blob/9bd4f2abe7f1263f4328d5f1248759056a33e2bd/src/chrome/komodo/content/project/peSnippet.js#L113).
+Well why don't I pass my new snippet to this function:
 
 ```javascript
 ko.projects.snippetProperties(snippet)
