@@ -31,7 +31,7 @@ decided to try to augment.
 
 The interesting thing about Komodo is that it's almost entirely controlled by
 Javascript and Python.  Our macros can be written entirely in those languages and
-are run side by side the core Komodo code. This means any function within Komodo
+are run alongside the core Komodo code. This means any function within Komodo
 is accessible to you through macros. You can easily search the [Komodo Edit code base](https://github.com/Komodo/KomodoEdit)
 now that [it's on github](http://komodoide.com/blog/2014-03/komodo-edit-is-now-on-github/).
 
@@ -89,7 +89,7 @@ Now typing `snippet.value` in the Javascript shell will return my selected text.
 Now I need a name.  Why not ask the user what they want to call it?  That's where
 [Komodo Interpolation function](http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_interpolate)
 comes in handy with its [interpolation shortcuts](http://docs.activestate.com/komodo/8.5/shortcuts.html#shortcuts_top).
-I won't pretend like I nailed this down first try but it's straigh forward
+I won't pretend like I nailed this down first try but it's straight forward
 once you get the syntax worked out.  There are lots of examples in the [Komodo Community Forums](http://community.activestate.com/forums/komodo)
 but you can also [check out the code I used for this snippet](https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js#L24).
 You can also access the different shortcuts from within the Snippet properties
@@ -98,7 +98,7 @@ dialog (the small arrow to the right of the text field).
 Try it out in the Javascript shell:
 
 ```javascript
-ko.interpolate.interpolateStrings("%(ask:Snippet Name: PIZZA")
+ko.interpolate.interpolateString("%(ask:Snippet Name: PIZZA")
 ```
 
 ### Open Snippet Propeties
@@ -131,7 +131,7 @@ var d = new Date();
 var defaultName = "New Snippet - " + d.toLocaleTimeString().substr(0,8).trim()
 
 // Ask for a name or provide the unique default
-var name = ko.interpolate.interpolateStrings("%(ask:Snippet Name: " + defaultName + ")")
+var name = ko.interpolate.interpolateString("%(ask:Snippet Name: " + defaultName + ")")
 
 // Assign the name to the snippet name attribute
 snip.name = name;
