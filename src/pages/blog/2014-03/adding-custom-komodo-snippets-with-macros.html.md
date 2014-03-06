@@ -12,7 +12,7 @@ layout: blog
 Being part of the support team, I'm often in the Komodo community forums enough, people
 ask alot of question there which I'm more than happy to answer.  Recently I was lucky
 enough to come across a post entitled [heap o' queations](http://community.activestate.com/node/10713).
-Needless to I was excited!  I dove right into analyzing the obviously well organized and
+Needless to say I was excited!  I dove right into analyzing the obviously well organized and
 thought out questions from the user.  A short 10 days later and we're done!  Wooh!
 
 The part that grabbed my attention the most was the request for a macro that
