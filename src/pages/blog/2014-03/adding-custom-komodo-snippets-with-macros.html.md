@@ -1,7 +1,7 @@
 ---
 title: Adding Custom Snippets to Komodo With Macros
 author: Carey Hoffman
-date: 2014-02-30
+date: 2014-03-10
 tags: [macro, javascript, editor]
 description: Does Komodo not come with a snippet you need?  I'll show you how to create that snippet with one keybinding using Komodo macro's.  We heard you liked keybindings too, so we're gonna put a keybinding in that keybound snippet.
 layout: blog
