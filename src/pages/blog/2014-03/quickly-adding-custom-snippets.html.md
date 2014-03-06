@@ -1,15 +1,11 @@
 ---
 title: Macro Monday: Quickly Adding Custom Snippets
 author: Carey Hoffman
-date: 2014-03-10
+date: 2013-03-10
 tags: [macro, javascript, editor]
 description: Does Komodo not come with a snippet you need?  I'll show you how to create that snippet with one keybinding using Komodo macros.  We heard you liked keybindings too, so we're gonna put a keybinding in that keybound snippet.
 layout: blog
 ---
-
-<div class="centered">
-<h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
-</div>
 
 ## The Story Behind The Macro
 
@@ -17,7 +13,7 @@ Being part of the support team, I'm often enough in the Komodo community forums,
 ask a lot of question there which I'm more than happy to answer.  Recently I was lucky
 enough to come across a post titled [heap o' queations](http://community.activestate.com/node/10713),
 needless to say I was excited!  I dove right into analyzing the well organized and
-thought out questions.
+thought out questions.  
 
 The part that grabbed my attention the most was the request for a macro that
 could automatically generate a snippet from selected code, then add a keybinding and a
@@ -81,7 +77,7 @@ var snippet = ko.projects.addSnippetFromText(scimoz.selText)
 ```
 
 Now typing `snippet.value` in the Javascript shell will return my selected text.
-
+    
 ![Create Snippet in Console](/images/blog/2014-03/create-snippet-console.PNG)
 
 ### Inserting User Input
@@ -111,7 +107,7 @@ and found "snippetProperties"](https://github.com/Komodo/KomodoEdit/blob/9bd4f2a
 ```javascript
 ko.projects.snippetProperties(snippet)
 ```
-
+ 
 **BAM!**
 
 ![Find the function](/images/blog/2014-03/snippet-properties.PNG)
@@ -139,7 +135,7 @@ snip.name = name;
 // Open the snippet options to set a keybinding
 ko.projects.snippetProperties(snip);
 ```
-
+    
 Another Monday, another macro.  It's fun making your tools sharper.
 
 ## Try it Yourself
