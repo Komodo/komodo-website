@@ -45,6 +45,9 @@ docpadConfig = {
             description: """
 One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python, PHP, Ruby, Perl, HTML, CSS and JavaScript.
                 """
+            socialDescription: """
+Check out @KomodoIDE! One IDE for all major web languages.
+                """ # Max length: 117
             keywords: """
 komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestate comodo,kumodo ide,active state komodo,perl komodo ide,ide software,perl ide,python ide,ide python,tcl ide,integrated development environment,development environment,activetstate,komodo linux,komodo mac
                 """
@@ -54,6 +57,15 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         getPreparedDescription: ->
             @document.description or @site.description
+
+        getPreparedSocialDescription: ->
+            if @document.socialDescription
+                return @document.socialDescription
+
+            if @document.layout is 'blog'
+                return @document.title + ' via @KomodoIDE'
+
+            return @site.socialDescription
 
         getPreparedKeywords: ->
             @site.keywords.concat(@document.keywords or []).join(', ')
@@ -110,6 +122,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 filters = _.extend filters, add
 
             filters.isPagedAuto = $ne: true
+            filters.dontList = $ne: true
 
             entries = docpad.getCollection('blog').findAllLive(filters).toJSON()
 
@@ -137,7 +150,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 partials:
                     referenceOthers: false
             enabledPlugins:
-                tags: false
                 paged: false
 
         qa:
@@ -197,19 +209,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
         partials:
             partialsPath: 'templates'
-        tags:
-            extension: '.html.ect'
-            relativeDirPath: 'tagged'
-            injectDocumentHelper: (document) ->
-                document.setMeta(
-                    layout: 'default'
-                    sidebar: 'blog'
-                    classNames: 'document-blog'
-                    priority: 0.2
-                    data: """
-                        <%- @partial('tag', @) %>
-                        """
-                )
         paged:
             cleanurl: true
             startingPageNumber: 2

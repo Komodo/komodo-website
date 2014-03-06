@@ -9,7 +9,7 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "docpad": "~6.63.7",
+    "docpad": "~6.64.0",
     "docpad-plugin-coffeescript": "~2.3.0",
     "docpad-plugin-sass": "~2.7.1",
     "bal-util": "~1.15.3",
@@ -24,7 +24,6 @@
     "docpad-plugin-robotskirt": "~2.0.3",
     "docpad-plugin-cleanurls": "~2.7.0",
     "moment": "~2.5.1",
-    "docpad-plugin-tags": "~2.0.7",
     "docpad-plugin-paged": "https://github.com/ervwalter/docpad-plugin-paged/tarball/compiled",
     "docpad-plugin-sitemap": "~2.2.0",
     "docpad-plugin-related": "~2.2.2",
@@ -32,7 +31,8 @@
     "docpad-plugin-partials": "https://github.com/Komodo/docpad-plugin-partials/tarball/compiled",
     "docpad-plugin-consolidate": "~2.1.0",
     "ect": "^0.5.6",
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "docpad-plugin-coffeekup": "~2.2.0"
   },
   "devDependencies": {
     "docpad-plugin-livereload": "~2.6.0",

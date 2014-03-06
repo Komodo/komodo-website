@@ -11,7 +11,7 @@
     <p>
         <strong>Tags: </strong>
         <% for tag in (@document.meta.tags || []): %>
-        <a href="/tagged/<%= tag %>"><%= tag %></a>
+        <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
         <% end %>
     </p>
     <p><strong>Date Posted: </strong><%= @document.humanDate %></p>

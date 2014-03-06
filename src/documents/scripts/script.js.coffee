@@ -253,3 +253,15 @@ jQuery ->
 
     # Open external links in a new window
     jq("a[href^='http://']").attr("target", "_blank")
+
+    # Tagged Blogs
+    if jq("#content").hasClass "document-tagged"
+        tag = decodeURI(window.location.search.substr(1))
+        tagTemplate = Handlebars.compile( jq("#tag-template").html() )
+
+        jq.getJSON("/json/tags.json").done (tags) ->
+            if tags[tag]
+                html = tagTemplate({tags: tags, tag: tag, documents: tags[tag].documents})
+                jq(html).appendTo(jq("#content article"))
+                jq("#content article .loading").remove()
+

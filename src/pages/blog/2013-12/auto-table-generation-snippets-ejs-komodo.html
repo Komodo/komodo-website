@@ -42,7 +42,7 @@ tags:
     &#160;}
     &#160;table += "&lt;/table&gt;";
   }
-  %&gt;&lt;%= table? Table : "" %&gt;
+  %&gt;&lt;%= table? table : "" %&gt;
    </code></pre>
   <p><span style="line-height: 1.3em;">As you can see, in the first control EJS block, &lt;% %&gt;, I query for dimensions of the table from the user with ko.interpolate and perform some simple processing with the numbers to concatenate a table together with the correct dimensions. I also parseInt() the inputs so I can do a simple number &gt; 0 check to see that I have appropriate inputs.</span></p>
   <p><span style="line-height: 1.3em;">Then I simply dump the string to the editor buffer using an emitter block, &lt;%= %&gt;.</span></p>
