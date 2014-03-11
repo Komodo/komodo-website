@@ -28,6 +28,7 @@ classNames: markdown
  * See the [Previous Contest Winner][previous]
  * [Use][stylish1] [Stylish][stylish2]
  * Check out our [GitHub repositories]
+ * Watch our [Screencasts]
  * Search for [Komodo Edit][ghedit] or [Komodo IDE][ghide] on GitHub
  * Check out [the competition]
 
@@ -39,3 +40,4 @@ classNames: markdown
    [ghedit]: https://github.com/search?q=komodo+edit&ref=cmdform
    [ghide]: https://github.com/search?q=komodo+ide
    [the competition]: https://twitter.com/search?src=typd&q=%23KomodoIDEdotCom
+   [Screencasts]: /screencasts
