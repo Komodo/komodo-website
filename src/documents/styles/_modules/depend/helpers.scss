@@ -43,12 +43,24 @@
     @include transition(color 0.2s ease-in-out, border 0.1s ease-in-out);
     color: $color;
     text-decoration: none;
-    border-bottom: 1px solid fade-out($color-hover, 1);
 
     &:hover
     {
         color: $color-hover;
-        border-bottom: 1px solid fade-out($color-hover, 0.4);
+        text-decoration: underline;
+    }
+}
+
+@mixin link-forced($color: $color-base-link, $color-hover: $color-base-link-hover)
+{
+    @include transition(color 0.2s ease-in-out, border 0.1s ease-in-out);
+    color: $color !important;
+    text-decoration: none !important;
+
+    &:hover
+    {
+        color: $color-hover !important;
+        text-decoration: underline !important;
     }
 }
 

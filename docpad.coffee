@@ -40,7 +40,6 @@ docpadConfig = {
                 requireFresh(__dirname + '/src/databases/' + name + '.coffee')
 
         site:
-            url: "/"
             title: "Komodo IDE"
             description: """
 One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python, PHP, Ruby, Perl, HTML, CSS and JavaScript.
@@ -83,7 +82,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             site = @site
             _.map styles, (value) ->
-                site.url + value.replace 'out/', ''
+                site.url + '/' + value.replace 'out/', ''
 
         getGruntedScripts: ->
             scripts = []
@@ -96,7 +95,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             site = @site
             _.map scripts, (value) ->
-                site.url + value.replace 'out/', ''
+                site.url + '/' + value.replace 'out/', ''
 
         getAsList: (ob, classAttr = "") ->
             site = @site
@@ -106,7 +105,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             r = ['<ul class="' + (classAttr) + '">']
             _.each ob, (value, key) ->
 
-                r.push '<li><a href="' + (value.link || site.url + value.name.toLowerCase()) +
+                value.link = site.url if value.link is '/'
+
+                r.push '<li><a href="' + (value.link || site.url + "/" + value.name.toLowerCase()) +
                             '" title="' + value.name +
                             '" target="' + (value.target || "_self") + '">'
                 r.push '<img src="' + imgPath + value.img + '" alt="' + value.name + '"/>' unless ! value.img

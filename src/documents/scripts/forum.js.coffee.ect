@@ -1,0 +1,22 @@
+$(document).ready ->
+
+    nav = """
+        <%- @getAsList(@db.header().navigationForum, 'ko-nav') %>
+    """
+
+    $("header .contents .title").append(nav)
+
+    autoHideNav = ->
+        if $("#site-logo").length
+            $("header .contents .title .ko-nav").show()
+        else
+            $("header .contents .title .ko-nav").hide()
+
+    Ember._HandlebarsBoundView.reopen({
+        render: (buffer) ->
+            this._super(buffer)
+
+            autoHideNav()
+            setTimeout autoHideNav, 50
+
+    })

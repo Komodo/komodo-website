@@ -1,0 +1,259 @@
+@import "_modules/depend/variables";
+@import "../../public/vendor/bourbon/app/assets/stylesheets/bourbon";
+
+/* Include it again, cause Bourbon overrides some of our variables, grrr */
+@import "_modules/depend/variables";
+
+@import "_modules/depend/helpers";
+@import "_modules/depend/colors";
+@import "_modules/depend/cosmetic";
+
+*
+{
+    -webkit-text-stroke: inherit !important;
+}
+
+a,
+a:visited
+{
+
+    &:not(.badge-category)
+    {
+        color: $color-base-link;
+
+        &:hover
+        {
+            color: $color-base-link-hover;
+        }
+    }
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li > a.active,
+.btn-primary,
+nav.post-controls button.create,
+.site-settings-nav li a.active,
+.nav-stacked .active > a,
+.nav-stacked .active .fa-chevron-right
+{
+    background: $color-base-link !important;
+    color: #FFF !important;
+}
+
+nav.post-controls button .read-icon.last-read
+{
+    color: $color-base-link !important;
+}
+
+.nav-pills > li > a
+{
+    color: $color-base-link;
+    @include transition(none);
+}
+
+.nav-pills > li > a:hover,
+.btn-primary:hover,
+nav.post-controls button.create:hover
+{
+    background-color: lighten($color-base-link, 20%) !important;
+    color: #FFF !important;
+    text-decoration: none !important;
+}
+
+a[name]:not([href])
+{
+    &, &:hover
+    {
+        color: $color-base-text !important;
+        border: 0 !important;
+    }
+}
+
+h1
+{
+    font-size: 21pt;
+    font-weight: bold;
+}
+
+h2
+{
+    font-size: 16pt;
+    font-weight: 400;
+}
+
+h3
+{
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+p, strong, em
+{
+    line-height: 1.5;
+}
+
+ul, ol
+{
+    line-height: 1.4;
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+/* Layout */
+
+header
+{
+    color: $color-header-base;
+    min-height: 60px;
+
+    @include background-image(
+        linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
+        url(../images/layout/header-bg.png)
+    );
+
+    .username a
+    {
+        @include link-forced($color-forum-header-link, $color-forum-header-link-hover);
+        font-weight: 700;
+    }
+
+    &.d-header .icons .icon
+    {
+        @include link-forced(#EDEDED, $color-forum-header-link-hover);
+        border: 0 !important;
+        background: transparent !important;
+
+        &:hover
+        {
+            background: transparent !important;
+        }
+    }
+
+    .contents
+    {
+        position: relative;
+
+        #site-logo
+        {
+            position: absolute;
+            top: -4px;
+            max-width: none !important;
+            width: auto !important;
+            height: 48px;
+        }
+
+        .logo-small
+        {
+            position: absolute;
+            top: 3px;
+            height: 36px;
+            max-width: none;
+            max-height: none;
+        }
+
+        .extra-info-wrapper
+        {
+            padding-left: 200px;
+            margin-right: -200px;
+        }
+    }
+
+    ul.ko-nav
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-left: 240px;
+
+        li
+        {
+            display: inline-block;
+        }
+
+        li a
+        {
+            display: block;
+            font-family: $font-header-nav !important;
+            font-weight: 400;
+            font-size: 13pt;
+            line-height: 40px;
+            vertical-align: middle;
+            color: $color-header-nav-link !important;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0 10px;
+            border: 0;
+
+            &:hover
+            {
+                color: $color-header-nav-link-hover !important;
+                text-decoration: none;
+                border: 0;
+            }
+        }
+    }
+}
+
+#topic-list.categories th .toggle-admin
+{
+    right: 0;
+    top: 80px;
+}
+
+/*
+.category
+{
+    .featured-users + .clearfix,
+    .featured-users
+    {
+        display: none;
+    }
+
+    .badge-category
+    {
+        margin-right: 5px;
+    }
+
+    .category-description
+    {
+        margin-top: 0 !important;
+        padding-left: 130px;
+    }
+
+    .badge-category
+    {
+        text-align: center;
+        min-width: 100px;
+    }
+}
+*/
+
+.mobile-view
+{
+    #site-logo
+    {
+        top: 0 !important;
+        height: 40px !important;
+    }
+
+    ul.ko-nav
+    {
+        margin-left: 210px;
+
+        li a
+        {
+            font-weight: 300;
+            font-size: 11pt;
+            line-height: 40px;
+            padding: 0 5px;
+        }
+    }
+}
+
+.profiler-results
+{
+    display: none;
+}
