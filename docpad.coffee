@@ -80,7 +80,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 _.each minify.src, (value) ->
                     styles.push minify.cwd + value.replace(/.css$/, minify.ext)
 
-            site = @site
+            site = docpad.config.templateData.site
             _.map styles, (value) ->
                 site.url + '/' + value.replace 'out/', ''
 
@@ -93,12 +93,12 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             else
                 scripts = _.keys gruntConfig.uglify.scripts.files
 
-            site = @site
+            site = docpad.config.templateData.site
             _.map scripts, (value) ->
                 site.url + '/' + value.replace 'out/', ''
 
         getAsList: (ob, classAttr = "") ->
-            site = @site
+            site = docpad.config.templateData.site
             latestConfig = docpad.getConfig()
             imgPath = @site.url + "images/"
 
@@ -154,11 +154,18 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 paged: false
 
         qa:
+            templateData:
+                site:
+                    url: 'http://qa.komodoide.com'
             plugins:
                 scheduling:
                     defaultScheduling: false
                 livereload:
                     enabled: true
+        static:
+            templateData:
+                site:
+                    url: 'http://komodoide.com'
 
     collections:
         splash: ->

@@ -22,16 +22,13 @@
 Because of https://github.com/bevry/docpad/issues/336 there are some temporary
 workarounds to make development faster. In particular all blogs before 2013-09
 are excluded from being generated when on a development environment. Additionally
-some files may fail to re-render properly (particularly while working with templates),
-to disable these performance workarounds you can run docpad in dev mode with:
-
-`docpad run --env dev_full`
+some files may fail to re-render properly (particularly while working with templates).
 
 These are temporary workarounds in the interest of productivity.
 
 ## Testing Production
 
-`docpad run --env static`
+`docpad run --env dev-static`
 
 ## Deploy to GitHub
 
