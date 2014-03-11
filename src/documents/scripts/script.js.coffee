@@ -252,8 +252,10 @@ jQuery ->
         new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
 
     # Open external links in a new window
-    jq("a[href^='http://']").attr("target", "_blank")
-    jq("a[href^='https://']").attr("target", "_blank")
+    href = new RegExp('^' + window.location.protocol + '\\/\\/' + window.location.hostname)
+    jq("a[href^='http']").filter( ->
+        return ! jq(this).attr("href").match(href)
+    ).attr("target", "_blank")
 
     # Tagged Blogs
     if jq("#content").hasClass "document-tagged"

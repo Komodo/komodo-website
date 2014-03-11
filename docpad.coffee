@@ -73,7 +73,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             styles = []
             gruntConfig = require('./grunt-config.json')
 
-            if docpad.getEnvironment().indexOf("dev") == 0
+            if docpad.getEnvironment() == "development"
                 styles = _.flatten gruntConfig.cssmin.combine.files
             else
                 minify = gruntConfig.cssmin.minify
@@ -88,7 +88,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             scripts = []
             gruntConfig = require('./grunt-config.json')
 
-            if docpad.getEnvironment().indexOf("dev") == 0
+            if docpad.getEnvironment() == "development"
                 scripts = _.flatten gruntConfig.uglify.scripts.files
             else
                 scripts = _.keys gruntConfig.uglify.scripts.files
@@ -100,7 +100,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         getAsList: (ob, classAttr = "") ->
             site = docpad.config.templateData.site
             latestConfig = docpad.getConfig()
-            imgPath = @site.url + "images/"
+            imgPath = @site.url + "/images/"
 
             r = ['<ul class="' + (classAttr) + '">']
             _.each ob, (value, key) ->
