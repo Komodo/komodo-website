@@ -51,7 +51,7 @@ out:
 So get crackin! To participate simply follow [@KomodoIDE] and tweet us a screenshot
 of your setup with the hashtag **#KomodoIDEdotCom**.
 
-   [Contest]: /blog/2014-02/new-website-launched#contest "Read up on the contest"
+   [Contest]: /contest
    [Ron Stewart]: https://twitter.com/oneofwe3geeks "Ron Stewart's Twitter"
    [Open Files Widget]: http://komodoide.com/screencasts/watch/87675282-open-files-widget/ "Open Files Widget Screencast"
    [TODO Helper Addon]: http://community.activestate.com/xpi/todo-helper "TODO helper addon by Todd Whiteman"

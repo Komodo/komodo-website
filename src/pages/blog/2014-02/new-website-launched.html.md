@@ -71,12 +71,7 @@ Doesn't get any simpler! But that's what everyone will be doing, so maybe you sh
 
 ### The Fan Way (Screenshot your setup to us)
 
-Tweet a screenshot that shows off your Komodo setup and use the hashtag
-\#KomodoIDEdotCom. The reason we say "your chances are in your hands"
-is because we will pick our favourite submissions ourselves, so **the more you
-stand out - the bigger the chances you'll win!**
-
-We will give away 2 copies of Komodo to our favourite submissions!
+Please check our [Contest page].
 
 ### Period
 
@@ -85,7 +80,7 @@ every Friday from then on.
 
 ## *Contest Update*
 
-We've selected our [first winner]! There are still 2 copies left to win so it's not
+We've selected our [first winner] and second winner! There is still 1 copy left to win so it's not
 too late to participate!
 
 
@@ -104,3 +99,4 @@ too late to participate!
    [IRC]: irc://irc.freenode.net/#docpad "Visit #DocPad on Freenode"
    [report]: https://github.com/Komodo/komodo-website/issues
    [first winner]: /blog/2014-02/contest-winner "Our First Contest Winner"
+   [Contest page]: /contest
