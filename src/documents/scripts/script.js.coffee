@@ -50,6 +50,7 @@ jQuery ->
             oldPrimary.addClass elemClass
 
         ss.find(".promotion").appendTo ss.find(".primary")
+        ss.find(".twitter-follow-button").appendTo ss.find(".primary")
 
     # Load Testimonials
     if jq(".testimonial blockquote").length
