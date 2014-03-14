@@ -300,6 +300,52 @@
         }
     }
 
+    .promotion
+    {
+        text-align: center;
+        margin-top: -80px;
+        margin-bottom: 10px;
+
+        .inner
+        {
+            display: inline-block;
+            @include linear-gradient(#865E97, #664674);
+            color: #FFF;
+            margin: auto;
+            padding: 6px;
+            border: 2px solid #5E426B;
+            border-radius: 3px;
+            position: relative;
+            padding-right: 35px;
+
+            i
+            {
+                position: absolute;
+                top: 10px;
+                right: 6px;
+                font-size: 36pt;
+            }
+
+            p
+            {
+                margin: 0;
+
+                span
+                {
+                    font-size: 16pt;
+                    text-decoration: underline;
+                    font-style: italic;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1100px)
+        {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+    }
+
 }
 
 #educational a.button
