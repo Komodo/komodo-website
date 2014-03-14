@@ -102,16 +102,19 @@ jQuery ->
 
     # Tooltips
     bindTooltips = ->
-        jq('.tooltip').tooltipster
-            contentAsHTML: true
-            position: 'right'
-            maxWidth: 250
-            functionReady: (origin, tooltip) ->
-                arrow = tooltip.find(".tooltipster-arrow")
-                if arrow.hasClass "tooltipster-arrow-right"
-                    arrow.find("span").css "left", "-8px"
-                if arrow.hasClass "tooltipster-arrow-left"
-                    arrow.find("span").css "right", "-8px"
+        jq('.tooltip').each ->
+            elem = jq(this)
+            elem.tooltipster
+                contentAsHTML: true
+                position: elem.data("tooltip-position") || 'right'
+                theme: "tooltipster-default " + (elem.data("tooltip-class") || '')
+                maxWidth: 250
+                functionReady: (origin, tooltip) ->
+                    arrow = tooltip.find(".tooltipster-arrow")
+                    if arrow.hasClass "tooltipster-arrow-right"
+                        arrow.find("span").css "left", "-8px"
+                    if arrow.hasClass "tooltipster-arrow-left"
+                        arrow.find("span").css "right", "-8px"
     bindTooltips()
 
     jq('a.lightbox').magnificPopup
@@ -268,4 +271,12 @@ jQuery ->
                 html = tagTemplate({tags: tags, tag: tag, documents: tags[tag].documents})
                 jq(html).appendTo(jq("#content article"))
                 jq("#content article .loading").remove()
+
+    jq(".animateOnLoad").each ->
+        elem = jq this
+        elem.addClass("animate")
+        setTimeout ->
+            elem.removeClass("animate")
+            elem.addClass("animate-over")
+        , elem.data("animation-duration") || 400
 

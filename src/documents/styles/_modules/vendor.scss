@@ -126,6 +126,18 @@ html.wait
     {
         border: 0;
     }
+
+    &.big
+    {
+        max-width: 400px !important;
+        
+        .tooltipster-content
+        {
+            line-height: 1.3;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+    }
 }
 
 /* Lightbox */
