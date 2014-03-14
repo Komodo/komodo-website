@@ -37,6 +37,7 @@
             "out/vendor/jquery-slideshow-lite/js/jquery.slideshow.lite.js",
             "out/vendor/handlebars/handlebars.js",
             "out/vendor/moment/moment.js",
+            "out/vendor/jquery-visible/jquery.visible.min.js",
             "out/scripts/helpers/localStorage.js",
             "out/scripts/helpers/handlebars.js",
             "out/scripts/script.js",

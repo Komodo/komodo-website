@@ -40,6 +40,7 @@ docpadConfig = {
                 requireFresh(__dirname + '/src/databases/' + name + '.coffee')
 
         site:
+            url: "http://192.168.0.100:9778"
             title: "Komodo IDE"
             description: """
 One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python, PHP, Ruby, Perl, HTML, CSS and JavaScript.

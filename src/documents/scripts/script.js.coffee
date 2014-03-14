@@ -280,3 +280,13 @@ jQuery ->
             elem.addClass("animate-over")
         , elem.data("animation-duration") || 400
 
+    hideFooterOverlap = ->
+        if jq('footer').visible(true) and jq(".document-pricing .promotion").is(":visible") and jq(window).scrollTop()
+            jq(".document-pricing .promotion").hide()
+
+        if ! jq('footer').visible(true) and ! jq(".document-pricing .promotion").is(":visible")
+            jq(".document-pricing .promotion").show()
+    jq(window).scroll hideFooterOverlap
+    hideFooterOverlap()
+
+
