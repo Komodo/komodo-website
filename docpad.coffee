@@ -16,7 +16,7 @@ docpadConfig = {
     layoutsPaths: [  # default
         'templates/layouts'
     ]
-    ignoreCustomPatterns: /public\/vendor|public\/images|src\/databases|\/_/
+    ignoreCustomPatterns: /public\/vendor|public\/images|src\/databases|\/_|\/\./
 
     # Default Env
     env: process.env.DOCPAD_ENV or "development"
@@ -141,7 +141,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
+            ignoreCustomPatterns: /public\/vendor|public\/images|\/\.|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
             templateData:
                 vimeoFeeds:
                     requireFresh(__dirname + '/src/databases/placeholders.coffee').vimeoFeeds
