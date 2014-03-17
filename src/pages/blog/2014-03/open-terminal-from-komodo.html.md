@@ -107,6 +107,14 @@ do this manually the first time.
 </span>
 </div>
 
+## Usage
+
+To use the macro, simply right click a folder in your Places widget (the left
+side pane with all the files and folders) and select "Open Terminal Here".
+
+If you would like to use this functionality from a different popupmenu, please feel
+free to fork this code and customize it to your liking.
+
 ## Going Even Further
 
 My next little side project will be to actually add a terminal into Komodo. I've
