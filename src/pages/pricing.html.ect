@@ -55,33 +55,39 @@ priority: 0.7
             </p>
 
             <div class="buttons">
-                <a class="button" href="#prostudio-buy5" data-modal>
+                <a class="button" href="#prostudio-buy5" data-modal data-analytics="buy:prostudio:5pack">
                     Buy 5-Pack
                     <figure class="deal-badge">
                         <i class="icon icon-certificate"></i>
                         <span>20%</span>
                     </figure>
                 </a>
-                <a class="button" href="#prostudio-buy" data-modal>Buy Now</a>
+                <a class="button" href="#prostudio-buy" data-modal data-analytics="buy:prostudio:single">
+                    Buy Now
+                </a>
             </div>
 
             <div id="prostudio-buy5" class="hide centered" title="Which Version Are You Interested In?" data-modal>
                 <div class="spacer"></div>
-                <a class="button big" href="https://store.activestate.com/cart/add/p108_q1-iupsell_yes?destination=cart">
+                <a class="button big" href="https://store.activestate.com/cart/add/p108_q1-iupsell_yes?destination=cart"
+                     data-analytics="buy:perlprostudio:5pack">
                     ActivePerl Pro Studio
                 </a>
                 &nbsp;&nbsp;&nbsp;
-                <a class="button big" href="https://store.activestate.com/cart/add/p109_q1-iupsell_yes?destination=cart">
+                <a class="button big" href="https://store.activestate.com/cart/add/p109_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:tclprostudio:5pack">
                     ActiveTcl Pro Studio
                 </a>
             </div>
             <div id="prostudio-buy" class="hide centered" title="Which Version Are You Interested In?" data-modal>
                 <div class="spacer"></div>
-                <a class="button big" href="https://store.activestate.com/cart/add/p103_q1-iupsell_yes?destination=cart">
+                <a class="button big" href="https://store.activestate.com/cart/add/p103_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:perlprostudio:single">
                     ActivePerl Pro Studio
                 </a>
                 &nbsp;&nbsp;&nbsp;
-                <a class="button big" href="https://store.activestate.com/cart/add/p104_q1-iupsell_yes?destination=cart">
+                <a class="button big" href="https://store.activestate.com/cart/add/p104_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:tclprostudio:single">
                     ActiveTcl Pro Studio
                 </a>
             </div>
@@ -100,14 +106,18 @@ priority: 0.7
             </p>
 
             <div class="buttons">
-                <a class="button primary" href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart">
+                <a class="button primary" href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:komodo:5pack">
                     Buy 5-Pack
                     <figure class="deal-badge">
                         <i class="icon icon-certificate"></i>
                         <span>25%</span>
                     </figure>
                 </a>
-                <a class="button primary" href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart">Buy Now</a>
+                <a class="button primary" href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:komodo:single">
+                    Buy Now
+                </a>
             </div>
         </li>
         <!-- Soon ... sssh
@@ -136,7 +146,10 @@ priority: 0.7
             </p>
 
             <div class="buttons">
-                <a class="button" href="http://www.studica.com/activestate" target="_blank">Buy Now</a>
+                <a class="button" href="http://www.studica.com/activestate" target="_blank"
+                 data-analytics="buy:studica">
+                    Buy Now
+                </a>
             </div>
         </li>
     </ul>
@@ -158,11 +171,17 @@ priority: 0.7
             </p>
 
             <div class="buttons">
-                <a class="button" href="#educational" data-modal>Apply</a>
+                <a class="button" href="#educational" data-modal
+                    data-analytics="apply:educational:apply">
+                    Apply
+                </a>
             </div>
 
             <div class="hide" id="educational" title="ActiveState Education Program" data-modal>
-                <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Educational%20Licenses" class="button big primary push-right">Contact Us</a>
+                <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Educational%20Licenses" class="button big primary push-right"
+                    data-analytics="apply:educational:contact">
+                    Contact Us
+                </a>
 
                 <p>The ActiveState Education Partner Program provides software to qualified academic institutions. Give your students hands-on access to our development tools in your curriculum. Below is a list of our education partners.</p>
 
@@ -270,14 +289,18 @@ priority: 0.7
             <p>Evaluated on a case-by-case basis</p>
 
             <div class="buttons">
-                <a class="button" href="#goodwill" data-modal>Apply</a>
+                <a class="button" href="#goodwill" data-modal
+                   data-analytics="apply:goodwill:apply">
+                    Apply
+                </a>
             </div>
 
             <div id="goodwill" class="hide" title='Do We Qualify?' data-modal>
                 <p>
                     In order to qualify for a Goodwill license your project must:
                 </p>
-                <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Goodwill%20License" class="button big primary push-right tooltip" title="Please read the criteria before contacting us" data-enable-after="5">Contact Us</a>
+                <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Goodwill%20License" class="button big primary push-right tooltip" title="Please read the criteria before contacting us" data-enable-after="5"
+                    data-analytics="apply:goodwill:contact">Contact Us</a>
                 <ul class="disc">
                     <li>
                         Use an Open Source license

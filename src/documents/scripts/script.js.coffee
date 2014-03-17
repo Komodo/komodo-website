@@ -126,13 +126,34 @@ jQuery ->
     
     # Analytics
     bindAnalytics = ->
-        return unless _gaq?
-        jq("a[href]").click ->
-            a = jq this
-            href = a.attr("href")
-            href = href.substr(href.indexOf("framed/?")+8) if href.indexOf("framed/?") != -1
-            if href.indexOf("activestate.com") != -1
-                _gaq.push(['_link', href])
+        if _gaq?
+            jq("a[href]").click ->
+                a = jq this
+                href = a.attr("href")
+                href = href.substr(href.indexOf("framed/?")+8) if href.indexOf("framed/?") != -1
+                if href.indexOf("activestate.com") != -1
+                    _gaq.push(['_link', href])
+
+        if _gak?
+
+            href = window.location.href
+            if href.indexOf("framed/?") != -1
+                href = href.substr(href.indexOf("?")+1)
+                prefix = window.location.pathname
+                prefix += "/" if prefix.substr(-1) != "/"
+                path = prefix + href.replace(/^https?:\/\//, '')
+
+            if path?
+                _gak('send', 'pageview', path)
+            else
+                _gak('send', 'pageview')
+
+        if _gaq? || _gak?
+            jq("a[data-analytics]").click ->
+                elem = jq this
+                [category, action, label] = elem.data("analytics").split(":")
+                _gak("send", "event", category, action, label) if _gak?
+                _gaq("send", "event", category, action, label) if _gaq?
 
     # Tooltips
     bindTooltips = ->
@@ -336,6 +357,7 @@ jQuery ->
         if ! jq('footer').visible(true) and ! jq(".document-pricing .promotion").is(":visible")
             jq(".document-pricing .promotion").show()
 
+    if jq('footer').length and jq(".document-pricing .promotion").length
         jq(window).scroll hideFooterOverlap
 
     init()
