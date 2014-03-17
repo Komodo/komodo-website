@@ -1,33 +1,64 @@
 jQuery ->
+
     jq = jQuery
     main = jq "section[role=main]"
 
-    # Reject Older Browsers
-    reject = ["msie5", "msie6", "msie7", "msie8", "firefox1", "firefox2",
-              "firefox3", "konqueror", "safari2", "safari3"]
-    reject = _.reduce reject, (o, v) ->
-        o[v] = true
-        return o
-    , {}
+    init = () ->
+        fns = [
+            rejectOldBrowsers
+            highlightCode
+            loadSplashScreenshots
+            loadTestimonials
+            bindAnalytics
+            bindTooltips
+            bindLightbox
+            loadGithubCommits
+            loadTabs
+            loadDownloadButtons
+            loadNavmenu
+            makeSplashResponsive
+            loadSidebarCollapser
+            loadDialogs
+            loadTwitterFeed
+            forceOpenExternal
+            loadTags
+            animateElements
+            hideFooterOverlap
+        ]
+        for fn in fns
+            setTimeout fn, 0
 
-    jq.reject
-        reject: reject
-        display: _.shuffle ['chrome', 'firefox', 'safari', 'msie']
-        imagePath: "/images/browsers/"
-        browserInfo: # Fix Naming Inconsistencies 
-            msie:
-                text: 'Internet Explorer'
-            safari:
-                text: 'Safari'
+    # ----- Misc Scripts -----
+
+    # Reject Older Browsers
+    rejectOldBrowsers = ->
+        reject = ["msie5", "msie6", "msie7", "msie8", "firefox1", "firefox2",
+                  "firefox3", "konqueror", "safari2", "safari3"]
+        reject = _.reduce reject, (o, v) ->
+            o[v] = true
+            return o
+        , {}
+
+        jq.reject
+            reject: reject
+            display: _.shuffle ['chrome', 'firefox', 'safari', 'msie']
+            imagePath: "/images/browsers/"
+            browserInfo: # Fix Naming Inconsistencies
+                msie:
+                    text: 'Internet Explorer'
+                safari:
+                    text: 'Safari'
 
     # Highlight Code
-    jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
+    highlightCode = ->
+        jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
 
     # Splash Screenshots
-    ss = jq("#splash-screenshots")
-    if ss.length
-        platform = window.navigator.platform.toLowerCase()
+    loadSplashScreenshots = ->
+        ss = jq("#splash-screenshots")
+        return unless ss.length
 
+        platform = window.navigator.platform.toLowerCase()
         if platform.indexOf("linux") != -1
             platform = "linux"
         else if platform.indexOf("win") != -1
@@ -53,7 +84,9 @@ jQuery ->
         ss.find(".twitter-follow-button").appendTo ss.find(".primary")
 
     # Load Testimonials
-    if jq(".testimonial blockquote").length
+    loadTestimonials = ->
+        return unless jq(".testimonial blockquote").length
+    
         textFit(jq(".testimonial blockquote"))
         jq.getJSON("/json/testimonials.json").done (data) ->
             pos = 0
@@ -92,7 +125,8 @@ jQuery ->
             ), 10000
     
     # Analytics
-    if _gaq?
+    bindAnalytics = ->
+        return unless _gaq?
         jq("a[href]").click ->
             a = jq this
             href = a.attr("href")
@@ -115,44 +149,48 @@ jQuery ->
                         arrow.find("span").css "left", "-8px"
                     if arrow.hasClass "tooltipster-arrow-left"
                         arrow.find("span").css "right", "-8px"
-    bindTooltips()
 
-    jq('a.lightbox').magnificPopup
-        type:'image'
-        removalDelay: 500
+    # Lightbox
+    bindLightbox = ->
+        jq('a.lightbox').magnificPopup
+            type:'image'
+            removalDelay: 500
 
-    jq('div.lightbox').magnificPopup
-        delegate: 'a'
-        type:'image'
-        removalDelay: 500
-        gallery:
-           enabled: true
-           navigateByImgClick: true
-           preload: [0,1]
+        jq('div.lightbox').magnificPopup
+            delegate: 'a'
+            type:'image'
+            removalDelay: 500
+            gallery:
+               enabled: true
+               navigateByImgClick: true
+               preload: [0,1]
 
-    jq('.slideshow').each ->
-        elem = jq this
-        elem.slideshow
-            caption: elem.data("caption") == "true"
-            width: elem.data("width")
-            height: elem.data("height")
-            pauseSeconds: elem.data("pause") || 6
+        jq('.slideshow').each ->
+            elem = jq this
+            elem.slideshow
+                caption: elem.data("caption") == "true"
+                width: elem.data("width")
+                height: elem.data("height")
+                pauseSeconds: elem.data("pause") || 6
 
     # Github commits widget
-    jq(".github-commits").each ->
-        el = jq this
-        el.githubInfoWidget
-            user: el.data("gh-user") || "Komodo"
-            repo: el.data("gh-repo") || "KomodoEdit"
-            branch: el.data("gh-branch") || "trunk"
-            last: el.data("gh-amount") || 5
-            avatarSize: el.data("gh-avatarSize") || 16
+    loadGithubCommits = ->
+        jq(".github-commits").each ->
+            el = jq this
+            el.githubInfoWidget
+                user: el.data("gh-user") || "Komodo"
+                repo: el.data("gh-repo") || "KomodoEdit"
+                branch: el.data("gh-branch") || "trunk"
+                last: el.data("gh-amount") || 5
+                avatarSize: el.data("gh-avatarSize") || 16
 
     # Tabs
-    jq(".tabs").tabs()
+    loadTabs = ->
+        jq(".tabs").tabs()
 
     # Download buttons
-    if jq(".document-download").length
+    loadDownloadButtons = ->
+        return unless jq(".document-download").length
         platform = window.navigator.platform.toLowerCase()
 
         if platform.indexOf("linux") != -1 and platform.indexOf("86_64") != -1
@@ -173,96 +211,103 @@ jQuery ->
             el.parent().insertBefore(oldPrimary)
 
     # Nav Collapse
-    jq("header .collapser").click -> jq("header nav").toggleClass "expanded"
+    loadNavmenu = ->
+        jq("header .collapser").click -> jq("header nav").toggleClass "expanded"
 
     # Responsive Scripts - TODO: Replace with pure CSS solution
+    makeSplashResponsive = ->
+        ss = jq("#splash-screenshots")
+        ssf = jq("#splash-screenshots figure.primary")
 
-    ss = jq("#splash-screenshots")
-    ssf = jq("#splash-screenshots figure.primary")
+        splashResizeHandler = ->
+            if (jq(document).width() < 1100)
+                ratio = jq(document).width()/1150
+                ss.css('transform','scale('+(ratio)+')')
+                ss.height(ssf[0].getBoundingClientRect().height + 25)
 
-    splashResizeHandler = ->
-        if (jq(document).width() < 1100)
-            ratio = jq(document).width()/1150
-            ss.css('transform','scale('+(ratio)+')')
-            ss.height(ssf[0].getBoundingClientRect().height + 25)
+            if (jq(document).width() > 1100)
+                jq("#splash-screenshots").css('transform','')
+                jq("#splash-screenshots").height("")
 
-        if (jq(document).width() > 1100)
-            jq("#splash-screenshots").css('transform','')
-            jq("#splash-screenshots").height("")
-
-    if ss.length
-        jq(window).resize splashResizeHandler
-        splashResizeHandler()
+        if ss.length
+            jq(window).resize splashResizeHandler
+            splashResizeHandler()
 
     # Sidebar collapser
-    sideCollapse = jq("#side-collapse")
-    sideInner = jq("aside .inner")
-    sideCollapse.click ->
-        sideCollapse.fadeOut("fast", ->
-            sideInner.toggle("slide", {direction: 'right'}, ->
-                sideCollapse.fadeIn "fast"
-                sideInner.css("display", "")
+    loadSidebarCollapser = ->
+        sideCollapse = jq("#side-collapse")
+        sideInner = jq("aside .inner")
+        sideCollapse.click ->
+            sideCollapse.fadeOut("fast", ->
+                sideInner.toggle("slide", {direction: 'right'}, ->
+                    sideCollapse.fadeIn "fast"
+                    sideInner.css("display", "")
+                )
+                jq("aside").toggleClass("expand")
             )
-            jq("aside").toggleClass("expand")
-        )
-    #jq("aside").toggleClass "expand"
 
     # JS Dialogs
-    openModal = (elem) ->
-        elem.dialog(
-            modal: true
-            draggable: false
-            closeOnEscape: true
-            minWidth: jq(window).width() / 3
-            maxHeight: jq(window).height() / 1.5
-            show:
-                effect: "fade"
-                duration:500
-                easing:"easeOutExpo"
-            hide:
-                effect: "drop"
-                direction: "down"
-                distance:100
-                duration:500
-                easing:"easeOutExpo"
-            open: ->
-                elem.find("[data-enable-after]").each ->
-                    el = jq this
-                    el.attr "disabled", true
-                    setTimeout(
-                        -> el.removeAttr "disabled",
-                        parseInt(el.data("enable-after")) * 1000
-                    )
+    loadDialogs = ->
+        jq("a[data-modal]").click ->
+            elem = jq(jq(this).attr("href"))
+            openModal(elem)
+            return false
 
-                jq('.ui-widget-overlay').click ->
-                    elem.dialog "close"
-        )
+        if window.location.hash
+            try
+                elem = jq(window.location.hash)
+                openModal(elem) unless elem.data("modal") == undefined
+            catch e
+                # Suppress
 
-    jq("a[data-modal]").click ->
-        elem = jq(jq(this).attr("href"))
-        openModal(elem)
-        return false
+        # Open Modal Dialog
+        openModal = (elem) ->
+            elem.dialog(
+                modal: true
+                draggable: false
+                closeOnEscape: true
+                minWidth: jq(window).width() / 3
+                maxHeight: jq(window).height() / 1.5
+                show:
+                    effect: "fade"
+                    duration:500
+                    easing:"easeOutExpo"
+                hide:
+                    effect: "drop"
+                    direction: "down"
+                    distance:100
+                    duration:500
+                    easing:"easeOutExpo"
+                open: ->
+                    elem.find("[data-enable-after]").each ->
+                        el = jq this
+                        el.attr "disabled", true
+                        setTimeout(
+                            -> el.removeAttr "disabled",
+                            parseInt(el.data("enable-after")) * 1000
+                        )
 
-    if window.location.hash
-        try
-            elem = jq(window.location.hash)
-            openModal(elem) unless elem.data("modal") == undefined
-        catch e
-            # Suppress
+                    jq('.ui-widget-overlay').click ->
+                        elem.dialog "close"
+            )
 
     # Twitter Feed
-    twitterTemplate = jq("#tweet-template")
-    if twitterTemplate.length
-        new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
+    loadTwitterFeed = ->
+        twitterTemplate = jq("#tweet-template")
+        if twitterTemplate.length
+            new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
 
     # Open external links in a new window
-    href = new RegExp('^' + window.location.protocol + '\\/\\/' + window.location.hostname)
-    jq("a[href^='http']").filter( ->
-        return ! jq(this).attr("href").match(href)
-    ).attr("target", "_blank")
+    forceOpenExternal = ->
+        href = new RegExp('^' + window.location.protocol + '\\/\\/' + window.location.hostname)
+        jq("a[href^='http']").filter( ->
+            return ! jq(this).attr("href").match(href)
+        ).attr("target", "_blank")
 
     # Tagged Blogs
-    if jq("#content").hasClass "document-tagged"
+    loadTags = ->
+        return unless jq("#content").hasClass "document-tagged"
+
         tag = decodeURI(window.location.search.substr(1))
         tagTemplate = Handlebars.compile( jq("#tag-template").html() )
 
@@ -272,21 +317,27 @@ jQuery ->
                 jq(html).appendTo(jq("#content article"))
                 jq("#content article .loading").remove()
 
-    jq(".animateOnLoad").each ->
-        elem = jq this
-        elem.addClass("animate")
-        setTimeout ->
-            elem.removeClass("animate")
-            elem.addClass("animate-over")
-        , elem.data("animation-duration") || 400
+    # Animate Elements
+    animateElements = ->
+        jq(".animateOnLoad").each ->
+            elem = jq this
+            elem.addClass("animate")
+            setTimeout ->
+                elem.removeClass("animate")
+                elem.addClass("animate-over")
+            , elem.data("animation-duration") || 400
 
+    # Hide footer overlap
     hideFooterOverlap = ->
+        return unless jq('footer').length
         if jq('footer').visible(true) and jq(".document-pricing .promotion").is(":visible") and jq(window).scrollTop()
             jq(".document-pricing .promotion").hide()
 
         if ! jq('footer').visible(true) and ! jq(".document-pricing .promotion").is(":visible")
             jq(".document-pricing .promotion").show()
-    jq(window).scroll hideFooterOverlap
-    hideFooterOverlap()
+
+        jq(window).scroll hideFooterOverlap
+
+    init()
 
 
