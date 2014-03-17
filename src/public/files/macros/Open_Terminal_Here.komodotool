@@ -2,7 +2,7 @@
   "keyboard_shortcut": "", 
   "name": "Open Terminal Here", 
   "language": "JavaScript", 
-  "trigger_enabled": false, 
+  "trigger_enabled": 1, 
   "value": [
     "/**", 
     " * Adds an \"Open Terminal Here\" menu item to folder items in the Places widget", 
@@ -65,7 +65,7 @@
   ], 
   "version": "1.0.12", 
   "rank": 100, 
-  "async": false, 
+  "async": 1, 
   "type": "macro", 
-  "trigger": "trigger_postopen"
+  "trigger": "trigger_startup"
 }
