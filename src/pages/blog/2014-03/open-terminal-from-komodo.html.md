@@ -47,7 +47,7 @@ extensions.OpenTerminalHere = {};
     if (mi) mi.parentNode.removeChild(mi);
 
     // Get the sibling element which we want to insert our menu item after
-    var sibling = d.getElementById('placesContextMenu_showInFinder');
+    var sibling = d.getElementById('placesContextMenu_rename');
 
     var platform = navigator.platform.toLowerCase();
 
@@ -79,7 +79,7 @@ extensions.OpenTerminalHere = {};
     });
 
     // Append menu item to popupmenu
-    sibling.parentNode.insertBefore(mi, sibling.nextSibling);
+    sibling.parentNode.insertBefore(mi, sibling);
 
 }).apply(extensions.OpenTerminalHere);
 ```
