@@ -41,31 +41,7 @@
         <!-- Main Container -->
         <div id="container">
             <a name="top"></a>
-            <header>
-                <div class="outer">
-                    <div class="nav-push"></div>
-                    <div class="inner">
-                        <div class="nav-wrap">
-                            <span class="collapser button primary">
-                                <i class="icon icon-bars"></i>
-                            </span>
-                            <!-- Navigation -->
-                            <nav>
-                                <ul>
-                                    <%- @getAsList(@db.header().navigation, "unstyled") %>
-                                </ul>
-                            </nav>
-                        </div>
-
-                        <!-- Logo -->
-                        <a href="<%- @site.url %>"><figure id="header-logo"></figure></a>
-                    </div>
-                </div>
-                <% if @document.headerAppend: %>
-                    <%- @partial(@document.headerAppend, @) %>
-                <% end %>
-                <div class="underline"></div>
-            </header>
+            <%- @partial('layouts/_header.html.ect', @) %>
 
             <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>
                                      <%= 'sidebar' unless ! @document.sidebar %>

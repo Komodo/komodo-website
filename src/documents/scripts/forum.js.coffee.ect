@@ -1,22 +1,7 @@
 $(document).ready ->
 
-    nav = """
-        <%- @getAsList(@db.header().navigationForum, 'ko-nav') %>
-    """
+    header = "<div id=container><%- @partial('layouts/_header.html.ect', @, {renderAfter: (result) ->  result = JSON.stringify(result); result.substr(1,result.length-2); }) %></div>"
 
-    $("header .contents .title").append(nav)
-
-    autoHideNav = ->
-        if $("#site-logo").length
-            $("header .contents .title .ko-nav").show()
-        else
-            $("header .contents .title .ko-nav").hide()
-
-    Ember._HandlebarsBoundView.reopen({
-        render: (buffer) ->
-            this._super(buffer)
-
-            autoHideNav()
-            setTimeout autoHideNav, 50
-
-    })
+    $($(header)).insertBefore("#main")
+    
+    $("header .collapser").click -> $("#container header nav").toggleClass "expanded"

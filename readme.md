@@ -17,6 +17,11 @@
 * `bower install`
 * `docpad run`
 
+Access your dev enviroment using: http://dev.komodoide.com/
+
+If you are accessing your dev environment from an external
+machine you will need to set up dev.komodoide.com in your hosts file.
+
 ## Development Notes
 
 Because of https://github.com/bevry/docpad/issues/336 there are some temporary

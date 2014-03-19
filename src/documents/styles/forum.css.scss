@@ -1,16 +1,32 @@
 @import "_modules/depend/variables";
+
 @import "../../public/vendor/bourbon/app/assets/stylesheets/bourbon";
+@import "../../public/vendor/neat/app/assets/stylesheets/neat";
 
 /* Include it again, cause Bourbon overrides some of our variables, grrr */
 @import "_modules/depend/variables";
+
+$nav-reduce: new-breakpoint(max-width 9999px);
+$nav-reduce-further: new-breakpoint(max-width 1000px);
+$nav-collapse: new-breakpoint(max-width 900px);
 
 @import "_modules/depend/helpers";
 @import "_modules/depend/colors";
 @import "_modules/depend/cosmetic";
 
+@import "_modules/header";
+
 *
 {
     -webkit-text-stroke: inherit !important;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html, body
+{
+    background: lighten($color-base-background, 2%) !important;
 }
 
 a,
@@ -25,6 +41,21 @@ a:visited
         {
             color: $color-base-link-hover;
         }
+    }
+}
+
+.btn:not(.btn-primary),
+.category-breadcrumb li.has-drop
+{
+    &, & > a
+    {
+        background: darken($color-base-background, 4%) !important;
+    }
+
+    &:hover, &:hover > a
+    {
+        color: #FFF !important;
+        background: $color-base-link-hover !important;
     }
 }
 
@@ -55,7 +86,7 @@ nav.post-controls button .read-icon.last-read
 .btn-primary:hover,
 nav.post-controls button.create:hover
 {
-    background-color: lighten($color-base-link, 20%) !important;
+    background-color: $color-base-link-hover !important;
     color: #FFF !important;
     text-decoration: none !important;
 }
@@ -104,15 +135,36 @@ strong
 
 /* Layout */
 
-header
+#container header
+{
+    margin-bottom: 0 !important;
+
+    .inner
+    {
+        max-width: 1110px !important;
+    }
+
+    .nav-push
+    {
+        display: none;
+    }
+
+    .collapser
+    {
+        @extend %button-green;
+    }
+
+    nav.expanded
+    {
+        z-index: 9999;
+        right: 45px;
+    }
+}
+
+.d-header
 {
     color: $color-header-base;
-    min-height: 60px;
-
-    @include background-image(
-        linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
-        url(../images/layout/header-bg.png)
-    );
+    background: $color-base-background !important;
 
     .username a
     {
@@ -122,78 +174,7 @@ header
 
     &.d-header .icons .icon
     {
-        @include link-forced(#EDEDED, $color-forum-header-link-hover);
-        border: 0 !important;
-        background: transparent !important;
-
-        &:hover
-        {
-            background: transparent !important;
-        }
-    }
-
-    .contents
-    {
-        position: relative;
-
-        #site-logo
-        {
-            position: absolute;
-            top: -4px;
-            max-width: none !important;
-            width: auto !important;
-            height: 48px;
-        }
-
-        .logo-small
-        {
-            position: absolute;
-            top: 3px;
-            height: 36px;
-            max-width: none;
-            max-height: none;
-        }
-
-        .extra-info-wrapper
-        {
-            padding-left: 200px;
-            margin-right: -200px;
-        }
-    }
-
-    ul.ko-nav
-    {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-left: 240px;
-
-        li
-        {
-            display: inline-block;
-        }
-
-        li a
-        {
-            display: block;
-            font-family: $font-header-nav !important;
-            font-weight: 400;
-            font-size: 13pt;
-            line-height: 40px;
-            vertical-align: middle;
-            color: $color-header-nav-link !important;
-            text-transform: uppercase;
-            text-decoration: none;
-            padding: 0 10px;
-            border: 0;
-
-            &:hover
-            {
-                color: $color-header-nav-link-hover !important;
-                text-decoration: none;
-                border: 0;
-            }
-        }
+        @include link-forced($color-forum-header-link, $color-forum-header-link-hover);
     }
 }
 
@@ -230,28 +211,6 @@ header
     }
 }
 */
-
-.mobile-view
-{
-    #site-logo
-    {
-        top: 0 !important;
-        height: 40px !important;
-    }
-
-    ul.ko-nav
-    {
-        margin-left: 210px;
-
-        li a
-        {
-            font-weight: 300;
-            font-size: 11pt;
-            line-height: 40px;
-            padding: 0 5px;
-        }
-    }
-}
 
 .profiler-results
 {
