@@ -1,6 +1,6 @@
 $(document).ready ->
 
-    header = "<div id=container><%- @partial('layouts/_header.html.ect', @, {renderAfter: (result) ->  result = JSON.stringify(result); result.substr(1,result.length-2); }) %></div>"
+    header = "<div id=container><%- @partial('layouts/header.html.ect', @, {renderAfter: (result) ->  result = JSON.stringify(result); result.substr(1,result.length-2); }) %></div>"
 
     $($(header)).insertBefore("#main")
     
