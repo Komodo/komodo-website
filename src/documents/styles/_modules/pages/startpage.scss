@@ -102,4 +102,46 @@ body.startpage
         }
     }
 
+    .featured
+    {
+        padding-right: 190px !important;
+        padding-top: 20px !important;
+    }
+
+    .promotion
+    {
+        display: block;
+        position: absolute;
+        right: 70px;
+        top: 0;
+        z-index: 15;
+        width: 120px;
+        height: 120px;
+        background-image: url(../images/icons/emblems/promotion.png);
+        background-size: 100%;
+        border: 0;
+
+        @include transition(all 0.2s ease-in-out);
+
+        .inner
+        {
+            position: relative;
+            top: 50%;
+            @include transform(translateY(-50%));
+
+            color: #FFF;
+            font-size: 11pt;
+            line-height: 1.2;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 10px 0 10px;
+            text-shadow: 0 0 3px rgba(0,0,0,0.3);
+        }
+
+        &:hover .inner
+        {
+            text-decoration: underline;
+        }
+    }
+
 }
