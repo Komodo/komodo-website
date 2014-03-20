@@ -320,7 +320,7 @@ jQuery ->
 
     # Open external links in a new window
     forceOpenExternal = ->
-        href = new RegExp('^' + window.location.protocol + '\\/\\/' + window.location.hostname)
+        href = new RegExp('^' + window.location.protocol + '\\/\\/(?:[a-z]*?\.|)' + window.location.hostname)
         jq("a[href^='http']").filter( ->
             return ! jq(this).attr("href").match(href)
         ).attr("target", "_blank")
