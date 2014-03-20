@@ -44,15 +44,15 @@ a:visited
     }
 }
 
-.btn:not(.btn-primary):not(.btn-danger),
+.btn:not(.btn-primary):not(.btn-danger):not(.btn-social),
 .category-breadcrumb li.has-drop
 {
-    &, & > a
+    &, & > a.home
     {
         background: darken($color-base-background, 4%) !important;
     }
 
-    &:hover, &:hover > a
+    &:hover, &:hover > a.home
     {
         color: #FFF !important;
         background: $color-base-link-hover !important;
