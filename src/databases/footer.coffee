@@ -25,7 +25,7 @@ module.exports = {
             ]
         ,
             name: "Support"
-            link: "/framed/?http://community.activestate.com/forums/komodo/komodo-support"
+            link: "http://forum.komodoide.com/category/support"
             sub: [
                 name: "Documentation"
                 link: "/framed/?http://docs.activestate.com/komodo"
@@ -51,7 +51,7 @@ module.exports = {
             target: "_blank"
         ,
             name: "Ask the Community"
-            link: "/framed/?http://community.activestate.com/forums/komodo/komodo-support"
+            link: "http://forum.komodoide.com/"
         ]
 
         activestate: [
@@ -75,7 +75,7 @@ module.exports = {
             name: "Blog"
         ,
             name: "Forums"
-            link: "/framed/?http://community.activestate.com/forums/komodo"
+            link: "http://forum.komodoide.com/"
         ,
             name: "IRC"
             link: "http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor"

@@ -4,9 +4,9 @@ module.exports = {
             link: "http://komodoide.com/framed/?http://docs.activestate.com/komodo/"
         ,
             name: "Community Forums"
-            link: "http://komodoide.com/framed/?http://community.activestate.com/forums/komodo"
+            link: "http://forum.komodoide.com/"
         ,
             name: "Add-ons",
-            link: "http://komodoide.com/framed/?http://community.activestate.com/addons"
+            link: "http://forum.komodoide.com/"
     ]
 }
