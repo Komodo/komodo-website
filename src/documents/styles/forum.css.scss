@@ -44,7 +44,7 @@ a:visited
     }
 }
 
-.btn:not(.btn-primary),
+.btn:not(.btn-primary):not(.btn-danger),
 .category-breadcrumb li.has-drop
 {
     &, & > a
@@ -98,6 +98,12 @@ a[name]:not([href])
         color: $color-base-text !important;
         border: 0 !important;
     }
+}
+
+.staff a
+{
+    color: #7B568B !important;
+    background: none !important;
 }
 
 h1
