@@ -44,7 +44,7 @@ a:visited
     }
 }
 
-.btn:not(.btn-primary):not(.btn-danger):not(.btn-social),
+.btn:not(.btn-primary):not(.btn-danger):not(.btn-social):not(.ok):not(.cancel),
 .category-breadcrumb li.has-drop
 {
     &, & > a.home
