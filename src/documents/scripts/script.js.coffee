@@ -153,7 +153,7 @@ jQuery ->
                 elem = jq this
                 [category, action, label] = elem.data("analytics").split(":")
                 _gak("send", "event", category, action, label) if _gak?
-                _gaq("send", "event", category, action, label) if _gaq?
+                _gaq.push(['_trackEvent', category, action, label]) if _gaq?
 
     # Tooltips
     bindTooltips = ->
