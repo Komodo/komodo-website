@@ -33,6 +33,7 @@ docpadConfig = {
             placeholders: -> @requireDb('placeholders')
             features: -> @requireDb('features')
             startpage: -> @requireDb('startpage')
+            promotions: -> @requireDb('promotions')
 
             cache: {}
             requireDb: (name) ->

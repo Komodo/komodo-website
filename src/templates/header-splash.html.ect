@@ -11,12 +11,13 @@
         <figure class="splash-osx primary"></figure>
         <figure class="splash-linux tertiary"></figure>
        
-        <a class="promotion" href="/pricing">
+       <% if @db.promotions().splash.enabled: %>
+        <a class="promotion" href="<%- @db.promotions().splash.link %>">
             <div class="inner">
-                $100 Off<br>
-                This Week Only
+                <%- @db.promotions().splash.description %>
             </div>
         </a>
+        <% end %>
         
         <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
     </div>

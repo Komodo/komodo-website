@@ -3,12 +3,13 @@ title: Komodo Startpage
 layout: startpage
 ---
 
-<a class="promotion" href="http://komodoide.com/pricing">
+<% if @db.promotions().startpage.enabled: %>
+<a class="promotion" href="<%- @db.promotions().startpage.link %>">
     <div class="inner">
-        $100 Off<br>
-        This Week Only
+        <%- @db.promotions().startpage.description %>
     </div>
 </a>
+<% end %>
 
 <h1>Working with Perl or Tcl?</h1>
 <p>Upgrade to Pro Studio.</p>
