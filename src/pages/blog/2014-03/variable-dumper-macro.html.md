@@ -7,6 +7,10 @@ description: Quickly create a print statement from a variable or selection of co
 layout: blog
 ---
 
+<div class="centered">
+<h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
+</div>
+
 For quick and simple debugging of code at runtime, I will often use a print or
 log statement to check what a variable is set to. This macro quickly creates the
 boilerplate for the print statement according to the language I am currently
