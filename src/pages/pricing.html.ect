@@ -13,17 +13,14 @@ priority: 0.7
 
 <div class="spacer clearfix"></div>
 
+<% if @db.promotions().pricing.enabled: %>
 <div class="promotion animateOnLoad">
-    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="Valid March 17 through 23. Exclusive to store purchases. Limited to one redemption per customer. Does not apply to past purchases or upgrades.">
+    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="<%- @db.promotions().pricing.tooltip %>">
         <i class="icon icon-exclamation push-right"></i>
-        <p>
-            <strong><span>$100 Off</span> - This Week Only! Use Coupon Code: <span>MARCH100</span></strong>
-        </p>
-        <p>
-            Valid on single purchases of Pro Studio and Professional
-        </p>
+        <%- @db.promotions().pricing.description %>
     </div>
 </div>
+<% end %>
 
 <div class="pricing-outer">
 <div class="pricing-inner">
