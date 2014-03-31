@@ -17,7 +17,7 @@ your statusbar and show this information.
 
 # The Macro
 
-The function that edits the Komodo UI Statusbar
+The function that edits the Komodo statusbar to add the byte &amp; char positions
 
 ```javascript
 function addByteCharPos() {
