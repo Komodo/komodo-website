@@ -1,6 +1,6 @@
 ---
 title: Absolute Cursor Position in Statusbar
-author: Care Hoffman
+author: Carey Hoffman
 date: 2014-03-31
 tags: [macro, javascript, editor, print, dump, doc, position]
 description: Ever wanted to easily see where in the document your current cursor position is relative to the first character?  It's quite easy to override a built-in Komodo function to update your statusbar and show this information.
