@@ -1,9 +1,9 @@
 ---
-title: Absolute Pos in Statusbar
+title: Absolute Cursor Position in Statusbar
 author: Care Hoffman
 date: 2014-03-31
 tags: [macro, javascript, editor, print, dump, doc, position]
-description: At a glance, see where in the document your current cursor position is relative the to the first character.
+description: At a glance, see where in the document your current cursor position is relative to the first character.
 layout: blog
 ---
 
@@ -11,8 +11,8 @@ layout: blog
 <h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
 </div>
 
-To get a quick idea of where you are in you're document, it's quite easy to
-override a built in Komodo function to update your statusbar.
+To get a quick idea of where you are in your document, it's quite easy to
+override a built-in Komodo function to update your statusbar.
 
 # Examples
 
@@ -43,7 +43,7 @@ function addByteCharPos() {
 }
 ```
 
-Create a space to save your function
+Create a namespace to save your function and ensure it's not triggered too early
 
 ```javascript
 if (typeof(extensions) == "undefined") {
@@ -84,12 +84,3 @@ do this manually the first time.
     <a href="https://github.com/Komodo/macros/blob/master/variable_dumper.js" target="_blank">View Source</a>
 </span>
 </div>
-
-## Related Materials
-
-* [Komodo Developer Extension](/framed/?http://community.activestate.com/node/1824)
-  - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html)
-  - to programatically interact with the Komodo editor
-* [Editor API](http://www.scintilla.org/ScintillaDoc.html)
-  - the Komodo editor provides a wrapper around the Scintilla API
