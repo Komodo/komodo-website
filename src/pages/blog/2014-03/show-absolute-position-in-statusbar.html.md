@@ -75,7 +75,7 @@ automatically activate itself the next time you start Komodo, you only need to
 do this manually the first time.
 
 <div class="inline centered">
-<a href="/files/macros/Variable_Dumper.komodotool" class="button primary">
+<a href="/files/macros/Add-byte-char-pos-statusbar.komodotool" class="button primary">
     <i class="icon icon-download"></i>
     Download Macro
 </a>
