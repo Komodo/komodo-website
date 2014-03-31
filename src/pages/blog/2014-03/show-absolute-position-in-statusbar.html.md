@@ -11,8 +11,9 @@ layout: blog
 <h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
 </div>
 
-Ever wanted to easily see where in the document your current cursor position is relative 
-to the first character?  It's quite easy to override a built-in Komodo function to update 
+Ever wanted to easily see where in the document your current cursor position is
+relative to the first character? [@JustMe](http://forum.komodoide.com/users/justme/activity) was [asking just this on our forums](http://forum.komodoide.com/t/display-current-cursor-position-from-top-of-file/53),
+and it turns out it's quite easy to override a built-in Komodo function to update
 your statusbar and show this information.
 
 # The Macro
