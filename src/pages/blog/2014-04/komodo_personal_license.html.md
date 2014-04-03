@@ -52,7 +52,7 @@ If you've got any questions, or feedback - please let us know.
 ## PyCon in Montreal
 
 Also, the Komodo team will be in Montreal next week (April 8-13), attending
-PyCon 2014. If your at PyCon or in the general vicinity, then stop by the
-ActiveState both - we'll have lots of goodies to share with you.
+PyCon 2014. If you're at PyCon or in the general vicinity, then stop by the
+ActiveState booth - we'll have lots of goodies to share with you.
 
 [PyCon 2014]: https://us.pycon.org/‎
