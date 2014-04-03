@@ -1,7 +1,7 @@
 module.exports =
     splash:
         enabled: true
-        description: "Komodo IDE<br>For $89!*"
+        description: "Komodo IDE<br>For $89!*<br><small>*Restrictions Apply</small>"
         tooltip: "Komodo IDE Personal only - Restrictions apply"
         link: "/pricing"
     pricing:
