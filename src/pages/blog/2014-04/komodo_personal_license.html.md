@@ -37,7 +37,7 @@ Personal license, see below:
 There are no change software changes - the personal license uses the same Komodo
 IDE software, so you get [all the features] of Komodo IDE (multiple languages,
 debugging, source code control), and you are able to use this license to develop
-commecial software, just like you would with the enterprise Komodo IDE license.
+commercial software, just like you would with the enterprise Komodo IDE license.
 
 [all the features]: /features/
 
