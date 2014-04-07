@@ -1,7 +1,8 @@
 module.exports =
     splash:
-        enabled: false
-        description: "$100 Off<br>This Week Only"
+        enabled: true
+        description: "Komodo IDE<br>For $89!*<br><small>*Restrictions Apply</small>"
+        tooltip: "Komodo IDE Personal only - Restrictions apply"
         link: "/pricing"
     pricing:
         enabled: false
@@ -15,6 +16,23 @@ module.exports =
         """
         tooltip: "Valid March 17 through 23. Exclusive to store purchases. Limited to one redemption per customer. Does not apply to past purchases or upgrades."
     startpage:
-        enabled: false
-        description: "$100 Off<br>This Week Only"
-        link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+        latestEdit:
+            enabled: true
+            description: "Komodo IDE<br>For $89!*"
+            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+        latestIde:
+            enabled: false
+            description: "Komodo IDE<br>For $89!*"
+            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+        latestTrial:
+            enabled: true
+            description: "Komodo IDE<br>For $89!*"
+            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+        old:
+            enabled: true
+            description: "Komodo IDE<br>For $89!*"
+            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url

@@ -1,6 +1,6 @@
 ---
 title: Absolute Cursor Position in Statusbar
-author: Care Hoffman
+author: Carey Hoffman
 date: 2014-03-31
 tags: [macro, javascript, editor, print, dump, doc, position]
 description: Ever wanted to easily see where in the document your current cursor position is relative to the first character?  It's quite easy to override a built-in Komodo function to update your statusbar and show this information.
@@ -11,13 +11,14 @@ layout: blog
 <h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
 </div>
 
-Ever wanted to easily see where in the document your current cursor position is relative 
-to the first character?  It's quite easy to override a built-in Komodo function to update 
+Ever wanted to easily see where in the document your current cursor position is
+relative to the first character? [@JustMe](http://forum.komodoide.com/users/justme/activity) was [asking just this on our forums](http://forum.komodoide.com/t/display-current-cursor-position-from-top-of-file/53),
+and it turns out it's quite easy to override a built-in Komodo function to update
 your statusbar and show this information.
 
 # The Macro
 
-The function that edits the Komodo UI Statusbar
+The function that edits the Komodo statusbar to add the byte &amp; char positions
 
 ```javascript
 function addByteCharPos() {
@@ -82,6 +83,6 @@ do this manually the first time.
 <div class="spacer-half"></div>
 <span>
     <i class="icon icon-github"></i>
-    <a href="https://github.com/Komodo/macros/blob/master/variable_dumper.js" target="_blank">View Source</a>
+    <a href="https://github.com/Komodo/macros/blob/master/add_byte_char_pos_statusbar.js" target="_blank">View Source</a>
 </span>
 </div>

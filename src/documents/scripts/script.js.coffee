@@ -24,6 +24,8 @@ jQuery ->
             loadTags
             animateElements
             hideFooterOverlap
+            disableLinks
+            bindCheckboxEnablers
         ]
         for fn in fns
             setTimeout fn, 0
@@ -126,16 +128,7 @@ jQuery ->
     
     # Analytics
     bindAnalytics = ->
-        if _gaq?
-            jq("a[href]").click ->
-                a = jq this
-                href = a.attr("href")
-                href = href.substr(href.indexOf("framed/?")+8) if href.indexOf("framed/?") != -1
-                if href.indexOf("activestate.com") != -1
-                    _gaq.push(['_link', href])
-
         if _gak?
-
             href = window.location.href
             if href.indexOf("framed/?") != -1
                 href = href.substr(href.indexOf("?")+1)
@@ -144,6 +137,7 @@ jQuery ->
                 path = prefix + href.replace(/^https?:\/\//, '')
 
             if path?
+
                 _gak('send', 'pageview', path)
             else
                 _gak('send', 'pageview')
@@ -359,6 +353,20 @@ jQuery ->
 
     if jq('footer').length and jq(".document-pricing .promotion").length
         jq(window).scroll hideFooterOverlap
+
+    disableLinks = ->
+        jq("a.disabled").click ->
+            elem = jq this
+            return false if elem.hasClass "disabled"
+
+    bindCheckboxEnablers = ->
+        jq("input[type=checkbox][data-enables]").click ->
+            elem = jq this
+
+            if this.checked
+                jq("#" + elem.data("enables")).removeClass("disabled")
+            else
+                jq("#" + elem.data("enables")).addClass("disabled")
 
     init()
 

@@ -3,10 +3,11 @@ title: Komodo Startpage
 layout: startpage
 ---
 
-<% if @db.promotions().startpage.enabled: %>
-<a class="promotion" href="<%- @db.promotions().startpage.link %>">
+<% promo = @db.promotions().startpage.latestTrial %>
+<% if promo.enabled: %>
+<a class="promotion" title="<%- promo.tooltip %>" href="<%- promo.link %>">
     <div class="inner">
-        <%- @db.promotions().startpage.description %>
+        <%- promo.description %>
     </div>
 </a>
 <% end %>

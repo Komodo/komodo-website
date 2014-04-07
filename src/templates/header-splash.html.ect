@@ -12,14 +12,16 @@
         <figure class="splash-linux tertiary"></figure>
        
        <% if @db.promotions().splash.enabled: %>
-        <a class="promotion" href="<%- @db.promotions().splash.link %>">
+        <a class="promotion" title="<%- @db.promotions().splash.tooltip %>" href="<%- @db.promotions().splash.link %>">
             <div class="inner">
                 <%- @db.promotions().splash.description %>
             </div>
         </a>
         <% end %>
         
+        <!--
         <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
+        -->
     </div>
 
     <h2>DOWNLOAD</h2>
