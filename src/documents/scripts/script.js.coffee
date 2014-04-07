@@ -24,6 +24,8 @@ jQuery ->
             loadTags
             animateElements
             hideFooterOverlap
+            disableLinks
+            bindCheckboxEnablers
         ]
         for fn in fns
             setTimeout fn, 0
@@ -351,6 +353,20 @@ jQuery ->
 
     if jq('footer').length and jq(".document-pricing .promotion").length
         jq(window).scroll hideFooterOverlap
+
+    disableLinks = ->
+        jq("a.disabled").click ->
+            elem = jq this
+            return false if elem.hasClass "disabled"
+
+    bindCheckboxEnablers = ->
+        jq("input[type=checkbox][data-enables]").click ->
+            elem = jq this
+
+            if this.checked
+                jq("#" + elem.data("enables")).removeClass("disabled")
+            else
+                jq("#" + elem.data("enables")).addClass("disabled")
 
     init()
 

@@ -85,14 +85,6 @@
             padding: 0;
             text-align: center;
 
-            &.continued
-            {
-                & li:first-child
-                {
-                    margin-left: 16.6% !important;
-                }
-            }
-
             li
             {
                 @include span-columns(4);
@@ -140,6 +132,15 @@
                     text-transform: uppercase;
                 }
 
+                .limited-badge
+                {
+                    font-weight: bold;
+                    color: #835799;
+                    font-size: 14pt;
+                    text-decoration: underline;
+                    @include transform(rotate(-5deg));
+                }
+
                 &.goodwill > figure
                 {
                     font-size: 9pt;
@@ -174,7 +175,7 @@
                         .deal-badge
                         {
                             position: absolute;
-                            top: -20px;
+                            top: -15px;
                             right: -10px;
 
                             .icon

@@ -43,7 +43,7 @@ priority: 0.7
 
             <p>
                 <small>
-                For Perl & Tcl Programmers, includes Komodo IDE,
+                For Perl & Tcl Programmers, includes 
                 <a href="/framed/?http://www.activestate.com/perl-dev-kit">Perl</a> or
                 <a href="/framed/?http://www.activestate.com/tcl-dev-kit">Tcl Dev Kit</a>,
                 1 Year of Upgrades & Support.
@@ -90,16 +90,19 @@ priority: 0.7
             </div>
         </li>
         <li class="enterprise">
-            <h2>Professional</h2>
+            <h2>Enterprise</h2>
             <figure>$295</figure>
 
-            <p>Companies & Personal</p>
             <p>
-                Upgrade for <strong class="tooltip" title="Note that upgrades are free with a subscription">$168</strong><br>
-                or
-                <a href="/framed/?http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
-                    Subscribe for <strong>$87</strong>
-                </a>
+                Companies & Organizations
+                <br>
+                <small>
+                    Upgrade for <strong class="tooltip" title="Note that upgrades are free with a subscription">$168</strong><br>
+                    or
+                    <a href="/framed/?http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
+                        Subscribe for <strong>$87</strong>
+                    </a>
+                </small>
             </p>
 
             <div class="buttons">
@@ -117,19 +120,106 @@ priority: 0.7
                 </a>
             </div>
         </li>
-        <!-- Soon ... sssh
-        <li class="individual">
-            <h2>Individual</h2>
-            <figure>$???</figure>
+        <li class="personal">
+            <h2>Personal</h2>
+            <figure>$89</figure>
 
             <p>Individuals & Freelancers</p>
-            <p>Upgrade for <strong>$???</strong></p>
+            <p><em>
+                <a href="#personal-buy" data-modal>
+                    Restrictions Apply
+                </a>
+            </em></p>
+
+            <div class="limited-badge">
+                Limited Time Only!
+            </div>
+
+            <div id="personal-buy" class="hide" title="Do You Qualify?">
+                <p>
+                    <strong>
+                        Not everyone qualifies for a Personal Edition License!
+                        You do not qualify if -
+                    </strong>
+                </p>
+
+                <ul class="disc">
+                    <li>
+                        You are purchasing this not using your own funds; or
+                    </li>
+                    <li>
+                        You are being reimbursed by a company for your purchase.
+                    </li>
+                </ul>
+
+                <p>
+                    You are qualified to purchase a full version of Komodo IDE
+                    for special pricing (the "<em>Personal Edition License</em>") if you
+                    agree with the following license restrictions:
+                </p>
+
+                <ul class="disc">
+                    <li>
+                        a <em>Personal Edition license</em> cannot be transferred to
+                        another owner
+                    </li>
+                    <li>
+                        a company cannot reimburse the individual that purchased
+                        a <em>Personal Edition license</em>
+                    </li>
+                    <li>
+                        a <em>Personal Edition license</em> is not version upgradeable
+                    </li>
+                    <li>
+                        an Upgrades and Support subscription cannot be included
+                        with a <em>Personal Edition license</em>
+                    </li>
+                    <li>
+                        an individual cannot purchase more than one Personal
+                        Edition license (no bulk purchases)
+                    </li>
+                </ul>
+
+                <p>
+                    <small>
+                        BY INSTALLING THE SOFTWARE, OR, WHERE APPLICABLE, CHOOSING
+                        THE “I ACCEPT…” OPTION, YOU INDICATE THAT YOU HAVE READ,
+                        UNDERSTOOD AND ACCEPT THE
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">TERMS AND CONDITIONS OF THE LICENSE (the “License
+                            Agreement)
+                        </a>
+                        . THIS LICENSE AGREEMENT SET FORTH THE TERMS OF YOUR
+                        SOFTWARE LICENSE AND OVERRIDES THE TERMS FOUND IN THE
+                        INSTALLERS.
+                    </small>
+                </p>
+
+                <hr>
+
+                <div class="centered">
+                    <p>
+                        <input type="checkbox" id="personal-accept" data-enables="buy-personal">
+                        <label for="personal-accept">
+                            I Accept
+                            <a href="http://www.activestate.com/komodo-ide/license-agreement">
+                                The License Agreement
+                            </a>
+                        </label>
+                    </p>
+                    <p>
+                        <a href="#" id="buy-personal" class="button primary big disabled" data-analytics="buy:personal:commit">
+                            Buy Komodo IDE Personal
+                        </a>
+                    </p>
+                </div>
+            </div>
 
             <div class="buttons">
-                <a class="button">Buy Now</a>
+                <a class="button" href="#personal-buy" data-modal data-analytics="buy:personal:intend">Buy Now</a>
             </div>
         </li>
-        -->
+    </ul>
+    <ul class="pricing-block continued">
         <li class="student">
             <h2>Students</h2>
             <figure>$100~</figure>
@@ -149,8 +239,6 @@ priority: 0.7
                 </a>
             </div>
         </li>
-    </ul>
-    <ul class="pricing-block continued">
         <li class="educational">
             <h2>Educational</h2>
             <figure>Free</figure>
@@ -296,8 +384,6 @@ priority: 0.7
                 <p>
                     In order to qualify for a Goodwill license your project must:
                 </p>
-                <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Goodwill%20License" class="button big primary push-right tooltip" title="Please read the criteria before contacting us" data-enable-after="5"
-                    data-analytics="apply:goodwill:contact">Contact Us</a>
                 <ul class="disc">
                     <li>
                         Use an Open Source license
@@ -324,6 +410,22 @@ priority: 0.7
                 <p>
                     Please be considerate with your application.
                 </p>
+
+                <hr>
+
+                <div class="centered">
+                    <p>
+                        <input type="checkbox" id="goodwill-accept" data-enables="apply-goodwill">
+                        <label for="goodwill-accept">
+                            I've Read These Restrictions and Wish to Apply
+                        </label>
+                    </p>
+                    <p>
+                        <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Goodwill%20License" id="apply-goodwill" class="button big primary disabled" data-analytics="apply:goodwill:contact">
+                            Contact Us
+                        </a>
+                    </p>
+                </div>
             </div>
         </li>
     </ul>
