@@ -118,7 +118,7 @@ module.exports = {
         ,
             name: "RSS Feed",
             img: "icons/sm/feed-24x24.png",
-            link: "#",
+            link: "blog.rss",
             target: "_blank"
         ]
 }
