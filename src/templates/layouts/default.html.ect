@@ -46,6 +46,23 @@
             <div id="content" class="document-<%= @document.basenameOrig or @document.basename %>
                                      <%= 'sidebar' unless ! @document.sidebar %>
                                      <%= @document.classNames %>">
+
+                <% if @document.trail: %>
+                <ul class="trail">
+                    <% for item in @document.trail: %>
+                    <li>
+                        <% if typeof item is "string": %>
+                            <%= item %>
+                        <% else: %>
+                            <a href="<%= @site.url %><%= item[0] %>">
+                                <%= item[1] %>
+                            </a>
+                        <% end %>
+                    </li>
+                    <% end %>
+                </ul>
+                <% end %>
+
                 <section role="main">
                 <%- @partial('articles/' + (@document.articleTemplate || 'article') + '.html', @) %>
                 </section>

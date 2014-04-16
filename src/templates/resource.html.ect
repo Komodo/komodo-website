@@ -1,0 +1,213 @@
+---
+layout: default
+sidebar: resources
+classNames: sidebar-left
+---
+
+<% R = @document.resource %>
+
+<div class="beta">BETA</div>
+
+<div class="push-right">
+<% if R.id: %>
+<div class="social-meta">
+    <a href="<%- R.html_url %>/watchers" class="watchers button small">
+        <i class="icon icon-eye"></i>
+        <strong>Watchers</strong>
+        <span><%- R.watchers_count %></span>
+    </a>
+    <a href="<%- R.html_url %>/stargazers" class="stars button small">
+        <i class="icon icon-star"></i>
+        <strong>Stars</strong>
+        <span><%- R.stargazers_count %></span>
+    </a>
+    <a href="<%- R.html_url %>/network" class="forks button small">
+        <i class="icon icon-code-fork"></i>
+        <strong>Forks</strong>
+        <span><%- R.forks_count %></span>
+    </a>
+</div>
+<% end %>
+
+<div class="details-meta clearfix">
+    <dl>
+        <dt>Author</dt>
+        <dd>
+            <a href="<%- R.owner.html_url %>">
+                <span><%- R.owner.login %></span>
+            </a>
+        </dd>
+
+        <% if R.created_at: %>
+        <dt>Created</dt>
+        <dd title="<%- @moment(R.created_at).format('LLL') %>">
+            <%- @moment(R.created_at).fromNow() %>
+        </dd>
+        <% end %>
+
+        <% if R.updated_at: %>
+        <dt>Updated</dt>
+        <dd title="<%- @moment(R.updated_at).format('LLL') %>">
+            <%- @moment(R.updated_at).fromNow() %>
+        </dd>
+        <% end %>
+
+        <% if R.homepage: %>
+        <dt>Homepage</dt>
+        <dd>
+            <a href="<%- R.homepage %>">
+                <%- R.homepage %>
+            </a>
+        </dd>
+        <% end %>
+
+        <% if R.html_url: %>
+        <dt>Github</dt>
+        <dd>
+            <a href="<%- R.html_url %>">
+                <%- R.html_url %>
+            </a>
+        </dd>
+        <% end %>
+
+        <% if R.has_issues: %>
+        <dt>Issues</dt>
+        <dd>
+            <span><%- R.open_issues_count %></span>
+            <a href="<%- R.html_url %>/issues">view</a>
+        </dd>
+        <% end %>
+
+        <% if R.has_wiki: %>
+        <dt>Wiki</dt>
+        <dd>
+            <a href="<%- R.html_url %>/wiki">view</a>
+        </dd>
+        <% end %>
+
+        <% if R.has_downloads: %>
+        <dt>Downloads</dt>
+        <dd>
+            <span><%- R.download_count %></span>
+            <a href="<%- R.html_url %>/releases">view</a>
+        </dd>
+        <% end %>
+    </dl>
+</div>
+</div>
+
+<h1><%= R.title %></h1>
+<div class="main-meta">
+    <span class="author">
+        <i class="icon icon-user" title="Author"></i>
+        <a href="<%- R.owner.html_url %>">
+            <span><%- R.owner.login %></span>
+        </a>
+    </span>
+    <% if R.homepage or R.html_url: %>
+    <span class="homepage">
+        <i class="icon icon-link" title="Homepage"></i>
+        <a href="<%- R.homepage || R.html_url %>">
+            <%- R.homepage || R.html_url %>
+        </a>
+    </span>
+    <% end %>
+    <span class="last-update">
+        <i class="icon icon-clock-o" title="Last Updated"></i>
+        <span><%- @moment(R.updated_at).fromNow() %></span>
+    </span>
+</div>
+
+<p class="description"><%- R.description %></p>
+
+<h2>Download</h2>
+<div class="download">
+    <% if R.releases and R.releases.length: %>
+        <% if R.releases.length > 1: %>
+        <select class="paneSelector" data-pane-prefix="release-">
+            <% for k,release of R.releases: %>
+            <option value="<%- release.id %>">
+                <%- release.name %>
+                <% if release.prerelease: %>
+                    (Pre-Release)
+                <% end %>
+            </option>
+            <% end %>
+        </select>
+        <% end %>
+        <div class="releases">
+        <% for k,release of R.releases: %>
+            <div class="release <%- 'hide' if k > 0 %> <%- k %>" id="release-<%- release.id %>">
+                <% if R.releases.length is 1: %>
+                <h3>
+                    <%- release.name %>
+                    <% if release.prerelease: %>
+                    <span>(Pre-Release)</span>
+                    <% end %>
+                </h3>
+                <% end %>
+                <div class="release-meta">
+                    <span class="homepage">
+                        <i class="icon icon-link" title="View on Github"></i>
+                        <a href="<%- release.html_url %>">
+                            <%- release.html_url %>
+                        </a>
+                    </span>
+                    <span class="last-update">
+                        <i class="icon icon-clock-o" title="Released"></i>
+                        <span><%- @moment(release.created_at).fromNow() %></span>
+                    </span>
+                </div>
+                <p><%- release.body %></p>
+                <div class="files">
+                    <% if release.assets.length: %>
+                       <div class="assets">
+                           <% for k,asset of release.assets: %>
+                               <div>
+                               <a href="https://github.com/<%- R.full_name %>/releases/download/<%- release.name %>/<%- asset.name %>" class="button big primary">
+                                   <i class="icon icon-download"></i>
+                                   Download "<%- asset.label %>"
+                               </a>
+                               <div>
+                                   Downloaded <strong><%- asset.download_count %></strong> times
+                               </div>
+                               </div>
+                           <% end %>
+                       </div>
+                   <% end %>
+                   <div class="source">
+                       <a href="https://github.com/<%- R.full_name %>/archive/<%- release.name %>.zip" class="button">
+                           <i class="icon icon-download"></i>
+                           Download Source
+                       </a>
+                   </div>
+                </div>
+            </div>
+        <% end %>
+        </div>
+    <% end %>
+    <% if (!R.releases or !R.releases.length) and R.raw_url: %>
+        <div class="files">
+            <a href="<%- R.raw_url %>" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
+        </div>
+    <% end %>
+    <% if (!R.releases or !R.releases.length) and !R.raw_url: %>
+        <div class="files">
+            <a href="https://github.com/<%- R.full_name %>/archive/master.zip" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
+        </div>
+    <% end %>
+</div>
+
+<div class="clearfix"></div>
+<% if R.readme: %>
+<h2>Readme</h2>
+<div class="readme user-input">
+<%- R.readme.content %>
+</div>
+<% end %>

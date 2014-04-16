@@ -54,6 +54,10 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
         }
     }
 
+    &.small
+    {
+        padding: 4px;
+    }
     &[disabled],
     &.disabled
     {

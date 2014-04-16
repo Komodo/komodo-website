@@ -26,6 +26,7 @@ jQuery ->
             hideFooterOverlap
             disableLinks
             bindCheckboxEnablers
+            bindPaneSelector
         ]
         for fn in fns
             setTimeout fn, 0
@@ -367,6 +368,16 @@ jQuery ->
                 jq("#" + elem.data("enables")).removeClass("disabled")
             else
                 jq("#" + elem.data("enables")).addClass("disabled")
+
+    # Allow pane selection through select fields
+    bindPaneSelector = ->
+        jq("select.paneSelector").each ->
+            elem = jq this
+            prefix = elem.data("pane-prefix") || ""
+            elem.change ->
+                id = "#" + prefix + elem.val()
+                jq(id).siblings().hide()
+                jq(id).show()
 
     init()
 

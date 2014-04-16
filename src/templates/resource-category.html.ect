@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<div class="beta">BETA</div>
+
+<%
+    resources = @getCollection(@document.pagedCollection).findAllLive({}, [date: -1]).toJSON()
+    resources = resources[@document.page.startIdx...@document.page.endIdx] if @document.page
+%>
+
+<ul>
+    <% for document in resources: %>
+        <% R = document.resource %>
+        <li>
+            <div class="meta push-right">
+                <% if R.download_count: %>
+                <span class="downloads">
+                    <i class="icon icon-download" title="Total Downloads"></i>
+                    <span><%- R.download_count %></span>
+                </span>
+                <% end %>
+                <% if R.id: %>
+                <span class="watchers">
+                    <i class="icon icon-eye"></i>
+                    <span><%- R.watchers_count %></span>
+                </span>
+                <span class="stars">
+                    <i class="icon icon-star"></i>
+                    <span><%- R.stargazers_count %></span>
+                </span>
+                <span class="forks">
+                    <i class="icon icon-code-fork"></i>
+                    <span><%- R.forks_count %></span>
+                </span>
+                <% end %>
+            </div>
+            <h3>
+                <% if @document.basename is "resources": %>
+                <a href="<%- @site.url %>/resources/<%- document.category.nameClean %>">
+                    <span><%- document.category.name %></span>
+                </a>
+                /
+                <% end %>
+                <strong>
+                    <a href="<%- document.url %>">
+                        <%- document.title %>
+                    </a>
+                </strong>
+                <span class="author">
+                    <em>by</em>
+                    <a href="<%- R.owner.html_url %>">
+                        <%- R.owner.login %>
+                    </a>
+                </span>
+            </h3>
+            <p>
+                <%- R.description %>
+            </p>
+        </li>
+    <% end %>
+</ul>
+
+<%- @partial('pagination.html', @) %>

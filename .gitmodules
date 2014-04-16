@@ -10,3 +10,6 @@
 [submodule "puppet/modules/wget"]
 	path = puppet/modules/wget
 	url = git://github.com/maestrodev/puppet-wget.git
+[submodule "src/resources"]
+	path = src/resources
+	url = git@github.com:Komodo/Komodo-Resources.git
