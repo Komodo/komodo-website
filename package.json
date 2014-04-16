@@ -5,7 +5,7 @@
   "homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
   "author": "Nathan Rijksen <nathanr@activestate.com>",
   "engines": {
-    "node": "0.8.x",
+    "node": "0.10.x",
     "npm": "1.1.x"
   },
   "dependencies": {
@@ -32,11 +32,14 @@
     "ect": "^0.5.6",
     "request": "^2.34.0",
     "docpad-plugin-coffeekup": "~2.2.0",
-    "docpad-plugin-nodesass": "~2.3.0"
+    "docpad-plugin-nodesass": "~2.3.0",
+    "node-bourbon": "~1.0.0",
+    "node-neat": "~1.2.0",
+    "font-awesome": "~4.0.3",
+    "docpad-plugin-ghpages": "~2.4.3"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.6.0",
-    "docpad-plugin-ghpages": "~2.4.3"
+    "docpad-plugin-livereload": "~2.6.0"
   },
   "main": "node_modules/docpad/bin/docpad-server"
 }
