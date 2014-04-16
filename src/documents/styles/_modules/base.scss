@@ -161,7 +161,8 @@ strong
 ul.disc,
 .document-blog-entry article ul,
 .markdown article ul,
-.drupal-import article ul
+.drupal-import article ul,
+.user-input ul
 {
     list-style-type: disc;
 
@@ -176,7 +177,8 @@ ul.disc,
 ol.decimal,
 .document-blog-entry article ol,
 .markdown article ol,
-.drupal-import article ol
+.drupal-import article ol,
+.user-input ol
 {
     list-style-type: decimal;
 

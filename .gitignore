@@ -6,3 +6,5 @@ src/public/vendor/
 .docpad.db
 .jshintrc
 .sass-cache
+
+/persist/

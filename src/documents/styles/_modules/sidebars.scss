@@ -79,7 +79,27 @@ aside
         }
     }
 
+}
 
+#content.sidebar.sidebar-left
+{
+    section[role="main"]
+    {
+        float: right;
+        margin-right: 0;
+        margin-left: 2%;
+        width: 83%;
+    }
+
+    aside
+    {
+        width: 15%;
+
+        #side-border
+        {
+            display: none;
+        }
+    }
 }
 
 .sidebar-opensource

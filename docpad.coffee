@@ -233,6 +233,36 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             devScheduling: false
         consolidate:
             ect: true
+        resources:
+            categories: requireFresh(__dirname + '/src/resources/categories.coffee')
+            databasesPath: __dirname + '/src/resources/'
+            resourceTemplate: "resource.html"
+            categoryTemplate: "resource-category.html"
+            injectCategoryDocumentHelper: (document) ->
+                meta = document.getMeta().attributes
+                document.setMeta
+                    title: meta.category.name
+                    basenameOrig: "resource-category"
+                    sidebar: "resources"
+                    classNames: "sidebar-left"
+                    trail: [["/resources", "Resources"], meta.title]
+                    isPaged: true
+                    pagedCollection: 'resources-' + meta.category.nameClean
+                    pageSize: 10
+                    pagePathPrefix: 'page'
+                    priority: 0.8
+            injectResourceDocumentHelper: (document) ->
+                meta = document.getMeta().attributes
+                document.setMeta
+                    title: meta.resource.title
+                    basenameOrig: "resource"
+                    sidebar: "resources"
+                    classNames: "sidebar-left"
+                    trail: [
+                        ["/resources", "Resources"],
+                        ["/resources/#{meta.category.nameClean}", meta.category.name],
+                        meta.title
+                    ]
 
     enabledPlugins:
         youtubefeed: false
