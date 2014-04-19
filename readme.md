@@ -22,6 +22,8 @@
 
 # Vagrant Install (recommended)
 
+**NOTE:** Using the Vagrant process, Vagrant will download a 290 MB Ubuntu Precise image onto your machine from files.vagrantup.com the first time you run _vagrant up_.  On a 14 Mbps connection this can take appoximately 3 minutes.
+
 ## Requirements
 
 * Vagrant
