@@ -120,7 +120,7 @@ your group label red and give it an icon:
 }
 ```
 
-You can easily play with some custom styles by installing the [Sylish addon].
+You can easily play with some custom styles by installing the [Stylish addon].
 
    [Open Files]: http://komodoide.com/screencasts/watch/87675282-open-files-widget/
    [Stylish addon]: https://addons.mozilla.org/en-US/android/addon/stylish/versions/
