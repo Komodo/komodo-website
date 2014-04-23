@@ -5,12 +5,13 @@
   "homepage": "https://github.com/lukekarrys/html5-boilerplate.docpad",
   "author": "Nathan Rijksen <nathanr@activestate.com>",
   "engines": {
-    "node": "0.10.x",
+    "node": "0.8.x",
     "npm": "1.1.x"
   },
   "dependencies": {
     "docpad": "~6.64.0",
     "docpad-plugin-coffeescript": "~2.3.0",
+    "docpad-plugin-sass": "~2.7.1",
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
     "requirefresh": "~1.1.2",
@@ -31,14 +32,11 @@
     "docpad-plugin-consolidate": "~2.1.0",
     "ect": "^0.5.6",
     "request": "^2.34.0",
-    "docpad-plugin-coffeekup": "~2.2.0",
-    "docpad-plugin-nodesass": "~2.3.0",
-    "node-bourbon": "~1.0.0",
-    "node-neat": "~1.2.0",
-    "docpad-plugin-ghpages": "~2.4.3"
+    "docpad-plugin-coffeekup": "~2.2.0"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~2.6.0"
+    "docpad-plugin-livereload": "~2.6.0",
+    "docpad-plugin-ghpages": "~2.4.3"
   },
   "main": "node_modules/docpad/bin/docpad-server"
 }

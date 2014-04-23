@@ -163,8 +163,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             plugins:
                 scheduling:
                     defaultScheduling: false
-                cleanurls:
-                    static: true
         static:
             templateData:
                 site:
