@@ -31,7 +31,7 @@
         }
         else
         {
-            commands.push("docpad generate --silent");
+            commands.push("docpad generate --env qa --silent");
         }
 
         var runCommand = function(index)
