@@ -35,7 +35,6 @@
     "docpad-plugin-nodesass": "~2.3.0",
     "node-bourbon": "~1.0.0",
     "node-neat": "~1.2.0",
-    "font-awesome": "~4.0.3",
     "docpad-plugin-ghpages": "~2.4.3"
   },
   "devDependencies": {
