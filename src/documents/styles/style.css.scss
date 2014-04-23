@@ -1,11 +1,8 @@
 @import "_modules/depend/variables";
 
-/*@import "compass/reset";
-@import "compass/css3";
-@import "normalize";*/
 @import "_modules/depend/normalize";
-@import "../../public/vendor/bourbon/app/assets/stylesheets/bourbon";
-@import "../../public/vendor/neat/app/assets/stylesheets/neat";
+@import "../../../node_modules/node-bourbon/assets/stylesheets/bourbon";
+@import "../../../node_modules/node-neat/assets/stylesheets/neat";
 @import "../../public/vendor/Font-Awesome/scss/font-awesome";
 
 /* Include it again, cause Bourbon overrides some of our variables, grrr */
