@@ -32,6 +32,8 @@
         else
         {
             commands.push("docpad generate --env qa --silent");
+            commands.push("rm -Rf " + __dirname + "/live");
+            commands.push("mv " + __dirname + "/out " + __dirname + "/live");
         }
 
         var runCommand = function(index)
