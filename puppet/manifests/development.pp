@@ -6,10 +6,7 @@ class install-npm-packages{
     require => Class['nodejs'],
   }
 }
-include stdlib
-include wget 
-include ruby
+# needed stdlib as the NodeJS module won't work without it.
 include git
 include nodejs
-include bundler
 include install-npm-packages

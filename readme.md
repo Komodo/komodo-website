@@ -42,7 +42,7 @@
 4. `ip addr show eth1 | grep inet | awk '{ print $2 }' | awk -F "/" '{print $1}'`
   * output the IP of network interface eth1 to use in step 7.
 
-5. `bundle install && bower install`
+5. `bower install`
 
 6. `docpad run`
 
@@ -81,15 +81,12 @@ and is linked directly to the `/vagrant` folder inside the VM.
  * DocPad - http://docpad.org/
  * Bower - http://bower.io/
  * Grunt - http://gruntjs.com/
- * Ruby (for SASS & Compass)
-   * Bundler
 
 ## Installation
 
 * `git clone https://github.com/Komodo/komodo-website.git`
 * `cd komodo-website`
-* `npm update`
-* `bundle install` 
+* `npm install`
 * `bower install`
 * `docpad run`
 

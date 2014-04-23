@@ -5,14 +5,13 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-<% d = new Date; %>
-        <lastBuildDate><%= d.toGMTString() %></lastBuildDate>
+        <lastBuildDate><%= @moment().format("ddd, D MMM YYYY hh:mm:ss Z") %></lastBuildDate>
         <generator>DocPad v6.64.0</generator>
 <% for document in @getBlogsFiltered({}, @_filters, @document): %>
         <item>
             <title><%= document.title %></title>
             <link><%= @site.url + document.url %></link>
-            <pubDate><%= @moment().format("ddd, D MMM YYYY hh:mm:ss Z") %></pubDate>
+            <pubDate><%= @moment(document.date).format("ddd, D MMM YYYY hh:mm:ss Z") %></pubDate>
             <description><%= document.description %></description>
             <guid><%= @site.url + document.url %></guid>
         </item>
