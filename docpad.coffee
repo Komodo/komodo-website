@@ -255,12 +255,6 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
             @
 
-        serverExtend: (opts) ->
-            {server} = opts
-            docpad = @docpad
-
-            require(__dirname + '/routes.coffee')({docpad, server})
-
         #render: (opts) ->
         #
         #    {file} = opts
