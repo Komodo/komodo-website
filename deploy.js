@@ -20,6 +20,9 @@
             "npm install",
             "bower prune",
             "bower install",
+            "git submodule update --init",
+            "cd " + __dirname + "/plugins/resources && npm install",
+            "cd " + __dirname + "/plugins/vimeofeed && npm install",
             "docpad clean"
         ];
 
