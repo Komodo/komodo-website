@@ -17,11 +17,11 @@ module.exports = {
         ,
             name: "Customize"
             sub: [
-                name: "Discover"
-                link: "/framed/?http://community.activestate.com/addons"
+                name: "Resources"
+                link: "/resources"
             ,
                 name: "Get Involved"
-                link: "/customize#contributing"
+                link: "/customize"
             ]
         ,
             name: "Support"

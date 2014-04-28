@@ -1,0 +1,246 @@
+---
+layout: default
+title: How To Install Komodo Resources
+classNames: sidebar-left
+sidebar: resources
+---
+
+<div class="selector">
+
+    <h1>What Would You Like to Install?</h1>
+
+    <select class="selectize paneSelector" data-pane-prefix="pane-">
+        <option value="addon">Addons / Iconsets / Skins / Languages</option>
+        <option value="macro">Macros / Snippets / Tools (toolbox)</option>
+        <option value="colorscheme">Color Schemes</option>
+        <option value="keybinding">Keybindings</option>
+        <option value="other">Other</option>
+    </select>
+
+</div>
+
+<hr>
+    
+<div class="panes">
+    <div id="pane-addon">
+        <h1>Addons / Iconsets / Skins / Languages</h1>
+        
+        <p>
+            Iconsets, Skins and Languages are all packaged as Addons, therefore
+            their installation steps are the same.
+        </p>
+
+        <a name="installxpi"></a>
+        <h2>Installing An .xpi File</h2>
+        <p>
+            If the downloaded addon is in "xpi" format or includes an *.xpi file
+            you can simply drag the xpi file onto Komodo and follow the
+            installation steps.
+        </p>
+        <p>
+            Once installed restart Komodo for the addon to be properly loaded.
+        </p>
+
+        <p>
+            <em>
+                The steps below are only relevant if installing via an .xpi file
+                is not possible for you.
+            </em>
+        </p>
+
+        <a name="installsource"></a>
+        <h2>Installing from Source</h2>
+        <p>
+            Some addon developers do not supply a compiled version of their addon,
+            we strongly urge addon devs to always compile their addons but we
+            can't control what other people do. If you want to install an addon
+            which has not been compiled yet, follow the following steps;
+        </p>
+
+        <a name="buildxpi"></a>
+        <h3>Build Using koext</h3>
+        <ol class="decimal">
+            <li>
+                <a href="https://github.com/Komodo/KomodoEdit/tree/trunk/src/sdk" target="_blank">
+                    Put the Komodo SDK dir on your PATH
+                </a>
+            </li>
+            <li>
+                Using your command prompt enter the directory containing the install.rdf for the addon you
+                are trying to install
+            </li>
+            <li>
+                Run <code>koext build</code><br>
+                <small><strong>Note:</strong> be sure to check the readme for the
+                addon you are using, as this step may vary per addon, for example
+                some addons may need you to run <code>koext build --unjarred</code></small>
+            </li>
+            <li>
+                If succesful an .xpi file will appear alongside the install.rdf
+                which you can use to install the addon using the
+                <a href="#installxpi">Installing An .xpi File</a> steps above
+            </li>
+        </ol>
+
+        <p>
+            If these steps are not working or you want to try a different approach
+            you can try manually creating an .xpi, but this is not guaranteed to work
+            for every addon.
+        </p>
+
+        <a name="manualxpi"></a>
+        <h3>Manually Create .xpi</h3>
+        <ol class="decimal">
+            <li>
+                Enter the folder containing the install.rdf for the addon you are
+                trying to install
+            </li>
+            <li>
+                Select all files and create a ZIP archive from them (these steps
+                may very depending on your OS & ZIP application)
+            </li>
+            <li>
+                Rename the extension for the generated ZIP from .zip to .xpi, eg.
+                <code>foo.zip</code> becomes <code>foo.xpi</code>
+            </li>
+            <li>
+                Use the newly created xpi file to install the addon using the
+                <a href="#installxpi">Installing An .xpi File</a> steps above
+            </li>
+        </ol>
+    </div>
+
+    <div id="pane-macro" class="hide">
+        <h1>Macros / Snippets / Tools (toolbox)</h1>
+
+        <h2>Drag and Drop</h2>
+        <p>
+            To install toolbox items simply open up your Komodo toolbox and
+            drag and drop the downloaded *.komodotool onto your toolbox.
+        </p>
+
+        <h2>Import</h2>
+        <p>
+            Alternatively you can choose to import items right from inside Komod.
+            Simply open your toolbox and click the "gear" icon at the top right
+            of the Toolbox widget. Then select the import option that applies
+            to the type of file you are currently importing.
+        </p>
+
+        <h2>Manual Import</h2>
+        <p>
+            Sometimes you will find a Macro or Snippet that isn't packaged in a
+            format Komodo understand, eg. you simply have a snippet of code that
+            you want to use in Komodo. To use this, simply open your Komodo
+            toolbox and create a tool (eg. Macro, Snippet, Command) by either
+            clicking the "gear" icon at the top right of the Toolbox widget, or
+            by right clicking the folder to which you want to add your tool.
+        </p>
+        <p>
+            Then simply copy and paste the code you wish to import into the
+            tool creation dialog.
+        </p>
+    </div>
+
+    <div id="pane-colorscheme" class="hide">
+        <h1>Color Schemes</h1>
+
+        <h2>Drag and Drop</h2>
+        <p>
+            To install color schemes simply drag and drop the downloaded *.ksf file
+            onto Komodo.
+        </p>
+
+        <h2>Manual Import</h2>
+        <p>
+            If for whatever reason the Drag and Drop solution does not work you
+            can manually install the color scheme by copying the *.ksf file to
+            your schemes folder, which is located within your profile folder.
+        </p>
+        <p>
+            In most cases, the path of this folder will be:
+        </p>
+        <ul class="disc">
+            <li>
+                <strong>Windows:</strong>
+                <code>C:\Users\&lt;user&gt;\AppData\Local\ActiveState\Komodo[IDE|Edit]\&lt;version&gt;\schemes</code>
+            </li>
+            <li>
+                <strong>Mac:</strong>
+                <code>/Users/&lt;user&gt;/Library/Application Support/Komodo[IDE|Edit]/&lt;version&gt;/schemes</code>
+            </li>
+            <li>
+                <strong>Linux:</strong>
+                <code>/home/&lt;user&gt;/.komodo[ide|edit]/&lt;version&gt;/schemes</code>
+            </li>
+        </ul>
+        <p>
+            Once you have copied the *.ksf file to this folder, restart Komodo and
+            follow the Usage steps below.
+        </p>
+
+        <h2>Usage</h2>
+        <p>
+            Once installed you can select (and tweak) your color schemes under
+            <code>Preferences > Fonts and Colors</code>.
+        </p>
+    </div>
+
+    <div id="pane-keybinding" class="hide">
+        <h1>Keybindings</h1>
+
+        <h2>Drag and Drop</h2>
+        <p>
+            To install keybindings simply drag and drop the downloaded *.kkf file
+            onto Komodo.
+        </p>
+
+        <h2>Manual Import</h2>
+        <p>
+            If for whatever reason the Drag and Drop solution does not work you
+            can manually install the keybinding by copying the *.kkf file to
+            your schemes folder, which is located within your profile folder.
+        </p>
+        <p>
+            In most cases, the path of this folder will be:
+        </p>
+        <ul class="disc">
+            <li>
+                <strong>Windows:</strong>
+                <code>C:\Users\&lt;user&gt;\AppData\Local\ActiveState\Komodo[IDE|Edit]\&lt;version&gt;\schemes</code>
+            </li>
+            <li>
+                <strong>Mac:</strong>
+                <code>/Users/&lt;user&gt;/Library/Application Support/Komodo[IDE|Edit]/&lt;version&gt;/schemes</code>
+            </li>
+            <li>
+                <strong>Linux:</strong>
+                <code>/home/&lt;user&gt;/.komodo[ide|edit]/&lt;version&gt;/schemes</code>
+            </li>
+        </ul>
+        <p>
+            Once you have copied the *.kkf file to this folder, restart Komodo and
+            follow the Usage steps below.
+        </p>
+
+        <h2>Usage</h2>
+        <p>
+            Once installed you can select (and tweak) your keybindings under
+            <code>Preferences > Editor > Key Bindings</code>.
+        </p>
+    </div>
+
+    <div id="pane-other" class="hide">
+        <h1>Other</h1>
+        <p>
+            If the resource you are trying to use is not covered under the steps
+            given on this page, please either check for a readme or install
+            file included with your resource, or check the Github repository for
+            the resource in question.
+        </p>
+        <p>
+            If none of this gives you the answer you need please
+            <a href="http://forum.komodoide.com/">post on our forums</a>.
+        </p>
+    </div>
+</div>
