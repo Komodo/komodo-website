@@ -53,6 +53,11 @@ layout: default
                         <%- R.owner.login %>
                     </a>
                 </span>
+                <% if @moment().diff(@moment(R.created_at), "days") < 7: %>
+                    <span class="badge tooltip" title="Added in the past week">NEW</span>
+                <% else if @moment().diff(@moment(R.updated_at), "days") < 7: %>
+                    <span class="badge tooltip" title="Updated in the past week">UPDATED</span>
+                <% end %>
             </h3>
             <p>
                 <%- R.description %>
