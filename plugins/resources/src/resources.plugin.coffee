@@ -7,6 +7,7 @@ module.exports = (BasePlugin) ->
     exec = require("child_process").exec
     storage = require "node-persist"
     moment = require "moment"
+    escape = require "escape-html"
 
     # ------------ Globals ------------
     self = null
@@ -266,9 +267,9 @@ module.exports = (BasePlugin) ->
         # ------------ Helpers ------------
 
         markup: (contents, format, callback) ->
-            text = ["readme", "txt", "text"]
+            text = ["readme", "txt", "text", ""]
             if text.indexOf(format.toLowerCase()) != -1
-                return callback("<pre>#{contents}</pre>")
+                return callback("<pre>"+escape(contents)+"</pre>")
             
             tmp.file {postfix: "." + format}, (err, path, fd) ->
                 fs.writeFile path, contents, (err) ->

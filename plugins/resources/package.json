@@ -29,7 +29,8 @@
     "tmp": "0.0.23",
     "node-persist": "0.0.2",
     "moment": "~2.5.1",
-    "github": "https://github.com/Komodo/node-github/archive/master.tar.gz"
+    "github": "https://github.com/Komodo/node-github/archive/master.tar.gz",
+    "escape-html": "~1.0.1"
   },
   "main": "./src/resources.plugin.coffee"
 }
