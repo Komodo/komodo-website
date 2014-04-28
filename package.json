@@ -9,8 +9,8 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "docpad": "~6.64.0",
-    "docpad-plugin-coffeescript": "~2.3.0",
+    "docpad": "~6.64.2",
+    "docpad-plugin-coffeescript": "~2.4.0",
     "bal-util": "~1.15.3",
     "underscore": "~1.4.3",
     "requirefresh": "~1.1.2",
