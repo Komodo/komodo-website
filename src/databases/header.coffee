@@ -9,13 +9,15 @@ module.exports = {
         ,
             name: "Download"
         ,
-            name: "Resources"
+            name: 'Resources'
+            name_append: '<span class="badge">BETA</span>'
+            link: "{site.url}/resources"
         ,
             name: "Blog"
         ,
             name: "Screencasts"
         ,
-            name: "Community"
+            name: "Forums"
             link: "http://forum.komodoide.com/"
     ]
 }

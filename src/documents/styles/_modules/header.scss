@@ -70,6 +70,14 @@ body.framed header
             li
             {
                 display: inline-block;
+                position: relative;
+
+                .badge
+                {
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                }
             }
             
             li a
@@ -157,6 +165,12 @@ body.framed header
                 {
                     display: block;
                     width: 150px;
+
+                    .badge
+                    {
+                        top: -3px;
+                        right: 5px;
+                    }
 
                     a
                     {
