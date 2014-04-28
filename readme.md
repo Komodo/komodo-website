@@ -112,6 +112,15 @@ These are temporary workarounds in the interest of productivity.
 
 `docpad run --env dev-static`
 
+## Testing Resources
+
+The resources section is currently in beta and is not enabled by default on
+a development environment. To test it you need to remove the resources plugin
+from the disabled plugins list in docpad.coffee and remove the "pages\/resources.html"
+pattern from ignoreCustomPatterns.
+
+You will also need to install the *github-markup* gem for the readme's to parse.
+
 ## Deploy to GitHub
 
 `docpad clean && docpad deploy-ghpages --env static`

@@ -143,7 +143,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
 
     environments:
         development:
-            ignoreCustomPatterns: /public\/vendor|public\/images|\/\.|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
+            ignoreCustomPatterns: /pages\/resources.html|public\/vendor|public\/images|\/\.|blog\/2010|blog\/2011|blog\/2012|blog\/2013-0/
             templateData:
                 site:
                     url: 'http://dev.komodoide.com:9778'
@@ -156,6 +156,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                     referenceOthers: false
             enabledPlugins:
                 paged: false
+                resources: false
 
         qa:
             templateData:
