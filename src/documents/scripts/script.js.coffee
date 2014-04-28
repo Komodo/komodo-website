@@ -27,6 +27,7 @@ jQuery ->
             disableLinks
             bindCheckboxEnablers
             bindPaneSelector
+            loadFancySelector
         ]
         for fn in fns
             setTimeout fn, 0
@@ -377,7 +378,34 @@ jQuery ->
             elem.change ->
                 id = "#" + prefix + elem.val()
                 jq(id).siblings().hide()
-                jq(id).show()
+                jq(id).fadeIn("fast")
+                window.location.hash = id
+
+            hash = window.location.hash.substr(1).split("|")
+            el = jq("#" + hash[0])
+
+            if hash[0] and el.length and hash[0].indexOf(prefix) is 0
+                el.siblings().hide()
+                el.fadeIn("fast")
+                window.location.hash = "#" + hash[1] if (hash[1])
+                window.location.hash = "#" + hash.join("|")
+
+                el = jq("[data-pane-prefix=\"#{prefix}\"]")
+                if el.length and el[0].selectize
+                    el[0].selectize.setValue(hash[0].substr(prefix.length))
+                else
+                    el.val(hash[0].substr(prefix.length)) if el.length
+
+    # Load fancy selector, allowing for skinnable select fields with more functionality
+    loadFancySelector = ->
+        jq("select.selectize").each ->
+            elem = jq this
+            elem.selectize({
+                onChange: (value) ->
+                    setTimeout (->
+                        elem.trigger "change"
+                    ), 0
+            });
 
     init()
 

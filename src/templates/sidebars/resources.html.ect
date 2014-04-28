@@ -1,3 +1,4 @@
+<% if @getCollection('resource-categories'): %>
 <% categories = @getCollection('resource-categories').findAllLive().toJSON() %>
 
 <ul class="categories">
@@ -5,11 +6,12 @@
         <li>
             <h3>
                 <a href="<%- document.url %>"><%- document.title %></a>
-                <span><%- document.category.resourceCount %></span>
+                <!--<span><%- document.category.resourceCount %></span>-->
             </h3>
         </li>
     <% end %>
 </ul>
+<% end %>
 
 <hr>
 
@@ -20,7 +22,7 @@
         <a href="<%- @site.url %>/resources/install-instructions">Install Resources</a>
     </li>
     <li>
-        <a href="<%- @site.url %>/resources/submit-instructions">Submit Resources</a>
+        <a href="<%- @site.url %>/resources/submit-instructions">Contribute</a>
     </li>
     <li>
         <a href="<%- @site.url %>/customize">Customize Komodo</a>

@@ -38,6 +38,8 @@
             "out/vendor/handlebars/handlebars.js",
             "out/vendor/moment/moment.js",
             "out/vendor/jquery-visible/jquery.visible.min.js",
+            "out/vendor/selectize/dist/js/standalone/selectize.min.js",
+
             "out/scripts/helpers/localStorage.js",
             "out/scripts/helpers/handlebars.js",
             "out/scripts/script.js",
@@ -61,6 +63,7 @@
           "out/vendor/jquery-ui/themes/base/jquery.ui.base.css",
           "out/vendor/tooltipster/css/tooltipster.css",
           "out/vendor/magnific-popup/dist/magnific-popup.css",
+          "out/vendor/selectize/dist/css/selectize.css",
           "out/styles/style.css"
         ]
       }

@@ -9,7 +9,7 @@ module.exports = {
         ,
             name: "Download"
         ,
-            name: "Customize"
+            name: "Resources"
         ,
             name: "Blog"
         ,

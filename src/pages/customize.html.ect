@@ -1,7 +1,8 @@
 ---
 title: Customize
 layout: default
-sidebar: opensource
+classNames: sidebar-left
+sidebar: resources
 description: Find out about the myriad of ways in which Komodo is customizable
 priority: 0.6
 ---
@@ -39,11 +40,12 @@ priority: 0.6
         <figure style="background-image: url('/images/addons/<%= addon.img %>')" class="tooltip" title="<%= addon.description %>"></figure>
     </a>
     <% end %>
-    <a class="more" href="/framed/?http://community.activestate.com/addons">
+    <a class="more" href="/resources">
         More..
     </a>
 </div>
-
+<div class="spacer"></div>
+<div class="spacer"></div>
 <a name="create-addons"></a>
 <h3>Create Your Own Addons</h3>
 
@@ -148,15 +150,19 @@ priority: 0.6
 
         <p>
             Writing documentation is a big part of any software project. We plan to put
-            a lot of focus on this with the new website. Unfortunately as it stands
-            the documentation is still located on our old repositories. We plan to have
-            this moved over to GitHub soon to make contributions as easy as can be.
+            a lot of focus on this with the new website. As it stands the documentation
+            is still at it's <a href="http://docs.activestate.com/komodo">old location</a>,
+            but we've already started moving the source to github.
         </p>
 
         <p>
-            For now you can find our documentation on our
-            <a href="http://svn.openkomodo.com/openkomodo/browse/komododoc/trunk/en-US" target="_blank">
-            SVN repository</a>, which is soon to be deprecated.
+            To contribute to our documentation you can fork the
+            <a href="https://github.com/Komodo/komodo-documentation">
+                komodo-documentation repository
+            </a>
+            and start submitting
+            <a href="https://help.github.com/articles/creating-a-pull-request">pull requests</a>
+            .
         </p>
 
         <a name="report-bugs"></a>

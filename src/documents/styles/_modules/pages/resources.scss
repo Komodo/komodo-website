@@ -40,9 +40,10 @@
 
             span
             {
+                font-family: $font-mono;
                 display: inline-block;
                 background: rgba(0,0,0,0.5);
-                padding: 2px 5px 4px 4px;
+                padding: 4px;
                 border-radius: 12px;
                 font-weight: bold;
             }
@@ -112,6 +113,14 @@
         pre
         {
             line-height: 1.5;
+        }
+
+        code
+        {
+            line-height: 1.5;
+            white-space: pre-wrap;
+            display: inline-block;
+            padding: 2px;
         }
     }
 
@@ -216,6 +225,34 @@
             }
         }
 
+    }
+}
+
+.document-install-instructions article,
+.document-submit-instructions article
+{
+    text-align: center;
+
+    .selector
+    {
+        .selectize-control
+        {
+            max-width: 500px;
+            margin: 25px auto;
+            font-size: 14pt;
+        }
+    }
+
+    .panes,
+    .selector
+    {
+        margin: auto;
+    }
+
+    .panes
+    {
+        max-width: 750px;
+        text-align: left;
     }
 }
 
