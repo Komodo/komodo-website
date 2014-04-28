@@ -107,6 +107,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             _.each ob, (value, key) ->
 
                 value.link = site.url if value.link is '/'
+                value.link = value.link.replace('{site.url}', site.url) if value.link
 
                 r.push '<li><a href="' + (value.link || site.url + "/" + value.name.toLowerCase()) +
                             '" title="' + value.name +
@@ -114,7 +115,7 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 r.push '<img src="' + imgPath + value.img + '" alt="' + value.name + '"/>' unless ! value.img
                 r.push '<span class="link-name">' + value.name + '</span>'
                 r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
-                r.push '</a></li>'
+                r.push '</a>' + (value.name_append || '') + '</li>'
 
             r.push "</ul>"
             r.join("")
