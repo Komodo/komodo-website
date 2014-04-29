@@ -276,8 +276,11 @@ module.exports = (BasePlugin) ->
                     return docpad.log "error", "Error writing temp file for markup" if err
 
                     exec "github-markup " + path, (err, stdout, stderr) ->
-                        docpad.log("error", stderr) if stderr
-                        callback(stdout)
+                        if err
+                            docpad.log("error", err)
+                            callback("<pre>"+escape(contents)+"</pre>")
+                        else
+                            callback(stdout)
 
         cleanString: (str) ->
             str = str.replace(/\s*/g, '')
