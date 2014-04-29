@@ -34,6 +34,11 @@ layout: default
                     <span><%- R.forks_count %></span>
                 </span>
                 <% end %>
+                <br>
+                <span class="updated" title="Last updated on <%- @moment(R.pushed_at || R.updated_at).format('LLL') %>">
+                    <i class="icon icon-clock-o"></i>
+                    <span><%- @moment(R.pushed_at || R.updated_at).fromNow() %></span>
+                </span>
             </div>
             <h3>
                 <% if @document.basename is "resources": %>
@@ -45,17 +50,23 @@ layout: default
                 </strong>
                 <span class="author">
                     <em>by</em>
+                    <% if R.owner.gravatar_id: %>
+                    <a href="<%- R.owner.html_url %>">
+                        <img src="http://gravatar.com/avatar/<%- R.owner.gravatar_id %>?d=identicon&s=18">
+                    </a>
+                    <% end %>
                     <a href="<%- R.owner.html_url %>"><%- R.owner.login %></a>
                 </span>
                 <% if @moment().diff(@moment(R.created_at), "days") < 7: %>
                     <span class="badge tooltip" title="Added in the past week">NEW</span>
-                <% else if @moment().diff(@moment(R.updated_at), "days") < 7: %>
+                <% else if @moment().diff(@moment(R.pushed_at || R.updated_at), "days") < 7: %>
                     <span class="badge tooltip" title="Updated in the past week">UPDATED</span>
                 <% end %>
             </h3>
             <p>
                 <%- R.description %>
             </p>
+            <div class="clearfix"></div>
         </li>
     <% end %>
 </ul>
