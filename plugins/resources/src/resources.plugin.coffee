@@ -242,7 +242,7 @@ module.exports = (BasePlugin) ->
                     category: category
                     categories: categories
                     _resourceName: resource.name
-                    date: resource.updated_at
+                    date: resource.pushed_at || resource.updated_at
                 data: "<%- @partial('"+config.resourceTemplate+"', @) %>"
 
             document = docpad.getFile({_resourceName:resource.name})

@@ -45,10 +45,10 @@ classNames: sidebar-left
         </dd>
         <% end %>
 
-        <% if R.updated_at: %>
+        <% if R.pushed_at || R.updated_at: %>
         <dt>Updated</dt>
-        <dd title="<%- @moment(R.updated_at).format('LLL') %>">
-            <%- @moment(R.updated_at).fromNow() %>
+        <dd title="<%- @moment(R.pushed_at || R.updated_at).format('LLL') %>">
+            <%- @moment(R.pushed_at || R.updated_at).fromNow() %>
         </dd>
         <% end %>
 
@@ -99,7 +99,13 @@ classNames: sidebar-left
 <h1><%= R.title %></h1>
 <div class="main-meta">
     <span class="author">
+        <% if R.owner.gravatar_id: %>
+        <a href="<%- R.owner.html_url %>">
+            <img src="http://gravatar.com/avatar/<%- R.owner.gravatar_id %>?d=identicon&s=18">
+        </a>
+        <% else: %>
         <i class="icon icon-user" title="Author"></i>
+        <% end %>
         <a href="<%- R.owner.html_url %>">
             <span><%- R.owner.login %></span>
         </a>
@@ -114,7 +120,7 @@ classNames: sidebar-left
     <% end %>
     <span class="last-update">
         <i class="icon icon-clock-o" title="Last Updated"></i>
-        <span><%- @moment(R.updated_at).fromNow() %></span>
+        <span><%- @moment(R.pushed_at || R.updated_at).fromNow() %></span>
     </span>
 </div>
 
