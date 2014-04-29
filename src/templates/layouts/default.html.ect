@@ -54,9 +54,7 @@
                         <% if typeof item is "string": %>
                             <%= item %>
                         <% else: %>
-                            <a href="<%= @site.url %><%= item[0] %>">
-                                <%= item[1] %>
-                            </a>
+                            <a href="<%= @site.url %><%= item[0] %>"><%= item[1] %></a>
                         <% end %>
                     </li>
                     <% end %>

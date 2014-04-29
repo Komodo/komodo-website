@@ -37,21 +37,15 @@ layout: default
             </div>
             <h3>
                 <% if @document.basename is "resources": %>
-                <a href="<%- @site.url %>/resources/<%- document.category.nameClean %>">
-                    <span><%- document.category.name %></span>
-                </a>
+                <a href="<%- @site.url %>/resources/<%- document.category.nameClean %>"><span><%- document.category.name %></span></a>
                 /
                 <% end %>
                 <strong>
-                    <a href="<%- document.url %>">
-                        <%- document.title %>
-                    </a>
+                    <a href="<%- document.url %>"><%- document.title %></a>
                 </strong>
                 <span class="author">
                     <em>by</em>
-                    <a href="<%- R.owner.html_url %>">
-                        <%- R.owner.login %>
-                    </a>
+                    <a href="<%- R.owner.html_url %>"><%- R.owner.login %></a>
                 </span>
                 <% if @moment().diff(@moment(R.created_at), "days") < 7: %>
                     <span class="badge tooltip" title="Added in the past week">NEW</span>
