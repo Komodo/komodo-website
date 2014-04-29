@@ -209,6 +209,7 @@ module.exports = (BasePlugin) ->
                     category: category
                     categories: categories
                     _categoryName: category.name
+                    sort: category.sort
                 data: "<%- @partial('"+config.categoryTemplate+"', @) %>"
 
             document = docpad.getFile({_categoryName:category.name})

@@ -1,5 +1,5 @@
 <% if @getCollection('resource-categories'): %>
-<% categories = @getCollection('resource-categories').findAllLive().toJSON() %>
+<% categories = @getCollection('resource-categories').findAllLive({}, [sort: 1]).toJSON() %>
 
 <ul class="categories">
     <% for document in categories: %>
