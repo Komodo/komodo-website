@@ -41,7 +41,7 @@ layout: default
                 </span>
             </div>
             <h3>
-                <% if @document.basename is "resources": %>
+                <% if @document.basenameOrig is "resources": %>
                 <a href="<%- @site.url %>/resources/<%- document.category.nameClean %>"><span><%- document.category.name %></span></a>
                 /
                 <% end %>
