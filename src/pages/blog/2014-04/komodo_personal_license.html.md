@@ -3,7 +3,7 @@ title: Introducing Komodo Personal Licensing
 author: Todd Whiteman
 date: 2014-04-07
 tags: [license, personal, pricing]
-description: We've just introduced a new Personal license type for Komodo IDE.
+description: We are very excited to let you know that (for a limited time only) we are offering a special Personal license of Komodo IDE to individual developers for $89.
 layout: blog
 ---
 

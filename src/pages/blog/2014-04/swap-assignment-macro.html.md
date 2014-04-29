@@ -3,7 +3,7 @@ title: Swap Assignment Macro
 author: Todd Whiteman
 date: 2014-04-28
 tags: [macro, javascript, editor, print, dump]
-description: Quickly swap variable assignments around, or switching argument positions.
+description: It's a common idiom to swap things around in your code, either swapping the position of two function arguments, or changing the assignment of variables around in a save and restore  operation.
 layout: blog
 ---
 
