@@ -46,7 +46,10 @@
             var source = __dirname + "/../komodo-website-" + params.branch + ".env && ";
             var command = commands[index];
             logger.info("Executing " + command);
-            exec('cd "' + __dirname + '" && ' + source + command, function(err, stdo, stde)
+            exec('cd "' + __dirname + '" && ' + source + command, {
+                maxBuffer: 1000*1024
+            },
+            function(err, stdo, stde)
             {
                 if (err) return done(err);
                 logger.debug("Result: " + stdo + stde + "\n");
