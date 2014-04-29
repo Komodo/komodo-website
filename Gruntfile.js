@@ -10,4 +10,5 @@ module.exports = function(grunt) {
   grunt.registerTask('dev-static', Object.keys(gruntConfig));
   grunt.registerTask('qa', Object.keys(gruntConfig));
   grunt.registerTask('development', 'copy');
+  grunt.registerTask('dev-resources', 'copy');
 };
