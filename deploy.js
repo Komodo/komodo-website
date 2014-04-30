@@ -21,6 +21,7 @@
             "bower prune",
             "bower install",
             "git submodule update --init",
+            "cd " + __dirname + "/src/resources && git pull origin master",
             "cd " + __dirname + "/plugins/resources && npm install",
             "cd " + __dirname + "/plugins/vimeofeed && npm install",
             "docpad clean"
@@ -39,15 +40,20 @@
             commands.push("mv " + __dirname + "/out " + __dirname + "/live");
         }
 
+        var source = "~/.nvm/nvm.sh && " + __dirname + "/../komodo-website-" + params.branch + ".env && ";
+        var environment = process.env;
+        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin";
+
         var runCommand = function(index)
         {
             if ( ! (index in commands)) return done();
 
-            var source = __dirname + "/../komodo-website-" + params.branch + ".env && ";
             var command = commands[index];
             logger.info("Executing " + command);
-            exec('cd "' + __dirname + '" && ' + source + command, {
-                maxBuffer: 1000*1024
+            exec(source + command, {
+                maxBuffer: 1000*1024,
+                env: environment,
+                cwd: __dirname
             },
             function(err, stdo, stde)
             {
