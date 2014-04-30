@@ -91,6 +91,20 @@ nav.post-controls button.create:hover
     text-decoration: none !important;
 }
 
+nav span.badge
+{
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
+                inset 0px -1px 0px 0px rgba(0,0,0, 0.3),
+                0 0 6px 0 rgba(0,0,0,0.3);
+    @include gradient-green;
+    border-radius: 2px;
+
+    color: #FFF;
+    font-weight: bold;
+    font-size: 8pt;
+    padding: 0 2px;
+}
+
 a[name]:not([href])
 {
     &, &:hover
