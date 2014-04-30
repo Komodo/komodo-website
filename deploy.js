@@ -58,7 +58,7 @@
             function(err, stdo, stde)
             {
                 if (err) return done(err);
-                logger.debug("Result: " + stdo + stde + "\n");
+                logger.info("Result: " + stdo + stde + "\n");
                 runCommand(++index);
             });
         }
