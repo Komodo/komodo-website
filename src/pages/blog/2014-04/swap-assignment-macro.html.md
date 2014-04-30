@@ -68,7 +68,7 @@ keybinding to the macro.
 <div class="spacer-half"></div>
 <span>
     <i class="icon icon-github"></i>
-    <a href="https://github.com/Komodo/macros/blob/master/swap_assignment.js" target="_blank">View Source</a>
+    <a href="https://github.com/Komodo/macros/blob/master/swap_assignment.py" target="_blank">View Source</a>
 </span>
 </div>
 
