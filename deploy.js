@@ -40,9 +40,9 @@
             commands.push("mv " + __dirname + "/out " + __dirname + "/live");
         }
 
-        var source = "~/.nvm/nvm.sh && " + __dirname + "/../komodo-website-" + params.branch + ".env && ";
+        var source = __dirname + "/../komodo-website-" + params.branch + ".env && ";
         var environment = process.env;
-        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin";
+        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:~/.nvm/v0.10.25/bin/";
 
         var runCommand = function(index)
         {
