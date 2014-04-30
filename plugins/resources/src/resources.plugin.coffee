@@ -272,17 +272,12 @@ module.exports = (BasePlugin) ->
             if text.indexOf(format.toLowerCase()) != -1
                 return callback("<pre>"+escape(contents)+"</pre>")
             
-            docpad.log "info", "Performing Markup"
-
             tmp.file {postfix: "." + format}, (err, path, fd) ->
                 fs.closeSync fd
-                docpad.log "info", "tmp file created"
                 fs.writeFile path, contents, (err) ->
-                    docpad.log "info", "received markup writeFile callback"
                     return docpad.log "error", "Error writing temp file for markup" if err
 
                     exec "github-markup " + path, (err, stdout, stderr) ->
-                        docpad.log "info", "received markup callback"
                         if err
                             docpad.log("error", err)
                             callback("<pre>"+escape(contents)+"</pre>")

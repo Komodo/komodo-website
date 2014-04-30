@@ -40,9 +40,14 @@
             commands.push("mv " + __dirname + "/out " + __dirname + "/live");
         }
 
-        var source = __dirname + "/../komodo-website-" + params.branch + ".env && ";
         var environment = process.env;
         environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:~/.nvm/v0.10.25/bin/";
+
+        var envVars = require(__dirname + "/../komodo-website-" + params.branch + ".env.js");
+        for (var env in envVars)
+        {
+            environment[env] = envVars[env];
+        }
 
         var runCommand = function(index)
         {
@@ -50,7 +55,7 @@
 
             var command = commands[index];
             logger.info("Executing " + command);
-            exec(source + command, {
+            exec(command, {
                 maxBuffer: 1000*1024,
                 env: environment,
                 cwd: __dirname
@@ -58,7 +63,7 @@
             function(err, stdo, stde)
             {
                 if (err) return done(err);
-                logger.info("Result: " + stdo + stde + "\n");
+                logger.debug("Result: " + stdo + stde + "\n");
                 runCommand(++index);
             });
         }
