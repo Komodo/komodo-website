@@ -170,9 +170,9 @@ classNames: sidebar-left
                        <div class="assets">
                            <% for k,asset of release.assets: %>
                                <div>
-                               <a href="https://github.com/<%- R.full_name %>/releases/download/<%- release.name %>/<%- asset.name %>" class="button big primary">
+                               <a href="https://github.com/<%- R.full_name %>/releases/download/<%- release.tag_name %>/<%- asset.name %>" class="button big primary">
                                    <i class="icon icon-download"></i>
-                                   Download "<%- asset.label %>"
+                                   Download "<%- asset.label || asset.name %>"
                                </a>
                                <div>
                                    Downloaded <strong><%- asset.download_count %></strong> times
