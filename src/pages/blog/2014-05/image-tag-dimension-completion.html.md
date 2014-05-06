@@ -11,13 +11,13 @@ layout: blog
 <h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
 </div>
 
-Quickly add image dimensions to an &lt;img&gt; tag based off the image tags src
+Quickly add image dimensions to an `<img>` tag based off the image tags src
 attribute. Everyone wants it, now you've got it.
 
 ## The Things I Need
 
-How often have you entered an image tags src attribute and thought "GO!...Fill it
-in... Please?"?  I know I have.  At least twice.
+How often have you entered an image tags src attribute and thought "GO!... Fill it
+in... Please.."? I know I have. At least twice.
 
 Others have had similar thoughts and one such user [requested this of Komodo](http://community.activestate.com/forum/html-editing-img-tag-expansion-etc#comment-6695)
 some time ago.  EricP answered the call and gave the user something that worked.
@@ -36,13 +36,15 @@ properties off of it.  I've also created a full path for the image which
 To install the macro simply hit the "View Resource" button below, for instructions
 on how to install it refer to the [Install Resources Documentation](http://komodoide.com/resources/install-instructions/#pane-macro).
 
+<a href="" class="button primary">
+    <i class="icon icon-eye"></i>
+    View Resource
+</a>
+
+## Usage
+
 To use the macro, make an editor selection and then invoke the macro - by
 double-clicking on the macro in the toolbox, using the Invoke Tool
 (Ctrl+Shift+K) to search/execute "swap assignment", or assigning your own
 keybinding to the macro.  Click on the link below and have a look at the source
 for yourself.
-
-<a href="" class="button primary">
-    <i class="icon icon-eye"></i>
-    View Resource
-</a>
