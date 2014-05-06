@@ -36,7 +36,7 @@ properties off of it.  I've also created a full path for the image which
 To install the macro simply hit the "View Resource" button below, for instructions
 on how to install it refer to the [Install Resources Documentation](http://komodoide.com/resources/install-instructions/#pane-macro).
 
-<a href="" class="button primary">
+<a href="http://komodoide.com/resources/macros/cgchoffman--imgtagdimensions/" class="button primary">
     <i class="icon icon-eye"></i>
     View Resource
 </a>
@@ -45,6 +45,6 @@ on how to install it refer to the [Install Resources Documentation](http://komod
 
 To use the macro, make an editor selection and then invoke the macro - by
 double-clicking on the macro in the toolbox, using the Invoke Tool
-(Ctrl+Shift+K) to search/execute "swap assignment", or assigning your own
+(Ctrl+Shift+K) to search/execute "img tag dimensions", or assigning your own
 keybinding to the macro.  Click on the link below and have a look at the source
 for yourself.
