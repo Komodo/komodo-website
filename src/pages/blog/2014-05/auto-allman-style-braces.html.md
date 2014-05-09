@@ -1,7 +1,7 @@
 ---
 title: Auto Allman-style Braces in Komodo
 author: Nathan Rijksen
-date: 2014-05-12 12:00
+date: 2014-05-12 6:00
 tags: [macro, javascript, editor, auto-complete]
 description: Komodo does not dictate any sort of coding style, it merely facilitates you to code whichever way you want. It's easy to code in Allman style, but we can make it even easier with a simple macro.
 layout: blog
@@ -26,6 +26,40 @@ Essentially what this macro does is turn;
 Typing speed aside in these gifs, the productivity gain here is one less keypress.
 It won't make a huge difference but it's the little things that make you more
 productive.
+
+In case it's not clear what is happening in those gifs, normally when you would
+want to write in allman step you would essentially go through the following steps
+
+```
+while (0)
+{
+```
+
+The second I type the opening brace Komodo auto completes it to
+
+```
+while (0)
+{|}
+```
+
+Where "|" represents the cursor. Then when I press enter I get:
+
+```
+while (0)
+{
+    |
+}
+```
+
+This works great, but we can make it even shorter (without resorting to snippets),
+what if I could just write the following
+
+```
+while (0) {
+```
+
+And the second I type the opening brace it auto-completes to Allman style indentation?
+That is basically what this macro does.
 
 Currently this macro is still very experimental and will likely have a few bugs
 that need to be worked out. Hopefully we'll be able to include it as a native
@@ -55,4 +89,12 @@ Simply start typing! Provided that you have triggered the macro (either via the
 startup event or by manually invoking it) it will automatically complete your
 curly braces to [Allman style].
 
+## Credits
+
+Thanks to [@woodpile] from the [Komodo Forums] for [pointing out the use-case] for this
+functionality!
+
    [Allman style]: http://en.wikipedia.org/wiki/Indent_style#Allman_style
+   [@woodpile]: http://forum.komodoide.com/users/woodpile/activity
+   [Komodo Forums]: http://forum.komodoide.com
+   [pointing out the use-case]: http://forum.komodoide.com/t/function-expression-structure/242
