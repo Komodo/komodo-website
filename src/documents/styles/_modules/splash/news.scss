@@ -124,6 +124,8 @@
 
     #splash-news-testimonials .testimonial
     {
+        position: relative;
+        
         blockquote
         {
             height: 100px;
@@ -145,7 +147,8 @@
             margin-top: 15px;
         }
 
-        %quotes
+        .quote-left,
+        .quote-right
         {
             position: absolute;
             font-size: 30pt;
@@ -153,19 +156,15 @@
             vertical-align: middle;
         }
 
-        blockquote:after
+        .quote-right
         {
-            @extend %quotes;
-            content: "”";
-            right: -20px;
+            right: 0;
             bottom: -10px;
         }
 
-        blockquote:before
+        .quote-left
         {
-            @extend %quotes;
-            content: "“";
-            left: -20px;
+            left: 0;
             top: 0;
         }
     }
