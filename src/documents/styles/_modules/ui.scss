@@ -36,6 +36,11 @@
     border-radius: 3px;
     @include linear-gradient(#F2F2F2, #EAEAEA);
 
+    .ui-dialog-title
+    {
+        overflow: inherit;
+    }
+
     .ui-dialog-titlebar
     {
         font-weight: bold;
