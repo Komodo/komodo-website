@@ -30,21 +30,21 @@ productive.
 In case it's not clear what is happening in those gifs, normally when you would
 want to write in allman step you would essentially go through the following steps
 
-```
+```c
 while (0)
 {
 ```
 
 The second I type the opening brace Komodo auto completes it to
 
-```
+```c
 while (0)
 {|}
 ```
 
 Where "|" represents the cursor. Then when I press enter I get:
 
-```
+```c
 while (0)
 {
     |
@@ -54,7 +54,7 @@ while (0)
 This works great, but we can make it even shorter (without resorting to snippets),
 what if I could just write the following
 
-```
+```c
 while (0) {
 ```
 
