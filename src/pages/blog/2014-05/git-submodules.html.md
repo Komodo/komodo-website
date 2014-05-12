@@ -7,6 +7,10 @@ description: What you need to know about using Git submodules. We're sharing wha
 layout: blog
 ---
 
+<a style="font-size: 128px; margin: 10px;" href="https://github.com/Komodo/KomodoEdit" class="push-right">
+    <i class="icon icon-github"></i>
+</a>
+
 Since using Git submodules in our Komodo code base, we've learnt some
 interesting things about submodules that we'd like to share.
 
@@ -42,7 +46,7 @@ to update the information to be able to push your changes.
 To create a submodule, you create a new repository to host your module code and
 then link that into the main repository project. For example, we've created a
 [trackchanges] repository (a new feature coming in Komodo 9) that we're linking
-into the main Komodo repository as a submodule:
+into the main [Komodo Edit] repository as a submodule:
 
 ```
 cd KomodoEdit
@@ -117,5 +121,6 @@ thorough reference, otherwise you'll likely find what you need on [Stack
 Overflow].
 
    [trackchanges]: https://github.com/Komodo/trackchanges
+   [Komodo Edit]: https://github.com/Komodo/KomodoEdit
    [Git tutorial]: http://www.vogella.com/tutorials/Git/article.html
    [Stack Overflow]: http://stackoverflow.com/
