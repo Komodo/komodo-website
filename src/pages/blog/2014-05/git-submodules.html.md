@@ -1,9 +1,9 @@
 ---
-title: Git Submodules
+title: Getting git submodule to track a branch
 author: Todd Whiteman
 date: 2014-05-14 6:00
 tags: [macro, javascript, editor, auto-complete]
-description: What you need to know about using Git submodules. We're sharing what we've learnt when using Git submodules in the Komodo code base.
+description: What you need to know about using Git submodules and branch tracking. We're sharing what we've learnt when using Git submodules in the Komodo code base.
 layout: blog
 ---
 
@@ -15,9 +15,10 @@ Since using Git submodules in our Komodo code base, we've learnt some
 interesting things about submodules that we'd like to share.
 
 Git submodules work really well for splitting out code bases into separate
-repositories, but there are still a few things you should be aware of. There's a
-lot of out-of-date information on the web, so pay attention to the date of the
-articles you read, as git has been changing (getting better) all the time.
+repositories, but there are still a few things (quirks) you should be aware of.
+There's a lot of out-of-date information on the web, so pay attention to the
+date of the articles you read, as git has been changing (getting better) all the
+time.
 
 
 ## About Submodules
@@ -74,9 +75,8 @@ time the arguments are slightly different:
 git submodule update --remote
 ```
 
-This will update the trackchanges submodule we added earlier, to the latest version.
-
-Note that you'll need to have run the *--init* before being able to update.
+This will update the trackchanges submodule we added earlier, to the latest
+version.
 
 
 ### Editing
@@ -111,6 +111,40 @@ One thing to note about submodule editing, if you run the *git submodule update
 --remote* command, your module will go back into being in a detached head state,
 so you'll need to remember to re-checkout the next time you want to edit it
 again.
+
+
+### Status
+
+**One important thing to note**, is that after you make new commits in the
+submodule, or have pulled in new commits from the submodule, is that ```git
+status``` will show the submodule as modified, like this:
+
+```
+#	modified:   src/modules/trackchanges (new commits)
+```
+
+which is annoying - as we thought we had told git to track the branch and the
+submodule is now updated to the latest branch commit... what's going on?
+
+This happens to be a limitation of submodule branch tracking - *git submodule
+add -b* simply adds information about a branch in the .gitmodule file and allows
+you the option to manually update the submodule object to the latest commit of
+that specified branch. Your main repository still thinks your submodule is at
+the original commit (i.e. when the initial *git submodule add -b* was run) - and
+when you run ```git submodule update``` (without the --remote option) your
+submodule will be reset back to that original commit.
+
+You have to go and update that submodule commit reference to the latest code in
+the remote branch to avoid this:
+
+```
+git add src/modules/trackchanges
+git commit -m "Update submodule tracking to the latest commit"
+```
+
+This additional commit step is somewhat of a pain - and I'm hopeful that future
+versions of git come up with a more stream-lined method to keep track of the
+submodule remote branch.
 
 
 ## Summary
