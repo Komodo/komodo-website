@@ -1,47 +1,44 @@
 <div id="splash-header">
-    <h2>One IDE, All Your Favourite Languages</h2>
+    <h1>One IDE, All Your Languages</h1>
     <div id="splash-description">
-        <p>Komodo is the professional IDE for major web languages, including Python,
+        <p>Cross-Platform IDE for all your major languages, including Python,
         PHP, Ruby, Perl, HTML, CSS and JavaScript. </p>
-        <p>You'll enjoy developing faster with Komodo IDE's complete set of tools.</p>
     </div>
 
     <div id="splash-screenshots">
         <figure class="splash-windows secondary"></figure>
-        <figure class="splash-osx primary"></figure>
-        <figure class="splash-linux tertiary"></figure>
-       
-       <% if @db.promotions().splash.enabled: %>
-        <a class="promotion" title="<%- @db.promotions().splash.tooltip %>" href="<%- @db.promotions().splash.link %>">
-            <div class="inner">
-                <%- @db.promotions().splash.description %>
+        <figure class="splash-osx primary">
+            <!-- GitHub Ribbon -->
+            <div class="github-fork-ribbon-wrapper right">
+                <div class="github-fork-ribbon">
+                    <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Fork us on GitHub</a>
+                </div>
             </div>
-        </a>
-        <% end %>
+        </figure>
+        <figure class="splash-linux tertiary"></figure>
         
         <!--
         <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
         -->
     </div>
 
-    <h2>DOWNLOAD</h2>
-    <div id="splash-download-buttons">
-        <a class="button primary big" href="/download">
-            <i class="icon icon-download"></i> K<span>omodo</span> IDE
-        </a>
-        <a class="button big" href="/download#edit">
-            <i class="icon icon-download"></i> K<span>omodo</span> Edit
-        </a>
-    </div>
-    <div id="splash-download-under">
-        <span>
-            21 day free trial - <a href="/pricing">Pricing</a>
-        </span>
-        <span>
-            Open-Source - <a href="https://github.com/Komodo/KomodoEdit"><i class="icon icon-github"></i> View on GitHub</a>
-        </span>
-        <div>
-            <h3><a href="/komodo-edit">What's Komodo Edit?</a></h3>
+    <div id="splash-download-wrap">
+        <% if @db.promotions().splash.enabled: %>
+         <a class="promotion" title="<%- @db.promotions().splash.tooltip %>" href="<%- @db.promotions().splash.link %>">
+             <div class="inner">
+                 <%- @db.promotions().splash.description %>
+             </div>
+         </a>
+         <% end %>
+        <div id="splash-download-buttons">
+            <a class="button primary big" href="/download">
+                <i class="icon icon-download"></i> K<span>omodo</span> IDE
+                <p>21 day free trial</p>
+            </a>
+            <a class="button big" href="/download#edit">
+                <i class="icon icon-download"></i> K<span>omodo</span> Edit
+                <p>Open-Source</p>
+            </a>
         </div>
     </div>
 </div>

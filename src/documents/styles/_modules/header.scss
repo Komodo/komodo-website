@@ -5,6 +5,7 @@ body.framed header
     width: 100%;
     min-height: 75px;
     color: $color-header-base;
+    border-bottom: 2px solid rgb(170,170,170);
 
     @include background-image(
         linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
@@ -23,7 +24,6 @@ body.framed header
 
     .outer
     {
-        background: rgba(0,0,0,0.2);
         min-height: 75px;
 
         .inner
@@ -42,13 +42,6 @@ body.framed header
         height: 59px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
         background-size: 100%;
-    }
-
-    .nav-push
-    {
-        height: 20px;
-        width: 170px;
-        float: right;
     }
 
     .button.collapser
@@ -98,7 +91,6 @@ body.framed header
                 {
                     color: $color-header-nav-link-hover;
                     text-decoration: none;
-                    border: 0;
                 }
             }
         }
@@ -194,11 +186,6 @@ body.framed header
         nav
         {
             right: 55px !important;
-        }
-
-        .nav-push
-        {
-            width: 10px;
         }
     }
 

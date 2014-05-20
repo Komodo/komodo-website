@@ -16,7 +16,7 @@ jQuery ->
             loadTabs
             loadDownloadButtons
             loadNavmenu
-            makeSplashResponsive
+            #makeSplashResponsive
             loadSidebarCollapser
             loadDialogs
             loadTwitterFeed
@@ -86,6 +86,7 @@ jQuery ->
 
         ss.find(".promotion").appendTo ss.find(".primary")
         ss.find(".twitter-follow-button").appendTo ss.find(".primary")
+        ss.find(".github-fork-ribbon-wrapper").appendTo ss.find(".primary")
 
     # Load Testimonials
     loadTestimonials = ->

@@ -8,8 +8,8 @@ $footer-reduce: new-breakpoint(max-width 650px);
 
 $sidebar-collapse: new-breakpoint(max-width 900px);
 
-$nav-reduce: new-breakpoint(max-width 1400px);
-$nav-reduce-further: new-breakpoint(max-width 1170px);
-$nav-collapse: new-breakpoint(max-width 1050px);
+$nav-reduce: new-breakpoint(max-width 1100px);
+$nav-reduce-further: new-breakpoint(max-width 1000px);
+$nav-collapse: new-breakpoint(max-width 860px);
 
 $max-width: 1200px;
