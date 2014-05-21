@@ -2,108 +2,82 @@
 {
     @include outer-container;
     padding: 0 10px;
-
-    h1 a
+    
+    & > h1
     {
-        font-size: 12pt;
-    }
+        font-size: 24pt;
+        font-weight: 400;
+        text-align: center;
 
-    li > strong
-    {
-        font-size: 8pt;
-        float: right;
-        display: block;
-        padding: 3px 20px 0 0;
-        margin-top: 10px;
-    }
-
-    strong
-    {
-
-    }
-
-    #splash-feature-column
-    {
-        @include span-columns(8.5);
-
-        h2
+        & + a
         {
-            margin: 10px 0 5px;
-            font-weight: 400;
-        }
-
-        strong
-        {
-            font-weight: bold;
-        }
-
-        p
-        {
-            font-size: 11pt;
+            display: block;
+            text-align: center;
+            margin-top: -10px;
             font-weight: 300;
         }
-
-        li:not(.clearfix)
-        {
-            float: left;
-            width: 49%;
-            margin: 0;
-            padding-right: 40px;
-        }
     }
 
-    #splash-features-sidebar
+    #splash-feature-column ul
     {
-        padding: 15px 0;
         text-align: center;
-        @extend %textured-box;
-        @include span-columns(3.5);
 
-        h1
-        {
-            margin: 0 0 15px 0;
-        }
-
-        ul
+        li
         {
             display: inline-block;
-            margin: auto;
-        }
-    }
+            vertical-align: top;
+            width: 24.5%;
+            text-align: center;
+            margin: 25px auto;
 
-    @include media($tablet)
-    {
-        #splash-feature-column
-        {
-            @include span-columns(6);
-
-            li:not(.clearfix)
+            img
             {
-                float: none;
-                width: auto;
-                padding-right: 0;
+                width: 240px;
+                height: 120px;
+                border: 1px solid #C4C4C4;
+            }
+
+            h2
+            {
+                margin: 10px 0 5px;
+                font-weight: 400;
+                font-size: 15pt;
+                width: 260px;
+                display: block;
+                margin: auto;
+            }
+
+            p
+            {
+                font-size: 11pt;
+                width: 260px;
+                display: block;
+                margin: auto;
             }
         }
+    }
 
-        #splash-features-sidebar
+    @include media(new-breakpoint(max-width 1050px))
+    {
+        #splash-feature-column ul li
         {
-            @include span-columns(5.5);
-            @include shift(0.5);
+            width: 32%;
         }
     }
 
-    @include media($mobile)
+    @include media(new-breakpoint(max-width 800px))
     {
-        #splash-feature-column
+        #splash-feature-column ul li
         {
-            @include span-columns(12);
+            width: 48%;
         }
+    }
 
-        #splash-features-sidebar
+    @include media(new-breakpoint(max-width 520px))
+    {
+        #splash-feature-column ul li
         {
-            @include span-columns(12);
-            @include shift(0);
-            margin-top: 15px;
+            width: auto;
         }
     }
 
