@@ -11,18 +11,18 @@ layout: blog
 <h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
 </div>
 
-When working with source code controlled files, it's often handy to know who was
-the last person to change a particular line of code - so you know who to point
-your finger at when s%!$ breaks. It just so happens there is a feature called
-*annotate* in the source code control world that does exactly that.
+When working with source code, it's often handy to know who last changed a
+particular line of code - so you know who to point your finger at when s%!$
+breaks. It just so happens there is a feature called *annotate* in the source
+code control world that does exactly that.
 
-# About
+## The Macro
 
 This macro works for Git and Subversion (I'm lazy and haven't added support for
-other VCS - pull request is welcome), which will run an scc annotate operation
+other VCS - pull requests are welcome), which will run a scc annotate operation
 (using Komodo's [Run Command] service), parse the output and place this
 information in the left editor margin. You can find out more about the editor
-margins by visiting the [Scintilla Margin] documentation.
+margins by visiting the [Scintilla margin] documentation.
 
 Clicking on the annotate margin launches the Komodo SCC History dialog for that
 file.
@@ -59,6 +59,7 @@ keybinding to the macro. Run the macro again to remove the annotations.
 * [Editor API](http://www.scintilla.org/ScintillaDoc.html)
   - the Komodo editor provides a wrapper around the Scintilla API
 
+
     [Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
-    [Scintilla Margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
+    [Scintilla margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
     [Komodo toolbox]: /framed/?http://docs.activestate.com/komodo/8.5/toolbox.html
