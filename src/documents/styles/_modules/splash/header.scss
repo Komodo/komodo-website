@@ -6,34 +6,41 @@
     position: relative;
     overflow: hidden;
 
-    padding: 0 15px 25% 15px;
+    padding: 0 15px 30% 15px;
     height: 0;
 
     @include media(new-breakpoint(max-width 1400px))
     {
-        min-height: 350px;
+        min-height: 420px;
         padding-bottom: 0;
     }
 
     @include media($mobile)
     {
         min-height: 300px;
+
+        p
+        {
+            font-size: 11pt !important;
+        }
     }
 
     p
     {
         margin: 0;
-        font-size: 11pt
+        font-size: 14pt;
+        font-weight: 300;
     }
 
     h1
     {
         font-size: 28pt;
-        margin: 0;
+        font-weight: 400;
+        margin: 20px 0;
 
         & + div
         {
-            margin-top: 5px;
+            margin: 20px 0 30px;
         }
     }
 

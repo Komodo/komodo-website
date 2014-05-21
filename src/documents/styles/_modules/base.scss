@@ -11,8 +11,7 @@ html, body
 body
 {
     font-family: $font-base;
-    font-weight: 300;
-    font-size: 10.5pt;
+    font-size: 11pt;
 
     color: $color-base-text;
     background: $color-base-background;
@@ -51,19 +50,21 @@ h1
 h2
 {
     font-size: 16pt;
-    font-weight: 400;
+    font-weight: bold;
+
 }
 
 h3
 {
     font-size: 12pt;
-    font-weight: 400;
+    font-weight: bold;
+
 }
 
 h4
 {
     font-size: 12pt;
-    font-weight: 400;
+    font-weight: bold;
     font-style: italic;
 }
 
