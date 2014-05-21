@@ -13,17 +13,17 @@ priority: 0.7
 
 <div class="spacer clearfix"></div>
 
-<% if @db.promotions().pricing.enabled: %>
+<% if @db.promotions().buy.enabled: %>
 <div class="promotion animateOnLoad">
-    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="<%- @db.promotions().pricing.tooltip %>">
+    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="<%- @db.promotions().buy.tooltip %>">
         <i class="icon icon-exclamation push-right"></i>
-        <%- @db.promotions().pricing.description %>
+        <%- @db.promotions().buy.description %>
     </div>
 </div>
 <% end %>
 
-<div class="pricing-outer">
-<div class="pricing-inner">
+<div class="outer">
+<div class="inner">
 
     <span class="currency">
         All prices are in US dollars
@@ -36,7 +36,7 @@ priority: 0.7
         </a>
     </span>
 
-    <ul class="pricing-block">
+    <ul class="block">
         <li class="studio">
             <h2>Pro Studio</h2>
             <figure>$595</figure>
@@ -220,7 +220,7 @@ priority: 0.7
             </div>
         </li>
     </ul>
-    <ul class="pricing-block continued">
+    <ul class="block continued">
         <li class="student">
             <h2>Students</h2>
             <figure>$100~</figure>

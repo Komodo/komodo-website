@@ -5,7 +5,7 @@ module.exports = {
         ,
             name: "Features"
         ,
-            name: "Pricing"
+            name: "Buy"
         ,
             name: "Download"
         ,

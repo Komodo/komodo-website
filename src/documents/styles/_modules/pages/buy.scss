@@ -1,4 +1,4 @@
-.document-pricing
+.document-buy
 {
 
     .assistance
@@ -56,12 +56,12 @@
         }
     }
 
-    .pricing-outer
+    .outer
     {
         text-align: center;
     }
 
-    .pricing-inner
+    .inner
     {
         text-align: left;
         margin: auto;
@@ -76,7 +76,7 @@
             font-weight: 400;
         }
 
-        .pricing-block
+        .block
         {
             $gutter: 0;
             @include outer-container;
