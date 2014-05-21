@@ -20,16 +20,16 @@ code control world that does exactly that.
 
 This macro works for Git and Subversion (I'm lazy and haven't added support for
 other VCS - pull requests are welcome), which will run a scc annotate operation
-(using Komodo's [Run Command][] service), parse the output and place this
-information in the left editor margin.
+using Komodo's [Run Command][] service, parse the annotate output and place this
+information in the left [editor margin].
 
-You can find out more about the editor margins by visiting the [Scintilla
-margin][] documentation.
-
-Note that you can also click on the annotate margin to launch the Komodo SCC
-History dialog for that file.
+Clicking on the annotate margin will launch the Komodo SCC History dialog for
+that file.
 
 ## Screenshot
+
+Note that the margin uses different colors to represent different commits, but
+it doesn't guarantee that two adjacant commits do not share the same color.
 
 <img src="/images/blog/2014-05/scc_annotate.png" style="vertical-align: middle">
 
@@ -65,7 +65,7 @@ keybinding to the macro. Run the macro again to remove the annotations.
 
 
 [Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
-[Scintilla margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
+[editor margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
 [Komodo toolbox]: /framed/?http://docs.activestate.com/komodo/8.5/toolbox.html
 [Run Command Tutorial]: /framed/?http://docs.activestate.com/komodo/8.5/tutorial/runcmdtut.html
 [Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
