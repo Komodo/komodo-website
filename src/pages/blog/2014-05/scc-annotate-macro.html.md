@@ -20,9 +20,9 @@ code control world that does exactly that.
 
 This macro works for Git and Subversion (I'm lazy and haven't added support for
 other VCS - pull requests are welcome), which will run a scc annotate operation
-(using Komodo's [Run Command] service), parse the output and place this
+(using Komodo's [Run Command][] service), parse the output and place this
 information in the left editor margin. You can find out more about the editor
-margins by visiting the [Scintilla margin] documentation.
+margins by visiting the [Scintilla margin][] documentation.
 
 Clicking on the annotate margin launches the Komodo SCC History dialog for that
 file.
@@ -30,7 +30,7 @@ file.
 ## Running
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox].
+file into your [Komodo toolbox][].
 
 Execute the macro by double-clicking on the macro in the toolbox, or use the
 Invoke Tool (Ctrl+Shift+K) to search/execute "annotate", or assign your own
@@ -50,16 +50,18 @@ keybinding to the macro. Run the macro again to remove the annotations.
 
 ## Related Materials
 
-* [Run Command Tutorial](/framed/?http://docs.activestate.com/komodo/8.5/tutorial/runcmdtut.html)
-* [Komodo Developer Extension](/framed/?http://community.activestate.com/node/1824)
-  - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html)
-  - to programatically interact with the Komodo editor - available to both
-    Python and Javascript
-* [Editor API](http://www.scintilla.org/ScintillaDoc.html)
-  - the Komodo editor provides a wrapper around the Scintilla API
+* [Run Command Tutorial][] - what you can do with run commands in Komodo
+* [Komodo Developer Extension][] - play around with JavaScript or Python code in
+  the context of the Komodo window
+* [Komodo Macro API][] - to programatically interact with the Komodo editor -
+  available to both Python and Javascript
+* [Editor API][] - the Komodo editor provides a wrapper around the Scintilla API
 
 
-    [Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
-    [Scintilla margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
-    [Komodo toolbox]: /framed/?http://docs.activestate.com/komodo/8.5/toolbox.html
+[Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
+[Scintilla margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
+[Komodo toolbox]: /framed/?http://docs.activestate.com/komodo/8.5/toolbox.html
+[Run Command Tutorial]: /framed/?http://docs.activestate.com/komodo/8.5/tutorial/runcmdtut.html
+[Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
+[Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/8.5/macroapi.html
+[Editor API]: http://www.scintilla.org/ScintillaDoc.html
