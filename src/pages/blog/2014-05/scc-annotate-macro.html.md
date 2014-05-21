@@ -21,11 +21,17 @@ code control world that does exactly that.
 This macro works for Git and Subversion (I'm lazy and haven't added support for
 other VCS - pull requests are welcome), which will run a scc annotate operation
 (using Komodo's [Run Command][] service), parse the output and place this
-information in the left editor margin. You can find out more about the editor
-margins by visiting the [Scintilla margin][] documentation.
+information in the left editor margin.
 
-Clicking on the annotate margin launches the Komodo SCC History dialog for that
-file.
+You can find out more about the editor margins by visiting the [Scintilla
+margin][] documentation.
+
+Note that you can also click on the annotate margin to launch the Komodo SCC
+History dialog for that file.
+
+## Screenshot
+
+<img src="/images/blog/2014-05/scc_annotate.png" style="vertical-align: middle">
 
 ## Running
 
