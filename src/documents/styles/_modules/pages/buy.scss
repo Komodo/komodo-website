@@ -77,6 +77,11 @@
         }
     }
 
+    .tabs .ui-tabs-panel
+    {
+        padding: 0;
+    }
+
     .tabs > div > h3
     {
         font-weight: 400;
@@ -173,7 +178,7 @@
                 .limited-badge
                 {
                     font-weight: bold;
-                    color: #AC8BBB;
+                    color: #8C669E;
                     font-size: 14pt;
                     text-decoration: underline;
                     @include transform(rotate(-5deg));
@@ -248,23 +253,6 @@
             li.tclstudio > figure
             {
                 background-color: #C4AB81;
-            }
-
-            li.personal
-            {
-                @extend %textured-box;
-                @include transform(scale(1.1));
-                z-index: 10;
-
-                h2
-                {
-                    background: rgba(0,0,0,0.2);
-                }
-
-                strong
-                {
-                    color: #43CCC5;
-                }
             }
 
             li.personal > figure
