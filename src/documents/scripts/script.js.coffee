@@ -285,7 +285,7 @@ jQuery ->
                 draggable: false
                 closeOnEscape: true
                 minWidth: jq(window).width() / 3
-                maxHeight: jq(window).height() / 1.5
+                maxHeight: jq(window).height() / 1.25
                 show:
                     effect: "fade"
                     duration:500

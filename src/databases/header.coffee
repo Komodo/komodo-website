@@ -9,6 +9,7 @@ module.exports = {
                 name: "Komodo Edit" 
             ,
                 name: "Pro Studio"
+                link: "/framed/?http://www.activestate.com/pro-studio"
             ]
         ,
             name: "Buy"

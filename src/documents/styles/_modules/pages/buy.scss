@@ -6,14 +6,10 @@
         float: right;
         margin-top: -40px;
 
-        @include media(max-width 1300px)
+        @include media($mobile)
         {
-            margin-right: 60px;
-        }
-
-        @include media(max-width 650px)
-        {
-            display: none;
+            float: none;
+            margin-top: 0;
         }
 
         table, tr, td, a
@@ -56,6 +52,39 @@
         }
     }
 
+    .tabs > ul:first-child
+    {
+        text-align: center;
+
+        li
+        {
+            float: none;
+            display: inline-block;
+            vertical-align: top;
+            font-size: 18pt;
+
+            @include media($mobile)
+            {
+                width: 100%;
+                text-align: center;
+
+                a
+                {
+                    float: none;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .tabs > div > h3
+    {
+        font-weight: 400;
+        font-size: 14pt;
+        line-height: 1.4;
+        margin: 0 0 45px;
+    }
+
     .outer
     {
         text-align: center;
@@ -69,6 +98,13 @@
         .currency
         {
             float: right;
+
+            @include media($mobile)
+            {
+                float: none;
+                display: block;
+                margin-bottom: 5px;
+            }
         }
 
         .testimonials
@@ -79,22 +115,24 @@
         .block
         {
             $gutter: 0;
-            @include outer-container;
-            max-width: 800px;
-            margin: 25px auto;
+            max-width: 1000px;
+            margin: 10px auto 20px;
             padding: 0;
             text-align: center;
 
             li
             {
-                @include span-columns(4);
+                width: 29%;
+                max-width: 300px;
+                min-width: 250px;
+                vertical-align: top;
                 display: inline-block;
-                height: 300px;
-                text-align: center;
 
+                height: 300px;
                 border: 2px solid rgba(0,0,0,0.3);
                 background: #FFF;
                 border-radius: 3px;
+                margin: 15px 1.5%;
 
                 position: relative;
 
@@ -135,13 +173,15 @@
                 .limited-badge
                 {
                     font-weight: bold;
-                    color: #835799;
+                    color: #AC8BBB;
                     font-size: 14pt;
                     text-decoration: underline;
                     @include transform(rotate(-5deg));
+                    margin-top: 30px;
                 }
 
-                &.goodwill > figure
+                &.goodwill > figure,
+                &.advertise > figure
                 {
                     font-size: 9pt;
                 }
@@ -198,24 +238,19 @@
                         }
                     }
                 }
-
-                @include media($mobile)
-                {
-                    height: 320px;
-
-                    h2
-                    {
-                        font-size: 11pt;
-                    }
-                }
             }
 
-            li.studio > figure
+            li.perlstudio > figure
             {
-                background-color: #616799;
+                background-color: #8BBFBF;
             }
 
-            li.enterprise
+            li.tclstudio > figure
+            {
+                background-color: #C4AB81;
+            }
+
+            li.personal
             {
                 @extend %textured-box;
                 @include transform(scale(1.1));
@@ -251,11 +286,28 @@
             {
                 background-color: #8b6f52;
             }
+
+            li.advertise > figure
+            {
+                background-color: #AD5353;
+            }
+        }
+
+        .block.continued li
+        {
+            margin: 0 1%;
         }
     }
 
     .questions
     {
+        float: left;
+
+        @include media($mobile)
+        {
+            float: none;
+        }
+
         p
         {
             margin: 0;
@@ -274,10 +326,9 @@
 
     .komodo-edit
     {
-        margin: 25px 0;
-        font-size: 18pt;
-        text-align: center;
-        font-weight: bold;
+        margin: 0;
+        font-size: 12pt;
+        text-align: right;
 
         p
         {
@@ -289,10 +340,18 @@
                 text-decoration: underline;
             }
         }
+
+        @include media($mobile)
+        {
+            width: 100%;
+            text-align: left;
+            margin-top: 15px;
+        }
     }
 
     .contract-holder
     {
+        margin-top: 45px;
         font-size: 9pt;
 
         p
