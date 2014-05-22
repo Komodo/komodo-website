@@ -5,23 +5,6 @@
         PHP, Ruby, Perl, HTML, CSS and JavaScript. </p>
     </div>
 
-    <div id="splash-screenshots">
-        <figure class="splash-windows secondary"></figure>
-        <figure class="splash-osx primary">
-            <!-- GitHub Ribbon -->
-            <div class="github-fork-ribbon-wrapper right">
-                <div class="github-fork-ribbon">
-                    <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Fork us on GitHub</a>
-                </div>
-            </div>
-        </figure>
-        <figure class="splash-linux tertiary"></figure>
-        
-        <!--
-        <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
-        -->
-    </div>
-
     <div id="splash-download-wrap">
         <% if @db.promotions().splash.enabled: %>
          <a class="promotion" title="<%- @db.promotions().splash.tooltip %>" href="<%- @db.promotions().splash.link %>">
@@ -40,5 +23,22 @@
                 <p>Open-Source</p>
             </a>
         </div>
+    </div>
+
+    <div id="splash-screenshots">
+        <figure class="splash-windows secondary"></figure>
+        <figure class="splash-osx primary">
+            <!-- GitHub Ribbon -->
+            <div class="github-fork-ribbon-wrapper right">
+                <div class="github-fork-ribbon">
+                    <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Fork us on GitHub</a>
+                </div>
+            </div>
+        </figure>
+        <figure class="splash-linux tertiary"></figure>
+
+        <!--
+        <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
+        -->
     </div>
 </div>

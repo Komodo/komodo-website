@@ -6,18 +6,24 @@
     position: relative;
     overflow: hidden;
 
-    padding: 0 15px 30% 15px;
-    height: 0;
+    padding: 0 15px 0 15px;
+    height: 700px;
+
+    @include media(new-breakpoint(max-width 1900px))
+    {
+        padding-bottom: 35%;
+        height: 0;
+    }
 
     @include media(new-breakpoint(max-width 1400px))
     {
-        min-height: 420px;
+        height: 510px;
         padding-bottom: 0;
     }
 
     @include media($mobile)
     {
-        min-height: 300px;
+        height: 400px;
 
         p
         {
@@ -102,17 +108,17 @@
 
             &.splash-windows
             {
-                background-image: url(../images/screenshots/editor-ui-windows.png);
+                background-image: url(../images/screenshots/editor-ui-windows-fade.png);
             }
 
             &.splash-linux
             {
-                background-image: url(../images/screenshots/editor-ui-linux.png);
+                background-image: url(../images/screenshots/editor-ui-linux-fade.png);
             }
 
             &.splash-osx
             {
-                background-image: url(../images/screenshots/editor-ui-osx.png);
+                background-image: url(../images/screenshots/editor-ui-osx-fade.png);
             }
         }
     }
@@ -120,18 +126,15 @@
     /* Download Buttons */
     #splash-download-wrap
     {
-        position: absolute;
-        bottom: 15px;
-
-        left: 50%;
-        @include transform(translateX(-50%));
-        width: 420px;
+        position: relative;
+        margin-bottom: 35px;
         
         .promotion
         {
             display: block;
             position: absolute;
-            left: -110px;
+            left: 50%;
+            margin-left: -315px;
             bottom: -115px;
             width: 150px;
             height: 150px;
@@ -157,7 +160,6 @@
                 font-weight: bold;
                 text-align: center;
                 padding: 0 15px 0 15px;
-                text-shadow: 0 0 3px rgba(0,0,0,0.3);
 
                 small
                 {
@@ -191,25 +193,21 @@
                 font-size: 16pt !important;
                 text-transform: uppercase;
                 font-weight: 900;
-                letter-spacing: -1px;
                 margin-top: 0;
                 margin-bottom: 0;
                 width: 210px;
                 cursor: pointer;
+                text-shadow: none !important;
 
                 @include transition(box-shadow 0.2s);
-
-                span
-                {
-                    font-size: 13pt;
-                }
 
                 i /* icon */
                 {
                     vertical-align: middle;
                     font-size: 22pt;
-                    text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
                     margin-right: 7px;
+                    text-shadow: none;
+                    color: #FFF;
                 }
 
                 p
@@ -218,13 +216,13 @@
                     text-transform: lowercase;
                     text-shadow: none;
                     letter-spacing: 0;
-                    margin: -5px 0 0 55px;
+                    margin: -5px 0 0 50px;
                     text-align: left;
                 }
 
                 &:not(.primary) p
                 {
-                    margin-left: 48px;
+                    margin-left: 43px;
                 }
 
                 /* Green Button - Komodo IDE */
@@ -244,11 +242,6 @@
                                     inset -1px 0 0 0 rgba(255,255,255, 0.15),
                                     inset 0 -1px 0 0 rgba(0,0,0, 0.3),
                                     inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                    }
-
-                    i /* icon */
-                    {
-                        color: rgba(31,64,63,0.7);
                     }
                 }
 
@@ -270,11 +263,6 @@
                                     inset 1px 0 0 0 rgba(0,0,0, 0.2),
                                     inset 0 -1px 0 0 rgba(0,0,0, 0.2),
                                     inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                    }
-
-                    i /* icon */
-                    {
-                        color: rgba(30,30,30,0.7);
                     }
                 }
             }
