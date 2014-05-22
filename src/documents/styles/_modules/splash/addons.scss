@@ -24,15 +24,17 @@
             font-size: 24pt;
             font-weight: 400;
             text-align: center;
+            margin-bottom: 5px;
 
-            & + a
+            & + p
             {
-                display: block;
-                text-align: center;
-                margin-top: -10px;
                 font-weight: 300;
-
-                @include link(#98bbbd, #C7E8EA);
+                text-align: center;
+                
+                a
+                {
+                    @include link(#98bbbd, #C7E8EA);
+                }
             }
         }
 
