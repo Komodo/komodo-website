@@ -1,25 +1,68 @@
 #splash-header
 {
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
     @include outer-container;
     position: relative;
-    overflow: inherit;
+    overflow: hidden;
+
+    padding: 0 15px 0 15px;
+    height: 700px;
+
+    @include media(new-breakpoint(max-width 1900px))
+    {
+        padding-bottom: 35%;
+        height: 0;
+    }
+
+    @include media(new-breakpoint(max-width 1400px))
+    {
+        height: 510px;
+        padding-bottom: 0;
+    }
+
+    @include media($mobile)
+    {
+        height: 400px;
+
+        p
+        {
+            font-size: 11pt !important;
+        }
+    }
 
     p
     {
         margin: 0;
-        font-size: 11pt;
+        font-size: 14pt;
+        font-weight: 300;
     }
 
-    h2
+    h1
     {
-        text-shadow: 1px 1px 0 rgba(0,0,0,0.50);
-        margin: 0;
+        font-size: 28pt;
+        font-weight: 400;
+        margin: 20px 0;
 
         & + div
         {
-            margin-top: 10px;
+            margin: 20px 0 30px;
+        }
+    }
+
+    @include media($tablet)
+    {
+        h1
+        {
+            font-size: 20pt;
+        }
+    }
+
+    @include media($mobile)
+    {
+        h1
+        {
+            font-size: 16pt;
         }
     }
 
@@ -37,303 +80,231 @@
     #splash-screenshots
     {
         position: relative;
-        height: 500px;
-        margin: 0 auto 25px;
-
-        @include transform-origin(50% 0);
+        margin-top: 15px;
 
         figure
         {
-            position: absolute;
-            z-index: 2;
-            top: -90px;
-            left: 50%;
+            display: block;
 
-            margin: 0;
-            margin-left: -500px;
-            width: 1000px;
-            height: 700px;
+            max-width: 1000px;
+            width: 100%;
+            padding-bottom: 58.2%;
+
+            position: relative;
+            left: 50%;
+            @include transform(translateX(-50%));
 
             background-size: 100%;
             background-repeat: no-repeat;
 
             box-shadow: 0 0 20px 6px rgba(0,0,0,0.4);
-            @include transform(scale(0.55));
             /*@include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);*/
-            @include transition-property (transform, z-index);
-            @include transition-duration(0.2s, 0.2s);
-            @include transition-timing-function(ease-in-out);
 
-            &.primary
-            {
-                @include transform(scale(0.65));
-                z-index: 10;
-
-                &.on-top
-                {
-                    z-index: 5;
-                }
-
-                .twitter-follow-button
-                {
-                    display: block;
-                    position: absolute;
-                    left: 60px;
-                    bottom: -10px;
-                    z-index: 15;
-                    box-shadow: 0 0 6px 0 rgba(0,0,0,0.3);
-
-                    @include transform(scale(1.8));
-                    @include transition(all 0.2s ease-in-out);
-                }
-
-                .promotion
-                {
-                    display: block;
-                    position: absolute;
-                    right: -90px;
-                    bottom: -90px;
-                    z-index: 15;
-                    width: 300px;
-                    height: 300px;
-                    background-image: url(../images/icons/emblems/promotion.png);
-                    background-size: 100%;
-                    border: 0;
-
-                    @include transition(all 0.2s ease-in-out);
-
-                    .inner
-                    {
-                        position: relative;
-                        top: 50%;
-                        @include transform(translateY(-50%));
-
-                        color: #FFF;
-                        font-size: 24pt;
-                        line-height: 1.5;
-                        font-weight: bold;
-                        text-align: center;
-                        padding: 10px 30px 0 20px;
-                        text-shadow: 0 0 3px rgba(0,0,0,0.3);
-
-                        small
-                        {
-                            font-size: 9pt;
-                            display: inline-block;
-                            position: absolute;
-                            left: 0px;
-                            text-align: center;
-                            width: 100%;
-                            margin-top: 10px;
-                            margin-left: -5px;
-                        }
-                    }
-
-                    &:hover .inner
-                    {
-                        text-decoration: underline;
-                    }
-                }
-            }
-
-            &.secondary
-            {
-                margin-left: -750px;
-            }
-
+            &.secondary,
             &.tertiary
             {
-                margin-left: -250px;
-            }
-
-            &:hover
-            {
-                @include transform(scale(0.7));
-                z-index: 20;
-            }
-
-            &.primary:hover
-            {
-                @include transform(scale(0.8));
-
-                .twitter-follow-button
-                {
-                    left: 80px;
-                    bottom: 0px;
-                    @include transform(scale(2));
-                }
-
-                .promotion
-                {
-                    @include transform(scale(1.1));
-                    bottom: -70px;
-                    right: -70px;
-                }
+                display: none;
             }
 
             &.splash-windows
             {
-                background-image: url(../images/screenshots/editor-ui-windows.png);
+                background-image: url(../images/screenshots/editor-ui-windows-fade.png);
             }
 
             &.splash-linux
             {
-                background-image: url(../images/screenshots/editor-ui-linux.png);
+                background-image: url(../images/screenshots/editor-ui-linux-fade.png);
             }
 
             &.splash-osx
             {
-                background-image: url(../images/screenshots/editor-ui-osx.png);
+                background-image: url(../images/screenshots/editor-ui-osx-fade.png);
             }
-        }
-
-        & > .promotion
-        {
-            display: none;
         }
     }
 
     /* Download Buttons */
-    #splash-download-buttons
+    #splash-download-wrap
     {
-        display: inline-block;
-        border-radius: 3px;
-        box-shadow: 0 0 8px 0 rgba(0,0,0,0.3);
-
-        a.big.button
+        position: relative;
+        margin-bottom: 35px;
+        
+        .promotion
         {
-            font-family: $font-impact;
-            font-size: 16pt !important;
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-top: 0;
-            margin-bottom: 0;
-            width: 210px;
-            cursor: pointer;
-
-            @include transition(box-shadow 0.2s);
-
-            span
-            {
-                font-size: 13pt;
-            }
-
-            i /* icon */
-            {
-                vertical-align: middle;
-                font-size: 22pt;
-                text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
-                margin-right: 7px;
-            }
-
-            /* Green Button - Komodo IDE */
-            &.primary
-            {
-                padding: 18px 15px 16px 10px;
-                @extend %button-green;
-                border-radius: 3px 0 0 3px;
-                box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                            inset -1px 0 0 0 rgba(255,255,255, 0.15),
-                            inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                            inset 0 0 0 0 rgba(255,255,255,0);
-
-                &:hover
-                {
-                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                inset -1px 0 0 0 rgba(255,255,255, 0.15),
-                                inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                                inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                }
-
-                i /* icon */
-                {
-                    color: rgba(31,64,63,0.7);
-                }
-            }
-
-            /* Grey Button - Komodo Edit */
-            &:not(:first-child)
-            {
-                padding: 18px 15px 16px;
-                margin-left: -4px;
-                @extend %button-grey;
-                border-radius: 0 3px 3px 0;
-                box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                            inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                            inset 0 -1px 0 0 rgba(0,0,0, 0.2),
-                            inset 0 0 0 0 rgba(255,255,255,0.0);
-
-                &:hover
-                {
-                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                                inset 0 -1px 0 0 rgba(0,0,0, 0.2),
-                                inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                }
-
-                i /* icon */
-                {
-                    color: rgba(30,30,30,0.7);
-                }
-            }
-        }
-
-        @include media($mobile)
-        {
-            a.button
-            {
-                font-size: 13pt !important;
-                width: 170px;
-
-                &:first-child
-                {
-                    padding: 14px 10px 11px 6px;
-                }
-
-                &:not(:first-child)
-                {
-                    padding: 14px 10px 11px;
-                }
-            }
-
-            span
-            {
-                font-size: 10.5pt;
-            }
-
-            i
-            {
-                font-size: 16pt !important;
-                margin-right: 4px;
-            }
-        }
-    }
-
-    #splash-download-under
-    {
-        margin-top: 10px;
-        font-size: 8pt;
-        font-weight: bold;
-
-        & > span
-        {
-            display: inline-block;
-            width: 200px;
-            text-align: center;
+            display: block;
+            position: absolute;
+            left: 50%;
+            margin-left: -315px;
+            bottom: -115px;
+            width: 150px;
+            height: 150px;
+            background-image: url(../images/icons/emblems/promotion.png);
+            background-size: 100%;
+            border: 0;
+            @include transform(rotate(-15deg) translateY(-50%));
 
             @include media($mobile)
             {
-                width: 170px;
+                display: none;
             }
 
-            & + div
+            .inner
             {
-                margin-top: 30px;
+                position: relative;
+                top: 45%;
+                @include transform(translateY(-50%));
 
-                h3
+                color: #FFF;
+                font-size: 12pt;
+                line-height: 1.5;
+                font-weight: bold;
+                text-align: center;
+                padding: 0 15px 0 15px;
+
+                small
                 {
-                    margin: 0;
+                    font-size: 7pt;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0px;
+                    text-align: center;
+                    width: 100%;
+                    margin-left: -3px;
+                }
+            }
+
+            &:hover .inner
+            {
+                text-decoration: underline;
+            }
+        }
+
+        #splash-download-buttons
+        {
+            display: inline-block;
+            border-radius: 3px;
+            box-shadow: 0 0 8px 0 rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+
+            a.big.button
+            {
+                font-family: $font-impact;
+                font-size: 16pt !important;
+                text-transform: uppercase;
+                font-weight: 900;
+                margin-top: 0;
+                margin-bottom: 0;
+                width: 210px;
+                cursor: pointer;
+                text-shadow: none !important;
+
+                @include transition(box-shadow 0.2s);
+
+                i /* icon */
+                {
+                    vertical-align: middle;
+                    font-size: 22pt;
+                    margin-right: 7px;
+                    text-shadow: none;
+                    color: #FFF;
+                }
+
+                p
+                {
+                    font-size: 8pt !important;
+                    text-transform: lowercase;
+                    text-shadow: none;
+                    letter-spacing: 0;
+                    margin: -5px 0 0 50px;
+                    text-align: left;
+                }
+
+                &:not(.primary) p
+                {
+                    margin-left: 43px;
+                }
+
+                /* Green Button - Komodo IDE */
+                &.primary
+                {
+                    padding: 18px 15px 16px 10px;
+                    @extend %button-green;
+                    border-radius: 3px 0 0 3px;
+                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                                inset 0 -1px 0 0 rgba(0,0,0, 0.3),
+                                inset 0 0 0 0 rgba(255,255,255,0);
+
+                    &:hover
+                    {
+                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                    inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                                    inset 0 -1px 0 0 rgba(0,0,0, 0.3),
+                                    inset -25px 15px 30px 0px rgba(255,255,255,0.1);
+                    }
+                }
+
+                /* Grey Button - Komodo Edit */
+                &:not(:first-child)
+                {
+                    padding: 18px 15px 16px;
+                    margin-left: -4px;
+                    @extend %button-grey;
+                    border-radius: 0 3px 3px 0;
+                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                                inset 0 -1px 0 0 rgba(0,0,0, 0.2),
+                                inset 0 0 0 0 rgba(255,255,255,0.0);
+
+                    &:hover
+                    {
+                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
+                                    inset 1px 0 0 0 rgba(0,0,0, 0.2),
+                                    inset 0 -1px 0 0 rgba(0,0,0, 0.2),
+                                    inset -25px 15px 30px 0px rgba(255,255,255,0.1);
+                    }
+                }
+            }
+
+            @include media($mobile)
+            {
+                a.big.button
+                {
+                    font-size: 13pt !important;
+                    width: 150px !important;
+
+                    &:first-child
+                    {
+                        padding: 14px 10px 11px 6px;
+                    }
+
+                    &:not(:first-child)
+                    {
+                        padding: 14px 10px 11px;
+                    }
+                    
+                    span
+                    {
+                        font-size: 10.5pt;
+                    }
+
+                    i
+                    {
+                        font-size: 16pt !important;
+                        margin-right: 4px;
+                    }
+
+                    p
+                    {
+                        font-size: 7pt !important;
+                        margin-left: 52px !important;
+                    }
+
+                    &:not(.primary) p
+                    {
+                        margin-left: 45px !important;
+                    }
                 }
             }
         }

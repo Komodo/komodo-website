@@ -3,9 +3,16 @@ module.exports = {
             name: "Home",
             link: "/"
         ,
-            name: "Features"
+            name: "Flavours",
+            link: "#"
+            sub: [
+                name: "Komodo Edit" 
+            ,
+                name: "Pro Studio"
+                link: "/framed/?http://www.activestate.com/pro-studio"
+            ]
         ,
-            name: "Pricing"
+            name: "Buy"
         ,
             name: "Download"
         ,

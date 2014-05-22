@@ -1,6 +1,5 @@
 <header>
     <div class="outer">
-        <div class="nav-push"></div>
         <div class="inner">
             <div class="nav-wrap">
                 <span class="collapser button primary">
@@ -8,9 +7,7 @@
                 </span>
                 <!-- Navigation -->
                 <nav>
-                    <ul>
-                        <%- @getAsList(@db.header().navigation, "unstyled") %>
-                    </ul>
+                    <%- @getAsList(@db.header().navigation, "unstyled") %>
                 </nav>
             </div>
 
@@ -21,5 +18,4 @@
     <% if @document.headerAppend: %>
         <%- @partial(@document.headerAppend, @) %>
     <% end %>
-    <div class="underline"></div>
 </header>

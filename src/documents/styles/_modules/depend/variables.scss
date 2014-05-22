@@ -2,14 +2,14 @@ $fa-font-path: "../vendor/Font-Awesome/fonts";
 $fa-css-prefix: "icon";
 
 $tablet: new-breakpoint(max-width 960px);
-$mobile: new-breakpoint(max-width 550px);
+$mobile: new-breakpoint(max-width 570px);
 
 $footer-reduce: new-breakpoint(max-width 650px);
 
 $sidebar-collapse: new-breakpoint(max-width 900px);
 
-$nav-reduce: new-breakpoint(max-width 1400px);
-$nav-reduce-further: new-breakpoint(max-width 1170px);
-$nav-collapse: new-breakpoint(max-width 1050px);
+$nav-reduce: new-breakpoint(max-width 1150px);
+$nav-reduce-further: new-breakpoint(max-width 1050px);
+$nav-collapse: new-breakpoint(max-width 920px);
 
 $max-width: 1200px;

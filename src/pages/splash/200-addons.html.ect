@@ -1,6 +1,12 @@
 <div id="splash-addons">
     <div class="inner">
-        <h1>Featured Addons</h1>
+        <h1>Resources</h1>
+        <p>
+            Resources allow you to enhance Komodo through addons, skins,
+            color schemes, macro's, key bindings, etc.
+            <a href="/resources">View All</a>
+        </p>
+        <br class="clearfix">
 
         <% for k,addon of @_.first(@db.addons().featured, 4): %>
         <div>
@@ -9,10 +15,8 @@
             <p>
                 <%- addon.description %>
             </p>
-            <a href="<%= addon.link %>" class="button">Download</a>
+            <a href="<%= addon.link %>" class="button primary">Download</a>
         </div>
         <% end %>
     </div>
-
-    <a href="/resources" class="button primary big">Find More</a>
 </div>

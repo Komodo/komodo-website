@@ -12,7 +12,7 @@ offering a [special Personal license] of Komodo IDE to individual developers
 for **$89**. If the new Personal license is well received it may actually get a
 permanent place in the Komodo lineup... we're hoping it does!
 
-[special Personal license]: /pricing/
+[special Personal license]: /buy/
 
 ## Why
 
@@ -29,9 +29,8 @@ Personal license, see below:
 * we are only offering this special Personal license for a limited time
 * a company cannot reimburse you the cost of the license - companies should
   purchase the enterprise Komodo IDE license
-* you cannot purchase Upgrades and Support on this license
+* you cannot purchase an Upgrades and Support Subscription on this license
 * you cannot transfer your license to another owner
-* there will be no upgrade path to Komodo IDE 9
 
 ## Features
 

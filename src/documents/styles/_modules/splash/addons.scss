@@ -19,6 +19,25 @@
     {
         @include outer-container;
 
+        & > h1
+        {
+            font-size: 24pt;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 5px;
+
+            & + p
+            {
+                font-weight: 300;
+                text-align: center;
+                
+                a
+                {
+                    @include link(#98bbbd, #C7E8EA);
+                }
+            }
+        }
+
         & > div
         {
             padding: 5px;
@@ -46,11 +65,13 @@
                 @extend %ellipsis;
                 font-weight: bold;
                 margin: 10px 0 15px;
+                overflow: visible;
             }
 
             p
             {
                 line-height: 1.3;
+                font-weight: 400;
 
                 @include media($tablet)
                 {
@@ -62,7 +83,6 @@
 
             figure
             {
-                background-size: cover;
                 width: 95%;
                 height: 0;
                 padding-bottom: 55%;
@@ -77,16 +97,5 @@
         }
 
     }
-    
-    & > a
-    {
-        text-align: center;
-        position: absolute;
-        width: 150px;
-        bottom: -15px;
-        left: 50%;
-        margin-left: -75px;
-        text-transform: uppercase;
-        padding: 8px;
-    }
+
 }

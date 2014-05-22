@@ -3,8 +3,8 @@ module.exports =
         enabled: true
         description: "Komodo IDE<br>For $89!*<br><small>*Restrictions Apply</small>"
         tooltip: "Komodo IDE Personal only - Restrictions apply"
-        link: "/pricing"
-    pricing:
+        link: "/buy"
+    buy:
         enabled: false
         description: """
         <p>
@@ -20,19 +20,19 @@ module.exports =
             enabled: true
             description: "Komodo IDE<br>For $89!*"
             tooltip: "Komodo IDE Personal only - Restrictions apply"
-            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+            link: "http://komodoide.com/buy" # Do not use relative or absolute - use full url
         latestIde:
             enabled: false
             description: "Komodo IDE<br>For $89!*"
             tooltip: "Komodo IDE Personal only - Restrictions apply"
-            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+            link: "http://komodoide.com/buy" # Do not use relative or absolute - use full url
         latestTrial:
             enabled: true
             description: "Komodo IDE<br>For $89!*"
             tooltip: "Komodo IDE Personal only - Restrictions apply"
-            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+            link: "http://komodoide.com/buy" # Do not use relative or absolute - use full url
         old:
             enabled: true
             description: "Komodo IDE<br>For $89!*"
             tooltip: "Komodo IDE Personal only - Restrictions apply"
-            link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
+            link: "http://komodoide.com/buy" # Do not use relative or absolute - use full url

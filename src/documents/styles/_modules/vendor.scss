@@ -9,6 +9,11 @@
     background-color: $color-github-ribbon;
     @include transition(0.2s background-color);
 
+    a {
+        color: #FFF !important;
+        text-decoration: none !important;
+    }
+
     &:hover
     {
         background-color: darken($color-github-ribbon, 10%);

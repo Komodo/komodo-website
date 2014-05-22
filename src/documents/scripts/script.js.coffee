@@ -16,7 +16,7 @@ jQuery ->
             loadTabs
             loadDownloadButtons
             loadNavmenu
-            makeSplashResponsive
+            #makeSplashResponsive
             loadSidebarCollapser
             loadDialogs
             loadTwitterFeed
@@ -86,6 +86,7 @@ jQuery ->
 
         ss.find(".promotion").appendTo ss.find(".primary")
         ss.find(".twitter-follow-button").appendTo ss.find(".primary")
+        ss.find(".github-fork-ribbon-wrapper").appendTo ss.find(".primary")
 
     # Load Testimonials
     loadTestimonials = ->
@@ -284,7 +285,7 @@ jQuery ->
                 draggable: false
                 closeOnEscape: true
                 minWidth: jq(window).width() / 3
-                maxHeight: jq(window).height() / 1.5
+                maxHeight: jq(window).height() / 1.25
                 show:
                     effect: "fade"
                     duration:500
@@ -347,13 +348,13 @@ jQuery ->
     # Hide footer overlap
     hideFooterOverlap = ->
         return unless jq('footer').length
-        if jq('footer').visible(true) and jq(".document-pricing .promotion").is(":visible") and jq(window).scrollTop()
-            jq(".document-pricing .promotion").hide()
+        if jq('footer').visible(true) and jq(".document-buy .promotion").is(":visible") and jq(window).scrollTop()
+            jq(".document-buy .promotion").hide()
 
-        if ! jq('footer').visible(true) and ! jq(".document-pricing .promotion").is(":visible")
-            jq(".document-pricing .promotion").show()
+        if ! jq('footer').visible(true) and ! jq(".document-buy .promotion").is(":visible")
+            jq(".document-buy .promotion").show()
 
-    if jq('footer').length and jq(".document-pricing .promotion").length
+    if jq('footer').length and jq(".document-buy .promotion").length
         jq(window).scroll hideFooterOverlap
 
     disableLinks = ->

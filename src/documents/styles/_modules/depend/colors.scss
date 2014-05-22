@@ -1,5 +1,5 @@
-$color-base-text:           #4F4F4F;
-$color-base-background:     rgb(235, 235, 235);
+$color-base-text:           #3D3D3D;
+$color-base-background:     #F5F5F5;
 $color-base-link:           #45A09A;
 $color-base-link-hover:     darken($color-base-link, 10%);
 $color-base-link-block:     rgba(0,0,0,0.3);
@@ -10,7 +10,7 @@ $color-footer-link:         #98bbbd;
 
 $color-header-base:         #cacaca;
 $color-header-textheading:  #f4f4f4;
-$color-header-nav-link:     rgba(255,255,255,0.7);
+$color-header-nav-link:     rgba(255,255,255,0.9);
 $color-header-nav-link-hover:rgba(255,255,255,1);
 $color-header-link:         #338C87;
 $color-header-link-hover:   lighten($color-header-link, 10%);
