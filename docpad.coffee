@@ -107,18 +107,25 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
             _.each ob, (value, key) ->
 
                 value.link = site.url if value.link is '/'
+                value.link = site.url + "/" + value.name.toLowerCase() unless value.link
                 value.link = value.link.replace('{site.url}', site.url) if value.link
+                value.link = value.link.replace(/\s/g,'-') if value.link
 
-                r.push '<li><a href="' + (value.link || site.url + "/" + value.name.toLowerCase()) +
+                if value.sub
+                    r.push '<li class="has-sub">'
+                else
+                    r.push '<li>'
+                r.push '<a href="' + value.link +
                             '" title="' + value.name +
                             '" target="' + (value.target || "_self") + '">'
                 r.push '<img src="' + imgPath + value.img + '" alt="' + value.name + '"/>' unless ! value.img
-                r.push '<span class="link-name">' + value.name + '</span>'
+                r.push '<span class="link-name">' + value.name + '</span></a>'
+                r.push value.name_append if value.name_append
                 r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
-                r.push '</a>' + (value.name_append || '') + '</li>'
+                r.push '</li>'
 
             r.push "</ul>"
-            r.join("")
+            r.join("\n")
 
         getBlogsFiltered: (filters = {}, add = false, document = false) ->
             if add

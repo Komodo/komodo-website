@@ -3,7 +3,13 @@ module.exports = {
             name: "Home",
             link: "/"
         ,
-            name: "Features"
+            name: "Flavours",
+            link: "#"
+            sub: [
+                name: "Komodo Edit" 
+            ,
+                name: "Pro Studio"
+            ]
         ,
             name: "Buy"
         ,
