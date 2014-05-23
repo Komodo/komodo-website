@@ -36,9 +36,9 @@ body.framed header
     {
         display: inline-block;
         margin-left: 5px;
-        margin-top: 8px;
-        width: 284px;
-        height: 59px;
+        margin-top: 20px;
+        width: 248px;
+        height: 36px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
         background-size: 100%;
     }
@@ -146,13 +146,6 @@ body.framed header
 
     @include media($nav-reduce-further)
     {
-        figure#header-logo
-        {
-            margin-top: 15px;
-            width: 227px;
-            height: 47px;
-        }
-
         nav > ul > li > a
         {
             font-size: 11.5pt;
