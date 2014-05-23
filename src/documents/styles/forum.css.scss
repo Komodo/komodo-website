@@ -174,6 +174,14 @@ strong
         z-index: 9999;
         right: 45px;
     }
+
+    li.has-sub ul
+    {
+        top: 35px;
+        list-style: none;
+        margin: 0;
+        z-index: 9999;
+    }
 }
 
 .d-header
