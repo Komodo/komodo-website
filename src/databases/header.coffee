@@ -12,7 +12,7 @@ module.exports = {
                 link: "/framed/?http://www.activestate.com/pro-studio"
             ]
         ,
-            name: "Buy"
+            name: "Pricing"
         ,
             name: "Download"
         ,

@@ -1,11 +1,11 @@
 ---
-title: Buy Komodo IDE
+title: Pricing
 layout: default
 description: Komodo IDE pricing and licensing
 priority: 0.7
 ---
 
-<h1>Buy Komodo IDE</h1>
+<h1>Komodo IDE Pricing</h1>
 
 <div class="assistance">
     <div id="lpButDivID-1279824964197"></div>
@@ -13,11 +13,11 @@ priority: 0.7
 
 <div class="spacer clearfix"></div>
 
-<% if @db.promotions().buy.enabled: %>
+<% if @db.promotions().pricing.enabled: %>
 <div class="promotion animateOnLoad">
-    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="<%- @db.promotions().buy.tooltip %>">
+    <div class="inner tooltip" data-tooltip-position="bottom" data-tooltip-class="big" title="<%- @db.promotions().pricing.tooltip %>">
         <i class="icon icon-exclamation push-right"></i>
-        <%- @db.promotions().buy.description %>
+        <%- @db.promotions().pricing.description %>
     </div>
 </div>
 <% end %>
