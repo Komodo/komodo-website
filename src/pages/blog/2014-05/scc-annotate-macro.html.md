@@ -35,23 +35,24 @@ it doesn't guarantee that two adjacant commits do not share the same color.
 
 ## Running
 
-To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox][].
+To install the macro simply hit the "View Resource" and "Install Instructions"
+links below.
 
 Execute the macro by double-clicking on the macro in the toolbox, or use the
 Invoke Tool (Ctrl+Shift+K) to search/execute "annotate", or assign your own
 keybinding to the macro. Run the macro again to remove the annotations.
 
-<div class="inline centered">
-<a href="/files/macros/SCC_Annotate.komodotool" class="button primary">
-    <i class="icon icon-download"></i>
-    Download Macro
-</a>
-<div class="spacer-half"></div>
-<span>
-    <i class="icon icon-github"></i>
-    <a href="https://github.com/Komodo/macros/blob/master/scc_annotate.js" target="_blank">View Source</a>
-</span>
+<div class="centered">
+    <div class="spacer"></div>
+    <a href="http://komodoide.com/resources/macros/toddw-as--sccannotate/" class="button big primary">
+        <i class="icon icon-eye"></i>
+        View Resource
+    </a>
+    <div class="spacer-half"></div>
+    <span>
+        <i class="icon icon-question"></i>
+        <a href="http://komodoide.com/resources/install-instructions/#pane-macro" target="_blank">Install Instructions</a>
+    </span>
 </div>
 
 ## Related Materials
@@ -66,7 +67,6 @@ keybinding to the macro. Run the macro again to remove the annotations.
 
 [Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
 [editor margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
-[Komodo toolbox]: /framed/?http://docs.activestate.com/komodo/8.5/toolbox.html
 [Run Command Tutorial]: /framed/?http://docs.activestate.com/komodo/8.5/tutorial/runcmdtut.html
 [Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
 [Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/8.5/macroapi.html
