@@ -12,7 +12,7 @@ offering a [special Personal license] of Komodo IDE to individual developers
 for **$89**. If the new Personal license is well received it may actually get a
 permanent place in the Komodo lineup... we're hoping it does!
 
-[special Personal license]: /buy/
+[special Personal license]: /pricing/
 
 ## Why
 
