@@ -22,7 +22,7 @@ quote to the start and end points of the selection.
 
 Here's the macro in action, as I press the left paren "(" key:
 
-<img src="/images/blog/2014-06/brace_wrap_selection.png" style="vertical-align: middle">
+<img src="/images/blog/2014-06/brace_wrap_selection.gif" style="vertical-align: middle">
 
 ## Running
 
