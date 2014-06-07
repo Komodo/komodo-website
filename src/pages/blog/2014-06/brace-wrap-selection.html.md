@@ -15,7 +15,7 @@ layout: blog
 
 This is a startup macro (set to trigger when Komodo starts up) that will enable
 brace wrapping on an editor selection. Once you make a selection, pressing any of
-the brace or quote keys **({["'** will automatically add a matching brace or
+the brace or quote keys **( { [ " '** will automatically add a matching brace or
 quote to the start and end points of the selection.
 
 ## Screenshot
