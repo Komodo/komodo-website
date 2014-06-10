@@ -15,6 +15,7 @@ jQuery ->
             loadGithubCommits
             loadTabs
             loadDownloadButtons
+            doDownloadKomodo
             loadNavmenu
             #makeSplashResponsive
             loadSidebarCollapser
@@ -227,6 +228,19 @@ jQuery ->
             oldPrimary.removeClass "primary"
             el.addClass "big primary"
             el.parent().insertBefore(oldPrimary)
+
+    doDownloadKomodo = ->
+        return unless jq(".document-download-ide-thank-you").length or jq(".document-download-edit-thank-you").length
+        download = window.location.search.substr(1)
+
+        if (download)
+            jq("#start-manually").attr("href", download)
+            console.log "almost"
+            setTimeout (->
+                console.log "start"
+                window.location.href = download
+            ), 3000
+
 
     # Nav Collapse
     loadNavmenu = ->

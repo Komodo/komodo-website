@@ -10,6 +10,7 @@ sidebar: resources
     <h1>What Would You Like to Contribute?</h1>
 
     <select class="selectize paneSelector" data-pane-prefix="pane-">
+        <option value="">Select One..</option>
         <option value="resources">Resources (addons, macros, snippets, etc)</option>
         <option value="blogs">Blogs</option>
         <option value="screencasts">Screencasts</option>
@@ -25,7 +26,7 @@ sidebar: resources
 
 <div class="panes">
 
-    <div id="pane-resources">
+    <div id="pane-resources" class="hide">
         <h1 id="resource-guidelines">Resources</h1>
 
         <p>
@@ -260,7 +261,7 @@ layout: blog
         <p>
             If you have your own idea for a feature that you would like to implement
             that you think should be part of the core Komodo experience, please
-            <a href="/framed/?bugs.activestate.com/enter_bug.cgi?product=Komodo&bug_severity=7-enhancement">
+            <a href="bugs.activestate.com/enter_bug.cgi?product=Komodo&bug_severity=7-enhancement">
             file an enhancement request</a> for it and express your intend to implement it.
         </p>
     </div>
@@ -274,7 +275,7 @@ layout: blog
 
         <p>
             If you really want to help out with this we'd encourage you to try our
-            <a href="/framed/?http://downloads.activestate.com/Komodo/nightly/">
+            <a href="http://downloads.activestate.com/Komodo/nightly/">
             nightly builds</a> and help us catch bugs early.
         </p>
     </div>

@@ -94,7 +94,7 @@ and understand. I could likely make this fit into about 10 lines if I'd want to.
 ## Installation
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox](/framed/?http://docs.activestate.com/komodo/8.5/toolbox.html).
+file into your [Komodo toolbox](http://docs.activestate.com/komodo/8.5/toolbox.html).
 Once in your toolbox double click the macro to activate it. The macro will
 automatically activate itself the next time you start Komodo, you only need to
 do this manually the first time.

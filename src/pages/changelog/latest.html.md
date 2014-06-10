@@ -317,7 +317,7 @@ Bug Database](http://bugs.activestate.com/query.cgi?product=Komodo).
 
 ### <a name="Editing_Issues" id="Editing_Issues">Editing</a>
 
-*   [Tabstop syntax](/framed/?http://docs.activestate.com/komodo/8.5/tabstops.html) has changed in
+*   [Tabstop syntax](http://docs.activestate.com/komodo/8.5/tabstops.html) has changed in
   Komodo 5.0. Abbreviation from the Toolbox|Samples directory of pre-5.0
   versions of Komodo will not work as expected with the current
   implementation. Delete the older versions to use the ones featured in
@@ -332,7 +332,7 @@ Bug Database](http://bugs.activestate.com/query.cgi?product=Komodo).
 *   Linux users may need to install the <acronym title="Smart Common
   Input Method">SCIM</acronym> platform packages for non-ASCII text entry.
   See "[Linux Software
-  Prerequisites](/framed/?http://docs.activestate.com/komodo/8.5/install.html#System_Req_Lin)" in the Installation Guide for details. (Bug
+  Prerequisites](http://docs.activestate.com/komodo/8.5/install.html#System_Req_Lin)" in the Installation Guide for details. (Bug
   70812)
 *   While autocomplete on many of the modules in the Python PyWin32
   packages works, Komodo's PyWin32 API catalog currently does not have
@@ -349,7 +349,7 @@ Bug Database](http://bugs.activestate.com/query.cgi?product=Komodo).
   Performance can be improved by disabling the Komodo
   function that checks if files on disk have changed. Use
   the [Editor
-  Preferences](/framed/?http://docs.activestate.com/komodo/8.5/prefs.html#prefs_editor) to disable this feature. (Bug [18297](http://bugs.activestate.com/show_bug.cgi?id=18297))
+  Preferences](http://docs.activestate.com/komodo/8.5/prefs.html#prefs_editor) to disable this feature. (Bug [18297](http://bugs.activestate.com/show_bug.cgi?id=18297))
 *   Interpolation shortcuts in snippets are not executed
   when the snippet is inserted in the Editor Pane via
   dragging and dropping.
@@ -393,7 +393,7 @@ Bug Database](http://bugs.activestate.com/query.cgi?product=Komodo).
   'Preferences|Languages|PHP|Path to alternate PHP configuration file'
   to avoid this problem.
 *   Python: Breakpoints will not work with the [Psyco](http://psyco.sourceforge.net/) extension enabled.
-  The Komodo [FAQ](/framed/?http://docs.activestate.com/komodo/8.5/trouble.html#psyco_debug) has a
+  The Komodo [FAQ](http://docs.activestate.com/komodo/8.5/trouble.html#psyco_debug) has a
   work-around solution.
 *   **Tcl 8.5**: Tcl Beta releases contain
   only version-specific executables (e.g.

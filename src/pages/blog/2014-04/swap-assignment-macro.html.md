@@ -53,7 +53,7 @@ myfunction("two", "one")
 ## Installation
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox](/framed/?http://docs.activestate.com/komodo/8.5/toolbox.html).
+file into your [Komodo toolbox](http://docs.activestate.com/komodo/8.5/toolbox.html).
 
 To use the macro, make an editor selection and then invoke the macro - by
 double-clicking on the macro in the toolbox, using the Invoke Tool
@@ -74,9 +74,9 @@ keybinding to the macro.
 
 ## Related Materials
 
-* [Komodo Developer Extension](/framed/?http://community.activestate.com/node/1824)
+* [Komodo Developer Extension](http://community.activestate.com/node/1824)
   - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html)
+* [Komodo Macro API](http://docs.activestate.com/komodo/8.5/macroapi.html)
   - to programatically interact with the Komodo editor - available to both
     Python and Javascript
 * [Editor API](http://www.scintilla.org/ScintillaDoc.html)

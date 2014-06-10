@@ -243,14 +243,16 @@ hr
 
 .button,
 a.button,
-#container header a.button
+#container header a.button,
+.mktoButton
 {
-    &:not(.primary)
+    &:not(.primary):not(.mktoButton)
     {
         @extend %button-grey;
     }
 
-    &.primary
+    &.primary,
+    &.mktoButton
     {
         @extend %button-green;
     }

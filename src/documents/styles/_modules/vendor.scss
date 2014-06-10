@@ -184,3 +184,14 @@ html.wait
     }
 }
 
+/* Marketo form *(un)styling */
+
+form.mktoForm
+{
+    font-size: 12pt !important;
+
+    .mktoButtonWrap
+    {
+        margin-left: 210px !important;
+    }
+}
