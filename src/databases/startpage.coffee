@@ -1,7 +1,7 @@
 module.exports = {
     links: [
             name: "Documentation",
-            link: "http://komodoide.com/framed/?http://docs.activestate.com/komodo/"
+            link: "http://komodoide.comhttp://docs.activestate.com/komodo/"
         ,
             name: "Community Forums"
             link: "http://forum.komodoide.com/"

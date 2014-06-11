@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<meta http-equiv="refresh" content="2; url=<%- @db.downloads()[@document.downloadId] %>">
+
+<h1>Downloading <%- @document.downloadTitle %></h1>
+
+<p>
+    Your download will start shortly. If it does not, you can
+    <a href="<%- @db.downloads()[@document.downloadId] %>">
+        start the download manually
+    </a>.
+</p>
+
+<p>
+    <%- @document.downloadNewsletterDescription %>
+</p>
+
+<script src="//app-sjg.marketo.com/js/forms2/js/forms2.js"></script>
+<form id="mktoForm_<%- @document.downloadNewsletterId %>"></form>
+<script>MktoForms2.loadForm("//app-sjg.marketo.com", "894-ACS-622", <%- @document.downloadNewsletterId %>);</script>

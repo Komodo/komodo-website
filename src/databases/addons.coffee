@@ -18,7 +18,7 @@ module.exports =
     ,
         name:   "MySQL Database Explorer",
         img:    "DBEX.png"
-        link:   "/framed/?http://community.activestate.com/xpi/mysql-database-explorer"
+        link:   "http://community.activestate.com/xpi/mysql-database-explorer"
         description: "Adds support for MySQL to Komodo's DB Explorer."
 
     ]

@@ -10,6 +10,7 @@ sidebar: resources
     <h1>What Would You Like to Install?</h1>
 
     <select class="selectize paneSelector" data-pane-prefix="pane-">
+        <option value="">Select One..</option>
         <option value="addon">Addons / Iconsets / Skins / Languages</option>
         <option value="macro">Macros / Snippets / Tools (toolbox)</option>
         <option value="colorscheme">Color Schemes</option>
@@ -22,7 +23,7 @@ sidebar: resources
 <hr>
     
 <div class="panes">
-    <div id="pane-addon">
+    <div id="pane-addon" class="hide">
         <h1>Addons / Iconsets / Skins / Languages</h1>
         
         <p>
@@ -189,16 +190,9 @@ sidebar: resources
     <div id="pane-keybinding" class="hide">
         <h1>Keybindings</h1>
 
-        <h2>Drag and Drop</h2>
+        <h2>Importing</h2>
         <p>
-            To install keybindings simply drag and drop the downloaded *.kkf file
-            onto Komodo.
-        </p>
-
-        <h2>Manual Import</h2>
-        <p>
-            If for whatever reason the Drag and Drop solution does not work you
-            can manually install the keybinding by copying the *.kkf file to
+            You can install keybindings by copying the *.kkf file to
             your schemes folder, which is located within your profile folder.
         </p>
         <p>

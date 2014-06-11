@@ -12,7 +12,7 @@ module.exports = {
             name: "Download"
             sub: [
                 name: "Archive"
-                link: "/framed/?http://downloads.activestate.com/Komodo/"
+                link: "http://downloads.activestate.com/Komodo/"
             ]
         ,
             name: "Customize"
@@ -28,7 +28,7 @@ module.exports = {
             link: "http://forum.komodoide.com/category/support"
             sub: [
                 name: "Documentation"
-                link: "/framed/?http://docs.activestate.com/komodo"
+                link: "http://docs.activestate.com/komodo"
             ,
                 name: "Report Bug"
                 link: "http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
@@ -38,10 +38,10 @@ module.exports = {
 
         support: [
             name: "Documentation"
-            link: "/framed/?http://docs.activestate.com/komodo"
+            link: "http://docs.activestate.com/komodo"
         ,
             name: "API Reference"
-            link: "/framed/?http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_top"
+            link: "http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_top"
         ,
             name: "&nbsp;"
             link: "#"
@@ -70,7 +70,7 @@ module.exports = {
 
         communicate: [
             name: "Contact Us"
-            link: "/framed/?http://www.activestate.com/company/contact-us"
+            link: "http://www.activestate.com/company/contact-us"
         ,
             name: "Blog"
         ,
@@ -82,7 +82,7 @@ module.exports = {
             target: "_blank"
         ,
             name: "Mailing Lists"
-            link: "/framed/?http://code.activestate.com/lists#ActiveState"
+            link: "http://code.activestate.com/lists#ActiveState"
         ]
 
         social: [
