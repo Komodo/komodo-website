@@ -1,5 +1,5 @@
 class install-npm-packages{
-  $npmPackages = ['docpad', 'bower', 'grunt']
+  $npmPackages = ['bower']
   package{ $npmPackages:
     ensure => 'installed',
     provider => 'npm',
@@ -7,15 +7,20 @@ class install-npm-packages{
   }
 }
 
-class install-apt-packages{
-  $packages = ['curl', 'build-essential', 'libssl-dev']
-  package{ $packages:
-    ensure => 'installed',
-  }
-}
+#class npm-install{
+#  exec{ "npm install":
+#    cwd => "/vagrant",
+#    path => 
+#  }
+#}
+#
+#class bower-install{
+#  exec{ "bower install":
+#    cwd => "/vagrant",
+#  }
+#}
 include git
 include nodejs
 include install-npm-packages
-
-#include make
-#include install-apt-packages
+#include npm-install
+#include bower-install

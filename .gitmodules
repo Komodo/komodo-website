@@ -13,6 +13,3 @@
 [submodule "src/resources"]
 	path = src/resources
 	url = git://github.com/Komodo/Komodo-Resources.git
-[submodule "puppet/modules/make"]
-	path = puppet/modules/make
-	url = https://github.com/Element84/puppet-make.git
