@@ -10,9 +10,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.name = "komodo-website"
     v.customize ["modifyvm", :id, "--memory", "1024"]
     #enalbe symlinking for in shared folders this won't work on Windows any way.
-    #v.customize ["setextradata", :id,
-    #             "VBoxInternal2/SharedFoldersEnableSymlinksCreate",
-    #             "1"]
+    v.customize ["setextradata", :id,
+                 "VBoxInternal2/SharedFoldersEnableSymlinksCreate//vagrant",
+                 "1"]
   end
   config.vm.hostname = "komodo.web"
   config.vm.network :public_network#, bridge: "Ethernet adapter Local Area Connection"
@@ -23,6 +23,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     puppet.options = ['--verbose']
   end
   # Install NVM to help with
-  config.vm.provision "shell", path: "install-nvm.sh"
+  #config.vm.provision "shell", path: "install-nvm.sh"
 end
 

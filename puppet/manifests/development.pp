@@ -8,13 +8,14 @@ class install-npm-packages{
 }
 
 class install-apt-packages{
-  $packages = ['curl']
+  $packages = ['curl', 'build-essential', 'libssl-dev']
   package{ $packages:
     ensure => 'installed',
   }
 }
 include git
-include make
-include install-apt-packages
-#include nodejs
-#include install-npm-packages
+include nodejs
+include install-npm-packages
+
+#include make
+#include install-apt-packages
