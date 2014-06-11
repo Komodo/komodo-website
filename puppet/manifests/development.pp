@@ -6,6 +6,15 @@ class install-npm-packages{
     require => Class['nodejs'],
   }
 }
+
+class install-apt-packages{
+  $packages = ['curl']
+  package{ $packages:
+    ensure => 'installed',
+  }
+}
 include git
-include nodejs
-include install-npm-packages
+include make
+include install-apt-packages
+#include nodejs
+#include install-npm-packages
