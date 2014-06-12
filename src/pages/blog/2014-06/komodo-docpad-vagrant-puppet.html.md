@@ -62,6 +62,7 @@ packages.
 
 ## Issues Resolved
 
+###"bower install" Failing when nothing else was failing
 Puppet's not always forthcoming with the error output.  To figure out an issue with
 ```ko-bower-install``` class in ```development.pp``` I ended up appending '''2> help.log''' to
 the command being run and finally found out that Puppet Exec commands are run as
@@ -69,8 +70,6 @@ root and Bower has issues with that:
 '''If you're having permission errors when using bower without sudo, please spend a
 few minutes learning more about how your system should work and make any necessary
 repairs.'''
-
-## Known Issues
 
 ###Symlink errors during ```npm install``` AKA. STUMPED
 This either means you didn't [set the VBox variable to enable Symlinks][5] OR you're
