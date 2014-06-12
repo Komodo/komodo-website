@@ -21,11 +21,13 @@ class ko-npm-install{
 }
 
 class ko-bower-install{
+  # make command silent to proceed
   exec{ "bower install":
     creates => "/vagrant/src/public/vendor",
     cwd => "/vagrant",
     path => $nodepath,
-    require => Class["install-npm-packages"]
+    require => Class["install-npm-packages"],
+    user => "vagrant"
   }
 }
 
