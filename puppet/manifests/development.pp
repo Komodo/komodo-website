@@ -12,16 +12,17 @@ $nodepath = ["/usr/local/node/node-default/bin", "/usr/local/sbin", "/usr/local/
 "/usr/sbin", "/usr/bin", "/sbin", "/bin", "/usr/games", "/opt/vagrant_ruby/bin"]
 
 class ko-npm-install{
-  exec{ "npm install":
+  exec{ "npm install 2> help.log": #not sure why npm install is now failing.
+                                    #Test fresh at work
     creates => "/vagrant/node_modules",
     cwd => "/vagrant",
     path => $nodepath,
-    require => Class['nodejs']
+    require => Class['nodejs'],
+    user => "vagrant"
   }
 }
 
 class ko-bower-install{
-  # make command silent to proceed
   exec{ "bower install":
     creates => "/vagrant/src/public/vendor",
     cwd => "/vagrant",
