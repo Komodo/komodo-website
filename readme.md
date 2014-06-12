@@ -48,7 +48,7 @@
 
 7. on the host machine edit your /etc/hosts file to point dev.komodoide.com to the IP address
 retrieved in step 4:
-`192.168.69.68 dev.komodoide.com`
+`192.168.0.101 dev.komodoide.com`
   * on Windows you can find your `hosts` file under `C:\Windows\System32\drivers\etc`, on mac/linux it is under `/etc/hosts`
   * on windows it is best to edit it using Notepad opened "as administrator"
 
