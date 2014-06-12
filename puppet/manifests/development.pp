@@ -8,26 +8,23 @@ class install-npm-packages{
   }
 }
 
-$nodepath = ["/usr/local/node/node-default/bin/", "/usr/local/bin"]
+$nodepath = ["/usr/local/node/node-default/bin", "/usr/local/sbin", "/usr/local/bin",
+"/usr/sbin", "/usr/bin", "/sbin", "/bin", "/usr/games", "/opt/vagrant_ruby/bin"]
 
 class ko-npm-install{
   exec{ "npm install":
-    command => "npm install",
     creates => "/vagrant/node_modules",
     cwd => "/vagrant",
     path => $nodepath,
-    refreshonly => true,
     require => Class['nodejs']
   }
 }
 
 class ko-bower-install{
   exec{ "bower install":
-    command => "bower install",
-    creates => "/vagrant",
+    creates => "/vagrant/src/public/vendor",
     cwd => "/vagrant",
     path => $nodepath,
-    refreshonly => true,
     require => Class["install-npm-packages"]
   }
 }
@@ -37,4 +34,3 @@ include nodejs
 include install-npm-packages
 include ko-npm-install
 include ko-bower-install
-
