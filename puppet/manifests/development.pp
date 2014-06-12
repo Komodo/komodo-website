@@ -29,8 +29,22 @@ class ko-bower-install{
     require => Class["install-npm-packages"]
   }
 }
+
+#class npm-install{
+#  exec{ "npm install":
+#    cwd => "/vagrant",
+#    path => 
+#  }
+#}
+#
+#class bower-install{
+#  exec{ "bower install":
+#    cwd => "/vagrant",
+#  }
+#}
 include git
 include nodejs
 include install-npm-packages
 include ko-npm-install
 include ko-bower-install
+
