@@ -16,6 +16,7 @@ class ko-npm-install{
     creates => "/vagrant/node_modules",
     cwd => "/vagrant",
     path => $nodepath,
+    refreshonly => true,
     require => Class['nodejs']
   }
 }
@@ -26,22 +27,11 @@ class ko-bower-install{
     creates => "/vagrant",
     cwd => "/vagrant",
     path => $nodepath,
+    refreshonly => true,
     require => Class["install-npm-packages"]
   }
 }
 
-#class npm-install{
-#  exec{ "npm install":
-#    cwd => "/vagrant",
-#    path => 
-#  }
-#}
-#
-#class bower-install{
-#  exec{ "bower install":
-#    cwd => "/vagrant",
-#  }
-#}
 include git
 include nodejs
 include install-npm-packages
