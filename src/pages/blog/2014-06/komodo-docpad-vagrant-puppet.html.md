@@ -1,7 +1,7 @@
 ---
 title: Komodo Website Development Deploy
 author: Carey Hoffman
-date: 2014-05-28
+date: 2014-06-17
 tags: [virtualbox, vagrant, pupper, shared folder, SharedFoldersEnableSymlinksCreate, docpad]
 description: Launch a development environment for the Komodo website (or any docpad site) using Vagrant, Puppet, Virtualbox
 layout: blog
@@ -86,13 +86,6 @@ only usually a problem if you're actively developing your Vagrant/Puppet setup.
 I found the [solution on (surprise!) Stackoverflow][3].  The answer from [harrie][4]
 is a little bit of VBox command line voodoo which I think is way more fun than any
 of the other answers
-
-## TODOs
-
-*Right now you need to manually create a symlink to the docpad executable into
-/usr/local/node/node-default/bin which shouldn't be necessary.
-*The class in Puppet that runs ```bower install``` does nothing
-
 
   [1]: /authors/#NathanRijksen
   [2]: /blog/2014-05/the-state-of-static-site-generators/
