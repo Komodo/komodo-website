@@ -26,7 +26,7 @@ To do this I used 3 pieces of technology:
  3. and the [VirtualBox Hyper-visor][Virtualbox]
 
 Using [Puppet] with [Vagrant], it was easy to keep the work separated into two
-distinct groups; VM configuration and environment configuration. Thankfully all
+distinct groups; VM configuration and  guest environment configuration. Thankfully all
 these technologies play together quite nicely, save for one minor issue that
 had me stumped. At some point after [Virtualbox] version 4.16 was released,
 Oracle disabled symlink creation in shared folders. But we're using Nodejs and
@@ -43,9 +43,11 @@ name and small memory footprint for the VM.
 ### Puppet
 
 Using [Puppet] to install packages made my life pretty easy. [Puppet] has a great
-resource in Puppet-Labs. For the most part, you can find a branch of each project
-on github. I added them as sub-modules to the Komodo-Website repository to keep
-things manageable.
+resource in the Puppet-Labs open source community.  It not only has [documentation][puppet-docs]
+but also the [puppet forge][puppet-forge] where you can find and download [Puppet]
+modules for almost any task.  You can usually find a branch of each project
+on github too. I added the pupper modules I needed as sub-modules to the Komodo-Website
+repository to keep things manageable.
 
 ## Work Flow
 
@@ -91,6 +93,8 @@ work, it's been easy to make changes to the site.
   [8]: https://github.com/Komodo/komodo-website/blob/master/Vagrantfile
   [9]: https://github.com/Komodo/komodo-website/blob/master/puppet/manifests/development.pp
   [Vagrant]: http://www.vagrantup.com/
-  [{uppet]: http://puppetlabs.com/
+  [puppet]: http://puppetlabs.com/
   [Virtualbox]: https://www.virtualbox.org/
   [ko-website]: https://github.com/Komodo/komodo-website
+  [puppet-docs]: http://docs.puppetlabs.com/
+  [puppet-forge]: https://forge.puppetlabs.com/
