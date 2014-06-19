@@ -1,7 +1,7 @@
 ---
 title: Working With Node.JS Through Vagrant, Puppet and VirtualBox
 author: Carey Hoffman
-date: 2014-06-17
+date: 2014-06-19
 tags: [virtualbox, vagrant, puppet, docpad]
 description: How I launched a development environment for the Komodo website (or any docpad site) using Vagrant, Puppet and Virtualbox.
 layout: blog
