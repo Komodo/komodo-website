@@ -33,7 +33,7 @@ Oracle disabled symlink creation in shared folders. But we're using Nodejs and
 npm soooo, we need symlinks. Thankfully Oracle allowed for this to be enabled
 using a [VBoxInternal2 setting](https://github.com/Komodo/komodo-website/commit/c65becde7cadc19ae2256e1b4d984169dfae1105#diff-23b6f443c01ea2efcb4f36eedfea9089R15).
 
-### [Vagrant]
+### Vagrant
 [Vagrant] was ridiculously easy to use.  [Their docs get your started in no time][7].
 You can see [my vagrant file on github][8].
 
