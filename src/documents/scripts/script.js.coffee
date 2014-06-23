@@ -348,10 +348,10 @@ jQuery ->
     # Hide footer overlap
     hideFooterOverlap = ->
         return unless jq('footer').length
-        if jq('footer').visible(true) and jq(".document-pricing .promotion").is(":visible") and jq(window).scrollTop()
+    
+        if jq(window).scrollTop() + jq(window).height() == jq(document).height()
             jq(".document-pricing .promotion").hide()
-
-        if ! jq('footer').visible(true) and ! jq(".document-pricing .promotion").is(":visible")
+        else
             jq(".document-pricing .promotion").show()
 
     if jq('footer').length and jq(".document-pricing .promotion").length
