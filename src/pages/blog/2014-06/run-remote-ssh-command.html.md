@@ -16,7 +16,7 @@ layout: blog
 This macro is currently set up to execute a single command, "ls -la", on the remote
 machine.  It piggy backs on the current connection used to access the remote file
 in the editor window.  Therefore you must have a remote file open when you run it.
-You could also modify this to ask you for the command to execute using [interpolation shortcuts](Interpolation %ask Shortcut).
+You could also modify this to ask you for the command to execute using [Interpolation %ask Shortcut][].
 
 ## Running
 
@@ -28,7 +28,7 @@ keybinding of your choice.
 
 <div class="centered">
     <div class="spacer"></div>
-    <a href="http://komodoide.com/resources/macros/toddw-as--bracewrapselection/" class="button big primary">
+    <a href="http://komodoide.com/resources/macros/cgchoffman--remotesshcommands/" class="button big primary">
         <i class="icon icon-eye"></i>
         View Resource
     </a>
