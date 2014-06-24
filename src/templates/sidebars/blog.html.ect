@@ -1,20 +1,20 @@
 <a href="/resources/submit-instructions/#pane-blogs" class="button big primary submit-content">
-    Submit Content
+    Отправить контент
 </a>
 <% if @document.layout is 'blog': %>
 <div class="info">
-    <h1>Blog Info</h1>
+    <h1>Информация о блоге</h1>
 
     <img src="/images/authors/<%= @document.author.replace(/[^a-zA-Z]/g,'') %>.jpg" alt="<%= @document.author %>">
     <p><strong>By:</strong> <a href="/authors#<%= @document.author.replace(/[^a-zA-Z]/g,'') %>"><%= @document.author %></a></p>
 
     <p>
-        <strong>Tags: </strong>
+        <strong>Теги: </strong>
         <% for tag in (@document.meta.tags || []): %>
         <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
         <% end %>
     </p>
-    <p><strong>Date Posted: </strong><%= @document.humanDate %></p>
+    <p><strong>Дата поста: </strong><%= @document.humanDate %></p>
 </div>
 <div class="clearfix"></div>
 <% end %>
@@ -31,7 +31,7 @@
     </ul>
     <% end %>
 
-    <h1>Recent Blogs</h1>
+    <h1>Новые записи</h1>
     <ul>
         <% for document in @_.first @getBlogsFiltered(), 10: %>
         <li>
@@ -43,7 +43,7 @@
     </ul>
 </div>
 <div class="screencasts">
-    <h1>Recent Screencasts</h1>
+    <h1>Новые скринкасты</h1>
     <% for k,item of @_.first(@vimeoFeeds.videos, 6): %>
     <a href="/screencasts/watch/<%= item.id %>-<%= item.title_sane %>">
         <i class="icon icon-youtube-play"></i>
