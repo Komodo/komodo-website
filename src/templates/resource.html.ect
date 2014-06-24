@@ -6,24 +6,24 @@ classNames: sidebar-left
 
 <% R = @document.resource %>
 
-<div class="beta">BETA</div>
+<div class="beta">БЕТА</div>
 
 <div class="push-right">
 <% if R.id: %>
 <div class="social-meta">
     <a href="<%- R.html_url %>/watchers" class="watchers button small">
         <i class="icon icon-eye"></i>
-        <strong>Watchers</strong>
+        <strong>Наблюдатели</strong>
         <span><%- R.watchers_count %></span>
     </a>
     <a href="<%- R.html_url %>/stargazers" class="stars button small">
         <i class="icon icon-star"></i>
-        <strong>Stars</strong>
+        <strong>Рейтинг</strong>
         <span><%- R.stargazers_count %></span>
     </a>
     <a href="<%- R.html_url %>/network" class="forks button small">
         <i class="icon icon-code-fork"></i>
-        <strong>Forks</strong>
+        <strong>Форки</strong>
         <span><%- R.forks_count %></span>
     </a>
 </div>
@@ -31,7 +31,7 @@ classNames: sidebar-left
 
 <div class="details-meta clearfix">
     <dl>
-        <dt>Author</dt>
+        <dt>Автор</dt>
         <dd>
             <a href="<%- R.owner.html_url %>">
                 <span><%- R.owner.login %></span>
@@ -39,21 +39,21 @@ classNames: sidebar-left
         </dd>
 
         <% if R.created_at: %>
-        <dt>Created</dt>
+        <dt>Создано</dt>
         <dd title="<%- @moment(R.created_at).format('LLL') %>">
             <%- @moment(R.created_at).fromNow() %>
         </dd>
         <% end %>
 
         <% if R.pushed_at || R.updated_at: %>
-        <dt>Updated</dt>
+        <dt>Обновлено</dt>
         <dd title="<%- @moment(R.pushed_at || R.updated_at).format('LLL') %>">
             <%- @moment(R.pushed_at || R.updated_at).fromNow() %>
         </dd>
         <% end %>
 
         <% if R.homepage: %>
-        <dt>Homepage</dt>
+        <dt>Домашняя страница</dt>
         <dd>
             <a href="<%- R.homepage %>">
                 <%- R.homepage %>
@@ -71,7 +71,7 @@ classNames: sidebar-left
         <% end %>
 
         <% if R.has_issues: %>
-        <dt>Issues</dt>
+        <dt>Проблемы</dt>
         <dd>
             <span><%- R.open_issues_count %></span>
             <a href="<%- R.html_url %>/issues">view</a>
@@ -79,14 +79,14 @@ classNames: sidebar-left
         <% end %>
 
         <% if R.has_wiki: %>
-        <dt>Wiki</dt>
+        <dt>Вики</dt>
         <dd>
             <a href="<%- R.html_url %>/wiki">view</a>
         </dd>
         <% end %>
 
         <% if R.has_downloads: %>
-        <dt>Downloads</dt>
+        <dt>Скачало</dt>
         <dd>
             <span><%- R.download_count %></span>
             <a href="<%- R.html_url %>/releases">view</a>
@@ -104,7 +104,7 @@ classNames: sidebar-left
             <img src="http://gravatar.com/avatar/<%- R.owner.gravatar_id %>?d=identicon&s=18">
         </a>
         <% else: %>
-        <i class="icon icon-user" title="Author"></i>
+        <i class="icon icon-user" title="Автор"></i>
         <% end %>
         <a href="<%- R.owner.html_url %>">
             <span><%- R.owner.login %></span>
@@ -112,7 +112,7 @@ classNames: sidebar-left
     </span>
     <% if R.homepage or R.html_url: %>
     <span class="homepage">
-        <i class="icon icon-link" title="Homepage"></i>
+        <i class="icon icon-link" title="Домашняя страница"></i>
         <a href="<%- R.homepage || R.html_url %>">
             <%- R.homepage || R.html_url %>
         </a>
@@ -126,7 +126,7 @@ classNames: sidebar-left
 
 <p class="description"><%- R.description %></p>
 
-<h2>Download</h2>
+<h2>Скачать</h2>
 <div class="download">
     <% if R.releases and R.releases.length: %>
         <% if R.releases.length > 1: %>
@@ -135,7 +135,7 @@ classNames: sidebar-left
             <option value="<%- release.id %>">
                 <%- release.name %>
                 <% if release.prerelease: %>
-                    (Pre-Release)
+                    (Пре-реллиз)
                 <% end %>
             </option>
             <% end %>
@@ -148,19 +148,19 @@ classNames: sidebar-left
                 <h3>
                     <%- release.name %>
                     <% if release.prerelease: %>
-                    <span>(Pre-Release)</span>
+                    <span>(Пре-релиз)</span>
                     <% end %>
                 </h3>
                 <% end %>
                 <div class="release-meta">
                     <span class="homepage">
-                        <i class="icon icon-link" title="View on Github"></i>
+                        <i class="icon icon-link" title="Просмотреть на Github"></i>
                         <a href="<%- release.html_url %>">
                             <%- release.html_url %>
                         </a>
                     </span>
                     <span class="last-update">
-                        <i class="icon icon-clock-o" title="Released"></i>
+                        <i class="icon icon-clock-o" title="Дата релиза"></i>
                         <span><%- @moment(release.created_at).fromNow() %></span>
                     </span>
                 </div>
@@ -172,10 +172,10 @@ classNames: sidebar-left
                                <div>
                                <a href="https://github.com/<%- R.full_name %>/releases/download/<%- release.tag_name %>/<%- asset.name %>" class="button big primary">
                                    <i class="icon icon-download"></i>
-                                   Download "<%- asset.label || asset.name %>"
+                                   Скачать "<%- asset.label || asset.name %>"
                                </a>
                                <div>
-                                   Downloaded <strong><%- asset.download_count %></strong> times
+                                   Скачать <strong><%- asset.download_count %></strong> times
                                </div>
                                </div>
                            <% end %>
@@ -184,7 +184,7 @@ classNames: sidebar-left
                    <div class="source">
                        <a href="https://github.com/<%- R.full_name %>/archive/<%- release.name %>.zip" class="button">
                            <i class="icon icon-download"></i>
-                           Download Source
+                           Скачать исходный код
                        </a>
                    </div>
                 </div>
@@ -196,7 +196,7 @@ classNames: sidebar-left
         <div class="files">
             <a href="<%- R.raw_url %>" class="button big primary">
                 <i class="icon icon-download"></i>
-                Download Source
+                Скачать исходный код
             </a>
         </div>
     <% end %>
@@ -204,7 +204,7 @@ classNames: sidebar-left
         <div class="files">
             <a href="https://github.com/<%- R.full_name %>/archive/master.zip" class="button big primary">
                 <i class="icon icon-download"></i>
-                Download Source
+                Скачать исходный код
             </a>
         </div>
     <% end %>
