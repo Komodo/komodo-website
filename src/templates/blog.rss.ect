@@ -1,10 +1,10 @@
 <rss version="2.0">
     <channel>
         <generator>NFE/1.0</generator>
-        <title>Komodo Blogs</title>
+        <title>Блоги Komodo</title>
         <link>http://komodoide.com/blog/</link>
-        <language>en</language>
-        <webMaster>support@activestate.com (ActiveState Support)</webMaster>
+        <language>ru</language>
+        <webMaster>support@activestate.com (Поддержка ActiveState)</webMaster>
         <!--  Do we need/want this?  <copyright>&copy;2014 Google</copyright>-->
         <% d = new Date; %>
         <lastBuildDate><%= d.toGMTString() %></lastBuildDate>
@@ -22,7 +22,7 @@
             <pubDate><%= document.humanDate %></pubDate>
             <author><%= document.author %></author>
             <descirption><%- document.description %></descirption></p>
-            <a href="<%= document.url%>">Read More...</a>
+            <a href="<%= document.url%>">Читать далее...</a>
         </item>
         <% end %>
     </channel>
