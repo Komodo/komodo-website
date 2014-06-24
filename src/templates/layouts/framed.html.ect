@@ -33,18 +33,16 @@
         <header>
             <div class="outer normalize">
                 <div class="buttons">
-                    <a class="button">Close this Frame</a>
-                    <a class="button primary" href="/">Back to KomodoIDE.com</a>
+                    <a class="button">Закрыть этот фрейм</a>
+                    <a class="button primary" href="/">Вернуться на KomodoIDE.com</a>
                 </div>
                 <div class="warning">
                     <% if @content.trim().length: %>
                     <%- @content %>
                     <% else: %>
                     <p>
-                        <strong>Heads up: </strong>
-                        KomodoIDE.com is still under development, as such not all
-                        sections have transitioned from our corporate site yet. You are
-                        being directed to our corporate site.
+                        <strong>Внимание: </strong>
+                        KomodoIDE.com находится в стадии разработки, и не все секции перешли с нашего корпоративного сайта. Вы будете перенаправлены на наш корпоративный сайт.
                     </p>
                     <% end %>
                 </div>
