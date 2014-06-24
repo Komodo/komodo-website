@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="beta">BETA</div>
+<div class="beta">БЕТА</div>
 
 <%
     resources = @getCollection(@document.pagedCollection).findAllLive({}, [date: -1]).toJSON()
@@ -16,7 +16,7 @@ layout: default
             <div class="meta push-right">
                 <% if R.download_count: %>
                 <span class="downloads">
-                    <i class="icon icon-download" title="Total Downloads"></i>
+                    <i class="icon icon-download" title="Всего скачек"></i>
                     <span><%- R.download_count %></span>
                 </span>
                 <% end %>
@@ -35,7 +35,7 @@ layout: default
                 </span>
                 <% end %>
                 <br>
-                <span class="updated" title="Last updated on <%- @moment(R.pushed_at || R.updated_at).format('LLL') %>">
+                <span class="updated" title="Последнее обновление от <%- @moment(R.pushed_at || R.updated_at).format('LLL') %>">
                     <i class="icon icon-clock-o"></i>
                     <span><%- @moment(R.pushed_at || R.updated_at).fromNow() %></span>
                 </span>
