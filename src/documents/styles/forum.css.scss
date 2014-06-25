@@ -44,6 +44,11 @@ a:visited
     }
 }
 
+#topic-list.categories a.title:visited:not(.badge-notification)
+{
+    color: lighten($color-base-link, 10%) !important;
+}
+
 .btn:not(.btn-primary):not(.btn-danger):not(.btn-social):not(.ok):not(.cancel),
 .category-breadcrumb li.has-drop
 {
