@@ -1,5 +1,5 @@
 ---
-title: Python - 10% performance boost by using Profile Guided Optimization (PGO)
+title: Python Performance Boost by using Profile Guided Optimization
 author: Todd Whiteman
 date: 2014-06-25
 tags: [python, pgo, performance, optmization]
@@ -7,8 +7,8 @@ description: I've been examing the benefits of using Profile Guided Optimization
 layout: blog
 ---
 
-By using GCC PGO when building Python, I've managed to achieve a healthy 10%
-speedup for CPU bound Python programs.
+By using GCC PGO when building the Python interpreter, I've managed to achieve a
+healthy **10% speedup** for CPU bound Python programs.
 
 ## About PGO
 
