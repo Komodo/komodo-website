@@ -33,7 +33,7 @@ Benchmarking programs used:
 
 This is method I've used to build Python on Linux using GCC and PGO:
 
-```
+```bash
 # unpack it
 wget https://www.python.org/ftp/python/2.7.7/Python-2.7.7.tgz
 tar xf Python-2.7.7.tgz
@@ -74,6 +74,12 @@ and the raw chart data:
 | pybench      |   4285ms      |   3792ms     |    13%     |
 | pyDes        |   5219ms      |   4733ms     |    10%     |
 
+
+You may notice that pyDes had a smaller improvement than pybench, and that's
+caused by pybench being the application that the optimization was derived from -
+so pybench is the best case scenario. If your using PGO yourself, you should be
+running (optimizing) using your real world application, in order to get the most
+benefit.
 
 ## Summary
 
