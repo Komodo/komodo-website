@@ -1,14 +1,11 @@
 ---
-title: Python - 10% performance improvement by using Profile Guided Optimization (PGO)
+title: Python - 10% performance boost by using Profile Guided Optimization (PGO)
 author: Todd Whiteman
 date: 2014-06-25
 tags: [python, pgo, performance, optmization]
 description: I've been examing the benefits of using Profile Guided Optimization for building Python - with some success.
-
 layout: blog
 ---
-
-## Summary
 
 By using GCC PGO when building Python, I've managed to achieve a healthy 10%
 speedup for CPU bound Python programs.
@@ -67,25 +64,8 @@ make install
 
 Here the results of PGO v's non PGO builds:
 
-<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<script type="text/javascript">
-  google.load("visualization", "1", {packages:["corechart"]});
-  google.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Program',  'Without PGO', 'With PGO'],
-      ['pybench',   4285,          3792],
-      ['pydes',     5219,          4733],
-    ]);
-
-    var options = {
-      title: 'Performance'
-    };
-
-    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-  }
-</script>
+<div id="chart_div">
+</div>
 
 and the raw chart data:
 
@@ -94,3 +74,35 @@ and the raw chart data:
 | pybench      |   4285ms      |   3792ms     |    13%     |
 | pyDes        |   5219ms      |   4733ms     |    10%     |
 
+
+## Summary
+
+So PGO is more work during the compilation step - but it does have a nice
+performance benefit one it's fully compiled.
+
+Does this mean Komodo will be using PGO builds sometime in the future? We
+certainly hope so, as the underlying Firefox code base does support it... we
+should be able to add the other relevant parts to get a complete PGO Komodo
+build... and I am excited to take on this project!
+
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Program',  'Without PGO (ms)', 'With PGO (ms)'],
+      ['pybench',   4285,               3792],
+      ['pydes',     5219,               4733],
+    ]);
+
+    var options = {
+      title: 'PGO Performance Comparison for Python 2.7.7 on Linux',
+      vAxis: { minValue: 0 },
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
