@@ -3,14 +3,14 @@ title: Komodo 9 Preview
 author: Todd Whiteman
 date: 2014-06-30
 tags: [release, nightly, preview]
-description: A glimpse of what Komodo IDE 9 will be like.
+description: A glimpse of Komodo IDE 9 - check out what we've working on in the last few months.
 layout: blog
 ---
 
 We are giving a preview of what will be inside Komodo IDE 9, and we'll be making
 nightly releases here-on-out, to make it easy for users to keep up-to-date.
 
-You can download the lastest Komodo IDE 9 pre-release from here:
+You can download the latest Komodo IDE 9 pre-release from here:
 http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/
 
 Just remember, this is alpha software - which means it's not thoroughly hardened
@@ -42,7 +42,7 @@ follow. So far we've been concentrating on two main areas:
 * **Startup** - we've managed to improve Komodo startup times by around 15%.
 
 * **Editor typing speed** - various editing features have been improved, which
-  should be most noticable in larger files, especially HTML/XML.
+  should be most noticeable in larger files, especially HTML/XML.
 
 ### Add-on Changes
 
@@ -65,7 +65,7 @@ might as well just be hidden).
 
 * **Python 3.4** - now supported for debugging, etc...
 * **Copy find results** - which can be used via the toolbar in the find results widget
-* **Mozillla 31** - Komodo is now built on top of the Mozilla 31 code base
+* **Mozilla 31** - Komodo is now built on top of the Mozilla 31 code base
   
 
 ## Information for Add-on developers
