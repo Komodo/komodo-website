@@ -8,3 +8,8 @@ module.exports =
     "edit-osx": "http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-macosx-x86_64.dmg"
     "edit-linux": "http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-linux-x86.tar.gz"
     "edit-linux64": "http://downloads.activestate.com/Komodo/releases/8.5.3/Komodo-Edit-8.5.3-14067-linux-x86_64.tar.gz"
+
+    "preview-ide-win32": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991.msi"
+    "preview-ide-osx": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-macosx-x86_64.dmg"
+    "preview-ide-linux": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-linux-x86.tar.gz"
+    "preview-ide-linux64": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-macosx-x86_64.dmg"
