@@ -105,7 +105,7 @@ Our users are given the opportunity to "opt-in" to having their information used
 
 ## Opting Out
 
-Periodically, ActiveState notifies our users of new products, announcements, upgrades, and updates. To unsubscribe from ActiveState email updates, click opt out at the bottom of the next email you receive from us. Please be aware that you may not opt out of receiving information regarding the initial use, evaluation, or expiration of our products or services.
+Periodically, ActiveState notifies our users of new products, announcements, upgrades, and updates. To unsubscribe from ActiveState email updates, click "unsubscribe" at the bottom of the next email you receive from us. Please be aware that you may not opt out of receiving information regarding the initial use, evaluation, or expiration of our products or services.
 
 ## Notification of Changes
 
