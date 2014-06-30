@@ -106,9 +106,6 @@ the future builds:
   search highlighting, optimal layouts, custom scope searches, ... you can stop
   drooling now.
 
-* *Package Manager Integration* - Use Composer, NPM, pip, etc. right from inside
-  Komodo.
-
 * *Symbol Browsing* - you'll be able to search for classes/methods across your
   entire project, not just the current file
 
