@@ -12,4 +12,4 @@ module.exports =
     "preview-ide-win32": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991.msi"
     "preview-ide-osx": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-macosx-x86_64.dmg"
     "preview-ide-linux": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-linux-x86.tar.gz"
-    "preview-ide-linux64": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-macosx-x86_64.dmg"
+    "preview-ide-linux64": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-trunk/Komodo-IDE-9.0.0-alpha1-85991-linux-x86_64.tar.gz"
