@@ -1,5 +1,5 @@
 ---
-title: Komodo 9 Pre-Release
+title: Komodo 9 Pre-Release Now Available!
 author: Todd Whiteman
 date: 2014-06-30
 tags: [release, nightly, preview]
