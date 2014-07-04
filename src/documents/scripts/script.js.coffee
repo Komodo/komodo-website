@@ -145,12 +145,15 @@ jQuery ->
             else
                 _gak('send', 'pageview')
 
-        if _gaq? || _gak?
+        if _gaq? || _gak? || clicky?
             jq("a[data-analytics]").click ->
                 elem = jq this
                 [category, action, label] = elem.data("analytics").split(":")
                 _gak("send", "event", category, action, label) if _gak?
                 _gaq.push(['_trackEvent', category, action, label]) if _gaq?
+                
+                clicky.log(window.location.href, [category, action, label].join(":"),
+                           (if category is "download" then "download" else "outbound")) if clicky?
 
     # Tooltips
     bindTooltips = ->

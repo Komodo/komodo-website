@@ -40,5 +40,11 @@
         <!-- Scripts -->
         <%- @getBlock('scripts').add(@getGruntedScripts()).toHTML() %>
 
+        <!-- Analytics -->
+        <% if docpad.getEnvironment() is 'static': %>
+        <a title="Web Analytics" href="http://clicky.com/100751152"><img alt="Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751152ns.gif" />
+        <% end %>
+
     </body>
 </html>
