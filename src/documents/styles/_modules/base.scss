@@ -214,11 +214,28 @@ table
         padding: 8px;
     }
 
+    &.centered
+    {
+        th, td
+        {
+            text-align: center;
+        }
+    }
+
     th
     {
         background: rgba(0,0,0,0.05);
-        border-bottom: 2px solid rgb(193, 193, 193);
         font-weight: bold;
+    }
+
+    thead th
+    {
+        border-bottom: 2px solid rgb(193, 193, 193);
+    }
+
+    tbody th
+    {
+        border-right: 2px solid rgb(193, 193, 193);
     }
 
     tr:nth-child(even) td
@@ -226,7 +243,8 @@ table
         background: rgba(0,0,0,0.02);
     }
 
-    tr:not(:last-child) td
+    tr:not(:last-child) td,
+    tbody tr:not(:last-child) th
     {
         border-bottom: 1px solid rgb(193, 193, 193);
     }

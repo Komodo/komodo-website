@@ -80,89 +80,16 @@ priority: 0.7
 
                 <p>Individuals & Freelancers</p>
 
+                <p>
+                    <a href="#personal-info" data-modal data-analytics="modal:personal-info">Learn More</a>
+                </p>
+
                 <div class="limited-badge">
                     Limited Time Only!
                 </div>
 
-                <div id="personal-buy" class="hide" title="Do You Qualify?">
-                    <p>
-                        <strong>
-                            Not everyone qualifies for a Personal Edition License!
-                            You do not qualify if -
-                        </strong>
-                    </p>
-
-                    <ul class="disc">
-                        <li>
-                            You are purchasing this not using your own funds; or
-                        </li>
-                        <li>
-                            You are being reimbursed by a company for your purchase.
-                        </li>
-                    </ul>
-
-                    <p>
-                        You are qualified to purchase a full version of Komodo IDE
-                        for special pricing (the "<em>Personal Edition License</em>") if you
-                        agree with the following license restrictions:
-                    </p>
-
-                    <ul class="disc">
-                        <li>
-                            a <em>Personal Edition license</em> cannot be transferred to
-                            another owner
-                        </li>
-                        <li>
-                            a company cannot reimburse the individual that purchased
-                            a <em>Personal Edition license</em>
-                        </li>
-                        <li>
-                            an Upgrades and Support subscription cannot be included
-                            with a <em>Personal Edition license</em>
-                        </li>
-                        <li>
-                            an individual cannot purchase more than one Personal
-                            Edition license (no bulk purchases)
-                        </li>
-                        <li>
-                            all the other license terms in the License Agreement
-                            specified below.
-                        </li>
-                    </ul>
-
-                    <p>
-                        <small>
-                            BY INSTALLING THE SOFTWARE, OR, WHERE APPLICABLE, CHOOSING
-                            THE “I ACCEPT…” OPTION, YOU INDICATE THAT YOU HAVE READ,
-                            UNDERSTOOD AND ACCEPT THE
-                            <a href="http://www.activestate.com/komodo-ide/license-agreement">TERMS AND CONDITIONS OF THE LICENSE (the “License
-                                Agreement)
-                            </a>
-                            . THIS LICENSE AGREEMENT SET FORTH THE TERMS OF YOUR
-                            SOFTWARE LICENSE AND OVERRIDES THE TERMS FOUND IN THE
-                            INSTALLERS.
-                        </small>
-                    </p>
-
-                    <hr>
-
-                    <div class="centered">
-                        <p>
-                            <input type="checkbox" id="personal-accept" data-enables="buy-personal">
-                            <label for="personal-accept">
-                                I Accept
-                                <a href="http://www.activestate.com/komodo-ide/license-agreement">
-                                    The License Agreement
-                                </a>
-                            </label>
-                        </p>
-                        <p>
-                            <a href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart&coupon=PERSONALEDITION" id="buy-personal" class="button primary big disabled" data-analytics="buy:personal:commit">
-                                Buy Personal License
-                            </a>
-                        </p>
-                    </div>
-                </div>
+                <%- @partial('modals/buy-personal.html', @) %>
+                <%- @partial('modals/personal-info.html', @) %>
 
                 <div class="buttons">
                     <a class="button" href="#personal-buy" data-modal data-analytics="buy:personal:intend">Buy Now</a>
@@ -352,8 +279,8 @@ priority: 0.7
             </li>
         </ul>
         <h3 class="centered">
-            These licenses give you the full Komodo IDE experience and come with all supported languages,<br>
-            restrictions are only placed on who can purchase each license.<br>
+            Not sure which license is right for you?<br>
+            Check out our <a href="/license-comparison">License Comparison Chart</a>
         </h3>
     </div>
     <ul class="block hide" id="bundles">
