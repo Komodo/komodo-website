@@ -24,7 +24,7 @@ Here's the macro in action, as I press the double-quote " key:
 
 <img src="/images/blog/2014-06/brace_wrap_selection.gif" style="vertical-align: middle">
 
-## Running
+## Installation
 
 To install the macro simply hit the "View Resource" and "Install Instructions"
 links below.

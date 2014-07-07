@@ -33,7 +33,7 @@ it doesn't guarantee that two adjacant commits do not share the same color.
 
 <img src="/images/blog/2014-05/scc_annotate.png" style="vertical-align: middle">
 
-## Running
+## Installation
 
 To install the macro simply hit the "View Resource" and "Install Instructions"
 links below.

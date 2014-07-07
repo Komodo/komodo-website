@@ -18,7 +18,7 @@ machine.  It piggy backs on the current connection used to access the remote fil
 in the editor window.  Therefore you must have a remote file open when you run it.
 You could also modify this to ask you for the command to execute using [Interpolation %ask Shortcut][].
 
-## Running
+## Installation
 
 To install the macro simply hit the "View Resource" and "Install Instructions"
 links below.
