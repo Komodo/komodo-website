@@ -1,9 +1,9 @@
 ---
-title: Easy Workspace Save and Open tool
+title: Workspace Save and Restore Macro
 author: Carey Hoffman
-date: 2014-07-07
-tags: [macro, javascript, quote, files, save, workspace, DOM]
-description: A Komodo startup macro that injects a menu element at startup into the Tools menu, allowing users to save a current workspace(all the currently open files).
+date: 2014-07-07 06:00
+tags: [macro, javascript, restore, workspace]
+description: A Komodo startup macro that injects a menu element at startup into the Tools menu, allowing users to save the current workspace (all the currently opened files) and restore previously saved ones.
 layout: blog
 ---
 
@@ -14,25 +14,24 @@ layout: blog
 ## The Macro
 
 This is a startup macro (set to trigger when Komodo starts up) that injects a
-menu element ("Workspace") at startup into the Tools menu, allowing users to save a current
-workspace(all the currently open files).
+menu element ("Workspace") at startup into the Tools menu, allowing users to save the current
+workspace (all the currently opened files) and restore previously saved ones. It made for
+a pretty interesting macro, not only for utility but also for learning.  I've dug into some
+different aspects of Komodo that I haven't played with before or had less experience with:
 
-## About 
-
-This is a pretty interesting macro, not only for utility but for learning.  I've
-dug into some different aspects of Komodo that I haven't played with before or had
-littler experience with:
 1. [ko.filepicker](https://github.com/Komodo/KomodoEdit/blob/679c4465020309259cf95d0765962d6f785c2423/src/chrome/komodo/content/library/filepickers.p.js)
 to using native file save/open dialogs.
+
 2. [koFileEx](https://github.com/Komodo/KomodoEdit/blob/d3e7786b103c943b8af573b8c118ebf2dc347c8d/src/views/koFileEx.py)
 to programmatically generate files.
 3. Exploring ko.views.manager in the JS Shell in the Komodo Extension Developer
 Add-on to see what information I could get from my open documents.
+
 4. Using Komodos Dom Inspector to find necessary elements in the Tools menu to then use
 the [xtk.domutils](https://github.com/Komodo/KomodoEdit/blob/d3e7786b103c943b8af573b8c118ebf2dc347c8d/src/chrome/xtk/content/domutils.js)
 to create and append my new menu elements into the Komodo UI.
 
-## Running
+## Installation
 
 To install the macro simply hit the "View Resource" and "Install Instructions"
 links below.
@@ -42,7 +41,7 @@ Once installed - open the Macro properties and set the macro to trigger on the
 
 <div class="centered">
     <div class="spacer"></div>
-    <a href="http://komodoide.com/resources/macros/cgchoffman--workspacetool/" class="button big primary">
+    <a href="http://komodoide.com/resources/macros/cgchoffman--worspacesaverestoretool/" class="button big primary">
         <i class="icon icon-eye"></i>
         View Resource
     </a>
