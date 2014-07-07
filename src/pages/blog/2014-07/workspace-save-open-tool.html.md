@@ -1,7 +1,7 @@
 ---
 title: Easy Workspace Save and Open tool
 author: Carey Hoffman
-date: 2014-06-09
+date: 2014-07-07
 tags: [macro, javascript, quote, files, save, workspace, DOM]
 description: A Komodo startup macro that injects a menu element at startup into the Tools menu, allowing users to save a current workspace(all the currently open files).
 layout: blog
