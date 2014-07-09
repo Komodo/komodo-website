@@ -2,7 +2,7 @@
 title: Best Coding Fonts
 author: Nathan Rijksen
 date: 2014-07-09 06:00
-tags: [fonts, eyecandy, resources]
+tags: [fonts, eyecandy, resources, customization]
 description: Each day us programmers spend hours upon hours looking at our screen, and the main thing we look at is not our IDE, it's not our software or our browser; it's our code. So it's only natural that our code should be a pleasure to look at. One side of this is completely in your own hands; writing clean and sensible code. The other side slightly less so; the font you choose to represent your code.
 layout: blog
 classNames: lightbox-group document-blog-entry
