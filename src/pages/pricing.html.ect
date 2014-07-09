@@ -47,7 +47,11 @@ priority: 0.7
         <ul class="block">
             <li class="enterprise">
                 <h2>Enterprise License</h2>
-                <figure>$295</figure>
+
+                <a href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
+                        data-analytics="buy:komodo:single">
+                    <figure>$295</figure>
+                </a>
 
                 <p>
                     Companies & Organizations
@@ -76,7 +80,10 @@ priority: 0.7
             </li>
             <li class="personal">
                 <h2>Personal License</h2>
-                <figure><big>$89</big></figure>
+
+                <a href="#personal-buy" data-modal data-analytics="buy:personal:intend">
+                    <figure><big>$89</big></figure>
+                </a>
 
                 <p>Individuals & Freelancers</p>
 
@@ -84,9 +91,11 @@ priority: 0.7
                     <a href="#personal-info" data-modal data-analytics="modal:personal-info">Learn More</a>
                 </p>
 
-                <div class="limited-badge">
-                    Limited Time Only!
-                </div>
+                <a href="#personal-buy" data-modal data-analytics="buy:personal:intend">
+                    <div class="limited-badge">
+                            Limited Time Only!
+                    </div>
+                </a>
 
                 <%- @partial('modals/buy-personal.html', @) %>
                 <%- @partial('modals/personal-info.html', @) %>

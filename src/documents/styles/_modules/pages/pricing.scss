@@ -174,7 +174,8 @@
                     }
                 }
 
-                & > figure
+                & > figure,
+                & > a > figure
                 {
                     left: 50%;
                     margin-left: -32px;
@@ -342,7 +343,7 @@
                 background-color: #C4AB81;
             }
 
-            li.personal > figure
+            li.personal > a > figure
             {
                 background-color: #8a629b;
             }
