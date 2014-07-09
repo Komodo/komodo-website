@@ -113,18 +113,19 @@
         }
     }
 
-    .readme
+    .readme,
+    .comments
     {
         background: rgba(255,255,255,0.9);
         padding: 10px;
         border-radius: 3px;
 
-        pre
+        &.readme pre
         {
             line-height: 1.5;
         }
 
-        code
+        &.readme code
         {
             line-height: 1.5;
             white-space: pre-wrap;

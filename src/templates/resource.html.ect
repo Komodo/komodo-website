@@ -211,9 +211,24 @@ classNames: sidebar-left
 </div>
 
 <div class="clearfix"></div>
-<% if R.readme: %>
-<h2>Readme</h2>
-<div class="readme user-input">
-<%- R.readme.content %>
+
+<div class="tabs">
+    <ul>
+        <% if R.readme: %>
+        <li><a href="#readme">Readme</a></li>
+        <% end %>
+        <li><a href="#comments">Comments</a></li>
+    </ul>
+    <% if R.readme: %>
+        <div id="readme" class="readme user-input">
+        <%- R.readme.content %>
+        </div>
+    <% end %>
+    <div id="comments" class="comments">
+        <p>
+            Please note that the comment section is not a reliable resource for
+            support.
+        </p>
+        <%- @partial('comments.html', @) %>
+    </div>
 </div>
-<% end %>
