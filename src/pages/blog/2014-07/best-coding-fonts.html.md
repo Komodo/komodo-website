@@ -54,9 +54,9 @@ side of this is completely in your own hands; writing clean and sensible code.
 The other side slightly less so; the font you choose to represent your code.
 
 There are tons of articles on what is (subjectively) the "best" coding font out
-there, but they all seem to focus on the usefulnes of the font, ie. how the font
+there, but they all seem to focus on the usefullnes of the font, ie. how the font
 facilitates you to write code more efficiently. Whilst this is definitely an
-important point I feel that what is equially important is the attractiveness of
+important point I feel that what is equally important is the attractiveness of
 the font, what's the point of it being efficient if it's not making you feel
 good about your code? Your font is supposed to make you "want" to code, it's
 supposed to make your code look THAT much better. This is what I want to focus
@@ -217,7 +217,7 @@ planned for the future."*
 Ubuntu Sans Mono is a bit different, it tends to feel more condensed and has the
 distinct slanted design the Ubuntu fonts are "known" for. I find it a pleasing
 design but it feels more appropriate for logo's than for large blocks of text or
-code, it feels like it's trying to proove something rather than just "be a font".
+code, it feels like it's trying to prove something rather than just "be a font".
 
 I had to significantly increase the font size and line spacing for the font to
 render properly for me, after that it was quite enjoyable but in the end just
