@@ -44,6 +44,20 @@
         margin: 10px;
         max-width: 95%;
     }
+
+    .toc
+    {
+        background: rgba(255,255,255,0.5);
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 10px;
+        margin: 10px;
+
+        & > ul
+        {
+            margin: 0;
+            padding-left: 15px;
+        }
+    }
 }
 
 .document-blog-entry.drupal-import

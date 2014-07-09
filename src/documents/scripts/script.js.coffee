@@ -186,6 +186,15 @@ jQuery ->
                navigateByImgClick: true
                preload: [0,1]
 
+        jq('div.lightbox-group').magnificPopup
+            delegate: 'a.lightbox-entry'
+            type:'image'
+            removalDelay: 500
+            gallery:
+               enabled: true
+               navigateByImgClick: true
+               preload: [0,1]
+
         jq('.slideshow').each ->
             elem = jq this
             elem.slideshow
