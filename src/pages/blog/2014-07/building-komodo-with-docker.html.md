@@ -32,7 +32,7 @@ settings were transferred in no time, the only thing left was getting my Komodo
 build going, oh boy was I in for a chore.
 
 I'll save you the details but what it came down to is Arch uses Python 3 by default
-and when using Python 2 I ran into a bnch of unicode linking issues. I spend well
+and when using Python 2 I ran into a bunch of unicode linking issues. I spent well
 over 2 days modifying build scripts to get the Komodo build going and got there 99%
 of the way. In my frustration I vented on IRC about how I wish I could just run GUI
 apps in Docker when Mark Yen (one of the Komodo devs) simply said "you can - just
