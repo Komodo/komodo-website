@@ -3,7 +3,7 @@ title: Building Komodo with Docker
 author: Nathan Rijksen
 date: 2014-07-15 06:00
 tags: [development, docker, build, arch linux, antergos]
-description: Each day us programmers spend hours upon hours looking at our screen, and the main thing we look at is not our IDE, it's not our software or our browser; it's our code. So it's only natural that our code should be a pleasure to look at. One side of this is completely in your own hands; writing clean and sensible code. The other side slightly less so; the font you choose to represent your code.
+description: How I "accidentally" made building on Linux much easier by using Docker and SSH X11 port forwarding.
 layout: blog
 ---
 
@@ -77,6 +77,9 @@ of the time, and they won't take nearly as long.
 
 ## Final Thoughts
 
+I want to credit [pelle.io] for providing me with the resources I needed to figure
+much of the docker stuff out, [his blog and script][4] were of tremendous help to me.
+
 I hope to evolve upon the existing Docker script a lot in the future, but it will
 depend on how many people end up using it. Particularly I'd like to make the
 build process even simpler by already supplying the built mozilla dependencies,
@@ -89,3 +92,4 @@ Here's hoping this leads to some interesting contributions! :)
    [1]: https://github.com/Komodo/KomodoEdit
    [2]: https://github.com/Komodo/KomodoEdit#building-with-docker
    [3]: https://github.com/Komodo/KomodoEdit/blob/trunk/BUILD.txt
+   [4]: http://pelle.io/delivering-gui-applications-with-docker/
