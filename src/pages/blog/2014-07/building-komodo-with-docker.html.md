@@ -31,12 +31,12 @@ Everything went great, Arch/Antergos was running smoothly and all of my apps and
 settings were transferred in no time, the only thing left was getting my Komodo
 build going, oh boy was I in for a chore.
 
-I'll safe you the details but what it came down to is Arch uses Python 3 by default
-and uses a different Unicode version then Komodo requires. I spend well over 2 days
-modifying build scripts to get the Komodo build going and got there 99% of the way.
-In my frustration I vented on IRC about how I wish I could just run GUI apps in
-Docker when Mark Yen (one of the Komodo devs) simply said "you can - just use SSH
-with X11 forwarding".
+I'll save you the details but what it came down to is Arch uses Python 3 by default
+and when using Python 2 I ran into a bnch of unicode linking issues. I spend well
+over 2 days modifying build scripts to get the Komodo build going and got there 99%
+of the way. In my frustration I vented on IRC about how I wish I could just run GUI
+apps in Docker when Mark Yen (one of the Komodo devs) simply said "you can - just
+use SSH with X11 forwarding".
 
 I knew about X11 forwarding but always figured this to be
 a fairly limited functionality only capable of bare basic X11 windows, not complex
@@ -60,7 +60,7 @@ these commands in your terminal (must have docker installed and running):
 cd <project-root>/util/docker
 sudo ./docklet build # takes a few minutes
 sudo ./docklet start
-sudo ./docklet ssh
+sudo ./docklet ssh # you will now be sshed into the docker container
 cd /root/komodo/mozilla
 python build.py configure -k 9.10
 python build.py distclean all # this will take a while, between 15 mins and xx hours depending on your hardware
@@ -74,6 +74,21 @@ For further details [check out our build instructions][3].
 
 Once you have your build running you will only be using the last 2 commands most
 of the time, and they won't take nearly as long.
+
+## Developing Using Docker
+
+Once you have your Docker build going you might be wondering - "now what? Where do
+I edit my files?". Thankfully Docker makes it easy to simply mount a host folder
+on the Docker container, which is already facilitated for you when you use the
+docklet script referenced above. So once you have your build going you can simply
+edit your files in the project root on your host machine in whatever manner you
+prefer (I hear Komodo IDE is pretty good at this ;)).
+
+## Here Be Dragons
+
+Keep in mind the Docker script is still brand-new and there will still be some
+kinks to work out before it can be considered as a "stable" alternative to running
+the build straight from your host machine.
 
 ## Final Thoughts
 
