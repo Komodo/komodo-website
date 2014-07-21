@@ -195,3 +195,62 @@ form.mktoForm
         margin-left: 210px !important;
     }
 }
+
+/* Firchat bubble */
+#chatBubble
+{
+    position: absolute;
+    bottom: -90px;
+    padding: 10px;
+    font-size: 14pt;
+    text-align: center;
+}
+
+#chatBubble-wrap
+{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    width: 270px;
+    height: 110px;
+    overflow: hidden;
+}
+
+#chatBubble
+{
+    width: 270px;
+    height: 90px;
+    background: #FFFFFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: #C9C9C9 solid 2px;
+}
+
+#chatBubble:after
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -15px;
+    left: 120px;
+}
+
+#chatBubble:before
+{
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 16px 16px 0;
+    border-color: #C9C9C9 transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    bottom: -18px;
+    left: 119px;
+}
