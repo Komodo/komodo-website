@@ -1,5 +1,5 @@
 ---
-title: Open the same file in another locations
+title: Open the same file in different directories
 author: Todd Whiteman
 date: 2014-07-21
 tags: [macro, javascript, alternative, file, open]
@@ -30,13 +30,9 @@ Here is my "locations.ini" config file on Linux:
 
 ```ini
 # Anything starting with # is a comment.
-
 komodo ide   = /as/komodo-devel
-
 clean branch = /as/komodo-devel_clean
-
 8.5.x branch = ~/as/komodo-devel_8.5.x
-
 komodo edit  = /as/komodo-edit
 ```
 
