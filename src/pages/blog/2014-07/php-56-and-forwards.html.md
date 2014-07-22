@@ -42,7 +42,7 @@ like PHP. All in all, amazing improvements and I cannot wait to see the final
 release containing this work!
 
 This is purely speculation, but I think these PHPNG changes may eventually
-become the center piece for PHP 6.0 version (maybe next year).
+become the center piece for a PHP 6.0 version (maybe next year).
 
 You can read more about the changes going on in PHPNG here:
 http://ckon.wordpress.com/2014/07/14/php-5-7-twice-as-fast/
