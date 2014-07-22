@@ -1,5 +1,5 @@
 ---
-title: PHP 5.6 and forwards
+title: PHP 5.6, PHPNG and Onwards
 author: Todd Whiteman
 date: 2014-07-23
 tags: [php, php56, phpng, performance]
