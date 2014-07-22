@@ -7,8 +7,6 @@ description: PHP - taking a look at future PHP releases to see what's coming in 
 layout: blog
 ---
 
-## PHP Language
-
 <img src="/images/blog/2014-07/php-med-trans.png" align="right"/>
 
 PHP is still under active development and there are some very interesting
