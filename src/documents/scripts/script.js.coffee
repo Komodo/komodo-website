@@ -5,7 +5,6 @@ jQuery ->
 
     init = () ->
         fns = [
-            onPageLoad
             rejectOldBrowsers
             highlightCode
             loadSplashScreenshots
@@ -34,14 +33,6 @@ jQuery ->
             setTimeout fn, 0
 
     # ----- Misc Scripts -----
-
-    onPageLoad = ->
-        jq("#chatBubble").delay(2000).animate({bottom: 20});
-        setTimeout(
-            -> jq("#chatBubble").fadeOut(-> jq("#chatBubble-wrap").hide())
-            ,
-            10000
-        )
 
     # Reject Older Browsers
     rejectOldBrowsers = ->
