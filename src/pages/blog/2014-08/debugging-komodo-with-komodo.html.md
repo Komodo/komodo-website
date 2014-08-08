@@ -94,4 +94,28 @@ from dbgp.client import brk
 I then put a breakpoint in the **pushLocalUri** function in **koPublishing.py**.
 ```python
 def pushLocalUri(self, uri, transferCallback=None, forcePush=False, pubSettings=None):
-    brk(host="127.0.0.1", port=9005)  ### XXX
+    brk(host="127.0.0.1", port=9005)
+
+Make sure you've got your Komodo set to listen on that port;  Edit (Komodo on mac) > Preferences > Debugging > Connection.
+Also make sure that Komodo is listening; Debug > Listen for Debugging Connections.
+
+At this point you should see a problem;  "Hey, WTF Carey?  I'm already running
+Komodo while editing these files.  Do I restart Komodo and have it debug itself
+in the same instance?  Won't Komodo lock up when it hits a breakpoint?"  And the
+answer to that is "Word", or "Yes it will".
+
+You're going to start a second Komodo instance using the commandline and the
+**KOMODO_USERDATADIR** environmental variable.  "set" KOMODO_USERDATADIR in the
+commandline then start Komodo from the same commandline terminal window by executing
+*ko.exe* in the Komodo installs root directory.  We'll call this instance the
+**secondary instance** or **SI**.  We'll call the original **primary instance**.
+Guess what it's acronym will be.
+
+Once Komodo **SI** has start, configure a Publishing account and try pushing a file.
+This should immediately trigger a debugging request alert box to pop up in Komodo
+**PI**.  Click "Yes" and start walking through the code using the Komodo **PI**
+debugger.
+
+That's about sums it up.  Try placing breakpoints through out the code and have fun.
+
+Till next time!
