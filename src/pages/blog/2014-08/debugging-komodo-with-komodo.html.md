@@ -39,6 +39,7 @@ debugging Python in the Komodo source code.
 
 <div id="context">
 <a href="#context">@</a>
+
 ## Context and Packages  
 </div>
 
@@ -47,8 +48,8 @@ the language path.  The Python debugging package can either be found in your Kom
 install *(Komodo Install Dir)/lib/support/dbgp*.  You can also find it on
 the [ActiveState Code page](http://code.activestate.com/komodo/remotedebugging/).
 
-As many of you probably know, Komodo run's primarily on two dynamic languages;
-Javascript and Python.  Komodo ships with it's own siloed Python to make our lives
+As many of you probably know, Komodo runs primarily on two dynamic languages:
+Javascript and Python.  Komodo ships with its own siloed Python to make our lives
 easier.  It's a standard...ish Python install.  The [Komodo Python remote debugging docs](http://docs.activestate.com/komodo/8.5/debugpython.html#Installing_the_Python_Remote_Debugger)
 say you add the **dbgp** package location to the PythonPath but as far as I know,
 we don't easily have control over that in Komodos world.
@@ -61,6 +62,7 @@ That's a good start so far.
 
 <div id="launch_debugger">
 <a href="#launch_debugger">@</a>
+
 ## Launching Debugger  
 </div>
 Now that we have the debugging package installed in Komodo's siloed Python, we now
@@ -82,6 +84,7 @@ We are CLOSE now.
 
 <div id="try_it">
 <a href="#try_it">@</a>
+
 ## Try It Out 
 </div>
 
@@ -101,8 +104,8 @@ def pushLocalUri(self, uri, transferCallback=None, forcePush=False, pubSettings=
     brk(host="127.0.0.1", port=9005)
 ```
 
-Make sure you've got your Komodo set to listen on that port;  Edit menu (Komodo on mac) > Preferences > Debugging > Connection.
-Also make sure that Komodo is listening; Debug > Listen for Debugging Connections.
+Make sure you've got your Komodo set to listen on that *port*: Edit menu (Komodo on mac) > Preferences > Debugging > Connection.
+Also make sure that Komodo is listening: Debug > Listen for Debugging Connections.
 
 At this point you should see a problem, "Hey, WTF Carey?  I'm already running
 Komodo while editing these files.  Do I restart Komodo and have it debug itself
@@ -118,7 +121,8 @@ through with the debugger.  We'll call the original **primary instance**.  Guess
 what it's acronym will be.
 
 You could also do what I'm doing;  Download the [latest Komodo 9 Alpha](http://komodoide.com/download/)
-pre-release build and use that as the **PI** instance.
+pre-release build and use that as the **PI** instance.  For those of you from the
+future
 
 Once Komodo **SI** has started, configure a Publishing account with it and try
 pushing a file. This should immediately trigger a debugging request alert box to
