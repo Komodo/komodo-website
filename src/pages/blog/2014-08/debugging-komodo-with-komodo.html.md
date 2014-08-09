@@ -36,13 +36,8 @@ remote debugging fairly well it was just a matter of putting all the piece into
 the right place and context.  That's what I'm going to share with you.  Remote
 debugging Python in the Komodo source code.
 
-
-<div id="context">
-<a href="#context">@</a>
-
+<a name="#context">@</a>
 ## Context and Packages  
-</div>
-
 To allow remote Python debugging you add the Komodo debugging package to
 the language path.  The Python debugging package can either be found in your Komodo
 install *(Komodo Install Dir)/lib/support/dbgp*.  You can also find it on
@@ -60,11 +55,8 @@ Now Komodo will find it on startup.
 
 That's a good start so far.
 
-<div id="launch_debugger">
-<a href="#launch_debugger">@</a>
-
+<a name="#launch_debugger"></a>
 ## Launching Debugger  
-</div>
 Now that we have the debugging package installed in Komodo's siloed Python, we now
 have access to the debugger.  But now what?  We can't click *Go* in Komodo the
 component file...can I?
@@ -82,12 +74,8 @@ give an example below.
 
 We are CLOSE now.
 
-<div id="try_it">
-<a href="#try_it">@</a>
-
+<a name="#try_it">@</a>
 ## Try It Out 
-</div>
-
 When I was fiddling with this I was digging into the publishing feature so let's
 plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
 is integrated into the source as an "extension" of Komodo.  You can find it's
