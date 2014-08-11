@@ -54,13 +54,13 @@ layout: default
         </p>
 
         <div class="share">
-            <a class="twitter-share-button" data-count="none" data-related="" expr:data-text="data:post.title" data-url="<%- @db.downloads()['unlock-twt-share-url'] %>" href="http://twitter.com/share" data-text="I'm trying out Komodo! via @KomodoIDE">Tweet</a>
+            <a class="twitter-share-button" data-count="none" data-related="" expr:data-text="data:post.title" data-url="<%- @db.downloads()['unlock-twt-share-url'] %>" href="http://twitter.com/share" data-text="I'm trying out Komodo! via @KomodoIDE" data-analytics="download-lock:share-twt:<%- @document.downloadId %>">Tweet</a>
 
-            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-href="<%- @db.downloads()['unlock-fb-share-url'] %>"></div>
+            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-href="<%- @db.downloads()['unlock-fb-share-url'] %>" data-analytics="download-lock:share-fb:<%- @document.downloadId %>"></div>
         </div>
 
         <p class="download-locked">
-            <a id="download-now" href="#">Just let me download your software</a>
+            <a id="download-now" href="#" data-analytics="download-lock:skip:<%- @document.downloadId %>">Just let me download your software</a>
         </p>
     </div>
 
