@@ -16,7 +16,7 @@ classNames: lightbox-group document-blog-entry
             <a href="#context">Context and Packages</a>
         </li>
         <li>
-            <a href="#launch_debugger">Launching Debugger</a>
+            <a href="#add_debugging">Add JIT to Komodo</a>
         </li>
         <li>
             <a href="#try_it">Try It Out</a> 
@@ -55,8 +55,8 @@ Now Komodo will find it on startup.
 
 That's a good start so far.
 
-<a name="#launch_debugger"></a>
-## Launching Debugger  
+<a name="#add_debugging"></a>
+## Add JIT to Komodo (add debugging)
 Now that we have the debugging package installed in Komodo's siloed Python, we now
 have access to the debugger.  But now what?  We can't click *Go* in Komodo the
 component file...can I?
@@ -83,17 +83,19 @@ source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.co
 You'll start by importing **brk** from the **dbgp** package.  I do this at the
 top of the file, force of habit:
 ```python
-from dbgp.client import brk
+from dbgp.client import brk  ### added dbgp.client.brk CGCH
 ```
-I then put a breakpoint in the **pushLocalUri** function in **koPublishing.py**.
+I then put a *brk()* function in the **pushLocalUri** function in **koPublishing.py**.
 This SHOULD be around line 572.
 ```python
 def pushLocalUri(self, uri, transferCallback=None, forcePush=False, pubSettings=None):
-    brk(host="127.0.0.1", port=9005)
+    brk(host="127.0.0.1", port=9005) ###  added breakpoint CGCH
 ```
 
-Make sure you've got your Komodo set to listen on that *port*: Edit menu (Komodo on mac) > Preferences > Debugging > Connection.
-Also make sure that Komodo is listening: Debug > Listen for Debugging Connections.
+When Komodo hits this *brk()* a debugging session will be requested. Make sure
+you've got your Komodo set to listen on the correct **port** seen above: *Edit menu
+(Komodo on mac) > Preferences > Debugging > Connection*.  Also make sure that
+Komodo is listening: *Debug menu > Listen for Debugging Connections*.
 
 At this point you should see a problem, "Hey, WTF Carey?  I'm already running
 Komodo while editing these files.  Do I restart Komodo and have it debug itself
