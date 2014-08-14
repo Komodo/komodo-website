@@ -23,11 +23,13 @@ classNames: lightbox-group document-blog-entry
 </div>
 
 Recently I was providing support to a customer who was having issues with a Komodo
-component.  Unfortunately, when that component was originally written logging was
-added but it lacked any debug statements.  So asking the user to enable debugging
-for the component didnt get us far.  I had been testing remote Python debugging
+component.  Unfortunately, when that component was originally written, logging was
+added but it lacked any debug statements.  So asking the user to enable debug level logging
+for the component didnt help much.  
+
+I had been testing remote Python debugging
 in Komodo just before so I decided to try a trick I'd heard about from Komodo 
-Developer Mark Yen; to debug Komodo using Komodo.  It took a little bit of head 
+Developer Mark Yen, to debug Komodo using Komodo.  It took a little bit of head 
 scratching but given that I knew remote debugging fairly well it was just a matter 
 of putting all the pieces into the right place.  That's what I'm going to share with you.  
 Remote debugging Komodo's Python code, using Komodo.
@@ -52,27 +54,27 @@ That's a good start so far.
 
 <a name="#add_debugging"></a>
 ## Add JIT to Komodo (add debugging)
-Now that we have the debugging package installed in Komodo's siloed Python, we now
+Now that we have the debugging package installed in Komodo's siloed Python, we 
 have access to the debugger.  But now what?  We can't click *Go* in Komodo the
 component file...can I?
 
-No, no you can't.  Komodo is already running.  Besides, it's impossible to start
-debugging Komodo in that traditional manner since it's the Mozilla framework
-(mostly C++) that does the initial object creation and launching of various Python
-components.
+No, no you can't.  Komodo is already running so the code can be started again.  
+Besides, it's impossible to start debugging Komodo in that traditional manner 
+since it's the Mozilla framework (mostly C++) that does the initial object 
+creation and launching of various Python components.
 
 What we need here is [Just in Time (JIT) debugging](http://docs.activestate.com/komodo/8.5/debugpython.html#debugpython_dbgpclient_functions)
 provided by *dbgp.client.brk()*.  This allows us to trigger a breakpoint in our
-running code and cause Python to request a debugging session from Python process 
+running code and cause Python to request a debugging session from the Komodo 
 you point it at.  
 
 We are CLOSE now.
 
 <a name="try_it"/>
 ## Try It Out 
-The reason I started fiddling with this was because I was digging into the publishing
+When I started fiddling with this I was digging into the Publishing
  code so let's plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
-is integrated into the source as an "extension" of Komodo.  You can find it's compiled
+is integrated into the source as an "extension" of Komodo.  You can find it's
 source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.com/components/*
 You'll start by importing **brk** from the **dbgp** package.  I do this at the
 top of the file, force of habit:
@@ -98,21 +100,20 @@ in the same instance?  Won't Komodo lock up when it hits a breakpoint?"  And the
 answer to that is "Word", or "Yes it will".
 
 You're going to start a second Komodo instance using the commandline and the
-**KOMODO_USERDATADIR** environmental variable.  "set" KOMODO_USERDATADIR in the
+**KOMODO_USERDATADIR** environmental variable.  "set" or "export" (linux, OSX) KOMODO_USERDATADIR in the
 commandline then start Komodo from the same commandline terminal window by executing
-*ko.exe* in the Komodo installs root directory.  We'll call this instance the
-**secondary instance** or **SI**.  It is also the instance you will be "walking"
-through with the debugger.  We'll call the original **primary instance**.  Guess
-what it's acronym will be.
+the Komodo binary in the Komodo installs root directory.  We'll call this instance the
+**debugged instance**.  It is the instance you will be "walking"
+through with the debugger.  We'll call the Komodo currently running the **debugger instance**.
 
 You could also do what I'm doing;  Download the [latest Komodo 9 Alpha](http://komodoide.com/download/)
-pre-release build and use that as the **PI** instance.  For those of you from the
-future.
+pre-release build and use that as the **debugger instance** instance.  For those of you from the
+future, isn't the Commando (new Fast Open) feature awesome!?
 
-Once Komodo **SI** has started, configure a Publishing account with it and try
+Once Komodo **debugged instance** has started, configure a Publishing account with it and try
 pushing a file. This should immediately trigger a debugging request alert box to
-pop up in Komodo **PI**.  Click "Yes" and start walking through the code using
-the Komodo **PI** debugger.
+pop up in Komodo **debugger instance**.  Click "Yes" and start walking through the code using
+the Komodo **debugger instance** debugger.
 
 That about sums it up.  Try placing breakpoints throughout the Komodo Python and
 have fun.
