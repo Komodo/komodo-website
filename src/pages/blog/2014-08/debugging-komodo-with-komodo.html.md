@@ -1,14 +1,12 @@
 ---
 title: Debug Komodo with Komodo
 author: Carey Hoffman   
-date: 2014-08-08 06:00
+date: 2014-08-14 06:00
 tags: [debugging, python, Komodo IDE, remote debugging]
 description: Ever wondered what's going on in there when you're working with Komodo?  Ever wondered how a component works?  Well why not walk through the code as Komodo does?
 layout: blog
 classNames: lightbox-group document-blog-entry
 ---
-
-<a name="top"></a>
 
 <div class="push-right toc">
     <ul>
@@ -25,29 +23,26 @@ classNames: lightbox-group document-blog-entry
 </div>
 
 Recently I was providing support to a customer who was having issues with a Komodo
-component.  Unfortunately, when that component was originally written there was
-a line similar to <code language="python">log.setLevel(logging.DEBUG)</code> added
-but not the debug logging statements I needed.  This didn't help much when I asked the
-user to uncomment the line of code above.  I had been testing remote Python debugging
-in Komodo just before so I decided to try a trick I'd heard about from Mark Yen
-from the Komodo developmenr team. He said that it was possible to debug Komodo
-using Komodo.  It took a little bit of head scratching but given that I knew
-remote debugging fairly well it was just a matter of putting all the piece into
-the right place and context.  That's what I'm going to share with you.  Remote
-debugging Python in the Komodo source code.
+component.  Unfortunately, when that component was originally written logging was
+added but it lacked any debug statements.  So asking the user to enable debugging
+for the component didnt get us far.  I had been testing remote Python debugging
+in Komodo just before so I decided to try a trick I'd heard about from Komodo 
+Developer Mark Yen; to debug Komodo using Komodo.  It took a little bit of head 
+scratching but given that I knew remote debugging fairly well it was just a matter 
+of putting all the pieces into the right place.  That's what I'm going to share with you.  
+Remote debugging Komodo's Python code, using Komodo.
 
-<a name="#context">@</a>
+<a name="context"/>
 ## Context and Packages  
-To allow remote Python debugging you add the Komodo debugging package to
-the language path.  The Python debugging package can either be found in your Komodo
-install *(Komodo Install Dir)/lib/support/dbgp*.  You can also find it on
-the [ActiveState Code page](http://code.activestate.com/komodo/remotedebugging/).
+To allow remote Python debugging you need to add the Komodo debugging package to
+the language path.  The Python debugging package can be found either in your Komodo
+install *(Komodo Install Dir)/lib/support/dbgp*, or on the [ActiveState Code](http://code.activestate.com/komodo/remotedebugging/) section.
 
 As many of you probably know, Komodo runs primarily on two dynamic languages:
 Javascript and Python.  Komodo ships with its own siloed Python to make our lives
 easier.  It's a standard...ish Python install.  The [Komodo Python remote debugging docs](http://docs.activestate.com/komodo/8.5/debugpython.html#Installing_the_Python_Remote_Debugger)
-say you add the **dbgp** package location to the PythonPath but as far as I know,
-we don't easily have control over that in Komodos world.
+tell you to add the **dbgp** package location to the PythonPath but as far as I know,
+we don't easily have control over that in Komodo's world.
 
 Since Komodo's Python is a pretty standard Python install, I decided to do the wrong
 thing and just add the dbgp package to *(Komodo Install Dir)/lib/Python/Lib/site-packages/*.
@@ -55,30 +50,29 @@ Now Komodo will find it on startup.
 
 That's a good start so far.
 
-<a name="#launch_debugger"></a>
+<a name="launch_debugger"/>
 ## Launching Debugger  
-Now that we have the debugging package installed in Komodo's siloed Python, we now
-have access to the debugger.  But now what?  We can't click *Go* in Komodo the
-component file...can I?
+Now that we have the debugging package installed in Komodo's siloed Python, we 
+have access to the debugger.  But now what?  We can't just click *Go* in the Komodo 
+component file... can we?
 
 No, no you can't.  Komodo is already running.  Besides, it's impossible to start
 debugging Komodo in that traditional manner since it's the Mozilla framework
-(mostly C++) that does the initial object creation and launching various Python
+(mostly C++) that does the initial object creation and launching of various Python
 components.
 
 What we need here is [Just in Time (JIT) debugging](http://docs.activestate.com/komodo/8.5/debugpython.html#debugpython_dbgpclient_functions)
 provided by *dbgp.client.brk()*.  This allows us to trigger a breakpoint in our
-running code and cause Python to request a debugging session from the Komodo you
-point it at.  See the link above for an example of a JIT breakpoint.  I'll also
-give an example below.
+running code and cause Python to request a debugging session from Python process 
+you point it at.  
 
 We are CLOSE now.
 
-<a name="#try_it">@</a>
+<a name="try_it"/>
 ## Try It Out 
-When I was fiddling with this I was digging into the publishing feature so let's
-plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
-is integrated into the source as an "extension" of Komodo.  You can find it's
+The reason I started fiddling with this was because I was digging into the publishing
+ code so let's plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
+is integrated into the source as an "extension" of Komodo.  You can find it's compiled
 source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.com/components/*
 You'll start by importing **brk** from the **dbgp** package.  I do this at the
 top of the file, force of habit:
@@ -86,14 +80,14 @@ top of the file, force of habit:
 from dbgp.client import brk
 ```
 I then put a breakpoint in the **pushLocalUri** function in **koPublishing.py**.
-This SHOULD be around line 572.
+This should be around line 572.
 ```python
 def pushLocalUri(self, uri, transferCallback=None, forcePush=False, pubSettings=None):
     brk(host="127.0.0.1", port=9005)
 ```
 
-Make sure you've got your Komodo set to listen on that *port*: Edit menu (Komodo on mac) > Preferences > Debugging > Connection.
-Also make sure that Komodo is listening: Debug > Listen for Debugging Connections.
+Make sure you've got your Komodo set to listen on that *port*: `Edit menu ( or "Komodo" on OSX) > Preferences > Debugging > Connection`.
+Also make sure that Komodo is listening: `Debug > Listen for Debugging Connections`.
 
 At this point you should see a problem, "Hey, WTF Carey?  I'm already running
 Komodo while editing these files.  Do I restart Komodo and have it debug itself
@@ -110,14 +104,14 @@ what it's acronym will be.
 
 You could also do what I'm doing;  Download the [latest Komodo 9 Alpha](http://komodoide.com/download/)
 pre-release build and use that as the **PI** instance.  For those of you from the
-future
+future.
 
 Once Komodo **SI** has started, configure a Publishing account with it and try
 pushing a file. This should immediately trigger a debugging request alert box to
 pop up in Komodo **PI**.  Click "Yes" and start walking through the code using
 the Komodo **PI** debugger.
 
-That about sums it up.  Try placing breakpoints through out the Komodo Python and
+That about sums it up.  Try placing breakpoints throughout the Komodo Python and
 have fun.
 
 Till next time!
