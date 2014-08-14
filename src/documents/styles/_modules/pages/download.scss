@@ -88,3 +88,56 @@
         display: none;
     }
 }
+
+html.no-js .download-unlocker.enabled,
+.download-unlocker.disabled
+{
+    #download
+    {
+        display: block;
+    }
+
+    #download-unlock
+    {
+        display: none;
+    }
+}
+
+html:not(.no-js) .download-unlocker.enabled
+{
+    text-align: center;
+    
+    form
+    {
+        margin: auto;
+    }
+
+    #download
+    {
+        display: none;
+    }
+
+    #download-unlock
+    {
+        display: block;
+    }
+
+    .fb-follow
+    {
+        @include transform(scale(1.5));
+        margin-left: 25px;
+    }
+
+    &.unlocked
+    {
+        .download-locked
+        {
+            display: none !important;
+        }
+
+        .download-unlocked
+        {
+            display: block !important;
+        }
+    }
+}

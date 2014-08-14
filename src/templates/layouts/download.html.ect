@@ -2,30 +2,126 @@
 layout: default
 ---
 
+<% if @document.downloadId.substr(0, 4) is 'edit': %>
+<noscript>
 <meta http-equiv="refresh" content="2; url=<%- @db.downloads()[@document.downloadId] %>">
+</noscript>
 
-<h1>Downloading <%- @document.downloadTitle %></h1>
+<% else: %>
+<meta http-equiv="refresh" content="2; url=<%- @db.downloads()[@document.downloadId] %>">
+<% end %>
 
-<p>
-    Your download will start shortly. If it does not, you can
-    <a href="<%- @db.downloads()[@document.downloadId] %>">
-        start the download manually
-    </a>.
-</p>
+<div class="download-unlocker <%- (if @document.downloadId.substr(0, 4) is 'edit' then 'enabled' else 'disabled') %>">
 
-<p>
-    <%- @document.downloadNewsletterDescription %>
-</p>
+    <h1>Downloading <%- @document.downloadTitle %></h1>
 
-<script src="//app-sjg.marketo.com/js/forms2/js/forms2.js"></script>
-<form id="mktoForm_<%- @document.downloadNewsletterId %>"></form>
-<script>MktoForms2.loadForm("//app-sjg.marketo.com", "894-ACS-622", <%- @document.downloadNewsletterId %>);</script>
+    <div id="download" class="download-unlocked">
+        <p>
+            Your download will start shortly. If it does not, you can
+            <a href="<%- @db.downloads()[@document.downloadId] %>">
+                start the download manually
+            </a>.
+        </p>
 
-<p>
-    You can unsubscribe at any time. For more information, consult
-    <a href="/privacy">our Privacy Policy</a>.
-</p>
+        <p>
+            <%- @document.downloadNewsletterDescription %>
+        </p>
 
-<div class="centered" style="margin-top: 50px">
-    <a href="https://twitter.com/komodoide" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @komodoide</a>
+        <script src="//app-sjg.marketo.com/js/forms2/js/forms2.js"></script>
+        <form id="mktoForm_<%- @document.downloadNewsletterId %>"></form>
+        <script>MktoForms2.loadForm("//app-sjg.marketo.com", "894-ACS-622", <%- @document.downloadNewsletterId %>);</script>
+
+        <p>
+            You can unsubscribe at any time. For more information, consult
+            <a href="/privacy">our Privacy Policy</a>.
+        </p>
+
+        <div class="centered" style="margin-top: 50px">
+            <a href="https://twitter.com/komodoide" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @komodoide</a>
+            <div class="fb-follow" data-href="https://www.facebook.com/komodoide" data-colorscheme="light" data-layout="button" data-show-faces="true"></div>
+            <p>&nbsp;</p>
+        </div>
+    </div>
+
+    <div id="download-unlock">
+        <h2 class="download-locked">
+            Help Evangelize Komodo!
+        </h2>
+        <p class="download-locked">
+            Komodo Edit is completely free and Open-Source!<br/>
+            Please take a moment to pay it forward and evangelize Komodo<br/>
+            by sharing it with your friends and followers.
+        </p>
+
+        <div class="share">
+            <a class="twitter-share-button" data-count="none" data-related="" expr:data-text="data:post.title" data-url="<%- @db.downloads()['unlock-twt-share-url'] %>" href="http://twitter.com/share" data-text="I'm trying out Komodo! via @KomodoIDE" data-analytics="download-lock:share-twt:<%- @document.downloadId %>">Tweet</a>
+
+            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-href="<%- @db.downloads()['unlock-fb-share-url'] %>" data-analytics="download-lock:share-fb:<%- @document.downloadId %>"></div>
+        </div>
+
+        <p class="download-locked">
+            <a id="download-now" href="#" data-analytics="download-lock:skip:<%- @document.downloadId %>">Just let me download your software</a>
+        </p>
+    </div>
+
 </div>
+
+<div id="fb-root"></div>
+
+<script type='text/javascript'>
+//<![CDATA[
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+window.fbAsyncInit = function() {
+    // init the FB JS SDK
+
+    FB.Event.subscribe('edge.create', function(href, widget) {
+        $.event.trigger({
+            type: "pageShared",
+            url: href,
+            network: "facebook"
+        });
+    });
+};
+/* Twitter */
+  window.twttr = (function (d,s,id) {
+  var t, js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+  js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+  return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+twttr.ready(function (twttr) {
+    twttr.events.bind('tweet', function (event) {
+        $.event.trigger({
+            type: "pageShared",
+            url: event.target.baseURI,
+            network: "twitter"
+        });
+    });
+});
+
+function enableDownload()
+{
+    $(".download-unlocker").addClass("unlocked");
+    setTimeout(function()
+    {
+        window.location.href = "<%- @db.downloads()[@document.downloadId] %>";
+    }, 10000)
+}
+
+var checkJQ = setInterval(function()
+{
+    if ((typeof $) == "undefined") return;
+    clearInterval(checkJQ);
+    $(document).on('pageShared', enableDownload);
+    $("#download-now").click( enableDownload);
+}, 100)
+
+//]]>
+</script>
+
