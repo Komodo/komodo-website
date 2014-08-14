@@ -31,8 +31,8 @@ I had been testing remote Python debugging
 in Komodo just before so I decided to try a trick I'd heard about from Komodo 
 Developer Mark Yen, to debug Komodo using Komodo.  It took a little bit of head 
 scratching but given that I knew remote debugging fairly well it was just a matter 
-of putting all the pieces into the right place.  That's what I'm going to share with you.  
-Remote debugging Komodo's Python code, using Komodo.
+of putting all the pieces into the right place.  That's what I'm going to share with
+you.  Remote debugging Komodo's Python code, using Komodo.
 
 <a name="context"/>
 ## Context and Packages  
@@ -52,7 +52,7 @@ Now Komodo will find it on startup.
 
 That's a good start so far.
 
-<a name="#add_debugging"></a>
+<a name="add_debugging"></a>
 ## Add JIT to Komodo (add debugging)
 Now that we have the debugging package installed in Komodo's siloed Python, we 
 have access to the debugger.  But now what?  We can't click *Go* in Komodo the
@@ -75,7 +75,7 @@ We are CLOSE now.
 When I started fiddling with this I was digging into the Publishing
  code so let's plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
 is integrated into the source as an "extension" of Komodo.  You can find it's
-source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.com/components/*
+source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.com/components/*.
 You'll start by importing **brk** from the **dbgp** package.  I do this at the
 top of the file, force of habit:
 ```python
