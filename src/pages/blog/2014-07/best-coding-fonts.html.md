@@ -1,4 +1,4 @@
-built---
+---
 title: Best Coding Fonts
 author: Nathan Rijksen
 date: 2014-07-09 06:00
@@ -27,7 +27,7 @@ classNames: lightbox-group document-blog-entry
                 <li>
                     <a href="#sourcecodepro">Source Code Pro</a>
                     
-                </li>r
+                </li>
                 <li>
                     <a href="#monaco">Monaco</a>
                 </li>

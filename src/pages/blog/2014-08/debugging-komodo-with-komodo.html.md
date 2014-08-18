@@ -1,11 +1,10 @@
 ---
 title: Debug Komodo with Komodo
-author: Carey Hoffman   
+author: Carey Hoffman
 date: 2014-08-14 06:00
 tags: [debugging, python, Komodo IDE, remote debugging]
 description: Ever wondered what's going on in there when you're working with Komodo?  Ever wondered how a component works?  Well why not walk through the code as Komodo does?
 layout: blog
-classNames: lightbox-group document-blog-entry
 ---
 
 <div class="push-right toc">
