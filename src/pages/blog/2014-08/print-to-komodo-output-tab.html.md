@@ -26,7 +26,7 @@ callig it from other macros that may want to print to the output pane.
 
 You could also run it manually and have it ask you for input.  I don't know
 why you would do this but I'm not you and you're great so you can do whatever
-you want.  You would uncomment lines 16 through 18 the line 49.  Hopefully those
+you want.  You would uncomment lines 16 through 18 and line 49.  Hopefully those
 line numbers are still relevant when you're reading this ;)
 
 ## Installation
