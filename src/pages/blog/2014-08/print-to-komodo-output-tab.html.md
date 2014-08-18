@@ -12,7 +12,7 @@ layout: blog
 </div>
 
 I came across a macro that Eric Promislow had written a few years ago that seemed
-pretty interesting,[How do you write to the Command Output Window?](http://community.activestate.com/faq/how-do-you-write-command-output-window).
+pretty interesting, [How do you write to the Command Output Window](http://community.activestate.com/faq/how-do-you-write-command-output-window)?
 Its a bit out dated since Mark Yen added customizable tab layouts but that was an
 easy fix.  All tabs are now their own widgets so to access their attributes you
 have to retrieve the widget first.  That's basically the only change I had to make
