@@ -97,6 +97,31 @@ Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer,
 Stackato and the Sections List only apply to Komodo IDE only.
 
+### 8.5.4 Bug Fixes
+
+*    Code Intelligence: CSS: Show pseudo completions after ":".
+*    Code Intelligence: PHP: Fix memory leak in PHP file scanning. (Bug [102643](http://bugs.activestate.com/show_bug.cgi?id=102643))
+*    Code Intelligence: JavaScript: Ensure document completions work inside of HTML. (Bug [102993](http://bugs.activestate.com/show_bug.cgi?id=102993))
+*    Debugging: Python 3: Update log-level matching code to work on Python 3.4. (Bug [103631](http://bugs.activestate.com/show_bug.cgi?id=103631))
+*    Debugging: Tcl: Update appLaunch.tcl file. (Bug [101199](http://bugs.activestate.com/show_bug.cgi?id=101199))
+*    Editor: Automatically enable word-wrap when a file has long lines. (Bug [93790](http://bugs.activestate.com/show_bug.cgi?id=93790))
+*    Editor: Django: Highlight 'elif' tag, 'elseif' in Twig (and improve auto-indent). (Bug [101792](http://bugs.activestate.com/show_bug.cgi?id=101792))
+*    Editor: Fix high DPI popup positioning on Windows. (Bug [100492](http://bugs.activestate.com/show_bug.cgi?id=100492))
+*    Editor: When changing case in column selection, stay in column selection. (Bug [100269](http://bugs.activestate.com/show_bug.cgi?id=100269))
+*    Find: Ensure find markers are not added more than once. (Bug [104553](http://bugs.activestate.com/show_bug.cgi?id=104553))
+*    Find: Stop find options from changing when using multi caret commands. (Bug [103329](http://bugs.activestate.com/show_bug.cgi?id=103329))
+*    Places: After creating a new file, open it and display it in places. (Bug [94287](http://bugs.activestate.com/show_bug.cgi?id=94287))
+*    Places: Cull deleted items in places history menu. (Bug [98684](http://bugs.activestate.com/show_bug.cgi?id=98684))
+*    Preferences: Indentation Settings: Allow per language settings to be saved. (Bug [99431](http://bugs.activestate.com/show_bug.cgi?id=99431))
+*    Projects: When opening a new project is aborted, keep the old project on the MRU list. (Bug [94201](http://bugs.activestate.com/show_bug.cgi?id=94201))
+*    SDK: Ensure koext startlang works with --is-html-based argument (Bug [104551](http://bugs.activestate.com/show_bug.cgi?id=104551)).
+*    Source Code Control: Checkout: Remember the checkout textbox url. (Bug [99395](http://bugs.activestate.com/show_bug.cgi?id=99395))
+*    Source Code Control: Git: Ensure git submodules are properly detected in commit dialog. (Bug [95701](http://bugs.activestate.com/show_bug.cgi?id=95701))
+*    Syntax Checking: Python: Reinstate passing --rcfile to pylint, and add tests to verify it works. (Bug [101777](http://bugs.activestate.com/show_bug.cgi?id=101777))
+*    Syntax Checking: Python: Tell pylint where to find .pylintrc. (Bug [101777](http://bugs.activestate.com/show_bug.cgi?id=101777))
+*    Toolbox: Stop duplication of snippets when dropping snippet text. (Bug [103113](http://bugs.activestate.com/show_bug.cgi?id=103113))
+*    UI: Re-enable word-wrap in output panels (command output, debugger output). (Bug [98471](http://bugs.activestate.com/show_bug.cgi?id=98471))
+
 ### 8.5.3 Bug Fixes
 
 *   Code Intelligence: Fix case where codeintel startup could fail due to race condition. (Bug [101543](http://bugs.activestate.com/show_bug.cgi?id=101543))
