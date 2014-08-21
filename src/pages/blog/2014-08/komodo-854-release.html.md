@@ -36,7 +36,7 @@ This release fixes a number of important bugs, including the following:
 * PHP memory leaks from codeintel file scanning (out-of-memory errors) (Bug [102643](http://bugs.activestate.com/show_bug.cgi?id=102643))
 * Python 3.4 debugging fix (Bug [103631](http://bugs.activestate.com/show_bug.cgi?id=103631))
 
-## Other Changes
+### Other Changes
 
 *    Code Intelligence: CSS: Show pseudo completions after colan. (Bug [104799](https://bugs.activestate.com/show_bug.cgi?id=104799))
 *    Code Intelligence: JavaScript: Ensure document completions work inside of HTML. (Bug [102993](http://bugs.activestate.com/show_bug.cgi?id=102993))
