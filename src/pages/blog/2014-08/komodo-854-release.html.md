@@ -38,7 +38,7 @@ This release fixes a number of important bugs, including the following:
 
 ### Other Changes
 
-*    Code Intelligence: CSS: Show pseudo completions after colan. (Bug [104799](https://bugs.activestate.com/show_bug.cgi?id=104799))
+*    Code Intelligence: CSS: Show pseudo completions after colon. (Bug [104799](https://bugs.activestate.com/show_bug.cgi?id=104799))
 *    Code Intelligence: JavaScript: Ensure document completions work inside of HTML. (Bug [102993](http://bugs.activestate.com/show_bug.cgi?id=102993))
 *    Debugging: Tcl: Update appLaunch.tcl file. (Bug [101199](http://bugs.activestate.com/show_bug.cgi?id=101199))
 *    Editor: Automatically enable word-wrap when a file has long lines. (Bug [93790](http://bugs.activestate.com/show_bug.cgi?id=93790))
