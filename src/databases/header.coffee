@@ -17,7 +17,6 @@ module.exports = {
             name: "Download"
         ,
             name: 'Resources'
-            name_append: '<span class="badge">BETA</span>'
             link: "{site.url}/resources"
         ,
             name: "Blog"
