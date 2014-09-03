@@ -23,7 +23,7 @@ keybinding to turn comments on or off.
 
 ## Screenshot
 
-Here's the macro in action, as I press the double-quote " key:
+Here's the macro in action:
 
 <img src="/images/blog/2014-09/comment_toggle.gif" style="vertical-align: middle">
 
