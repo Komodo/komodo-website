@@ -186,14 +186,22 @@ jQuery ->
                navigateByImgClick: true
                preload: [0,1]
 
-        jq('div.lightbox-group').magnificPopup
-            delegate: 'a.lightbox-entry'
-            type:'image'
-            removalDelay: 500
-            gallery:
-               enabled: true
-               navigateByImgClick: true
-               preload: [0,1]
+        jq('div.lightbox-group').each ->
+            gallery = jq(this)
+            gallery.magnificPopup
+                delegate: 'a.lightbox-entry'
+                type:'image'
+                removalDelay: 500
+                gallery:
+                   enabled: true
+                   navigateByImgClick: true
+                   preload: [0,1]
+                image:
+                    titleSrc: (item) ->
+                        if gallery.data("title")
+                            return item.el.attr('title') + '<small>' + gallery.data("title") + '</small>'
+                        else
+                            return item.el.attr('title')
 
         jq('.slideshow').each ->
             elem = jq this
