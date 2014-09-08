@@ -1,7 +1,7 @@
 ---
 title: Macro for Toggling Editor Comments
 author: Todd Whiteman
-date: 2099-09-03
+date: 2014-09-08
 tags: [macro, javascript, editor, selection, wrap, brace, parenthesis, quote]
 description: Toggle comments (on or off) for the current editor line, or over the selected lines.
 layout: blog
