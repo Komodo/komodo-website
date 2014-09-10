@@ -1,5 +1,5 @@
 ---
-title: 14 Years of Komodo, A Trip Down Nostalgia Avenue
+title: The History of Komodo, A Trip Down Memory Lane
 author: Nathan Rijksen
 date: 2099-09-04
 tags: [history,features,changelog]
@@ -41,6 +41,9 @@ layout: blog
             <hr/>
         </li>
         <li>
+            <a href="#14ycommits">14 Years of Commits</a>
+        </li>
+        <li>
             <a href="#back">Looking Back</a>
         </li>
         <li>
@@ -54,14 +57,7 @@ is older than some of it's users.. and yet it's held up remarkably well. Yes
 it was starting to show signs of aging, but Komodo 8 came with some age-reversing
 serum so this dragon isn't going anywhere.
 
-I've used Komodo for a long time, though I honestly cannot recall what year or
-version I started with, it must have been version 4.x or 5.x. It's funny looking
-back through our changelogs and seeing so many vital features being introduced
-since the time I started using Komodo, it makes me wonder how on earth I was
-able to use Komodo without feature X and Y. But then again, as many programmers
-I started out in Notepad (I kid you not) so it's all relative.
-
-Anyway, for a while now I've been wanting to set up some virtual machines and
+For a while now I've been wanting to set up some virtual machines and
 run through all of the Komodo versions since it's initial launch. Now I finally
 got to do just that; and to get the full authentic experience of what Komodo
 felt like when each version was released I ran it on the target platform of it's
@@ -72,20 +68,13 @@ time, which means I installed Windows 98 - oh the nostalgia.
 
 ## Version 0.x - 2000 to 2001
 
-Even with running Windows 98 I had a hard time getting Komodo 0.x to run properly,
-this is because the earliest versions of Komodo did not come packaged with Python
-and so I had to try and find old versions of ActivePython to install. The result
-is that I was able to launch Komodo but I really wasn't able to do much. Given
-that the 0.x series was highly experimental to begin with this was to be expected
-though.
-
 Komodo was [first announced on May 24th 2000][1], but the [first version was not released
 until (approximately) Nov 9th 2000][2]. Back then Firefox did not even exist yet,
 Komodo was based on the Mozilla framework and browser which would later essentially
 become Firefox.
 
 The first version looked very bare bones, but that was normal for the software
-of that time. I think what amazed me most about it was that it had an Open Files
+of that time. What amazed me most about the first version was that it had an Open Files
 widget (like we re-introduced in Komodo 8) but it had no file explorer. You
 opened files by using your OS file browser or a file open dialog. The file
 explorer wasn't introduced until much later.
@@ -128,15 +117,13 @@ Some other interesting features in the first version of Komodo were:
 ## Version 1.x - 2001 to 2002
 
 Version 1.x already looked significantly different from 0.x and no longer came
-packaged with a browser or chat client.
-
-The looks reminded me a lot of earlier versions of MS Word, not too unsurprising
-considering it's essentially a text editor of sorts.
+packaged with a browser or chat client. The UI reminded me a lot of earlier
+versions of MS Word, not too unsurprising considering it's essentially a text
+editor of sorts.
 
 Notable 1.x changes were
 
  - LOTS of polish over the 0.x version
- - PHP Support
  - Preferences introduced, already looks a lot like the Preferences dialog we have
    today, though not as populated.
  - Support for FTP servers
@@ -165,7 +152,7 @@ Notable 1.x changes were
 
 ## Version 2.x - 2002 to 2004
 
-Did you know Komodo had a GUI builder? No, neither did I until I installed Komodo
+Did you know Komodo had a GUI builder? No? Neither did I until I installed Komodo
 2.x. Evidently Komodo used to [support building GUI elements for Tk and Tkinter][4].
 This wasn't something slapped on either, the GUI builder was an incredibly
 detailed and complete component. So much so that when ActiveState stopped
@@ -178,14 +165,11 @@ Other notable 2.x changes included:
  - Linux Version (Version 2.3)
  - Solaris Version (!) (Version 2.5)
  - Color Scheme Editor
- - Fleshed out Preferences
  - Introduced the Toolbox (macros, snippets, etc)
  - Source Code Control
  - GUI Builder
  - Visual Package Manager
  - HTML Previewing
-
-2.x looks like it was a very nice version indeed.
 
 <div class="lightbox-group centered" data-title="Komodo Version 2.x - 2002 to 2004">
     <a href="/images/blog/2014-09/screenshots/2.5_install_files.png" class="lightbox-entry" title="Application Files">
@@ -221,20 +205,18 @@ Other notable 2.x changes included:
 ## Version 3.x - 2004 to 2007
 
 Komodo 3 really started to look more and more like the Komodo we see today,
-the design of the application started to establish itself more clearly. With
-Komodo 3 we introduced one of the most important features in Komodo today - CodeIntel.
-This first version had a lot more manual input, where you would select which
+the UI and UX started to establish itself more clearly. With Komodo 3 we
+introduced one of the most important features in Komodo today - CodeIntel.
+This first version required manual input, where you would select which
 languages CodeIntel should control on first startup, after which Komodo would
 run through the first scan. This is all still being done but is mostly moved
-into the background such that users aren't needlessly bothered by it.
+into the background such that you aren't needlessly bothered by it.
 
 Notable 3.x changes included:
 
  - OSX Version (Komodo 3.5)
  - CodeIntel
  - Interactive Shell (REPL)
- - Panel Toggles (hide/show)
- - Profiles were now being imported from earlier versions
  - Code Browser
  - Open / Find Toolbar
  - Custom toolbars, menus and icons
@@ -272,7 +254,7 @@ but it was still missing a file explorer.
 
 ## Version 4.x - 2007 to 2008
 
-Finally, we have our File Explorer, or as we tend to call it "Places". Komodo 4
+Finally, we have our File Explorer, or as we tend to call it; "Places". Komodo 4
 didn't do much about it's UI, it instead focussed entirely on functionality.
 
 Notable changes were:
@@ -310,9 +292,9 @@ functionality.
 
 ## Version 5.x - 2008 to 2010
 
-Komodo 5 received it's first major facelift since 2.x, made to look much nicer
-on Windows XP.. though you're still stuck with those greens and blues, god XP was
-ugly.
+Komodo 5 received it's first major facelift since 2.x, and was made to look much
+nicer on Windows XP.. though you were still stuck with those greens and blues, god
+XP was ugly.
 
 Notable changes included:
 
@@ -346,10 +328,9 @@ Notable changes included:
 
 ## Version 6.x - 2010 to 2012
 
-Version 6 polished the new UI introduced in 5.0 a bit more, but also introduced
+Version 6 polished the new UI introduced in 5.0 a bit, but also introduced
 the vertical tabs in the sidebars. I've never been a big fan of those personally
-but they were a distinctive part of Komodo for quite a while since the release of
-5.0.
+but they were a distinctive part of Komodo for quite a while.
 
 Notable changes included:
 
@@ -381,7 +362,7 @@ Notable changes included:
 
 Version 7.x made some slight UI changes, notably it integrated parts of the [Aero Theme][5]
 created by [Stan Angeloff][6]. It also introduced the ability for IDE users to
-sync their preferences to the clowd, such that their preferences would remain the
+sync their preferences to the cloud, such that their preferences would remain the
 same between multiple Komodo installs.
 
 Other notable changes included:
@@ -416,9 +397,10 @@ Other notable changes included:
 
 Komodo 8 was the first Komodo version I contributed to directly, my main objective
 was to modernize the UI as I had always felt that Komodo needed a good looking
-UI to match it's powerful capabilities. As a result the Komodo 8 looks significantly
-different, introducing a completely new monochrome iconset and skin. The skinning
-system was built using modern web technologies and is available for anyone to use.
+UI to match it's powerful feature set. As a result Komodo 8 looks significantly
+different from its earlier versions, introducing a completely new monochrome
+iconset and skin. The skinning system was built using modern web technologies
+and is available for anyone to use.
 
 Other notable changes included:
 
@@ -450,16 +432,29 @@ Other notable changes included:
 <hr>
 <small><a href="#top" class="push-right">Back to Top</a></small>
 
+<a id="14ycommits"></a>
+## 14 Years of Commits
+
+Mark Yen, one of the Komodo developers, experimented with [gource][8] a while ago
+to get a representation of the work we've done over 14 years. The result isn't
+really useful in any way, but it sure is cool to look at.
+
+<div class="centered">
+<iframe src="//player.vimeo.com/video/105804003" width="500" height="330" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+14 years of commits spanning 3 version control systems (perforce, svn and git)
+and more committers than I care to count.
+
 <a id="back"></a>
 ## Looking Back
 
-Looking back at all the changes Komodo has been through I was most surprised that
-Komodo has had several UI overhauls to keep up with the times, though perhaps
-not as big as the 8.x one. However it's interesting to see that though visually
-it has gone through significant changes, you can really see how it seems to settle
-more and more into its own identity as the years pass. The first couple of versions
-are so significantly different from one another that it can be difficult to tell
-that it's the same software, but with later versions you can easily say "this is Komodo".
+I've used Komodo for a long time, though I honestly cannot recall what year or
+version I started with.. it must have been version 4.x or 5.x. It's funny looking
+back through our changelogs and seeing so many vital features being introduced
+since the time I started using Komodo; it makes me wonder how on earth I was
+able to use Komodo without feature X and Y. But then again, like many programmers
+I started out in Notepad (I kid you not) so it's all relative.
 
 As you may have been able to tell I looked at the history of Komodo mainly from
 UI and UX perspective, I did not spend a lot of time with individual features.
@@ -481,3 +476,4 @@ of those ideas but we've got plenty more for another 14 years, and then some.
    [5]: http://community.activestate.com/xpi/aero-theme
    [6]: https://twitter.com/StanAngeloff
    [7]: http://downloads.activestate.com/Komodo/releases/archive/
+   [8]: https://code.google.com/p/gource/
