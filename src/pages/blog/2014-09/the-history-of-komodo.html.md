@@ -1,7 +1,7 @@
 ---
 title: The History of Komodo, A Trip Down Memory Lane
 author: Nathan Rijksen
-date: 2099-09-04
+date: 2014-09-11
 tags: [history,features,changelog]
 description: The first version of Komodo was released roughly 14 years ago. This means Komodo is older than some of it's users.. and yet it's held up remarkably well. Yes it was starting to show signs of aging, but Komodo 8 came with some age-reversing serum so this dragon isn't going anywhere.
 layout: blog
