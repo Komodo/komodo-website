@@ -3,7 +3,7 @@ title: The History of Komodo, A Trip Down Memory Lane
 author: Nathan Rijksen
 date: 2014-09-11
 tags: [history,features,changelog]
-description: The first version of Komodo was released roughly 14 years ago. This means Komodo is older than some of it's users.. and yet it's held up remarkably well. Yes it was starting to show signs of aging, but Komodo 8 came with some age-reversing serum so this dragon isn't going anywhere.
+description: The first version of Komodo was released roughly 14 years ago. This means Komodo is older than some of its users.. and yet its held up remarkably well. Yes it was starting to show signs of aging, but Komodo 8 came with some age-reversing serum so this dragon isn't going anywhere.
 layout: blog
 ---
 
@@ -53,14 +53,14 @@ layout: blog
 </div>
 
 The first version of Komodo was released roughly 14 years ago. This means Komodo
-is older than some of it's users.. and yet it's held up remarkably well. Yes
+is older than some of its users.. and yet its held up remarkably well. Yes
 it was starting to show signs of aging, but Komodo 8 came with some age-reversing
 serum so this dragon isn't going anywhere.
 
 For a while now I've been wanting to set up some virtual machines and
-run through all of the Komodo versions since it's initial launch. Now I finally
+run through all of the Komodo versions since its initial launch. Now I finally
 got to do just that; and to get the full authentic experience of what Komodo
-felt like when each version was released I ran it on the target platform of it's
+felt like when each version was released I ran it on the target platform of its
 time, which means I installed Windows 98 - oh the nostalgia.
 
 <hr id="0.x">
@@ -255,7 +255,7 @@ but it was still missing a file explorer.
 ## Version 4.x - 2007 to 2008
 
 Finally, we have our File Explorer, or as we tend to call it; "Places". Komodo 4
-didn't do much about it's UI, it instead focussed entirely on functionality.
+didn't do much about its UI, it instead focussed entirely on functionality.
 
 Notable changes were:
 
@@ -292,7 +292,7 @@ functionality.
 
 ## Version 5.x - 2008 to 2010
 
-Komodo 5 received it's first major facelift since 2.x, and was made to look much
+Komodo 5 received its first major facelift since 2.x, and was made to look much
 nicer on Windows XP.. though you were still stuck with those greens and blues, god
 XP was ugly.
 
@@ -397,7 +397,7 @@ Other notable changes included:
 
 Komodo 8 was the first Komodo version I contributed to directly, my main objective
 was to modernize the UI as I had always felt that Komodo needed a good looking
-UI to match it's powerful feature set. As a result Komodo 8 looks significantly
+UI to match its powerful feature set. As a result Komodo 8 looks significantly
 different from its earlier versions, introducing a completely new monochrome
 iconset and skin. The skinning system was built using modern web technologies
 and is available for anyone to use.
@@ -465,7 +465,7 @@ can easily do so by [visiting our Download Archive][7].
 ## Looking Forward
 
 For all the changes Komodo has gone through it is sometimes surprising we still
-have stuff to work on; but we do - for all the changes you see on this pages we
+have stuff to work on; but we do - for all the changes you see on these pages we
 have a thousand more in our minds. Komodo 9 will showcase some of the brightest
 of those ideas but we've got plenty more for another 14 years, and then some.
 
