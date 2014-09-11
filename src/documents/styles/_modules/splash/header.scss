@@ -151,11 +151,11 @@
             .inner
             {
                 position: relative;
-                top: 45%;
+                top: 50%;
                 @include transform(translateY(-50%));
 
                 color: #FFF;
-                font-size: 12pt;
+                font-size: 11pt;
                 line-height: 1.5;
                 font-weight: bold;
                 text-align: center;
