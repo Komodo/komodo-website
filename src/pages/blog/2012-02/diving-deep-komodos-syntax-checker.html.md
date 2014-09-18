@@ -89,32 +89,33 @@ tags:
   <p style="clear:both">The file will come up with some highlighted tabstops. In this case, the only line we want to keep is the one that assigns the generated UUID to the _reg_clsid_ variable. Everything else should be replaced with this code:</p>
   
 ```python
-  from xpcom import components
-  from koXMLLanguageBase import koHTMLLanguageBase
-  
-  class koHamlLanguage(koHTMLLanguageBase):
-      name = "Haml"
-      lexresLangName = name
-      _reg_desc_ = "%s Language" % name
-      _reg_clsid_ = "{[[UUID]]}"
-      _reg_contractid_ = "@activestate.com/koLanguage?language=%s;1" % name
-      _reg_categories_ = [("komodo-language", name)]
-  
-      defaultExtension = '.haml'
-      primary = 1
-      supportsSmartIndent = "text"
-      searchURL = "http://haml-lang.com/docs.html"
-  
-      lang_from_udl_family = {'CSL': 'JavaScript', 'TPL': 'Haml', 'M': 'HTML',
-                              'CSS': 'CSS', 'SSL': "Ruby"}
-  
-      sample = """
-  #content
-    .left.column
-      %h2 Welcome to our site!
-      %p= print_information
-    .right.column
-      = render :partial =&gt; "sidebar"
+from xpcom import components
+from koXMLLanguageBase import koHTMLLanguageBase
+
+class koHamlLanguage(koHTMLLanguageBase):
+    name = "Haml"
+    lexresLangName = name
+    _reg_desc_ = "%s Language" % name
+    _reg_clsid_ = "{[[UUID]]}"
+    _reg_contractid_ = "@activestate.com/koLanguage?language=%s;1" % name
+    _reg_categories_ = [("komodo-language", name)]
+
+    defaultExtension = '.haml'
+    primary = 1
+    supportsSmartIndent = "text"
+    searchURL = "http://haml-lang.com/docs.html"
+
+    lang_from_udl_family = {'CSL': 'JavaScript', 'TPL': 'Haml', 'M': 'HTML',
+                            'CSS': 'CSS', 'SSL': "Ruby"}
+
+    sample = """
+#content
+  .left.column
+    %h2 Welcome to our site!
+    %p= print_information
+  .right.column
+    = render :partial =&gt; "sidebar"
+    """
 ```
   
   <p>The easiest way to replace the "[[UUID]]" with an actual UUID is by selecting it, running the Run Command "uuidgen" with "Insert Output" checked, and then deleting the inserted newline. If you're on Windows and don't have a command that can generate UUIDs, you could always create another Python XPCOM component, and copy and paste its UUID here.</p>
