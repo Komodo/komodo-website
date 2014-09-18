@@ -11,7 +11,6 @@ tags:
 - syntax checking
 ---
 
-<div>
   		
             <style type="text/css">
       h2, h3, h4 { clear: both }
@@ -88,8 +87,7 @@ tags:
   
   <p style="clear:both">The file will come up with some highlighted tabstops. In this case, the only line we want to keep is the one that assigns the generated UUID to the _reg_clsid_ variable. Everything else should be replaced with this code:</p>
   
-<pre>
-<code class="hljs python">
+```python
 from xpcom import components
 from koXMLLanguageBase import koHTMLLanguageBase
 
@@ -117,9 +115,7 @@ class koHamlLanguage(koHTMLLanguageBase):
   .right.column
     = render :partial =&gt; "sidebar"
     """
-</code>
-</pre>
-
+```
   
   <p>The easiest way to replace the "[[UUID]]" with an actual UUID is by selecting it, running the Run Command "uuidgen" with "Insert Output" checked, and then deleting the inserted newline. If you're on Windows and don't have a command that can generate UUIDs, you could always create another Python XPCOM component, and copy and paste its UUID here.</p>
   
@@ -140,8 +136,7 @@ class koHamlLanguage(koHTMLLanguageBase):
   </ol>
   <p>After Komodo restarts, create a new file called "test.haml". The language field in the status bar should say "Haml". If not, you'll need to go directly to the comment field and enter a bug. If you're still here, paste in this Haml code:</p>
 
-<pre>
-<code class="hljs haml">
+```haml
   !!!
   %html
     %head
@@ -156,8 +151,7 @@ class koHamlLanguage(koHTMLLanguageBase):
         %ul
           %li item1
           %li item2
-</code>
-</pre>
+```
   
   <p>You should see something similar to the image in the screenshot, with at least the leading "%" and "#' characters showing up in one color, and element names showing up in another.</p>
   
@@ -172,8 +166,7 @@ class koHamlLanguage(koHTMLLanguageBase):
   
   <p>Second, create another Python XPCOM file in the folder components called "koHamlLinter.py", with these contents:</p>
 
-<pre>
-<code class="hljs python">
+```python
 """koHamlLinter - syntax-check Haml code with haml --check """
   
   import os, sys
@@ -259,9 +252,8 @@ class koHamlLanguage(koHTMLLanguageBase):
                   severity = koLintResult.SEV_ERROR
                   koLintResult.createAddResult(results, textlines, severity, lineNo, desc)
           return results
-</code>
-</pre>
-  
+```
+
   <p>There are several items worth pointing out in this file:</p>
   
   <p>The _reg_categories_ field at the start of the class tells Komodo this class is a Linter class. The language field in the category list tells Komodo this class is used to lint Haml. You can have more than one class lint files in a particular language, and Komodo will get results from each linter and combine the results into one view.</p>
@@ -306,14 +298,12 @@ class koHamlLanguage(koHTMLLanguageBase):
   
   <p>And the HTML linter is interesting, because it shows how Komodo now does syntax-checking on multi-language documents. There's too much code involved to dump here, but you can see how we process HTML files in the Komodo HTML linter file, browsable at <a href="https://github.com/Komodo/KomodoEdit/blob/trunk/src/lint/koHTMLLinter.py">https://github.com/Komodo/KomodoEdit/blob/trunk/src/lint/koHTMLLinter.py</a> . In a nutshell, Komodo sends the full HTML file to the usual HTML syntax checker. But it also identifies all the JavaScript sections, and creates a separate file containing the JavaScript code only. Any text in the HTML file that isn't JavaScript is replaced with a space character, so the line and column numbers of any lines the JavaScript checker complains about are kept in sync with the original document. If you wanted to extend the Haml linter like so, you would use code similar to this:</p>
 
-<pre>
-<code class="hljs python">
+```python
   textParts = { "Haml": text, "Ruby" : rubyText, "CSS": cssText }
   for langName, langText in textParts.items():
     newLintResults = self._linterByName(langName).lint_with_text(langText)
     # Merge newLintResults into current lint results
-</code>
-</pre>
+```
 
   
   <p>That's the first reason for the lint_with_text method: all it does is analyze a blob of text, without caring about the document it originated in.</p>
@@ -321,4 +311,3 @@ class koHamlLanguage(koHTMLLanguageBase):
   <p>Finally, you might be wondering how to add a preference field for your language to the Syntax Checking preference page. Again, much of the time you don't have to do anything. When Komodo shows a selected language that contains a linter but no specific preferences, it displays a generic checkbox. The name of this pref is "genericLinter:Haml" (or insert your own language in place of "Haml"), and it's consulted by the code that invokes your linter, so you don't need to actually check it.</p>
   
   <p>However, if you're either adding an additional linter for a particular language, or expect others will be, you'll want to add your own XUL and JavaScript to manage the linter's prefs. In general this will involve adding a XUL file that adds a vbox to the deck with id "docSyntaxCheckByLang", JavaScript code that implements an interface containing a couple of methods, and adding a line to the chrome.manifest file that maps the new preference XUL to <tt>chrome://komodo/content/pref/pref-syntax-checking.xul</tt>.</p>
-</div>
