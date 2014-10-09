@@ -3,6 +3,7 @@ title: Pricing
 layout: default
 description: Komodo IDE pricing and licensing
 priority: 0.7
+referencesOthers: true
 ---
 
 <h1>Komodo IDE Pricing</h1>
@@ -54,12 +55,18 @@ priority: 0.7
 
                 <p>
                     Companies & Organizations
-                    <br>
-                    <small>
-                        <a href="http://www.activestate.com/upgrade-support-terms" class="tooltip" title="Upgrades and Support Subscriptions include major version upgrades and email technical support for $87 per license, per year. Subscriptions are automatically renewed and charged to your credit card annually. ">
-                            Subscribe for <strong>$87</strong>
-                        </a>
-                    </small>
+                </p>
+                <p>
+                    <a href="/pricing/subscriptions"
+                       data-modal data-modal-elem="#subscription-info"
+                       data-analytics="buy:komodo:subcribe_info">
+                        Add Subscription for <strong>$87</strong>/yr
+                    </a><br/> or
+                    <a href="/pricing/upgrades"
+                       data-modal-elem="#upgrade-info" data-modal
+                       data-analytics="buy:komodo:upgrade_info">
+                        Manually upgrade for <strong>$168</strong>
+                    </a>
                 </p>
 
                 <div class="buttons">
@@ -81,23 +88,31 @@ priority: 0.7
                 <h2>For Individuals</h2>
 
                 <a href="#personal-buy" data-modal data-analytics="buy:personal:intend">
-                    <figure><big>$89</big></figure>
+                    <figure><big>$99</big></figure>
                 </a>
 
                 <p>Individuals & Freelancers</p>
 
                 <p>
-                    <a href="#personal-info" data-modal data-analytics="modal:personal-info">Learn More</a>
+                    <a href="/pricing/subscriptions"
+                       data-modal data-modal-elem="#subscription-info"
+                       data-analytics="buy:personal:subcribe_info">
+                        Add Subscription for <strong>$39</strong>/yr
+                    </a><br/> or
+                    <a href="/pricing/upgrades"
+                       data-modal-elem="#upgrade-info" data-modal
+                       data-analytics="buy:personal:upgrade_info">
+                        Manually upgrade for <strong>$59</strong>
+                    </a>
                 </p>
 
-                <a href="#personal-buy" data-modal data-analytics="buy:personal:intend">
-                    <div class="limited-badge">
-                            Limited Time Only!
-                    </div>
-                </a>
+                <p>
+                    <a href="/pricing/personal-details"
+                       data-modal-elem="#personal-info" data-modal
+                       data-analytics="modal:personal-info">Learn More</a>
+                </p>
 
                 <%- @partial('modals/buy-personal.html', @) %>
-                <%- @partial('modals/personal-info.html', @) %>
 
                 <div class="buttons">
                     <a class="button" href="#personal-buy" data-modal data-analytics="buy:personal:intend">Buy Now</a>
@@ -289,7 +304,7 @@ priority: 0.7
         </ul>
         <h3 class="centered">
             Not sure which license is right for you?<br>
-            Check out our <a href="/license-comparison">License Comparison Chart</a>
+            Check out our <a href="/pricing/license-comparison">License Comparison Chart</a>
         </h3>
     </div>
     <ul class="block hide" id="bundles">
@@ -390,6 +405,19 @@ priority: 0.7
         or contact us for a quote at <a href="mailto:sales@activestate.com">
         sales@activestate.com</a> or 1.866.631.4581.
     </p>
+</div>
+
+<!-- Modals -->
+<div id="personal-info" class="hide markdown" title="Komodo IDE for Individuals">
+<%- docpad.getCollection('documents').findAll({relativeBase: "pricing/personal-details"}).toJSON()[0].contentRenderedWithoutLayouts %>
+</div>
+
+<div id="subscription-info" class="hide markdown" title="Komodo IDE Subscription Details">
+<%- docpad.getCollection('documents').findAll({relativeBase: "pricing/subscriptions"}).toJSON()[0].contentRenderedWithoutLayouts %>
+</div>
+
+<div id="upgrade-info" class="hide markdown" title="Komodo IDE Upgrade Info">
+<%- docpad.getCollection('documents').findAll({relativeBase: "pricing/upgrades"}).toJSON()[0].contentRenderedWithoutLayouts %>
 </div>
 
 <!-- LivePerson -->
