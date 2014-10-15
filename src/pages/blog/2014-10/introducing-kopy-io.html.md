@@ -31,7 +31,7 @@ preferences. So you can add some flavour to your kopies.
 ## Write/Alter Code in a Real Editor
 
 When you paste or write code on kopy.io you are actually using
-[CodeMirror][http://codemirror.net/], which will (amongst other things) highlight
+[CodeMirror](http://codemirror.net/), which will (amongst other things) highlight
 your code as you type.
 
 ## Have kopy.io Detect Things For You
@@ -60,7 +60,7 @@ Simply put it in your `.bashrc` and pipe your data to kopy, eg: `echo "hello wor
 # Follow kopy.io
 
 The easiest way to get notified of kopy.io news is by following [the kopy.io twitter
-account]. <a href="https://twitter.com/kopyio" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @kopyio</a>
+account][2]. <a href="https://twitter.com/kopyio" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @kopyio</a>
 
 # More Info
 
