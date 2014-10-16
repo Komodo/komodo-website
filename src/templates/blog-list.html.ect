@@ -6,14 +6,20 @@
         </a>
     </h1>
     <span class="blog-title-under">
-        by <a href="/authors#<%= document.author.replace(/[^a-zA-Z]/g,'') %>"><%= document.author %></a> / tags
+        by
+        <% if @document.author_link: %>
+            <a href="<%= document.author_link %>"><%= document.author %></a>
+        <% else: %>
+            <a href="/authors#<%= document.author.replace(/[^a-zA-Z]/g,'') %>"><%= document.author %></a>
+        <% end %>
+        / tags
         <% for tag in document.meta.tags: %>
         <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
         <% end %>
         / <%= document.humanDate %>
     </span>
     <p>
-        <img src="/images/authors/<%= document.author.replace(/[^a-zA-Z]/g,'') %>.jpg" alt="<%= document.author %>">
+        <img src="/images/authors/<%=document.author_picture or document.author.replace(/[^a-zA-Z]/g,'')+'.jpg' %>" alt="<%= document.author %>">
         <%- document.description %>
     </p>
     <p>
