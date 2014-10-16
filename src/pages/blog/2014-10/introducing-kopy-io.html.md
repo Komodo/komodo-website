@@ -16,9 +16,9 @@ solutions. Namely you can;
 
 When creating a kopy you can set its privacy to "Client-Side Encryption", this
 will encrypt your data client-side and send the server the encrypted data. The
-key needed to decrypt the data is never send to the server and it's up to you
-who you decide to share this with. If someone were to access your kopy without
-the encryption key they'd be met with disappointment.
+key needed to decrypt the data is never sent to the server and it's up to you
+to decide how/who you share this key with. If someone were to access your kopy
+without the encryption key they'd be met with disappointment.
 
 ## Customize It To Your Liking
 
@@ -46,10 +46,19 @@ type and apply highlighting accordingly.
 
 # Start Using kopy.io
 
+There are a few alternative ways you can paste data onto kopy.io:
+
+## Within Komodo
+
 You can start using kopy.io today by [downloading the addon from our Resources section][1].
 Komodo 9 will have support for kopy.io built in.
 
-You can also use kopy.io from your command line with this handy little function
+Once the add-on is installed, Komodo gains an editor context menu where you can
+send a text selection directly to kopy.io.
+
+## Within Shell
+
+You can use kopy.io from your command line with this handy little function:
 
 ```bash
 kopy() { a=$(cat); curl -X POST -s -d "raw:$a" http://kopy.io/documents | awk -F '"' '{print "http://kopy.io/"$4}'; }
