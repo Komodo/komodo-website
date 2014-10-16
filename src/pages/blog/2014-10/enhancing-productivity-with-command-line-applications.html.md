@@ -24,7 +24,7 @@ interface and keyboard shortcuts, I quickly began looking for other ways to
 boost my productivity. When I was researching new editors, I remember being
 impressed with how easy it was to extend the editor’s features using languages
 like JavaScript and Python which were already in my repertoire, and that was one
-of the reasons I ended up choosing Komod
+of the reasons I ended up choosing Komodo.
 
 Komodo IDE does a good job of providing integrated productivity tools such as
 its publishing feature, integration with source control, and Rx toolkit, but as
@@ -35,7 +35,8 @@ looking for more ways to maximize my time in the IDE, I began seeing posts in my
 feed reader about “how to do (insert task here) from the command line.” This led
 to one of the most productivity-boosting mechanisms that I have implemented
 since switching to Komodo -- using macros to call third-party scripts and
-services such as the ones I use to manage my day-to-day schedule or deploy
+services such as the ones I use to manage my day-to-day schedule or code
+deployments.
 
 ## Ticketing System
 
@@ -55,7 +56,7 @@ The concept of billable hours is likely a familiar concept to any developer that
 works at for agency or in-house shop. To keep track of my hours, I use a Ruby
 gem called [Timetrap]( https://github.com/samg/timetrap). Once I look up tickets
 from Jira, I start a timer to begin recording my time with another interpolation
-macro inside of Komodo.
+macro inside of Komodo:
 
 ```js
 // Sample macro to start the Timetrap timer.
@@ -65,11 +66,11 @@ komodo.assertMacroVersion(3);
 if (komodo.view) { komodo.view.setFocus(); }
 
 (function(){
-  var command = 't in';
+  var command = 'timetrap in';
   var task = ko.interpolate.interpolateString(["%(ask:Enter a task:)"]);
 
   if (task) {
-    ko.run.runEncodedCommand(window, 't out', function(){
+    ko.run.runEncodedCommand(window, 'timetrap out', function(){
       task = task.trim();
       if(task.length) {
         command = command + ' ' + task;
@@ -84,7 +85,7 @@ if (komodo.view) { komodo.view.setFocus(); }
 
 When I’m finished with the ticket, I can then run another macro to stop the
 timer and see the total amount of time I spent on the ticket so I can record my
-time in Jir
+time in Jira:
 
 ```js
 // Clock out of the task in timetrap and display the time
@@ -92,9 +93,9 @@ komodo.assertMacroVersion(3);
 if (komodo.view) { komodo.view.setFocus(); }
 
 (function(){
-  var command = 't out';
+  var command = 'timetrap out';
   ko.run.runEncodedCommand(window, command, function(){
-    var command = 't display -v';
+    var command = 'timetrap display -v';
     ko.run.runEncodedCommand(window, command);
   });
 
@@ -109,7 +110,7 @@ work in a continuous integration environment, so I need to get the updated files
 to the correct target environment. Many of the repositories that I work with are
 hosted with [Beanstalk](http://www.beanstalkapp.com/), which allows developers
 to initiate deployments in their commit messages. In many cases, deploying to
-production is as simple as adding `[deploy:production]` to my commit messag
+production is as simple as adding `[deploy:production]` to my commit message.
 
 For repositories that are not hosted with Beanstalk, I use a Komodo macro to
 either SCP the files, which is mostly used when I am working off of a shared
@@ -123,4 +124,4 @@ and could easily be bound to a Komodo macro.
 
 Komodo provides an excellent starting point with its tools. When combined with
 custom macros, it is possible to implement a flexible workflow by leveraging
-outside tools and maximize the time spent in the editor.
+outside tools and maximize your time spent in the editor.
