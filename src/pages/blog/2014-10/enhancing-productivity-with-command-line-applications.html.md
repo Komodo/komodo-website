@@ -61,7 +61,7 @@ macro inside of Komodo:
 ```js
 // Sample macro to start the Timetrap timer.
 // Note: Ruby is on my system path so the shell has
-// access to the t command
+// access to the timetrap command
 komodo.assertMacroVersion(3);
 if (komodo.view) { komodo.view.setFocus(); }
 
