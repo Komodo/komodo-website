@@ -51,7 +51,7 @@ Komodo startup event.
 
 <div class="centered">
     <div class="spacer"></div>
-    <a href="http://komodoide.com/resources/macros/toddw-as--editor-tabs-multiple-rows/" class="button big primary">
+    <a href="http://komodoide.com/resources/macros/toddw-as--multi-row-editor-tabs/" class="button big primary">
         <i class="icon icon-eye"></i>
         View Resource
     </a>
