@@ -7,10 +7,6 @@ description: This little macro will wrap Komodo's editor tabs into multiple rows
 layout: blog
 ---
 
-<div class="centered">
-<h2 style="font-weight: 300; margin: 10px 0 25px 0"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>
-</div>
-
 ## The Macro
 
 This is a JavaScript macro (best to set the macro to trigger on the Komodo
@@ -25,8 +21,10 @@ Here's what is looks like with multiple tab rows:
 
 ## Developer Notes
 
-The JavaScript code for this macro is super ugly - but it shows some interesting
-techniques (hacks) for accessing the anonymous DOM nodes (XBL) in Komodo's UI.
+The JavaScript code that finds the correct UI elements is a little ugly - but it
+shows some interesting techniques for accessing the anonymous DOM nodes (XBL) in
+Komodo's UI. [XBL][] is an algamation of multiple UI elements, but it condenses
+(hides) these elements so it just behaves like one individual DOM node.
 
 Note that it's actually a lot simpler to implement this directly using CSS
 (using [Stylish][] or [userChrome.css][] with the following rules:
@@ -51,7 +49,7 @@ Komodo startup event.
 
 <div class="centered">
     <div class="spacer"></div>
-    <a href="http://komodoide.com/resources/macros/toddw-as--multi-row-editor-tabs/" class="button big primary">
+    <a href="http://komodoide.com/resources/macros/toddw-as--multiroweditortabs/" class="button big primary">
         <i class="icon icon-eye"></i>
         View Resource
     </a>
@@ -71,6 +69,7 @@ Komodo startup event.
 * [Editor API][] - the Komodo editor provides a wrapper around the Scintilla API
 
 
+[XBL]: https://developer.mozilla.org/en-US/docs/XBL
 [Stylish]: http://komodoide.com/resources/addons/jasonbarnabe--stylish/
 [userChrome.css]: http://community.activestate.com/faq/customizing-the-komodo-ui
 [Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
