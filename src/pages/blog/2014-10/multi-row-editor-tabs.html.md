@@ -11,7 +11,9 @@ layout: blog
 
 This is a JavaScript macro (best to set the macro to trigger on the Komodo
 startup event) that wraps your editor tabs into multiple rows, making all the
-tabs visible at once.
+tabs visible at once:
+
+https://github.com/Komodo/macros/blob/master/editor_tabs_multiple_rows.js
 
 ## Screenshot
 
