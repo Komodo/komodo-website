@@ -9,7 +9,9 @@ layout: blog
 
 ## Go-lang Support
 
-There has been a Komodo Go add-on available for a while now, but in Komodo 9
+<img src="/images/blog/2014-10/golang-logo.png" align="right"/>
+
+There has been a Komodo Go add-on available for a while now, but for Komodo 9
 will be including the go-lang add-on in the default Komodo builds and improving
 Komodo's support for [go programming].
 
@@ -25,14 +27,15 @@ The add-on currently supports
 * Code Outline (for Code Browser and Sections List in IDE)
 * Go to Definition (requires [godef][] to be installed)
 
-TODO: Add a nice go-lang image:
-<img src="/images/blog/2014-10/go-lang" style="vertical-align: middle">
-
 ## Source Code
 
 The code for the Go language support is open-source at GitHub, in the
 [komodo-go] repository. We've love to hear from people trying the add-on, and
 hopefull we'll see contributions from other users.
+
+## Screenshot
+
+<img src="https://github.com/Komodo/komodo-go/raw/master/example.png"/>
 
 ## Add-on History
 
@@ -47,26 +50,11 @@ default builds.
 
 ## Installation
 
-For Komodo 9 users, there should already be a "Go Language" add-on included in
-your Komodo installation.
+For Komodo 9 users, the "Go Language" add-on is already included in your Komodo
+installation.
 
-For Komodo 8 users, here's the install instructions:
+For Komodo 8 users, visit the GitHub page to download and install the add-on.
 
-Once installed - invoke the macro on demand or set the macro to run on the
-Komodo startup event.
-
-<div class="centered">
-    <div class="spacer"></div>
-    <a href="http://komodoide.com/resources/macros/toddw-as--multi-row-editor-tabs/" class="button big primary">
-        <i class="icon icon-eye"></i>
-        View Resource
-    </a>
-    <div class="spacer-half"></div>
-    <span>
-        <i class="icon icon-question"></i>
-        <a href="http://komodoide.com/resources/install-instructions/#pane-macro" target="_blank">Install Instructions</a>
-    </span>
-</div>
 
 
 [go programming]: https://golang.org/
