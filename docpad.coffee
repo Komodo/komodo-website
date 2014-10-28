@@ -120,7 +120,9 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                             '" title="' + value.name +
                             '" target="' + (value.target || "_self") + '">'
                 r.push '<img src="' + imgPath + value.img + '" alt="' + value.name + '"/>' unless ! value.img
-                r.push '<span class="link-name">' + value.name + '</span></a>'
+                r.push '<span class="link-name">' + value.name + '</span>'
+                r.push '<i class="icon icon-' + value.icon + '"></i>' unless ! value.icon
+                r.push '</a>'
                 r.push value.name_append if value.name_append
                 r.push latestConfig.templateData.getAsList(value.sub) unless ! value.sub
                 r.push '</li>'

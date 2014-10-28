@@ -2,6 +2,11 @@
 <% categories = @getCollection('resource-categories').findAllLive({}, [sort: 1]).toJSON() %>
 
 <ul class="categories">
+    <li>
+        <h3>
+            <a href="/screencasts">Screencasts</a>
+        </h3>
+    </li>
     <% for document in categories: %>
         <li>
             <h3>

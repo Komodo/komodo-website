@@ -127,7 +127,7 @@
     #splash-download-wrap
     {
         position: relative;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
         
         .promotion
         {
@@ -195,7 +195,7 @@
                 font-weight: 900;
                 margin-top: 0;
                 margin-bottom: 0;
-                width: 210px;
+                width: 350px;
                 cursor: pointer;
                 text-shadow: none !important;
 
@@ -217,7 +217,7 @@
                     text-shadow: none;
                     letter-spacing: 0;
                     margin: -5px 0 0 50px;
-                    text-align: left;
+                    padding-right: 22px;
                 }
 
                 &:not(.primary) p
@@ -230,7 +230,7 @@
                 {
                     padding: 18px 15px 16px 10px;
                     @extend %button-green;
-                    border-radius: 3px 0 0 3px;
+                    border-radius: 3px;
                     box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
                                 inset -1px 0 0 0 rgba(255,255,255, 0.15),
                                 inset 0 -1px 0 0 rgba(0,0,0, 0.3),
@@ -238,30 +238,9 @@
 
                     &:hover
                     {
-                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                    inset -1px 0 0 0 rgba(255,255,255, 0.15),
+                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.3),
+                                    inset -1px 0 0 0 rgba(255,255,255, 0.25),
                                     inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                                    inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                    }
-                }
-
-                /* Grey Button - Komodo Edit */
-                &:not(:first-child)
-                {
-                    padding: 18px 15px 16px;
-                    margin-left: -4px;
-                    @extend %button-grey;
-                    border-radius: 0 3px 3px 0;
-                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                                inset 0 -1px 0 0 rgba(0,0,0, 0.2),
-                                inset 0 0 0 0 rgba(255,255,255,0.0);
-
-                    &:hover
-                    {
-                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                    inset 1px 0 0 0 rgba(0,0,0, 0.2),
-                                    inset 0 -1px 0 0 rgba(0,0,0, 0.2),
                                     inset -25px 15px 30px 0px rgba(255,255,255,0.1);
                     }
                 }
@@ -272,21 +251,11 @@
                 a.big.button
                 {
                     font-size: 13pt !important;
-                    width: 155px !important;
+                    width: 250px !important;
 
                     &:first-child
                     {
                         padding: 14px 10px 11px 6px;
-                    }
-
-                    &:not(:first-child)
-                    {
-                        padding: 14px 10px 11px;
-                    }
-                    
-                    span
-                    {
-                        font-size: 10.5pt;
                     }
 
                     i
@@ -298,16 +267,31 @@
                     p
                     {
                         font-size: 7pt !important;
-                        margin-left: 52px !important;
-                    }
-
-                    &:not(.primary) p
-                    {
-                        margin-left: 45px !important;
                     }
                 }
             }
         }
+
+        #splash-download-edit
+        {
+            margin-top: 10px;
+
+            p
+            {
+                font-size: 10pt;
+
+                @include media($mobile)
+                {
+                    font-size: 8pt !important;
+                }
+            }
+
+            a
+            {
+                color: lighten($color-base-link, 20%);
+            }
+        }
+
     }
 
 }

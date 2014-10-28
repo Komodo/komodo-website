@@ -72,6 +72,12 @@ body.framed header
                     right: 15px;
                 }
 
+                .icon
+                {
+                    position: relative;
+                    top: -3px;
+                }
+
                 ul
                 {
                     display: none;
@@ -110,7 +116,7 @@ body.framed header
             li a
             {
                 font-family: $font-header-nav;
-                font-weight: 300;
+                font-weight: 400;
                 font-size: 13pt;
                 color: $color-header-nav-link;
                 text-transform: uppercase;
