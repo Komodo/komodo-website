@@ -186,16 +186,6 @@
                     line-height: 64px;
                 }
 
-                .limited-badge
-                {
-                    font-weight: bold;
-                    color: #8C669E;
-                    font-size: 14pt;
-                    text-decoration: underline;
-                    @include transform(rotate(-5deg));
-                    margin-top: 20px;
-                }
-
                 &.goodwill > figure,
                 &.advertise > figure
                 {
@@ -207,7 +197,7 @@
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    max-width: 180px;
+                    max-width: 220px;
                 }
 
                 .buttons

@@ -286,9 +286,17 @@ jQuery ->
 
     # JS Dialogs
     loadDialogs = ->
-        jq("a[data-modal]").click ->
-            elem = jq(jq(this).attr("href"))
+        jq.ui.dialog.prototype._focusTabbable = -> {}
+
+        jq("a[data-modal]").click (e) ->
+            link = jq(this)
+            elem = jq(link.data("modal-elem") || link.attr("href"))
+
+            if ! elem.length
+                return
+
             openModal(elem)
+            e.preventDefault()
             return false
 
         if window.location.hash
@@ -300,6 +308,9 @@ jQuery ->
 
         # Open Modal Dialog
         openModal = (elem) ->
+            if openModal._modal
+                openModal._modal.dialog "close"
+
             elem.dialog(
                 modal: true
                 draggable: false
@@ -327,7 +338,11 @@ jQuery ->
 
                     jq('.ui-widget-overlay').click ->
                         elem.dialog "close"
+                close: ->
+                    delete openModal._modal
             )
+
+            openModal._modal = elem
 
     # Twitter Feed
     loadTwitterFeed = ->

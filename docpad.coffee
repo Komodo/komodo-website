@@ -289,6 +289,10 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                         meta.title
                     ]
 
+        redirector:
+            redirects:
+                "/license-comparison": "/pricing/license-comparison"
+
     enabledPlugins:
         youtubefeed: false
 
