@@ -1,8 +1,8 @@
 module.exports =
     splash:
         enabled: false
-        description: "Back to Work!<br/>$50 off for Companies"
-        tooltip: "Valid until September 30th"
+        description: "Personal is<br/>Here to Stay!!<br/>Only $99"
+        tooltip: "Personal is here to stay! Check out our pricing page."
         link: "/pricing"
     pricing:
         enabled: false
@@ -14,21 +14,21 @@ module.exports =
     startpage:
         latestEdit:
             enabled: false
-            description: "Komodo IDE<br>For $89!*"
-            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            description: "Komodo IDE<br>For $99!*"
+            tooltip: "Komodo IDE Personal only"
             link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
         latestIde:
             enabled: false
             description: "Komodo IDE<br>For $89!*"
-            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            tooltip: "Komodo IDE Personal only"
             link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
         latestTrial:
             enabled: false
             description: "Komodo IDE<br>For $89!*"
-            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            tooltip: "Komodo IDE Personal only"
             link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
         old:
             enabled: false
             description: "Komodo IDE<br>For $89!*"
-            tooltip: "Komodo IDE Personal only - Restrictions apply"
+            tooltip: "Komodo IDE Personal only"
             link: "http://komodoide.com/pricing" # Do not use relative or absolute - use full url
