@@ -7,19 +7,20 @@ description: Good news everyone! After testing the Personal license for a few mo
 layout: blog
 ---
 
-Good news everyone! After testing the Personal license for a few months
-we&#39;ve come to the conclusion that we would really like to keep it around.
-The following changes will be made to the license:
+Good news everyone!
 
- * Personal will now cost **$99**
- * *Major upgrades* will cost **$59**
- * A *yearly subscription* will cost **$39**
+Since we introduced Komodo IDE Personal a few months ago as a limited time offer,
+we have received lots of great feedback. Therefore, we are pleased to announce
+that Komodo IDE Personal is here to stay, along with new upgrade and support
+options!
 
-Check out our [License Details page] for more information on what these prices
-entail, in short; Personal has the exact same features as the Enterprise version,
-the only difference is in who is allowed to purchase it. To find out how the
-Personal license differs from the Enterprise license check out our
-[License Comparison page].
+ * Personal IDE license: **$99**
+ * Upgrades and Support subscription: **$39**
+ * Manual version upgrade: **$59**
+
+If you're considering Komodo IDE for individual use, without a company
+reimbursing you, the Personal license gives you [all the features] of Komodo IDE
+at an affordable price.
 
 <div class="centered">
     <a href="http://komodoide.com/pricing" class="button big primary">
@@ -28,13 +29,15 @@ Personal license differs from the Enterprise license check out our
     </a>
 </div>
 
-For people that already bought Komodo personal this means that they do not have
-to worry about paying a hefty upgrade price when the next major version is
-released. Additionally they can now add a yearly subscription to their license
-for only **$39**.
+**Already bought Komodo Personal?** Now you can keep up with the latest releases
+without having to buy a new license. Simply [add an Upgrades and Support
+subscription][account] to your existing license.
 
-We hope you're as excited as we are about Komodo Personal. Stay tuned for our
-brand new Komodo newsletter for even more exciting news.
+Now is the perfect time to enjoy Komodo Personal, lock in your automatic upgrade,
+and take advantage of our top-notch support.
 
-   [License Details page]: /pricing/personal-details
-   [License Comparison page]: /license-comparison/
+We're all very excited about this announcement and hope you are too. Stay tuned
+for more updates in our upcoming newsletters.
+
+   [all the features]: /features
+   [account]: https://account.activestate.com/
