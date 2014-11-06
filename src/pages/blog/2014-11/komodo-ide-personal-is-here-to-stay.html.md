@@ -1,7 +1,7 @@
 ---
 title: Komodo IDE Personal is Here to Stay!
 author: Nathan Rijksen
-date: 2014-11-30
+date: 2014-11-06 6:00
 tags: [personal, pricing, license, buy]
 description: Good news everyone! After testing the Personal license for a few months we&#39;ve come to the conclusion that we would really like to keep it around. The following changes will be made to the license:
 layout: blog
