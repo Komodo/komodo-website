@@ -55,7 +55,13 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
                 """
 
         getPreparedTitle: ->
-            if @document.title then "#{@document.title} | #{@site.title}" else @site.title
+            if @document.title
+                if @document.basename is "index"
+                    return @document.title
+                else
+                    return "#{@document.title} | #{@site.title}"
+
+            return @site.title
 
         getPreparedDescription: ->
             @document.description or @site.description
