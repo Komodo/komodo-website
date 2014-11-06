@@ -28,6 +28,7 @@ jQuery ->
             bindCheckboxEnablers
             bindPaneSelector
             loadFancySelector
+            bindPageShare
         ]
         for fn in fns
             setTimeout fn, 0
@@ -442,6 +443,13 @@ jQuery ->
                         elem.trigger "change"
                     ), 0
             });
+
+    bindPageShare = ->
+        jq(document).on('pageShared', onPageShare);
+
+    onPageShare = (e) ->
+        if _gak
+            _gak.push(['_trackSocial', e.network, e.action]);
 
     init()
 
