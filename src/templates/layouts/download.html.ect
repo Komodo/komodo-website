@@ -54,9 +54,13 @@ layout: default
         </p>
 
         <div class="share">
-            <a class="twitter-share-button" data-count="none" data-related="" expr:data-text="data:post.title" data-url="<%- @db.downloads()['unlock-twt-share-url'] %>" href="http://twitter.com/share" data-text="I'm trying out Komodo! via @KomodoIDE" data-analytics="download-lock:share-twt:<%- @document.downloadId %>">Tweet</a>
+            <% for msg in @db.social()['downloadEvangelize']: %>
+            <div class="twt-wrap hide">
+                <a class="twitter-share-button" data-count="none" data-related="" expr:data-text="data:post.title" data-url="<%- @db.downloads()['unlock-twt-share-url'] + msg.id %>" href="http://twitter.com/share" data-text="<%- msg.message %>">Tweet</a>
+            </div>
+            <% end %>
 
-            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-href="<%- @db.downloads()['unlock-fb-share-url'] %>" data-analytics="download-lock:share-fb:<%- @document.downloadId %>"></div>
+            <div class="fb-like" data-layout="button" data-action="like" data-show-faces="false" data-share="false" data-href="<%- @db.downloads()['unlock-fb-share-url'] %>"></div>
         </div>
 
         <p class="download-locked">
@@ -121,6 +125,15 @@ var checkJQ = setInterval(function()
     $(document).on('pageShared', enableDownload);
     $("#download-now").click( enableDownload);
 }, 100)
+
+
+setTimeout(function() {
+    if (document.querySelectorAll) {
+        var twts = document.querySelectorAll(".twt-wrap");
+        var twt = Math.round((Math.random() * twts.length-1) + 0);
+        twts[twt].classList.remove("hide");
+    }
+},0);
 
 //]]>
 </script>

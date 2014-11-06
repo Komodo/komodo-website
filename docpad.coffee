@@ -35,6 +35,7 @@ docpadConfig = {
             startpage: -> @requireDb('startpage')
             promotions: -> @requireDb('promotions')
             downloads: -> @requireDb('downloads')
+            social: -> @requireDb('social')
 
             cache: {}
             requireDb: (name) ->
