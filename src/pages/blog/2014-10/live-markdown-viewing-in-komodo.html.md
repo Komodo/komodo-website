@@ -16,15 +16,15 @@ to write web-based content.
 
 Now, the only problem I was having with writing Markdown in Komodo, is that I
 had to use an external tool to generate the HTML content in order for me to do a
-final validation for what I'd written.
+final validation.
 
 With the addition of the [Markdown Viewer] add-on, this is no longer a problem!
 I can view the generated HTML directly within Komodo and the HTML preview will
 update itself whenever I make a change to the Markdown text - it doesn't even
 need to be saved.
 
-The Markdown preview uses GitHub styling (though we mke this optional in the
-future, or support other markdown variants), so you should now feel right at
+The Markdown preview uses GitHub styling (though we may make this optional in
+the future, or support other markdown variants), so you should now feel right at
 home when writing Markdown inside of Komodo.
 
 ## Features
