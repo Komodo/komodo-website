@@ -1,7 +1,7 @@
 ---
 title: Live Markdown Preview in Komodo
 author: Todd Whiteman
-date: 2099-11-22
+date: 2014-11-18
 tags: [add-on, markdown, preview]
 description: Showing a live Markdown preview inside of Komodo.
 layout: blog
