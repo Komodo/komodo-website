@@ -9,14 +9,14 @@ layout: blog
 
 <img src="https://raw.githubusercontent.com/dcurtis/markdown-mark/master/png/208x128.png" align="right"/>
 
-Since the Komodo team have been using GitHub more and more, we've been writing a
+Since the Komodo team has been using GitHub more and more, we've been writing a
 lot more [Markdown] content. I personally like markdown (we actually write our
-blogs in Markdown too), as it's simple text formatting makes it faster (for me)
-to write web-based content.
+blogs in Markdown too), it's simple text formatting makes it faster (for me) to
+write web-based content.
 
 Now, the only problem I was having with writing Markdown in Komodo, is that I
 had to use an external tool to generate the HTML content in order for me to do a
-final validation.
+final verification.
 
 With the addition of the [Markdown Viewer] add-on, this is no longer a problem!
 I can view the generated HTML directly within Komodo and the HTML preview will
@@ -24,7 +24,7 @@ update itself whenever I make a change to the Markdown text - it doesn't even
 need to be saved.
 
 The Markdown preview uses GitHub styling (though we may make this optional in
-the future, or support other markdown variants), so you should now feel right at
+the future, or support other markdown variants), so you should feel right at
 home when writing Markdown inside of Komodo.
 
 ## Features
