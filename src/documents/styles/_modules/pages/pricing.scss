@@ -131,7 +131,7 @@
                 vertical-align: top;
                 display: inline-block;
 
-                height: 300px;
+                height: 375px;
                 border: 2px solid rgba(0,0,0,0.3);
                 background: #FFF;
                 border-radius: 3px;
@@ -200,10 +200,28 @@
                     max-width: 220px;
                 }
 
+                .promotion
+                {
+                    margin-top: 15px;
+                    padding: 4px 15px;
+                    color: #FFF;
+                    background: #8A629B;
+
+                    h3
+                    {
+                        margin: 0;
+                    }
+
+                    strong
+                    {
+                        text-decoration: underline;
+                        font-style: italic;
+                    }
+                }
+
                 .buttons
                 {
-                    position: absolute;
-                    bottom: 5px;
+                    margin-top: 25px;
                     text-align: center;
                     width: 100%;
 
@@ -250,7 +268,7 @@
             {
                 display: block;
                 color: $color-base-text;
-                height: 74px;
+                height: 93px;
                 padding: 8px 0;
                 position: relative;
                 background: rgba(0,0,0,0.1);
@@ -426,7 +444,7 @@
         }
     }
 
-    .promotion
+    article > .promotion
     {
         position: fixed;
         z-index: 14;

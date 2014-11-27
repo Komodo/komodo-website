@@ -7,23 +7,23 @@
     overflow: hidden;
 
     padding: 0 15px 0 15px;
-    height: 700px;
+    height: 900px;
 
-    @include media(new-breakpoint(max-width 1900px))
+    @include media(new-breakpoint(max-width 1600px))
     {
-        padding-bottom: 35%;
+        padding-bottom: 55%;
         height: 0;
     }
 
     @include media(new-breakpoint(max-width 1400px))
     {
-        height: 510px;
+        height: 775px;
         padding-bottom: 0;
     }
 
     @include media($mobile)
     {
-        height: 400px;
+        height: 750px;
 
         p
         {
@@ -135,7 +135,7 @@
             position: absolute;
             left: 50%;
             margin-left: -280px;
-            bottom: -100px;
+            bottom: -900px;
             width: 150px;
             height: 150px;
             background-image: url(../images/icons/emblems/promotion.png);
@@ -155,7 +155,7 @@
                 @include transform(translateY(-50%));
 
                 color: #FFF;
-                font-size: 11pt;
+                font-size: 12pt;
                 line-height: 1.5;
                 font-weight: bold;
                 text-align: center;
@@ -292,6 +292,71 @@
             }
         }
 
+    }
+    
+    .promotion-header
+    {
+        a
+        {
+            text-decoration: none !important;
+        }
+
+        h1
+        {
+            font-size: 128px;
+            font-weight: bold;
+            margin-bottom: 0;
+            
+            span
+            {
+                color: #BA2121;
+            }
+        }
+
+        h3
+        {
+            margin-top: 0;
+            font-size: 32px;
+        }
+
+        @include media(new-breakpoint(max-width 1000px))
+        {
+            h1
+            {
+                font-size: 98px;
+            }
+
+            h3
+            {
+                font-size: 24px;
+            }
+        }
+
+        @include media(new-breakpoint(max-width 700px))
+        {
+            h1
+            {
+                font-size: 72px;
+            }
+
+            h3
+            {
+                font-size: 18px;
+            }
+        }
+
+        @include media($mobile)
+        {
+            h1
+            {
+                font-size: 54px;
+            }
+
+            h3
+            {
+                font-size: 14px;
+            }
+        }
     }
 
 }
