@@ -131,7 +131,7 @@
                 vertical-align: top;
                 display: inline-block;
 
-                height: 375px;
+                height: 300px;
                 border: 2px solid rgba(0,0,0,0.3);
                 background: #FFF;
                 border-radius: 3px;
@@ -268,7 +268,7 @@
             {
                 display: block;
                 color: $color-base-text;
-                height: 93px;
+                height: 74px;
                 padding: 8px 0;
                 position: relative;
                 background: rgba(0,0,0,0.1);
@@ -518,4 +518,17 @@
         }
     }
 
+}
+
+.document-pricing .promotions-enabled 
+{
+    .block li
+    {
+        height: 375px;
+    }
+    
+    .block li.stacked a
+    {
+        height: 93px;
+    }
 }

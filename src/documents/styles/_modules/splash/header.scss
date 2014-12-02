@@ -7,7 +7,7 @@
     overflow: hidden;
 
     padding: 0 15px 0 15px;
-    height: 900px;
+    height: 700px;
 
     @include media(new-breakpoint(max-width 1600px))
     {
@@ -292,71 +292,6 @@
             }
         }
 
-    }
-    
-    .promotion-header
-    {
-        a
-        {
-            text-decoration: none !important;
-        }
-
-        h1
-        {
-            font-size: 128px;
-            font-weight: bold;
-            margin-bottom: 0;
-            
-            span
-            {
-                color: #BA2121;
-            }
-        }
-
-        h3
-        {
-            margin-top: 0;
-            font-size: 34px;
-        }
-
-        @include media(new-breakpoint(max-width 1000px))
-        {
-            h1
-            {
-                font-size: 98px;
-            }
-
-            h3
-            {
-                font-size: 24px;
-            }
-        }
-
-        @include media(new-breakpoint(max-width 700px))
-        {
-            h1
-            {
-                font-size: 72px;
-            }
-
-            h3
-            {
-                font-size: 18px;
-            }
-        }
-
-        @include media($mobile)
-        {
-            h1
-            {
-                font-size: 54px;
-            }
-
-            h3
-            {
-                font-size: 14px;
-            }
-        }
     }
 
 }

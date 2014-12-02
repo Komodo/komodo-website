@@ -22,7 +22,7 @@ referencesOthers: true
 </div>
 <% end %>
 
-<div class="outer">
+<div class="outer <%= 'promotions-enabled' if @db.promotions().enterprise.enabled or @db.promotions().personal.enabled %>">
 <div class="inner">
 
     <span class="currency">
@@ -69,9 +69,11 @@ referencesOthers: true
                     </a>
                 </p>
 
-                <div class="promotion">
-                    <h3>Black Friday sale! $100 off with discount code <strong>BLACK100</strong></h3>
-                </div>
+                <% if @db.promotions().enterprise.enabled: %>
+                    <div class="promotion">
+                        <h3><%- @db.promotions().enterprise.description %></h3>
+                    </div>
+                <% end %>
 
                 <div class="buttons">
                     <a class="button primary" href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart"
@@ -110,9 +112,11 @@ referencesOthers: true
                     </a>
                 </p>
 
-                <div class="promotion">
-                    <h3>Black Friday sale! $20 off with discount code <strong>BLACK20</strong></h3>
-                </div>
+                <% if @db.promotions().personal.enabled: %>
+                    <div class="promotion">
+                        <h3><%- @db.promotions().personal.description %></h3>
+                    </div>
+                <% end %>
 
                 <%- @partial('modals/buy-personal.html', @) %>
 
