@@ -1,7 +1,7 @@
 ---
 title: Go-lang Support for Komodo
 author: Todd Whiteman
-date: 2015-12-15
+date: 2014-12-15
 tags: [add-on, go, go lang]
 description: Go programming language support is being introduced into Komodo!
 layout: blog
