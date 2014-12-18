@@ -1,7 +1,7 @@
 ---
 title: Komodo 9 Beta Release Now Available!
 author: Todd Whiteman
-date: 2019-12-18
+date: 2014-12-18
 tags: [release, beta, nightly, preview]
 description: Try out the new features of Komodo IDE 9 - check out what we've working on and contribute towards the next version by reporting bugs or enhancement ideas.
 layout: blog
