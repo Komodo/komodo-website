@@ -38,24 +38,28 @@ Here is a list of the major features and product changes made in Komodo 9:
 
 ### Track Changes
 
-<a href="/images/blog/2014-06/editor-margins-mockup.png" class="lightbox" title="Track Changes mockup - subject to change - click to enlarge">
-<img src="/images/blog/2014-06/editor-margins-mockup-thumb.png" align="right">
+<a href="/images/blog/2014-12/trackchanges.png" class="lightbox" title="Track Changes mockup - subject to change - click to enlarge">
+<img src="/images/blog/2014-12/trackchanges-thumb.png" align="right">
 </a>
 
 The editor has gained a new left margin - which highlights unsaved changes, as
 well as any uncommitted SCC changes. Clicking on the margin will show a diff
 dialog of the changes - as well as letting you revert individual changes! Sweet!
 
+<div class="clearfix"></div>
+
 ### Markdown Viewer
 
-<a href="https://github.com/Komodo/markdown-viewer/raw/master/screenshots/markdown-viewer.png" class="lightbox" title="Markdown viewer - click to enlarge screenshot">
-<img src="/images/blog/2014-12/markdown-viewer-thumb" align="right">
+<a href="/images/blog/2014-12/markdown-viewer.png" class="lightbox" title="Markdown viewer - click to enlarge screenshot">
+<img src="/images/blog/2014-12/markdown-viewer-thumb.png" align="right">
 </a>
 
 For Markdown files, Komodo provides a preview of the generated HTML directly
 within a Komodo split view and contents will dynamically update itself whenever
 you make a change to the Markdown text - it doesn't even need to be saved. You
 can check out the [markdown blog post] for more details on this feature.
+
+<div class="clearfix"></div>
 
 ### Go Programming Language Support
 
@@ -66,9 +70,13 @@ folding, syntax checking (linting) and code intelligence with completions,
 calltips, outline and goto definition for .go files. Please check out the
 [golang blog post] for more details on this support.
 
+<div class="clearfix"></div>
+
 ### Commando
 
-<img src="http://lorempixel.com/400/200" align="right">
+<a href="/images/blog/2014-12/commando.png" class="lightbox" title="Commando - click to enlarge screenshot">
+<img src="/images/blog/2014-12/commando-thumb.png" align="right">
+</a>
 
 This popup dialog is the combined successor of the *Fast Open* and *Invoke Tool*
 dialogs in Komodo 8. Commando provides fuzzy matching, match highlighting,
@@ -76,9 +84,13 @@ search for files (find any file under a folder), toolbox search, bookmark
 integration, shortcuts (go-tool) integration as well as custom category
 filtering.
 
-### Kopy.io Helper
+<div class="clearfix"></div>
 
+### <a href="http://kopy.io/">Kopy.io</a> Helper
+
+<a href="http://kopy.io/">
 <img src="http://kopy.io/img/pastebin-logo-dark.png" align="right">
+</a>
 
 Now you can easily share snippets of code with other people (like pastebin)
 directly from Komodo. Simple make a text selection and use the editor
@@ -86,14 +98,20 @@ right-click context menu and choose *Share Code via Kopy.io*. Even better is tha
 Kopy.io supports client side encryption, so you can make those shared pastes
 more secure.
 
+<div class="clearfix"></div>
+
 ### Notifications UI
 
-<img src="http://lorempixel.com/400/200" align="right">
+<a href="/images/blog/2014-12/notify.png" class="lightbox" title="Notifications UI - click to enlarge screenshot">
+<img src="/images/blog/2014-12/notify-thumb.png" align="right">
+</a>
 
 Notification messages shown to the user now appear in a separate popup panel
 that overlays the main Komodo editor window (previously they appeared in the
 Komodo statusbar). Komodo also has notification preferences, allowing you to
 control which messages get displayed in the popup panel.
+
+<div class="clearfix"></div>
 
 ### Icons
 
@@ -101,6 +119,8 @@ Most of the icons in Komodo user interface have been updated to use improved
 images or to use a consistent style. We've tweaked the file icons, language
 icons, places icons, toolbox icons, preference page icons and code intelligence
 icons (completions, sections list, code browser).
+
+<div class="clearfix"></div>
 
 ### Editor Color Schemes
 
@@ -184,7 +204,7 @@ follow. So far we've been concentrating on two main areas:
 * *Analytics* - We now analyze how our users use Komodo to help us improve our
   product. This is entirely optional and we do not track user specific
   information. You can [view our Analytics code on
-  github](https://github.com/Komodo/KomodoEdit/blob/trunk/src/modules/analytics/content/analytics.js).
+  github](https://github.com/Komodo/KomodoEdit/blob/master/src/modules/analytics/content/analytics.js).
 
 ## Questions?
 
