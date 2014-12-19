@@ -149,7 +149,7 @@ provide the latest API data for PHP 5.6.
 
 ### Python Updates
 
-Python 3.4 is fully supported for syntax checking, debugging, code intelligece,
+Python 3.4 is fully supported for syntax checking, debugging, code intelligence,
 etc...
 
 We've added PEP 8 syntax checking - you can enable this in the Python Syntax
