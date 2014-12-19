@@ -21,7 +21,7 @@ Note that these margins show SCC-based changes. I had experimented with giving
 the option to choose whether showing changes against the repository or the
 saved instance on disk, but found it less useful. If the document is in SCC,
 the tracker shows changes against the repository. Otherwise it shows the
-unsigned changes.
+unsaved changes.
 
 While we're mentioning colors, you can configure which ones are displayed in
 the margins at *Preferences > Color Schemes > Colors* and modify the *Track
