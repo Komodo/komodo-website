@@ -15,7 +15,7 @@ so I added it. The first screenshot shows how the tracker margin indicates
 lines with a green bar to show additions, red bars to show deletions, and blue
 to show in-place changes.
 
-<img src="images/blog/2014-12/track-changes-01.png" alt="colored margins show which editor lines have changed">
+<img src="/images/blog/2014-12/track-changes-01.png" alt="colored margins show which editor lines have changed">
 
 Note that these margins show SCC-based changes. I had experimented with giving
 the option to choose whether showing changes against the repository or the
@@ -27,7 +27,7 @@ While we're mentioning colors, you can configure which ones are displayed in
 the margins at *Preferences > Color Schemes > Colors* and modify the *Track
 changes...* values.
 
-<img src="images/blog/2014-12/track-changes-colors.png" alt="preference colors">
+<img src="/images/blog/2014-12/track-changes-colors.png" alt="preference colors">
 
 But I still didn't find this feature very compelling. But then I realized we
 had a powerful addition to the suite of tools you get by using SCC: the ability
@@ -39,7 +39,7 @@ particular change, but not affect the other changed parts of the documents. And
 this being Komodo 9, I could also share the change via
 <a href="http://kopy.io/">Kopy.io</a> with a  single click.
 
-<img src="images/blog/2014-12/show-change-03.png" alt="showing localized changes">
+<img src="/images/blog/2014-12/show-change-03.png" alt="showing localized changes">
 
 And what I had previously regarded as a "checklist feature" has become a tool I
 find indispensable, in particular when I start working on a codebase that's new
@@ -52,7 +52,7 @@ longer need, leaving just the (hopefully) small number of changes to check in.
 The next screenshot shows what happens after I revert the change block at
 line 41.  If I then decide I want to keep it, I can get it back by doing Undo.
      
-<img src="images/blog/2014-12/track-changes-04.png" alt="reverting a change">
+<img src="/images/blog/2014-12/track-changes-04.png" alt="reverting a change">
 
 And with that one addition, this feature went from being something I thought
 would look good in a product review checklist to something I use every day.
