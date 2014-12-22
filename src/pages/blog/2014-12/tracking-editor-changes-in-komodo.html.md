@@ -1,9 +1,9 @@
 ---
 title: Tracking Editor Changes in Komodo 9
 author: Eric Promislow
-date: 2019-12-19
+date: 2014-12-22
 tags: [editor, revert, highlight, changes]
-description: Check out the new track changes feature in Komodo 9 and discover the reasoning for why it was built.
+description: Discover how the Komodo 9 Track Changes component went from a nice to have feature into a must-have!
 layout: blog
 ---
 
