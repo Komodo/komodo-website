@@ -8,20 +8,22 @@ layout: blog
 ---
 
 A change-tracker has been a common item on the Komodo wish-list for about as
-long as there's been a Komodo editor. I had seen the feature in other editors,
-and was underwhelmed. It looked to me like more clutter in the interface,
-without giving me any more useful information. But we listen to our customers,
-so I added it. The first screenshot shows how the tracker margin indicates
-lines with a green bar to show additions, red bars to show deletions, and blue
-to show in-place changes.
+long as there's been a Komodo editor. I had seen this feature in other editors,
+and was originally underwhelmed - I wanted to make sure the Komodo track changes
+feature was more useful to developers.
+
+The first screenshot shows how the tracker margin indicates lines with a green
+bar to show additions, red bars to show deletions, and blue to show in-place
+changes.
 
 <img src="/images/blog/2014-12/track-changes-01.png" alt="colored margins show which editor lines have changed">
 
-Note that these margins show SCC-based changes. I had experimented with giving
-the option to choose whether showing changes against the repository or the
-saved instance on disk, but found it less useful. If the document is in SCC,
-the tracker shows changes against the repository. Otherwise it shows the
-unsaved changes.
+Note that these margins will include Source Code Control (SCC) changes when the
+file is under revision control. I had originally added preferences to control
+whether it should show changes against the revision control system or just the
+saved instance on disk, but later found these preferences were not really
+needed. If the document is in SCC, the tracker shows changes against the
+repository, otherwise it shows the unsaved changes compared to what is on disk.
 
 While we're mentioning colors, you can configure which ones are displayed in
 the margins at *Preferences > Color Schemes > Colors* and modify the *Track
