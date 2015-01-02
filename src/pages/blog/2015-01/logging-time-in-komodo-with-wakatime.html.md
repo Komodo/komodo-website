@@ -1,7 +1,7 @@
 ---
 title: Logging Time in Komodo with WakaTime
 author: Nathan Rijksen
-date: 2015-01-02 6:00
+date: 2015-01-05 6:00
 tags: [time tracking, productivity, addons]
 description: A while ago a new Komodo addon was submitted that seeks to make time tracking easier simply by using your editor activity as a means of tracking your time, allowing you to just do what you normally do without having to worry about manually starting or stopping some meter.
 layout: blog
