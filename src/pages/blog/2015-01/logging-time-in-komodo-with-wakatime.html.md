@@ -29,11 +29,10 @@ to jump between many client projects during the day and are already using Komodo
 Projects (if not - you should!) then this will all work right out of the box for you!
 
 Installation is simple, just download the addon from our Resources section and
-drag it onto Komodo. Once installed and after restarting Komodo it will prompt
-you for your API key, simply sign up on [WakaTime.com] and navigate to your profile
-settings to obtain the key, copy it over to Komodo and you're good to go! Note it
-may take a couple of minutes before data appears on [WakaTime.com], it updates fairly
-often but is not exactly real-time.
+drag it onto Komodo. Sign up on [WakaTime.com] and copy your API key from the settings page.  On restarting Komodo, input the key when prompted and you are good to go!  Note it
+may take a couple of minutes before data appears on [WakaTime.com] for the first
+time but after that it should update real-time. The default time out value is 15
+minutes but you can change that in settings.
 
 So a big thanks to WakaTime to filling this void, having time tracking built right
 into Komodo is a big bonus which I'm sure many of you will like!
