@@ -41,7 +41,8 @@ hopefull we'll see contributions from other users.
 
 The add-on was originally started by [Trent Mick][] as a general UDL language
 extension back in 2010. Over the next few years [Travis Cline][] took it to the
-next level, adding Syntax Checking and Goto Definition support to the add-on.
+next level, adding Syntax Checking, Codeintel Completions, Calltips and Goto
+Definition support to the add-on (using [Gocode][]).
 [Eric Promislow][] added smoother language integration (koIAppInfo) and language
 preferences in 2013. We (the Komodo team) moved the code into the main Komodo
 GitHub repository. I added Code Intelligence outlining (for Code Browser and
