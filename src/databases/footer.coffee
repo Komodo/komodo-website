@@ -41,7 +41,7 @@ module.exports = {
             link: "http://docs.activestate.com/komodo"
         ,
             name: "API Reference"
-            link: "http://docs.activestate.com/komodo/8.5/macroapi.html#macroapi_top"
+            link: "http://docs.activestate.com/komodo/latest/macroapi.html#macroapi_top"
         ,
             name: "&nbsp;"
             link: "#"

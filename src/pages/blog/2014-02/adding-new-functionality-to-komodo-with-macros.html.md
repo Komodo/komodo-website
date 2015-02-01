@@ -18,10 +18,10 @@ in the selection. Does Komodo support this?_
 
 First off, Komodo does not offer such a command out of the box - but we can
 replicate this functionality by
-[extending Komodo](http://docs.activestate.com/komodo/8.5/extensions.html).
+[extending Komodo](http://docs.activestate.com/komodo/latest/extensions.html).
 
 My extension tool of choice for this will be a
-[Komodo macro](http://docs.activestate.com/komodo/8.5/macros.html#macros_writing) -
+[Komodo macro](http://docs.activestate.com/komodo/latest/macros.html#macros_writing) -
 as it's lightweight and great for user interfaces, user interactions and
 it will also be able to programatically control the editor.
 
@@ -55,7 +55,7 @@ allowing you to insert additional follow-on characters as required, I've typed
 ## Installation
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox](http://docs.activestate.com/komodo/8.5/toolbox.html).
+file into your [Komodo toolbox](http://docs.activestate.com/komodo/latest/toolbox.html).
 Once in your toolbox double click the macro to activate it. The macro will
 automatically activate itself the next time you start Komodo, you only need to
 do this manually the first time.
@@ -92,7 +92,7 @@ APIs and style using CSS.
   - tweak CSS styling for the Komodo user interface
 * [Komodo Developer Extension](http://community.activestate.com/node/1824)
   - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](http://docs.activestate.com/komodo/8.5/macroapi.html)
+* [Komodo Macro API](http://docs.activestate.com/komodo/latest/macroapi.html)
   - to programatically interact with the Komodo editor
 * [Scintilla API](http://www.scintilla.org/ScintillaDoc.html)
   - the Komodo editor provides a wrapper around the Scintilla API

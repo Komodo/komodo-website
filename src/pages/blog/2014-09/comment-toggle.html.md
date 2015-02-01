@@ -58,5 +58,5 @@ whatever custom keybinding you like).
 
 
 [Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
-[Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/8.5/macroapi.html
+[Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/latest/macroapi.html
 [Editor API]: http://www.scintilla.org/ScintillaDoc.html

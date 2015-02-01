@@ -41,7 +41,7 @@ install *(Komodo Install Dir)/lib/support/dbgp*, or on the [ActiveState Code](ht
 
 As many of you probably know, Komodo runs primarily on two dynamic languages:
 Javascript and Python.  Komodo ships with its own siloed Python to make our lives
-easier.  It's a standard...ish Python install.  The [Komodo Python remote debugging docs](http://docs.activestate.com/komodo/8.5/debugpython.html#Installing_the_Python_Remote_Debugger)
+easier.  It's a standard...ish Python install.  The [Komodo Python remote debugging docs](http://docs.activestate.com/komodo/latest/debugpython.html#Installing_the_Python_Remote_Debugger)
 tell you to add the **dbgp** package location to the PythonPath but as far as I know,
 we don't easily have control over that in Komodo's world.
 
@@ -62,7 +62,7 @@ Besides, it's impossible to start debugging Komodo in that traditional manner
 since it's the Mozilla framework (mostly C++) that does the initial object 
 creation and launching of various Python components.
 
-What we need here is [Just in Time (JIT) debugging](http://docs.activestate.com/komodo/8.5/debugpython.html#debugpython_dbgpclient_functions)
+What we need here is [Just in Time (JIT) debugging](http://docs.activestate.com/komodo/latest/debugpython.html#debugpython_dbgpclient_functions)
 provided by *dbgp.client.brk()*.  This allows us to trigger a breakpoint in our
 running code and cause Python to request a debugging session from the Komodo 
 you point it at.  
@@ -72,7 +72,7 @@ We are CLOSE now.
 <a name="try_it"/>
 ## Try It Out 
 When I started fiddling with this I was digging into the Publishing
- code so let's plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/8.5/publish.html#publish_top)
+ code so let's plug some breakpoints in there.  The [Publishing Tool in Komodo IDE](http://docs.activestate.com/komodo/latest/publish.html#publish_top)
 is integrated into the source as an "extension" of Komodo.  You can find it's
 source at *(Komodo Install Dir)/lib/mozilla/extensions/publishing@ActiveState.com/components/*.
 You'll start by importing **brk** from the **dbgp** package.  I do this at the

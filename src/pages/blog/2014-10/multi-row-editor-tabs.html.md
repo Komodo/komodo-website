@@ -75,5 +75,5 @@ Komodo startup event.
 [Stylish]: http://komodoide.com/resources/addons/jasonbarnabe--stylish/
 [userChrome.css]: http://community.activestate.com/faq/customizing-the-komodo-ui
 [Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824
-[Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/8.5/macroapi.html
+[Komodo Macro API]: /framed/?http://docs.activestate.com/komodo/latest/macroapi.html
 [Editor API]: http://www.scintilla.org/ScintillaDoc.html

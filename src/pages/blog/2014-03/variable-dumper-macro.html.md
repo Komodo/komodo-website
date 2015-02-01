@@ -43,7 +43,7 @@ print('window.myvariable: %r' % (window.myvariable, ))
 ## Installation
 
 To install the macro simply hit the download button below, then drag the downloaded
-file into your [Komodo toolbox](http://docs.activestate.com/komodo/8.5/toolbox.html).
+file into your [Komodo toolbox](http://docs.activestate.com/komodo/latest/toolbox.html).
 Once in your toolbox double click the macro to activate it. The macro will
 automatically activate itself the next time you start Komodo, you only need to
 do this manually the first time.
@@ -64,7 +64,7 @@ do this manually the first time.
 
 * [Komodo Developer Extension](http://community.activestate.com/node/1824)
   - play around with JavaScript or Python code in the context of the Komodo window
-* [Komodo Macro API](http://docs.activestate.com/komodo/8.5/macroapi.html)
+* [Komodo Macro API](http://docs.activestate.com/komodo/latest/macroapi.html)
   - to programatically interact with the Komodo editor
 * [Editor API](http://www.scintilla.org/ScintillaDoc.html)
   - the Komodo editor provides a wrapper around the Scintilla API
