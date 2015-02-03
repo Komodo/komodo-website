@@ -12,7 +12,7 @@ the Komodo team.
 
 <img src="/images/blog/2015-02/komodo-code-waterwark.png">
 
-Your role with be making cool and exciting product features, you'll get to test
+Your role will be making cool and exciting product features, you'll get to test
 your metal against the Mozilla platform, support and use multiple programming
 languages (like HTML, JavaScript, PHP, Go, Python, ...), research development
 technology and assist in the planning of an awesome product that's used by
