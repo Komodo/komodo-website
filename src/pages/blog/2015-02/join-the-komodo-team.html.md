@@ -8,18 +8,22 @@ layout: blog
 ---
 
 We are looking for a really talented software engineer (aka developer) to join
-the Komodo product team. Your role with be making cool and exciting product
-features, you'll get to test your metal against the Mozilla platform, support
-and use multiple programming languages (like HTML, JavaScript, PHP, Go, Python,
-...), research development technology and assist in the planning of an awesome
-product that's used by hundreds and thousands of developers around the world!
+the Komodo product team.
+
+<img src="/images/blog/2015-02/komodo-code-waterwark.png">
+
+Your role with be making cool and exciting product features, you'll get to test
+your metal against the Mozilla platform, support and use multiple programming
+languages (like HTML, JavaScript, PHP, Go, Python, ...), research development
+technology and assist in the planning of an awesome product that's used by
+hundreds and thousands of developers around the world!
 
 Choose to work remotely or you can move to the awesome location of
-[Vancouver][2] Canada - either way, you'll be working with a team of extremely
+[Vancouver] Canada - either way, you'll be working with a team of extremely
 skilled people and a company that really looks after it's employees.
 
 Checkout the full [komodo developer] job description and get applying if you've
 got the necessary skills!
 
-   [1]: http://www.activestate.com/company/careers/komodo-mozilla-python-web-developer
+   [komodo developer]: http://www.activestate.com/company/careers/komodo-mozilla-python-web-developer
    [Vancouver]: http://en.wikipedia.org/wiki/Vancouver
