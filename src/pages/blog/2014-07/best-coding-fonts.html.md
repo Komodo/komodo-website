@@ -158,8 +158,8 @@ playful, which you'll see is a recurring theme for my most liked fonts.
 Unlike DejaVu Sans Mono and some of the other fonts mentioned here Source Code
 Pro was created specifically with programmers in mind.
 
-*Website:* https://github.com/adobe/source-code-pro<br>
-*Download:* http://sourceforge.net/projects/sourcecodepro.adobe/files/
+*Website:* https://github.com/adobe-fonts/source-code-pro<br>
+*Download:* https://github.com/adobe-fonts/source-code-pro/releases
 
 <hr>
 <small><a href="#top" class="push-right">Back to Top</a></small>
