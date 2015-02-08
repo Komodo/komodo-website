@@ -1,7 +1,7 @@
 prose:
   rooturl: "src/pages"
   metadata:
-    blog:
+    src/pages/blog:
       - name: "author"
         field:
         element: "text"
