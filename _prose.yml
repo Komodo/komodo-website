@@ -1,0 +1,26 @@
+prose:
+  rooturl: "src/pages"
+  metadata:
+    src/pages/blog:
+      - name: "author"
+        field:
+        element: "text"
+        placeholder: "John Doe"
+      - name: "date"
+        field:
+        element: "text"
+        value: "yyyy-mm-dd 6:00"
+        help: "Leave the time at 6:00"
+      - name: "tags"
+        field:
+        element: "text"
+        placeholder: [tag 1, tag 2, tag 3]
+      - name: "description"
+        field:
+        element: "textarea"
+        help: do NOT place any line breaks!
+        placeholder: do NOT place any line breaks!
+      - name: "layout"
+        field:
+        element: "hidden"
+        value: "blog"
