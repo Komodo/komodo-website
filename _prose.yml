@@ -17,7 +17,7 @@ prose:
           placeholder: [tag 1, tag 2, tag 3]
       - name: "description"
         field:
-        element: "textarea"
+          element: "textarea"
           help: do NOT place any line breaks!
           placeholder: do NOT place any line breaks!
       - name: "layout"
