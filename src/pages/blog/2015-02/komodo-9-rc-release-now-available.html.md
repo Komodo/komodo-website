@@ -40,8 +40,8 @@ can click on the images to enlarge them):
 
 ### Color Schemes and Themes
 
-<a href="/images/blog/2015-02/tomorrowdark.png" class="lightbox" title="Tomorrow Dark scheme - click to enlarge">
-<img src="/images/blog/2015-02/tomorrowdark-thumb.png" align="right">
+<a href="/images/blog/2015-02/tomorrow-dark-color-scheme.png" class="lightbox" title="Tomorrow Dark scheme - click to enlarge">
+<img src="/images/blog/2015-02/tomorrowdark-color-scheme-thumb.png" align="right">
 </a>
 
 We've tweaked the Komodo color schemes and we've made *Tomorrow_Dark* the new
