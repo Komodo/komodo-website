@@ -29,8 +29,9 @@ You can [download the latest Komodo IDE 9 pre-release from our Download section]
     </span>
 </div>
 
-Just remember, this is beta software - which means it's not thoroughly hardened
-and will contain bugs... as such, please report any problems you run into on our [bug tracker](https://bugs.activestate.com/enter_bug.cgi?product=Komodo&version=9.0.0%20preview).
+Just remember, this is pre-release software - which means it's not thoroughly
+hardened and will contain bugs... as such, please report any problems you run
+into on our [bug tracker](https://bugs.activestate.com/enter_bug.cgi?product=Komodo&version=9.0.0%20preview).
 
 ## What's New
 
@@ -41,7 +42,7 @@ can click on the images to enlarge them):
 ### Color Schemes and Themes
 
 <a href="/images/blog/2015-02/tomorrow-dark-color-scheme.png" class="lightbox" title="Tomorrow Dark scheme - click to enlarge">
-<img src="/images/blog/2015-02/tomorrowdark-color-scheme-thumb.png" align="right">
+<img src="/images/blog/2015-02/tomorrow-dark-color-scheme-thumb.png" align="right">
 </a>
 
 We've tweaked the Komodo color schemes and we've made *Tomorrow_Dark* the new
@@ -226,7 +227,7 @@ follow. So far we've been concentrating on two main areas:
   longer appear in the main menu - though your free to adjust these in the
   Komodo *Languages* preferences.
 * *Komodo Sync* - has been removed for Komodo 9
-* *Mozilla 31* - Komodo is now built on top of the Mozilla 31 code base
+* *Mozilla 35* - Komodo is now built on top of the Mozilla 35 code base
 * *Analytics* - We now analyze how our users use Komodo to help us improve our
   product. This is entirely optional and we do not track user specific
   information. You can [view our Analytics code on
