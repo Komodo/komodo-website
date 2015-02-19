@@ -88,10 +88,10 @@ can check out the [markdown blog post] for more details on this feature.
 
 <img src="http://komodoide.com/images/blog/2014-10/golang-logo.png" align="right">
 
-Golang is now becoming supported in Komodo. We provide syntax coloring, code
-folding, syntax checking (linting) and code intelligence with completions,
-calltips, outline and goto definition for .go files. Please check out the
-[golang blog post] for more details on this support.
+Golang is supported in Komodo. We provide syntax coloring, code folding, syntax
+checking (linting) and code intelligence with completions, calltips, outline and
+goto definition for .go files. Please check out the [golang blog post] for more
+details on this support.
 
 <div class="clearfix"></div>
 
@@ -117,7 +117,7 @@ filtering.
 <img src="http://kopy.io/img/pastebin-logo-dark.png" align="right">
 </a>
 
-Now you can easily share snippets of code with other people (like pastebin)
+Now you can easily share (like pastebin) snippets of code with other people
 directly from Komodo. Simple make a text selection and use the editor
 right-click context menu and choose *Share Code via Kopy.io*. Even better is that
 Kopy.io supports client side encryption, so you can make those shared pastes
@@ -236,16 +236,13 @@ follow. So far we've been concentrating on two main areas:
 ## Questions?
 
 **Q:** When will Komodo 9 be released?<br>
-**A:** We've not set a firm deadline - but it will likely be early next year.
+**A:** We've not set a firm deadline - but it will likely be in the next few months.
 
 **Q:** What else is coming in Komodo 9?<br>
 **A:** This is most of the big feature plans we have for Komodo 9, we've got a
 few other things planned, but mostly the focus will be on bug fixes and polish
-until Komodo 9 final is released.
-
-**Q:** What about Komodo Edit?<br>
-**A:** Komodo Edit builds are not being released yet - they will be included later in
-the preview cycle - as we wanted to start with the focus being on Komodo IDE.
+until Komodo 9 final is released. We'll have more features coming soon in a
+follow-up Komodo 9.1 release.
 
 **Q:** I have more questions!<br>
 **A:** [Talk to us directly on the forums!](http://forum.komodoide.com/)
