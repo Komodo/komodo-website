@@ -65,7 +65,7 @@ keybinding to the macro. Run the macro again to remove the annotations.
 * [Editor API][] - the Komodo editor provides a wrapper around the Scintilla API
 
 
-[Run Command]: https://github.com/Komodo/KomodoEdit/blob/trunk/src/run/koIRunService.idl#L367
+[Run Command]: https://github.com/Komodo/KomodoEdit/blob/master/src/run/koIRunService.idl#L367
 [editor margin]: http://www.scintilla.org/ScintillaDoc.html#Margins
 [Run Command Tutorial]: http://docs.activestate.com/komodo/latest/tutorial/runcmdtut.html
 [Komodo Developer Extension]: http://community.activestate.com/node/1824

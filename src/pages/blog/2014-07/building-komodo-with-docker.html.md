@@ -106,5 +106,5 @@ Here's hoping this leads to some interesting contributions! :)
 
    [1]: https://github.com/Komodo/KomodoEdit
    [2]: https://github.com/Komodo/KomodoEdit#building-with-docker
-   [3]: https://github.com/Komodo/KomodoEdit/blob/trunk/BUILD.txt
+   [3]: https://github.com/Komodo/KomodoEdit/blob/master/BUILD.txt
    [4]: http://pelle.io/delivering-gui-applications-with-docker/

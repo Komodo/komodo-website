@@ -83,7 +83,7 @@ might as well just be hidden).
 * *Mozilla 31* - Komodo is now built on top of the Mozilla 31 code base
 * *Analytics* - We now analyze how our users use Komodo to help us improve our product.
   This is entirely optional and we do not track user specific information. You
-  can [view our Analytics code on github](https://github.com/Komodo/KomodoEdit/blob/trunk/src/modules/analytics/content/analytics.js).
+  can [view our Analytics code on github](https://github.com/Komodo/KomodoEdit/blob/master/src/modules/analytics/content/analytics.js).
 
 ## Information for Add-on developers
 
