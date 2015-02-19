@@ -219,7 +219,7 @@ jQuery ->
             el.githubInfoWidget
                 user: el.data("gh-user") || "Komodo"
                 repo: el.data("gh-repo") || "KomodoEdit"
-                branch: el.data("gh-branch") || "trunk"
+                branch: el.data("gh-branch") || "master"
                 last: el.data("gh-amount") || 5
                 avatarSize: el.data("gh-avatarSize") || 16
 
