@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<% if @document.downloadId.substr(0, 4) is 'edit': %>
+<% if @document.downloadId.indexOf('edit') != -1: %>
 <noscript>
 <meta http-equiv="refresh" content="2; url=<%- @db.downloads()[@document.downloadId] %>">
 </noscript>
@@ -11,7 +11,7 @@ layout: default
 <meta http-equiv="refresh" content="2; url=<%- @db.downloads()[@document.downloadId] %>">
 <% end %>
 
-<div class="download-unlocker <%- (if @document.downloadId.substr(0, 4) is 'edit' then 'enabled' else 'disabled') %>">
+<div class="download-unlocker <%- (if @document.downloadId.indexOf('edit') != -1 then 'enabled' else 'disabled') %>">
 
     <h1>Downloading <%- @document.downloadTitle %></h1>
 

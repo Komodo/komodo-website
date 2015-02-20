@@ -14,5 +14,10 @@ module.exports =
     "preview-ide-linux": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-master/link/Komodo-IDE-linux-x86.tar.gz"
     "preview-ide-linux64": "http://downloads.activestate.com/Komodo/nightly/komodoide/latest-master/link/Komodo-IDE-linux-x86_64.tar.gz"
 
+    "preview-edit-win32": "http://downloads.activestate.com/Komodo/nightly/komodoedit/latest-master/link/Komodo-Edit-windows.msi"
+    "preview-edit-osx": "http://downloads.activestate.com/Komodo/nightly/komodoedit/latest-master/link/Komodo-Edit-macosx.dmg"
+    "preview-edit-linux": "http://downloads.activestate.com/Komodo/nightly/komodoedit/latest-master/link/Komodo-Edit-linux-x86.tar.gz"
+    "preview-edit-linux64": "http://downloads.activestate.com/Komodo/nightly/komodoedit/latest-master/link/Komodo-Edit-linux-x86_64.tar.gz"
+
     "unlock-fb-share-url": "http://komodoide.com?utm_source=facebook&utm_medium=like&utm_campaign=download-evangelize&utm_content="
     "unlock-twt-share-url": "http://komodoide.com?utm_source=twitter&utm_medium=tweet&utm_campaign=download-evangelize&utm_content="
