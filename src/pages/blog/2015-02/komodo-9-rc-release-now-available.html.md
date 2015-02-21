@@ -1,7 +1,7 @@
 ---
 title: Komodo 9 RC Now Available!
 author: Todd Whiteman
-date: 2019-02-17
+date: 2015-02-20
 tags: [release, beta, nightly, preview]
 description: Komodo 9 is nearing final release - so please try out the new features and help the team by reporting bugs or enhancement ideas.
 layout: blog
