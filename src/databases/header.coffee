@@ -24,31 +24,31 @@ module.exports = {
                 name: "Screencasts"
             ,
                 name: "Addons"
-                link: "/resources/addons"
+                link: "{site.url}/resources/addons"
             ,
                 name: "Macros"
-                link: "/resources/macros"
+                link: "{site.url}/resources/macros"
             ,
                 name: "Toolbox"
-                link: "/resources/toolbox"
+                link: "{site.url}/resources/toolbox"
             ,
                 name: "Color Schemes"
-                link: "/resources/colorschemes"
+                link: "{site.url}/resources/colorschemes"
             ,
                 name: "Skins"
-                link: "/resources/skins"
+                link: "{site.url}/resources/skins"
             ,
                 name: "Iconsets"
-                link: "/resources/iconsets"
+                link: "{site.url}/resources/iconsets"
             ,
                 name: "Languages"
-                link: "/resources/languages"
+                link: "{site.url}/resources/languages"
             ,
                 name: "Keybindings"
-                link: "/resources/keybindings"
+                link: "{site.url}/resources/keybindings"
             ,
                 name: "Miscellaneous"
-                link: "/resources/miscellaneous"
+                link: "{site.url}/resources/miscellaneous"
             ]
         ,
             name: "Blog"
