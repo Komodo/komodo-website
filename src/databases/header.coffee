@@ -13,10 +13,6 @@ module.exports = {
                 link: "http://www.activestate.com/pro-studio"
             ]
         ,
-            name: "Pricing"
-        ,
-            name: "Download"
-        ,
             name: 'Resources'
             link: "{site.url}/resources"
             icon: "sort-down"
@@ -55,5 +51,9 @@ module.exports = {
         ,
             name: "Forums"
             link: "http://forum.komodoide.com/"
+        ,
+            name: "Try"
+        ,
+            name: "Buy & Upgrade"
     ]
 }

@@ -1,10 +1,15 @@
 .document-pricing
 {
+    
+    .heading
+    {
+        max-width: 800px;
+        margin: auto;
+    }
 
     .assistance
     {
         float: right;
-        margin-top: -40px;
 
         @include media($mobile)
         {
@@ -52,44 +57,6 @@
         }
     }
 
-    .tabs > ul:first-child
-    {
-        text-align: center;
-
-        li
-        {
-            float: none;
-            display: inline-block;
-            vertical-align: top;
-            font-size: 18pt;
-
-            @include media($mobile)
-            {
-                width: 100%;
-                text-align: center;
-
-                a
-                {
-                    float: none;
-                    display: block;
-                }
-            }
-        }
-    }
-
-    .tabs .ui-tabs-panel
-    {
-        padding: 0;
-    }
-
-    .tabs > div > h3
-    {
-        font-weight: 400;
-        font-size: 14pt;
-        line-height: 1.4;
-        margin: 0 0 45px;
-    }
-
     .outer
     {
         text-align: center;
@@ -120,103 +87,98 @@
         .block
         {
             $gutter: 0;
-            max-width: 1000px;
             margin: 10px auto 20px;
             padding: 0;
             text-align: center;
 
-            li
+            & > li
             {
-                width: 300px;
+                width: 320px;
                 vertical-align: top;
                 display: inline-block;
 
-                height: 300px;
                 border: 2px solid rgba(0,0,0,0.3);
                 background: #FFF;
                 border-radius: 3px;
-                margin: 15px 1.5%;
+                margin: 50px 1.5% 15px;
+                padding: 10px 5px;
 
                 position: relative;
+                
+                &:nth-child(2)
+                {
+                    margin-top: 15px;
+                    
+                    p.description,
+                    ul
+                    {
+                        margin: 25px 0;
+                    }
+                }
+                
+                em.popular
+                {
+                    font-style: italic;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
 
+                /* Title */
                 & > h2
                 {
-                    margin: 0 0 45px 0;
-                    padding: 10px 0 40px 0;
-                    background: rgba(0,0,0,0.1);
                     text-transform: uppercase;
-                    font-size: 14pt;
+                    font-weight: normal;
+                    color: $color-base-important;
+                    font-size: 24px;
+                    margin: 5px 0;
                 }
 
-                figure:not(.deal-badge)
+                /* Price */
+                h1
                 {
-                    position: absolute;
-                    box-shadow: 0 0 8px 0 rgba(0,0,0,0.6),
-                                inset 0 -1px 0 0 rgba(255,255,255,0.3);
-
-                    background-color: #4c8583;
-                    @include background-image(linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0)));
-
-                    font-size: 12pt;
-                    color: #FFF;
-                    font-weight: bold;
-                    text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
-                    text-transform: uppercase;
-
+                    font-weight: normal;
+                    margin: 5px 0;
+                    
                     big
                     {
-                        font-size: 16pt;
+                        display: block;
+                        font-size: 30px;
+                        
+                        sup
+                        {
+                            font-size: 15px;
+                        }
                     }
 
-                    small
+                    span
                     {
-                        font-size: 10pt;
+                        display: block;
+                        font-size: 15px;
+                    }
+                }
+                
+                /* Features */
+                ul
+                {
+                    margin: 0;
+                    padding: 0;
+                    
+                    li
+                    {
+                        margin: 8px 0;
                     }
                 }
 
-                & > figure,
-                &:not(.stacked) > a > figure
-                {
-                    left: 50%;
-                    margin-left: -32px;
-                    top: 45px;
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 32px;
-                    line-height: 64px;
-                }
-
-                &.goodwill > figure,
-                &.promoting > figure
-                {
-                    font-size: 9pt;
-                }
-
-                p
+                /* Description */
+                p.description
                 {
                     display: block;
                     margin-left: auto;
                     margin-right: auto;
-                    max-width: 220px;
-                }
-
-                .promotion
-                {
-                    margin-top: 15px;
-                    padding: 4px 15px;
-                    color: #FFF;
-                    background: #8A629B;
-
-                    h3
-                    {
-                        margin: 0;
-                    }
-
-                    strong
-                    {
-                        text-decoration: underline;
-                        font-style: italic;
-                    }
+                    font-size: 12px;
+                    color: #6B6B6B;
+                    line-height: 1.5;
                 }
 
                 .buttons
@@ -224,157 +186,9 @@
                     margin-top: 25px;
                     text-align: center;
                     width: 100%;
-
-                    a
-                    {
-                        position: relative;
-                        display: inline-block;
-                        width: 80%;
-                        max-width: 150px;
-                        min-width: 100px;
-                        margin: 0 auto 5px;
-                        padding: 4px;
-                        text-transform: uppercase;
-
-                        .deal-badge
-                        {
-                            position: absolute;
-                            top: -15px;
-                            right: -10px;
-
-                            .icon
-                            {
-                                font-size: 42px;
-                                color: #36c3bf;
-                            }
-
-                            span
-                            {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                line-height: 42px;
-                                vertical-align: middle;
-                                text-align: center;
-                                width: 38px;
-                                font-size: 10px;
-                            }
-                        }
-                    }
                 }
             }
 
-            li.stacked a
-            {
-                display: block;
-                color: $color-base-text;
-                height: 74px;
-                padding: 8px 0;
-                position: relative;
-                background: rgba(0,0,0,0.1);
-                overflow: hidden;
-
-                &:hover
-                {
-                    text-decoration: none;
-
-                    .on-hover
-                    {
-                        display: block;
-                    }
-                }
-
-                .on-hover
-                {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 0;
-                    left: 0;
-                    background: rgba(0,0,0,0);
-                    color: rgba(255,255,255,0);
-                    text-transform: uppercase;
-                    line-height: 75px;
-                    font-size: 18pt;
-                    font-weight: bold;
-                    padding-left: 75px;
-
-                    @include transition(all 0.2s ease-in-out);
-
-                    &:hover
-                    {
-                        background: rgba(0,0,0,0.6);
-                        color: rgba(255,255,255,1);
-                    }
-                }
-
-                figure
-                {
-                    position: absolute;
-                    left: 8px;
-                    top: 50%;
-                    margin-top: -32px;
-                    width: 64px;
-                    height: 64px;
-                    border-radius: 32px;
-                    line-height: 64px;
-                }
-
-                figure + div
-                {
-                    margin-left: 75px;
-
-                    h2
-                    {
-                        font-size: 12pt;
-                        margin: 0;
-                    }
-
-                    p
-                    {
-                        display: block;
-                        margin: 0;
-                        font-size: 10pt;
-                        font-weight: 300;
-                        max-width: none;
-                    }
-                }
-            }
-
-            li.perlstudio > figure
-            {
-                background-color: #8BBFBF;
-            }
-
-            li.tclstudio > figure
-            {
-                background-color: #C4AB81;
-            }
-
-            li.personal > a > figure
-            {
-                background-color: #8a629b;
-            }
-
-            a.student > figure
-            {
-                background-color: #CAD37C;
-            }
-
-            a.educational > figure
-            {
-                background-color: #558a51;
-            }
-
-            a.goodwill > figure
-            {
-                background-color: #8b6f52;
-            }
-
-            a.promoting > figure
-            {
-                background-color: #AD5353;
-            }
         }
 
         .block.continued li
@@ -383,138 +197,56 @@
         }
     }
 
-    .questions
+    .buttons
     {
-        float: left;
+        margin-top: 25px;
+        width: 100%;
 
-        @include media($mobile)
+        a
         {
-            float: none;
-        }
-
-        p
-        {
-            margin: 0;
-        }
-
-        .number
-        {
-            color: #8b56a2;
-        }
-
-        em
-        {
-            color: lighten($color-base-text, 15%);
-        }
-    }
-
-    .komodo-edit
-    {
-        margin: 0;
-        font-size: 12pt;
-        text-align: right;
-
-        p
-        {
-            margin: 0;
-
-            span
+            position: relative;
+            display: inline-block;
+            width: 210px;
+            margin: 0 auto 5px;
+            padding: 4px;
+            
+            big
             {
-                font-style: italic;
-                text-decoration: underline;
+                display: block;
+                font-size: 16px;
+            }
+            
+            small
+            {
+                font-weight: normal;
+                font-size: 12px;
             }
         }
-
-        @include media($mobile)
+    }
+    
+    .outer-bottom
+    {
+        max-width: 980px;
+        margin: auto;
+        
+        .buttons .button:not(:last-child)
         {
-            width: 100%;
-            text-align: left;
-            margin-top: 15px;
+            margin-right: 15px;
+        }
+        
+        h1, h2
+        {
+            margin-top: 25px;
         }
     }
 
     .contract-holder
     {
-        margin-top: 45px;
         font-size: 9pt;
 
         p
         {
             margin: 0;
-        }
-    }
-
-    article > .promotion
-    {
-        position: fixed;
-        z-index: 14;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        @include linear-gradient(rgba(54, 195, 191, 0.8), rgba(39, 142, 139, 0.8));
-        border-top: 2px solid #3B8482;
-        box-shadow: inset 0 0 0 0 rgba(0,0,0,0),
-                    0 0 8px 0 rgba(0,0,0,0.8);
-
-        .inner
-        {
-            display: inline-block;
-            color: #FFF;
-            margin: auto;
-            padding: 6px;
-            border-radius: 3px;
-            position: relative;
-            padding-right: 35px;
-
-            i
-            {
-                position: absolute;
-                top: 10px;
-                right: 6px;
-                font-size: 36pt;
-            }
-
-            p
-            {
-                margin: 0;
-
-                span
-                {
-                    font-size: 16pt;
-                    text-decoration: underline;
-                    font-style: italic;
-                }
-            }
-        }
-
-        @media screen and (max-width: 1100px)
-        {
-            margin-top: 0;
-            margin-bottom: 25px;
-        }
-
-        &.animate
-        {
-            @include transition(all 0.6s ease-in-out);
-            box-shadow: inset 0 0 100px 0 rgb(183, 255, 252),
-                        0 0 50px 0 rgba(0,0,0,0.6);
-
-            i
-            {
-                @include transition(all 0.4s ease-in-out);
-                @include transform(scale(2));
-            }
-        }
-
-        &.animate-over
-        {
-            @include transition(all 2.0s ease-in-out);
-
-            i
-            {
-                @include transition(all 1.0s ease-in-out);
-            }
         }
     }
 

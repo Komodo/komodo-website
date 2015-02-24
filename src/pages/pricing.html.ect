@@ -6,13 +6,21 @@ priority: 0.7
 referencesOthers: true
 ---
 
-<h1>Komodo IDE Pricing</h1>
-
 <div class="assistance">
     <div id="lpButDivID-1279824964197"></div>
 </div>
 
 <div class="spacer clearfix"></div>
+
+<div class="centered heading">
+    <h1>Buy Komodo IDE and Pro Studio Bundles</h1>
+    
+    <p>
+        Komodo IDE is the multi-language, cross-platform IDE for all your programming needs,
+        while our Pro Studio bundles feature additional features for Perl and Tcl developers.
+        Choose the product that's right for you!
+    </p>
+</div>
 
 <% if @db.promotions().pricing.enabled: %>
 <div class="promotion animateOnLoad">
@@ -25,395 +33,260 @@ referencesOthers: true
 <div class="outer <%= 'promotions-enabled' if @db.promotions().enterprise.enabled or @db.promotions().personal.enabled %>">
 <div class="inner">
 
-    <span class="currency">
-        All prices are in US dollars
-    </span>
-    
-    <span class="testimonials">
-        On the fence? Check out our
-        <a href="http://www.activestate.com/company/testimonials#block-views-testimonials-block_8">
-            Testimonials!
+    <ul class="block">
+        <li class="personal">
+            <h2>Komodo IDE<br/>"Personal"</h2>
+
+            <h1>
+                <big><sup>$</sup>99</big>
+                <span>/license</span>
+            </h1>
+
+            <p class="description">
+                Only available to students, freelancers and individuals
+                <em>who will not be reimbursed</em> by a company or employer
+            </p>
+
+            <ul>
+                <li>Multi-language support</li>
+                <li>Cross-platform installers</li>
+                <li>Not transferrable</li>
+                <li>Limit one purchase</li>
+                <li>No Upgrades & Support</li>
+                <li>Restrictions apply<sup>1</sup></li>
+            </ul>
+
+            <!-- Not tested with new layout
+            <% if @db.promotions().personal.enabled: %>
+                <div class="promotion">
+                    <h3><%- @db.promotions().personal.description %></h3>
+                </div>
+            <% end %>
+             -->
+
+            <div class="buttons">
+                <a class="button primary"
+                   href="https://store.activestate.com/cart/add/p195_q1?destination=cart"
+                   data-analytics="buy:personal:commit">
+                    <big>$99</big>
+                    <small>restrictions apply<sup>1</sup></small>
+                </a>
+            </div>
+        </li>
+        <li class="enterprise">
+            <em class="popular">Most Popular</em>
+
+            <h2>Komodo IDE</h2>
+
+            <h1>
+                <big><sup>$</sup>295</big>
+                <span>/license</span>
+            </h1>
+
+            <p class="description">
+                The professional IDE for individuals and companies - recommended
+                license for all your development needs
+            </p>
+
+            <ul>
+                <li>Multi-language support</li>
+                <li>Cross-platform installers</li>
+                <li>Fully transferrable</li>
+                <li>Bulk purchases available</li>
+                <li>Personal or commercial use</li>
+                <li>Add Upgrades & Support<sup>2</sup> plan to automatically
+                    receive major updates</li>
+            </ul>
+
+            <!-- Not tested with new layout
+            <% if @db.promotions().enterprise.enabled: %>
+                <div class="promotion">
+                    <h3><%- @db.promotions().enterprise.description %></h3>
+                </div>
+            <% end %>
+             -->
+
+            <div class="buttons">
+                <a class="button primary"
+                   href="https://store.activestate.com/cart/add/p100_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:komodo:single">
+                    <big>$382</big>
+                    <small>with Upgrades & Support</small>
+                </a>
+
+                <a class="button"
+                   href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
+                    data-analytics="buy:komodo:single">
+                    <big>$295</big>
+                    <small>without Upgrades & Support</small>
+                </a>
+            </div>
+        </li>
+        <li class="packs">
+            <h2>Komodo IDE For<br/>Teams (5-Packs)</h2>
+
+            <h1>
+                <big><sup>$</sup>1615</big>
+                <span>/5 licenses</span>
+            </h1>
+
+            <p class="description">
+                <strong>Save $ with a 5-pack!</strong><br/>
+                5 licenses + Upgrades & Support plan<br/>subscription for each license
+            </p>
+
+            <ul>
+                <li>Buy 4, get 1 free<sup>3</sup></li>
+                <li>Multi-language support</li>
+                <li>Cross-platform installers</li>
+                <li>Fully transferable</li>
+                <li>Bulk purchases permitted</li>
+                <li>Great for teams</li>
+            </ul>
+
+            <div class="buttons">
+                <a class="button primary"
+                   href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart"
+                   data-analytics="buy:komodo:5pack">
+                    <big>$1615</big>
+                    <small>includes Upgrades & Support</small>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <h3 class="centered">
+        <a href="/pricing/license-comparison">
+            Compare Editions - Komodo and Pro Studio
         </a>
-    </span>
+    </h3>
 
-    <div class="tabs">
-    <ul>
-        <li><a href="#ide">Komodo IDE</a></li>
-        <li><a href="#bundles">Bundles</a></li>
-    </ul>
     <div class="clearfix"></div>
 
-    <div id="ide">
-        <ul class="block">
-            <li class="enterprise">
-                <h2>For Companies</h2>
+</div>
+</div>
 
-                <a href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
-                        data-analytics="buy:komodo:single">
-                    <figure>$295</figure>
-                </a>
-
-                <p>
-                    Companies & Organizations
-                </p>
-                <p>
-                    <a href="/pricing/subscriptions"
-                       data-modal data-modal-elem="#subscription-info"
-                       data-analytics="buy:komodo:subcribe_info">
-                        Add Subscription for <strong>$87</strong>/year
-                    </a><br/> or
-                    <a href="/pricing/upgrades"
-                       data-modal-elem="#upgrade-info" data-modal
-                       data-analytics="buy:komodo:upgrade_info">
-                        Manually upgrade for <strong>$168</strong>
-                    </a>
-                </p>
-
-                <% if @db.promotions().enterprise.enabled: %>
-                    <div class="promotion">
-                        <h3><%- @db.promotions().enterprise.description %></h3>
-                    </div>
-                <% end %>
-
-                <div class="buttons">
-                    <a class="button primary" href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart"
-                        data-analytics="buy:komodo:5pack">
-                        Buy 5-Pack
-                        <figure class="deal-badge">
-                            <i class="icon icon-certificate"></i>
-                            <span>25%</span>
-                        </figure>
-                    </a>
-                    <a class="button primary " href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
-                        data-analytics="buy:komodo:single">
-                        Buy Now
-                    </a>
-                </div>
-            </li>
-            <li class="personal">
-                <h2>For Individuals</h2>
-
-                <a href="#personal-buy" data-modal data-analytics="buy:personal:intend">
-                    <figure><big>$99</big></figure>
-                </a>
-
-                <p>Individuals & Freelancers</p>
-
-                <p>
-                    <a href="/pricing/upgrades"
-                       data-modal-elem="#upgrade-info" data-modal
-                       data-analytics="buy:personal:upgrade_info">
-                        Manually upgrade for <strong>$59</strong>
-                    </a>
-                </p>
-                
-                <p>&nbsp;</p>
-
-                <% if @db.promotions().personal.enabled: %>
-                    <div class="promotion">
-                        <h3><%- @db.promotions().personal.description %></h3>
-                    </div>
-                <% end %>
-
-                <%- @partial('modals/buy-personal.html', @) %>
-
-                <div class="buttons">
-                    <a class="button primary" href="#personal-buy" data-modal data-analytics="buy:personal:intend">Buy Now</a>
-                </div>
-
-                <p style="margin-top: 0;">
-                    <a href="/pricing/personal-details"
-                       data-modal-elem="#personal-info" data-modal
-                       data-analytics="modal:personal-info">Learn More</a>
-                </p>
-            </li>
-            <li class="stacked">
-                <a class="student" href="http://www.studica.com/activestate" target="_blank"
-                 data-analytics="buy:studica">
-                    <div class="on-hover hide">Buy</div>
-                    <figure>$100~</figure>
-                    <div>
-                        <h2>Student</h2>
-
-                        <p>
-                            Our student licenses are handled by Studica
-                        </p>
-                    </div>
-                </a>
-
-                <!-- Educational -->
-                <a class="educational" href="#educational" data-modal
-                    data-analytics="apply:educational:apply">
-                    <div class="on-hover hide">Apply</div>
-                    <figure>Free</figure>
-                    <div>
-                        <h2>Educational</h2>
-
-                        <p>
-                            Qualified Academic Institutions
-                        </p>
-                    </div>
-                </a>
-                <div class="hide" id="educational" title="ActiveState Educational Partner Program" data-modal>
-                    <p>
-                        In order to qualify for the Educational Partner Program you must:
-                    </p>
-                    <ul class="disc">
-                        <li>
-                            Intend to use Komodo in a classroom setting<br/>
-                            <strong>and</strong>
-                        </li>
-                        <li>
-                            Be a qualified academic institution and instructor
-                        </li>
-                    </ul>
-                    <p>
-                        For more information on the Educational Partner Program please
-                        refer to our
-                        <a href="http://www.activestate.com/partners#6">
-                            Partners page on the ActiveState website
-                        </a>.
-                    </p>
-                    <p>
-                        Students do not qualify for the Educational Partner Program,
-                        though they can request that their school contact us to become
-                        a partner.
-                    </p>
-                    <p>
-                        For student licensing please refer to our
-                        <a href="http://www.studica.com/activestate">Studica page</a>.
-                    </p>
-
-                    <hr>
-
-                    <div class="centered">
-                        <p>
-                            <input type="checkbox" id="educational-accept" data-enables="apply-educational">
-                            <label for="educational-accept">
-                                I've Read These Restrictions and Wish to Apply
-                            </label>
-                        </p>
-                        <p>
-                            <a href="mailto:sales@activestate.com?subject=KomodoIDE%20Educational%20Licenses" class="button big primary disabled"
-                                data-analytics="apply:educational:contact"
-                                id="apply-educational">
-                                Contact Us
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Goodwill -->
-                <a class="goodwill" href="#goodwill" data-modal
-                   data-analytics="apply:goodwill:apply">
-                    <div class="on-hover hide">Apply</div>
-                    <figure><small>Flexible</small></figure>
-                    <div>
-                        <h2>Open Source</h2>
-
-                        <p>
-                            Open Source Initiatives
-                        </p>
-                        <p>Evaluated on a case-by-case basis</p>
-                    </div>
-                </a>
-                <div id="goodwill" class="hide" title='Do We Qualify?' data-modal>
-                    <p>
-                        In order to qualify for a Goodwill license your project must:
-                    </p>
-                    <ul class="disc">
-                        <li>
-                            Use an Open Source license
-                        </li>
-                        <li>
-                            Have a sizeable user-base
-                        </li>
-                        <li>
-                            Be at least one year old
-                        </li>
-                        <li>
-                            Have recent and frequent activity
-                        </li>
-                        <li>
-                            You must have used the Komodo IDE trial for 21 days
-                        </li>
-                    </ul>
-                    <p>
-                        Meeting these criterias does not automatically mean we will grant you a license.
-                    </p>
-                    <p>
-                        <strong>Explain why you should qualify for a Goodwill license in your E-Mail.</strong>
-                    </p>
-                    <p>
-                        Please be considerate with your application.
-                    </p>
-
-                    <hr>
-
-                    <div class="centered">
-                        <p>
-                            <input type="checkbox" id="goodwill-accept" data-enables="apply-goodwill">
-                            <label for="goodwill-accept">
-                                I've Read These Restrictions and Wish to Apply
-                            </label>
-                        </p>
-                        <p>
-                            <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Goodwill%20License" id="apply-goodwill" class="button big primary disabled" data-analytics="apply:goodwill:contact">
-                                Contact Us
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Promoting -->
-                <a class="promoting" href="#promoting" data-modal
-                   data-analytics="apply:promoting:apply">
-                    <div class="on-hover hide">Apply</div>
-                    <figure><small>Flexible</small></figure>
-                    <div>
-                        <h2>Promoting</h2>
-
-                        <p>
-                            Screencasters, Bloggers, etc.
-                        </p>
-                        <p>Evaluated on a case-by-case basis</p>
-                    </div>
-                </a>
-                <div id="promoting" class="hide" title='Do I Qualify?' data-modal>
-                    <p>
-                        We occasionally give out licenses in return for promoting Komodo,
-                        by that we mean - you get a free license and in turn you can
-                        feature us in eg. screencasts, blog articles, etc.
-                    </p>
-                    <p>
-                        In order to qualify for this you <strong>must have a significant reach with your medium</strong>.
-                    </p>
-                    <p>
-                        Please be considerate with your application.
-                    </p>
-
-                    <hr>
-
-                    <div class="centered">
-                        <p>
-                            <input type="checkbox" id="promoting-accept" data-enables="apply-promoting">
-                            <label for="promoting-accept">
-                                I've Read These Restrictions and Wish to Apply
-                            </label>
-                        </p>
-                        <p>
-                            <a href="mailto:komodo-licensing@activestate.com?subject=KomodoIDE%20Promotion%20License" id="apply-promoting" class="button big primary disabled" data-analytics="apply:promoting:contact">
-                                Contact Us
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-            </li>
-        </ul>
-        <h3 class="centered">
-            Not sure which license is right for you?<br>
-            Check out our <a href="/pricing/license-comparison">License Comparison Chart</a>
-        </h3>
+<div class="outer-bottom">
+    <hr/>
+    <div class="bundles">
+        <h1>Perl and Tcl Bundles</h1>
+        <p><strong>Komodo + Perl or Tcl = &lt;3</strong></p>
+        <p>
+            Are you a dev programming in Perl or Tcl? ActiveState Pro Studio bundles
+            include everything a Perl or Tcl programmer needs in one convenient package.
+            Pro Studio includes permanent licenses of Komodo IDE and
+            <a href="http://www.activestate.com/perl-dev-kit">Perl Dev Kit</a> or
+            <a href="http://www.activestate.com/tcl-dev-kit">Tcl Dev Kit</a>, plus an
+            annual Upgrades & Support subscription2, and premium acesss to Safari Books Online.
+        </p>
+        <div class="buttons">
+            <a class="button primary big"
+               href="https://store.activestate.com/activeperl-pro-studio"
+               data-analytics="buy:perlprostudio:commit">
+                <big>$595</big>
+                <small>ActivePerl Pro Studio</small>
+            </a>
+            
+            <a class="button primary big"
+               href="https://store.activestate.com/activetcl-pro-studio"
+               data-analytics="buy:tclprostudio:commit">
+                <big>$595</big>
+                <small>ActiveTcl Pro Studio</small>
+            </a>
+        </div>
+        <p>
+            Not sure if Pro Studio is right for you?
+            <a href="http://www.activestate.com/pro-studio">
+                Learn more about Pro Studio bundles.
+            </a>
+        </p>
     </div>
-    <ul class="block hide" id="bundles">
-        <li class="perlstudio">
-            <h2>Perl Pro Studio Bundle</h2>
-            <figure>$595</figure>
-
+    
+    <div class="upgradesRenewals">
+         <h1>Upgrades and Renewals</h1>
+         <p>
+            Have a license you want to upgrade, or add an Upgrades & Support plan?
+            <a href="https://account.activestate.com/">Log in to your account.</a>
+         </p>
+    </div>
+    
+    <div class="bulk">
+        <h1>Buying 20 or More Licenses?</h1>
+        <p>
+            Please email
+            <a href="mailto:sales@activestate.com?subject=Bulk%20License%20Quote%20Request">
+                sales@activestate.com
+            </a> for a custom quote if you require
+            20 or more licenses or subscriptions. Call 778.786.1103
+            (1.866.631.4581 toll-free within North America).
+        </p>
+        
+        <div class="contract-holder">
+            <img src="/images/misc/gsa-adv-logo.png" alt="US Government purchaser?">
             <p>
-                <small>
-                For Perl programmers, includes Komodo IDE,
-                <a href="http://www.activestate.com/perl-dev-kit">Perl Dev Kit</a>,
-                <a href="http://www.activestate.com/safari-books">Safari Books online Subscription</a>,
-                1 Year of Upgrades & Support.
-                <a href="http://www.activestate.com/pro-studio">More Info</a>
-                </small>
+                <strong>US Government purchaser?</strong> If you are a US Government purchaser
+                (federal and local/state agency), please note that ActiveState is a GSA
+                Contract Holder (GSA #GS-35F-0097X). You can
+                <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:0activestate&db=0&searchType=1" target="_blank">
+                search for our products on the GSA Advantage site</a> for GSA pricing,
+                or contact us for a quote at <a href="mailto:sales@activestate.com">
+                sales@activestate.com</a> or 1.866.631.4581.
             </p>
-
-            <div class="buttons">
-                <a class="button primary" href="https://store.activestate.com/cart/add/p108_q1-iupsell_yes?destination=cart"
-                     data-analytics="buy:perlprostudio:5pack">
-                    Buy 5-Pack
-                    <figure class="deal-badge">
-                        <i class="icon icon-certificate"></i>
-                        <span>20%</span>
-                    </figure>
-                </a>
-                <a class="button primary" href="https://store.activestate.com/cart/add/p103_q1-iupsell_yes?destination=cart"
-                    data-analytics="buy:perlprostudio:single">
-                    Buy Now
-                </a>
-            </div>
-        </li>
-        <li class="tclstudio">
-            <h2>Tcl Pro Studio Bundle</h2>
-            <figure>$595</figure>
-
-            <p>
-                <small>
-                For Tcl Programmers, includes Komodo IDE,
-                <a href="http://www.activestate.com/tcl-dev-kit">Tcl Dev Kit</a>,
-                <a href="http://www.activestate.com/safari-books">Safari Books online Subscription</a>,
-                1 Year of Upgrades & Support.
-                <a href="http://www.activestate.com/pro-studio">More Info</a>
-                </small>
-            </p>
-
-            <div class="buttons">
-                <a class="button primary" href="https://store.activestate.com/cart/add/p109_q1-iupsell_yes?destination=cart"
-                     data-analytics="buy:tclprostudio:5pack">
-                    Buy 5-Pack
-                    <figure class="deal-badge">
-                        <i class="icon icon-certificate"></i>
-                        <span>20%</span>
-                    </figure>
-                </a>
-                <a class="button primary" href="https://store.activestate.com/cart/add/p104_q1-iupsell_yes?destination=cart"
-                    data-analytics="buy:tclprostudio:single">
-                    Buy Now
-                </a>
-            </div>
-        </li>
-    </ul>
-
-    <div class="clearfix"></div>
-
-    </div> <!-- /tabs -->
-
-</div>
-</div>
-
-<div class="questions">
-    <p>
-        Got questions? Need more than 30 licenses?
-    </p>
-    <p>
-        Call <span class="number">778.786.1103</span> (1.866.631.4581 toll-free within North America).
-    </p>
-    <p>
-        <em>Monday - Friday 8:30am - 5pm PT</em>
-    </p>
-</div>
-
-<div class="komodo-edit">
-    <p>Don't need all this advanced functionality?</p>
-    <p><a href="/komodo-edit">Komodo Edit</a> is completely
-    <span>free</span> and
-    <a href="https://github.com/Komodo/KomodoEdit" target="_blank">Open-Source!</a></p>
-</div>
-
-<div class="contract-holder">
-    <img src="/images/misc/gsa-adv-logo.png" alt="US Government purchaser?">
-    <p>
-        <strong>US Government purchaser?</strong> If you are a US Government purchaser
-        (federal and local/state agency), please note that ActiveState is a GSA
-        Contract Holder (GSA #GS-35F-0097X). You can
-        <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:0activestate&db=0&searchType=1" target="_blank">
-        search for our products on the GSA Advantage site</a> for GSA pricing,
-        or contact us for a quote at <a href="mailto:sales@activestate.com">
-        sales@activestate.com</a> or 1.866.631.4581.
-    </p>
+        </div>
+    </div>
+    
+    <div class="otherLicenses">
+        <h1>
+            Licenses for Education, Open Source, or Promotions
+        </h1>
+        <p>
+            ActiveState offers free license options to qualified academic/educational
+            institutions (for use in teaching and labs).<br/>
+            Students, please see the Komodo IDE Personal purchase option.
+        </p>
+        <p>
+            We also consider open source developers making a significant contribution
+            to the open source community, and persons or organizations using Komodo
+            IDE in a way that helps us promote our product(s) on a case-by-case basis.
+        </p>
+        <p>
+            Please <a href="mailto:komodo-licensing@activestate.com">contact us</a>
+            with details to find out if you qualify.
+        </p>
+    </div>
+    
+    <div class="komodoEdit">
+        <h2>Komodo Edit</h2>
+        <p>
+            Looking for a powerful editor without all the advanced functionality
+            an IDE comes with? Try <a href="/komodo-edit">Komodo Edit</a>,
+            our free, open source editor based on Komodo IDE.
+        </p>
+    </div>
+    
+    <p>&nbsp;</p>
+    <div class="page-footer">
+        <p>All prices are in USD.</p>
+        <p>
+            <sup>1</sup>
+            <a href="http://www.activestate.com/komodo-ide/license-agreement">
+                Komodo Personal Terms and Conditions
+            </a> apply. By purchasing a Personal license, you agree to the terms 
+            and conditions, and your license may be revoked if you are found to be
+            in conflict with said terms.
+        </p>
+        <p>
+            <sup>2</sup>
+            <a href="http://www.activestate.com/upgrade-support-terms">
+                Upgrades and Support Subscriptions
+            </a> include major version upgrades and email technical support for
+            $87 per license, per year. Subscriptions are automatically renewed
+            and charged to your credit card annually
+        </p>
+        <p>
+            <sup>3</sup> 5 permanent licenses for the cost of 4, plus 5
+            Upgrades & Support plans.
+        </p>
+    </div>
 </div>
 
 <!-- Modals -->
