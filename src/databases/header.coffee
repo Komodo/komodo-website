@@ -53,7 +53,9 @@ module.exports = {
             link: "http://forum.komodoide.com/"
         ,
             name: "Try"
+            link: "{site.url}/download"
         ,
             name: "Buy & Upgrade"
+            link: "{site.url}/pricing"
     ]
 }
