@@ -4,6 +4,17 @@ layout: default
 
 <div class="beta">BETA</div>
 
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+
 <%
     resources = @getCollection(@document.pagedCollection).findAllLive({}, [date: -1]).toJSON()
     resources = resources[@document.page.startIdx...@document.page.endIdx] if @document.page

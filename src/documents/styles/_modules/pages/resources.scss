@@ -2,6 +2,13 @@
 .document-resource-category article,
 .document-resource article
 {
+    .try-buy-buttons
+    {
+        position: absolute;
+        right: 100px;
+        top: 25px;
+    }
+    
     .beta
     {
         position: absolute;

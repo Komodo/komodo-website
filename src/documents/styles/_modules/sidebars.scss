@@ -78,6 +78,22 @@ aside
             display: none;
         }
     }
+    
+    .try-buy-buttons
+    {
+        .inner
+        {
+            .button
+            {
+                width: 48%;
+                
+                &:nth-child(2)
+                {
+                    float: right;
+                }
+            }
+        }
+    }
 
 }
 

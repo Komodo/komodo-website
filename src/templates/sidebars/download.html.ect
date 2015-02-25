@@ -1,10 +1,18 @@
-<!DOCTYPE html>
+<% unless @document.basename is "download": %>
 
 <div class="centered">
-    <a href="/download" class="button primary big">Download Komodo</a>
+    <a href="/download" class="button primary big">
+        <i class="icon icon-download"></i> &nbsp; Download Komodo
+    </a>
 </div>
 
 <% end %>
+
+<div class="centered">
+    <a href="/pricing" class="button big">
+        <i class="icon icon-shopping-cart"></i> &nbsp; Buy Komodo
+    </a>
+</div>
 
 <h2>Releases</h2>
 

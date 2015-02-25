@@ -8,7 +8,7 @@
         max-width: 794px;
     }
 
-    a.button
+    p a.button
     {
         font-family: $font-impact;
         font-size: 14pt;
@@ -136,6 +136,17 @@
                     @include shift(0);
                 }
             }
+        }
+    }
+    
+    .try-buy-buttons
+    {
+        position: relative;
+        
+        .inner
+        {
+            position: absolute;
+            right: 0;
         }
     }
 
