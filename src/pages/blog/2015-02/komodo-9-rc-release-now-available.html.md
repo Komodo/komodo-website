@@ -5,6 +5,7 @@ date: 2015-02-20
 tags: [release, beta, nightly, preview]
 description: Komodo 9 is nearing final release - so please try out the new features and help the team by reporting bugs or enhancement ideas.
 layout: blog
+image: /images/blog/2015-02/tomorrow-dark-color-scheme.png
 ---
 
 We've completed the big feature work for Komodo IDE 9, and we'll focus on bug

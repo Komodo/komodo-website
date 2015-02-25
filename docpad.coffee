@@ -66,12 +66,15 @@ komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate ko
         getPreparedDescription: ->
             @document.description or @site.description
 
-        getPreparedSocialDescription: ->
+        getPreparedSocialDescription: (via = true) ->
             if @document.socialDescription
                 return @document.socialDescription
 
             if @document.layout is 'blog'
-                return @document.title + ' via @KomodoIDE'
+                if via
+                    return @document.title + ' via @KomodoIDE'
+                else
+                    return @document.title
 
             return @site.socialDescription
 

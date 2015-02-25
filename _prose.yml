@@ -27,3 +27,8 @@ prose:
         field:
           element: "hidden"
           value: "blog"
+      - name: "image"
+        field:
+          label: "Image"
+          element: "text"
+          placeholder: "/images/blog/yyyy-mm/foo.jpg"
