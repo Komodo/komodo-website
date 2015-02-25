@@ -2,18 +2,6 @@
 {
     font-weight: 400;
 
-    .button
-    {
-        position: relative;
-        z-index: 110;
-        margin-right: 60px;
-
-        @include media($mobile)
-        {
-            display: none;
-        }
-    }
-
     article > .button + h1
     {
         margin-top: 0;

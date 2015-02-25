@@ -306,3 +306,14 @@ aside
         vertical-align: middle;
     }
 }
+
+.try-buy-buttons.global
+{
+    position: relative;
+    
+    .inner
+    {
+        position: absolute;
+        right: 0;
+    }
+}
