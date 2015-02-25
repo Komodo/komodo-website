@@ -183,7 +183,6 @@
 
                 .buttons
                 {
-                    margin-top: 25px;
                     text-align: center;
                     width: 100%;
                 }
@@ -200,7 +199,6 @@
     .buttons
     {
         margin-top: 25px;
-        width: 100%;
 
         a
         {
@@ -209,6 +207,7 @@
             width: 210px;
             margin: 0 auto 5px;
             padding: 4px;
+            text-align: center;
             
             big
             {
@@ -229,9 +228,20 @@
         max-width: 980px;
         margin: auto;
         
-        .buttons .button:not(:last-child)
+        .buttons
         {
-            margin-right: 15px;
+            text-align: center;
+            display: inline-block;
+            
+            .button:not(:last-child)
+            {
+                margin-right: 15px;
+            }
+            
+            small
+            {
+                font-weight: bold;
+            }
         }
         
         h1, h2
