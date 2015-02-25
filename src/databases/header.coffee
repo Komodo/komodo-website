@@ -3,15 +3,7 @@ module.exports = {
             name: "Home"
             link: "/"
         ,
-            name: "Solutions"
-            link: "#"
-            icon: "sort-down"
-            sub: [
-                name: "Komodo Edit"
-            ,
-                name: "Pro Studio"
-                link: "http://www.activestate.com/pro-studio"
-            ]
+            name: "Features"
         ,
             name: 'Resources'
             link: "{site.url}/resources"
