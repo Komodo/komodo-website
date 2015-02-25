@@ -182,8 +182,6 @@
         #splash-download-buttons
         {
             display: inline-block;
-            border-radius: 3px;
-            box-shadow: 0 0 8px 0 rgba(0,0,0,0.3);
             position: relative;
             z-index: 10;
 
@@ -193,21 +191,23 @@
                 font-size: 16pt !important;
                 text-transform: uppercase;
                 font-weight: 900;
-                margin-top: 0;
-                margin-bottom: 0;
-                width: 350px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                width: 240px;
                 cursor: pointer;
                 text-shadow: none !important;
-
+                position: relative;
+                
                 @include transition(box-shadow 0.2s);
 
                 i /* icon */
                 {
                     vertical-align: middle;
                     font-size: 22pt;
-                    margin-right: 7px;
                     text-shadow: none;
                     color: #FFF;
+                    position: absolute;
+                    left: 20px;
                 }
 
                 p
@@ -216,26 +216,25 @@
                     text-transform: lowercase;
                     text-shadow: none;
                     letter-spacing: 0;
-                    margin: -5px 0 0 50px;
-                    padding-right: 22px;
                 }
 
-                &:not(.primary) p
-                {
-                    margin-left: 43px;
-                }
-
-                /* Green Button - Komodo IDE */
+                /* Green Button - Try Now*/
                 &.primary
                 {
-                    padding: 18px 15px 16px 10px;
                     @extend %button-green;
+                }
+
+                /* Override button-green values */
+                &.primary, &
+                {
+                    padding: 18px 15px 16px 40px;
                     border-radius: 3px;
                     box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
                                 inset -1px 0 0 0 rgba(255,255,255, 0.15),
                                 inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                                inset 0 0 0 0 rgba(255,255,255,0);
-
+                                inset 0 0 0 0 rgba(255,255,255,0),
+                                0 0 8px 0 rgba(0,0,0,0.3);
+    
                     &:hover
                     {
                         box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.3),
@@ -246,30 +245,6 @@
                 }
             }
 
-            @include media($mobile)
-            {
-                a.big.button
-                {
-                    font-size: 13pt !important;
-                    width: 250px !important;
-
-                    &:first-child
-                    {
-                        padding: 14px 10px 11px 6px;
-                    }
-
-                    i
-                    {
-                        font-size: 16pt !important;
-                        margin-right: 4px;
-                    }
-
-                    p
-                    {
-                        font-size: 7pt !important;
-                    }
-                }
-            }
         }
 
         #splash-download-edit

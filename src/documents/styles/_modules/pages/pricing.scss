@@ -11,12 +11,6 @@
     {
         float: right;
 
-        @include media($mobile)
-        {
-            float: none;
-            margin-top: 0;
-        }
-
         table, tr, td, a
         {
             border: 0;
