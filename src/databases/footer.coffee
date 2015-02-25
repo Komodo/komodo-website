@@ -7,9 +7,9 @@ module.exports = {
         ,
             name: "Features"
         ,
-            name: "Pricing"
+            name: "Buy & Upgrade"
         ,
-            name: "Download"
+            name: "Try"
             sub: [
                 name: "Archive"
                 link: "http://downloads.activestate.com/Komodo/"
