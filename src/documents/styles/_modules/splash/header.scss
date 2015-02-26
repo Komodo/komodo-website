@@ -1,12 +1,11 @@
 #splash-header
 {
     text-align: center;
-    padding: 10px 0;
     @include outer-container;
     position: relative;
     overflow: hidden;
 
-    padding: 0 15px 0 15px;
+    padding: 20px 15px 0 15px;
     height: 700px;
 
     @include media(new-breakpoint(max-width 1600px))
@@ -267,6 +266,11 @@
             }
         }
 
+    }
+    
+    .assistance
+    {
+        top: -10px;
     }
 
 }
