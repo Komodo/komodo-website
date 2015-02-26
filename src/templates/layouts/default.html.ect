@@ -54,7 +54,7 @@
         </script>
 
         <!-- Main Container -->
-        <div id="container">
+        <div id="container" class="container-<%= @document.basenameOrig or @document.basename %>">
             <a name="top"></a>
             <%- @partial('layouts/header.html.ect', @) %>
 

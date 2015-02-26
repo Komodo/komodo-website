@@ -96,7 +96,8 @@
             background-size: 100%;
             background-repeat: no-repeat;
 
-            box-shadow: 0 0 20px 6px rgba(0,0,0,0.4);
+            filter: drop-shadow(0 0 20px rgba(0,0,0,0.4));
+            -webkit-filter: drop-shadow(0 0 20px rgba(0,0,0,0.4));
             /*@include transition(z-index 0.4s, opacity 0.4s ease-in-out, transform 0.4s ease-in-out, margin-left 0.4s ease-in-out);*/
 
             &.secondary,
@@ -266,6 +267,11 @@
             }
         }
 
+    }
+    
+    a.php
+    {
+        color: #8892BF;
     }
     
     .assistance
