@@ -5,44 +5,23 @@ module.exports = {
         ,
             name: "Features"
         ,
-            name: 'Resources'
-            link: "{site.url}/resources"
-            icon: "sort-down"
+            name: 'Community'
+            link: 'http://forum.komodoide.com/'
+            icon: 'sort-down'
             sub: [
+                name: "Forums"
+                link: "http://forum.komodoide.com/"
+            ,
                 name: "Screencasts"
             ,
-                name: "Addons"
-                link: "{site.url}/resources/addons"
+                name: 'Resources'
+                link: "{site.url}/resources"
             ,
-                name: "Macros"
-                link: "{site.url}/resources/macros"
-            ,
-                name: "Toolbox"
-                link: "{site.url}/resources/toolbox"
-            ,
-                name: "Color Schemes"
-                link: "{site.url}/resources/colorschemes"
-            ,
-                name: "Skins"
-                link: "{site.url}/resources/skins"
-            ,
-                name: "Iconsets"
-                link: "{site.url}/resources/iconsets"
-            ,
-                name: "Languages"
-                link: "{site.url}/resources/languages"
-            ,
-                name: "Keybindings"
-                link: "{site.url}/resources/keybindings"
-            ,
-                name: "Miscellaneous"
-                link: "{site.url}/resources/miscellaneous"
+                name: 'Contribute'
+                link: "/resources/submit-instructions/"
             ]
         ,
             name: "Blog"
-        ,
-            name: "Forums"
-            link: "http://forum.komodoide.com/"
         ,
             name: "Try"
             link: "{site.url}/download"
