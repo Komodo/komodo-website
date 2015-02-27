@@ -32,12 +32,16 @@
 ## Installation
 
 1. from the root of the Komodo-website repo; `vagrant up`
-  * Starts an Ubuntu VM and provisions it based on our puppet configuration
+  * This will install git and allow the VM to have an IP routable in your internal
+  DNS (ie. 192.168.x.x).
 
 2. when provisioning completes and the VM is running; `vagrant ssh`
   * SSH into the VM as the `vagrant` user and dropped in a shell terminal
 
 3. `cd /vagrant`
+
+4. Rsync the contents of this folder to the vagrant users home folder using this command"
+    `*vagrant@komodo:/vagrant$ rsync -vr --exclude .git --exclude puppet --exclude out --exclude .vagrant . ~`
 
 4. `ip addr show eth1 | grep inet | awk '{ print $2 }' | awk -F "/" '{print $1}'`
   * output the IP of network interface eth1 to use in step 7.
