@@ -33,7 +33,7 @@ class ko_bower_install{
 }
 
 include git
-include nodejs
-include install_npm_packages
-include ko_npm_install
-include ko_bower_install #At this point, this does nothing at all.
+#include nodejs
+#include install_npm_packages
+#include ko_npm_install
+#include ko_bower_install #At this point, this does nothing at all.

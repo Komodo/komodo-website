@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.name = "komodo-www"
     # v-box command that sets the mem of the VM
     v.customize ["modifyvm", :id, "--memory", "1024"]
-    #enalbe symlinking for in shared folders this won't work on Windows any way.
+    #enable symlinking in shared folders.
     #NOTE: Windows, must launch CMD as Admin for this to work
     v.customize ["setextradata", :id,
                  "VBoxInternal2/SharedFoldersEnableSymlinksCreate//vagrant",
