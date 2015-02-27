@@ -18,7 +18,7 @@ module.exports = {
                 link: "{site.url}/resources"
             ,
                 name: 'Contribute'
-                link: "/resources/submit-instructions/"
+                link: "{site.url}/resources/submit-instructions/"
             ]
         ,
             name: "Blog"
