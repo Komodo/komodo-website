@@ -8,6 +8,7 @@
         "docpad-plugin"
     ],
     "author": "Nathan Rijksen <nathanr@activestate.com> (https://github.com/Komodo/)",
+    "private": true,
     "maintainers": [
         "Nathan Rijksen <nathanr@activestate.com> (https://github.com/Naatan)"
     ],

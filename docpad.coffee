@@ -20,6 +20,8 @@ docpadConfig = {
 
     # Default Env
     env: process.env.DOCPAD_ENV or "development"
+    
+    warnUncompiledPrivatePlugins: false
 
     templateData:
 
