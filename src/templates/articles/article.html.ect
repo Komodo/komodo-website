@@ -1,6 +1,0 @@
-<article class="<%= 'normalize' unless @document.dontNormalize %>">
-    <%- @content %>
-    <% if @document.comments: %>
-    <%- @partial('comments.html', @) %>
-    <% end %>
-</article>

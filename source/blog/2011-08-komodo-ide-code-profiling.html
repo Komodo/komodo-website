@@ -1,0 +1,33 @@
+---
+update_from_drupal: true
+title: 'Komodo IDE: Code Profiling'
+description: 'For programmers, one of the most common questions posed is "Why is my application taking so long?" For dynamic programming languages, there are often limited tools that can answer this important question, or variant questions like:'
+disqus_identifier: node/3128
+author: Todd Whiteman
+date: August 12, 2011
+tags:
+- callgrind
+- code profiling
+- python
+- testing
+---
+
+<div>
+  		
+          <p><a href="http://www.youtube.com/v/AkYaMCa6wPQ" rel="shadowbox;width=640;height=530" title="Komodo IDE - Code Profiling">
+  	<img class="as_left" style="float:" title="Komodo IDE: Code Profiling Screencast" alt="Komodo IDE - Code Profiling" src="/assets/images/blog/2011-08/komodo-profiling-thumb.png"></a>
+  </p>
+  
+  <p>For programmers, one of the most common questions posed is "Why is my application taking so long?" For dynamic programming languages, there are often limited tools that can answer this important question, or variant questions like:</p>
+  
+  <ul style="clear:both">
+  <li>Where is my application spending the most CPU time?</li>
+    <li>How many times is this function getting called?</li>
+    <li>By changing X to Y, what performance impact will this have?</li>
+  </ul>
+  <p>With <a href="http://docs.activestate.com/komodo/7.0/">Komodo IDE 7</a> (currently Alpha 4 - available at the bottom of the <a href="http://www.activestate.com/komodo-ide/downloads">download page</a>), Python programmers will now be able to answer these questions using the new Code Profiling tools. You can easily launch your application with code profiling enabled, and when the application finishes, Komodo IDE will show you a graphical representation of the code profiling results. This will allow you to easily see exactly where your program spends most of it's time, showing which functions were called and which functions called what other functions, how many times they were called and how long they took to execute.</p>
+  
+  <p>Armed with this knowledge, you'll be able to quickly trace your applications, tweak your code and then re-run them, comparing the performance results to your previous runs.</p>
+  
+  <p>Note: As of 7.0.0 Alpha 4, Komodo IDE's Code Profiling launcher only supports Python, though you can open standalone profiling results that are stored in the <a href="http://valgrind.org/docs/manual/cl-format.html">callgrind format</a>, which is a common profiling format used in other dynamic languages. </p>
+</div>

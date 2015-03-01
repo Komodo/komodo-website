@@ -1,0 +1,25 @@
+---
+title: Komodo Blog
+sidebar: blog
+description: A blog about the latest news and events related to Komodo IDE and Komodo Edit
+socialDescription: Check out the @KomodoIDE blog 
+basenameOrig: blog
+pageable: true
+per_page: 10
+---
+
+<%= partial('blog-list') %>
+
+<% if false %>
+
+<h3 class="centered">
+    You've reached the end.<br>
+    Note that you can access our
+    <a href="http://www.activestate.com/blog/category/blog-categories/komodo" target="_blank">
+        older blog archives on the ActiveState website
+    </a>.
+</h3>
+
+<% end %>
+
+<%= partial('pagination') %>

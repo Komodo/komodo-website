@@ -1,0 +1,177 @@
+---
+title: Komodo IDE -- One Cross-Platform IDE, All Your Languages
+headerAppend: header-splash
+classNames: no-grid
+dontNormalize: true
+priority: 1.0
+---
+
+<!-- Features -->
+
+<div id="splash-features">
+    <h1>Features</h1>
+    <a href="/features">View All</a>
+
+    <div id="splash-feature-column">
+        <ul>
+            <li>
+                <img src="/assets/images/screenshots/features/codeintel-featured-small.png"/>
+                <h2>Code Intelligence</h2>
+                <p>
+                    Auto-complete and calltips. Fast code navigation with Code
+                    Browser. Code refactoring.
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/vcs-featured-small.png"/>
+                <h2>Version Control</h2>
+                <p>
+                    Subversion, Mercurial, Git, Perforce, Bazaar, CVS.
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/skinning-featured-small.png"/>
+                <h2>Skinning</h2>
+                <p>
+                    Sleek UI frees up editing space. Undock and move side panes.
+                    Download/create custom skins.
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/collab-featured-small.png"/>
+                <h2>Collaboration</h2>
+                <p>
+                    Edit with multiple users simultaneously with Code Collaboration.
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/crossplatform-featured-small.png"/>
+                <h2>Cross-Platform</h2>
+                <p>
+                    Identical features for Mac, Linux and Windows. 
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/debug-featured-small.png"/>
+                <h2>Debugging</h2>
+                <p>
+                    Debug PHP, Python, Perl, Ruby, Tcl, Node.js. Debug locally and
+                    remotely. Configure breakpoints.
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/addons-featured-small.png"/>
+                <h2>Add-Ons and Customization</h2>
+                <p>
+                    Vi and emacs key bindings. Install Add-ons for specific
+                    features. 
+                </p>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/features/test-featured-small.png"/>
+                <h2>Unit Testing</h2>
+                <p>
+                    Supports major frameworks such as PHPUnit, Perl TAP, Python
+                    unittest, and Ruby's rake test.
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Addons -->
+<div id="splash-addons">
+    <div class="inner">
+        <h1>Resources</h1>
+        <p>
+            Resources allow you to enhance Komodo through addons, skins,
+            color schemes, macro's, key bindings, etc.
+            <a href="/resources">View All</a>
+        </p>
+        <br class="clearfix">
+
+        <% data.addons.featured.each do |addon| -%>
+        <div>
+            <h2><%= addon.name %></h2>
+            <figure style="background-image: url('/assets/images/addons/<%= addon.img %>')"></figure>
+            <p>
+                <%= addon.description %>
+            </p>
+            <a href="<%= addon.link %>" class="button primary">Download</a>
+        </div>
+        <% end -%>
+    </div>
+</div>
+
+<!-- News -->
+<div id="splash-news">
+    <div>
+        <div id="splash-news-blogs">
+            <h1><a href="/blog">Blogs</a></h1>
+            <!-- Blog loop
+            <dl>
+                <dt>
+                    <a href="< document.url %>">
+                        < document.title %>
+                    </a>
+                </dt>
+                <dd>
+                    By < document.author %>, < document.humanDate %>
+                </dd>
+            </dl>
+             -->
+        </div>
+        <div id="splash-news-tweets">
+            <h1>
+                <a href="http://twitter.com/KomodoIDE" target="_blank">Tweets</a>
+
+                <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+            </h1>
+            <ul>
+                <script id="tweet-template" type="text/x-handlebars-template">
+                    <li>
+                        <div class="icons">
+                            <a href="{{link}}" target="_blank"><i class="icon icon-twitter"></i></a>
+                            {{#if retweet}}
+                                <i class="icon icon-retweet tooltip" title="Retweeted by {{retweet.author}}"></i>
+                            {{/if}}
+                        </div>
+
+                        <a href="{{author_link}}" title="{{author}} ({{nick}})" target="_blank">
+                            <img src="{{avatar}}" align="left">
+                        </a>
+                        <span class="tweet">
+                            {{{tweet}}}
+                        </span>
+                    </li>
+                </script>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div id="splash-news-testimonials">
+            <h1>Testimonials</h1>
+            <div class="testimonial">
+                <div class="quote-left">“</div>
+                <div class="quote-right">”</div>
+                <blockquote data-field="comment">
+                    @ActiveState Sweetttt, you beautiful sons-of-$&^%@, Komodo 8 now has
+                    all the features I've wanted in an IDE since I was 2 years old. #thanx
+                </blockquote>
+                <span>
+                    <span data-field="name"><a href="#">ANAIO</a></span> via <span data-field="source"><a href="#">Twitter</a></span>
+                </span>
+            </div>
+        </div>
+        <div id="splash-news-screencasts">
+            <h1><a href="/screencasts">Screencasts</a></h1>
+                <!-- Screencast Feed
+                <a href="/screencasts/watch/< item.id %>-< item.title_sane %>">
+                    <i class="icon icon-youtube-play"></i>
+                    <figure style="background-image: url('< item.thumbnail_large %>')"></figure>
+                    <span>< item.title %></span>
+                </a>
+                -->
+        </div>
+    </div>
+</div>

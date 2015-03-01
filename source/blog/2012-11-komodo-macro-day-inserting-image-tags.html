@@ -1,0 +1,99 @@
+---
+update_from_drupal: true
+title: 'Komodo Macro of the day: Inserting Image Tags'
+description: A Komodo customer recently asked for us to make adding image tags painless the way he was used to in his previous editor. Instead of typing some HTML and the URI, he wanted to pick the image file via a dialog box, and have Komodo do all the work. Well, I could file a bug, and he could then wait for the next development cycle to release a fix.
+disqus_identifier: node/3553
+author: Eric Promislow
+date: November 20, 2012
+tags:
+- javascript
+- macro
+---
+
+<div>
+  		
+          <p>
+   <img title="Komodo 7 Macros" alt="Komodo 7 Macros" style="width: auto" src="/assets/images/blog/2012-11/komodo-orb-128.png" class="as_feature_img as_left">
+  A <a target="_new" href="http://activestate.com/komodo">Komodo</a> customer recently asked for us to make adding image tags painless the way he was used to in his previous editor. Instead of typing some HTML and the URI, he wanted to pick the image file via a dialog box, and have Komodo do all the work. Well, I could file a bug, and he could then wait for the next development cycle to release a fix. But it's an easy macro.  And since it's not that complex, and shows the basic parts of the <a target="_new" href="http://docs.activestate.com/komodo/7.1/macroapi.html">Komodo API</a>, I figured I'd publish the macro here, with annotations explaining how it works.</p>
+  
+  <link rel="stylesheet" href="http://pygments.org/media/pygments_style.css">
+  <div style="clear:both" class="hlcode">
+  <p>First, I like to wrap all my macros in a <span class="kd">try</span>/<span class="kd">catch</span> block to catch any
+  problems and relay them with an <span class="nx">alert</span> statement.</p>
+  
+  
+  <div class="syntax">
+  <pre><span class="k">try</span> <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">view</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">views</span><span class="p">.</span><span class="nx">manager</span><span class="p">.</span><span class="nx">currentView</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">dirName</span> <span class="o">=</span> <span class="nx">view</span><span class="p">.</span><span class="nx">koDoc</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span>
+      <span class="nx">dirName</span><span class="p">;</span></pre>
+  </div>
+  </div>
+    
+    <p>The above two lines are standard for getting information on the current document. I'm assuming the image file will be somewhere near the document we're working on. You can change it to other asset directories.</p>
+    
+  <div class="hlcode">
+    <div class="syntax">
+    <pre>
+      <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">filepicker</span><span class="p">.</span><span class="nx">browseForFile</span><span class="p">(</span><span class="nx">dirName</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="s2">"Choose an image file to insert"</span><span class="p">);</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">ko</span><span class="p">.</span><span class="nx">uriparse</span><span class="p">.</span><span class="nx">localPathToURI</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span></pre>
+  </div>
+  </div>
+  
+  
+    
+    <p>We need to work with URIs, not local paths. This code will just convert the local path to a "file://" URI, you'll probably need to write a mapper that's aware of the structure of your site.</p>
+    
+  
+  <div class="hlcode">
+    <div class="syntax">
+    <pre>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">alert</span><span class="p">(</span><span class="s2">"Can't get url from path'"</span> <span class="o">+</span> <span class="nx">res</span> <span class="o">+</span> <span class="s1">'"'</span><span class="p">);</span>
+          <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="kd">var</span> <span class="nx">scimoz</span> <span class="o">=</span> <span class="nx">view</span><span class="p">.</span><span class="nx">scimoz</span><span class="p">;</span>
+      <span class="kd">var</span> <span class="nx">currentLine</span> <span class="o">=</span> <span class="nx">scimoz</span><span class="p">.</span><span class="nx">lineFromPosition</span><span class="p">(</span><span class="nx">scimoz</span><span class="p">.</span><span class="nx">currentPos</span><span class="p">);</span>
+      <span class="kd">var</span> <span class="nx">lineEndPos</span> <span class="o">=</span> <span class="nx">scimoz</span><span class="p">.</span><span class="nx">getLineEndPosition</span><span class="p">(</span><span class="nx">currentLine</span><span class="p">);</span></pre>
+    
+    </div>
+  </div>  
+    <p>Finally, get the current location in the document, create a new JS Image object, set its src field, and if and when the image is loaded, you can get the height and width settings of the tag. The call to "view.scintilla.focus()" ensures we can continue to type after the tag has been inserted.</p>
+    
+  <div class="hlcode">
+    
+    <div class="syntax">
+    <pre>
+      <span class="kd">var</span> <span class="nx">img</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Image</span><span class="p">();</span>
+      <span class="nx">img</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+          <span class="kd">var</span> <span class="nx">qq</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="s1">'"'</span> <span class="o">+</span> <span class="nx">s</span> <span class="o">+</span> <span class="s1">'"'</span><span class="p">;</span>
+          <span class="p">}</span>
+          <span class="kd">var</span> <span class="nx">newText</span> <span class="o">=</span> <span class="p">(</span><span class="s1">'&lt;img src='</span> <span class="o">+</span> <span class="nx">qq</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
+                         <span class="o">+</span> <span class="s1">' height='</span> <span class="o">+</span> <span class="nx">qq</span><span class="p">(</span><span class="nx">img</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span>
+                         <span class="o">+</span> <span class="s1">' width='</span> <span class="o">+</span> <span class="nx">qq</span><span class="p">(</span><span class="nx">img</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'&gt;'</span><span class="p">);</span>
+          <span class="nx">scimoz</span><span class="p">.</span><span class="nx">beginUndoAction</span><span class="p">();</span>
+          <span class="k">try</span> <span class="p">{</span>
+              <span class="nx">scimoz</span><span class="p">.</span><span class="nx">insertText</span><span class="p">(</span><span class="nx">lineEndPos</span><span class="p">,</span> <span class="nx">newText</span><span class="p">);</span>
+              <span class="nx">scimoz</span><span class="p">.</span><span class="nx">gotoPos</span><span class="p">(</span><span class="nx">lineEndPos</span> <span class="o">+</span> <span class="nx">newText</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+          <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+              <span class="nx">scimoz</span><span class="p">.</span><span class="nx">endUndoAction</span><span class="p">();</span>
+          <span class="p">}</span>
+          <span class="nx">view</span><span class="p">.</span><span class="nx">scintilla</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>
+      <span class="p">}</span>
+      <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+  
+  <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">ex</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="nx">ex</span><span class="p">);</span>
+  
+  <span class="p">}</span>
+  </pre>
+  </div>
+  
+  </div>
+  
+  <p>The Komodo API is <a href="http://docs.activestate.com/komodo/7.1/komodo-js-api.html">huge</a> when you include all the Mozilla infrastructure it includes, and the initial learning curve can be steep (yes, I know tough learning curves are actually <i>shallow</i>, but that's being pedantic). But once you get a few functions like these working, you can take <a href="http://www.activestate.com/komodo-ide">Komodo</a> into directions we never anticipated.</p>
+</div>
