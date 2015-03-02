@@ -164,6 +164,9 @@ jQuery ->
     bindTooltips = ->
         jq('.tooltip').each ->
             elem = jq(this)
+            elem.click event ->
+                do event.preventDefault
+                return
             elem.tooltipster
                 contentAsHTML: true
                 position: elem.data("tooltip-position") || 'right'
