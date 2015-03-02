@@ -52,7 +52,7 @@ retrieved in step 4:
   * on Windows you can find your `hosts` file under `C:\Windows\System32\drivers\etc`, on mac/linux it is under `/etc/hosts`
   * on windows it is best to edit it using Notepad opened "as administrator"
 
-*You can now hit __dev.komodoide.com:9778__ in your browser and view the Komodo Website*
+*You can now hit http://dev.komodoide.com:9778/ in your browser and view the Komodo Website*
 
 ## Management
 
@@ -94,7 +94,7 @@ and is linked directly to the `/vagrant` folder inside the VM.
 
 Run the docpad server: `docpad run`
 
-Access your dev enviroment using: http://dev.komodoide.com/
+Access your dev enviroment using: http://dev.komodoide.com:9778/
 
 If you are accessing your dev environment from an external
 machine you will need to set up dev.komodoide.com in your hosts file.
