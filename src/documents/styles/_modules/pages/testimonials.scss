@@ -1,0 +1,64 @@
+.document-testimonials
+{
+    text-align: center;
+    
+    .testimonial
+    {
+        display: inline-block;
+        width: 45%;
+        position: relative;
+        margin: 0 25px;
+        
+        @include media(new-breakpoint(max-width 1060px))
+        {
+            display: block;
+            width: 90%;
+            margin: auto;
+        }
+        
+        h2
+        {
+            margin-bottom: 5px;
+        }
+        
+        blockquote
+        {
+            width: 90%;
+            position: relative;
+            line-height: 1.2;
+            text-align: center;
+            margin: auto;
+            font-size: 16pt;
+            font-style: italic;
+        }
+
+        & > span
+        {
+            display: block;
+            text-align: center;
+            font-size: 11pt;
+            margin-top: 15px;
+        }
+
+        .quote-left,
+        .quote-right
+        {
+            position: absolute;
+            font-size: 30pt;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+
+        .quote-right
+        {
+            right: 0;
+            bottom: 50px;
+        }
+
+        .quote-left
+        {
+            left: 0;
+            top: 30px;
+        }
+    }
+}
