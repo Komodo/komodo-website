@@ -45,8 +45,8 @@ priority: 0.8
         <ul>
             <% for _k,feature of group.items: %>
             <li>
-                <a href="#" class="tooltip" title="<strong><%= feature.name %></strong><br><%= feature.d<%= feature.name %></a>
-                <strong><%= feature.name %></strong>escription %>">
+                <a href="#" class="tooltip" title="<strong><%= feature.name %></strong><br><%= feature.description %>"><%= feature.name %></a>
+                <strong><%= feature.name %></strong>
                 <% if feature.isNew: %>
                 <span class="badge">
                     NEW
