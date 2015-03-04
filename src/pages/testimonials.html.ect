@@ -17,28 +17,31 @@ priority: 0.7
     </div>
 </div>
 
-<p class="spacer">&nbsp;</p>
+<div class="spacer"></div>
+
+<div class="centered">
+    <a href="mailto:komodo@activestate.com?subject=Testimonial">Submit Your Testimonial</a>
+</div>
+
+<div class="spacer"></div>
 
 <% for k,test of @db.testimonials(): %>
     <div class="testimonial">
         <h2>
             <% if test.source_name == "Twitter": %>
-            <a href="https://twitter.com/<%= test.name %>">@<%= test.name %></a>
+            <a href="https://twitter.com/<%= test.name %>">@<%= test.name %></a><%= ':' unless test.company %>
             <% else: %>
-            <%= test.name %>
+            <%= test.name %><%= ':' unless test.company %>
             <% end %>
             <% if test.company: %>
-            from
+            at
             <% if test.company_link: %>
-            <em><a href="<%= test.company_link %>"><%= test.company %></a></em>
+            <em><a href="<%= test.company_link %>"><%= test.company %></a></em>:
             <% else: %>
-            <em><%= test.company %></em>
+            <em><%= test.company %></em>:
             <% end %>
             <% end %>
-            :
         </h2>
-        <div class="quote-left">“</div>
-        <div class="quote-right">”</div>
         <blockquote data-field="comment">
             <%= test.comment %>
         </blockquote>

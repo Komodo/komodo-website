@@ -19,16 +19,16 @@
         h2
         {
             margin-bottom: 5px;
+            height: 25px;
+            padding: 0 25px;
         }
         
         blockquote
         {
             width: 90%;
-            position: relative;
+            height: 100px;
             line-height: 1.2;
             text-align: center;
-            margin: auto;
-            font-size: 16pt;
             font-style: italic;
         }
 
@@ -38,27 +38,6 @@
             text-align: center;
             font-size: 11pt;
             margin-top: 15px;
-        }
-
-        .quote-left,
-        .quote-right
-        {
-            position: absolute;
-            font-size: 30pt;
-            font-weight: bold;
-            vertical-align: middle;
-        }
-
-        .quote-right
-        {
-            right: 0;
-            bottom: 50px;
-        }
-
-        .quote-left
-        {
-            left: 0;
-            top: 30px;
         }
     }
 }

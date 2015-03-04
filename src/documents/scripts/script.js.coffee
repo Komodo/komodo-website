@@ -93,11 +93,12 @@ jQuery ->
     loadTestimonials = ->
         return unless jq(".testimonial blockquote").length
     
-        jq(".testimonial blockquote").each ->
-            textFit(this, {minFontSize: 16})
+        textFit(jq(".testimonial blockquote"), {minFontSize: 12, multiLine: true})
+            
+        if jq(".document-testimonials").length
+            textFit(jq(".testimonial h2"), {multiLine: false})
+            return
         
-        return if jq(".document-testimonials").length
-    
         jq.getJSON("/json/testimonials.json").done (data) ->
             pos = 0
             data = _.shuffle data
