@@ -15,3 +15,5 @@ if @document.update_from_drupal
 @document = @_.extend defaultMeta, @document
 %>
 <%- @content %>
+
+<%- @partial('addthis.html', @) %>

@@ -13,5 +13,7 @@ sidebar: resources
     </div>
     <h1><a href="/screencasts">Screencasts</a>: <%= @document.feedItem.title %></h1>
     <p><%- @document.feedItem.description %></p>
+    
+    <%- @partial('addthis.html', @) %>
 
 <% end %>
