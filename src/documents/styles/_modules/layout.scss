@@ -9,7 +9,8 @@
 #content
 {
     padding: 25px 0;
-
+    padding-left: 45px;
+    
     &:not(.no-grid)
     {
         @include outer-container;
