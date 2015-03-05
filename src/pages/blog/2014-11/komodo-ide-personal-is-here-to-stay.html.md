@@ -14,10 +14,6 @@ we have received lots of great feedback. Therefore, we are pleased to announce
 that Komodo IDE Personal is here to stay, along with new upgrade and support
 options!
 
- * Personal IDE license: **$99**
- * Upgrades and Support subscription: **$39**
- * Manual version upgrade: **$59**
-
 If you're considering Komodo IDE for individual use, without a company
 reimbursing you, the Personal license gives you [all the features] of Komodo IDE
 at an affordable price.

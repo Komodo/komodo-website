@@ -8,8 +8,8 @@ layout: blog
 ---
 
 We are very excited to let you know that (for a limited time only) we are
-offering a [special Personal license] of Komodo IDE to individual developers
-for **$89**. If the new Personal license is well received it may actually get a
+offering a [special Personal license] of Komodo IDE to individual developers.
+If the new Personal license is well received it may actually get a
 permanent place in the Komodo lineup... we're hoping it does!
 
 [special Personal license]: /pricing/
