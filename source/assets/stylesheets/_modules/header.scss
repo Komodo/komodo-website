@@ -4,12 +4,8 @@ body.framed header
     position: relative;
     width: 100%;
     min-height: 75px;
+    background: $color-header-background;
     color: $color-header-base;
-
-    @include background-image(
-        linear-gradient(300deg, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 45%,rgba(0,0,0,0) 55%,rgba(0,0,0,0.8) 100%),
-        url(../images/layout/header-bg.png)
-    );
 
     h1, h2, h3
     {
@@ -20,7 +16,7 @@ body.framed header
     {
         @include link($color-header-link, $color-header-link-hover);
     }
-
+    
     .outer
     {
         min-height: 75px;
@@ -92,19 +88,19 @@ body.framed header
                     {
                         display: block;
                         padding: 5px;
-                        background: rgba(39, 45, 44, 0.9);
+                        background: rgba(darken($color-header-background, 5%), 0.9);
                         @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
 
                         &:hover
                         {
-                            background: rgba(60,60,60,0.9);
+                            background: rgba(darken($color-header-background, 10%), 0.9);
                         }
                     }
                 }
 
                 &.has-sub:hover
                 {
-                    background: rgba(39, 45, 44, 0.9);
+                    background: rgba(darken($color-header-background, 5%), 0.9);
 
                     ul
                     {
@@ -119,14 +115,13 @@ body.framed header
                 font-weight: 400;
                 font-size: 13pt;
                 color: $color-header-nav-link;
-                text-transform: uppercase;
                 text-decoration: none;
+                letter-spacing: 1px;
                 @include link($color-header-nav-link, $color-header-nav-link-hover);
 
                 &:hover
                 {
                     text-decoration: none;
-                    text-shadow: 0 0 1px rgba(255,255,255,0.4);
                 }
             }
 
@@ -221,16 +216,6 @@ body.framed header
                 }
             }
         }
-    }
-
-    .underline
-    {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 6px;
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHUlEQVQImWOIWL5LigEKwjbs9GVA5sAlcXMYGBgAEEwPfa7qf48AAAAASUVORK5CYII=) repeat;
     }
 }
 

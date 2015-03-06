@@ -5,6 +5,8 @@
 
 .document-index
 {
+    padding: 0 !important;
+    
     h1
     {
         font-size: 16pt;
@@ -80,7 +82,8 @@
     }
 }
 
-.container-php,.container-python
+.container-php,
+.container-python
 {
     #splash-header
     {
@@ -123,23 +126,47 @@
             }
         }
         
-        #splash-screenshots figure
+    }
+}
+
+.container-php
+{
+    #splash-header #splash-screenshots figure
+    {
+        &.splash-windows
         {
-            &.splash-windows
-            {
-                background-image: url(../images/screenshots/editor-ui-win-php-fade.png);
-            }
-
-            &.splash-linux
-            {
-                background-image: url(../images/screenshots/editor-ui-linux-php-fade.png);
-            }
-
-            &.splash-osx
-            {
-                background-image: url(../images/screenshots/editor-ui-mac-php-fade.png);
-            }
+            background-image: url(../images/screenshots/editor-ui-win-php-fade.png);
         }
-        
+
+        &.splash-linux
+        {
+            background-image: url(../images/screenshots/editor-ui-linux-php-fade.png);
+        }
+
+        &.splash-osx
+        {
+            background-image: url(../images/screenshots/editor-ui-mac-php-fade.png);
+        }
+    }
+}
+
+.container-python
+{
+    #splash-header #splash-screenshots figure
+    {
+        &.splash-windows
+        {
+            background-image: url(../images/screenshots/editor-ui-win-python-fade.png);
+        }
+
+        &.splash-linux
+        {
+            background-image: url(../images/screenshots/editor-ui-linux-python-fade.png);
+        }
+
+        &.splash-osx
+        {
+            background-image: url(../images/screenshots/editor-ui-mac-python-fade.png);
+        }
     }
 }

@@ -9,7 +9,7 @@
 #content
 {
     padding: 25px 0;
-
+    
     &:not(.no-grid)
     {
         @include outer-container;
@@ -246,7 +246,6 @@ aside
             font-weight: bold;
             text-align: center;
             padding: 0 40px;
-            text-shadow: 0 0 3px rgba(0,0,0,0.3);
         }
     }
 }
@@ -298,7 +297,6 @@ aside
         -moz-osx-font-smoothing: grayscale;
         content: "\f075";
 
-        text-shadow: 0 0 4px rgba(0,0,0,0.2);
         color: #FFF;
         line-height: 1;
         font-size: 21pt;
@@ -315,5 +313,13 @@ aside
     {
         position: absolute;
         right: 0;
+    }
+}
+
+@include media(new-breakpoint(max-width 1279px))
+{
+    .at4-share-outer
+    {
+        display: none;
     }
 }

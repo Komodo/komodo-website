@@ -1,6 +1,6 @@
-$font-base: "Roboto", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$font-header-nav: "Roboto", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-$font-impact: "Roboto", Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans serif;
+$font-base: "Open Sans", sans-serif;
+$font-header-nav: "Open Sans", sans-serif;
+$font-impact: "Open Sans", sans serif;
 $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 
 *
@@ -16,22 +16,16 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     font-weight: bold;
     padding: 8px;
     color: #FFF;
-    text-shadow: 1px 1px 0 rgba(0,0,0,0.30);
     border: 0;
     cursor: pointer;
     display: inline-block;
-    @include transition(box-shadow 0.3s ease-in-out, color 0.2s ease-in-out, opacity 0.2s ease-in-out);
+    @include transition(box-shadow 0.1s ease-in-out, color 0.2s ease-in-out);
     border-radius: 2px;
-
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-                inset 0px 0px 0px 0px rgba(255,255,255,0.0),
-                1px 1px 1px 0 rgba(0,0,0,0.3);
+    text-align: center;
 
     &:hover
     {
-        box-shadow: inset 0px 1px 0px 0px rgba(255,255,255, 0.2),
-                    inset -10px 10px 15px 0px rgba(255,255,255,0.1),
-                    1px 1px 1px 0 rgba(0,0,0,0.3);
+        box-shadow: inset 0 0 0 500px rgba(0,0,0,0.1);
         text-decoration: none;
     }
 
@@ -40,15 +34,6 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
         font-family: $font-impact;
         font-size: 14pt;
         padding: 15px 20px;
-
-        box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.0),
-                    1px 1px 1px 0 rgba(0,0,0,0.3);
-
-        &:hover
-        {
-            box-shadow: inset -25px 15px 30px 0px rgba(255,255,255,0.1),
-                        1px 1px 1px 0 rgba(0,0,0,0.3);
-        }
     }
 
     &.small
@@ -60,28 +45,6 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     {
         opacity: 0.5;
         cursor: default;
-    }
-}
-
-%button-green-text-inset
-{
-    text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
-    color: rgba(22, 45, 44, 0.7);
-
-    &:hover
-    {
-        color: rgba(22, 45, 44, 0.6);
-    }
-}
-
-%button-grey-text-inset
-{
-    text-shadow: 1px 1px 0 rgba(255,255,255, 0.15);
-    color: rgba(20, 20, 20, 0.75);
-
-    &:hover
-    {
-        color: rgba(20, 20, 20, 0.65);
     }
 }
 
@@ -101,11 +64,7 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 {
     text-align: center;
     border-radius: 3px;
-    @include background-image(
-        linear-gradient(left, rgba(0,0,0,0.4) 0%,rgba(75, 104, 103, 0.3) 45%,rgba(75, 104, 103,0.3) 55%,rgba(0,0,0,0.4) 100%),
-        url("../images/layout/header-bg.png")
-    );
-    box-shadow: 0 0 6px 1px rgba(0,0,0,0.2);
+    @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 3%,rgba(31,72,94,1) 50%,rgba(7,18,22,1) 100%);
 
     color: #e9e9e9;
     

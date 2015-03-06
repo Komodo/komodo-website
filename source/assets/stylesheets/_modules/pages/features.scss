@@ -1,6 +1,16 @@
 .document-features
 {
     font-weight: 400;
+    
+    article > h1
+    {
+        margin-bottom: 0;
+        
+        & + p
+        {
+            margin-top: 5px;
+        }
+    }
 
     article > .button + h1
     {

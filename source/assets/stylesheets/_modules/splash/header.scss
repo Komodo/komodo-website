@@ -1,3 +1,8 @@
+#splash-header-outer
+{
+    @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 400px,rgba(31,72,94,1) 700px,rgba(7,18,22,1) 100%);
+}
+
 #splash-header
 {
     text-align: center;
@@ -7,6 +12,18 @@
 
     padding: 20px 15px 0 15px;
     height: 700px;
+    
+    color: $color-header-base;
+
+    h1, h2, h3
+    {
+        color: $color-header-textheading;
+    }
+
+    a
+    {
+        @include link($color-header-link, $color-header-link-hover);
+    }
 
     @include media(new-breakpoint(max-width 1600px))
     {
@@ -128,56 +145,6 @@
     {
         position: relative;
         margin-bottom: 20px;
-        
-        .promotion
-        {
-            display: block;
-            position: absolute;
-            left: 50%;
-            margin-left: -280px;
-            bottom: -900px;
-            width: 150px;
-            height: 150px;
-            background-image: url(../images/icons/emblems/promotion.png);
-            background-size: 100%;
-            border: 0;
-            @include transform(rotate(-15deg) translateY(-50%));
-
-            @include media($mobile)
-            {
-                display: none;
-            }
-
-            .inner
-            {
-                position: relative;
-                top: 50%;
-                @include transform(translateY(-50%));
-
-                color: #FFF;
-                font-size: 12pt;
-                line-height: 1.5;
-                font-weight: bold;
-                text-align: center;
-                padding: 0 15px 0 15px;
-
-                small
-                {
-                    font-size: 7pt;
-                    display: inline-block;
-                    position: absolute;
-                    left: 0px;
-                    text-align: center;
-                    width: 100%;
-                    margin-left: -3px;
-                }
-            }
-
-            &:hover .inner
-            {
-                text-decoration: underline;
-            }
-        }
 
         #splash-download-buttons
         {
@@ -195,16 +162,14 @@
                 margin-bottom: 2px;
                 width: 240px;
                 cursor: pointer;
-                text-shadow: none !important;
                 position: relative;
+                color: #FFF;
+                text-decoration: none !important;
                 
-                @include transition(box-shadow 0.2s);
-
                 i /* icon */
                 {
                     vertical-align: middle;
                     font-size: 22pt;
-                    text-shadow: none;
                     color: #FFF;
                     position: absolute;
                     left: 20px;
@@ -214,7 +179,6 @@
                 {
                     font-size: 8pt !important;
                     text-transform: lowercase;
-                    text-shadow: none;
                     letter-spacing: 0;
                 }
 
@@ -224,24 +188,11 @@
                     @extend %button-green;
                 }
 
-                /* Override button-green values */
+                /* Override button values */
                 &.primary, &
                 {
                     padding: 18px 15px 16px 40px;
                     border-radius: 3px;
-                    box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.2),
-                                inset -1px 0 0 0 rgba(255,255,255, 0.15),
-                                inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                                inset 0 0 0 0 rgba(255,255,255,0),
-                                0 0 8px 0 rgba(0,0,0,0.3);
-    
-                    &:hover
-                    {
-                        box-shadow: inset 0 1px 0 0 rgba(255,255,255, 0.3),
-                                    inset -1px 0 0 0 rgba(255,255,255, 0.25),
-                                    inset 0 -1px 0 0 rgba(0,0,0, 0.3),
-                                    inset -25px 15px 30px 0px rgba(255,255,255,0.1);
-                    }
                 }
             }
 
@@ -259,11 +210,6 @@
                 {
                     font-size: 8pt !important;
                 }
-            }
-
-            a
-            {
-                color: lighten($color-base-link, 20%);
             }
         }
 

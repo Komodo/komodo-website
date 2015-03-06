@@ -1,19 +1,21 @@
 $color-base-text:           #3D3D3D;
-$color-base-background:     #F5F5F5;
-$color-base-link:           #45A09A;
+$color-base-background:     #FFFFFF;
+$color-base-link:           #3086B5;
 $color-base-link-hover:     darken($color-base-link, 10%);
 $color-base-link-block:     rgba(0,0,0,0.3);
 $color-base-link-block-hover: $color-base-link-hover;
-$color-base-important:      #8a629b;
+$color-base-important:      #2A9AD6;
 
 $color-footer-text:         #CECECE;
-$color-footer-link:         #98bbbd;
+$color-footer-link:         #9CBDCE;
+$color-footer-background:   #27363D;
 
 $color-header-base:         #cacaca;
+$color-header-background:   #122A36;
 $color-header-textheading:  #f4f4f4;
 $color-header-nav-link:     rgba(255,255,255,0.9);
 $color-header-nav-link-hover:rgba(255,255,255,1);
-$color-header-link:         #338C87;
+$color-header-link:         #9CBDCE;
 $color-header-link-hover:   lighten($color-header-link, 10%);
 
 $color-forum-header-link:         #67B5AF;
@@ -25,12 +27,12 @@ $color-github-ribbon:       #338C87;
 
 @mixin gradient-green
 {
-    @include background-image(linear-gradient(top, rgba(77,134,132,1) 0%, rgba(50,95,94,1) 100%));
+    background: #3086B5;
 }
 
 @mixin gradient-grey
 {
-    @include background-image(linear-gradient(top, rgba(90,90,90,1) 0%, rgba(52,52,52,1) 100%));
+    background: rgba(90,90,90,1);
 }
 
 

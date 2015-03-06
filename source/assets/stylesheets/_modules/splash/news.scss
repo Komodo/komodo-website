@@ -2,6 +2,7 @@
 {
     @include outer-container;
     padding: 0 10px;
+    margin-bottom: 25px;
 
     h1
     {
@@ -213,7 +214,6 @@
             span
             {
                 display: block;
-                width: 90%;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
