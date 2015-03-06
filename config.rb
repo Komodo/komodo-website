@@ -3,9 +3,11 @@ helpers Helpers
 
 activate :blog do |blog|
   blog.prefix = "blog"
-  blog.permalink = "blog/{year}-{month}/{title}/index.html"
+  blog.permalink = "{year}-{month}/{title}/index.html"
   blog.default_extension = ".md"
-  blog.sources = "blog/{year}-{month}-{title}.html"
+  blog.sources = "{year}-{month}-{title}.html"
+  blog.paginate = true
+  blog.per_page = 10
 end
 
 activate :directory_indexes

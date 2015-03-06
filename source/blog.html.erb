@@ -8,7 +8,7 @@ pageable: true
 per_page: 10
 ---
 
-<%= partial('blog-list') %>
+<%= partial('blog-list', :locals => { :page_articles => page_articles }) %>
 
 <% if false %>
 
@@ -22,4 +22,9 @@ per_page: 10
 
 <% end %>
 
-<%= partial('pagination') %>
+<%= partial('pagination', :locals => {
+        paginate: paginate,
+		page_number: page_number, 
+		num_pages: num_pages, 
+		prev_page: prev_page, 
+		next_page: next_page }) %>

@@ -11,10 +11,10 @@
             <a href="/authors#<%= article.data.author.gsub(/[^a-zA-Z]/,'') %>"><%= article.data.author %></a>
         <% end %>
         / tags
-        <% document.meta.tags.each do |tag| %>
+        <% article.data.tags.each do |tag| %>
         <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
         <% end %>
-        <%= article.date.strftime('%b %e') %>
+        <%= article.date.strftime('%b %e, %Y') %>
     </span>
     <p>
         <img src="/images/authors/<%= article.data.author_picture || article.data.author.gsub(/[^a-zA-Z]/,'')+'.jpg' %>" alt="<%= article.data.author %>">
