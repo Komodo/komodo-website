@@ -17,3 +17,5 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-middleman'
+
+gem 'middleman-blog-similar'

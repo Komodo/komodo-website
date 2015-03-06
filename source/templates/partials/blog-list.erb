@@ -17,7 +17,7 @@
         <%= article.date.strftime('%b %e, %Y') %>
     </span>
     <p>
-        <img src="/images/authors/<%= article.data.author_picture || article.data.author.gsub(/[^a-zA-Z]/,'')+'.jpg' %>" alt="<%= article.data.author %>">
+        <img src="/assets/images/authors/<%= article.data.author_picture || article.data.author.gsub(/[^a-zA-Z]/,'')+'.jpg' %>" alt="<%= article.data.author %>">
         <%= article.data.description %>
     </p>
     <p>

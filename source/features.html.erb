@@ -1,0 +1,68 @@
+---
+title: Features
+layout: default
+description: Find out about the countless features Komodo offers
+socialDescription: Check out the insane amount of features in @KomodoIDE!
+priority: 0.8
+---
+
+<div class="assistance">
+    <div class="inner">
+        <div id="lpButDivID-1279824964197"></div>
+    </div>
+</div>
+
+<div class="try-buy-buttons global">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+
+<h1>Komodo Features</h1>
+<p>Still not convinced? Check out our <a href="/testimonials">Testimonials!</a></p>
+
+<div class="clearfix"></div>
+
+<div class="groups">
+
+    <% data.features.each() do |group| %>
+    <div class="group-<%= group.id %>">
+        <img src="/assets/images/icons/features/<%= group.id %>-small.png">
+        <h2><%= group.name %></h2>
+        <% if group.featured %>
+        <div>
+            <% group.featured.each() do |featured| %>
+            <a href="/assets/images/screenshots/features/<%= featured.image %>.png" class="lightbox">
+                <img src="/assets/images/screenshots/features/<%= featured.image %>-small.png" alt="<%= featured.name %><%= (' - ' + featured.description) if featured.description %>">
+            </a>
+            <% end %>
+        </div>
+        <% end %>
+        <ul>
+            <% group.items.each() do |feature| %>
+            <li>
+                <a class="tooltip" title="<strong><%= feature.name %></strong><br><%= feature.description %>"><%= feature.name %></a>
+                <strong><%= feature.name %></strong>
+                <% if feature.isNew %>
+                <span class="badge">
+                    NEW
+                </span>
+                <% end %>
+                <p>
+                    <%= feature.description %>
+                </p>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <% end %>
+</div>
+
+<!-- LivePerson -->
+<script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/88203588/?cmd=mTagRepstate&site=88203588&buttonID=12&divID=lpButDivID-1279824964197&bt=1&c=1"></script>

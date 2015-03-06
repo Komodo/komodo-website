@@ -10,6 +10,8 @@ activate :blog do |blog|
   blog.per_page = 10
 end
 
+activate :similar
+
 activate :directory_indexes
 
 configure :development do
@@ -25,6 +27,7 @@ set :layouts_dir, "templates/layouts"
 set :partials_dir, 'templates/partials'
 
 page "*", :layout => "default"
+page "/blog/*", :layout => "blog"
 
 set :title, "Komodo IDE"
 

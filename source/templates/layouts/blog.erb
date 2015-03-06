@@ -1,0 +1,26 @@
+<% wrap_layout :layout do %>
+    <div id="content" class="document-blog sidebar document-blog-entry
+                             <%= meta('update_from_drupal') ? "drupal-import" : "" %>
+                             <%= page_classes %>">
+        <section role="main">
+            <article class="<%= 'normalize' unless meta('dontNormalize') %>">
+                <h1><%= current_page.title %></h1>
+                <div class="clearfix"></div>
+                <div class="content">
+                <%= yield %>
+                <%= partial('comments') %>
+                </div>
+            </article>
+        </section>
+        <aside class="sidebar-blog normalize">
+            <div id="side-border"></div>
+            <button id="side-collapse" class="button big">
+                <i class="icon icon-chevron-left"></i>
+                <i class="icon icon-chevron-right"></i>
+            </button>
+            <div class="inner">
+                <%= partial('sidebars/blog') %>
+            </div>
+        </aside>
+    </div>
+<% end %>

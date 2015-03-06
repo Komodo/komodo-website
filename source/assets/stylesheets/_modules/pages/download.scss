@@ -1,5 +1,15 @@
 .document-download
 {
+    section[role="main"]
+    {
+        text-align: center;
+    }
+    
+    form.mktoForm
+    {
+        margin: 0 auto;
+    }
+    
     .tabs
     {
         text-align: center;

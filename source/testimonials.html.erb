@@ -1,0 +1,76 @@
+---
+title: Komodo IDE Testimonials
+layout: default
+priority: 0.7
+---
+
+<h1>Komodo IDE Testimonials</h1>
+
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+<div class="centered">
+    <a href="mailto:komodo@activestate.com?subject=Testimonial">Submit Your Testimonial</a>
+</div>
+
+<div class="spacer"></div>
+
+<% data.testimonials.each() do |test| %>
+    <div class="testimonial">
+        <h2>
+            <% if test.source_name == "Twitter" %>
+                <a href="https://twitter.com/<%= test.name %>">@<%= test.name %></a><%= ':' unless test.company %>
+            <% else %>
+                <%= test.name %><%= ':' unless test.company %>
+            <% end %>
+            
+            <% if test.company %>
+                at
+                <% if test.company_link %>
+                    <em><a href="<%= test.company_link %>"><%= test.company %></a></em>:
+                <% else %>
+                    <em><%= test.company %></em>:
+                <% end %>
+            <% end %>
+        </h2>
+        <blockquote data-field="comment">
+            <%= test.comment %>
+        </blockquote>
+        <% if test.source %>
+            <span>
+                via
+                <span data-field="source">
+                    <% if test.source_name %>
+                        <a href="<%= test.source %>"><%= test.source_name %></a>
+                    <% else %>
+                        <%= test.source %>
+                    <% end %>
+                </span>
+            </span>
+        <% else %>
+            <span>&nbsp;</span>
+        <% end %>
+        <p>&nbsp;</p>
+    </div>
+<% end %>
+
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button big primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button big" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>

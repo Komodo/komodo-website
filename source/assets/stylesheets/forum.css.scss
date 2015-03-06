@@ -1,7 +1,7 @@
 @import "_modules/depend/variables";
 
-@import "../../../node_modules/node-bourbon/assets/stylesheets/bourbon";
-@import "../../../node_modules/node-neat/assets/stylesheets/neat";
+@import "bourbon";
+@import "neat";
 
 /* Include it again, cause Bourbon overrides some of our variables, grrr */
 @import "_modules/depend/variables";

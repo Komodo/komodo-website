@@ -1,0 +1,70 @@
+<a href="/resources/submit-instructions/#pane-blogs" class="button big submit-content">
+    Submit Content
+</a>
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+<% if current_page.data.author %>
+<div class="info">
+    <h1>Blog Info</h1>
+
+        <img src="/assets/images/authors/<%= current_page.data.author_picture || current_page.data.author.gsub(/[^a-zA-Z]/,'')+'.jpg' %>" alt="<%= current_page.data.author %>">
+
+    <p>
+        <strong>By:</strong>
+        <% if meta('author_link') %>
+            <a href="<%= meta('author_link') %>"><%= meta('author') %></a>
+        <% else %>
+            <a href="/authors#<%= current_page.data.author.gsub(/[^a-zA-Z]/,'') %>"><%= meta('author') %></a>
+        <% end %>
+    </p>
+
+    <p>
+        <strong>Tags: </strong>
+        <% current_page.data.tags.each do |tag| %>
+        <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
+        <% end %>
+    </p>
+    <p><strong>Date Posted: </strong><%= current_page.date.strftime('%b %e, %Y') %></p>
+</div>
+<div class="clearfix"></div>
+<div class="blogs">
+    <h1>Related</h1>
+    <ul>
+        <% current_article.similar_articles.first(10).each do|article| %>
+        <li>
+            <%= link_to article.title, article %>
+        </li>
+        <% end %>
+    </ul>
+<% else %>
+<div class="blogs">
+<% end %>
+    <h1>Recent Blogs</h1>
+    <ul>
+        <% blog.articles.first(10).each do |article| %>
+        <li>
+            <%= link_to article.title, article %>
+        </li>
+        <% end %>
+    </ul>
+</div>
+<!--
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    < % for k,item of @_.first(@vimeoFeeds.videos, 6): %>
+    <a href="/screencasts/watch/< %= item.id %>-< %= item.title_sane %>">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('< %= item.thumbnail_medium %>')"></figure>
+        <span>< %= item.title %></span>
+    </a>
+    < % end %>
+</div>
+-->
