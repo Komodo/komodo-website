@@ -1,0 +1,33 @@
+---
+socialDescription: These @KomodoIDE screencasts are really helpful!
+classNames: sidebar-left
+sidebar: resources
+---
+<h1>Komodo Screencasts</h1>
+
+<ul class="screencasts">
+    <% sitemap.where(:layout.equal => 'screencast').all().each() do |item| %>
+    
+    <li>
+        <a href="<%= item.url %>">
+            <i class="icon icon-youtube-play"></i>
+            <figure style="background-image: url(<%= vimeo_data(item.data.vimeo_id, "thumbnail_large") %>)"></figure>
+            <div class="inner">
+                <span class="title"><%= item.data.title %></span>
+                <span class="date">
+                    <i class="icon icon-calendar"></i>
+                    <%= item.data.date.strftime('%b %e, %Y') %>
+                </span>
+                <span class="duration">
+                    <i class="icon icon-clock-o"></i>
+                    <%= (vimeo_data(item.data.vimeo_id, "duration") / 60.0).round(2).to_s.gsub('.', ':') %>
+                </span>
+            </div>
+        </a>
+        <div class="description">
+            <%= vimeo_data(item.data.vimeo_id, "description") %>
+        </div>
+    </li>
+    <% end %>
+
+</ul>

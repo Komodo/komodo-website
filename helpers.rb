@@ -88,4 +88,21 @@ module Helpers
     r = r.join("\n")
     return r
   end
+  
+  def yaml(path)
+    require 'yaml'
+    return YAML.load_file(File.dirname(__FILE__) + path)
+  end
+  
+  @@vimeo_cache = {}
+  
+  def vimeo_data(id, attr)
+    unless (@@vimeo_cache.has_key?(id))
+      api_url = "http://vimeo.com/api/v2/video/%s.json" % id
+      @@vimeo_cache[id] = JSON.parse(open(api_url).read).first
+    end
+    
+    data = @@vimeo_cache[id]
+    return data.has_key?(attr) ? data[attr] : nil
+  end
 end

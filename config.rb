@@ -12,11 +12,20 @@ end
 
 activate :similar
 
+activate :imageoptim
+
+set :url_root, "http://komodoide.com/"
+activate :search_engine_sitemap
+
 activate :directory_indexes
 
 configure :development do
   activate :livereload
-  set :site_url, "http://dev.komodoide.com:4567/"
+  set :site_url, "http://dev.komodoide.com:4567"
+end
+
+configure :build do
+  set :site_url, "http://komodoide.com"
 end
 
 set :css_dir, 'assets/stylesheets'
@@ -43,6 +52,26 @@ set :keywords, "komodo,komodo ide,activestate komodo ide,activestate komodo ide 
                 "software,perl ide,python ide,ide python,tcl ide,integrated"\
                 "development environment,development environment,activetstate,komodo"\
                 "linux,komodo mac"
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
+
+set :file_watcher_ignore, [
+   /^bower_components(\/|$)/,
+  /^\.sass-cache(\/|$)/,
+  /^\.cache(\/|$)/,
+  /^\.git(\/|$)/,
+  /^\.gitignore$/,
+  /\.DS_Store/,
+  /^Gemfile$/,
+  /^Gemfile\.lock$/,
+  /~$/,
+  /(^|\/)\.?#/,
+  /^tmp\//,
+  /^build(\/|$)/
+]
+
+ignore 'templates/*'
 
 configure :build do
   activate :minify_css

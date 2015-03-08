@@ -1,6 +1,5 @@
 ---
 title: Komodo 8 Changelog
-layout: markdown
 sidebar: download
 classNames: small-text markdown
 ---

@@ -78,7 +78,7 @@ jQuery ->
 
     # Highlight Code
     highlightCode = ->
-        jq('pre code.hljs').each (i, e) ->  hljs.highlightBlock e
+        jq('pre code').each (i, e) ->  hljs.highlightBlock e
 
     # Splash Screenshots
     loadSplashScreenshots = ->

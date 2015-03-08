@@ -17,5 +17,10 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-middleman'
+gem 'redcarpet'
 
 gem 'middleman-blog-similar'
+gem 'middleman-search_engine_sitemap'
+gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
+gem 'middleman-syntax'
+

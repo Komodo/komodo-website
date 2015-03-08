@@ -5,10 +5,12 @@
                              <%= meta('update_from_drupal') ? "drupal-import" : "" %>
                              <%= page_classes %>">
         <section role="main">
-            <%= yield %>
-            <% if meta('comments') %>
-              <%= partial('comments') %>
-            <% end %>
+            <article class="<%= 'normalize' unless meta('dontNormalize') %>">
+                <%= yield %>
+                <% if meta('comments') %>
+                  <%= partial('comments') %>
+                <% end %>
+            </article>
         </section>
         <% if meta('sidebar') %>
             <aside class="sidebar-<%= meta('sidebar') %> normalize">

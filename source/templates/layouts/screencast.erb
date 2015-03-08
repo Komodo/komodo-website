@@ -1,0 +1,16 @@
+<% wrap_layout :default do %>
+
+    <h1><a href="/screencasts">Screencasts</a>: <%= current_page.data.title %></h1>
+
+    <div class="screencast-outer">
+        <div class="screencast-inner">
+            <iframe src="//player.vimeo.com/video/<%= current_page.data.vimeo_id %>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+    </div>
+    <%= yield %>
+    
+    <%= partial('addthis') %>
+    
+    <%= partial('comments') %>
+
+<% end %>
