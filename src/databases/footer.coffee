@@ -8,8 +8,10 @@ module.exports = {
             name: "Features"
         ,
             name: "Buy & Upgrade"
+            link: "{site.url}/pricing"
         ,
             name: "Try"
+            link: "{site.url}/download"
             sub: [
                 name: "Archive"
                 link: "http://downloads.activestate.com/Komodo/"
