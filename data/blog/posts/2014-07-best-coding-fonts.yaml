@@ -1,0 +1,159 @@
+---
+:id: 2014-07-best-coding-fonts
+:slug: 2014-07-best-coding-fonts
+:title: Best Coding Fonts
+:date: !ruby/object:DateTime 2014-07-09 06:00:00.000000000 -04:00
+:tags:
+- fonts
+- eyecandy
+- resources
+- customization
+:body: ! "\n<a name=\"top\"></a>\n\n<div class=\"push-right toc\">\n    <ul>\n        <li>\n
+  \           <a href=\"#crossplatform\">Cross-Platform Problems</a>                     \n
+  \       </li>\n        <li>\n            <a href=\"#tweaks\">Tweaks</a>\n        </li>\n
+  \       <li>\n            <a href=\"#bestfonts\">The \"Best\" Coding Fonts</a>\n
+  \           <ul>\n                <li>\n                    <a href=\"#dejavu\">DejaVu
+  Sans Mono</a>\n                </li>\n                <li>\n                    <a
+  href=\"#sourcecodepro\">Source Code Pro</a>\n                    \n                </li>\n
+  \               <li>\n                    <a href=\"#monaco\">Monaco</a>\n                </li>\n
+  \               <li>\n                    <a href=\"#droid\">Droid Sans Mono</a>\n
+  \               </li>\n                <li>\n                    <a href=\"#ubuntu\">Ubuntu
+  Sans Mono</a>\n                </li>\n                <li>\n                    <a
+  href=\"#mplus\">M+</a>\n                </li>\n            </ul>\n        </li>\n
+  \       <li>\n            <a href=\"#final\">Final Words</a>\n        </li>\n    </ul>\n</div>\n\nEach
+  day us programmers spend hours upon hours looking at our screen, and the main\nthing
+  we look at is not our IDE, it's not our software or our browser; it's our\ncode.
+  So it's only natural that our code should be a pleasure to look at. One\nside of
+  this is completely in your own hands; writing clean and sensible code.\nThe other
+  side slightly less so; the font you choose to represent your code.\n\nThere are
+  tons of articles on what is (subjectively) the \"best\" coding font out\nthere,
+  but they all seem to focus on the usefullnes of the font, ie. how the font\nfacilitates
+  you to write code more efficiently. Whilst this is definitely an\nimportant point
+  I feel that what is equally important is the attractiveness of\nthe font, what's
+  the point of it being efficient if it's not making you feel\ngood about your code?
+  Your font is supposed to make you \"want\" to code, it's\nsupposed to make your
+  code look THAT much better. This is what I want to focus\non in this blog; what
+  fonts I've tried and enjoyed the most, not (just) because\nof how efficient they
+  are, but because of how they made me feel like coding with\nthem.\n\n<a name=\"crossplatform\"></a>\n##
+  Cross-Platform Problems\n\nOne of the main issues I've ran into in trying different
+  fonts is that they tend\nto \"look\" very different on each platform; this is because
+  each platform renders\ntext slightly differently, OSX in particular tends to give
+  fonts a bit of a bold\nlook which I personally quite enjoy, but rarely can I use
+  the same font on OSX\nand eg. Linux as they simply do not \"feel\" the same. The
+  fonts I address here\nI used primarily under OSX and Linux so my take on them might
+  be less relevant\nif you are using Windows, you'd have to see for yourself.\n\n<a
+  name=\"tweaks\"></a>\n## Tweaks\n\nI've made a few slight tweaks in Komodo that
+  help me enjoy writing code more. \nFirst I increased the line height slightly to
+  let my code \"breathe\" a little\nmore, you can use the follow code snippet as a
+  Macro (trigger it on startup) to\nincrease your line height (modify the amount to
+  suit your preference).\n\n```js\nvar editor = komodo.editor;\neditor.styleSetSize(editor.STYLE_BRACEBAD,
+  13);\n```\n\nWe will most likely be increasing the line height by default in Komodo
+  9.\n\nAnother tweak you might want to look into if you're an OSX user is the\n\"Font
+  Quality\" setting under `Preferences > Fonts and Colors > Fonts`, this\nallows you
+  to switch between different rendering presets offered by OSX.\n\nSimilarly if you're
+  a linux user it's worth playing with your font rendering settings,\nunfortunately
+  there is no \"one\" guide that works for every distro, you'll have to\nsearch for
+  this yourself.\n\n<a name=\"bestfonts\"></a>\n## The \"Best\" Coding Fonts\n\nAgain
+  this is entirely subjective and not an exhaustive list of what is available\nout
+  there. I am not trying to give a technical overview of what the font does,\nthere
+  are plenty of resources out there for that already. I am simply explaining\nhow
+  the font makes me \"feel\" about my code and how that translates into my being\nmore
+  efficient.\n\nAll of the screenshots below were taken in Komodo IDE using the [Spacemodo
+  color scheme].\n\n<hr>\n<small><a href=\"#top\" class=\"push-right\">Back to Top</a></small>\n\n<a
+  name=\"dejavu\"></a>\n### DejaVu Sans Mono\n\n<a href=\"/assets/images/blog/2014-07/dejavusansmono.png\"
+  class=\"lightbox-entry\" title=\"DejaVu Sans Mono - Screenshot taken on Elementary
+  OS with custom font rendering settings\">\n<img src=\"/assets/images/blog/2014-07/dejavusansmono.png\"
+  align=\"right\" width=\"400\"/>\n</a>\n\nMy current favourite font is DejaVu Sans
+  Mono (on Linux), I was previously using\nSource Code Pro (on OSX - featured below)
+  but when switching between Linux I found\nthat it just didn't render consistently,
+  after playing around with different fonts\nI found that using DejaVu Sans Mono set
+  to \"bold\" mostly gave me the same feel\nas Source Code Pro did on OSX.\n\nWhich
+  is to say it made my editor feel a little bit more \"playful\", but not \"too\"\nplayful
+  (Comic Sans anyone). I feel something a lot of the programming fonts seem\nto focus
+  so much on efficiency that they end up looking very square and dull, which\nis a
+  shame.\n\nDejaVu Sans Mono is part of the [DejaVu Fonts] project which is based
+  on the\n[Vera Fonts]. *\"Its purpose is to provide a wider range of characters while
+  maintaining the original look and feel through the process of collaborative development\"*.\n\n*Website:*
+  http://dejavu-fonts.org/wiki/Main_Page<br>\n*Download:* http://dejavu-fonts.org/wiki/Download\n\n<hr>\n<small><a
+  href=\"#top\" class=\"push-right\">Back to Top</a></small>\n\n<a name=\"sourcecodepro\"></a>\n###
+  Source Code Pro\n\n<a href=\"/assets/images/blog/2014-07/sourcecodepro.png\" class=\"lightbox-entry\"
+  title=\"Source Code Pro - Screenshot taken on OSX\">\n<img src=\"/assets/images/blog/2014-07/sourcecodepro.png\"
+  align=\"right\" width=\"400\"/>\n</a>\n\nAs I already mentioned Source Code Pro
+  is my OSX counterpart of DejaVu Sans Mono,\nit renders beautifully using the \"Anti-Aliased
+  with Smoothing\" `Font Quality`\nsetting. Both fonts work on all platforms, it's
+  just that Source Code Pro in my\nopinion works better on OSX and DejaVu Sans Mono
+  works better on Linux.\n\nAgain the main thing I love about these fonts is that
+  they come across as slightly\nplayful, which you'll see is a recurring theme for
+  my most liked fonts.\n\nUnlike DejaVu Sans Mono and some of the other fonts mentioned
+  here Source Code\nPro was created specifically with programmers in mind.\n\n*Website:*
+  https://github.com/adobe-fonts/source-code-pro<br>\n*Download:* https://github.com/adobe-fonts/source-code-pro/releases\n\n<hr>\n<small><a
+  href=\"#top\" class=\"push-right\">Back to Top</a></small>\n\n<a name=\"monaco\"></a>\n###
+  Monaco\n\n<a href=\"/assets/images/blog/2014-07/monaco.png\" class=\"lightbox-entry\"
+  title=\"Monaco - Screenshot taken on OSX\">\n<img src=\"/assets/images/blog/2014-07/monaco.png\"
+  align=\"right\" width=\"400\"/>\n</a>\n\nMonaco is a great font which I used for
+  quite a while, it was the default Monospace\nfont for OSX until it was replaced
+  by Menlo in 2009. Ultimately I was turned away\nfrom using it because it's a little
+  bit \"too\" playful to me.\n\nMonaco comes shipped with OSX and as far as I'm aware
+  there are no other legal\nmeans to obtain it, so non-OSX users are out of luck.\n\n<hr>\n<small><a
+  href=\"#top\" class=\"push-right\">Back to Top</a></small>\n\n<a name=\"droid\"></a>\n###
+  Droid Sans Mono\n\n<a href=\"/assets/images/blog/2014-07/droidsansmono.png\" class=\"lightbox-entry\"
+  title=\"Droid Sans Mono - Screenshot taken on OSX\">\n<img src=\"/assets/images/blog/2014-07/droidsansmono.png\"
+  align=\"right\" width=\"400\"/>\n</a>\n\nDroid Sans Mono is an great font which
+  to me manages to walk fine line between\nplayful and \"professional\". It feels
+  a bit like Monaco (OSX) and Courier (Windows)\nhad a baby. Particularly on OSX it
+  looks beautiful. It looks decent on Linux too\nthough I prefer to use it as \"Bold\"
+  as it looks too much like Courier and too little\nlike Monaco otherwise.\n\nDroid
+  Sans Mono is part of the Droid Fonts and was developed specifically for\nAndroid,
+  but has since found its way into many the editors of many programmers.\n\nAlthough
+  the font is free and open source there is also a [Pro version available];\n*\"The
+  \"Pro\" versions will be in the OpenType format with additional typographic\nfeatures.
+  The initial release has Old Style Figures, and more enhancements are\nplanned for
+  the future.\"*\n\n*Website:* http://www.droidfonts.com/<br>\n*Download:* https://www.google.com/fonts#UsePlace:use/Collection:Droid+Sans+Mono\n\n<hr>\n<small><a
+  href=\"#top\" class=\"push-right\">Back to Top</a></small>\n\n<a name=\"ubuntu\"></a>\n###
+  Ubuntu Sans Mono\n\n<a href=\"/assets/images/blog/2014-07/ubuntusansmono.png\" class=\"lightbox-entry\"
+  title=\"Ubuntu Sans Mono - Screenshot taken on Elementary OS with custom font rendering
+  settings\">\n<img src=\"/assets/images/blog/2014-07/ubuntusansmono.png\" align=\"right\"
+  width=\"400\"/>\n</a>\n\nUbuntu Sans Mono is a bit different, it tends to feel more
+  condensed and has the\ndistinct slanted design the Ubuntu fonts are \"known\" for.
+  I find it a pleasing\ndesign but it feels more appropriate for logo's than for large
+  blocks of text or\ncode, it feels like it's trying to prove something rather than
+  just \"be a font\".\n\nI had to significantly increase the font size and line spacing
+  for the font to\nrender properly for me, after that it was quite enjoyable but in
+  the end just\ndoesn't come close to my beloved DejaVu Sans.\n\nI also wasn't able
+  to make it render in a way that I liked on OSX because of the\nfont smoothing OSX
+  does, obviously this font was designed specifically for Ubuntu\nso it's understandable
+  that it was not optimized for other platforms.\n\n*Website:* http://font.ubuntu.com/<br>\n*Download:*
+  http://font.ubuntu.com/\n\n<hr>\n<small><a href=\"#top\" class=\"push-right\">Back
+  to Top</a></small>\n\n<a name=\"mplus\"></a>\n### M+\n\n<a href=\"/assets/images/blog/2014-07/mplus.png\"
+  class=\"lightbox-entry\" title=\"M+ - Screenshot taken on Elementary OS with custom
+  font rendering settings\">\n<img src=\"/assets/images/blog/2014-07/mplus.png\" align=\"right\"
+  width=\"400\"/>\n</a>\n\nFinally there's M+, I bumped into this font the very same
+  day I wrote this blog\nthanks to [this blog post written by Tom MacWright][blogpostmplus].
+  The font seems to have been\ncreated specifically for programmers as it has several
+  variations that each slightly\nalter the way the font looks.\n\nIt's an absolutely
+  great font but not entirely up to my tastes; I like how condensed\nit is but it's
+  a little bit TOO condensed for my tastes. As I mentioned earlier\nin this blog post
+  I like my code to be able to \"breathe\" a little, and while it's\ngreat to be able
+  to see a lot of your code on-screen it also makes it a little bit\nchaotic. To be
+  fair though, M+ is so clean and stylish it tends to make even the\nmost chaotic
+  code look beautiful.\n\n*Website:* http://mplus-fonts.sourceforge.jp<br>\n*Download:*
+  http://sourceforge.jp/projects/mplus-fonts/releases/#6650\n\n<hr>\n<small><a href=\"#top\"
+  class=\"push-right\">Back to Top</a></small>\n\n<a name=\"final\"></a>\n## Final
+  Words\n\nSo those are my favourite fonts and how I use them in Komodo. Expect to
+  see some\nnew font features in Komodo 9 (I already mentioned line-height). Please
+  feel free\nto share your favourite fonts in the comments below!\n\n\n\n   [Pro version
+  available]: http://www.ascenderfonts.com/font/droid-sans-pro-mono.aspx\n   [blogpostmplus]:
+  http://www.macwright.org/2014/07/09/mplus.html\n   [Spacemodo color scheme]: http://komodoide.com/resources/skins/komodo--spacemodo/\n
+  \  [DejaVu Fonts]: http://dejavu-fonts.org/wiki/Main_Page\n   [Vera Fonts]: http://gnome.org/fonts/\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

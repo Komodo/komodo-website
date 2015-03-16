@@ -1,0 +1,54 @@
+---
+:id: 2014-03-variable-dumper-macro
+:slug: 2014-03-variable-dumper-macro
+:title: Variable Dumper Macro
+:date: !ruby/object:DateTime 2014-03-23 20:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- print
+- dump
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>\n</div>\n\nFor
+  quick and simple debugging of code at runtime, I will often use a print or\nlog
+  statement to check what a variable is set to. This macro quickly creates the\nboilerplate
+  for the print statement according to the language I am currently\nediting.\n\n#
+  Examples\n\nGiven this piece of JavaScript code:\n\n```javascript\nwindow.myvariable
+  = someFunction(x, y, z);\n```\n\nif you place your caret anywhere in the *myvariable*
+  word, then invoke the\nmacro, you'd see a *console.log()* statement on the next
+  available line:\n\n```javascript\nwindow.myvariable = someFunction(x, y, z);\nconsole.log('window.myvariable:
+  ', window.myvariable);\n```\n\nand when using Python code, the macro would generate
+  a *print()* statement\ninstead:\n\n```python\nwindow.myvariable = someFunction(x,
+  y, z)\nprint('window.myvariable: %r' % (window.myvariable, ))\n```\n\n## Installation\n\nTo
+  install the macro simply hit the download button below, then drag the downloaded\nfile
+  into your [Komodo toolbox](http://docs.activestate.com/komodo/latest/toolbox.html).\nOnce
+  in your toolbox double click the macro to activate it. The macro will\nautomatically
+  activate itself the next time you start Komodo, you only need to\ndo this manually
+  the first time.\n\n<div class=\"inline centered\">\n<a href=\"/files/macros/Variable_Dumper.komodotool\"
+  class=\"button primary\">\n    <i class=\"icon icon-download\"></i>\n    Download
+  Macro\n</a>\n<div class=\"spacer-half\"></div>\n<span>\n    <i class=\"icon icon-github\"></i>\n
+  \   <a href=\"https://github.com/Komodo/macros/blob/master/variable_dumper.js\"
+  target=\"_blank\">View Source</a>\n</span>\n</div>\n\n## Related Materials\n\n*
+  [Komodo Developer Extension](http://community.activestate.com/node/1824)\n  - play
+  around with JavaScript or Python code in the context of the Komodo window\n* [Komodo
+  Macro API](http://docs.activestate.com/komodo/latest/macroapi.html)\n  - to programatically
+  interact with the Komodo editor\n* [Editor API](http://www.scintilla.org/ScintillaDoc.html)\n
+  \ - the Komodo editor provides a wrapper around the Scintilla API\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

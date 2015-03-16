@@ -1,0 +1,102 @@
+---
+:id: 2012-02-komodo-ide-7-worlds-fiercest-ide-has-evolved
+:slug: 2012-02-komodo-ide-7-worlds-fiercest-ide-has-evolved
+:title: ! 'Komodo IDE 7: The world''s fiercest IDE has evolved!'
+:date: !ruby/object:DateTime 2012-02-01 00:00:00.000000000 -05:00
+:tags:
+- coffeescript
+- komodo 7
+- nodejs
+- profiling
+:body: ! "\n<div>\n  \t\t\n               <img title=\"Komodo IDE 7: The world's fiercest
+  IDE has evolved\" alt=\"Komodo IDE 7: The world's fiercest IDE has evolved\" style=\"width:
+  auto\" src=\"/assets/images/blog/2012-02/ins-komodo-ide-7-new.jpg\" class=\"as_feature_img
+  as_left\"><p><strong>Komodo IDE 7</strong> has just been released! It offers groundbreaking
+  new technologies and innovative enhancements. Here's an introduction to the most
+  prominent features it includes.</p>\n  \n  <ul style=\"clear:both\">\n  <li>\n      <p><strong><a
+  href=\"http://activestate.com/komodo-ide/features#collaboration\" title=\"Code Collaboration\">Code
+  Collaboration</a></strong> is one of the coolest things to use in a team development
+  environment. You can easily share your files and collaborate in real time with your
+  colleagues and friends. Peer reviews and pair programming become a much more intuitive
+  and interactive experience with Komodo's collaboration tools.</p>\n      \n      <a
+  rel=\"shadowbox[Screenshots]\" href=\"http://activestate.com/sites/default/files/blog_import_images/ko7_collaboration.png\">\n
+  \      <img title=\"Real-time Code Collaboration\" alt=\"Real-time Code Collaboration\"
+  style=\"width: 400px\" src=\"/assets/images/blog/2012-02/ko7-collaboration.png\"
+  class=\"as_feature_img as_left\"></a>\n  \n    </li>\n  \n    <li style=\"clear:both\">\n
+  \   <img title=\"Komodo Sync\" alt=\"Komodo Sync\" style=\"width: 120px; float:right;\"
+  src=\"/assets/images/blog/2012-02/ko7-sync.png\" class=\"as_feature_img as_right\"><p>For
+  those that use multiple machines, Komodo's <strong><a href=\"http://activestate.com/komodo-ide/features#sync\"
+  title=\"Komodo Sync\">Synchronization</a></strong> feature gives you the ability
+  to copy your Komodo settings (remote server accounts, toolbox, file templates...)
+  between all the Komodo instances. So you can customize Komodo in one place and have
+  the same setup appear in another!</p>\n    </li>\n      \n      \n    <li style=\"clear:both\">\n
+  \     <p>The <strong><em>cloud</em></strong> is a new and exciting playground for
+  developers. Komodo's <strong><a href=\"http://activestate.com/komodo-ide/features#stackato\"
+  title=\"Stackato Integration\">Stackato</a></strong> interface provides the ability
+  to quickly deploy web based applications onto cloud infrastructure - you can have
+  your application running on the cloud within minutes! A slew of languages and frameworks
+  are supported - such as <em>Python</em>, <em>Django</em>, <em>Ruby</em>, <em>Rails</em>,
+  <em>PHP</em>, <em>Drupal</em>, <em>Perl</em>, <em>Mojolicious</em>, <em>Node.js</em>
+  and even <em>Java</em>!</p>\n  \n      \n      <a rel=\"shadowbox[Screenshots]\"
+  href=\"http://activestate.com/sites/default/files/blog_import_images/ko7_stackato.png\">\n
+  \      <img title=\"Komodo 7 - Stackato Integration\" alt=\"Komodo 7 - Stackato
+  Integration\" style=\"width: 400px\" src=\"/assets/images/blog/2012-02/ko7-stackato.png\"
+  class=\"as_feature_img as_left\"></a>\n  \n    </li>\n      \n    <li style=\"clear:both\">\n
+  \     <p><a href=\"http://activestate.com/komodo-ide/features#node.js\" title=\"Node.js
+  support\"><strong>Node.js support</strong></a> - Komodo IDE brings in debugging,
+  code intelligence, editor and syntax checking support for Node applications. As
+  well as this, Komodo IDE 7 provides additional support for web and template languages
+  like <em>CoffeeScript</em>, <em>LESS</em>, <em>SCSS</em>, <em>EJS</em> and <em>Mojolicious</em>.</p>\n
+  \ \n      \n      <div style=\"text-align: center\">\n      <img src=\"/assets/images/blog/2012-02/nodejs-logo.png\"
+  alt=\"nodejs_logo\"><img src=\"/assets/images/blog/2012-02/coffeescript-logo.png\"
+  alt=\"coffeescript_logo\"><img src=\"/assets/images/blog/2012-02/less-logo.png\"
+  alt=\"less_logo\"><img src=\"/assets/images/blog/2012-02/mojolicious-logo.png\"
+  alt=\"mojolicious_logo\">\n  </div>\n    </li>\n      \n    <li>\n      <p style=\"clear:both\">With
+  the ability to <strong><a href=\"http://activestate.com/komodo-ide/features#profiling\"
+  title=\"Code Profiling for PHP and Python\">Code Profile</a></strong> your application
+  - you can now find out why that <em>PHP</em> or <em>Python</em> code is taking so
+  long to run! Komodo shows a graphical representation of the methods and calls made
+  by your program, as well as outlining the CPU time spent executing your code. Automatic
+  time sorting makes it easy to see the code hot-spots at a single glance.</p>\n  \n
+  \   <a rel=\"shadowbox[Screenshots]\" href=\"http://activestate.com/sites/default/files/blog_import_images/ko7_code_profiling.png\">\n
+  \      <img title=\"Komodo Code Profiling Screenshot\" alt=\"Komodo Code Profiling
+  Screenshot\" style=\"width: 400\" src=\"/assets/images/blog/2012-02/ko7-code-profiling.png\"
+  class=\"as_feature_img as_left\"></a>\n  \n    </li>\n      \n    <li>\n      <p>Now,
+  with every major Komodo IDE release we've aimed to make things work <em>smarter
+  and faster</em> than they were working before. Komodo IDE 7 is no exception to this
+  rule and you'll notice a lot snappier Komodo <strong>startup time</strong>, lower
+  <strong>CPU utilization</strong> - particularly when idle, and lower <strong>memory
+  usage</strong> for large projects. Additionally, tools like the <strong>fast-find</strong>
+  bar make it even quicker to do the common things you use the most.</p>\n  \n       <img
+  title=\"Komodo - Fast Find Screenshot\" alt=\"Komodo - Fast Find Screenshot\" style=\"width:
+  auto\" src=\"/assets/images/blog/2012-02/ko7-fast-find.png\" class=\"as_feature_img
+  as_left\">\n  </li>\n      \n  </ul>\n  <p style=\"clear:both\">There are way more
+  features in Komodo IDE 7 than I can outline in a single blog post, so check out
+  the <a href=\"http://docs.activestate.com/komodo/7.0/releases/ide.html\" target=\"_blank\">full
+  release notes</a> to see other great enhancements like multi-language syntax checking,
+  HTML end-tag completions, moveable side panes and much more.</p>\n  \n  <p>If you'd
+  like to test out these features yourself, you can <a href=\"http://activestate.com/komodo-ide/downloads\"
+  title=\"Download Komodo IDE 7 Trial\">download a 21-day free trial of Komodo IDE
+  7</a>.</p>\n  \n  <p>It's also currently on sale, starting at <font color=\"red\"><strong>$245</strong></font>
+  (reg. $295) until March 15th. <a href=\"http://store.activestate.com/komodo-ide\"
+  title=\"Buy Komodo IDE 7\">Visit our store to purchase today</a>.</p>\n  \n  <p>A
+  special thanks goes out to all the testing feedback provided by the Komodo 7 beta
+  users during the Komodo 7 development process - you all rock!</p>\n  \n  <p>We hope
+  you enjoy Komodo IDE 7!</p>\n</div>\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

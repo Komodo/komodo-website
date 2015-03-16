@@ -1,0 +1,47 @@
+---
+:id: 2011-10-komodo-7-beta-ready
+:slug: 2011-10-komodo-7-beta-ready
+:title: Komodo 7 Beta is Ready!
+:date: !ruby/object:DateTime 2011-10-28 00:00:00.000000000 -04:00
+:tags:
+- collaboration
+- komodo 7
+- nodejs
+- stackato
+:body: ! "\n<div>\n  \t\t\n               <img title=\"Komodo 7 Beta\" alt=\"Komodo
+  7 Beta\" style=\"width: auto\" src=\"/assets/images/blog/2011-10/komodo-orb-128.png\"
+  class=\"as_feature_img as_left\"><p>Komodo 7 Beta 1 is now available, with Edit
+  builds as well as IDE. If you didn't get a chance to look at the Alpha, <a href=\"http://activestate.com/komodo-ide/downloads\"
+  title=\"download komodo 7 beta\">download the Beta</a> now, give it a try, and let
+  us know what you think. We'd love to get your feedback!</p>\n  \n  <p>Here are some
+  of the new features that we've put into it:</p>\n  \n  <h2 style=\"clear:both\">What's
+  New</h2>\n  \n  <ul>\n  <li>Improved integration with <a href=\"http://activestate.com/cloud\"
+  title=\"komodo and stackato\">Stackato, our private PaaS solution</a>.</li>\n    \n
+  \   <li><a href=\"http://docs.activestate.com/komodo/7.0/collab.html\" title=\"komodo
+  team collaboration\">Collaborative editing</a></li>\n    \n    <li><a href=\"http://docs.activestate.com/komodo/7.0/profiling.html\"
+  title=\"komodo code profiling\">Code profiling</a></li>\n    \n    <li>\n  <a href=\"http://docs.activestate.com/komodo/7.0/sync.html\"
+  title=\"ide synchronization across platforms, komodo\">Synchronization</a> of preferences
+  between your Komodo installations</li>\n    \n    <li>Debugging and code intelligence
+  for Node.js</li>\n  \n    <li>More languages: CoffeeScript, Mojolicious, EJS, Less,
+  SCSS, XCSS, and Twig</li>\n  \n    <li>And all of this running much faster on the
+  Firefox 4 (mozilla-2.0) code base!</li>\n  </ul>\n  <p>... and <a href=\"http://docs.activestate.com/komodo/7.0/releases/ide.html#whatsnew\"
+  title=\"komodo 7 beta what's new\">more</a>.</p>\n  \n  <p>Stay tuned for more posts,
+  as we'll be writing more about each of these features in the weeks to come.</p>\n
+  \ \n  <h2>But I want to buy it NOW!</h2>\n  \n<p>We don't want to dissuade anyone
+  from buying Komodo IDE just because a new release is on the horizon. Don't wait
+  - buy Komodo IDE with Upgrades &amp; Support by December 31st, <a href=\"https://store.activestate.com/komodo-ide\"
+  title=\"save $50 on Komodo\">and save $50 per license</a>. Start using Komodo IDE
+  6 today, and get automatic access to Komodo IDE 7 when it's released.</p> </div>\n"
+:comments: true
+:author:
+- :id: 674p8Ab2VOiCmO48OwE6Og
+  :name: Troy Topnik
+  :biography: Troy Topnik is ActiveState's technical writer. After joining ActiveState
+    in 2001 as a "Customer Relationship Representative" (AKA Tech Support), Troy went
+    on to lead the PureMessage Enterprise Support team before moving on to a technical
+    writing role in 2004. His talent for describing software for new users stems from
+    his difficulty understanding things that developers find obvious. He has a Bachelor
+    of Music from the University of Victoria.
+  :profilePhoto:
+    :title: TroyTopnik
+    :url: //images.contentful.com/bj1g69m2935w/5563tsbpGgiSCUIGaUiEqc/4850e4438e16c62251aa9214ebf1ef39/TroyTopnik.jpg

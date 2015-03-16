@@ -1,0 +1,38 @@
+---
+layout: layout
+basenameOrig: blog-entry
+---
+
+<div id="content" class="document-tags
+                         sidebar
+                         <%= page_classes %>">
+    <section role="main">
+        <article class="normalize">
+            <h1>Blogs tagged "<%= tag_name %>"</h1>
+            <ul class="disc">
+            <% posts.each() do |post| %>
+                <li>
+                    <a href="/blog/<%= post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/') %>">
+                        <%= post["title"] %>
+                    </a><br/>
+                    <small>
+                        By: <a href="/authors#<%= post["author"][0]["name"].gsub(/[^a-zA-Z]/,'') %>"><%= post["author"][0]["name"] %></a>
+                        On: <em><%= post["date"].strftime('%b %e, %Y') %></em>
+                    </small>
+                    <div class="clearfix spacer"></div>
+                </li>
+            <% end %>
+            </ul>
+        </article>
+    </section>
+    <aside class="sidebar-blog normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <%= partial('sidebars/blog') %>
+        </div>
+    </aside>
+</div>

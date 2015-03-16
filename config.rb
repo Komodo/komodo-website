@@ -1,22 +1,41 @@
 require 'helpers'
 helpers Helpers
 
-activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.permalink = "{year}-{month}/{title}/index.html"
-  blog.default_extension = ".md"
-  blog.sources = "{year}-{month}-{title}.html"
-  blog.paginate = true
-  blog.per_page = 10
-end
-
-activate :similar
-
 activate :imageoptim
 
 set :url_root, "http://komodoide.com/"
 activate :search_engine_sitemap
 
+contentful_space = {blog: ENV['CONTENTFUL_SPACE']}
+contentful_token = ENV['CONTENTFUL_TOKEN']
+
+activate :contentful do |cntf|
+  cntf.space         = contentful_space
+  cntf.access_token  = contentful_token
+  cntf.cda_query     = { }
+  cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
+                         authors: '1kUEViTN4EmGiEaaeC6ouY' }
+end
+
+if data.has_key? "blog"
+  data.blog.posts.each do |id, post|
+    if /^\d{4}-\d{2}-/.match(post["slug"])
+      post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
+    end
+    
+    proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post }, ignore: true
+  end
+  
+  activate :pagination do
+    pageable_set :blog do
+      data.blog.posts.sort_by { |k,v| v["date"] }.reverse
+    end
+  end
+  
+  tags().each() do |name,posts|
+    proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts }, ignore: true
+  end
+end
 activate :directory_indexes
 
 configure :development do

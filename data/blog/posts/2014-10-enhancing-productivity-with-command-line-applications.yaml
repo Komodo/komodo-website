@@ -1,0 +1,75 @@
+---
+:id: 2014-10-enhancing-productivity-with-command-line-applications
+:slug: 2014-10-enhancing-productivity-with-command-line-applications
+:title: Enhancing Productivity with Command Line Applications through Komodo Macros
+:date: !ruby/object:DateTime 2014-10-16 06:00:00.000000000 -04:00
+:tags:
+- macro
+- productivity
+- cli
+- commands
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>\n    This blog was contributed by a community member<br/>\n    <a
+  href=\"/resources/submit-instructions/#pane-blogs\">click here</a> if you\n    are
+  interested in blogging on komodoide.com\n</em></h2>\n</div>\n\nLearning a new editor
+  can be a daunting task, and it is a task that I faced in\nMay 2013 when I switched
+  to Komodo (briefly to Edit and then to IDE) after a 7\nyear history with my previous
+  editor. After becoming familiar with the Komodo\ninterface and keyboard shortcuts,
+  I quickly began looking for other ways to\nboost my productivity. When I was researching
+  new editors, I remember being\nimpressed with how easy it was to extend the editor’s
+  features using languages\nlike JavaScript and Python which were already in my repertoire,
+  and that was one\nof the reasons I ended up choosing Komodo.\n\nKomodo IDE does
+  a good job of providing integrated productivity tools such as\nits publishing feature,
+  integration with source control, and Rx toolkit, but as\nI became more comfortable
+  with my new editor, I was looking for more. I decided\nthe best way to boost my
+  productivity was to spend more time in the IDE instead\nof switching between applications
+  in my workflow. At about the same time I began\nlooking for more ways to maximize
+  my time in the IDE, I began seeing posts in my\nfeed reader about “how to do (insert
+  task here) from the command line.” This led\nto one of the most productivity-boosting
+  mechanisms that I have implemented\nsince switching to Komodo -- using macros to
+  call third-party scripts and\nservices such as the ones I use to manage my day-to-day
+  schedule or code\ndeployments.\n\n## Ticketing System\n\nMy employer uses [Jira](
+  https://www.atlassian.com/software/jira) to manage\ndeveloper tasks and projects,
+  and I spent a lot of time toggling between Komodo\nand my browser. Since I already
+  had Python on the path of my development\nmachine, I installed [jira-cli](https://pypi.python.org/pypi/jira-cli).
+  With\nthis switch, I can now look at the tickets that are assigned to me, comment
+  on\nissues, or create new tickets in Komodo directly. All of the macros I wrote
+  that\nuse jira-cli use interpolation to execute commands, and the output from each\ncommand
+  is printed in the bottom pane of Komodo so I never have to leave the\nIDE.\n\n##
+  Logging Time\n\nThe concept of billable hours is likely a familiar concept to any
+  developer that\nworks at for agency or in-house shop. To keep track of my hours,
+  I use a Ruby\ngem called [Timetrap]( https://github.com/samg/timetrap). Once I look
+  up tickets\nfrom Jira, I start a timer to begin recording my time with another interpolation\nmacro
+  inside of Komodo:\n\n```js\n// Sample macro to start the Timetrap timer.\n// Note:
+  Ruby is on my system path so the shell has\n// access to the timetrap command\nkomodo.assertMacroVersion(3);\nif
+  (komodo.view) { komodo.view.setFocus(); }\n\n(function(){\n  var command = 'timetrap
+  in';\n  var task = ko.interpolate.interpolateString([\"%(ask:Enter a task:)\"]);\n\n
+  \ if (task) {\n    ko.run.runEncodedCommand(window, 'timetrap out', function(){\n
+  \     task = task.trim();\n      if(task.length) {\n        command = command +
+  ' ' + task;\n      }\n\n      ko.run.runEncodedCommand(window, command);\n    });\n
+  \ }\n\n})();\n```\n\nWhen I’m finished with the ticket, I can then run another macro
+  to stop the\ntimer and see the total amount of time I spent on the ticket so I can
+  record my\ntime in Jira:\n\n```js\n// Clock out of the task in timetrap and display
+  the time\nkomodo.assertMacroVersion(3);\nif (komodo.view) { komodo.view.setFocus();
+  }\n\n(function(){\n  var command = 'timetrap out';\n  ko.run.runEncodedCommand(window,
+  command, function(){\n    var command = 'timetrap display -v';\n    ko.run.runEncodedCommand(window,
+  command);\n  });\n\n})();\n\n```\n\n## Deployments\n\nOnce my task is complete,
+  I need to get my code committed and deployed. I don’t\nwork in a continuous integration
+  environment, so I need to get the updated files\nto the correct target environment.
+  Many of the repositories that I work with are\nhosted with [Beanstalk](http://www.beanstalkapp.com/),
+  which allows developers\nto initiate deployments in their commit messages. In many
+  cases, deploying to\nproduction is as simple as adding `[deploy:production]` to
+  my commit message.\n\nFor repositories that are not hosted with Beanstalk, I use
+  a Komodo macro to\neither SCP the files, which is mostly used when I am working
+  off of a shared\ndevelopment server, or call a custom deployment script that runs
+  `svn up` on the\nQA and production servers depending on the environment that is
+  the target of the\ndeployment. For those without any of these options, there are
+  other options such\nas [Capistrano]( http://capistranorb.com/) that can be used
+  to handle deployment\nand could easily be bound to a Komodo macro.\n\n## Conclusion\n\nKomodo
+  provides an excellent starting point with its tools. When combined with\ncustom
+  macros, it is possible to implement a flexible workflow by leveraging\noutside tools
+  and maximize your time spent in the editor.\n"
+:comments: true
+:author:
+- :id: pwsvYRRafeICCGkgEiOgE
+  :name: Community

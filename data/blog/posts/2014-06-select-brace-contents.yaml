@@ -1,0 +1,43 @@
+---
+:id: 2014-06-select-brace-contents
+:slug: 2014-06-select-brace-contents
+:title: Select Brace Contents
+:date: !ruby/object:DateTime 2014-06-02 06:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- selections
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>\n</div>\n\nLet's
+  say you have the following snippet of html:\n```html\n<strong>This text is bold</strong>\n```\nWith
+  this macro you can simply put your cursor anywhere within the node contents 'and
+  execute the macro to select the contents of the node (ie. the text).\n\nThis macro
+  is very plain and fairly dumb, it will likely not be able to select\ncomplex values
+  (eg. sub-nodes). It currently only covers html \"braces\" (ok,\ntechnically not
+  braces), but support for other delimiters should be relatively\neasy to add and
+  is something I originally intended to include (hence the name),\nand will likely
+  add soon.\n\nFeel free to fork and extend.\n\n\n## Installation\n\nTo install the
+  macro simply hit the \"View Resource\" and \"Install Instructions\"\nlinks below.
+  You'll want to hook the macro up to the \"On Startup\" trigger.\n\n<div class=\"centered\">\n
+  \   <div class=\"spacer\"></div>\n    <a href=\"http://komodoide.com/resources/macros/naatan--selectbracecontents/\"
+  class=\"button big primary\">\n        <i class=\"icon icon-eye\"></i>\n        View
+  Resource\n    </a>\n    <div class=\"spacer-half\"></div>\n    <span>\n        <i
+  class=\"icon icon-question\"></i>\n        <a href=\"http://komodoide.com/resources/install-instructions/#pane-macro\"
+  target=\"_blank\">Install Instructions</a>\n    </span>\n</div>\n\n## Share Your
+  Own Awesome Macros\n\nDo you have your own awesome macro's that you think others
+  could benefit from?\nSubmit them to the [Resources Section] and if you really want
+  to get it noticed\n[write a Macro Monday blog about it][macromonday].\n\n   [Resources
+  Section]: /resources/submit-instructions/#pane-resources\n   [macromonday]: /resources/submit-instructions/#pane-blogs\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

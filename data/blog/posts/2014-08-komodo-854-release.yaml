@@ -1,0 +1,66 @@
+---
+:id: 2014-08-komodo-854-release
+:slug: 2014-08-komodo-854-release
+:title: Komodo 8.5.4 release is now available
+:date: !ruby/object:DateTime 2014-08-20 20:00:00.000000000 -04:00
+:tags:
+- release
+- official
+- download
+:body: ! "\nOn behalf of the Komodo team, I am happy to announce the release of Komodo\n8.5.4.
+  This build contains important bug fixes and is a recommended update for\nall Komodo
+  8 users.\n\nIf your already using Komodo 8, then use the *Help > Check for Updates*
+  menu to\nstart the update, else you can obtain a copy by visiting the\n[downloads](/download)
+  section.\n\n<div class=\"centered\">\n    <div class=\"spacer\"></div>\n    <a href=\"/download\"
+  class=\"button big primary\">\n        <i class=\"icon icon-download\"></i>\n        Download
+  Komodo 8.5.4\n    </a>\n    <div class=\"spacer-half\"></div>\n    <span>\n        <i
+  class=\"icon icon-bug\"></i>\n        <a href=\"https://bugs.activestate.com/enter_bug.cgi?product=Komodo&version=8.5.4\"
+  target=\"_blank\">Report a Bug</a>\n    </span>\n</div>\n\n## Release Highlights\n\nThis
+  release fixes a number of important bugs, including the following:\n\n* Windows
+  high DPI font rendering and positioning issues (Bug [100492](http://bugs.activestate.com/show_bug.cgi?id=100492))\n*
+  PHP memory leaks from codeintel file scanning (out-of-memory errors) (Bug [102643](http://bugs.activestate.com/show_bug.cgi?id=102643))\n*
+  Python 3.4 debugging fix (Bug [103631](http://bugs.activestate.com/show_bug.cgi?id=103631))\n\n###
+  Other Changes\n\n*    Code Intelligence: CSS: Show pseudo completions after colon.
+  (Bug [104799](https://bugs.activestate.com/show_bug.cgi?id=104799))\n*    Code Intelligence:
+  JavaScript: Ensure document completions work inside of HTML. (Bug [102993](http://bugs.activestate.com/show_bug.cgi?id=102993))\n*
+  \   Debugging: Tcl: Update appLaunch.tcl file. (Bug [101199](http://bugs.activestate.com/show_bug.cgi?id=101199))\n*
+  \   Editor: Automatically enable word-wrap when a file has long lines. (Bug [93790](http://bugs.activestate.com/show_bug.cgi?id=93790))\n*
+  \   Editor: Django: Highlight *elif* tag, *elseif* in Twig (and improve auto-indent).
+  (Bug [101792](http://bugs.activestate.com/show_bug.cgi?id=101792))\n*    Editor:
+  When changing case in column selection, stay in column selection. (Bug [100269](http://bugs.activestate.com/show_bug.cgi?id=100269))\n*
+  \   Find: Ensure find markers are not added more than once. (Bug [104553](http://bugs.activestate.com/show_bug.cgi?id=104553))\n*
+  \   Find: Stop find options from changing when using multi caret commands. (Bug
+  [103329](http://bugs.activestate.com/show_bug.cgi?id=103329))\n*    Places: After
+  creating a new file, open it and display it in places. (Bug [94287](http://bugs.activestate.com/show_bug.cgi?id=94287))\n*
+  \   Places: Cull deleted items in places history menu. (Bug [98684](http://bugs.activestate.com/show_bug.cgi?id=98684))\n*
+  \   Preferences: Indentation Settings: Allow per language settings to be saved.
+  (Bug [99431](http://bugs.activestate.com/show_bug.cgi?id=99431))\n*    Projects:
+  When opening a new project is aborted, keep the old project on the MRU list. (Bug
+  [94201](http://bugs.activestate.com/show_bug.cgi?id=94201))\n*    SDK: Ensure koext
+  startlang works with --is-html-based argument (Bug [104551](http://bugs.activestate.com/show_bug.cgi?id=104551)).\n*
+  \   Source Code: Checkout: Remember the checkout textbox url. (Bug [99395](http://bugs.activestate.com/show_bug.cgi?id=99395))\n*
+  \   Source Code: Git: Ensure git submodules are properly detected in commit dialog.
+  (Bug [95701](http://bugs.activestate.com/show_bug.cgi?id=95701))\n*    Syntax Checking:
+  Python: Reinstate passing --rcfile to pylint. (Bug [101777](http://bugs.activestate.com/show_bug.cgi?id=101777))\n*
+  \   Syntax Checking: Python: Tell pylint where to find .pylintrc. (Bug [101777](http://bugs.activestate.com/show_bug.cgi?id=101777))\n*
+  \   Toolbox: Stop duplication of snippets when dropping snippet text. (Bug [103113](http://bugs.activestate.com/show_bug.cgi?id=103113))\n*
+  \   UI: Re-enable word-wrap in output panels (command output, debugger output).
+  (Bug [98471](http://bugs.activestate.com/show_bug.cgi?id=98471))\n\n## Any Questions?\n\nIf
+  you've got any questions, post a comment below or [talk to us directly on the\nforums!](http://forum.komodoide.com/)\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

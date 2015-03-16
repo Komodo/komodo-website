@@ -1,0 +1,49 @@
+---
+:id: 2014-04-komodo_personal_license
+:slug: 2014-04-komodo_personal_license
+:title: Introducing Komodo Personal Licensing
+:date: !ruby/object:DateTime 2014-04-06 20:00:00.000000000 -04:00
+:tags:
+- license
+- personal
+- pricing
+:body: ! "\nWe are very excited to let you know that (for a limited time only) we
+  are\noffering a [special Personal license] of Komodo IDE to individual developers.\nIf
+  the new Personal license is well received it may actually get a\npermanent place
+  in the Komodo lineup... we're hoping it does!\n\n[special Personal license]: /pricing/\n\n##
+  Why\n\nWell, we're giving individual developers a break. At 30% of the cost of the\nenterprise
+  Komodo IDE license, these savings should go a long way in helping\nachieve [maximum
+  developer efficiency]... aka buying beer :P\n\n[maximum developer efficiency]: http://xkcd.com/323/\n\n##
+  Limitations\n\nNote that there are restrictions that have been placed on the Komodo
+  IDE\nPersonal license, see below:\n* we are only offering this special Personal
+  license for a limited time\n* a company cannot reimburse you the cost of the license
+  - companies should\n  purchase the enterprise Komodo IDE license\n* you cannot purchase
+  an Upgrades and Support Subscription on this license\n* you cannot transfer your
+  license to another owner\n\n## Features\n\nThere are no software changes - the personal
+  license uses the same Komodo IDE\nsoftware, so you get [all the features] of Komodo
+  IDE (multiple languages,\ndebugging, source code control), and you are able to use
+  this license to develop\ncommercial software, just like you would with the enterprise
+  Komodo IDE license.\n\n[all the features]: /features/\n\n## Enjoy\n\nWe hope you
+  can take advantage of this special Komodo IDE Personal license and\nwe're glad we
+  could offer it to you.\n\nIf you've got any questions, or feedback - please let
+  us know.\n\n## PyCon in Montreal\n\nAlso, the Komodo team will be in Montreal next
+  week (April 8-13), attending\nPyCon 2014. If you're at PyCon or in the general vicinity,
+  then stop by the\nActiveState booth - we'll have lots of goodies to share with you.\n\n[PyCon
+  2014]: https://us.pycon.org/‎\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

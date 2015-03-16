@@ -1,0 +1,66 @@
+---
+:id: 2011-05-komodo-7-alpha-2-improved-syntax-checking
+:slug: 2011-05-komodo-7-alpha-2-improved-syntax-checking
+:title: ! 'Komodo 7 Alpha 2: Improved Syntax Checking '
+:date: !ruby/object:DateTime 2011-05-10 00:00:00.000000000 -04:00
+:tags:
+- alpha
+- coffeescript
+- html5
+- javascript
+- komodo 7
+- parsers
+- perl
+- python
+- syntax checking
+:body: ! "\n<div>\n  \t\t\n          <img title=\"Komodo 7: Syntax Checking\" alt=\"Komodo
+  7: Syntax Checking\" style=\"width: auto\" src=\"/assets/images/blog/2011-05/komodo-syntax-128.png\"
+  class=\"as_feature_img as_left\"><p>The plan for rolling out <a href=\"http://www.activestate.com/komodo-ide/downloads\">Komodo
+  7</a> is to bring on a wave of new functionality with each new alpha.  This time
+  the main difference is a revamp in the way we do as-you-type syntax checking.</p>\n
+  \ \n  <h2>Revisiting syntax checking</h2>\n  \n  <p>First of all, we're no longer
+  handing over HTML-based templates (like Django, RHTML, Mason, etc.) to HTML Tidy
+  and hoping for the best. Komodo now splits each of these documents into separate
+  parts, and then sends each section to the correct syntax checker. The contents of
+  script tags are handed by a JavaScript checker, the code in style tags by a CSS
+  checker, and everything else by the HTML checker.</p>\n  \n  <p>Next, the system
+  easily supports <em>different</em> checkers.  For example, we're shipping <a href=\"http://www.jslint.com/\">JSLint</a>
+  and <a href=\"http://jshint.com/\">JSHint</a> checkers for JavaScript. They're off
+  by default, but you can control which ones to use on a per-document or per-project
+  basis, following whatever makes sense. Similarly, if you've installed <a href=\"http://code.activestate.com/pypm/pylint/\">pylint</a>,
+  <a href=\"http://code.activestate.com/pypm/pychecker/\">PyChecker</a>, or <a href=\"http://code.activestate.com/pypm/pyflakes/\">pyflakes</a>,
+  you can now use them to vet your Python code.</p>\n  \n  <p>We've found there are
+  two other HTML libraries written as Perl modules (<a href=\"http://code.activestate.com/ppm/HTML-Tidy/\">HTML::Tidy</a>
+  and <a href=\"http://code.activestate.com/ppm/HTML-Lint/\">HTML::Lint</a>) that
+  sometimes do better HTML checking than Tidy, so you now have the option of using
+  those.  If you've moved to HTML5, you can check it with Komodo's built-in <a href=\"http://code.google.com/p/html5lib/\">html5lib</a>
+  instead.</p>\n  \n  <h2>Roll your own</h2>\n  \n  <p>Finally, the new syntax checking
+  system is fully extensible.  The three parts to add support for a new language are:
+  UDL to describe the language, an XPCOM library to determine how the checking works,
+  and a Mozilla extension to add new preference pages. If you just want to add support
+  for a new checker for an existing language, you can do that with a simple Mozilla
+  extension.</p>\n  \n  <h2>CoffeeScript!</h2>\n  \n  <p>Speaking of new languages,
+  we've added support for CoffeeScript, the JavaScript preprocessor.  Currently it
+  does coloring, and supports the same kind of indentation-level-based folding that
+  Python does.  If Komodo finds a program called \"coffee\" on the PATH, it will do
+  syntax-checking as well. If you're using a snazzy new template language that preprocesses
+  CoffeeScript elements and converts them to regular JavaScript script elements for
+  the browser, Komodo will now syntax-check that as well.</p>\n  \n  <h2>Updated Mozilla
+  under the hood</h2>\n  \n  <p>The other main change is that this version of Komodo
+  is now using the same version of Mozilla as Firefox 4.  Startup should definitely
+  be faster, as most components can now be loaded on demand as they're needed, as
+  opposed to loading everything initially on startup.  This also means extension writers
+  can take advantage of new features in JavaScript 1.8.5</p>\n  \n  <p>Additionally
+  there have been several <a href=\"http://docs.activestate.com/komodo/7.0/releases/ide.html#details\">bug
+  fixes</a> since the last alpha, particularly in the new sync and collaboration modules.</p>\n</div>\n"
+:comments: true
+:author:
+- :id: 4hoIr9hNNKSSQagw4mSgaY
+  :name: Eric Promislow
+  :biography: Eric Promislow is a senior developer who's worked on Komodo since the
+    very beginning. He has a M.Sc. in Computing Science from Queen's University and
+    a B.Sc. in Biophysics from the University of Ontario. Before joining ActiveState,
+    he helped create the OmniMark text-processing language.
+  :profilePhoto:
+    :title: EricPromislow
+    :url: //images.contentful.com/bj1g69m2935w/NG8IorgmqIyOaK6USkAOG/2cdb490e97ea0b4ae3fecb8817c74dbf/EricPromislow.jpg

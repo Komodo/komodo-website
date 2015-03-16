@@ -1,0 +1,74 @@
+---
+:id: 2012-03-new-screencast-collaborative-editing-komodo-ide-7
+:slug: 2012-03-new-screencast-collaborative-editing-komodo-ide-7
+:title: ! 'New Screencast: Collaborative Editing in Komodo IDE 7'
+:date: !ruby/object:DateTime 2012-03-29 00:00:00.000000000 -04:00
+:tags:
+- agile
+- code
+- collaboration
+- komodo 7
+- pairing
+- realtime
+:body: ! "\n<div>\n  \t\t\n          <p>\n   <a title=\"Komodo IDE: Collaborative
+  Editing\" rel=\"shadowbox;width=853;height=530\" href=\"http://www.youtube.com/v/zBneTNdbjk4\">\n
+  \ <img class=\"as_left\" style=\"width: 135px; height: 100px;\" src=\"/assets/images/blog/2012-03/scast-komodo-intro-0.jpg\"
+  alt=\"Komodo IDE: Code Collaboration\"></a> \n  \n  We've been remiss in making
+  screencasts for all the new features in Komodo IDE 7. To remedy that, <a href=\"http://www.activestate.com/blog/authors/toddw\">Todd
+  Whiteman</a> has made this short video showing off <a href=\"http://docs.activestate.com/komodo/7.0/collab.html\">Komodo
+  Collaboration</a>. You can share buffers (existing files or new documents) with
+  other Komodo IDE users in real time and see everyone's changes highlighted and tracked.
+  This is similar to the functionality available in online tools like Google Docs
+  or <a href=\"https://github.com/pita/etherpad-lite\">Etherpad lite</a>, but with
+  all of the editing and code intelligence features available in Komodo.</p>\n  \n
+  \ <p>This new feature gives you:</p>\n  \n  <ul>\n  <li>real time editing</li>\n
+  \     <li>the ability to share with individual users and/or limit access to individual
+  files</li>\n      <li>visual indicators for where people are editing and the text
+  they have highlighted</li>\n      <li>secure HTTPS/SSL connections - only authorized
+  users can see the code you share</li>\n      <li>full Komodo editing support - commands,
+  code coloring, syntax highlighting, etc...</li>\n      <li>unlimited collaborators
+  - how many friends ya got?</li>\n  </ul>\n  <h2>Pair programming</h2>\n  \n  <p>When
+  ActiveState was a part of <a href=\"http://www.sophos.com/en-us/\">Sophos</a>, the
+  PureMessage team made the big jump to adopting the Agile methodology and using pair
+  programming. This involved a big change in the office layout to accommodate pairing
+  stations, where developers could sit side-by-side and work on code collaboratively.
+  Each station needed two keyboards, two mice, two chairs, and the corresponding desk
+  real-estate. That would be an unfeasible change for a team that just wants to experiment
+  with pair programming or use it only sporadically.</p>\n  \n  <p>With Komodo Collaboration,
+  you can get some of the benefits of pair programming without having to rearrange
+  your furniture. You can still grab your laptop and go sit with your colleague, but
+  you don't have to fight about who's key-bindings are going to be used (the Vim vs.
+  Emacs issue for example) or give up any editor customizations you've made (theme,
+  macros, snippets, etc.).</p>\n   \n  <h2>Distributed development teams</h2>\n  \n
+  \ <p>Most distributed teams of remote developers become adept at communicating via
+  email or IRC and using pastebins to pass code back and forth, but working together
+  in the same buffer is much more efficient. With code collaboration in the editor,
+  pair programming suddenly becomes a possibility. With Komodo, a headset, and Skype,
+  you get pretty much the full pairing experience without having to put on pants.
+  </p>\n  \n  <a rel=\"shadowbox[Screenshots]\" href=\"http://activestate.com/sites/default/files/assets/images/komodo/feat_collab.png\">\n
+  \ <img title=\"alt-title\" alt=\"alt-title\" style=\"width: auto\" src=\"/assets/images/blog/2012-03/feat-collab.png\"
+  class=\"as_feature_img as_left\"></a>\n  \n  <h2 style=\"clear:both\">How it works</h2>\n
+  \ \n  <p>Behind the scenes, here's how collaboration in Komodo IDE communicates
+  with the central server hosted in ActiveState's network:</p>\n  \n  <ul>\n  <li>Komodo
+  IDE connects to the ActiveState server over HTTPS</li>\n      <li>Users are authenticated
+  using their ActiveState single sign-on account</li>\n      <li>Shared files are
+  stored on the ActiveState server. </li>\n      <li>Changes made by users are propagated
+  to the ActiveState server</li>\n      <li>The ActiveState server then re-propogates
+  those changes to other authenticated users accessing that file</li>\n  </ul>\n  <p>So
+  <a href=\"http://www.activestate.com/komodo-ide/downloads\">try it out</a> and let
+  us know what you think.</p>\n  \n  <p>If you like what you see, note that <strong><a
+  href=\"https://store.activestate.com/komodo-ide\">Komodo IDE is on sale till March
+  31</a></strong>.</p>\n  \n  \n  <p style=\"clear:both\"></p>\n</div>\n"
+:comments: true
+:author:
+- :id: 674p8Ab2VOiCmO48OwE6Og
+  :name: Troy Topnik
+  :biography: Troy Topnik is ActiveState's technical writer. After joining ActiveState
+    in 2001 as a "Customer Relationship Representative" (AKA Tech Support), Troy went
+    on to lead the PureMessage Enterprise Support team before moving on to a technical
+    writing role in 2004. His talent for describing software for new users stems from
+    his difficulty understanding things that developers find obvious. He has a Bachelor
+    of Music from the University of Victoria.
+  :profilePhoto:
+    :title: TroyTopnik
+    :url: //images.contentful.com/bj1g69m2935w/5563tsbpGgiSCUIGaUiEqc/4850e4438e16c62251aa9214ebf1ef39/TroyTopnik.jpg

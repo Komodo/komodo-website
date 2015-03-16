@@ -1,0 +1,49 @@
+---
+:id: 2014-06-run-ssh-command-from-komodo
+:slug: 2014-06-run-ssh-command-from-komodo
+:title: Run SSH Commands from Komodo
+:date: !ruby/object:DateTime 2014-06-22 20:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- ssh
+- commands
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>\n</div>\n\n##
+  The Macro\n\nThis macro is currently set up to execute a single command, \"ls -la\",
+  on the remote\nmachine.  It piggy backs on the current connection used to access
+  the remote file\nin the editor window.  Therefore you must have a remote file open
+  when you run it.\nYou could also modify this to ask you for the command to execute
+  using [Interpolation %ask Shortcut][].\n\n## Installation\n\nTo install the macro
+  simply hit the \"View Resource\" and \"Install Instructions\"\nlinks below.\n\nOnce
+  installed - open the Macro properties and set the macro to trigger on a\nkeybinding
+  of your choice.\n\n<div class=\"centered\">\n    <div class=\"spacer\"></div>\n
+  \   <a href=\"http://komodoide.com/resources/macros/cgchoffman--sshcommands/\" class=\"button
+  big primary\">\n        <i class=\"icon icon-eye\"></i>\n        View Resource\n
+  \   </a>\n    <div class=\"spacer-half\"></div>\n    <span>\n        <i class=\"icon
+  icon-question\"></i>\n        <a href=\"http://komodoide.com/resources/install-instructions/#pane-macro\"
+  target=\"_blank\">Install Instructions</a>\n    </span>\n</div>\n\n## Share Your
+  Own Awesome Macros\n\nDo you have your own awesome macro's that you think others
+  could benefit from?\nSubmit them to the [Resources Section] and if you really want
+  to get it noticed\n[write a Macro Monday blog about it][macromonday].\n\n   [Resources
+  Section]: /resources/submit-instructions/#pane-resources\n   [macromonday]: /resources/submit-instructions/#pane-blogs\n\n##
+  Related Materials\n\n* [Komodo Developer Extension][] - play around with JavaScript
+  or Python code in\n  the context of the Komodo window\n* [Komodo Macro API][] -
+  to programatically interact with the Komodo editor -\n  available to both Python
+  and Javascript\n* [Editor API][] - the Komodo editor provides a wrapper around the
+  Scintilla API\n* [Interpolation %ask Shortcut][] - Add input from user into your
+  macros using ```%ask```\ninterpolation.\n\n\n[Komodo Developer Extension]: /framed/?http://community.activestate.com/node/1824\n[Komodo
+  Macro API]: /framed/?http://docs.activestate.com/komodo/latest/macroapi.html\n[Editor
+  API]: http://www.scintilla.org/ScintillaDoc.html\n[Interpolation %ask Shortcut]:http://docs.activestate.com/komodo/latest/shortcuts.html#shortcuts_askcode_options\n"
+:comments: true
+:author:
+- :id: 6zO8F6VtbUEOmAAwsysqM6
+  :name: Carey Hoffman
+  :biography: Carey made the logical switch from snowboard instructing and treeplanting
+    to the technology industry in 2009, taking database and network administration
+    at BCIT. He is on the technical support and QA team for ActiveState, focusing
+    on Stackato Private PaaS and the Komodo IDE where he also contributes to development.
+  :profilePhoto:
+    :title: CareyHoffman
+    :url: //images.contentful.com/bj1g69m2935w/1MeZAzVMKIO6MmmKWkOY8m/e5e1c2e5f90671e4f2e26fe806dc16d5/CareyHoffman.jpg

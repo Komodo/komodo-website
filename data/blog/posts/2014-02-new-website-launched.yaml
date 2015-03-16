@@ -1,0 +1,84 @@
+---
+:id: 2014-02-new-website-launched
+:slug: 2014-02-new-website-launched
+:title: New Website! Win a Copy of Komodo!
+:date: !ruby/object:DateTime 2014-02-18 19:00:00.000000000 -05:00
+:tags:
+- website
+- contest
+- twitter
+:body: ! "\nAfter weeks of hard work we can finally present to you our new web site!
+  It's\nbeen a long time coming and although a lot of work has been done thus far
+  a lot\nmore is still to come. We're working hard not just on Komodo but also on
+  the\ninfrastructure surrounding Komodo: community, addons, support, documentation,
+  etc.\n\n<h2 class=\"centered\"><a href=\"#contest\">\"I'm Just here for the contest,
+  where do I win stuff?\"</a></h2>\n\n## The New Website\n\n<a href=\"http://docpad.org/\"
+  target=\"_blank\" class=\"push-right tooltip\"\n    title=\"The new website is entirely
+  powered by DocPad, check them out!\">\n    <img src=\"/assets/images/blog/2014-02/docpad.png\">\n</a>\n\nWhen
+  we started work on the new website we knew we wanted to do something different.\nAlthough
+  full-fledged CMSes like [Drupal] certainly have their strength they also\ntake away
+  a certain amount of flexibility. After a period of evaluation we ultimately\ndecided
+  that for the purposes of our Komodo website a static site generator would\ngive
+  us the flexibility we desired and give incredible performance to boot. And\nto that
+  end we decided [DocPad] would be the best fit for us.\n\nSo why [DocPad]? Why not
+  [Jekyll] or one of the huge variety of other [static site generators][generators]\nout
+  there? Well first off I don't want to undersell the \"competition\", they all\nbring
+  their own unique twist to the table, but since the Komodo code base uses\na lot
+  of JavaScript we liked the idea of a [NodeJS] powered static site generator. Aside
+  from\nthat simple fact; [Benjamin Lupton][balupton], the creator of [DocPad], has
+  done an amazing job\nin making [DocPad] an incredibly versatile tool that can be
+  easily modeled to ones\npreferences. Prefer to use [ResText] rather than [Markdown]
+  for your blogs? [No problem][restextPlugin]!\nNeed to have some [PHP], [Ruby], [CoffeeScript]
+  etc. in your pages? Go for it! It truly is an\namazing tool and so far it's been
+  a lot of fun to use.\n\n### There Be Dragons (pun intended)\n\nA big new website
+  doesn't come without it's problems, and so there are sure to be\nsome minor issues
+  here and there. If you run into any and don't mind sparing a few\nminutes of your
+  time, please [report them on github][report].\n\n### Acknowledgements\n\nBefore
+  I move on to the contest, I'd like to thank [Benjamin Arthur (balupton)][balupton]
+  not only\nfor his amazing work on [DocPad] but also for assisting us with some occasional
+  issues\nvia [IRC]. Furthermore I'd also like to thank everyone that contributed\nto
+  DocPad since it's inception -- Thank you!\n\n<a name=\"contest\"></a>\n## Let's
+  Celebrate - Win a Copy of Komodo!\n\nTo celebrate the launch of the new website
+  we're giving away 3 copies of Komodo IDE.\nThere are 2 ways to win a copy, the simple
+  way (but less chance of winning) or\nthe \"fan\" way (your chances are in our hands).
+  Or, you know, do both!\n\n### The Simple Way (Read on to increase your chances)\n\nFollow
+  <a href=\"http://twitter.com/KomodoIDE\">@KomodoIDE</a> on Twitter and retweet:\n\n<blockquote
+  class=\"twitter-tweet\" lang=\"en\"><p>Win a copy of Komodo! Follow &amp; Retweet
+  <a href=\"https://twitter.com/komodoide\">@KomodoIDE</a> <a href=\"https://twitter.com/search?q=%23KomodoIDEdotCom&amp;src=hash\">#KomodoIDEdotCom</a>
+  or increase your chances by .. <a href=\"http://t.co/tJawubNKVK\">http://t.co/tJawubNKVK</a></p>&mdash;
+  Komodo IDE &amp; Edit (@komodoide) <a href=\"https://twitter.com/komodoide/statuses/436246722856378369\">February
+  19, 2014</a></blockquote>\n<script async src=\"//platform.twitter.com/widgets.js\"
+  charset=\"utf-8\"></script>\n\nWe will give away one copy of Komodo to the participant
+  who wins in the random draw.\n\nDoesn't get any simpler! But that's what everyone
+  will be doing, so maybe you should try ..\n\n### The Fan Way (Screenshot your setup
+  to us)\n\nPlease check our [Contest page].\n\n### Period\n\nWe will give away one
+  license every week for 3 weeks, starting on Feb 28th and\nevery Friday from then
+  on.\n\n## *Contest Update*\n\nWe've selected our [first winner] and second winner!
+  There is still 1 copy left to win so it's not\ntoo late to participate!\n\n\n   [Drupal]:
+  https://drupal.org/ \"Drupal - Open Source CMS\"\n   [DocPad]: http://docpad.org/
+  \"DocPad - Streamlined Web Development\"\n   [Jekyll]: http://jekyllrb.com/ \"Jekyll.
+  Simple, blog-aware, static sites\"\n   [generators]: http://staticsitegenerators.net/
+  \"Comprehensive list of Static Site Generators\"\n   [NodeJS]: http://nodejs.org/
+  \"node.js javascript platform\"\n   [balupton]: http://balupton.com/ \"Benjamin
+  Lupton's Website\"\n   [ResText]: http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+  \"reStructuredText Markup Specification\"\n   [Markdown]: http://daringfireball.net/projects/markdown/
+  \"Markdown Introduction\"\n   [restextPlugin]: https://github.com/jaredly/docpad-plugin-rst
+  \"ResText DocPad Plugin\"\n   [PHP]: https://github.com/docpad/docpad-plugin-php
+  \"PHP plugin for DocPad\"\n   [Ruby]: https://github.com/docpad/docpad-plugin-ruby
+  \"Ruby plugin for DocPad\"\n   [CoffeeScript]: https://github.com/docpad/docpad-plugin-coffeescript
+  \"CoffeeScript plugin for DocPad\"\n   [IRC]: irc://irc.freenode.net/#docpad \"Visit
+  #DocPad on Freenode\"\n   [report]: https://github.com/Komodo/komodo-website/issues\n
+  \  [first winner]: /blog/2014-02/contest-winner \"Our First Contest Winner\"\n   [Contest
+  page]: /contest\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

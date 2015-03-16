@@ -1,0 +1,85 @@
+---
+:id: 2014-07-building-komodo-with-docker
+:slug: 2014-07-building-komodo-with-docker
+:title: Building Komodo with Docker
+:date: !ruby/object:DateTime 2014-07-15 06:00:00.000000000 -04:00
+:tags:
+- development
+- docker
+- build
+- arch linux
+- antergos
+:body: ! "\nToday is another Monday, and another Monday means another Macro Monday
+  blog post.\nExcept I didn't prepare a macro because I was too busy getting my Komodo
+  builds\nto work for the umptieth time. So instead I'm going to talk about just that;\ngetting
+  a Komodo build going and how I've \"accidentally\" been able to make it a\nlot easier,
+  apologies if you were looking forward to another macro; I promise\nthere'll be one
+  next week!\n\n## The Story\n\n<a href=\"/assets/images/blog/2014-07/komodo-x11-ssh.png\"
+  class=\"lightbox\" title=\"The first screenshot I took when I finally had Komodo
+  running on Arch, this is running over SSH X11 Forwarding and I had not yet installed
+  any GTK themes on the docker image. Also yes - thats gedit in the background, I
+  had not even installed Komodo on the host yet.\">\n<img src=\"/assets/images/blog/2014-07/komodo-x11-ssh.png\"
+  width=\"300\" align=\"right\">\n</a>\n\nSo last Friday I decided I had had enough
+  of Ubuntu, I was tired of waiting for\nthe apt repositories to give me the software
+  I was waiting for and having to mess\nabout with various different apt repositories
+  just to install some software.\nAfter a failed attempt a while ago I was now determined
+  to install Arch Linux\nand fully make the switch, but since I did not want to waste
+  days getting it set\nup I chose to install Antergos, which is basically Arch but
+  with a fancy installer.\n\nEverything went great, Arch/Antergos was running smoothly
+  and all of my apps and\nsettings were transferred in no time, the only thing left
+  was getting my Komodo\nbuild going, oh boy was I in for a chore.\n\nI'll save you
+  the details but what it came down to is Arch uses Python 3 by default\nand when
+  using Python 2 I ran into a bunch of unicode linking issues. I spent well\nover
+  2 days modifying build scripts to get the Komodo build going and got there 99%\nof
+  the way. In my frustration I vented on IRC about how I wish I could just run GUI\napps
+  in Docker when Mark Yen (one of the Komodo devs) simply said \"you can - just\nuse
+  SSH with X11 forwarding\".\n\nI knew about X11 forwarding but always figured this
+  to be\na fairly limited functionality only capable of bare basic X11 windows, not
+  complex\napplications like Komodo. But I was wrong and I instantly dropped the past
+  2 days\nworth of headaches and started looking into Docker. Barely a day later I
+  had a\nfully functional Komodo build running via Docker, it was beautiful!\n\nSo
+  after some polishing of the implementation the Docker image is now ready for\nanyone
+  to use, this will allow you to get your own Linux build of Komodo running\nin no
+  time without having to worry about installing dependencies.\n\n## Using Docker to
+  Build Komodo\n\nTo get started building Komodo with Docker [head over to our github
+  page][1] and\n[check the instructions][2].\n\nJust want the TLDR? Basically to get
+  a build running in Komodo you will execute\nthese commands in your terminal (must
+  have docker installed and running):\n\n```bash\ncd <project-root>/util/docker\nsudo
+  ./docklet build # takes a few minutes\nsudo ./docklet start\nsudo ./docklet ssh
+  # you will now be sshed into the docker container\ncd /root/komodo/mozilla\npython
+  build.py configure -k 9.10\npython build.py distclean all # this will take a while,
+  between 15 mins and xx hours depending on your hardware\ncd ..\nbk configure -V
+  9.10.0-devel\nbk build # takes a few minutes\nbk run\n```\n\nFor further details
+  [check out our build instructions][3].\n\nOnce you have your build running you will
+  only be using the last 2 commands most\nof the time, and they won't take nearly
+  as long.\n\n## Developing Using Docker\n\nOnce you have your Docker build going
+  you might be wondering - \"now what? Where do\nI edit my files?\". Thankfully Docker
+  makes it easy to simply mount a host folder\non the Docker container, which is already
+  facilitated for you when you use the\ndocklet script referenced above. So once you
+  have your build going you can simply\nedit your files in the project root on your
+  host machine in whatever manner you\nprefer (I hear Komodo IDE is pretty good at
+  this ;)).\n\n## Here Be Dragons\n\nKeep in mind the Docker script is still brand-new
+  and there will still be some\nkinks to work out before it can be considered as a
+  \"stable\" alternative to running\nthe build straight from your host machine.\n\n##
+  Final Thoughts\n\nI want to credit [pelle.io] for providing me with the resources
+  I needed to figure\nmuch of the docker stuff out, [his blog and script][4] were
+  of tremendous help to me.\n\nI hope to evolve upon the existing Docker script a
+  lot in the future, but it will\ndepend on how many people end up using it. Particularly
+  I'd like to make the\nbuild process even simpler by already supplying the built
+  mozilla dependencies,\nwhich would eliminate half of the steps above.\n\nSo if you
+  find this useful and intend to use it - please let us know!\n\nHere's hoping this
+  leads to some interesting contributions! :)\n\n   [1]: https://github.com/Komodo/KomodoEdit\n
+  \  [2]: https://github.com/Komodo/KomodoEdit#building-with-docker\n   [3]: https://github.com/Komodo/KomodoEdit/blob/master/BUILD.txt\n
+  \  [4]: http://pelle.io/delivering-gui-applications-with-docker/\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

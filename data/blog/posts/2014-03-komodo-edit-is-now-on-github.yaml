@@ -1,0 +1,80 @@
+---
+:id: 2014-03-komodo-edit-is-now-on-github
+:slug: 2014-03-komodo-edit-is-now-on-github
+:title: Komodo Edit Is Now On GitHub!
+:date: !ruby/object:DateTime 2014-03-04 19:00:00.000000000 -05:00
+:tags:
+- git
+- github
+:body: ! "\n<a style=\"font-size: 128px; margin: 10px;\" href=\"https://github.com/Komodo/KomodoEdit\"
+  class=\"push-right\">\n    <i class=\"icon icon-github\"></i>\n</a>\n\nThe source
+  code for Komodo Edit is [now available on GitHub][github]. It has been for a short
+  while now but we never quite anounced it, as we're still moving over parts of our
+  codebase.\n\nKomodo is a huge supporter of open source software, and we are proud
+  to show\nthat Komodo Edit has been open source for 7 years (since 2007) - licensed\nunder
+  the [Mozilla Public License](http://en.wikipedia.org/wiki/Mozilla_Public_License)\n(MPL).
+  Our code also makes use of many open source components, such as the\nMozilla Firefox
+  platform and Python runtime.\n\nNote that for now our Komodo Edit GitHub repository
+  is still mirroring an\nexisting [Subversion repository](http://svn.openkomodo.com/openkomodo),
+  but soon\nall Komodo code will move away from Subversion, and the Komodo code-base
+  will be\npurely under Git.\n\n## Why Git?\n\nWe've chosen to use Git over Subversion
+  for these reasons:\n\n  * **Speed** - Git is durn fast\n  * **Distributed** - developers
+  can work (and commit) locally without having\n    to connect back to a central repository.
+  Commands run locally, rather than\n    having to fetch from a centralized server\n
+  \ * **Commands** - with builtin commands like\n    *[git stash](https://www.kernel.org/pub/software/scm/git/docs/git-stash.html)*\n
+  \   and\n    *[git commit --amend](https://www.kernel.org/pub/software/scm/git/docs/git-commit.html)*,\n
+  \   it can be both clever and forgiving\n  * **Branching** - Git has lightweight
+  branches with superior\n    merging capabilities (though I admit newer Subversion
+  releases are\n    catching up in the merging department)\n  * **Fast** - did I mention
+  Git is durn fast?!\n\nNow, with the good being said, we'd be remiss if we didn't
+  mention a few rough\nedges as well:\n\n  * **Terminology** - with words like *origin*
+  and *master*, it seems to better\n    fit in with a Star Wars movie, rather than
+  source code control tools\n  * **Command line syntax** - *git reset --hard HEAD~1*
+  and *git push origin\n    master*, you'd be forgiven if you banged your head on
+  your first attempt at\n    using Git\n\nAll in all, we're pretty happy with the
+  move to GitHub and look forward to using\nmore Git in the future.\n\n## Komodo on
+  GitHub\n\nWe have already moved many of our code repositories onto the GitHub page,
+  such as:\n\n### Website\n\nOur [new website](https://github.com/Komodo/komodo-website)
+  that runs\non komodoide.com is all open-source and available under GitHub - for
+  more\ndetails on how that works, check out Nathan's\n[blog post](http://komodoide.com/blog/2014-02/new-website-launched/).\n\n###
+  Add-ons\n\n  * [Abyss Skin](https://github.com/Komodo/Mel) - this is the code for
+  the new\n    dark skin (theme) in Komodo 8. Anyone wanting to create (or tweak)
+  their own\n    skin should take a look at this\n  * [To-do Helper](https://github.com/Komodo/Todo)
+  - adds a todo widget into the\n    bottom Komodo pane that will display any todo
+  markers left in your source\n    code\n  * [Side By Side Diffs](https://github.com/Komodo/SideBySideDiff)
+  - which\n    provides an alternative diff viewer in Komodo that shows a side-by-side
+  file\n    comparison\n\n### Macros\n\n  * [Wrap Text](https://github.com/Komodo/macros#wrap-text)
+  - wraps the editor\n    selection with custom text. Easily enclose text within HTML
+  tags or\n    stringify a selection\n  * [PHPDoc and JSDoc](https://github.com/Komodo/macros#phpdoc-and-jsdoc)
+  -\n    automatically creates javadoc style comments for functions and variables\n
+  \ * [Incremental\n    Numbering](https://github.com/Komodo/macros#incremental-numbering)
+  - inserts\n    a number into a column selection, incrementing the number for every
+  line\n\nFor a more complete overview of our repos, check out [our GitHub Organization
+  page][github org].\n\n## Git Functionality inside Komodo\n\n*What about Komodo itself
+  - does it support Git?*\n\nKomodo IDE does indeed provide support for Git (but not
+  Komodo Edit), showing\nthe file status directly inside of the IDE and providing
+  commands for common\nactions like clone, pull, add, remove, diff, revert, commit,
+  log and push.\n\nHere's screenshots of the Open Files pane showing source code control
+  status and\nthe commit dialog ready to check in modified files:\n\n<div class=\"centered\">\n
+  \   <img alt=\"SCC File Status\" src=\"/assets/images/blog/2014-03/scc_file_status.png\">\n
+  \   <img alt=\"SCC Commit\"      src=\"/assets/images/blog/2014-03/scc_commit.png\">\n</div>\n\nPlease
+  let us know if there are more things you'd like to see in Komodo with\nregards to
+  Git.\n\n   [github]: https://github.com/Komodo/KomodoEdit \"Komodo Edit on GitHub\"\n
+  \  [github org]: https://github.com/Komodo/ \"The Komodo Organization on GitHub\"\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

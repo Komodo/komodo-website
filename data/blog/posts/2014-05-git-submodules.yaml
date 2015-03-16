@@ -1,0 +1,98 @@
+---
+:id: 2014-05-git-submodules
+:slug: 2014-05-git-submodules
+:title: Getting git submodule to track a branch
+:date: !ruby/object:DateTime 2014-05-14 06:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- auto-complete
+:body: ! "\n<a style=\"font-size: 128px; margin: 10px;\" href=\"https://github.com/Komodo/KomodoEdit\"
+  class=\"push-right\">\n    <i class=\"icon icon-github\"></i>\n</a>\n\nSince using
+  Git submodules in our Komodo code base, we've learnt some\ninteresting things about
+  submodules that we'd like to share.\n\nGit submodules work really well for splitting
+  out code bases into separate\nrepositories, but there are still a few things (quirks)
+  you should be aware of.\nThere's a lot of out-of-date information on the web, so
+  pay attention to the\ndate of the articles you read, as git has been changing (getting
+  better) all the\ntime.\n\n\n## About Submodules\n\nA submodule in a git repository
+  is like a sub-directory which is really a\nseparate git repository in its own right.\n\nThere
+  is a special ```git submodule``` command included with git, and this\ncommand takes
+  various arguments in order to add/update/delete your submodules.\n\nYou can set
+  the submodule to track a particular branch (requires git 1.8.2+),\nwhich is what
+  we are doing with Komodo, or you can reference a particular\nrepository commit (the
+  later requires updating the main repository whenever you\nwant to pull in new changes
+  from the module - i.e. updating the commit hash\nreference).\n\nOne special thing
+  to note about submodules, is that by default they are first\ninitialized into a
+  detached head state (like an anonymous git branch), so if you\nwant to work on this
+  submodule code later, you'll first need to update the\ninformation (checkout) to
+  be able to push your changes correctly.\n\n\n## Using Submodules\n\n### Creating\n\nTo
+  create a submodule, you create a new repository to host your module code and\nthen
+  link that into the main repository project. For example, we've created a\n[trackchanges]
+  repository (a new feature coming in Komodo 9) that we're linking\ninto the main
+  [Komodo Edit] repository as a submodule:\n\n```\ncd KomodoEdit\ngit submodule add
+  -b master https://github.com/Komodo/trackchanges.git src/modules/trackchanges\n```\n\nUsing
+  the **-b** argument means we want to follow the master branch of the\ntrackchanges
+  repository, and after running this command we'll have an empty\nsrc/modules/trackchanges
+  directory.\n\nYou'll need to run a special submodule initialize command (i.e. after
+  cloning\nthe main repository) to fetch the code for the first time:\n\n```\ngit
+  submodule update --init\n```\n\n### Updating\n\nNow, git uses the *update* command
+  to also fetch and apply updates, but this\ntime the arguments are slightly different:\n\n```\ngit
+  submodule update --remote\n```\n\nThis will update the trackchanges submodule we
+  added earlier, to the latest\nversion.\n\n\n### Editing\n\nNow that we have a our
+  submodule playing nicely, it would be useful if we could\ngo and edit this submodule
+  code in place, making commits and pushes, which is\nexactly what we'll do next.
+  It requires a few additional git commands to change\nfrom a detached head into a
+  proper remote branch.\n\n```\ncd src/modules/trackchanges\ngit checkout master\n```\n\nThis
+  gets you into a state where you can edit, commit and push your changes back\nto
+  the trackchanges repository.\n\nNote that for GitHub you may wish to change from
+  using *https://* into a\n*ssh://* remote url (to be able to authenticate using ssh)
+  - to do that you'll\nwant to edit the submodule config file, which you can get from
+  the \".git\" file\nin your submodule:\n\n```\ncat .git\ngitdir: ../../../.git/modules/src/modules/trackchanges\n```\n\nThis
+  *gitdir* directory holds the git config file for your remote, so update\nthat accordingly.\n\nOne
+  thing to note about submodule editing, if you run the *git submodule update\n--remote*
+  command, your module will go back into being in a detached head state,\nso you'll
+  need to remember to re-checkout the next time you want to edit it\nagain.\n\n\n###
+  Status\n\n**One important thing to note**, is that after you make new commits in
+  the\nsubmodule, or have pulled in new commits from the submodule, is that ```git\nstatus```
+  will show the submodule as modified, like this:\n\n```\n#\tmodified:   src/modules/trackchanges
+  (new commits)\n```\n\nwhich is annoying - as we thought we had told git to track
+  the branch and the\nsubmodule is now updated to the latest branch commit... what's
+  going on?\n\nThis happens to be a limitation of submodule branch tracking - *git
+  submodule\nadd -b* simply adds information about a branch in the .gitmodule file
+  and allows\nyou the option to manually update the submodule object to the latest
+  commit of\nthat specified branch. Your main repository still thinks your submodule
+  is at\nthe original commit (i.e. when the initial *git submodule add -b* was run)
+  - and\nwhen you run ```git submodule update``` (without the --remote option) your\nsubmodule
+  will be reset back to that original commit.\n\nYou have to go and update that submodule
+  commit reference to the latest code in\nthe remote branch to avoid this:\n\n```\ngit
+  add src/modules/trackchanges\ngit commit -m \"Update submodule tracking to the latest
+  commit\"\n```\n\nThis additional commit step is somewhat of a pain - and I'm hopeful
+  that future\nversions of git come up with a more stream-lined method to keep track
+  of the\nsubmodule remote branch.\n\n\n## Summary\n\nIn summary, git submodules are
+  a flexible way to de-couple your code base, but\nit does require some additional
+  learning of git commands in order to manage and\nupdate these separate code bases.
+  All in all I think this a worthy trade-off and\nmuch better than trying to utilize
+  third-party alternatives (like *Git Subtree*\nor *Google's Repo*).\n\nThere are
+  a lot of git resources out there - this [Git tutorial] is a good\nthorough reference,
+  otherwise you'll likely find what you need on [Stack\nOverflow].\n\n   [trackchanges]:
+  https://github.com/Komodo/trackchanges\n   [Komodo Edit]: https://github.com/Komodo/KomodoEdit\n
+  \  [Git tutorial]: http://www.vogella.com/tutorials/Git/article.html\n   [Stack
+  Overflow]: http://stackoverflow.com/\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

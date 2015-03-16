@@ -1,0 +1,59 @@
+---
+:id: 2012-07-komodo-7-1-screencast
+:slug: 2012-07-komodo-7-1-screencast
+:title: ! 'Komodo 7.1 Video: SCC Push, Variable Highlighting, Add Your Own Language'
+:date: !ruby/object:DateTime 2012-07-24 00:00:00.000000000 -04:00
+:tags:
+- git push
+- komodo 7
+- release
+- scc
+- stackato
+- variables
+:body: ! "\n<div>\n  \t\t\n          <p><a href=\"http://www.youtube.com/v/lvKMvFK5O_8\"
+  rel=\"shadowbox;width=853;height=530\" title=\"Komodo IDE - New in 7.1\"><img class=\"as_left\"
+  style=\"float:left \" alt=\"Komodo IDE - New in 7.1\" src=\"/assets/images/blog/2012-07/scast-komodo-intro-0.jpg\"></a>
+  <a target=\"_new\" href=\"http://www.activestate.com/komodo-ide/downloads\">Komodo
+  IDE 7.1</a> is out! I've put together a short screencast to demo all the great <a
+  target=\"_new\" href=\"http://docs.activestate.com/komodo/7.1/\">new features</a>
+  we've added.</p>\n  \n  <p>Here's a summary of what I cover in the video.</p>\n
+  \ \n  <h2>Variable Highlighting</h2>\n  \n  <p>First off, we've added variable highlighting.
+  When you click on a variable, all the other instances of that variable are highlighted,
+  making it easy to track where your variables are being used in a particular function.</p>\n
+  \ \n  <h2>DVCS Push</h2>\n  \n  <p>We've also <a target=\"_new\" title=\"Komodo
+  Docs: Push Dialog\" href=\"http://docs.activestate.com/komodo/7.1/scc.html#push_dialog\">improved
+  support</a> for distributed version control systems: Git, Mercurial, and Bazaar.
+  You can now 'push' your changes back to the repository. In the video example using
+  Git, I make a change, commit it and push it. The new interface gives you the option
+  to choose the branch you want to push to, as well as the tags.</p>\n  \n  <h2>Debugging
+  in Stackato</h2>\n  \n  <p>Stackato integration has been enhanced with the ability
+  to <a target=\"_new\" title=\"Debugging with Stackato\" href=\"http://docs.activestate.com/komodo/7.1/stackato.html#debugging_applications\">debug
+  applications</a> within a cloud environment. From the Stackato dialogue option,
+  you simply choose \"Configure Debugger\" and set it to work on the Komodo host name
+  and port number.</p>\n  \n  <h2>Adding your own language</h2>\n  \n  <p>We've made
+  it really easy to <a target=\"_new\" title=\"http://docs.activestate.com/komodo/7.1/extensions.html#language_extensions\"
+  href=\"http://docs.activestate.com/komodo/7.1/extensions.html#language_extensions\">add
+  support for new languages</a>. For example, in this video I create a Go extension
+  within a few minutes. You start a new project from a template, set handling of line
+  and block comments, copy &amp; paste keywords, and Komodo creates the package information.
+  Click \"Build and Install\" in your toolbox, restart Komodo, and Go support (syntax
+  highlighting and keyword autocompletion) is up and running.</p>\n  \n  <h2>Updates</h2>\n
+  \ \n  <p>Finally, we've upgraded support for the newest versions of existing languages:
+  PHP 5.4, Node.js 0.8, Ruby 1.9.3, Python 3.3 and Perl 5.16.</p>\n</div>\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

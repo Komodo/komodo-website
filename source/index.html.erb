@@ -167,18 +167,17 @@ priority: 1.0
     <div>
         <div id="splash-news-blogs">
             <h1><a href="/blog">Blogs</a></h1>
-            <!-- Blog loop
+            <% posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse %>
+            <% posts.first(5).each do |id,_post| %>
             <dl>
                 <dt>
-                    <a href="< document.url %>">
-                        < document.title %>
-                    </a>
+                    <a href="/blog/<%= _post.slug.sub(/^(\d{4}-\d{2})-/,'\1/') %>"><%= _post.title %></a>
                 </dt>
                 <dd>
-                    By < document.author %>, < document.humanDate %>
+                    By <%= _post.author[0].name %>, <%= _post.date.strftime('%b %e, %Y') %>
                 </dd>
             </dl>
-             -->
+            <% end %>
         </div>
         <div id="splash-news-tweets">
             <h1>

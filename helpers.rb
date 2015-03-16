@@ -1,29 +1,35 @@
 module Helpers
   
-  def get_title
+  def get_title(post)
     
     if current_page.data.title
-        if get_basename() == "index"
-            return current_page.data.title
-        else
-            return "#{current_page.data.title} | #{title}"
-        end
+      if get_basename() == "index" 
+        return current_page.data.title
+      else
+        return "#{current_page.data.title} | #{title}"
+      end
+    end
+    
+    if post
+      return "#{post.title} | #{title}"
     end
     
     return title
     
   end
   
-  def get_social_description(via = true)
+  def get_social_description(post, via = true)
     if current_page.data.socialDescription
       return current_page.data.socialDescription
     end
 
+    page_title = post ? post.title : current_page.data.title
+  
     if meta('layout') == 'blog'
       if via
-        return current_page.data.title + ' via @KomodoIDE'
+        return page_title + ' via @KomodoIDE'
       else
-        return current_page.data.title
+        return page_title
       end
     end
 
@@ -89,9 +95,35 @@ module Helpers
     return r
   end
   
+  def summary(text, length = 250)
+    text = text.gsub(/^#+.*\n/,'') # Strip markdown headers
+    text = text.gsub(/\[(.*?)\](?:\[.*?\])?(?:\(.*?\))?/,'\1') # Strip markdown links
+    text = text.gsub(%r{</?[^>]+?>}, '').gsub(/\n+/,' ') # Strip html and line endings
+    text = text.gsub('Macro Monday - a new macro to dig into every Monday!','')
+    text = text.split(".")
+    if text.first().length > length
+      return text.first()[0...250] + "..."
+    end
+    
+    summary = text.shift + "."
+    text.each() do |sentence|
+      if summary.length + sentence.length > 250
+        break
+      end
+      
+      summary += sentence + "."
+    end
+    
+    return summary
+  end
+  
   def yaml(path)
     require 'yaml'
     return YAML.load_file(File.dirname(__FILE__) + path)
+  end
+  
+  def markitdown(source)
+    return Tilt['markdown'].new { source }.render()
   end
   
   @@vimeo_cache = {}
@@ -104,5 +136,26 @@ module Helpers
     
     data = @@vimeo_cache[id]
     return data.has_key?(attr) ? data[attr] : nil
+  end
+  
+  def tags()
+    tags = {}
+    posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse
+    posts.each() do |id,post|
+      post.tags.each() do |tag|
+        unless tags.has_key? tag
+          tags[tag] = [];
+        end
+        
+        tags[tag].push({
+          "title" => post.title,
+          "date" => post.date,
+          "author" => post.author,
+          "slug" => post.slug
+        })
+      end
+    end
+    
+    return tags
   end
 end

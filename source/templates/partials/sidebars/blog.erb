@@ -11,47 +11,36 @@
         </a>
     </div>
 </div>
-<% if current_page.data.author %>
+<% if defined? post and post %>
 <div class="info">
     <h1>Blog Info</h1>
 
-        <img src="/assets/images/authors/<%= current_page.data.author_picture || current_page.data.author.gsub(/[^a-zA-Z]/,'')+'.jpg' %>" alt="<%= current_page.data.author %>">
+    <% if post.author[0].has_key? "profilePhoto" %>
+        <img src="<%= post.author[0].profilePhoto.url %>" alt="<%= post.author[0].name %>">
+    <% end %>
 
     <p>
         <strong>By:</strong>
-        <% if meta('author_link') %>
-            <a href="<%= meta('author_link') %>"><%= meta('author') %></a>
-        <% else %>
-            <a href="/authors#<%= current_page.data.author.gsub(/[^a-zA-Z]/,'') %>"><%= meta('author') %></a>
-        <% end %>
+        <a href="/authors#<%= post.author[0].name.gsub(/[^a-zA-Z]/,'') %>"><%= post.author[0].name %></a>
     </p>
 
     <p>
         <strong>Tags: </strong>
-        <% current_page.data.tags.each do |tag| %>
-        <a href="/blog/tagged?<%= tag %>"><%= tag %></a>
+        <% post.tags.each do |tag| %>
+            <a href="/blog/tagged/<%= tag %>"><%= tag %></a>
         <% end %>
     </p>
-    <p><strong>Date Posted: </strong><%= current_page.date.strftime('%b %e, %Y') %></p>
+    <p><strong>Date Posted: </strong><%= post.date.strftime('%b %e, %Y') %></p>
 </div>
 <div class="clearfix"></div>
-<div class="blogs">
-    <h1>Related</h1>
-    <ul>
-        <% current_article.similar_articles.first(10).each do|article| %>
-        <li>
-            <%= link_to article.title, article %>
-        </li>
-        <% end %>
-    </ul>
-<% else %>
-<div class="blogs">
 <% end %>
+<div class="blogs">
     <h1>Recent Blogs</h1>
     <ul>
-        <% blog.articles.first(10).each do |article| %>
+        <% posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse %>
+        <% posts.first(10).each do |id,_post| %>
         <li>
-            <%= link_to article.title, article %>
+            <a href="/blog/<%= _post.slug.sub(/^(\d{4}-\d{2})-/,'\1/') %>"><%= _post.title %></a>
         </li>
         <% end %>
     </ul>

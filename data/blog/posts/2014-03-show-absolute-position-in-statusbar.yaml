@@ -1,0 +1,59 @@
+---
+:id: 2014-03-show-absolute-position-in-statusbar
+:slug: 2014-03-show-absolute-position-in-statusbar
+:title: Absolute Cursor Position in Statusbar
+:date: !ruby/object:DateTime 2014-03-30 20:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- print
+- dump
+- doc
+- position
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>\n</div>\n\nEver
+  wanted to easily see where in the document your current cursor position is\nrelative
+  to the first character? [@JustMe](http://forum.komodoide.com/users/justme/activity)
+  was [asking just this on our forums](http://forum.komodoide.com/t/display-current-cursor-position-from-top-of-file/53),\nand
+  it turns out it's quite easy to override a built-in Komodo function to update\nyour
+  statusbar and show this information.\n\n# The Macro\n\nThe function that edits the
+  Komodo statusbar to add the byte &amp; char positions\n\n```javascript\nfunction
+  addByteCharPos() {\n\n    var scimoz = ko.views.manager.currentView.scimoz;  //
+  Get scintilla\n\n    var bytePos = scimoz.currentPos;  // Get byte pos of cursor\n
+  \   var charPos = scimoz.charPosAtPosition(bytePos);  // Get char pos of cursor\n\n
+  \   // Get the statusbar line and column section to append new stats\n    var lineColWidget
+  = document.getElementById('statusbar-line-col');\n\n    // If these mis-match then
+  there are mutliple byte chars in the doc.\n    // Give the char position rather
+  than the byte/absolute position.\n    if (bytePos == charPos) {\n        var lineColText
+  = lineColWidget.getAttribute(\"label\") +\n                        \" Byte: \" +
+  bytePos;\n    } else {\n        var lineColText = lineColWidget.getAttribute(\"label\")
+  +\n                        \" Char: \" + charPos;\n    }\n    // Attach new string\n
+  \   lineColWidget.setAttribute('label', lineColText);\n}\n```\n\nCreate a namespace
+  to save your function and ensure it's not triggered too early\n\n```javascript\nif
+  (typeof(extensions) == \"undefined\") {\n    extensions = {};\n}\n\nextensions.addByteCharPos
+  = function(){\n    setTimeout(addByteCharPos, 1);\n};\n```\n\nThere just happens
+  to be an event ready for us to use, [current_view_linecol_changed](https://github.com/Komodo/KomodoEdit/blob/371adfcc44db5e63dc50b9059cd1c5eec289e6fa/src/chrome/komodo/content/statusbar.p.js#L648)\n\n```javascript\n//
+  Make sure you don't add it twice so remove\nwindow.removeEventListener('current_view_linecol_changed',
+  extensions.addByteCharPos, false);\nwindow.addEventListener('current_view_linecol_changed',extensions.addByteCharPos,
+  false);\n```\n\nSee the completed macro with comments on github: [add_byte_char_pos_statusbar.js](https://github.com/Komodo/macros/blob/master/add_byte_char_pos_statusbar.js)\n\n##
+  Installation\n\nTo install the macro simply hit the download button below, then
+  drag the downloaded\nfile into your [Komodo toolbox](http://docs.activestate.com/komodo/latest/toolbox.html).\nOnce
+  in your toolbox double click the macro to activate it. The macro will\nautomatically
+  activate itself the next time you start Komodo, you only need to\ndo this manually
+  the first time.\n\n<div class=\"inline centered\">\n<a href=\"/files/macros/Add-byte-char-pos-statusbar.komodotool\"
+  class=\"button primary\">\n    <i class=\"icon icon-download\"></i>\n    Download
+  Macro\n</a>\n<div class=\"spacer-half\"></div>\n<span>\n    <i class=\"icon icon-github\"></i>\n
+  \   <a href=\"https://github.com/Komodo/macros/blob/master/add_byte_char_pos_statusbar.js\"
+  target=\"_blank\">View Source</a>\n</span>\n</div>\n"
+:comments: true
+:author:
+- :id: 6zO8F6VtbUEOmAAwsysqM6
+  :name: Carey Hoffman
+  :biography: Carey made the logical switch from snowboard instructing and treeplanting
+    to the technology industry in 2009, taking database and network administration
+    at BCIT. He is on the technical support and QA team for ActiveState, focusing
+    on Stackato Private PaaS and the Komodo IDE where he also contributes to development.
+  :profilePhoto:
+    :title: CareyHoffman
+    :url: //images.contentful.com/bj1g69m2935w/1MeZAzVMKIO6MmmKWkOY8m/e5e1c2e5f90671e4f2e26fe806dc16d5/CareyHoffman.jpg

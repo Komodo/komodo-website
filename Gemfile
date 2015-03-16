@@ -3,7 +3,6 @@
 source 'https://rubygems.org'
 
 gem "middleman", "~>3.3.7"
-gem 'middleman-blog'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
@@ -19,8 +18,9 @@ gem 'neat'
 gem 'font-awesome-middleman'
 gem 'redcarpet'
 
-gem 'middleman-blog-similar'
+gem 'middleman-pagination'
 gem 'middleman-search_engine_sitemap'
 gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
 gem 'middleman-syntax'
+gem 'contentful_middleman'
 

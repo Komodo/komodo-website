@@ -1,0 +1,57 @@
+---
+:id: 2014-11-live-markdown-viewing-in-komodo
+:slug: 2014-11-live-markdown-viewing-in-komodo
+:title: Live Markdown Preview in Komodo
+:date: !ruby/object:DateTime 2014-11-17 19:00:00.000000000 -05:00
+:tags:
+- add-on
+- markdown
+- preview
+:body: ! "\n<img src=\"https://raw.githubusercontent.com/dcurtis/markdown-mark/master/png/208x128.png\"
+  align=\"right\"/>\n\nSince the Komodo team has been using GitHub more and more,
+  we've been writing a\nlot more [Markdown] content. I personally like markdown (we
+  actually write our\nblogs in Markdown too), it's simple text formatting makes it
+  faster (for me) to\nwrite web-based content.\n\nNow, the only problem I was having
+  with writing Markdown in Komodo, is that I\nhad to use an external tool to generate
+  the HTML content in order for me to do a\nfinal verification.\n\nWith the addition
+  of the [Markdown Viewer] add-on, this is no longer a problem!\nI can view the generated
+  HTML directly within Komodo and the HTML preview will\nupdate itself whenever I
+  make a change to the Markdown text - it doesn't even\nneed to be saved.\n\nThe Markdown
+  preview uses GitHub styling (though we may make this optional in\nthe future, or
+  support other markdown variants), so you should feel right at\nhome when writing
+  Markdown inside of Komodo.\n\n## Features\n\n- A small Preview button appears in
+  the top-right corner of the editor whenever\n  a Markdown file is open\n- Automatically
+  closes the markdown preview when switching to another file,\n  re-opens when switching
+  back\n- Allows side-by-side, or under-over previewing inside of Komodo\n- Dynamically
+  updates the markdown preview as you edit (live editing)\n- Uses GitHub flavoured
+  CSS styling\n- Styles code blocks inside of triple back quotes\n\n# Screenshot\n\n![Screenshot](https://github.com/Komodo/markdown-viewer/raw/master/screenshots/markdown-viewer.png)\n\n##
+  Source Code\n\nThe code for the Markdown Viewer add-on is open-source at GitHub,
+  in the Komodo\n[markdown-viewer] repository. We've love to hear from people trying
+  the add-on, and\nhopefull we'll see contributions from other users.\n\n## Installation\n\nTo
+  install the add-on simply hit the \"View Resource\" and \"Install Instructions\"\nlinks
+  below.\n\nOnce the add-on is installed - just open a Markdown file and you should
+  see a\n\"Preview\" button in the top-right corner.\n\n<div class=\"centered\">\n
+  \   <div class=\"spacer\"></div>\n    <a href=\"http://komodoide.com/resources/addons/komodo--markdownviewer/\"
+  class=\"button big primary\">\n        <i class=\"icon icon-eye\"></i>\n        View
+  Resource\n    </a>\n    <div class=\"spacer-half\"></div>\n    <span>\n        <i
+  class=\"icon icon-question\"></i>\n        <a href=\"http://komodoide.com/resources/install-instructions/#pane-addon\"
+  target=\"_blank\">Install Instructions</a>\n    </span>\n</div>\n\n[Markdown]: http://en.wikipedia.org/wiki/Markdown\n[Markdown
+  Viewer]: http://komodoide.com/resources/addons/komodo--markdownviewer/\n[markdown-viewer]:
+  https://github.com/Komodo/markdown-viewer\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

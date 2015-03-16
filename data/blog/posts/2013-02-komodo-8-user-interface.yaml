@@ -1,0 +1,173 @@
+---
+:id: 2013-02-komodo-8-user-interface
+:slug: 2013-02-komodo-8-user-interface
+:title: The New Komodo 8 User Interface
+:date: !ruby/object:DateTime 2013-02-13 00:00:00.000000000 -05:00
+:tags:
+- komodo 8
+- UI
+:body: ! "\n<div>\n  \t\t\n          <p><img alt=\"Linux UI Sample\" class=\"as_left\"
+  src=\"/assets/images/blog/2013-02/komodo-8-mac-ui-sample.png\" style=\"width: 210px;
+  height: 174px;\">Ever since I started using Komodo many years ago, I was intrigued
+  by its ability and potential. No other IDE out there gave me the level of flexibility
+  that Komodo did (and does).</p>\n  <p>As a web developer, being able to extend my
+  editor of choice with some simple Javascript was amazing. However, the one thing
+  that always bothered me more than anything else was its UI. While it certainly was
+  not the worst I had ever seen in an IDE, it was not the best either. It felt bloated,
+  inconsistent, and most importantly, it did not feel native to the platform.</p>\n
+  \ <p>That might sound a bit harsh, but when I spoke to the Komodo team, it turned
+  out they agreed with me! As the old saying goes, you're often your own worst critic.
+  Now, after joining the team, I have been given the opportunity to change that. We
+  have since made a lot of progress on a new and improved UI. And with the release
+  of the Komodo 8 beta, we'll let you be the judge!</p>\n  <div class=\"centerWrap\">\n
+  \ <div id=\"Ko8UiSlideshow\" class=\"lightbox slideshow\" data-width=\"720\" data-height=\"400\">\n
+  \ <a href=\"/assets/images/blog/2013-02//platform-mac.png\" rel=\"shadowbox\"> <img
+  alt=\"OSX UI\" src=\"/assets/images/blog/2013-02/platform-mac-small.png\"></a> <a
+  href=\"/assets/images/blog/2013-02//platform-linux.png\" rel=\"shadowbox\"> <img
+  alt=\"Linux UI\" src=\"/assets/images/blog/2013-02/platform-linux-small.png\"></a>
+  <a href=\"/assets/images/blog/2013-02//platform-windows.png\" rel=\"shadowbox\">
+  <img alt=\"Windows UI\" src=\"/assets/images/blog/2013-02/platform-windows-small.png\"></a>\n
+  \ </div>\n  <p><em><small>(Note: The UI is still in development. Things can and
+  will change.)</small></em></p>\n  </div>\n  <h2>Objectives</h2>\n  <p>The new UI
+  had to be significantly different. It had to feel fresh and make you WANT to use
+  it. But it also should not get in the way of an IDE's main purpose: writing code.</p>\n
+  \ <p>To this end, we made up our list of objectives:</p>\n  <ul>\n  <li>Feel native
+  yet consistent on every platform</li>\n  <li>Use a consistent icon set</li>\n  <li>Maintain
+  a consistent UI</li>\n  <li>Slim it down: no more thick borders or wasted margins</li>\n
+  \ <li>Hide rarely used UI elements</li>\n  </ul>\n  <p>You can probably tell the
+  word &#8220;consistent&#8221; was used multiple times, and for good reason: as many
+  developers added to Komodo's UI over the years, it became very inconsistent. Understandable,
+  but it was time for a cleanup.</p>\n  <h3>Feel Native Yet Consistent</h3>\n  <p>Setting
+  out to rehaul an entire UI is not simple, especially on a Mozilla project, where
+  each component practically has its own UI styling.</p>\n  <p>To facilitate this
+  process, we forked <a href=\"http://lesscss.org/\" target=\"_blank\">LESS</a> and
+  made it compatible with Komodo, while still maintaining as much backwards compatibility
+  as possible for future updates. We then set out to port the UI specific css to LESS,
+  turning any rule that would differ between platforms into a variable. As a result,
+  over 90 percent of the css rules are now identical between platforms, differing
+  only in their values, which are easily controlled over centralized config files.
+  This flexibility feeds back to the community. Developers are now able to easily
+  create custom skins and iconsets for Komodo, simply by overriding these variables.
+  More details on skins and iconsets will follow in a separate blog post in the near
+  future.</p>\n  <h3>Use a Consistent Icon Set</h3>\n  <p><img alt=\"UI Icons\" src=\"/assets/images/blog/2013-02/icons.png\"
+  style=\"width: 210px; height: 103px; float: left;\">On to the next challenge: finding
+  -- or creating -- a new and consistent icon set for Komodo.</p>\n  <p>This is not
+  as simple as you might think, as we needed a consistent icon set which also looked
+  native on every platform. In OSX's case, we also needed a retina variation (ie.
+  double the size). Creating an icon set that facilitated this would be a long and
+  time-consuming process, and finding a set that met our requirements would be challenging.</p>\n
+  \ <p>After much research, we finally settled on the <a href=\"http://icomoon.io/\"
+  target=\"_blank\">IcoMoon</a> set, which is a monochrome set. It is also a set that
+  is designed as SVG's, making them easily scalable to different sizes and even usable
+  as an icon font. This flexibility made it an excellent choice. <a href=\"https://twitter.com/keyamoon\"
+  target=\"_blank\">Keyamoon</a>, the creator of IcoMoon, has also been very supportive
+  in our use of his icons and even made us some custom icons for some of the more
+  specific buttons.</p>\n  <p>We first showed the new icons to our IDE users through
+  the Komodo 8 Alpha 3 release. The feedback was mixed. Overall, people tended to
+  like the monochrome icons but raised concerns that the lack of color variation made
+  it hard to identify between icons. Following this crucial feedback, we added a &#8220;classic&#8221;
+  icon set for those users preferring to stick with the originals. Of course, there
+  will also be more icon sets and variations in the future. One I am personally planning
+  on is adding color overlays to the monochrome set, allowing users to identify between
+  a certain class of icons by their color.</p>\n  <h3>Maintain a Consistent UI</h3>\n
+  \ <p><img alt=\"UI sidebar\" src=\"/assets/images/blog/2013-02/ko-consistent-ui.png\"
+  style=\"margin-right: 10px; width: 335px; height: 219px; float: right;\">As with
+  the icons, the UI itself had also become inconsistent. For example, the sidebar
+  panels and their buttons were all over the place. Where users were accessing an
+  option menu on the top right in one panel, the next one would have users access
+  it on the left, or even worse, somewhere near the middle or bottom.</p>\n  <p>Things
+  like this should be streamlined to the point where users should not have to &#8220;look&#8221;
+  for UI elements. They should just be there.</p>\n  <h3 style=\"clear: none;\">Slim
+  It Down</h3>\n  <p style=\"clear: none;\">The old Komodo UI was based on old OS
+  styles. That meant thick buttons, heavy embossed borders, and lots of margins. However,
+  things have changed, and these days an OS and its app look sleek, minimalistic and
+  sexy -- and so should Komodo. In order to achieve this, we first had to lose some
+  weight, that weight being bulky UI elements.</p>\n  <h3>Hide Rarely Used UI Elements</h3>\n
+  \ <p>It is a trend these days for software to remove features in order to make things
+  easier for the rookie user. This is NOT what we wanted to do.</p>\n  <p>Komodo is
+  a big IDE with a boatload of features. Many of those are used only occasionally,
+  so why were they hogging up the UI permanently? To this end we set out to hide these
+  UI elements while still preserving their functionality. For example, the Source
+  Code Control buttons are generally not used directly from the toolbar, so why were
+  they taking up so much space? We turned them into a dropdown menu, and we preserved
+  the existing functionality for those that prefer it. It is simply turned off by
+  default.</p>\n  <h2>Comparing New and Old</h2>\n  <p>Having worked on the new UI
+  for a few months now, I had honestly not used the old UI for quite a while. So when
+  I recently launched Komodo 7, I was quite struck (and pleased) by the contrast between
+  new and old.</p>\n  <div class=\"centerWrap\">\n  <div id=\"koBeforeAfter\">\n  <img
+  alt=\"After\" src=\"/assets/images/blog/2013-02/ko-new-small.png\"><img alt=\"Before\"
+  src=\"/assets/images/blog/2013-02/ko-old-small.png\">\n  </div>\n  </div>\n  <div
+  class=\"centerWrap\"><em><small>(hover your mouse to move the comparison slider)</small></em></div>\n
+  \ <h2>The Future of the UI</h2>\n  <p>Though a lot has already been done, I see
+  this as a continuous project. Big steps have been taken in modernizing the UI but
+  I expect this to be a continuous trend with future updates, though the contrast
+  will obviously not be as big.</p>\n  <p>So please &#8211; <a href=\"http://activestate.com/komodo-ide/downloads\"
+  target=\"_blank\" title=\"Download Komodo 8.0 Beta\">try out the Komodo IDE 8 beta</a>
+  and let us know how you feel about the new UI. We look forward to your feedback!</p>\n
+  \ <style type=\"text/css\">\n  .centerWrap\n  {\n      text-align: center;\n  }\n
+  \ .slideshowlite {\n      position:relative;\n      border: 1px solid #AFAFAF;\n
+  \     overflow:hidden;\n      margin: 0 auto;\n      text-align: left;\n      border-radius:
+  4px;\n      -moz-border-radius: 4px;\n      -webkit-border-radius: 4px;\n      -o-border-radius:
+  4px;\n  }\n  .slideshowlite a {\n      position:absolute;\n      z-index:1;\n      width:100%;\n
+  \     height:100%;\n      text-align:center;\n  }\n  .slideshowlite img {\n      border:
+  none;\n      max-width: none !important;\n  }\n  /* pagination control */\n  .slideshowlite
+  ul,.slideshowlite ol {\n      list-style:none;\n      position:absolute;\n      margin:0;\n
+  \     padding:0;\n      bottom:5px;\n      right:5px;\n      z-index:3;\n  }\n  .slideshowlite
+  ul li,.slideshowlite ol li {\n      float:left;\n      margin:0 3px;\n      width:16px;\n
+  \     list-style-image: none;\n  }\n  .slideshowlite ul li a {\n      position:relative;\n
+  \     display:block;\n      text-decoration:none;\n      text-align:center;\n      font-size:11px;\n
+  \ }\n  .slideshowlite ul li a.current {\n      color:#111;\n      font-weight:bold;\n
+  \ }\n  .slideshowlite ul li a:hover {\n      color:#fff;\n  }\n  \n  /* Before /
+  after */\n  #koBeforeAfter {\n      margin: 0 auto;\n      text-align: left;\n      width:720px;\n
+  \     height:533px;\n      border: 1px solid #AFAFAF;\n      border-radius: 4px;\n
+  \     -moz-border-radius: 4px;\n      -webkit-border-radius: 4px;\n      -o-border-radius:
+  4px;\n  }      \n  \n  #koBeforeAfter img {\n      max-width: none;\n      width:720px;\n
+  \     height:533px;\n  }\n  \n  .ba-mask {  /* first image */  \n      position:absolute;\n
+  \     top:0;\n      left:0;\n      z-index:100;\n      border-right:4px solid rgba(200,200,200,0.5);\n
+  \     overflow:hidden;\n  }\n   \n  .ba-bg {    /* second image */\n      position:absolute;\n
+  \     top:0;\n      left:0;\n      z-index:0;\n  }</style>\n  <script type=\"text/javascript\">\n
+  \ \n  window.addEventListener(\"load\", function() {\n     $.fn.extend({\n          //plugin
+  name - qbeforeafter\n          qbeforeafter: function(options) {\n    \n              var
+  defaults = {\n                  defaultgap: 360,           \n                  leftgap:
+  0,\n                  rightgap: 0,\n                  caption: false,\n                  reveal:
+  0.5,\n                  width: 400,\n                  height: 200\n              };\n
+  \               \n              var options = $.extend(defaults, options);\n            \n
+  \             return this.each(function() {\n   \n              var o = options;\n
+  \             var i = $(this);\n              var img_mask = i.children('img:eq(0)').attr('src');\n
+  \             var img_bg = i.children('img:eq(1)').attr('src');\n              var
+  img_cap_one = i.children('img:eq(0)').attr('alt');\n               \n              var
+  width = defaults.width;\n              var height = defaults.height;\n                   \n
+  \             i.children('img').hide();      \n                   \n              i.css({'overflow':
+  'hidden', 'position': 'relative'});\n              i.append('<div class=\"ba-mask\"></div>');\n
+  \             i.append('<div class=\"ba-bg\"></div>');         \n              i.append('<div
+  class=\"ba-caption\">' + img_cap_one + '</div>');\n                   \n              i.children('.ba-mask,
+  .ba-bg').width(width);\n              i.children('.ba-mask, .ba-bg').height(height);\n
+  \             i.children('.ba-mask').animate({'width':width - o.defaultgap}, 1000);\n
+  \              \n              i.children('.ba-mask').css('backgroundImage','url('
+  + img_mask + ')');\n              i.children('.ba-bg').css('backgroundImage','url('
+  + img_bg + ')'); \n   \n              if (o.caption) i.children('.ba-caption').show();\n
+  \  \n              }).mousemove(function (e) {\n   \n                  var o = options;\n
+  \                 var i = $(this);\n                   \n                  pos_img
+  = i.offset()['left'];\n                  pos_mouse = e.pageX;       \n                  new_width
+  = pos_mouse - pos_img;\n                  img_width = i.width();\n                  img_cap_one
+  = i.children('img:eq(0)').attr('alt');\n                  img_cap_two = i.children('img:eq(1)').attr('alt');
+  \            \n   \n                  if (new_width > o.leftgap && (img_width -
+  o.rightgap) >= new_width) {         \n                      i.children('.ba-mask').width(new_width);\n
+  \                 }\n                   \n                  if ((img_width * o.reveal)
+  >= new_width) {           \n                      i.children('.ba-caption').html(img_cap_two);\n
+  \                 } else {\n                      i.children('.ba-caption').html(img_cap_one);
+  \          \n                  }                  \n               \n              });\n
+  \         }\n     });\n     \n     $(\"#koBeforeAfter\").qbeforeafter({width: 720,
+  height: 533});\n  });\n  \n  </script>\n</div>\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

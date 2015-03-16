@@ -1,0 +1,55 @@
+---
+:id: 2014-05-auto-allman-style-braces
+:slug: 2014-05-auto-allman-style-braces
+:title: Auto Allman-style Braces in Komodo
+:date: !ruby/object:DateTime 2014-05-12 06:00:00.000000000 -04:00
+:tags:
+- macro
+- javascript
+- editor
+- auto-complete
+:body: ! "\n<div class=\"centered\">\n<h2 style=\"font-weight: 300; margin: 10px 0
+  25px 0\"><em>Macro Monday - a new macro to dig into every Monday!</em></h2>\n</div>\n\nKomodo
+  does not dictate any sort of coding style, it merely facilitates you to\ncode whichever
+  way you want. It's easy to code in [Allman style], but we can make\nit even easier
+  with a simple macro.\n\nEssentially what this macro does is turn;\n\n<div class=\"centered\">\n
+  \   <img src=\"/assets/images/blog/2014-05/braces-default.gif\" style=\"vertical-align:
+  middle\">\n    into\n    <img src=\"/assets/images/blog/2014-05/braces-allman.gif\"
+  style=\"vertical-align: middle\">\n</div>\n\nTyping speed aside in these gifs, the
+  productivity gain here is one less keypress.\nIt won't make a huge difference but
+  it's the little things that make you more\nproductive.\n\nIn case it's not clear
+  what is happening in those gifs, normally when you would\nwant to write in allman
+  step you would essentially go through the following steps\n\n```c\nwhile (0)\n{\n```\n\nThe
+  second I type the opening brace Komodo auto completes it to\n\n```c\nwhile (0)\n{|}\n```\n\nWhere
+  \"|\" represents the cursor. Then when I press enter I get:\n\n```c\nwhile (0)\n{\n
+  \   |\n}\n```\n\nThis works great, but we can make it even shorter (without resorting
+  to snippets),\nwhat if I could just write the following\n\n```c\nwhile (0) {\n```\n\nAnd
+  the second I type the opening brace it auto-completes to Allman style indentation?\nThat
+  is basically what this macro does.\n\nCurrently this macro is still very experimental
+  and will likely have a few bugs\nthat need to be worked out. Hopefully we'll be
+  able to include it as a native\nfeature in Komodo 9.\n\n## Installation\n\nTo install
+  the macro simply hit the \"View Resource\" and \"Install Instructions\"\nlinks below.
+  You'll want to hook the macro up to the \"On Startup\" trigger.\n\n<div class=\"centered\">\n
+  \   <div class=\"spacer\"></div>\n    <a href=\"http://komodoide.com/resources/macros/naatan--autoallmanbraces/\"
+  class=\"button big primary\">\n        <i class=\"icon icon-eye\"></i>\n        View
+  Resource\n    </a>\n    <div class=\"spacer-half\"></div>\n    <span>\n        <i
+  class=\"icon icon-question\"></i>\n        <a href=\"http://komodoide.com/resources/install-instructions/#pane-macro\"
+  target=\"_blank\">Install Instructions</a>\n    </span>\n</div>\n\n## Usage\n\nSimply
+  start typing! Provided that you have triggered the macro (either via the\nstartup
+  event or by manually invoking it) it will automatically complete your\ncurly braces
+  to [Allman style].\n\n## Credits\n\nThanks to [@woodpile] from the [Komodo Forums]
+  for [pointing out the use-case] for this\nfunctionality!\n\n   [Allman style]: http://en.wikipedia.org/wiki/Indent_style#Allman_style\n
+  \  [@woodpile]: http://forum.komodoide.com/users/woodpile/activity\n   [Komodo Forums]:
+  http://forum.komodoide.com\n   [pointing out the use-case]: http://forum.komodoide.com/t/function-expression-structure/242\n"
+:comments: true
+:author:
+- :id: 6NplBEswso2aMQSyW2iWCe
+  :name: Nathan Rijksen
+  :biography: Nathan Rijksen is a Komodo developer with web dev expertise. He has
+    experience as a backend architect, application developer and database engineer,
+    and has worked with third-party authentication and payment modules. Nathan is
+    a long time Komodo user and has written multiple macros and extensions before
+    joining the Komodo team.
+  :profilePhoto:
+    :title: NathanRijksen
+    :url: //images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg

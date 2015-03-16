@@ -1,0 +1,74 @@
+---
+:id: 2014-06-working-with-nodejs-through-vagrant-puppet-virtualbox
+:slug: 2014-06-working-with-nodejs-through-vagrant-puppet-virtualbox
+:title: Working With Node.JS Through Vagrant, Puppet and VirtualBox
+:date: !ruby/object:DateTime 2014-06-18 20:00:00.000000000 -04:00
+:tags:
+- virtualbox
+- vagrant
+- puppet
+- docpad
+:body: ! "\nWhen [Nathan Rijksen][1] created the [new Komodo website using docpad][2],\nit
+  allowed for a much more developer friendly way to make changes to the site.\nYou'd
+  need to have a development environment setup to test your changes locally\nbut that's
+  not an issue.. unless you're like me and work mainly in Windows.\nIt doesn't help
+  that I've had very little experiences with node.js (which is what\ndocpad was made
+  width) prior to getting started. I had configured a VM to work\non the website,
+  but doing that each time I switched to a new environment or somehow\nnuked my VM
+  seemed silly.  Luckily, I had just learned to use Puppet with\nVagrant so I saw
+  a path to easily get things running.\n\n## The Technology\n\nTo do this I used 3
+  pieces of technology:\n\n 1. [Vagrant deployment utility][Vagrant]\n 2. [Puppet
+  orchestration][Puppet]\n 3. and the [VirtualBox Hyper-visor][Virtualbox]\n\nUsing
+  [Puppet] with [Vagrant], it was easy to keep the work separated into two\ndistinct
+  groups; VM configuration and  guest environment configuration. Thankfully all\nthese
+  technologies play together quite nicely, save for one minor issue that\nhad me stumped.
+  At some point after [Virtualbox] version 4.16 was released,\nOracle disabled symlink
+  creation in shared folders. But we're using Nodejs and\nnpm soooo, we need symlinks.
+  Thankfully Oracle allowed for this to be enabled\nusing a [VBoxInternal2 setting](https://github.com/Komodo/komodo-website/commit/c65becde7cadc19ae2256e1b4d984169dfae1105#diff-23b6f443c01ea2efcb4f36eedfea9089R15).\n\n###
+  Vagrant\n[Vagrant] was ridiculously easy to use.  [Their docs get your started in
+  no time][7].\nYou can see [my vagrant file on github][8].\n\nI used the Vagrantfile
+  to configure my virtual machine before it starts. I set a\nname and small memory
+  footprint for the VM.\n\n### Puppet\n\nUsing [Puppet] to install packages made my
+  life pretty easy. [Puppet] has a great\nresource in the Puppet-Labs open source
+  community.  It not only has [documentation][puppet-docs]\nbut also the [puppet forge][puppet-forge]
+  where you can find and download [Puppet]\nmodules for almost any task.  You can
+  usually find a branch of each project\non github too. I added the pupper modules
+  I needed as sub-modules to the Komodo-Website\nrepository to keep things manageable.\n\n##
+  Work Flow\n\nNow it's as easy as pulling the [Komodo-website repository][ko-website]
+  and\nrunning ```vagrant up``` in the repository root and I have a development\nenvironment
+  for the website. \n\nGiven that it was 3 tools I was learning, there was a slight
+  learning curve.\nBut now that it's setup and I've got a basic understanding of how
+  the tools\nwork, it's been easy to make changes to the site.\n\n## Issues Resolved\n\n
+  *  \"bower install\" Failing when nothing else was failing\n\n    Puppet's not always
+  forthcoming with it's error output.  To figure out an issue with\n    `ko-bower-install`
+  class in [development.pp][9] I ended up appending `2> help.log` to\n    the command
+  being run and finally found out that `Puppet` Exec commands are run as\n    root\n\n
+  * Symlink errors during `npm install` AKA. STUMPED ^^^\n \n    This either means
+  you didn't [set the VBox variable to enable Symlinks][5] OR you're\n    not running
+  your Windows CMD window (so VBOX implicitly) as **Administrator**.\n    If you're
+  trying to run the Komodo Website; the variable is set in the Vagrantfile\n    so
+  you're probably doing the latter.\n\n * default: Error: Connection timeout. Retrying...\n
+  \   You'll see this while trying to `vagrant up --provision` your VM.  This is usually\n
+  \   only a problem if you're actively developing your Vagrant/Puppet setup.\n\n
+  \   I found the [solution on (surprise!) Stackoverflow][3].  The answer from [harrie][4]\n
+  \   is a little bit of VBox command line voodoo which I think is way more fun than
+  any\n    of the other answers.\n\n  [1]: /authors/#NathanRijksen\n  [2]: /blog/2014-05/the-state-of-static-site-generators/\n
+  \ [3]: http://stackoverflow.com/questions/22575261/vagrant-stuck-connection-timeout-retrying\n
+  \ [4]: http://stackoverflow.com/a/23095019/1596011\n  [5]: https://www.virtualbox.org/ticket/10085#comment:14\n
+  \ [6]: https://github.com/Komodo/komodo-website/commit/05e93bd5fc435f475c7048dc4b4fa7f9566e949c\n
+  \ [7]: https://docs.vagrantup.com/v2/getting-started/\n  [8]: https://github.com/Komodo/komodo-website/blob/master/Vagrantfile\n
+  \ [9]: https://github.com/Komodo/komodo-website/blob/master/puppet/manifests/development.pp\n
+  \ [Vagrant]: http://www.vagrantup.com/\n  [puppet]: http://puppetlabs.com/\n  [Virtualbox]:
+  https://www.virtualbox.org/\n  [ko-website]: https://github.com/Komodo/komodo-website\n
+  \ [puppet-docs]: http://docs.puppetlabs.com/\n  [puppet-forge]: https://forge.puppetlabs.com/\n"
+:comments: true
+:author:
+- :id: 6zO8F6VtbUEOmAAwsysqM6
+  :name: Carey Hoffman
+  :biography: Carey made the logical switch from snowboard instructing and treeplanting
+    to the technology industry in 2009, taking database and network administration
+    at BCIT. He is on the technical support and QA team for ActiveState, focusing
+    on Stackato Private PaaS and the Komodo IDE where he also contributes to development.
+  :profilePhoto:
+    :title: CareyHoffman
+    :url: //images.contentful.com/bj1g69m2935w/1MeZAzVMKIO6MmmKWkOY8m/e5e1c2e5f90671e4f2e26fe806dc16d5/CareyHoffman.jpg

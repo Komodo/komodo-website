@@ -11,17 +11,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title><%= get_title() %></title>
+        <title><%= get_title(defined?(post) ? post : false) %></title>
         <meta name="description" content="<%= current_page.data.description || description %>" />
         <meta name="keywords" content="<%= current_page.data.keywords || keywords %>" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="<%= get_social_description(false) %>" />
+        <meta property="og:title" content="<%= get_social_description(defined?(post) ? post : false, false) %>" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         
         <% if current_page.data.image %>
         <meta property="og:image" content="<%= current_page.data.image %>" />
+        <% end %>
+    
+        <% if defined?(post) and post.has_key?("featuredImage") %>
+        <meta property="og:image" content="<%= post.featuredImage.url %>" />
         <% end %>
 
         <link rel="icon" href="/assets/images/favicon.ico">
@@ -32,8 +36,6 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
 
         
-        <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-
     </head>
     <body>
 
@@ -170,7 +172,7 @@
                     <p>&nbsp;</p>
                     <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
 
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="<%= get_social_description() %>" data-dnt="true">Tweet</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="<%= get_social_description(defined?(post) ? post : false) %>" data-dnt="true">Tweet</a>
 
                     <p>&nbsp;</p>
 

@@ -2,7 +2,7 @@
     <div id="content" class="document-<%= meta('basenameOrig') || get_basename() %>
                              <%= 'sidebar' if meta('sidebar') %>
                              <%= meta('classNames') || '' %>
-                             <%= meta('update_from_drupal') ? "drupal-import" : "" %>
+                             <%= defined?(post) && post.date.year < 2014 ? "drupal-import" : "" %>
                              <%= page_classes %>">
         <section role="main">
             <article class="<%= 'normalize' unless meta('dontNormalize') %>">
@@ -20,7 +20,7 @@
                     <i class="icon icon-chevron-right"></i>
                 </button>
                 <div class="inner">
-                    <%= partial('sidebars/' + meta('sidebar')) %>
+                    <%= partial('sidebars/' + meta('sidebar'), :locals => { :post => defined?(post) ? post : false } ) %>
                 </div>
             </aside>
         <% end %>

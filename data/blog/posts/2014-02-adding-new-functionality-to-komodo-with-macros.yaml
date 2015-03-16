@@ -1,0 +1,68 @@
+---
+:id: 2014-02-adding-new-functionality-to-komodo-with-macros
+:slug: 2014-02-adding-new-functionality-to-komodo-with-macros
+:title: Adding Functionality to Komodo With Macros
+:date: !ruby/object:DateTime 2014-02-23 19:00:00.000000000 -05:00
+:tags:
+- macro
+- javascript
+- editor
+- column selection
+:body: ! "\nAn interesting question came up on the Komodo community forums.\n\n_In
+  Editor X, I'm able to make a column selection, then for each column I'm\nable to
+  insert a number and have the number incremented for each subsequent row\nin the
+  selection. Does Komodo support this?_\n\n\n# The Solution\n\nFirst off, Komodo does
+  not offer such a command out of the box - but we can\nreplicate this functionality
+  by\n[extending Komodo](http://docs.activestate.com/komodo/latest/extensions.html).\n\nMy
+  extension tool of choice for this will be a\n[Komodo macro](http://docs.activestate.com/komodo/latest/macros.html#macros_writing)
+  -\nas it's lightweight and great for user interfaces, user interactions and\nit
+  will also be able to programatically control the editor.\n\n\n## Seeing It Work\n\nFirst,
+  in an editor file I make a rectangular selection. I used the\nAlt+Shift+Arrow keyboard
+  movements, but you can also hold down Alt (Cmd on Mac,\nAlt on Linux) key and Mouse
+  select the rectangular region.\n\n![Step 1](/assets/images/blog/2014-02/incremental_number_screenshot_1.png)\n\nthen
+  use the **Tools > Insert Column Numbers** menu to bring up the interface,\n\n![Step
+  2](/assets/images/blog/2014-02/incremental_number_screenshot_2.png)\n\ncustomize
+  the values as necessary and press ENTER (or click OK)\n\n![Step 3](/assets/images/blog/2014-02/incremental_number_screenshot_3.png)\n\nwhich
+  inserts the numbers as required and maintains the selection positions\n\n![Step
+  4](/assets/images/blog/2014-02/incremental_number_screenshot_4.png)\n\nallowing
+  you to insert additional follow-on characters as required, I've typed\n\". \" which
+  results in the final text looking like this\n\n![Step 5](/assets/images/blog/2014-02/incremental_number_screenshot_5.png)\n\n\n##
+  Installation\n\nTo install the macro simply hit the download button below, then
+  drag the downloaded\nfile into your [Komodo toolbox](http://docs.activestate.com/komodo/latest/toolbox.html).\nOnce
+  in your toolbox double click the macro to activate it. The macro will\nautomatically
+  activate itself the next time you start Komodo, you only need to\ndo this manually
+  the first time.\n\n<div class=\"inline centered\">\n<a href=\"/files/macros/Column_Incremental_Numbering.komodotool\"
+  class=\"button primary\">\n    <i class=\"icon icon-download\"></i>\n    Download
+  Macro\n</a>\n<div class=\"spacer-half\"></div>\n<span>\n    <i class=\"icon icon-github\"></i>\n
+  \   <a href=\"https://github.com/Komodo/macros/blob/master/column_incremental_numbering.js\"
+  target=\"_blank\">View Source</a>\n</span>\n</div>\n\n## How Does it Work?\n\nThe
+  macro is designed to be run once at Komodo startup - which is set through\nthe macro
+  properties dialog. When it executes, it stores JavaScript functions\nunder the **extensions.columnnumber.**
+  namespace and then sets up a new Tools\nmenu item that will launch the UI.\n\nWhen
+  the UI is launched, it creates the textboxes, labels, button elements, and\nthen
+  listens for user interactions. Note that the Komodo UI is much like a web\npage,
+  it has a DOM based structure which you can interact with using JavaScript\nAPIs
+  and style using CSS.\n\n\n## Related Materials\n\n* [DOM Inspector](http://community.activestate.com/xpi/dom-inspector)\n
+  \ - to navigate and find existing Komodo UI elements\n  - tweak CSS styling for
+  the Komodo user interface\n* [Komodo Developer Extension](http://community.activestate.com/node/1824)\n
+  \ - play around with JavaScript or Python code in the context of the Komodo window\n*
+  [Komodo Macro API](http://docs.activestate.com/komodo/latest/macroapi.html)\n  -
+  to programatically interact with the Komodo editor\n* [Scintilla API](http://www.scintilla.org/ScintillaDoc.html)\n
+  \ - the Komodo editor provides a wrapper around the Scintilla API\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg

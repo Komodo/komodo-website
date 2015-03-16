@@ -1,0 +1,78 @@
+---
+:id: 2013-02-komodo-8-beta-available
+:slug: 2013-02-komodo-8-beta-available
+:title: Komodo 8.0 Beta Now Available
+:date: !ruby/object:DateTime 2013-02-08 00:00:00.000000000 -05:00
+:tags:
+- komodo 8
+- beta
+:body: ! "\n<div>\n  \t\t\n          <p><img alt=\"Komodo 8 logo\" class=\"as_left
+  nostyling\" src=\"/assets/images/blog/2013-02/komodo-8-logo-crop-129.png\" style=\"height:
+  76px; width: 128px;\">We are excited to announce that the Komodo 8.0 beta is now
+  available for both Edit and IDE. With 8.0.0b1, we are nearing the end of our pre-release
+  build cycle, which will lead to the official Komodo 8.0 release in early 2013.</p>\n
+  \ <p>Here is an overview of the major features included in the 8.0 beta.</p>\n  <h3>User
+  Interface Styling</h3>\n  <p>We've revamped the Komodo user interface. The toolbars,
+  statusbars and side panes have all been updated, the editor schemes have been tweaked,
+  and we'll continue to improve the styling throughout the Komodo 8 release series.
+  However, the old Komodo 7 styling is still selectable in preferences, along with
+  a myriad of new icon sets.</p>\n  <p><a href=\"http://activestate.com/sites/default/files/assets/images/screenshots/komodo/8.0_beta_window_editor_openfiles_minimap_toolbar_01.png\"
+  target=\"_blank\" title=\"New user interface with mini-map\"><img alt=\"New user
+  interface with mini-map\" src=\"/assets/images/blog/2013-02/8.0-beta-window-editor-openfiles-minimap-toolbar-01.png\"></a></p>\n
+  \ <h3>Floating Side Panes (Undocking)</h3>\n  <p>You now get the ability to detach
+  individual side pane tabs (Places, Code Browser, Debug, Find Results, Breakpoints,
+  etc.) into their own separate window. For example, you can put your debugging pane
+  on a completely separate monitor screen (if you're lucky enough to have multiple
+  monitors).</p>\n  <p><a href=\"http://activestate.com/sites/default/files/assets/images/screenshots/komodo/8.0_beta_detached_debugger_pane.png\"
+  target=\"_blank\" title=\"Undock debugger side pane\"><img alt=\"Undock debugger
+  side pane\" src=\"/assets/images/blog/2013-02/8.0-beta-detached-debugger-pane.png\"></a></p>\n
+  \ <h3>Auto Abbreviations</h3>\n  <p>Komodo now provides automatic triggering for
+  a selected group of toolbox abbreviations (snippets). This makes developing code
+  faster, smarter and easier, with the user in complete control of the content being
+  inserted. The screenshot below shows a Python auto abbreviation after typing \"class\"
+  (note the space) and then tabbing between the different positions.</p>\n  <p><a
+  href=\"http://activestate.com/sites/default/files/assets/images/screenshots/komodo/8.0_beta_auto_abbrev.png\"
+  target=\"_blank\" title=\"Python auto abbreviation snippet\"><img alt=\"Python auto
+  abbreviation snippet\" src=\"/assets/images/blog/2013-02/8.0-beta-auto-abbrev.png\"></a></p>\n
+  \ <h3>Conditional Snippets</h3>\n  <p>It's now possible to use JavaScript code within
+  a snippet, so you can programatically determine the snippet contents at runtime.
+  Komodo allows the use of Embedded JavaScript (EJS) inside of the snippet text, which
+  will be dynamically executed inside of Komodo's JavaScript environment. As such,
+  it has full access to the Komodo JavaScript API.</p>\n  <h3>Mini-Map</h3>\n  <p>Sitting
+  right next to your editor scrollbar, the mini-map gives a high-level (10,000 foot)
+  view of your code. It gives just enough details to allow you to quickly scroll and
+  re-position the editor on a targeted section of code.</p>\n  <h3>Fast Open Shortcuts</h3>\n
+  \ <p>When using the fast open dialogue, you can now make a shortcut to frequently
+  used files and directories. For example, given the directory \"/some/long/path/to/my/code\",
+  you can make a shortcut called \"code\". Then, using the fast open dialogue, simply
+  type \"code/\" to see all the files in this directory without the need to type out
+  the full path.</p>\n  <p><a href=\"http://activestate.com/sites/default/files/assets/images/screenshots/komodo/8.0_beta_fastopen_shortcut.png\"
+  target=\"_blank\" title=\"Fast Open shortcut\"><img alt=\"Fast Open shortcut\" src=\"/assets/images/blog/2013-02/8.0-beta-fastopen-shortcut.png\"></a></p>\n
+  \ <h3>Other Features</h3>\n  <p>There are many more items we've added in this release,
+  including:</p>\n  <ul>\n  <li>Open Files Side Pane</li>\n  <li>Retina Support -
+  Mac OS X</li>\n  <li>Fast Open Shortcuts</li>\n  <li>New Languages (Laravel Blade
+  - a PHP templating language, and Sass - syntex checking added)</li>\n  <li>Updated
+  Code Base (Mozilla 18, Python 2.7, Scintilla 3.2.4, Cocoa 64-bit on Mac)</li>\n
+  \ </ul>\n  <p>You can <a href=\"http://docs.activestate.com/komodo/8.0/releases/ide.html\">view
+  the release notes</a> for the full list of updates.</p>\n  <p><strong>Download the
+  Komodo IDE 8.0 beta:</strong><a href=\"http://activestate.com/komodo-ide/downloads\"><br>http://www.activestate.com/komodo-ide/downloads</a></p>\n
+  \ <p><strong>Download the Komodo Edit 8.0 beta:</strong><a href=\"http://activestate.com/komodo-edit/downloads\"><br>http://www.activestate.com/komodo-edit/downloads</a></p>\n
+  \ <p>We look forward to hearing your feedback (good and bad), so please let us know
+  how you feel and what you'd like to see improved.</p>\n</div>\n"
+:comments: true
+:author:
+- :id: 1KZmNYa8TOCmE2KKk0EysM
+  :name: Todd Whiteman
+  :biography: ! 'Todd Whiteman is the Development Lead for Komodo IDE. He works adeptly
+    with
+
+    Mozilla, Python and JavaScript to ensure that Komodo IDE is the IDE of choice
+
+    for development teams. Todd has been working on Komodo IDE for nearly 6 years,
+
+    adding components such as the Vi Key Bindings, Distributed Source Code Control,
+
+    64-bit Linux builds as well as Remote SSH support into Komodo IDE.'
+  :profilePhoto:
+    :title: ToddWhiteman
+    :url: //images.contentful.com/bj1g69m2935w/1XjTWQ4gew6GyG4yMUuGQQ/54f995ac054cc228ffb45ba6d7d39313/ToddWhiteman.jpg
