@@ -20,7 +20,7 @@ gem 'redcarpet'
 
 gem 'middleman-pagination'
 gem 'middleman-search_engine_sitemap'
-gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
+#gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
 gem 'middleman-syntax'
 gem 'contentful_middleman'
 

@@ -1,7 +1,7 @@
 require 'helpers'
 helpers Helpers
 
-activate :imageoptim
+#activate :imageoptim
 
 set :url_root, "http://komodoide.com/"
 activate :search_engine_sitemap
