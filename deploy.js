@@ -36,7 +36,7 @@
         }
 
         var environment = process.env;
-        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:~/.nvm/v0.10.25/bin/";
+        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global/bin:/home/nathanr/.rvm/rubies/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
 
         var envVars = require(__dirname + "/../komodo-website-" + params.branch + ".env.js");
         for (var env in envVars)
