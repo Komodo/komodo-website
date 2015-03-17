@@ -21,6 +21,8 @@
             "middleman contentful",
             "middleman resources"
         ];
+        
+        var environment = process.env;
 
         // Deploy to github pages if this is the production branch, otherwise
         // just compile it locally
@@ -33,9 +35,9 @@
             commands.push("middleman build");
             commands.push("rm -Rf " + __dirname + "/live");
             commands.push("mv " + __dirname + "/build " + __dirname + "/live");
+            environment.KO_PATH = "true";
         }
 
-        var environment = process.env;
         environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global/bin:/home/nathanr/.rvm/rubies/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
         environment.GEM_HOME = "/home/nathanr/.rvm/gems/ruby-1.9.3-p551";
         environment.GEM_PATH = "/home/nathanr/.rvm/gems/ruby-1.9.3-p551:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global";
