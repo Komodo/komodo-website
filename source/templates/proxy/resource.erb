@@ -57,7 +57,7 @@ classNames: sidebar-small
             </a>
         </dd>
         
-        <% if resource.releases %>
+        <% if resource.releases and resource.releases.length > 0 %>
         <% release = resource.releases.first() %>
         <dt>Version</dt>
         <dd>
@@ -142,7 +142,7 @@ classNames: sidebar-small
 
 <div class="download">
     <h2>Download</h2>
-    <% if resource.has_key?("releases") and resource.releases %>
+    <% if resource.releases and resource.releases.length > 0 %>
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
         <% release = resource.releases.first() %>
@@ -175,7 +175,7 @@ classNames: sidebar-small
             </div>
         </div>
     <% end %>
-    <% if (!resource.has_key?("releases") or !resource.releases) and resource.has_key?("raw_url") %>
+    <% if ( ! resource.releases or resource.releases.length == 0) and resource.has_key?("raw_url") %>
         <div class="files">
             <a href="<%= resource.raw_url %>" class="button big primary">
                 <i class="icon icon-download"></i>
@@ -183,7 +183,7 @@ classNames: sidebar-small
             </a>
         </div>
     <% end %>
-    <% if (!resource.has_key?("releases") or !resource.releases) and ! resource.has_key?("raw_url") %>
+    <% if ( ! resource.releases or resource.releases.length == 0) and ! resource.has_key?("raw_url") %>
         <div class="files">
             <a href="https://github.com/<%= resource.full_name %>/archive/master.zip" class="button big primary">
                 <i class="icon icon-download"></i>
