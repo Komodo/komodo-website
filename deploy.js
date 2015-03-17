@@ -35,7 +35,8 @@
             commands.push("middleman build");
             commands.push("rm -Rf " + __dirname + "/live");
             commands.push("mv " + __dirname + "/build " + __dirname + "/live");
-            environment.KO_PATH = "true";
+            
+            environment.KO_QA = "true";
         }
 
         environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global/bin:/home/nathanr/.rvm/rubies/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
