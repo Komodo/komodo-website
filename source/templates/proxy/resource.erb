@@ -1,0 +1,217 @@
+---
+layout: default
+sidebar: resources
+basenameOrig: resource
+classNames: sidebar-small
+---
+
+<ul class="trail">
+    <li>
+        <a href="/resources">Resources</a>
+    </li>
+    <li>
+        <a href="/resources/<%= category.resource[0..-5] %>">
+            <%= category.name %>
+        </a>
+    </li>
+    <li>
+        <%= resource.title %>
+    </li>
+</ul>
+
+<div class="beta">BETA</div>
+
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+
+<h1><%= resource.title %></h1>
+
+<p class="description"><%= resource.description %></p>
+
+<div class="details-meta">
+    <h2>Details</h2>
+    <dl>
+        <dt>Author</dt>
+        <dd>
+            <% if resource.owner.has_key? "avatar_url" %>
+            <a href="<%= resource.owner.html_url %>" class="push-left preview">
+                <img src="<%= resource.owner.avatar_url %>?s=18">
+            </a>
+            <% elsif resource.owner.has_key? "gravatar_id" %>
+            <a href="<%= resource.owner.html_url %>" class="push-left preview">
+                <img src="http://gravatar.com/avatar/<%= resource.owner.gravatar_id %>?d=identicon&s=18">
+            </a>
+            <% else%>
+            <i class="icon icon-user" title="Author"></i>
+            <% end %>
+            <a href="<%= resource.owner.html_url %>">
+                <span><%= resource.owner.login %></span>
+            </a>
+        </dd>
+        
+        <% if resource.releases %>
+        <% release = resource.releases.first() %>
+        <dt>Version</dt>
+        <dd>
+            <span>
+                <%= release.name %>
+                <% if release.prerelease%>
+                    (pre-release)
+                <% end %>
+            </span>
+            <a href="<%= release.html_url %>">view</a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_key?("created_at") %>
+        <dt>Created</dt>
+        <dd title="<%= resource.created_at %>">
+            <%= timeago(resource.created_at) %>
+        </dd>
+        <% end %>
+
+        <% if resource.last_update != "2010-01-01T01:00:00Z" %>
+        <dt>Updated</dt>
+        <dd title="<%= resource.last_update %>">
+            <%= timeago(resource.last_update) %>
+        </dd>
+        <% end %>
+
+        <% if resource.homepage%>
+        <dt>Homepage</dt>
+        <dd>
+            <a href="<%= resource.homepage %>">
+                <%= resource.homepage %>
+            </a>
+        </dd>
+        <% end %>
+
+        <% if resource.html_url%>
+        <dt>Github</dt>
+        <dd>
+            <a href="<%= resource.html_url %>">
+                <% if resource.full_name %>
+                    <%= resource.full_name %>
+                <% else %>
+                    <%= resource.html_url%>
+                <% end %>
+            </a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_issues%>
+        <dt>Issues</dt>
+        <dd>
+            <span><%= resource.open_issues_count %></span>
+            <a href="<%= resource.html_url %>/issues">view</a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_wiki%>
+        <dt>Wiki</dt>
+        <dd>
+            <a href="<%= resource.html_url %>/wiki">view</a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_downloads%>
+        <dt>Downloads</dt>
+        <dd>
+            <span><%= resource.download_count %></span>
+            <a href="<%= resource.html_url %>/releases">view</a>
+        </dd>
+        <% end %>
+    
+        <% if resource.stargazers_count%>
+        <dt>Stars</dt>
+        <dd>
+            <span><%= resource.stargazers_count %></span>
+            <a href="<%= resource.html_url %>/stargazers">view</a>
+        </dd>
+        <% end %>
+    </dl>
+</div>
+
+<div class="download">
+    <h2>Download</h2>
+    <% if resource.has_key?("releases") and resource.releases %>
+        <div class="releases">
+        <!-- release = resource.releases.each_with_index() do |release,k| -->
+        <% release = resource.releases.first() %>
+        <% k = 0 %>
+            <div class="release <%= 'hide' if k > 0 %> <%= k %>" id="release-<%= release.id %>">
+                <p><%= release.body %></p>
+                <div class="files centered">
+                    <% if release.assets.length %>
+                       <div class="assets">
+                           <% release.assets.each() do |asset| %>
+                               <div>
+                               <a href="https://github.com/<%= resource.full_name %>/releases/download/<%= release.tag_name %>/<%= asset.name %>" class="button big primary">
+                                   <i class="icon icon-download"></i>
+                                   Download "<%= asset.label || asset.name %>"
+                               </a>
+                               <div>
+                                   Downloaded <strong><%= asset.download_count %></strong> times
+                               </div>
+                               </div>
+                           <% end %>
+                       </div>
+                    <% end %>
+                   <div class="source">
+                       <a href="https://github.com/<%= resource.full_name %>/archive/<%= release.name %>.zip" class="button">
+                           <i class="icon icon-download"></i>
+                           Download Source
+                       </a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    <% if (!resource.has_key?("releases") or !resource.releases) and resource.has_key?("raw_url") %>
+        <div class="files">
+            <a href="<%= resource.raw_url %>" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
+        </div>
+    <% end %>
+    <% if (!resource.has_key?("releases") or !resource.releases) and ! resource.has_key?("raw_url") %>
+        <div class="files">
+            <a href="https://github.com/<%= resource.full_name %>/archive/master.zip" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
+        </div>
+    <% end %>
+</div>
+
+<div class="clearfix"></div>
+
+<div class="tabs">
+    <ul>
+        <% if resource.has_key?("readme") %>
+        <li><a href="#readme">Readme</a></li>
+        <% end %>
+        <li><a href="#comments">Comments</a></li>
+    </ul>
+    <% if resource.has_key?("readme") %>
+        <div id="readme" class="readme user-input">
+        <%= resource.readme.content.force_encoding("UTF-8") %>
+        </div>
+    <% end %>
+    <div id="comments" class="comments">
+        <p>
+            Please note that the comment section is not a reliable resource for
+            support.
+        </p>
+        <%= partial('comments') %>
+    </div>
+</div>

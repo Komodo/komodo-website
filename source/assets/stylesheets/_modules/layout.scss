@@ -60,13 +60,12 @@
 
     }
 
-    & > ul.trail
+    ul.trail
     {
         margin: 0;
         padding: 0;
         margin-bottom: 25px;
         padding-bottom: 10px;
-        border-bottom: 2px solid rgba(0,0,0,0.1);
 
         font-size: 18pt;
         font-weight: bold;
@@ -117,9 +116,9 @@ aside
         position: absolute;
         left: -15px;
         bottom: 0;
-        width: 6px;
+        width: 1px;
         min-height: 100%;
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAJUlEQVQYlWNgQAPnz5//j8zfu3fv/0GnAB1gU4BiCB0UMDAwAADQyTuz783q7AAAAABJRU5ErkJggg==) repeat;
+        background: rgba(0,0,0,0.15);
     }
 }
 

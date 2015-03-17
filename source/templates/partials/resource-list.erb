@@ -1,0 +1,76 @@
+<ul class="trail">
+    <li>
+        <a href="/resources">Resources</a>
+    </li>
+    <li>
+    <% if get_basename() == "resources" %>
+        Latest
+    <% else %>
+        <%= current_page.data.title %>
+    <% end %>
+    </li>
+</ul>
+
+<div class="beta button primary">BETA</div>
+
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+
+<ul>
+    <% pagination.each do |resource| %>
+        <li>
+            <a href="<%= resource.owner.html_url %>" class="push-left preview">
+                <% if resource.owner.has_key? "avatar_url" %>
+                <img src="<%= resource.owner.avatar_url %>?s=48">
+                <% elsif resource.owner.has_key? "gravatar_id" %>
+                <img src="http://gravatar.com/avatar/<%= resource.owner.gravatar_id %>?d=identicon&s=48">
+                <% end %>
+            </a>
+            <div class="meta push-right">
+                <% if resource.has_key? "download_count" %>
+                <span class="downloads">
+                    <i class="icon icon-download" title="Total Downloads"></i>
+                    <span><strong><%= resource.download_count %></strong> Downloads</span>
+                </span>
+                <% end %>
+                <% if resource.has_key? "download_count" and resource.has_key? "stargazers_count" %>
+                <br/>
+                <% end %>
+                <% if resource.has_key? "stargazers_count" %>
+                    <span class="stars">
+                        <i class="icon icon-star"></i>
+                        <span><strong><%= resource.stargazers_count %></strong> Stars</span>
+                    </span>
+                <% end %>
+            </div>
+            <h3>
+                <strong>
+                    <a href="/resources/<%= resource.category.resource[0..-5] %>/<%= get_resource_slug(resource) %>/"><%= resource.title %></a>
+                </strong>
+                <span class="author">
+                    <em>by</em>
+                    <a href="<%= resource.owner.html_url %>"><%= resource.owner.login %></a>
+                </span>
+                <% if resource.has_key?("created_at") and Date.parse(resource.created_at.to_s) > Date.today-7 %>
+                    <span class="badge tooltip" title="Added in the past week">NEW</span>
+                <% elsif Date.parse(resource.last_update.to_s) > Date.today-7 %>
+                    <span class="badge tooltip" title="Updated in the past week">UPDATED</span>
+                <% end %>
+            </h3>
+            <p>
+                <%= resource.description %>
+            </p>
+            <div class="clearfix"></div>
+        </li>
+    <% end %>
+</ul>
+
+<%= partial('pagination', :locals => { pagination: pagination }) %>

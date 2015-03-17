@@ -4,10 +4,11 @@
             <a href="/screencasts">Screencasts</a>
         </h3>
     </li>
-    <% yaml('/vendor/Komodo-Resources/categories.yml').each() do |category| %>
+    <% data.resources.categories.each() do |category| %>
+        <% next if category.resources == 0 %>
         <li>
             <h3>
-                <a href="<%= site_url %>/<%= File.basename(category["resource"], ".yml") %>"><%= category["name"] %></a>
+                <a href="<%= site_url %>/resources/<%= File.basename(category.resource, ".yml") %>"><%= category.name %></a>
             </h3>
         </li>
     <% end %>

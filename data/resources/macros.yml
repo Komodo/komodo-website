@@ -1,0 +1,2512 @@
+---
+Sort open tabs by full path:
+  id: 25365958
+  name: Sort open tabs by full path
+  full_name: AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path
+  owner:
+    login: AtmanActive
+    id: 7526717
+    avatar_url: https://avatars.githubusercontent.com/u/7526717?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/AtmanActive
+    html_url: https://github.com/AtmanActive
+    followers_url: https://api.github.com/users/AtmanActive/followers
+    following_url: https://api.github.com/users/AtmanActive/following{/other_user}
+    gists_url: https://api.github.com/users/AtmanActive/gists{/gist_id}
+    starred_url: https://api.github.com/users/AtmanActive/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/AtmanActive/subscriptions
+    organizations_url: https://api.github.com/users/AtmanActive/orgs
+    repos_url: https://api.github.com/users/AtmanActive/repos
+    events_url: https://api.github.com/users/AtmanActive/events{/privacy}
+    received_events_url: https://api.github.com/users/AtmanActive/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path
+  description: A Macro script for Komodo Edit to Sort all open tabs by file's full
+    path
+  fork: false
+  url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path
+  forks_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/forks
+  keys_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/teams
+  hooks_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/hooks
+  issue_events_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/issues/events{/number}
+  events_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/events
+  assignees_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/assignees{/user}
+  branches_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/branches{/branch}
+  tags_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/tags
+  blobs_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/git/refs{/sha}
+  trees_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/statuses/{sha}
+  languages_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/languages
+  stargazers_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/stargazers
+  contributors_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/contributors
+  subscribers_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/subscribers
+  subscription_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/subscription
+  commits_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/commits{/sha}
+  git_commits_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/git/commits{/sha}
+  comments_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/comments{/number}
+  issue_comment_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/issues/comments{/number}
+  contents_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/contents/{+path}
+  compare_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/merges
+  archive_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/downloads
+  issues_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/issues{/number}
+  pulls_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/pulls{/number}
+  milestones_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/milestones{/number}
+  notifications_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/labels{/name}
+  releases_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases{/id}
+  created_at: '2014-10-17T16:03:46Z'
+  updated_at: '2014-10-17T16:11:39Z'
+  pushed_at: '2014-10-17T16:36:07Z'
+  git_url: git://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path.git
+  ssh_url: git@github.com:AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path.git
+  clone_url: https://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path.git
+  svn_url: https://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path
+  homepage: 
+  size: 120
+  stargazers_count: 0
+  watchers_count: 0
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Sort open tabs by full path
+  releases:
+  - url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/634623
+    assets_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/634623/assets
+    upload_url: https://uploads.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/634623/assets{?name}
+    html_url: https://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/tag/0.2
+    id: 634623
+    tag_name: '0.2'
+    target_commitish: master
+    name: ! 'Komodo Edit - Macro: Sort open tabs by full path'
+    draft: false
+    author:
+      login: AtmanActive
+      id: 7526717
+      avatar_url: https://avatars.githubusercontent.com/u/7526717?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/AtmanActive
+      html_url: https://github.com/AtmanActive
+      followers_url: https://api.github.com/users/AtmanActive/followers
+      following_url: https://api.github.com/users/AtmanActive/following{/other_user}
+      gists_url: https://api.github.com/users/AtmanActive/gists{/gist_id}
+      starred_url: https://api.github.com/users/AtmanActive/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/AtmanActive/subscriptions
+      organizations_url: https://api.github.com/users/AtmanActive/orgs
+      repos_url: https://api.github.com/users/AtmanActive/repos
+      events_url: https://api.github.com/users/AtmanActive/events{/privacy}
+      received_events_url: https://api.github.com/users/AtmanActive/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-10-17T16:33:15Z'
+    published_at: '2014-10-17T16:36:06Z'
+    assets:
+    - url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/assets/273032
+      id: 273032
+      name: Tabs_Sort_by_Path.komodotool
+      label: 
+      uploader:
+        login: AtmanActive
+        id: 7526717
+        avatar_url: https://avatars.githubusercontent.com/u/7526717?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/AtmanActive
+        html_url: https://github.com/AtmanActive
+        followers_url: https://api.github.com/users/AtmanActive/followers
+        following_url: https://api.github.com/users/AtmanActive/following{/other_user}
+        gists_url: https://api.github.com/users/AtmanActive/gists{/gist_id}
+        starred_url: https://api.github.com/users/AtmanActive/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/AtmanActive/subscriptions
+        organizations_url: https://api.github.com/users/AtmanActive/orgs
+        repos_url: https://api.github.com/users/AtmanActive/repos
+        events_url: https://api.github.com/users/AtmanActive/events{/privacy}
+        received_events_url: https://api.github.com/users/AtmanActive/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 1416
+      download_count: 21
+      created_at: '2014-10-17T16:36:01Z'
+      updated_at: '2014-10-17T16:36:02Z'
+      browser_download_url: https://github.com/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/releases/download/0.2/Tabs_Sort_by_Path.komodotool
+    tarball_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/tarball/0.2
+    zipball_url: https://api.github.com/repos/AtmanActive/Komodo-Edit-Macro---Sort-open-tabs-by-full-path/zipball/0.2
+    body: ! 'Komodo Edit - Macro: Sort open tabs by full path'
+  last_update: '2014-10-17T16:36:07Z'
+  is_github: true
+  readme:
+    content: ! '<h1>Komodo Edit - Macro: Sort open tabs by full path</h1>
+
+
+      <p>A Macro script for Komodo Edit to Sort all open tabs by file&#39;s full path.</p>
+
+
+      <p>How to use: Download or copy-paste the js file, change it&#39;s extension
+      to &#39;.komodotool&#39; and then put it in your Komodo/.../tools/ folder. After
+      starting or restarting your Komodo Edit/IDE, it should appear under Toolbox
+      Panel ( View -&gt; Tabs &amp; Sidebars -&gt; Toolbox ). From there you can setup
+      keyboard shortcuts and other properties by right-clicking on a macro and choosing
+      &#39;Properties&#39;.</p>
+
+
+      <p>Previous versions can be found here: https://github.com/AtmanActive/Komodo.</p>
+
+
+      <p>They contain the functionality that&#39;s already incorporated into Komodo
+      Edit/IDE, namely Sort Tabs by Name, and Sort Tabs by Extension then Name, but
+      can be used for educational purposes.</p>
+
+
+      <p>Forum thread that lead to this: https://community.activestate.com/forum/sorting-tabs</p>
+
+'
+    name: README.md
+  download_count: 21
+Backup save:
+  id: 21284624
+  name: Backup save
+  full_name: Defman21/komodo-savebackup
+  owner:
+    login: Defman21
+    id: 7100645
+    avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Defman21
+    html_url: https://github.com/Defman21
+    followers_url: https://api.github.com/users/Defman21/followers
+    following_url: https://api.github.com/users/Defman21/following{/other_user}
+    gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+    starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+    organizations_url: https://api.github.com/users/Defman21/orgs
+    repos_url: https://api.github.com/users/Defman21/repos
+    events_url: https://api.github.com/users/Defman21/events{/privacy}
+    received_events_url: https://api.github.com/users/Defman21/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/Defman21/komodo-savebackup
+  description: Save backup of current file
+  fork: false
+  url: https://api.github.com/repos/Defman21/komodo-savebackup
+  forks_url: https://api.github.com/repos/Defman21/komodo-savebackup/forks
+  keys_url: https://api.github.com/repos/Defman21/komodo-savebackup/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/Defman21/komodo-savebackup/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/Defman21/komodo-savebackup/teams
+  hooks_url: https://api.github.com/repos/Defman21/komodo-savebackup/hooks
+  issue_events_url: https://api.github.com/repos/Defman21/komodo-savebackup/issues/events{/number}
+  events_url: https://api.github.com/repos/Defman21/komodo-savebackup/events
+  assignees_url: https://api.github.com/repos/Defman21/komodo-savebackup/assignees{/user}
+  branches_url: https://api.github.com/repos/Defman21/komodo-savebackup/branches{/branch}
+  tags_url: https://api.github.com/repos/Defman21/komodo-savebackup/tags
+  blobs_url: https://api.github.com/repos/Defman21/komodo-savebackup/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/Defman21/komodo-savebackup/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/Defman21/komodo-savebackup/git/refs{/sha}
+  trees_url: https://api.github.com/repos/Defman21/komodo-savebackup/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/Defman21/komodo-savebackup/statuses/{sha}
+  languages_url: https://api.github.com/repos/Defman21/komodo-savebackup/languages
+  stargazers_url: https://api.github.com/repos/Defman21/komodo-savebackup/stargazers
+  contributors_url: https://api.github.com/repos/Defman21/komodo-savebackup/contributors
+  subscribers_url: https://api.github.com/repos/Defman21/komodo-savebackup/subscribers
+  subscription_url: https://api.github.com/repos/Defman21/komodo-savebackup/subscription
+  commits_url: https://api.github.com/repos/Defman21/komodo-savebackup/commits{/sha}
+  git_commits_url: https://api.github.com/repos/Defman21/komodo-savebackup/git/commits{/sha}
+  comments_url: https://api.github.com/repos/Defman21/komodo-savebackup/comments{/number}
+  issue_comment_url: https://api.github.com/repos/Defman21/komodo-savebackup/issues/comments{/number}
+  contents_url: https://api.github.com/repos/Defman21/komodo-savebackup/contents/{+path}
+  compare_url: https://api.github.com/repos/Defman21/komodo-savebackup/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/Defman21/komodo-savebackup/merges
+  archive_url: https://api.github.com/repos/Defman21/komodo-savebackup/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/Defman21/komodo-savebackup/downloads
+  issues_url: https://api.github.com/repos/Defman21/komodo-savebackup/issues{/number}
+  pulls_url: https://api.github.com/repos/Defman21/komodo-savebackup/pulls{/number}
+  milestones_url: https://api.github.com/repos/Defman21/komodo-savebackup/milestones{/number}
+  notifications_url: https://api.github.com/repos/Defman21/komodo-savebackup/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/Defman21/komodo-savebackup/labels{/name}
+  releases_url: https://api.github.com/repos/Defman21/komodo-savebackup/releases{/id}
+  created_at: '2014-06-27T18:08:32Z'
+  updated_at: '2014-07-14T07:21:00Z'
+  pushed_at: '2014-07-14T07:21:00Z'
+  git_url: git://github.com/Defman21/komodo-savebackup.git
+  ssh_url: git@github.com:Defman21/komodo-savebackup.git
+  clone_url: https://github.com/Defman21/komodo-savebackup.git
+  svn_url: https://github.com/Defman21/komodo-savebackup
+  homepage: 
+  size: 148
+  stargazers_count: 0
+  watchers_count: 0
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Backup save
+  releases: []
+  last_update: '2014-07-14T07:21:00Z'
+  is_github: true
+  readme:
+    content: ! '<h1>komodo-savebackup</h1>
+
+
+      <p>Save backup of current file</p>
+
+
+      <h6>How it works</h6>
+
+
+      <p>When you press Ctrl+S (save your file), this macro create a folder with name
+      <code>[folder where placed file]_bak</code> in folder where placed your file
+      and include in this folder file that you save with postfix <code>Year+&quot;-&quot;+Month+&quot;-&quot;+Day+&quot;:&quot;+Hour+&quot;-&quot;+Minute+&quot;-&quot;+Second</code></p>
+
+'
+    name: README.md
+  download_count: 0
+Autocomplete Files Under Path:
+  id: 22225966
+  name: Autocomplete Files Under Path
+  full_name: Defman21/files-from-path
+  owner:
+    login: Defman21
+    id: 7100645
+    avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Defman21
+    html_url: https://github.com/Defman21
+    followers_url: https://api.github.com/users/Defman21/followers
+    following_url: https://api.github.com/users/Defman21/following{/other_user}
+    gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+    starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+    organizations_url: https://api.github.com/users/Defman21/orgs
+    repos_url: https://api.github.com/users/Defman21/repos
+    events_url: https://api.github.com/users/Defman21/events{/privacy}
+    received_events_url: https://api.github.com/users/Defman21/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/Defman21/files-from-path
+  description: Generate a popup contains items with file/folder name [Komodo Edit/IDE
+    8.5]
+  fork: false
+  url: https://api.github.com/repos/Defman21/files-from-path
+  forks_url: https://api.github.com/repos/Defman21/files-from-path/forks
+  keys_url: https://api.github.com/repos/Defman21/files-from-path/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/Defman21/files-from-path/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/Defman21/files-from-path/teams
+  hooks_url: https://api.github.com/repos/Defman21/files-from-path/hooks
+  issue_events_url: https://api.github.com/repos/Defman21/files-from-path/issues/events{/number}
+  events_url: https://api.github.com/repos/Defman21/files-from-path/events
+  assignees_url: https://api.github.com/repos/Defman21/files-from-path/assignees{/user}
+  branches_url: https://api.github.com/repos/Defman21/files-from-path/branches{/branch}
+  tags_url: https://api.github.com/repos/Defman21/files-from-path/tags
+  blobs_url: https://api.github.com/repos/Defman21/files-from-path/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/Defman21/files-from-path/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/Defman21/files-from-path/git/refs{/sha}
+  trees_url: https://api.github.com/repos/Defman21/files-from-path/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/Defman21/files-from-path/statuses/{sha}
+  languages_url: https://api.github.com/repos/Defman21/files-from-path/languages
+  stargazers_url: https://api.github.com/repos/Defman21/files-from-path/stargazers
+  contributors_url: https://api.github.com/repos/Defman21/files-from-path/contributors
+  subscribers_url: https://api.github.com/repos/Defman21/files-from-path/subscribers
+  subscription_url: https://api.github.com/repos/Defman21/files-from-path/subscription
+  commits_url: https://api.github.com/repos/Defman21/files-from-path/commits{/sha}
+  git_commits_url: https://api.github.com/repos/Defman21/files-from-path/git/commits{/sha}
+  comments_url: https://api.github.com/repos/Defman21/files-from-path/comments{/number}
+  issue_comment_url: https://api.github.com/repos/Defman21/files-from-path/issues/comments{/number}
+  contents_url: https://api.github.com/repos/Defman21/files-from-path/contents/{+path}
+  compare_url: https://api.github.com/repos/Defman21/files-from-path/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/Defman21/files-from-path/merges
+  archive_url: https://api.github.com/repos/Defman21/files-from-path/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/Defman21/files-from-path/downloads
+  issues_url: https://api.github.com/repos/Defman21/files-from-path/issues{/number}
+  pulls_url: https://api.github.com/repos/Defman21/files-from-path/pulls{/number}
+  milestones_url: https://api.github.com/repos/Defman21/files-from-path/milestones{/number}
+  notifications_url: https://api.github.com/repos/Defman21/files-from-path/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/Defman21/files-from-path/labels{/name}
+  releases_url: https://api.github.com/repos/Defman21/files-from-path/releases{/id}
+  created_at: '2014-07-24T18:51:16Z'
+  updated_at: '2014-11-27T12:47:32Z'
+  pushed_at: '2014-07-31T10:07:47Z'
+  git_url: git://github.com/Defman21/files-from-path.git
+  ssh_url: git@github.com:Defman21/files-from-path.git
+  clone_url: https://github.com/Defman21/files-from-path.git
+  svn_url: https://github.com/Defman21/files-from-path
+  homepage: ''
+  size: 124
+  stargazers_count: 2
+  watchers_count: 2
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 2
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 2
+  title: Autocomplete Files Under Path
+  releases:
+  - url: https://api.github.com/repos/Defman21/files-from-path/releases/450907
+    assets_url: https://api.github.com/repos/Defman21/files-from-path/releases/450907/assets
+    upload_url: https://uploads.github.com/repos/Defman21/files-from-path/releases/450907/assets{?name}
+    html_url: https://github.com/Defman21/files-from-path/releases/tag/v1.0.0.1
+    id: 450907
+    tag_name: v1.0.0.1
+    target_commitish: master
+    name: Autocomplete Files Under Path
+    draft: false
+    author:
+      login: Defman21
+      id: 7100645
+      avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Defman21
+      html_url: https://github.com/Defman21
+      followers_url: https://api.github.com/users/Defman21/followers
+      following_url: https://api.github.com/users/Defman21/following{/other_user}
+      gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+      starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+      organizations_url: https://api.github.com/users/Defman21/orgs
+      repos_url: https://api.github.com/users/Defman21/repos
+      events_url: https://api.github.com/users/Defman21/events{/privacy}
+      received_events_url: https://api.github.com/users/Defman21/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-07-25T13:26:34Z'
+    published_at: '2014-07-25T13:30:37Z'
+    assets:
+    - url: https://api.github.com/repos/Defman21/files-from-path/releases/assets/192534
+      id: 192534
+      name: AFUP10010.zip
+      label: 
+      uploader:
+        login: Defman21
+        id: 7100645
+        avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Defman21
+        html_url: https://github.com/Defman21
+        followers_url: https://api.github.com/users/Defman21/followers
+        following_url: https://api.github.com/users/Defman21/following{/other_user}
+        gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+        starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+        organizations_url: https://api.github.com/users/Defman21/orgs
+        repos_url: https://api.github.com/users/Defman21/repos
+        events_url: https://api.github.com/users/Defman21/events{/privacy}
+        received_events_url: https://api.github.com/users/Defman21/received_events
+        type: User
+        site_admin: false
+      content_type: application/zip
+      state: uploaded
+      size: 1320
+      download_count: 44
+      created_at: '2014-07-25T13:30:30Z'
+      updated_at: '2014-07-25T13:30:32Z'
+      browser_download_url: https://github.com/Defman21/files-from-path/releases/download/v1.0.0.1/AFUP10010.zip
+    tarball_url: https://api.github.com/repos/Defman21/files-from-path/tarball/v1.0.0.1
+    zipball_url: https://api.github.com/repos/Defman21/files-from-path/zipball/v1.0.0.1
+    body: ! "Autocomplete Files Under Path.\r\n\r\nBuild 10010."
+  - url: https://api.github.com/repos/Defman21/files-from-path/releases/449370
+    assets_url: https://api.github.com/repos/Defman21/files-from-path/releases/449370/assets
+    upload_url: https://uploads.github.com/repos/Defman21/files-from-path/releases/449370/assets{?name}
+    html_url: https://github.com/Defman21/files-from-path/releases/tag/1.0
+    id: 449370
+    tag_name: '1.0'
+    target_commitish: master
+    name: Autocomplete Files Under Path
+    draft: false
+    author:
+      login: Defman21
+      id: 7100645
+      avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Defman21
+      html_url: https://github.com/Defman21
+      followers_url: https://api.github.com/users/Defman21/followers
+      following_url: https://api.github.com/users/Defman21/following{/other_user}
+      gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+      starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+      organizations_url: https://api.github.com/users/Defman21/orgs
+      repos_url: https://api.github.com/users/Defman21/repos
+      events_url: https://api.github.com/users/Defman21/events{/privacy}
+      received_events_url: https://api.github.com/users/Defman21/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-07-24T18:53:12Z'
+    published_at: '2014-07-24T19:23:55Z'
+    assets:
+    - url: https://api.github.com/repos/Defman21/files-from-path/releases/assets/191860
+      id: 191860
+      name: AFUP-10002.zip
+      label: 
+      uploader:
+        login: Defman21
+        id: 7100645
+        avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Defman21
+        html_url: https://github.com/Defman21
+        followers_url: https://api.github.com/users/Defman21/followers
+        following_url: https://api.github.com/users/Defman21/following{/other_user}
+        gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+        starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+        organizations_url: https://api.github.com/users/Defman21/orgs
+        repos_url: https://api.github.com/users/Defman21/repos
+        events_url: https://api.github.com/users/Defman21/events{/privacy}
+        received_events_url: https://api.github.com/users/Defman21/received_events
+        type: User
+        site_admin: false
+      content_type: application/zip
+      state: uploaded
+      size: 1220
+      download_count: 5
+      created_at: '2014-07-24T19:23:46Z'
+      updated_at: '2014-07-24T19:23:55Z'
+      browser_download_url: https://github.com/Defman21/files-from-path/releases/download/1.0/AFUP-10002.zip
+    tarball_url: https://api.github.com/repos/Defman21/files-from-path/tarball/1.0
+    zipball_url: https://api.github.com/repos/Defman21/files-from-path/zipball/1.0
+    body: ! "Autocomplete Files Under Path.\r\nRelease 1.0, build 10002"
+  last_update: '2014-07-31T10:07:47Z'
+  is_github: true
+  readme:
+    content: ! '<h1>files-from-path</h1>
+
+
+      <p>Generate a popup contains items with file/folder name</p>
+
+
+      <h4>Plained fixes:</h4>
+
+
+      <ul>
+
+      <li>Folder with spaces are not work (display only first word). </li>
+
+      <li>When you trying to press enter to insert path - after path creates tab or
+      4 spaces. (not checked on another PC, maybe useronly bug)</li>
+
+      </ul>
+
+
+      <p>Build history:</p>
+
+
+      <ul>
+
+      <li>10000 - first release</li>
+
+      <li>10001 - fix for &quot;if folder is empty - tooltip will be generated but
+      without any items.&quot;</li>
+
+      <li>10002 - fix for &quot;in some times path cut not correctly. (math error)&quot;</li>
+
+      <li>10010 - add method to remove all characters after last &quot;/&quot; in
+      path string (e.g. if in folder <code>/var/www/</code> exists folder &quot;coolfolder&quot;
+      and you type <code>/var/www/cool</code> - tooltip will not be generated, but
+      after build 10010 &quot;cool&quot; will be removed and tooltip will be generated)</li>
+
+      </ul>
+
+'
+    name: README.md
+  download_count: 49
+One-Way File Sync:
+  id: 22542404
+  name: One-Way File Sync
+  full_name: Defman21/save-if-diff-files
+  owner:
+    login: Defman21
+    id: 7100645
+    avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Defman21
+    html_url: https://github.com/Defman21
+    followers_url: https://api.github.com/users/Defman21/followers
+    following_url: https://api.github.com/users/Defman21/following{/other_user}
+    gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+    starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+    organizations_url: https://api.github.com/users/Defman21/orgs
+    repos_url: https://api.github.com/users/Defman21/repos
+    events_url: https://api.github.com/users/Defman21/events{/privacy}
+    received_events_url: https://api.github.com/users/Defman21/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/Defman21/save-if-diff-files
+  description: Save file to custom folder if exists diff's between files
+  fork: false
+  url: https://api.github.com/repos/Defman21/save-if-diff-files
+  forks_url: https://api.github.com/repos/Defman21/save-if-diff-files/forks
+  keys_url: https://api.github.com/repos/Defman21/save-if-diff-files/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/Defman21/save-if-diff-files/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/Defman21/save-if-diff-files/teams
+  hooks_url: https://api.github.com/repos/Defman21/save-if-diff-files/hooks
+  issue_events_url: https://api.github.com/repos/Defman21/save-if-diff-files/issues/events{/number}
+  events_url: https://api.github.com/repos/Defman21/save-if-diff-files/events
+  assignees_url: https://api.github.com/repos/Defman21/save-if-diff-files/assignees{/user}
+  branches_url: https://api.github.com/repos/Defman21/save-if-diff-files/branches{/branch}
+  tags_url: https://api.github.com/repos/Defman21/save-if-diff-files/tags
+  blobs_url: https://api.github.com/repos/Defman21/save-if-diff-files/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/Defman21/save-if-diff-files/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/Defman21/save-if-diff-files/git/refs{/sha}
+  trees_url: https://api.github.com/repos/Defman21/save-if-diff-files/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/Defman21/save-if-diff-files/statuses/{sha}
+  languages_url: https://api.github.com/repos/Defman21/save-if-diff-files/languages
+  stargazers_url: https://api.github.com/repos/Defman21/save-if-diff-files/stargazers
+  contributors_url: https://api.github.com/repos/Defman21/save-if-diff-files/contributors
+  subscribers_url: https://api.github.com/repos/Defman21/save-if-diff-files/subscribers
+  subscription_url: https://api.github.com/repos/Defman21/save-if-diff-files/subscription
+  commits_url: https://api.github.com/repos/Defman21/save-if-diff-files/commits{/sha}
+  git_commits_url: https://api.github.com/repos/Defman21/save-if-diff-files/git/commits{/sha}
+  comments_url: https://api.github.com/repos/Defman21/save-if-diff-files/comments{/number}
+  issue_comment_url: https://api.github.com/repos/Defman21/save-if-diff-files/issues/comments{/number}
+  contents_url: https://api.github.com/repos/Defman21/save-if-diff-files/contents/{+path}
+  compare_url: https://api.github.com/repos/Defman21/save-if-diff-files/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/Defman21/save-if-diff-files/merges
+  archive_url: https://api.github.com/repos/Defman21/save-if-diff-files/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/Defman21/save-if-diff-files/downloads
+  issues_url: https://api.github.com/repos/Defman21/save-if-diff-files/issues{/number}
+  pulls_url: https://api.github.com/repos/Defman21/save-if-diff-files/pulls{/number}
+  milestones_url: https://api.github.com/repos/Defman21/save-if-diff-files/milestones{/number}
+  notifications_url: https://api.github.com/repos/Defman21/save-if-diff-files/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/Defman21/save-if-diff-files/labels{/name}
+  releases_url: https://api.github.com/repos/Defman21/save-if-diff-files/releases{/id}
+  created_at: '2014-08-02T08:36:00Z'
+  updated_at: '2014-08-02T15:59:21Z'
+  pushed_at: '2014-08-02T15:59:22Z'
+  git_url: git://github.com/Defman21/save-if-diff-files.git
+  ssh_url: git@github.com:Defman21/save-if-diff-files.git
+  clone_url: https://github.com/Defman21/save-if-diff-files.git
+  svn_url: https://github.com/Defman21/save-if-diff-files
+  homepage: 
+  size: 124
+  stargazers_count: 0
+  watchers_count: 0
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: One-Way File Sync
+  releases:
+  - url: https://api.github.com/repos/Defman21/save-if-diff-files/releases/466912
+    assets_url: https://api.github.com/repos/Defman21/save-if-diff-files/releases/466912/assets
+    upload_url: https://uploads.github.com/repos/Defman21/save-if-diff-files/releases/466912/assets{?name}
+    html_url: https://github.com/Defman21/save-if-diff-files/releases/tag/v1.0
+    id: 466912
+    tag_name: v1.0
+    target_commitish: master
+    name: One-Way File Sync
+    draft: false
+    author:
+      login: Defman21
+      id: 7100645
+      avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Defman21
+      html_url: https://github.com/Defman21
+      followers_url: https://api.github.com/users/Defman21/followers
+      following_url: https://api.github.com/users/Defman21/following{/other_user}
+      gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+      starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+      organizations_url: https://api.github.com/users/Defman21/orgs
+      repos_url: https://api.github.com/users/Defman21/repos
+      events_url: https://api.github.com/users/Defman21/events{/privacy}
+      received_events_url: https://api.github.com/users/Defman21/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-08-02T08:36:19Z'
+    published_at: '2014-08-02T08:38:50Z'
+    assets:
+    - url: https://api.github.com/repos/Defman21/save-if-diff-files/releases/assets/199796
+      id: 199796
+      name: Save_if_different_files.komodotool
+      label: 
+      uploader:
+        login: Defman21
+        id: 7100645
+        avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Defman21
+        html_url: https://github.com/Defman21
+        followers_url: https://api.github.com/users/Defman21/followers
+        following_url: https://api.github.com/users/Defman21/following{/other_user}
+        gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+        starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+        organizations_url: https://api.github.com/users/Defman21/orgs
+        repos_url: https://api.github.com/users/Defman21/repos
+        events_url: https://api.github.com/users/Defman21/events{/privacy}
+        received_events_url: https://api.github.com/users/Defman21/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 2120
+      download_count: 26
+      created_at: '2014-08-02T08:38:43Z'
+      updated_at: '2014-08-02T08:38:44Z'
+      browser_download_url: https://github.com/Defman21/save-if-diff-files/releases/download/v1.0/Save_if_different_files.komodotool
+    tarball_url: https://api.github.com/repos/Defman21/save-if-diff-files/tarball/v1.0
+    zipball_url: https://api.github.com/repos/Defman21/save-if-diff-files/zipball/v1.0
+    body: ! "Save file to another folder if:\r\n1) File in another folder not exists\r\n2)
+      File in another folder has different with file which you edit.\r\n"
+  last_update: '2014-08-02T15:59:22Z'
+  is_github: true
+  readme:
+    content: ! '<h1>save-if-diff-files</h1>
+
+
+      <p>Save file to custom folder if exists diff&#39;s between files</p>
+
+'
+    name: README.md
+  download_count: 26
+Auto Toggle Panes:
+  id: 22582284
+  name: Auto Toggle Panes
+  full_name: Naatan/Komodo-AutoTogglePanes
+  owner:
+    login: Naatan
+    id: 278649
+    avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Naatan
+    html_url: https://github.com/Naatan
+    followers_url: https://api.github.com/users/Naatan/followers
+    following_url: https://api.github.com/users/Naatan/following{/other_user}
+    gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+    starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+    organizations_url: https://api.github.com/users/Naatan/orgs
+    repos_url: https://api.github.com/users/Naatan/repos
+    events_url: https://api.github.com/users/Naatan/events{/privacy}
+    received_events_url: https://api.github.com/users/Naatan/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/Naatan/Komodo-AutoTogglePanes
+  description: A macro that automatically toggles your left/right/bottom panes and
+    tab bar when you move your mouse cursor to the relevant editor edge
+  fork: false
+  url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes
+  forks_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/forks
+  keys_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/teams
+  hooks_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/hooks
+  issue_events_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/issues/events{/number}
+  events_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/events
+  assignees_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/assignees{/user}
+  branches_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/branches{/branch}
+  tags_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/tags
+  blobs_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/git/refs{/sha}
+  trees_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/statuses/{sha}
+  languages_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/languages
+  stargazers_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/stargazers
+  contributors_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/contributors
+  subscribers_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/subscribers
+  subscription_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/subscription
+  commits_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/commits{/sha}
+  git_commits_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/git/commits{/sha}
+  comments_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/comments{/number}
+  issue_comment_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/issues/comments{/number}
+  contents_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/contents/{+path}
+  compare_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/merges
+  archive_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/downloads
+  issues_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/issues{/number}
+  pulls_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/pulls{/number}
+  milestones_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/milestones{/number}
+  notifications_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/labels{/name}
+  releases_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases{/id}
+  created_at: '2014-08-03T19:47:59Z'
+  updated_at: '2015-02-23T22:41:29Z'
+  pushed_at: '2015-02-23T22:44:53Z'
+  git_url: git://github.com/Naatan/Komodo-AutoTogglePanes.git
+  ssh_url: git@github.com:Naatan/Komodo-AutoTogglePanes.git
+  clone_url: https://github.com/Naatan/Komodo-AutoTogglePanes.git
+  svn_url: https://github.com/Naatan/Komodo-AutoTogglePanes
+  homepage: 
+  size: 137
+  stargazers_count: 1
+  watchers_count: 1
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 1
+  forks: 0
+  open_issues: 1
+  watchers: 1
+  default_branch: master
+  permissions:
+    admin: true
+    push: true
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Auto Toggle Panes
+  releases:
+  - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/980354
+    assets_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/980354/assets
+    upload_url: https://uploads.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/980354/assets{?name}
+    html_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/tag/1.0.2
+    id: 980354
+    tag_name: 1.0.2
+    target_commitish: master
+    name: 1.0.2
+    draft: false
+    author:
+      login: Defman21
+      id: 7100645
+      avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Defman21
+      html_url: https://github.com/Defman21
+      followers_url: https://api.github.com/users/Defman21/followers
+      following_url: https://api.github.com/users/Defman21/following{/other_user}
+      gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+      starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+      organizations_url: https://api.github.com/users/Defman21/orgs
+      repos_url: https://api.github.com/users/Defman21/repos
+      events_url: https://api.github.com/users/Defman21/events{/privacy}
+      received_events_url: https://api.github.com/users/Defman21/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2015-02-23T22:41:28Z'
+    published_at: '2015-02-23T22:44:52Z'
+    assets:
+    - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/assets/437288
+      id: 437288
+      name: Auto_Toggle_Panes.komodotool
+      label: 
+      uploader:
+        login: Defman21
+        id: 7100645
+        avatar_url: https://avatars.githubusercontent.com/u/7100645?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Defman21
+        html_url: https://github.com/Defman21
+        followers_url: https://api.github.com/users/Defman21/followers
+        following_url: https://api.github.com/users/Defman21/following{/other_user}
+        gists_url: https://api.github.com/users/Defman21/gists{/gist_id}
+        starred_url: https://api.github.com/users/Defman21/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Defman21/subscriptions
+        organizations_url: https://api.github.com/users/Defman21/orgs
+        repos_url: https://api.github.com/users/Defman21/repos
+        events_url: https://api.github.com/users/Defman21/events{/privacy}
+        received_events_url: https://api.github.com/users/Defman21/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 5938
+      download_count: 10
+      created_at: '2015-02-23T22:59:24Z'
+      updated_at: '2015-02-23T22:59:25Z'
+      browser_download_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/download/1.0.2/Auto_Toggle_Panes.komodotool
+    tarball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/tarball/1.0.2
+    zipball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/zipball/1.0.2
+    body: ! '* Fixed toggling of the top bar'
+  - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/477512
+    assets_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/477512/assets
+    upload_url: https://uploads.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/477512/assets{?name}
+    html_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/tag/1.0.1
+    id: 477512
+    tag_name: 1.0.1
+    target_commitish: master
+    name: 1.0.1
+    draft: false
+    author:
+      login: Naatan
+      id: 278649
+      avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Naatan
+      html_url: https://github.com/Naatan
+      followers_url: https://api.github.com/users/Naatan/followers
+      following_url: https://api.github.com/users/Naatan/following{/other_user}
+      gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+      starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+      organizations_url: https://api.github.com/users/Naatan/orgs
+      repos_url: https://api.github.com/users/Naatan/repos
+      events_url: https://api.github.com/users/Naatan/events{/privacy}
+      received_events_url: https://api.github.com/users/Naatan/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-08-07T17:40:59Z'
+    published_at: '2014-08-07T17:43:08Z'
+    assets:
+    - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/assets/204192
+      id: 204192
+      name: Auto_Toggle_Panes.komodotool
+      label: 
+      uploader:
+        login: Naatan
+        id: 278649
+        avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Naatan
+        html_url: https://github.com/Naatan
+        followers_url: https://api.github.com/users/Naatan/followers
+        following_url: https://api.github.com/users/Naatan/following{/other_user}
+        gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+        starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+        organizations_url: https://api.github.com/users/Naatan/orgs
+        repos_url: https://api.github.com/users/Naatan/repos
+        events_url: https://api.github.com/users/Naatan/events{/privacy}
+        received_events_url: https://api.github.com/users/Naatan/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 6030
+      download_count: 98
+      created_at: '2014-08-07T17:41:24Z'
+      updated_at: '2014-08-07T17:41:24Z'
+      browser_download_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/download/1.0.1/Auto_Toggle_Panes.komodotool
+    tarball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/tarball/1.0.1
+    zipball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/zipball/1.0.1
+    body: ! "Contributed by @Defman21 \r\n\r\n- Added options to turn on/off toggling
+      for each individual pane\r\n- Reduced left pane hotspot to allow setting breakpoints
+      without triggering the pane"
+  - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/468285
+    assets_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/468285/assets
+    upload_url: https://uploads.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/468285/assets{?name}
+    html_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/tag/1.0
+    id: 468285
+    tag_name: '1.0'
+    target_commitish: master
+    name: '1.0'
+    draft: false
+    author:
+      login: Naatan
+      id: 278649
+      avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Naatan
+      html_url: https://github.com/Naatan
+      followers_url: https://api.github.com/users/Naatan/followers
+      following_url: https://api.github.com/users/Naatan/following{/other_user}
+      gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+      starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+      organizations_url: https://api.github.com/users/Naatan/orgs
+      repos_url: https://api.github.com/users/Naatan/repos
+      events_url: https://api.github.com/users/Naatan/events{/privacy}
+      received_events_url: https://api.github.com/users/Naatan/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-08-03T19:57:40Z'
+    published_at: '2014-08-03T19:58:16Z'
+    assets:
+    - url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/releases/assets/200514
+      id: 200514
+      name: Auto_Toggle_Panes.komodotool
+      label: 
+      uploader:
+        login: Naatan
+        id: 278649
+        avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Naatan
+        html_url: https://github.com/Naatan
+        followers_url: https://api.github.com/users/Naatan/followers
+        following_url: https://api.github.com/users/Naatan/following{/other_user}
+        gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+        starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+        organizations_url: https://api.github.com/users/Naatan/orgs
+        repos_url: https://api.github.com/users/Naatan/repos
+        events_url: https://api.github.com/users/Naatan/events{/privacy}
+        received_events_url: https://api.github.com/users/Naatan/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 5295
+      download_count: 20
+      created_at: '2014-08-03T19:58:13Z'
+      updated_at: '2014-08-03T19:58:14Z'
+      browser_download_url: https://github.com/Naatan/Komodo-AutoTogglePanes/releases/download/1.0/Auto_Toggle_Panes.komodotool
+    tarball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/tarball/1.0
+    zipball_url: https://api.github.com/repos/Naatan/Komodo-AutoTogglePanes/zipball/1.0
+    body: ''
+  last_update: '2015-02-23T22:44:53Z'
+  is_github: true
+  readme:
+    content: ! '<p>I like to use Komodo without any panes or tabs showing - just the
+      editor.
+
+      Normally I would use keybindings to toggle the relevant panes when I need them
+
+      but I wanted something more intuitive; so I wrote this macro.</p>
+
+
+      <p>Basically what this does is it shows/hides the relevant pane/tabs when you
+      move
+
+      your mouse cursor towards them. While editing your mouse cursor can rest somewhere
+
+      centered on the editor, then when you want to access eg. the left pane you move
+
+      your mouse cursor to the left editor edge and the left pane will automatically
+
+      show itself.</p>
+
+
+      <h2>Caveats</h2>
+
+
+      <p>There are some caveats to consider that I&#39;d still like to work out as
+      much as
+
+      possible (pull requests welcome)</p>
+
+
+      <ul>
+
+      <li>You might be trying to position your cursor to select some text in the editor
+
+      and in doing so accidentally trigger a pane</li>
+
+      <li>Currently when you move your cursor off Komodo entirely panes will open
+      from
+
+      the side where your mouse left the application (not an issue if you work
+
+      with Komodo maximized)</li>
+
+      <li>Probabably more that I haven&#39;t ran in to yet</li>
+
+      </ul>
+
+
+      <h2>Configuration</h2>
+
+
+      <p>There are a few preferences that you can tweak to your liking, you can set
+      these
+
+      with <code>ko.prefs.setLong(pref,value)</code> or <code>ko.prefs.setBoolean(pref,value)</code></p>
+
+
+      <ul>
+
+      <li>autoTogglePaneHotspotSizeLeft</li>
+
+      <li>autoTogglePaneHotspotSizeRight</li>
+
+      <li>autoTogglePaneHotspotSizeTop</li>
+
+      <li>autoTogglePaneHotspotSizeBottom</li>
+
+      <li>autoTogglePaneDelay <em>(in ms, don&#39;t set this too low as it can make
+      your UI jumpy)</em></li>
+
+      <li>toggleTopPane <em>true/false, whether to enable toggling this pane</em></li>
+
+      <li>toggleBottomPane <em>true/false, whether to enable toggling this pane</em></li>
+
+      <li>toggleRightPane <em>true/false, whether to enable toggling this pane</em></li>
+
+      <li>toggleLeftPane <em>true/false, whether to enable toggling this pane</em></li>
+
+      </ul>
+
+'
+    name: readme.md
+  download_count: 128
+Mark Text:
+  id: 24856189
+  name: Mark Text
+  full_name: Komodo/Mark-Text-Macro
+  owner:
+    login: Komodo
+    id: 5132872
+    avatar_url: https://avatars.githubusercontent.com/u/5132872?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Komodo
+    html_url: https://github.com/Komodo
+    followers_url: https://api.github.com/users/Komodo/followers
+    following_url: https://api.github.com/users/Komodo/following{/other_user}
+    gists_url: https://api.github.com/users/Komodo/gists{/gist_id}
+    starred_url: https://api.github.com/users/Komodo/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Komodo/subscriptions
+    organizations_url: https://api.github.com/users/Komodo/orgs
+    repos_url: https://api.github.com/users/Komodo/repos
+    events_url: https://api.github.com/users/Komodo/events{/privacy}
+    received_events_url: https://api.github.com/users/Komodo/received_events
+    type: Organization
+    site_admin: false
+  private: false
+  html_url: https://github.com/Komodo/Mark-Text-Macro
+  description: Allows marking text in files by pressing alt+M, persists across file
+    close/reopen
+  fork: false
+  url: https://api.github.com/repos/Komodo/Mark-Text-Macro
+  forks_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/forks
+  keys_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/teams
+  hooks_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/hooks
+  issue_events_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/issues/events{/number}
+  events_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/events
+  assignees_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/assignees{/user}
+  branches_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/branches{/branch}
+  tags_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/tags
+  blobs_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/git/refs{/sha}
+  trees_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/statuses/{sha}
+  languages_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/languages
+  stargazers_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/stargazers
+  contributors_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/contributors
+  subscribers_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/subscribers
+  subscription_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/subscription
+  commits_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/commits{/sha}
+  git_commits_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/git/commits{/sha}
+  comments_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/comments{/number}
+  issue_comment_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/issues/comments{/number}
+  contents_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/contents/{+path}
+  compare_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/merges
+  archive_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/downloads
+  issues_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/issues{/number}
+  pulls_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/pulls{/number}
+  milestones_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/milestones{/number}
+  notifications_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/labels{/name}
+  releases_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/releases{/id}
+  created_at: '2014-10-06T17:30:29Z'
+  updated_at: '2014-10-06T17:31:09Z'
+  pushed_at: '2014-10-06T17:43:40Z'
+  git_url: git://github.com/Komodo/Mark-Text-Macro.git
+  ssh_url: git@github.com:Komodo/Mark-Text-Macro.git
+  clone_url: https://github.com/Komodo/Mark-Text-Macro.git
+  svn_url: https://github.com/Komodo/Mark-Text-Macro
+  homepage: 
+  size: 120
+  stargazers_count: 0
+  watchers_count: 0
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: true
+    push: true
+    pull: true
+  organization:
+    login: Komodo
+    id: 5132872
+    avatar_url: https://avatars.githubusercontent.com/u/5132872?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/Komodo
+    html_url: https://github.com/Komodo
+    followers_url: https://api.github.com/users/Komodo/followers
+    following_url: https://api.github.com/users/Komodo/following{/other_user}
+    gists_url: https://api.github.com/users/Komodo/gists{/gist_id}
+    starred_url: https://api.github.com/users/Komodo/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/Komodo/subscriptions
+    organizations_url: https://api.github.com/users/Komodo/orgs
+    repos_url: https://api.github.com/users/Komodo/repos
+    events_url: https://api.github.com/users/Komodo/events{/privacy}
+    received_events_url: https://api.github.com/users/Komodo/received_events
+    type: Organization
+    site_admin: false
+  network_count: 0
+  subscribers_count: 3
+  title: Mark Text
+  releases:
+  - url: https://api.github.com/repos/Komodo/Mark-Text-Macro/releases/606760
+    assets_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/releases/606760/assets
+    upload_url: https://uploads.github.com/repos/Komodo/Mark-Text-Macro/releases/606760/assets{?name}
+    html_url: https://github.com/Komodo/Mark-Text-Macro/releases/tag/1.0
+    id: 606760
+    tag_name: '1.0'
+    target_commitish: master
+    name: '1.0'
+    draft: false
+    author:
+      login: Naatan
+      id: 278649
+      avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/Naatan
+      html_url: https://github.com/Naatan
+      followers_url: https://api.github.com/users/Naatan/followers
+      following_url: https://api.github.com/users/Naatan/following{/other_user}
+      gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+      starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+      organizations_url: https://api.github.com/users/Naatan/orgs
+      repos_url: https://api.github.com/users/Naatan/repos
+      events_url: https://api.github.com/users/Naatan/events{/privacy}
+      received_events_url: https://api.github.com/users/Naatan/received_events
+      type: User
+      site_admin: false
+    prerelease: false
+    created_at: '2014-10-06T17:31:36Z'
+    published_at: '2014-10-06T17:32:11Z'
+    assets:
+    - url: https://api.github.com/repos/Komodo/Mark-Text-Macro/releases/assets/260335
+      id: 260335
+      name: Mark-Text.komodotool
+      label: 
+      uploader:
+        login: Naatan
+        id: 278649
+        avatar_url: https://avatars.githubusercontent.com/u/278649?v=3
+        gravatar_id: ''
+        url: https://api.github.com/users/Naatan
+        html_url: https://github.com/Naatan
+        followers_url: https://api.github.com/users/Naatan/followers
+        following_url: https://api.github.com/users/Naatan/following{/other_user}
+        gists_url: https://api.github.com/users/Naatan/gists{/gist_id}
+        starred_url: https://api.github.com/users/Naatan/starred{/owner}{/repo}
+        subscriptions_url: https://api.github.com/users/Naatan/subscriptions
+        organizations_url: https://api.github.com/users/Naatan/orgs
+        repos_url: https://api.github.com/users/Naatan/repos
+        events_url: https://api.github.com/users/Naatan/events{/privacy}
+        received_events_url: https://api.github.com/users/Naatan/received_events
+        type: User
+        site_admin: false
+      content_type: application/octet-stream
+      state: uploaded
+      size: 4748
+      download_count: 38
+      created_at: '2014-10-06T17:39:03Z'
+      updated_at: '2014-10-06T17:39:08Z'
+      browser_download_url: https://github.com/Komodo/Mark-Text-Macro/releases/download/1.0/Mark-Text.komodotool
+    tarball_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/tarball/1.0
+    zipball_url: https://api.github.com/repos/Komodo/Mark-Text-Macro/zipball/1.0
+    body: Initial release
+  last_update: '2014-10-06T17:43:40Z'
+  is_github: true
+  readme:
+    content: ! "<h1>Mark-Text-Macro</h1>\n\n<p>Allows marking text in files by pressing
+      alt+M, persists across file close/reopen</p>\n\n<p>You can change the color
+      of the highlight by settings the pref via a macro (just delete it afterwards):</p>\n\n<p><code>js\nvar
+      hexColor = &quot;#FF0000&quot;;\nko.prefs.setLong(&#39;ext_marksel_color&#39;,
+      (&quot;require&quot; in window) ? \n                                        require(&quot;ko/color&quot;).RGBToBGR(hexColor)
+      : \n                                        xtk.color.hexToLong(hexColor));\n</code></p>\n"
+    name: README.md
+  download_count: 38
+CSS Color Palette:
+  id: 1736811
+  name: CSS Color Palette
+  full_name: mahonnaise/Komodo-Macros
+  owner:
+    login: mahonnaise
+    id: 533423
+    avatar_url: https://avatars.githubusercontent.com/u/533423?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/mahonnaise
+    html_url: https://github.com/mahonnaise
+    followers_url: https://api.github.com/users/mahonnaise/followers
+    following_url: https://api.github.com/users/mahonnaise/following{/other_user}
+    gists_url: https://api.github.com/users/mahonnaise/gists{/gist_id}
+    starred_url: https://api.github.com/users/mahonnaise/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/mahonnaise/subscriptions
+    organizations_url: https://api.github.com/users/mahonnaise/orgs
+    repos_url: https://api.github.com/users/mahonnaise/repos
+    events_url: https://api.github.com/users/mahonnaise/events{/privacy}
+    received_events_url: https://api.github.com/users/mahonnaise/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/mahonnaise/Komodo-Macros
+  description: Macros for Komodo and Komodo Edit
+  fork: false
+  url: https://api.github.com/repos/mahonnaise/Komodo-Macros
+  forks_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/forks
+  keys_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/teams
+  hooks_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/hooks
+  issue_events_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/issues/events{/number}
+  events_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/events
+  assignees_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/assignees{/user}
+  branches_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/branches{/branch}
+  tags_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/tags
+  blobs_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/git/refs{/sha}
+  trees_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/statuses/{sha}
+  languages_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/languages
+  stargazers_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/stargazers
+  contributors_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/contributors
+  subscribers_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/subscribers
+  subscription_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/subscription
+  commits_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/commits{/sha}
+  git_commits_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/git/commits{/sha}
+  comments_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/comments{/number}
+  issue_comment_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/issues/comments{/number}
+  contents_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/contents/{+path}
+  compare_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/merges
+  archive_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/downloads
+  issues_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/issues{/number}
+  pulls_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/pulls{/number}
+  milestones_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/milestones{/number}
+  notifications_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/labels{/name}
+  releases_url: https://api.github.com/repos/mahonnaise/Komodo-Macros/releases{/id}
+  created_at: '2011-05-12T04:45:01Z'
+  updated_at: '2013-11-21T21:24:49Z'
+  pushed_at: '2011-05-12T19:15:06Z'
+  git_url: git://github.com/mahonnaise/Komodo-Macros.git
+  ssh_url: git@github.com:mahonnaise/Komodo-Macros.git
+  clone_url: https://github.com/mahonnaise/Komodo-Macros.git
+  svn_url: https://github.com/mahonnaise/Komodo-Macros
+  homepage: ''
+  size: 92
+  stargazers_count: 3
+  watchers_count: 3
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 1
+  mirror_url: 
+  open_issues_count: 0
+  forks: 1
+  open_issues: 0
+  watchers: 3
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 1
+  subscribers_count: 1
+  title: CSS Color Palette
+  releases: []
+  last_update: '2011-05-12T19:15:06Z'
+  is_github: true
+  readme:
+    content: ! '<h1>Komodo Macros</h1>
+
+
+      <p>A set of macros for Komodo IDE/Edit.</p>
+
+
+      <h2>CSS Color Palette</h2>
+
+
+      <p>Generates/shows an auto-complete popup for the hex colors you&#39;ve listed
+      in the first comment block of your CSS file.</p>
+
+
+      <p><img src="http://i.imgur.com/xRkni.png" alt="CSS Color Palette demonstration"></p>
+
+
+      <p>After you&#39;ve added the macro to your toolbox, you can add a key binding
+      to execute it whenever you want. (I&#39;m using Ctrl+Alt+K.)</p>
+
+'
+    name: README.md
+  download_count: 0
+Markdown Preview:
+  id: 20256508
+  name: Markdown Preview
+  full_name: ivoryworks/komodo-markdown-aid
+  owner:
+    login: ivoryworks
+    id: 839673
+    avatar_url: https://avatars.githubusercontent.com/u/839673?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/ivoryworks
+    html_url: https://github.com/ivoryworks
+    followers_url: https://api.github.com/users/ivoryworks/followers
+    following_url: https://api.github.com/users/ivoryworks/following{/other_user}
+    gists_url: https://api.github.com/users/ivoryworks/gists{/gist_id}
+    starred_url: https://api.github.com/users/ivoryworks/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/ivoryworks/subscriptions
+    organizations_url: https://api.github.com/users/ivoryworks/orgs
+    repos_url: https://api.github.com/users/ivoryworks/repos
+    events_url: https://api.github.com/users/ivoryworks/events{/privacy}
+    received_events_url: https://api.github.com/users/ivoryworks/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/ivoryworks/komodo-markdown-aid
+  description: Markdown preview macro for Komodo IDE/Edit
+  fork: false
+  url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid
+  forks_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/forks
+  keys_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/teams
+  hooks_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/hooks
+  issue_events_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/issues/events{/number}
+  events_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/events
+  assignees_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/assignees{/user}
+  branches_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/branches{/branch}
+  tags_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/tags
+  blobs_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/git/refs{/sha}
+  trees_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/statuses/{sha}
+  languages_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/languages
+  stargazers_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/stargazers
+  contributors_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/contributors
+  subscribers_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/subscribers
+  subscription_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/subscription
+  commits_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/commits{/sha}
+  git_commits_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/git/commits{/sha}
+  comments_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/comments{/number}
+  issue_comment_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/issues/comments{/number}
+  contents_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/contents/{+path}
+  compare_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/merges
+  archive_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/downloads
+  issues_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/issues{/number}
+  pulls_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/pulls{/number}
+  milestones_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/milestones{/number}
+  notifications_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/labels{/name}
+  releases_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/releases{/id}
+  created_at: '2014-05-28T12:26:41Z'
+  updated_at: '2015-01-17T19:27:36Z'
+  pushed_at: '2014-06-03T16:13:15Z'
+  git_url: git://github.com/ivoryworks/komodo-markdown-aid.git
+  ssh_url: git@github.com:ivoryworks/komodo-markdown-aid.git
+  clone_url: https://github.com/ivoryworks/komodo-markdown-aid.git
+  svn_url: https://github.com/ivoryworks/komodo-markdown-aid
+  homepage: 
+  size: 1010
+  stargazers_count: 10
+  watchers_count: 10
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 2
+  mirror_url: 
+  open_issues_count: 0
+  forks: 2
+  open_issues: 0
+  watchers: 10
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 2
+  subscribers_count: 2
+  title: Markdown Preview
+  releases:
+  - url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/releases/354607
+    assets_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/releases/354607/assets
+    upload_url: https://uploads.github.com/repos/ivoryworks/komodo-markdown-aid/releases/354607/assets{?name}
+    html_url: https://github.com/ivoryworks/komodo-markdown-aid/releases/tag/v1.0.0
+    id: 354607
+    tag_name: v1.0.0
+    target_commitish: master
+    name: v1.0.0
+    draft: false
+    author:
+      login: ivoryworks
+      id: 839673
+      avatar_url: https://avatars.githubusercontent.com/u/839673?v=3
+      gravatar_id: ''
+      url: https://api.github.com/users/ivoryworks
+      html_url: https://github.com/ivoryworks
+      followers_url: https://api.github.com/users/ivoryworks/followers
+      following_url: https://api.github.com/users/ivoryworks/following{/other_user}
+      gists_url: https://api.github.com/users/ivoryworks/gists{/gist_id}
+      starred_url: https://api.github.com/users/ivoryworks/starred{/owner}{/repo}
+      subscriptions_url: https://api.github.com/users/ivoryworks/subscriptions
+      organizations_url: https://api.github.com/users/ivoryworks/orgs
+      repos_url: https://api.github.com/users/ivoryworks/repos
+      events_url: https://api.github.com/users/ivoryworks/events{/privacy}
+      received_events_url: https://api.github.com/users/ivoryworks/received_events
+      type: User
+      site_admin: false
+    prerelease: true
+    created_at: '2014-06-03T03:51:46Z'
+    published_at: '2014-06-03T16:13:14Z'
+    assets: []
+    tarball_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/tarball/v1.0.0
+    zipball_url: https://api.github.com/repos/ivoryworks/komodo-markdown-aid/zipball/v1.0.0
+    body: Initial release.
+  last_update: '2014-06-03T16:13:15Z'
+  is_github: true
+  readme:
+    content: ! '<h1>Komodo Markdown Aid</h1>
+
+
+      <h2>What is this?</h2>
+
+
+      <p>This is the Markdown editing and previewing macros for <a href="http://komodoide.com/">Komodo
+      IDE/Edit</a>.</p>
+
+
+      <p><img src="Screenshot.png" alt="Screenshot"></p>
+
+
+      <h2>Installing</h2>
+
+
+      <p>Download this project and Import to Komodo toolbox.<br>
+
+      (Select &quot;Import Folder From File System&quot; in Toolbox menu).</p>
+
+
+      <h2>Usage</h2>
+
+
+      <ol>
+
+      <li>Create or Open MarkdownFile(.md).</li>
+
+      <li>Edit and Save.</li>
+
+      </ol>
+
+
+      <p>Then, preview browser opens.</p>
+
+
+      <h2>License</h2>
+
+
+      <p>This software is released under the MIT License, see LICENSE.txt.</p>
+
+
+      <h2>Credits</h2>
+
+
+      <p>Thanx! <a href="http://strapdownjs.com/">strapdown.js</a>.<br>
+
+      GitHub :<a href="https://github.com/arturadib/strapdown">https://github.com/arturadib/strapdown</a></p>
+
+'
+    name: README.md
+  download_count: 0
+JSEval:
+  id: 21824980
+  name: JSEval
+  full_name: tenbits/komodo-macro-jseval
+  owner:
+    login: tenbits
+    id: 550353
+    avatar_url: https://avatars.githubusercontent.com/u/550353?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/tenbits
+    html_url: https://github.com/tenbits
+    followers_url: https://api.github.com/users/tenbits/followers
+    following_url: https://api.github.com/users/tenbits/following{/other_user}
+    gists_url: https://api.github.com/users/tenbits/gists{/gist_id}
+    starred_url: https://api.github.com/users/tenbits/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/tenbits/subscriptions
+    organizations_url: https://api.github.com/users/tenbits/orgs
+    repos_url: https://api.github.com/users/tenbits/repos
+    events_url: https://api.github.com/users/tenbits/events{/privacy}
+    received_events_url: https://api.github.com/users/tenbits/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/tenbits/komodo-macro-jseval
+  description: Evaluates selection and inserts output back into the editor
+  fork: false
+  url: https://api.github.com/repos/tenbits/komodo-macro-jseval
+  forks_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/forks
+  keys_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/teams
+  hooks_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/hooks
+  issue_events_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/issues/events{/number}
+  events_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/events
+  assignees_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/assignees{/user}
+  branches_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/branches{/branch}
+  tags_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/tags
+  blobs_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/git/refs{/sha}
+  trees_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/statuses/{sha}
+  languages_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/languages
+  stargazers_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/stargazers
+  contributors_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/contributors
+  subscribers_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/subscribers
+  subscription_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/subscription
+  commits_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/commits{/sha}
+  git_commits_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/git/commits{/sha}
+  comments_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/comments{/number}
+  issue_comment_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/issues/comments{/number}
+  contents_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/contents/{+path}
+  compare_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/merges
+  archive_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/downloads
+  issues_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/issues{/number}
+  pulls_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/pulls{/number}
+  milestones_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/milestones{/number}
+  notifications_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/labels{/name}
+  releases_url: https://api.github.com/repos/tenbits/komodo-macro-jseval/releases{/id}
+  created_at: '2014-07-14T15:32:57Z'
+  updated_at: '2014-07-14T15:40:51Z'
+  pushed_at: '2014-07-14T15:41:56Z'
+  git_url: git://github.com/tenbits/komodo-macro-jseval.git
+  ssh_url: git@github.com:tenbits/komodo-macro-jseval.git
+  clone_url: https://github.com/tenbits/komodo-macro-jseval.git
+  svn_url: https://github.com/tenbits/komodo-macro-jseval
+  homepage: 
+  size: 112
+  stargazers_count: 0
+  watchers_count: 0
+  language: JavaScript
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: JSEval
+  releases: []
+  last_update: '2014-07-14T15:41:56Z'
+  is_github: true
+  readme:
+    content: ! '<h3><em>Komodo Macro</em> JSEval</h3>
+
+
+      <p>Evaluates JavaScript code and inserts output back into the editor or geckos
+      console. Is useful not only for the JS development, but also has generic advantages:</p>
+
+
+      <ul>
+
+      <li><p>In-editor calculator</p>
+
+
+      <p><code>javascript
+
+      // select expression, e.g
+
+      1024 * .3
+
+      // hit hotkey, and you&#39;ll get result
+
+      307.2
+
+      </code></p></li>
+
+      <li><p>In-editor helper tool. E.g. you want to find out the charcode of the
+      letter <code>A</code>. No need to google it, just use the Javascript:</p>
+
+
+      <p><code>javascript
+
+      // type expression
+
+      &#39;A&#39;.charCodeAt(0)
+
+      // select and press the hotkey:
+
+      65
+
+      </code></p></li>
+
+      <li><p>Moreover, you get the full power of the Javascript: Variables, Functions,
+      etc:</p>
+
+
+      <p>```javascript
+
+      var json = { a: &#39;Foo&#39;, b: &#39;Baz&#39; };
+
+      Object.keys(json);</p>
+
+
+      <p>// select block, press hotkey, get the result:
+
+      [&quot;a&quot;, &quot;b&quot;]
+
+      ```</p></li>
+
+      </ul>
+
+
+      <p>Contains also some snippets:
+
+      - Existential operator</p>
+
+
+      <pre><code>```javascript
+
+      var a = baz?.foo?.qux
+
+
+      // place cursor after `qux`, press the hotkey and macro will match the pattern
+      and will transform the expression into:
+
+      var a = baz &amp;&amp; baz.foo &amp;&amp; baz.foo.qux
+
+      ```
+
+      </code></pre>
+
+
+      <ul>
+
+      <li><p>Default value setter</p>
+
+
+      <p>```javascript
+
+      foo!.baz</p>
+
+
+      <p>// place cursor after <code>baz</code>, press the hotkey and macro transform
+      the expression into:
+
+      foo.baz || (foo.baz = )
+
+      ```</p></li>
+
+      <li><p>Function creation</p>
+
+
+      <p>```javascript
+
+      (a, b)</p>
+
+
+      <p>// place cursor after <code>b</code>, press the hotkey and get:
+
+      function (a, b) {  }
+
+      ```</p></li>
+
+      <li><p><em>to be continue</em></p></li>
+
+      </ul>
+
+
+      <h4>Use gecko console</h4>
+
+
+      <p>Any code which contains <code>console.log</code> will use geckos console</p>
+
+
+      <h5>Hotkey</h5>
+
+
+      <p><em>Default hotkey (windows): <code>Ctrl+Alt+Enter</code></em></p>
+
+
+      <hr>
+
+
+      <p>(c) MIT</p>
+
+'
+    name: readme.md
+  download_count: 0
+Copy Find Results:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: This macro will allow you to copy all of the find results to your clipboard.
+  readme:
+    content: ! '<h1>Copy Find Results to Clipboard This macro will allow you to copy
+      all of the find results to your clipboard.</h1>
+
+
+      <h2>Usage 1. Install the Macro (drag the .komodotool into your toolbox) 2. Assign
+      a Keybind to your macro (right click &gt; Properties &gt; Key Binding) 3. Search
+      for some text across your files and execute the macro with your keybinding.</h2>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/find_results_copy.js
+  created_at: 2014-03-24
+  updated_at: 2014-03-24
+  title: Copy Find Results
+  name: Copy Find Results
+  releases: false
+  last_update: '2014-03-24T00:00:00+00:00'
+  is_github: false
+Open Terminal Here:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/Naatan
+  description: Adds an "Open Terminal Here" menu item to folder items in the Places
+    widget
+  readme:
+    content: ! '<p>Adds an &quot;Open Terminal Here&quot; menu item to folder items
+      in the Places widget</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/Open_Terminal_Here.js
+  created_at: 2014-03-24
+  updated_at: 2014-03-24
+  title: Open Terminal Here
+  name: Open Terminal Here
+  releases: false
+  last_update: '2014-03-24T00:00:00+00:00'
+  is_github: false
+Create Snippet From Text:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Create a snippet from selected text, add a name and automatically open
+    properties to add keybinding.
+  readme:
+    content: ! '<p>Create a snippet from selected text, add a name and automatically
+      open properties to add keybinding.
+
+      A popup UI allows creation of the snippet name</p>
+
+
+      <h2>Usage 1. Install the Macro (drag the .komodotool into your toolbox) 2. Assign
+      a Keybind to your macro (right click &gt; Properties &gt; Key Binding) 3. Select
+      some text and execute the macro with your keybinding.</h2>
+
+
+      <p>For more info check the <a href="http://komodoide.com/blog/2014-03/quickly-adding-custom-snippets/">Quicky
+      Adding Custom Snippets</a> blog.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js
+  created_at: 2014-03-24
+  updated_at: 2014-03-24
+  title: Create Snippet From Text
+  name: Create Snippet From Text
+  releases: false
+  last_update: '2014-03-24T00:00:00+00:00'
+  is_github: false
+Magicalhobo's Macro's:
+  id: 3961382
+  name: Magicalhobo's Macro's
+  full_name: magicalhobo/KomodoMacros
+  owner:
+    login: magicalhobo
+    id: 304341
+    avatar_url: https://avatars.githubusercontent.com/u/304341?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/magicalhobo
+    html_url: https://github.com/magicalhobo
+    followers_url: https://api.github.com/users/magicalhobo/followers
+    following_url: https://api.github.com/users/magicalhobo/following{/other_user}
+    gists_url: https://api.github.com/users/magicalhobo/gists{/gist_id}
+    starred_url: https://api.github.com/users/magicalhobo/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/magicalhobo/subscriptions
+    organizations_url: https://api.github.com/users/magicalhobo/orgs
+    repos_url: https://api.github.com/users/magicalhobo/repos
+    events_url: https://api.github.com/users/magicalhobo/events{/privacy}
+    received_events_url: https://api.github.com/users/magicalhobo/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/magicalhobo/KomodoMacros
+  description: Custom Komodo Edit Macros
+  fork: false
+  url: https://api.github.com/repos/magicalhobo/KomodoMacros
+  forks_url: https://api.github.com/repos/magicalhobo/KomodoMacros/forks
+  keys_url: https://api.github.com/repos/magicalhobo/KomodoMacros/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/magicalhobo/KomodoMacros/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/magicalhobo/KomodoMacros/teams
+  hooks_url: https://api.github.com/repos/magicalhobo/KomodoMacros/hooks
+  issue_events_url: https://api.github.com/repos/magicalhobo/KomodoMacros/issues/events{/number}
+  events_url: https://api.github.com/repos/magicalhobo/KomodoMacros/events
+  assignees_url: https://api.github.com/repos/magicalhobo/KomodoMacros/assignees{/user}
+  branches_url: https://api.github.com/repos/magicalhobo/KomodoMacros/branches{/branch}
+  tags_url: https://api.github.com/repos/magicalhobo/KomodoMacros/tags
+  blobs_url: https://api.github.com/repos/magicalhobo/KomodoMacros/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/magicalhobo/KomodoMacros/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/magicalhobo/KomodoMacros/git/refs{/sha}
+  trees_url: https://api.github.com/repos/magicalhobo/KomodoMacros/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/magicalhobo/KomodoMacros/statuses/{sha}
+  languages_url: https://api.github.com/repos/magicalhobo/KomodoMacros/languages
+  stargazers_url: https://api.github.com/repos/magicalhobo/KomodoMacros/stargazers
+  contributors_url: https://api.github.com/repos/magicalhobo/KomodoMacros/contributors
+  subscribers_url: https://api.github.com/repos/magicalhobo/KomodoMacros/subscribers
+  subscription_url: https://api.github.com/repos/magicalhobo/KomodoMacros/subscription
+  commits_url: https://api.github.com/repos/magicalhobo/KomodoMacros/commits{/sha}
+  git_commits_url: https://api.github.com/repos/magicalhobo/KomodoMacros/git/commits{/sha}
+  comments_url: https://api.github.com/repos/magicalhobo/KomodoMacros/comments{/number}
+  issue_comment_url: https://api.github.com/repos/magicalhobo/KomodoMacros/issues/comments{/number}
+  contents_url: https://api.github.com/repos/magicalhobo/KomodoMacros/contents/{+path}
+  compare_url: https://api.github.com/repos/magicalhobo/KomodoMacros/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/magicalhobo/KomodoMacros/merges
+  archive_url: https://api.github.com/repos/magicalhobo/KomodoMacros/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/magicalhobo/KomodoMacros/downloads
+  issues_url: https://api.github.com/repos/magicalhobo/KomodoMacros/issues{/number}
+  pulls_url: https://api.github.com/repos/magicalhobo/KomodoMacros/pulls{/number}
+  milestones_url: https://api.github.com/repos/magicalhobo/KomodoMacros/milestones{/number}
+  notifications_url: https://api.github.com/repos/magicalhobo/KomodoMacros/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/magicalhobo/KomodoMacros/labels{/name}
+  releases_url: https://api.github.com/repos/magicalhobo/KomodoMacros/releases{/id}
+  created_at: 2012-04-07
+  updated_at: 2012-04-07
+  pushed_at: '2015-02-22T19:49:47Z'
+  git_url: git://github.com/magicalhobo/KomodoMacros.git
+  ssh_url: git@github.com:magicalhobo/KomodoMacros.git
+  clone_url: https://github.com/magicalhobo/KomodoMacros.git
+  svn_url: https://github.com/magicalhobo/KomodoMacros
+  homepage: ''
+  size: 564
+  stargazers_count: 2
+  watchers_count: 2
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: false
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 2
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 2
+  readme:
+    content: ! '<p>Includes the macro&#39;s:</p>
+
+
+      <ul>
+
+      <li>Duplicate Selection Up/Down</li>
+
+      <li>Search By Selection</li>
+
+      <li>Transpose Selection</li>
+
+      </ul>
+
+'
+  title: Magicalhobo's Macro's
+  releases: []
+  last_update: '2015-02-22T19:49:47Z'
+  is_github: true
+  download_count: 0
+Wrap Text:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Wrap the editor selection with arbitrary text. Easily enclose text
+    with HTML tags or stringify a selection.
+  readme:
+    content: ! '<p>Wrap the editor selection with arbitrary text. Easily enclose text
+      with HTML tags or stringify a selection.</p>
+
+
+      <h2>Usage Execute the macro and then just start typing the wrapper name.</h2>
+
+
+      <p>This is an on demand macro that will wrap the selected editor text with arbitrary
+      text. For HTML or XML, it will also add the opening/closing tags.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/text_wrapper.js
+  created_at: 2014-02-25
+  updated_at: 2014-02-25
+  title: Wrap Text
+  name: Wrap Text
+  releases: false
+  last_update: '2014-02-25T00:00:00+00:00'
+  is_github: false
+PHPDoc and JSDoc:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/toddw-as
+  description: Automatically adds PHPdoc (or JSDoc) comments, including a summary,
+    to your PHP (or JavaScript) file when you type '/**' followed by the ENTER key.
+  readme:
+    content: ! "<p>Automatically adds phpdoc comments to your php file when you type
+      /** followed by the ENTER key.</p>\n\n<h2>Usage</h2>\n\n<p>Currently you can
+      use the following snippets to add params to your auto completions (these will
+      have to be located in the PHP abbreviations folder):\n-   phpdoc_function -
+      \  phpdoc_class -   phpdoc_var\nYou will have to include the star symbol (*)
+      in front of every line and you&#39;ll probably want to check the \\&quot;Maintain
+      indentation context after insertion\\&quot; option.\nContributors ---------\n
+      * Todd Whiteman\n * Michal Kocarek (http://brainbox.cz/)\n * Alexander Kavoun
+      (http://takkmoil.com/)</p>\n"
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/phpdoc_jsdoc_autocompletion.js
+  created_at: 2009-02-05
+  updated_at: 2014-02-06
+  title: PHPDoc and JSDoc
+  name: PHPDoc and JSDoc
+  releases: false
+  last_update: '2014-02-06T00:00:00+00:00'
+  is_github: false
+Incremental Numbering:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Make a column selection in the editor, then for each column insert
+    a number and have the number incremented for each subsequent row in the selection.
+  readme:
+    content: ! '<p>Make a column selection in the editor, then for each column insert
+      a number and have the number incremented for each subsequent row in the selection.
+
+      For more information see the <a href="http://komodoide.com/blog/2014-02/adding-new-functionality-to-komodo-with-macros/">Adding
+      Functionality to Komodo With Macros</a> blog</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/column_incremental_numbering.js
+  created_at: 2014-02-06
+  updated_at: 2014-02-06
+  title: Incremental Numbering
+  name: Incremental Numbering
+  releases: false
+  last_update: '2014-02-06T00:00:00+00:00'
+  is_github: false
+Swap Assignment:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Switch a variable assignment (or argument) around, so foo = bar will
+    become bar = foo.
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/swap_assignment.py
+  created_at: 2014-04-25
+  updated_at: 2014-04-25
+  title: Swap Assignment
+  name: Swap Assignment
+  releases: false
+  last_update: '2014-04-25T00:00:00+00:00'
+  is_github: false
+Variable Dumper:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Debug helper - generates a print statement from the current word or
+    selection.
+  readme:
+    content: ! '<p>Generates a print/debugging statement for the selection, or current
+      word. The generated statement is always created on a separate new line below
+      the current line.
+
+      This is an on demand macro, best used with a keybinding (Ctrl+. for example).</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/variable_dumper.js
+  created_at: 2014-03-21
+  updated_at: 2014-03-21
+  title: Variable Dumper
+  name: Variable Dumper
+  releases: false
+  last_update: '2014-03-21T00:00:00+00:00'
+  is_github: false
+SCC Annotate:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Display source code control (SCC) line annotations in the left editor
+    margin.
+  readme:
+    content: ! '<p>Macro shows source code control annotate information in the left
+      scintilla margin. Running the macro a second time removes the annotation margin.
+
+      This is an on demand macro, best used with a keybinding (Ctrl+K, Ctrl+A. for
+      example).</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/scc_annotate.js
+  created_at: 2014-05-19
+  updated_at: 2014-05-19
+  title: SCC Annotate
+  name: SCC Annotate
+  releases: false
+  last_update: '2014-05-19T00:00:00+00:00'
+  is_github: false
+Automagic Snippets From Text:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Create a snippet from selected text, add a name and automatically open
+    properties to add keybinding.
+  readme:
+    content: ! '<p>Create a snippet from selected text, add a name and automatically
+      open properties to add keybinding.
+
+      For more info check the <a href="http://komodoide.com/blog/2014-03/quickly-adding-custom-snippets/">Quicky
+      Adding Custom Snippets</a> blog.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js
+  created_at: 2014-03-05
+  updated_at: 2014-03-05
+  title: Automagic Snippets From Text
+  name: Automagic Snippets From Text
+  releases: false
+  last_update: '2014-03-05T00:00:00+00:00'
+  is_github: false
+Byte or Char Position:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Show the Byte or Char position of your cursor in the Statusbar beside
+    Ln and Col.
+  readme:
+    content: ! '<p>Show the Byte or Char position of your cursor in the Statusbar
+      beside Ln and Col.
+
+      For more info check the <a href="http://komodoide.com/blog/2014-03/show-absolute-position-in-statusbar/">Absolute
+      Cursor Position in Statusbar</a> blog.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js
+  created_at: 2014-03-31
+  updated_at: 2014-03-31
+  title: Byte or Char Position
+  name: Byte or Char Position
+  releases: false
+  last_update: '2014-03-31T00:00:00+00:00'
+  is_github: false
+Img Tag Dimensions:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Execute the macro insdie an img tag in an html file, which the src
+    attribute filled in. The macro will load the image and input the height and width
+    of the image attributes with the correct dimensions.
+  readme:
+    content: ! '<p>Execute the macro insdie an img tag in an html file, which the
+      src attribute filled in. The macro will load the image and input the height
+      and width of the image attributes with the correct dimensions</p>
+
+
+      <p>For more info check the <a href="http://komodoide.com/blog/2014-03/quickly-adding-custom-snippets/">Quicky
+      Adding Custom Snippets</a> blog.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/img_dimensions.js
+  created_at: 2014-05-05
+  updated_at: 2014-05-05
+  title: Img Tag Dimensions
+  name: Img Tag Dimensions
+  releases: false
+  last_update: '2014-05-05T00:00:00+00:00'
+  is_github: false
+SSH Commands:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Run this macro with a remote file open to execute an SSH command on
+    the remote server.
+  readme:
+    content: ! '<p>Run this macro with a remote file open to execute an SSH command
+      on the remote server.
+
+      For more info check the <a href="http://komodoide.com/blog/2014-06/run-ssh-command-from-komodo">Run
+      SSH Commands from Komodo</a> blog.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/ssh_commands.js
+  created_at: 2014-06-23
+  updated_at: 2014-06-23
+  title: SSH Commands
+  name: SSH Commands
+  releases: false
+  last_update: '2014-06-23T00:00:00+00:00'
+  is_github: false
+Auto Allman Braces:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/Naatan
+  description: Auto completes curly braces to start on a new line, Allman style -
+    experimental
+  readme:
+    content: ! "<p>Essentially what this macro does is turn;\n<div class=\"centered\">\n
+      \   <img src=\"/images/blog/2014-05/braces-default.gif\" style=\"vertical-align:
+      middle\">\n    into\n    <img src=\"/images/blog/2014-05/braces-allman.gif\"
+      style=\"vertical-align: middle\">\n</div>\nTyping speed aside in these gifs,
+      the productivity gain here is one less keypress. It won&#39;t make a huge difference
+      but it&#39;s the little things that make you more productive.\nIn case it&#39;s
+      not clear what is happening in those gifs, normally when you would want to write
+      in allman step you would essentially go through the following steps\nThanks
+      to &quot;woodpile&quot; from the Komodo forums for <a href=\"http://forum.komodoide.com/t/function-expression-structure/242\">suggesting
+      this functionality</a>.</p>\n"
+  homepage: https://gist.github.com/Naatan/e82011550823421e7013
+  raw_url: https://gist.github.com/Naatan/e82011550823421e7013
+  created_at: 2014-05-09
+  updated_at: 2014-05-09
+  title: Auto Allman Braces
+  name: Auto Allman Braces
+  releases: false
+  last_update: '2014-05-09T00:00:00+00:00'
+  is_github: false
+Transpose:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Run this macro to swaps the positions of the character at the current
+    caret position and the next character in the line.
+  readme:
+    content: ! '<p>Run this macro to swaps the positions of the character at the current
+      caret position and the next character in the line.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/transpose.js
+  created_at: 2014-05-26
+  updated_at: 2014-05-26
+  title: Transpose
+  name: Transpose
+  releases: false
+  last_update: '2014-05-26T00:00:00+00:00'
+  is_github: false
+Select Brace Contents:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/Naatan
+  description: Allows easy selection of the text within xml/html braces
+  readme:
+    content: ! '<p>Let&#39;s say you have the following snippet of html:
+
+      <code>&lt;strong&gt;This text is bold&lt;/strong&gt;</code>
+
+      With this macro you can simply put your cursor anywhere within the braces and
+      execute the macro to select the contents of the braces (ie. the text)
+
+      This macro is very plain and fairly dumb, it will likely not be able to select
+      complex values (eg. sub-nodes). Feel free to fork and extend.
+
+      It currently only covers html &quot;braces&quot; (ok, technically not braces),
+      but support for other delimiters should be relatively easy to add.</p>
+
+'
+  raw_url: https://gist.github.com/Naatan/99abd413394f10dd994d
+  created_at: 2014-06-02
+  updated_at: 2014-06-02
+  title: Select Brace Contents
+  name: Select Brace Contents
+  releases: false
+  last_update: '2014-06-02T00:00:00+00:00'
+  is_github: false
+Brace Wrap Selection:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Automatically adds braces around the editor text selection when a brace
+    character ([{'\ is pressed.
+  readme:
+    content: ! '<p>Let&#39;s say you have the following text, with the bold text selected:
+
+      <code>This &lt;strong&gt;text is selected&lt;/strong&gt; in the middle.</code>
+
+      Typing the left-paren character ( will wrap the selected text in braces, transforming
+      the text into:
+
+      <code>This &lt;strong&gt;(text is selected)&lt;/strong&gt; in the middle.</code>
+
+      This is best used as a startup macro, allowing brace wrapping on all editor
+      selections.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/brace_wrap_selection.js
+  created_at: 2014-06-06
+  updated_at: 2014-06-06
+  title: Brace Wrap Selection
+  name: Brace Wrap Selection
+  releases: false
+  last_update: '2014-06-06T00:00:00+00:00'
+  is_github: false
+Execute As PHP:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/Naatan
+  description: Quickly execute a snippet of code as PHP, the snippet can be an (unsaved)
+    file or simply the text you currently have selected
+  raw_url: https://gist.github.com/Naatan/7375244
+  created_at: 2014-06-16
+  updated_at: 2014-06-16
+  title: Execute As PHP
+  name: Execute As PHP
+  releases: false
+  last_update: '2014-06-16T00:00:00+00:00'
+  is_github: false
+CamelCase:
+  owner:
+    login: smelzo
+    html_url: https://github.com/smelzo
+  description: Convert/Reconvert selection/line in camelCase
+  raw_url: https://gist.github.com/smelzo/c66e411ae91b3fdf737e
+  created_at: 2014-06-29
+  updated_at: 2014-06-29
+  title: CamelCase
+  name: CamelCase
+  releases: false
+  last_update: '2014-06-29T00:00:00+00:00'
+  is_github: false
+Worspace Save/Restore Tool:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Save workspace (all open files) to a file.  Does not have a project
+    context, it simply saves all files that are open for easy reopning later.
+  readme:
+    content: ! '<p>Save workspace (all open files) to a file.  Does not have a project
+      context,it simply saves all files that are open for easy reopning later.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/workspace_util.js
+  created_at: 2014-05-26
+  updated_at: 2014-05-26
+  title: Worspace Save/Restore Tool
+  name: Worspace Save/Restore Tool
+  releases: false
+  last_update: '2014-05-26T00:00:00+00:00'
+  is_github: false
+Print to Output Pane:
+  owner:
+    login: cgchoffman
+    gravatar_id: d1a00b9762070a83e9f9dac8f615bb3d
+    html_url: https://github.com/cgchoffman
+  description: Pass input to a function to print to Komodo Output pane.
+  readme:
+    content: ! '<p>Pass input to a function to print to Komodo Output pane.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/print_to_output_pane.js
+  created_at: 2014-08-18
+  updated_at: 2014-08-18
+  title: Print to Output Pane
+  name: Print to Output Pane
+  releases: false
+  last_update: '2014-08-18T00:00:00+00:00'
+  is_github: false
+Alternative Location:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Open the current file at an alternative location.
+  readme:
+    content: ! '<p>Adds an editor tab context menuitem for opening a komodo file in
+      an alternative location. The alternative locations are read from a <em>locations.ini</em>
+      configuration file in the Komodo profile directory.</p>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/alternative_location.js
+  created_at: 2014-07-21
+  updated_at: 2014-07-21
+  title: Alternative Location
+  name: Alternative Location
+  releases: false
+  last_update: '2014-07-21T00:00:00+00:00'
+  is_github: false
+Comment Toggle:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Toggle comment lines on/off in the editor.
+  readme:
+    content: ! '<p>Will toggle the comments for the selected editor lines (or current
+      line). I use Ctrl+3 (overriding the default cmd<em>comment keybinding) to invoke
+      this macro, then I never need to use Ctrl+2 (cmd</em>uncomment) at all.</p>
+
+
+      <h2>Usage 1. Install the Macro (drag the .komodotool into your toolbox) 2. Assign
+      a Keybind to your macro (right click &gt; Properties &gt; Key Binding) 3. Execute
+      the macro with your keybinding.</h2>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/comment_toggle.py
+  created_at: 2014-09-03
+  updated_at: 2014-09-03
+  title: Comment Toggle
+  name: Comment Toggle
+  releases: false
+  last_update: '2014-09-03T00:00:00+00:00'
+  is_github: false
+Multi Row Editor Tabs:
+  owner:
+    login: toddw-as
+    gravatar_id: fbf0600881da69934bad33192694d484
+    html_url: https://github.com/toddw-as
+  description: Multi-row editor tabs
+  readme:
+    content: ! '<p>Allows multiple rows of Komodo editor tabs. When there is not enough
+      horizontal room, the tabs will wrap around onto the next line. It allows you
+      to see all editor tabs at a glance.</p>
+
+
+      <h2>Usage 1. Install the Macro (drag the .komodotool into your toolbox) 2. Set
+      macro to trigger on the Komodo startup event (right click &gt; Properties &gt;
+      Triggers) 3. Restart Komodo.</h2>
+
+'
+  homepage: https://github.com/Komodo/macros
+  raw_url: https://github.com/Komodo/macros/blob/master/editor_tabs_multiple_rows.js
+  created_at: 2014-10-21
+  updated_at: 2014-10-21
+  title: Multi Row Editor Tabs
+  name: Multi Row Editor Tabs
+  releases: false
+  last_update: '2014-10-21T00:00:00+00:00'
+  is_github: false
+Open on GitHub:
+  owner:
+    login: Naatan
+    gravatar_id: 0bba0ddcdbb7fa3de8455389251e2f6d
+    html_url: https://github.com/Naatan
+  description: Opens current file location on GitHub (requires Komodo IDE 9)
+  raw_url: https://gist.github.com/Naatan/944d154f256558728c41
+  created_at: 2015-01-30
+  updated_at: 2015-01-30
+  title: Open on GitHub
+  name: Open on GitHub
+  releases: false
+  last_update: '2015-01-30T00:00:00+00:00'
+  is_github: false

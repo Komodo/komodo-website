@@ -17,6 +17,8 @@ activate :contentful do |cntf|
                          authors: '1kUEViTN4EmGiEaaeC6ouY' }
 end
 
+pageable = {}
+
 if data.has_key? "blog"
   data.blog.posts.each do |id, post|
     if /^\d{4}-\d{2}-/.match(post["slug"])
@@ -26,16 +28,51 @@ if data.has_key? "blog"
     proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post }, ignore: true
   end
   
-  activate :pagination do
-    pageable_set :blog do
-      data.blog.posts.sort_by { |k,v| v["date"] }.reverse
-    end
-  end
+  pageable["blog"] = data.blog.posts.sort_by { |k,v| v["date"] }.reverse
   
   tags().each() do |name,posts|
     proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts }, ignore: true
   end
 end
+
+if data.has_key? "resources"
+  all = []
+  
+  categories = {}
+  data.resources.categories.each() do |category|
+    categories[category.resource[0..-5]] = category
+  end
+  
+  data.resources.each() do |category,resources|
+    if category == 'categories'
+      next
+    end
+    
+    pageable[category] = resources.values.sort_by { |v,k| v["last_update"] }.reverse
+    
+    resources.each() do |title,resource|
+      slug = get_resource_slug(resource)
+      resource["category"] = categories[category]
+      resources[title] = resource
+      proxy "/resources/#{category}/#{slug}/index.html", "templates/proxy/resource.html", :locals => { :resource => resource, :category => categories[category] }, ignore: true
+    end
+    
+    all += resources.values
+  end
+  
+  pageable["resources"] = all.sort_by { |v,k| v["last_update"] }.reverse
+end
+
+activate :pagination do
+  pageable.each() do |name,data|
+    pageable_set name do
+      data
+    end
+  end
+end
+
+activate :komodo_resources
+
 activate :directory_indexes
 
 configure :development do
@@ -55,7 +92,6 @@ set :layouts_dir, "templates/layouts"
 set :partials_dir, 'templates/partials'
 
 page "*", :layout => "default"
-page "/blog/*", :layout => "blog"
 
 set :title, "Komodo IDE"
 

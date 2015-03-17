@@ -1,0 +1,495 @@
+---
+Drupal Snippet Collection:
+  id: 2706160
+  name: Drupal Snippet Collection
+  full_name: bug273/Drupal_snippets_komodo
+  owner:
+    login: bug273
+    id: 370630
+    avatar_url: https://avatars.githubusercontent.com/u/370630?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/bug273
+    html_url: https://github.com/bug273
+    followers_url: https://api.github.com/users/bug273/followers
+    following_url: https://api.github.com/users/bug273/following{/other_user}
+    gists_url: https://api.github.com/users/bug273/gists{/gist_id}
+    starred_url: https://api.github.com/users/bug273/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/bug273/subscriptions
+    organizations_url: https://api.github.com/users/bug273/orgs
+    repos_url: https://api.github.com/users/bug273/repos
+    events_url: https://api.github.com/users/bug273/events{/privacy}
+    received_events_url: https://api.github.com/users/bug273/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/bug273/Drupal_snippets_komodo
+  description: Drupal snippets for komodo IDE
+  fork: false
+  url: https://api.github.com/repos/bug273/Drupal_snippets_komodo
+  forks_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/forks
+  keys_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/teams
+  hooks_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/hooks
+  issue_events_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/issues/events{/number}
+  events_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/events
+  assignees_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/assignees{/user}
+  branches_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/branches{/branch}
+  tags_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/tags
+  blobs_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/git/refs{/sha}
+  trees_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/statuses/{sha}
+  languages_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/languages
+  stargazers_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/stargazers
+  contributors_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/contributors
+  subscribers_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/subscribers
+  subscription_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/subscription
+  commits_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/commits{/sha}
+  git_commits_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/git/commits{/sha}
+  comments_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/comments{/number}
+  issue_comment_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/issues/comments{/number}
+  contents_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/contents/{+path}
+  compare_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/merges
+  archive_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/downloads
+  issues_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/issues{/number}
+  pulls_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/pulls{/number}
+  milestones_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/milestones{/number}
+  notifications_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/labels{/name}
+  releases_url: https://api.github.com/repos/bug273/Drupal_snippets_komodo/releases{/id}
+  created_at: '2011-11-04T00:12:18Z'
+  updated_at: '2014-02-11T13:40:04Z'
+  pushed_at: '2011-11-09T21:16:58Z'
+  git_url: git://github.com/bug273/Drupal_snippets_komodo.git
+  ssh_url: git@github.com:bug273/Drupal_snippets_komodo.git
+  clone_url: https://github.com/bug273/Drupal_snippets_komodo.git
+  svn_url: https://github.com/bug273/Drupal_snippets_komodo
+  homepage: ''
+  size: 104
+  stargazers_count: 2
+  watchers_count: 2
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 2
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Drupal Snippet Collection
+  releases: []
+  last_update: '2011-11-09T21:16:58Z'
+  is_github: true
+  readme:
+    content: ! "All those plugins are to be used in Komodo IDE for edit, create or
+      modified Drupal modules or tpl files. \nThey can be configured with a shortcut
+      for be quick accessed.\nTo install the snippets you must clone the repos and
+      import them with the komodo's tool interface.\nAll the snippets were based on
+      the snipMate compilation, so, \nI think they are free to be shared.\n\n"
+    name: README
+  download_count: 0
+Web Basics Snippet Collection:
+  id: 9487581
+  name: Web Basics Snippet Collection
+  full_name: tlinkner/komodo-web-basics
+  owner:
+    login: tlinkner
+    id: 1004863
+    avatar_url: https://avatars.githubusercontent.com/u/1004863?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/tlinkner
+    html_url: https://github.com/tlinkner
+    followers_url: https://api.github.com/users/tlinkner/followers
+    following_url: https://api.github.com/users/tlinkner/following{/other_user}
+    gists_url: https://api.github.com/users/tlinkner/gists{/gist_id}
+    starred_url: https://api.github.com/users/tlinkner/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/tlinkner/subscriptions
+    organizations_url: https://api.github.com/users/tlinkner/orgs
+    repos_url: https://api.github.com/users/tlinkner/repos
+    events_url: https://api.github.com/users/tlinkner/events{/privacy}
+    received_events_url: https://api.github.com/users/tlinkner/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/tlinkner/komodo-web-basics
+  description: HTML/CSS/Javascript snippets for Komodo Edit
+  fork: false
+  url: https://api.github.com/repos/tlinkner/komodo-web-basics
+  forks_url: https://api.github.com/repos/tlinkner/komodo-web-basics/forks
+  keys_url: https://api.github.com/repos/tlinkner/komodo-web-basics/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/tlinkner/komodo-web-basics/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/tlinkner/komodo-web-basics/teams
+  hooks_url: https://api.github.com/repos/tlinkner/komodo-web-basics/hooks
+  issue_events_url: https://api.github.com/repos/tlinkner/komodo-web-basics/issues/events{/number}
+  events_url: https://api.github.com/repos/tlinkner/komodo-web-basics/events
+  assignees_url: https://api.github.com/repos/tlinkner/komodo-web-basics/assignees{/user}
+  branches_url: https://api.github.com/repos/tlinkner/komodo-web-basics/branches{/branch}
+  tags_url: https://api.github.com/repos/tlinkner/komodo-web-basics/tags
+  blobs_url: https://api.github.com/repos/tlinkner/komodo-web-basics/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/tlinkner/komodo-web-basics/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/tlinkner/komodo-web-basics/git/refs{/sha}
+  trees_url: https://api.github.com/repos/tlinkner/komodo-web-basics/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/tlinkner/komodo-web-basics/statuses/{sha}
+  languages_url: https://api.github.com/repos/tlinkner/komodo-web-basics/languages
+  stargazers_url: https://api.github.com/repos/tlinkner/komodo-web-basics/stargazers
+  contributors_url: https://api.github.com/repos/tlinkner/komodo-web-basics/contributors
+  subscribers_url: https://api.github.com/repos/tlinkner/komodo-web-basics/subscribers
+  subscription_url: https://api.github.com/repos/tlinkner/komodo-web-basics/subscription
+  commits_url: https://api.github.com/repos/tlinkner/komodo-web-basics/commits{/sha}
+  git_commits_url: https://api.github.com/repos/tlinkner/komodo-web-basics/git/commits{/sha}
+  comments_url: https://api.github.com/repos/tlinkner/komodo-web-basics/comments{/number}
+  issue_comment_url: https://api.github.com/repos/tlinkner/komodo-web-basics/issues/comments{/number}
+  contents_url: https://api.github.com/repos/tlinkner/komodo-web-basics/contents/{+path}
+  compare_url: https://api.github.com/repos/tlinkner/komodo-web-basics/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/tlinkner/komodo-web-basics/merges
+  archive_url: https://api.github.com/repos/tlinkner/komodo-web-basics/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/tlinkner/komodo-web-basics/downloads
+  issues_url: https://api.github.com/repos/tlinkner/komodo-web-basics/issues{/number}
+  pulls_url: https://api.github.com/repos/tlinkner/komodo-web-basics/pulls{/number}
+  milestones_url: https://api.github.com/repos/tlinkner/komodo-web-basics/milestones{/number}
+  notifications_url: https://api.github.com/repos/tlinkner/komodo-web-basics/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/tlinkner/komodo-web-basics/labels{/name}
+  releases_url: https://api.github.com/repos/tlinkner/komodo-web-basics/releases{/id}
+  created_at: '2013-04-17T02:38:18Z'
+  updated_at: '2013-10-15T13:50:15Z'
+  pushed_at: '2013-06-11T20:25:41Z'
+  git_url: git://github.com/tlinkner/komodo-web-basics.git
+  ssh_url: git@github.com:tlinkner/komodo-web-basics.git
+  clone_url: https://github.com/tlinkner/komodo-web-basics.git
+  svn_url: https://github.com/tlinkner/komodo-web-basics
+  homepage: 
+  size: 140
+  stargazers_count: 1
+  watchers_count: 1
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 1
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Web Basics Snippet Collection
+  releases: []
+  last_update: '2013-06-11T20:25:41Z'
+  is_github: true
+  readme:
+    content: ! '<h1>Komodo Web Basics</h1>
+
+
+      <p>HTML/CSS/Javascript snippets for <a href="http://www.activestate.com/komodo-edit"><strong>Komodo
+      Edit</strong></a>. </p>
+
+
+      <h4>To Install:</h4>
+
+
+      <ol>
+
+      <li>Download the .ZIP and unpack it.</li>
+
+      <li>Launch Komodo Edit.</li>
+
+      <li>Make sure the Toolbox is visible (View -&gt; Tabs &amp; Sidebars -&gt; Toolbox).</li>
+
+      <li>Click the gear icon on the Toolbox pane. Choose &quot;Import Folder from
+      File System.&quot; Locate the Web Basics folder among the files you just downloaded.</li>
+
+      <li>Click &quot;Open.&quot;</li>
+
+      </ol>
+
+
+      <h4>To use:</h4>
+
+
+      <p>Most snippets will emit HTML and CSS elements by simply clicking on them.
+      Some have a dialog box to enter parameters. </p>
+
+
+      <p>The HTML snippets will also wrap a text selection.</p>
+
+'
+    name: README.md
+  download_count: 0
+Django Toolbox Collection:
+  id: 238542
+  name: Django Toolbox Collection
+  full_name: unbracketed/django-komodo-kit
+  owner:
+    login: unbracketed
+    id: 17127
+    avatar_url: https://avatars.githubusercontent.com/u/17127?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/unbracketed
+    html_url: https://github.com/unbracketed
+    followers_url: https://api.github.com/users/unbracketed/followers
+    following_url: https://api.github.com/users/unbracketed/following{/other_user}
+    gists_url: https://api.github.com/users/unbracketed/gists{/gist_id}
+    starred_url: https://api.github.com/users/unbracketed/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/unbracketed/subscriptions
+    organizations_url: https://api.github.com/users/unbracketed/orgs
+    repos_url: https://api.github.com/users/unbracketed/repos
+    events_url: https://api.github.com/users/unbracketed/events{/privacy}
+    received_events_url: https://api.github.com/users/unbracketed/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/unbracketed/django-komodo-kit
+  description: ! 'Possibly including, but not limited to, packages, extensions, macros,
+    commands, and snippets for potentially simplifying Django development within Komodo
+    Edit or Komodo IDE. '
+  fork: false
+  url: https://api.github.com/repos/unbracketed/django-komodo-kit
+  forks_url: https://api.github.com/repos/unbracketed/django-komodo-kit/forks
+  keys_url: https://api.github.com/repos/unbracketed/django-komodo-kit/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/unbracketed/django-komodo-kit/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/unbracketed/django-komodo-kit/teams
+  hooks_url: https://api.github.com/repos/unbracketed/django-komodo-kit/hooks
+  issue_events_url: https://api.github.com/repos/unbracketed/django-komodo-kit/issues/events{/number}
+  events_url: https://api.github.com/repos/unbracketed/django-komodo-kit/events
+  assignees_url: https://api.github.com/repos/unbracketed/django-komodo-kit/assignees{/user}
+  branches_url: https://api.github.com/repos/unbracketed/django-komodo-kit/branches{/branch}
+  tags_url: https://api.github.com/repos/unbracketed/django-komodo-kit/tags
+  blobs_url: https://api.github.com/repos/unbracketed/django-komodo-kit/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/unbracketed/django-komodo-kit/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/unbracketed/django-komodo-kit/git/refs{/sha}
+  trees_url: https://api.github.com/repos/unbracketed/django-komodo-kit/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/unbracketed/django-komodo-kit/statuses/{sha}
+  languages_url: https://api.github.com/repos/unbracketed/django-komodo-kit/languages
+  stargazers_url: https://api.github.com/repos/unbracketed/django-komodo-kit/stargazers
+  contributors_url: https://api.github.com/repos/unbracketed/django-komodo-kit/contributors
+  subscribers_url: https://api.github.com/repos/unbracketed/django-komodo-kit/subscribers
+  subscription_url: https://api.github.com/repos/unbracketed/django-komodo-kit/subscription
+  commits_url: https://api.github.com/repos/unbracketed/django-komodo-kit/commits{/sha}
+  git_commits_url: https://api.github.com/repos/unbracketed/django-komodo-kit/git/commits{/sha}
+  comments_url: https://api.github.com/repos/unbracketed/django-komodo-kit/comments{/number}
+  issue_comment_url: https://api.github.com/repos/unbracketed/django-komodo-kit/issues/comments{/number}
+  contents_url: https://api.github.com/repos/unbracketed/django-komodo-kit/contents/{+path}
+  compare_url: https://api.github.com/repos/unbracketed/django-komodo-kit/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/unbracketed/django-komodo-kit/merges
+  archive_url: https://api.github.com/repos/unbracketed/django-komodo-kit/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/unbracketed/django-komodo-kit/downloads
+  issues_url: https://api.github.com/repos/unbracketed/django-komodo-kit/issues{/number}
+  pulls_url: https://api.github.com/repos/unbracketed/django-komodo-kit/pulls{/number}
+  milestones_url: https://api.github.com/repos/unbracketed/django-komodo-kit/milestones{/number}
+  notifications_url: https://api.github.com/repos/unbracketed/django-komodo-kit/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/unbracketed/django-komodo-kit/labels{/name}
+  releases_url: https://api.github.com/repos/unbracketed/django-komodo-kit/releases{/id}
+  created_at: '2009-06-29T02:08:18Z'
+  updated_at: '2014-04-16T20:54:19Z'
+  pushed_at: '2009-09-25T03:25:09Z'
+  git_url: git://github.com/unbracketed/django-komodo-kit.git
+  ssh_url: git@github.com:unbracketed/django-komodo-kit.git
+  clone_url: https://github.com/unbracketed/django-komodo-kit.git
+  svn_url: https://github.com/unbracketed/django-komodo-kit
+  homepage: http://unbracketed.com/projects/django-komodo-kit/
+  size: 78
+  stargazers_count: 7
+  watchers_count: 7
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 2
+  mirror_url: 
+  open_issues_count: 0
+  forks: 2
+  open_issues: 0
+  watchers: 7
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 2
+  subscribers_count: 2
+  title: Django Toolbox Collection
+  releases: []
+  last_update: '2009-09-25T03:25:09Z'
+  is_github: true
+  readme:
+    content: ''
+    name: README
+  download_count: 0
+Zurb Foundation Framework Snippet Collection:
+  id: 3137219
+  name: Zurb Foundation Framework Snippet Collection
+  full_name: mearleycf/zff_kes
+  owner:
+    login: mearleycf
+    id: 1252826
+    avatar_url: https://avatars.githubusercontent.com/u/1252826?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/mearleycf
+    html_url: https://github.com/mearleycf
+    followers_url: https://api.github.com/users/mearleycf/followers
+    following_url: https://api.github.com/users/mearleycf/following{/other_user}
+    gists_url: https://api.github.com/users/mearleycf/gists{/gist_id}
+    starred_url: https://api.github.com/users/mearleycf/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/mearleycf/subscriptions
+    organizations_url: https://api.github.com/users/mearleycf/orgs
+    repos_url: https://api.github.com/users/mearleycf/repos
+    events_url: https://api.github.com/users/mearleycf/events{/privacy}
+    received_events_url: https://api.github.com/users/mearleycf/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/mearleycf/zff_kes
+  description: Zurb Foundation Framework - Snippets for Komodo Edit
+  fork: false
+  url: https://api.github.com/repos/mearleycf/zff_kes
+  forks_url: https://api.github.com/repos/mearleycf/zff_kes/forks
+  keys_url: https://api.github.com/repos/mearleycf/zff_kes/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/mearleycf/zff_kes/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/mearleycf/zff_kes/teams
+  hooks_url: https://api.github.com/repos/mearleycf/zff_kes/hooks
+  issue_events_url: https://api.github.com/repos/mearleycf/zff_kes/issues/events{/number}
+  events_url: https://api.github.com/repos/mearleycf/zff_kes/events
+  assignees_url: https://api.github.com/repos/mearleycf/zff_kes/assignees{/user}
+  branches_url: https://api.github.com/repos/mearleycf/zff_kes/branches{/branch}
+  tags_url: https://api.github.com/repos/mearleycf/zff_kes/tags
+  blobs_url: https://api.github.com/repos/mearleycf/zff_kes/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/mearleycf/zff_kes/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/mearleycf/zff_kes/git/refs{/sha}
+  trees_url: https://api.github.com/repos/mearleycf/zff_kes/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/mearleycf/zff_kes/statuses/{sha}
+  languages_url: https://api.github.com/repos/mearleycf/zff_kes/languages
+  stargazers_url: https://api.github.com/repos/mearleycf/zff_kes/stargazers
+  contributors_url: https://api.github.com/repos/mearleycf/zff_kes/contributors
+  subscribers_url: https://api.github.com/repos/mearleycf/zff_kes/subscribers
+  subscription_url: https://api.github.com/repos/mearleycf/zff_kes/subscription
+  commits_url: https://api.github.com/repos/mearleycf/zff_kes/commits{/sha}
+  git_commits_url: https://api.github.com/repos/mearleycf/zff_kes/git/commits{/sha}
+  comments_url: https://api.github.com/repos/mearleycf/zff_kes/comments{/number}
+  issue_comment_url: https://api.github.com/repos/mearleycf/zff_kes/issues/comments{/number}
+  contents_url: https://api.github.com/repos/mearleycf/zff_kes/contents/{+path}
+  compare_url: https://api.github.com/repos/mearleycf/zff_kes/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/mearleycf/zff_kes/merges
+  archive_url: https://api.github.com/repos/mearleycf/zff_kes/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/mearleycf/zff_kes/downloads
+  issues_url: https://api.github.com/repos/mearleycf/zff_kes/issues{/number}
+  pulls_url: https://api.github.com/repos/mearleycf/zff_kes/pulls{/number}
+  milestones_url: https://api.github.com/repos/mearleycf/zff_kes/milestones{/number}
+  notifications_url: https://api.github.com/repos/mearleycf/zff_kes/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/mearleycf/zff_kes/labels{/name}
+  releases_url: https://api.github.com/repos/mearleycf/zff_kes/releases{/id}
+  created_at: '2012-01-09T14:49:52Z'
+  updated_at: '2014-05-13T04:37:06Z'
+  pushed_at: '2012-01-09T15:07:08Z'
+  git_url: git://github.com/mearleycf/zff_kes.git
+  ssh_url: git@github.com:mearleycf/zff_kes.git
+  clone_url: https://github.com/mearleycf/zff_kes.git
+  svn_url: https://github.com/mearleycf/zff_kes
+  homepage: ''
+  size: 96
+  stargazers_count: 1
+  watchers_count: 1
+  language: 
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 1
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Zurb Foundation Framework Snippet Collection
+  releases: []
+  last_update: '2012-01-09T15:07:08Z'
+  is_github: true
+  readme:
+    content: ! "Hi!\n\nThis simple git repository stores komodo edit snippets i've
+      created in order to make development of the zurb foundation framework easier.\n\nContents:
+      \n\n+ Containers & Columns\n- 1_column.komodotool\n\nUsage: double-click the
+      snippet to add it to your page.  You will be prompted to enter one or more variables.
+      \ Basically, you're setting up your framework DIV containers.  If you use 1_column,
+      you are saying \"I only want my content to be spaced in to one column.\"  The
+      variable you enter is the width of your ONE column--so you can make it one column
+      wide (\"one\"), etc.  Up to twelve, I believe.  \n\nYou need to use the actual
+      text of the number of columns, because this is how the CSS file is set up by
+      curb.  \n\nExample:\n\nentering \"one\" will generate: \n\n<div class=\"one
+      columns\">\n\n</div><!--one columns-->\n\n- 2_columns.komodotool\n\nUsage: same
+      as above.  The difference here is that you're setting up two columns, and there
+      are two variables--the # of columns wide each of your two columns should be.\n\nExample:
+      \n|  column A is six columns wide  |  column B is 4 columns wide |\n\nYou would
+      enter \"six\" for the first column variable, and \"four\" for the second column
+      variable. \n\nYour output, then, is: \n\n<div class=\"six columns\">\n\n</div>\n<div
+      class=\"four columns\">\n\n</div><!--six & four columns--> \n\nAnd this produces
+      in the UI a 10-column wide setup, split into 2 DIV containers, with a 60/40
+      split of that 10 column width.  \n\n- 3_columns.komodotool\n- 5_columns.komodotool\n-
+      6_columns.komodotool\n- base_generic_html.komodotool\n\nIt is the required <head>
+      section including all CSS file references, <title>, <meta> etc. Then there is
+      a starting container (<div class=\"container\">).  Finally, the container DIV
+      is closed and the included JS files section is included.  Following the JS is
+      the closing </body> and </html> tags.  \n\n- button.komodotool\n\nThis one works
+      a little differently than the previous items.  The button setup within Foundation
+      has multiple options, and capitalization is (obviously) important.\n\nYou'll
+      be presented with 3 variables; the first is the size of the button--small, medium,
+      or large.  The second is color--blue, white, red, black.  The third is button
+      type--round or radius.\n\nOnce you've selected your variables (leave a field
+      blank if you don't want to use that styling option), it dumps in the code.  \n\nExample:
+      I want a small blue button using radius.  Here is my output after entering \"small\",
+      \"blue\", and \"radius\". \n\n<a href=\"#\" class=\"small blue button radius\">Button
+      »</a>\n\n- centered column.komodotool\n\nUsage is identical to 1_column above,
+      except this snippet adds the 'centered' class.  \n\n- offset.komodotool\n\nUsage
+      is identical to 1_column above, except this snippet has two variables.  The
+      first variable is # of columns for width of this column.  The second variable
+      is your offset-by amount.  So, if you want to have six columns that are offset
+      by two columns, you'd type \"six\" and \"two\" respectively.  \n\nOutput:\n\n<div
+      class=\"six columns offset-by-two\">\n\n</div><!--six Column offset by two-->\n\n-
+      _container.komodotool\n\nInserts:\n\n<div class=\"container\">\n\n</div><!--container-->\n\n-
+      _row.komodotool\n\nInserts: \n\n<div class=\"row\">\n</div><!--row-->\n\n\n+
+      Tables\n\nI'm not going to type all of the files out. Here is the usage: \n\nThe
+      'list01col.komodotool' file adds a one-column table.  Here is the output:\n\n
+      \   <table>\n            <thead>\n                    <th>NAME</th>\n\n            </thead>\n\n
+      \   </table>\n\nThe list02col.komodotool' file inserts a two-column table.  Here
+      is the output: \n\n    <table>\n            <thead>\n                    <th>NAME</th>\n
+      \                   <th>NAME</th>\n            </thead>\n\n    </table>\n\nThe
+      list(nn)ColRow.komodotool files give you your rows.  Remember that the 'col'
+      and 'colRow' files are paired--so if you add a two-column table, you need to
+      use the two-column row snippets!\n\nOutput (two column row): \n\n         <tr>\n
+      \               <td>DATA</td>\n                <td>DATA</td>\n        </tr>\n\n+
+      Tabs\n\nThis is also straightforward.  Choose the snippet based on how many
+      tabs you want to have.  The snippet is set up to (a) be a contained tab set
+      (you can remove 'contained' if you don't want that styling).  It also sets the
+      first tab to be the active tab.  Again, simple to change.  The hrefs, obviously,
+      point to nowhere.  \n\nOutput: \n\n\t\t\t\t<dl class=\"contained tabs\">\n\t\t\t\t\t<dd><a
+      href=\"#nice1\" class=\"active\">NAME</a></dd>\n\t\t\t\t\t<dd><a href=\"#nice2\">NAME</a></dd>\n\t\t\t\t\t<dd><a
+      href=\"#nice3\">NAME</a></dd>\n\t\t\t\t</dl>"
+    name: README
+  download_count: 0

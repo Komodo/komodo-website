@@ -118,6 +118,21 @@ aside
     }
 }
 
+#content.sidebar.sidebar-small
+{
+    section[role="main"]
+    {
+        width: 83%;
+        margin-right: 2%;
+        margin-left: 0;
+    }
+
+    aside
+    {
+        width: 15%;
+    }
+}
+
 .sidebar-opensource
 {
 

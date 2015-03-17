@@ -24,3 +24,12 @@ gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
 gem 'middleman-syntax'
 gem 'contentful_middleman'
 
+#gem 'middleman-komodo_resources', path: '/home/nathan/Projects/middleman-komodo_resources'
+#gem 'github_api'
+#gem 'github-markup'
+
+gem 'middleman-komodo_resources', github: 'Komodo/middleman-komodo_resources'
+
+gem 'redcarpet'
+gem 'RedCloth'
+

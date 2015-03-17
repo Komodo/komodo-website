@@ -6,23 +6,20 @@
     {
         position: absolute;
         right: 100px;
-        top: 25px;
+        top: 17px;
     }
     
     .beta
     {
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 0;
         padding: 10px;
         font-size: 14pt;
         font-weight: bold;
         color: #FFF;
-        @include linear-gradient(rgba(134,94,151,0.8), rgba(102,70,116,0.8));
-        border: 1px solid #5E426B;
-        box-shadow: inset 0 0 0 0 rgba(0,0,0,0),
-                    0 0 8px 0 rgba(0,0,0,0.8);
         border-radius: 16px;
+        cursor: default !important;
     }
 }
 
@@ -37,6 +34,16 @@
     h1
     {
         margin-top: 0;
+    }
+    
+    .preview
+    {
+        margin: 0 5px 0 0;
+        img
+        {
+            width: 18px;
+            height: 18px;
+        }
     }
 
     .social-meta
@@ -57,33 +64,11 @@
         }
     }
 
-    .main-meta
-    {
-        & > span
-        {
-            display: inline-block;
-            margin-right: 15px;
-        }
-
-        .author
-        {
-            img
-            {
-                vertical-align: middle;
-                border-radius: 2px;
-            }
-        }
-    }
-
     .details-meta
     {
         float: right;
-        width: 250px;
-        background: rgba(255,255,255,0.3);
-        border-radius: 3px;
-        padding: 10px;
-        margin-top: 25px;
-
+        width: 40%;
+        
         dl
         {
             margin: 0;
@@ -143,6 +128,9 @@
 
     .download
     {
+        float: left;
+        width: 55%;
+        
         .release-meta
         {
             margin-top: 10px;
@@ -157,7 +145,6 @@
         .files
         {
             text-align: center;
-            margin-right: 250px;
         }
 
         .assets > div
@@ -176,18 +163,34 @@
 }
 
 .document-resources article,
+.document-resource-category article,
+.document-resource article
+{
+    margin-top: 35px;
+    
+    ul.trail
+    {
+        position: absolute;
+        width: 100%;
+        top: 15px;
+        left: 0;
+    }
+}
+
+.document-resources article,
 .document-resource-category article
 {
-    & > ul
+    & > ul:not(.trail)
     {
         margin: 0;
         padding: 0;
     }
 
-    & > ul > li
+    & > ul:not(.trail) > li
     {
         padding: 10px 2px;
-        border-bottom: 1px solid rgba(0,0,0,0.15);
+        border-bottom: 1px solid rgba(0,0,0,0.10);
+        line-height: 2.0;
 
         &:nth-child(even)
         {
@@ -197,12 +200,6 @@
         h3, p
         {
             margin: 0;
-        }
-
-        h3 > a,
-        h3 > strong > a
-        {
-            @include link(#8a629b, darken(#8a629b, 10%));
         }
 
         h3 .author
@@ -221,24 +218,28 @@
             color: lighten($color-base-text, 10%);
             @extend %ellipsis;
         }
+        
+        .preview
+        {
+            margin: 5px 15px 0 0;
+            
+            img
+            {
+                width: 48px;
+                height: 48px;
+            }
+        }
 
         .meta
         {
-            float: right;
-            text-align: right;
             font-size: 14px;
+            opacity: 0.8;
+            min-width: 150px;
 
             & > span
             {
                 display: inline-block;
                 margin-left: 15px;
-
-                span
-                {
-                    font-family: $font-mono;
-                    font-size: 12px;
-                    opacity: 0.8;
-                }
 
                 .icon
                 {
@@ -280,6 +281,8 @@
 
 .sidebar-resources
 {
+    margin-top: 50px;
+    
     ul.categories
     {
         margin: 0;
