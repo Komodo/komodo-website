@@ -37,7 +37,7 @@
 <div class="blogs">
     <h1>Recent Blogs</h1>
     <ul>
-        <% posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse %>
+        <% posts = get_recent_blogs() %>
         <% posts.first(10).each do |id,_post| %>
         <li>
             <a href="/blog/<%= _post.slug.sub(/^(\d{4}-\d{2})-/,'\1/') %>"><%= _post.title %></a>

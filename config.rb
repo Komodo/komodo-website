@@ -28,7 +28,10 @@ if data.has_key? "blog"
     proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post }, ignore: true
   end
   
-  pageable["blog"] = data.blog.posts.sort_by { |k,v| v["date"] }.reverse
+  pageable["blog"] = data.blog.posts
+                      .reject { |k,v| v.tags.include? "press" }
+                      .sort_by { |k,v| v["date"] }
+                      .reverse
   
   tags().each() do |name,posts|
     proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts }, ignore: true

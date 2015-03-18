@@ -203,7 +203,7 @@ priority: 1.0
     <div>
         <div id="splash-news-blogs">
             <h1><a href="/blog">Blogs</a></h1>
-            <% posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse %>
+            <% posts = get_recent_blogs() %>
             <% posts.first(5).each do |id,_post| %>
             <dl>
                 <dt>

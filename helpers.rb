@@ -186,4 +186,11 @@ module Helpers
       else ((a+180000)/(60*60*24*7)).to_i.to_s+' weeks ago'
     end
   end
+  
+  def get_recent_blogs()
+    data.blog.posts
+      .reject { |k,v| v.tags.include? "press" }
+      .sort_by { |k,v| v["date"] }
+      .reverse
+  end
 end
