@@ -43,6 +43,8 @@
                 <img src="<%= resource.owner.avatar_url %>?s=48">
                 <% elsif resource.owner.has_key? "gravatar_id" %>
                 <img src="http://gravatar.com/avatar/<%= resource.owner.gravatar_id %>?d=identicon&s=48">
+                <% else %>
+                <img src="/assets/images/authors/anonymous.png">
                 <% end %>
             </a>
             <div class="meta push-right">
