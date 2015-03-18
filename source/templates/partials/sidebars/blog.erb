@@ -45,15 +45,14 @@
         <% end %>
     </ul>
 </div>
-<!--
+
 <div class="screencasts">
     <h1>Recent Screencasts</h1>
-    < % for k,item of @_.first(@vimeoFeeds.videos, 6): %>
-    <a href="/screencasts/watch/< %= item.id %>-< %= item.title_sane %>">
+    <% sitemap.where(:layout.equal => 'screencast').all()[0..5].each() do |item| %>
+    <a href="<%= item.url %>">
         <i class="icon icon-youtube-play"></i>
-        <figure style="background-image: url('< %= item.thumbnail_medium %>')"></figure>
-        <span>< %= item.title %></span>
+        <figure style="background-image: url('<%= vimeo_data(item.data.vimeo_id, "thumbnail_large") %>')"></figure>
+        <span><%= item.data.title %></span>
     </a>
-    < % end %>
+    <% end %>
 </div>
--->
