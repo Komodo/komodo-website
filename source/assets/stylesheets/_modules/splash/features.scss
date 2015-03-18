@@ -29,11 +29,14 @@
             vertical-align: top;
             width: 24.5%;
             text-align: center;
-            margin: 25px auto;
+            margin: 15px auto;
+            position: relative;
 
             img
             {
                 border: 1px solid #C4C4C4;
+                width: 242px;
+                height: 122px;
             }
 
             h2
@@ -52,6 +55,16 @@
                 width: 260px;
                 display: block;
                 margin: auto;
+            }
+            
+            .badge
+            {
+                position: absolute;
+                left: 50%;
+                margin-left: 80px;
+                top: 0;
+                font-size: 18px;
+                @include transform(rotate(25deg));
             }
         }
     }
