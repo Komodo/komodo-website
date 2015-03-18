@@ -21,6 +21,12 @@ priority: 0.7
         while our Pro Studio bundles feature additional features for Perl and Tcl developers.
         Choose the product that's right for you!
     </p>
+    
+    <% if data.promotions.pricing.enabled %>
+        <h2 class="promotion">
+            <%= data.promotions.pricing.description %>
+        </h2>
+    <% end %>
 </div>
 
 <div class="outer">
@@ -64,7 +70,12 @@ priority: 0.7
             <h2>Komodo IDE</h2>
 
             <h1>
-                <big><sup>$</sup>295</big>
+                <% if data.promotions.prices.komodo %>
+                    <big class="del"><sup>$</sup><del>295</del></big>
+                    <big class="promo"><sup>$</sup><%= data.promotions.prices.komodo %></big>
+                <% else %>
+                    <big><sup>$</sup>295</big>
+                <% end %>
                 <span>/license</span>
             </h1>
 
@@ -87,14 +98,22 @@ priority: 0.7
                 <a class="button primary"
                    href="https://store.activestate.com/cart/add/p100_q1-iupsell_yes?destination=cart"
                     data-analytics="buy:komodo:single">
-                    <big>$382</big>
+                    <% if data.promotions.prices.komodous %>
+                        <big><del>$382</del> $<%= data.promotions.prices.komodous %></big>
+                    <% else %>
+                        <big>$382</big>
+                    <% end %>
                     <small>with Upgrades & Support</small>
                 </a>
 
                 <a class="button"
                    href="https://store.activestate.com/cart/add/p2_q1-iupsell_yes?destination=cart"
                     data-analytics="buy:komodo:single">
-                    <big>$295</big>
+                    <% if data.promotions.prices.komodo %>
+                        <big><del>$295</del> $<%= data.promotions.prices.komodo %></big>
+                    <% else %>
+                        <big>$295</big>
+                    <% end %>
                     <small>without Upgrades & Support</small>
                 </a>
             </div>
@@ -103,7 +122,12 @@ priority: 0.7
             <h2>Komodo IDE For<br/>Teams (5-Packs)</h2>
 
             <h1>
-                <big><sup>$</sup>1615</big>
+                <% if data.promotions.prices.fivepack %>
+                    <big class="del"><sup>$</sup><del>1615</del></big>
+                    <big class="promo"><sup>$</sup><%= data.promotions.prices.fivepack %></big>
+                <% else %>
+                    <big><sup>$</sup>1615</big>
+                <% end %>
                 <span>/5 licenses</span>
             </h1>
 
@@ -125,7 +149,11 @@ priority: 0.7
                 <a class="button primary"
                    href="https://store.activestate.com/cart/add/p105_q1-iupsell_yes?destination=cart"
                    data-analytics="buy:komodo:5pack">
-                    <big>$1615</big>
+                    <% if data.promotions.prices.fivepack %>
+                        <big><del>$295</del> $<%= data.promotions.prices.fivepack %></big>
+                    <% else %>
+                        <big>$1615</big>
+                    <% end %>
                     <small>includes Upgrades & Support</small>
                 </a>
             </div>
@@ -160,14 +188,22 @@ priority: 0.7
             <a class="button primary big"
                href="https://store.activestate.com/activeperl-pro-studio"
                data-analytics="buy:perlprostudio:commit">
-                <big>$595</big>
+                <% if data.promotions.prices.prostudio %>
+                    <big><del>$595</del> $<%= data.promotions.prices.prostudio %></big>
+                <% else %>
+                    <big>$595</big>
+                <% end %>
                 <small>ActivePerl Pro Studio</small>
             </a>
             
             <a class="button primary big"
                href="https://store.activestate.com/activetcl-pro-studio"
                data-analytics="buy:tclprostudio:commit">
-                <big>$595</big>
+                <% if data.promotions.prices.prostudio %>
+                    <big><del>$595</del> $<%= data.promotions.prices.prostudio %></big>
+                <% else %>
+                    <big>$595</big>
+                <% end %>
                 <small>ActiveTcl Pro Studio</small>
             </a>
         </div>

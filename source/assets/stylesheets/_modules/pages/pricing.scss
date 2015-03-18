@@ -89,6 +89,7 @@
                 {
                     font-weight: normal;
                     margin: 5px 0;
+                    position: relative;
                     
                     big
                     {
@@ -98,6 +99,25 @@
                         sup
                         {
                             font-size: 15px;
+                        }
+                        
+                        &.del
+                        {
+                            opacity: 0.4;
+                            display: inline-block;
+                            margin-left: -60px;
+                        }
+                        
+                        &.promo
+                        {
+                            font-size: 36px;
+                            font-weight: bold;
+                            display: inline-block;
+                            
+                            sup
+                            {
+                                font-size: 22px;
+                            }
                         }
                     }
 
@@ -163,6 +183,12 @@
             {
                 display: block;
                 font-size: 16px;
+                
+                del
+                {
+                    font-weight: normal;
+                    font-size: 14px;
+                }
             }
             
             small
@@ -209,20 +235,12 @@
             margin: 0;
         }
     }
-
-}
-
-.document-pricing .promotions-enabled 
-{
-    .block li
-    {
-        height: 375px;
-    }
     
-    .block li.stacked a
+    .promotion
     {
-        height: 93px;
+        color: $promo-color;
     }
+
 }
 
 .document-license-comparison
