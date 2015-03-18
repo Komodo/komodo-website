@@ -33,9 +33,15 @@ priority: 1.0
                 <i class="icon icon-download"></i> Try Now
                 <p>21 day fully functional trial</p>
             </a>
-            <a class="button big" href="/pricing">
+            <a class="button big <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
                 <i class="icon icon-shopping-cart"></i> Buy Now
                 <p>Choose the right license for you</p>
+                
+                <% if data.promotions.buttons.enabled %>
+                    <div class="promotion badge">
+                        ON SALE
+                    </div>
+                <% end %>
             </a>
         </div>
         <div id="splash-download-edit">

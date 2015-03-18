@@ -276,6 +276,34 @@ a.button
     display: inline-block;
 }
 
+a.button
+{
+    position: relative;
+    
+    &.promoted
+    {
+        background: #895252 !important;
+    }
+    
+    .promotion
+    {
+        position: absolute;
+        right: -10px;
+        bottom: -13px;
+        font-size: 10px;
+        z-index: 10;
+        padding: 5px;
+        @include transform(rotate(-10deg));
+    }
+    
+    &.big .promotion
+    {
+        right: -15px;
+        bottom: -10px;
+        font-size: 16px;
+    }
+}
+
 .hide
 {
     display: none;

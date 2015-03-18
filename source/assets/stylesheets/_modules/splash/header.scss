@@ -3,6 +3,15 @@
     @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 400px,rgba(31,72,94,1) 700px,rgba(7,18,22,1) 100%);
 }
 
+.container-python,
+.container-php
+{
+    #splash-header-outer
+    {
+        @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 200px,rgba(31,72,94,1) 500px,rgba(7,18,22,1) 100%);
+    }    
+}
+
 #splash-header
 {
     text-align: center;

@@ -2,6 +2,13 @@
     <div class="outer">
         <div class="inner">
             <div class="nav-wrap">
+                
+                <% if data.promotions.nav.enabled %>
+                    <div class="promotion badge">
+                        <%= data.promotions.nav.description %>
+                    </div>
+                <% end %>
+                
                 <span class="collapser button primary">
                     <i class="icon icon-bars fa fa-bars"></i>
                 </span>

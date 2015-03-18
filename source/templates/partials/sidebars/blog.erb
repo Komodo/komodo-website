@@ -6,8 +6,13 @@
         <a class="button primary" href="/download">
             <i class="icon icon-download"></i> Try Komodo IDE
         </a>
-        <a class="button" href="/pricing">
+        <a class="button <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
             <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+            <% if data.promotions.buttons.enabled %>
+                <div class="promotion badge">
+                    ON SALE
+                </div>
+            <% end %>
         </a>
     </div>
 </div>
