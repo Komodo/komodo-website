@@ -49,8 +49,6 @@ module Helpers
   end
   
   def get_list(ob, classAttr = "")
-    imgPath = "#{site_url}/assets/images/"
-
     r = ['<ul class="' + (classAttr) + '">']
     ob.each do |value|
       if value.has_key?("link")
@@ -74,7 +72,7 @@ module Helpers
                " title='#{value["name"]}'"\
                " target='" + (value["target"] || "_self") + "'>"
       if value.has_key?("img")
-        r.push "<img src='#{imgPath}#{value["img"]}' alt='#{value["name"]}'/>"
+        r.push "<img src='#{image_path(value["img"])}' alt='#{value["name"]}'/>"
       end
       r.push "<span class='link-name'>#{value["name"]}</span>"
       if value.has_key?("icon")
