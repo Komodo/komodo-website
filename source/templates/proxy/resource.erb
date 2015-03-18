@@ -19,8 +19,6 @@ classNames: sidebar-small
     </li>
 </ul>
 
-<div class="beta">BETA</div>
-
 <div class="try-buy-buttons">
     <div class="inner">
         <a class="button primary" href="/download">
@@ -90,7 +88,7 @@ classNames: sidebar-small
         </dd>
         <% end %>
 
-        <% if resource.homepage%>
+        <% if resource.homepage and resource.homepage.length > 0 %>
         <dt>Homepage</dt>
         <dd>
             <a href="<%= resource.homepage %>">
@@ -163,9 +161,6 @@ classNames: sidebar-small
                                    <i class="icon icon-download"></i>
                                    Download "<%= asset.label || asset.name %>"
                                </a>
-                               <div>
-                                   Downloaded <strong><%= asset.download_count %></strong> times
-                               </div>
                                </div>
                            <% end %>
                        </div>
