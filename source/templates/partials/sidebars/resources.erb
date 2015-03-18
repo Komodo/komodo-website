@@ -1,9 +1,24 @@
 <ul class="categories">
     <li>
         <h3>
-            <a href="/screencasts">Screencasts</a>
+            <a href="/resources">All Resources</a>
         </h3>
     </li>
+    <li>
+        <h3>
+            <a href="/resources/popular">Most Popular</a>
+        </h3>
+    </li>
+    <li>
+        <h3>
+            <a href="/resources/downloads">Most Downloaded</a>
+        </h3>
+    </li>
+</ul>
+
+<hr>
+
+<ul class="categories">
     <% data.resources.categories.each() do |category| %>
         <% next if category.resources == 0 %>
         <li>

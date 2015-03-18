@@ -1,127 +1,5 @@
 ---
-Keybinding Support:
-  id: 16970153
-  name: Keybinding Support
-  full_name: SoftMoonWebWare/Komodo-Edit-Keybinding-Support
-  owner:
-    login: SoftMoonWebWare
-    id: 1432670
-    avatar_url: https://avatars.githubusercontent.com/u/1432670?v=3
-    gravatar_id: ''
-    url: https://api.github.com/users/SoftMoonWebWare
-    html_url: https://github.com/SoftMoonWebWare
-    followers_url: https://api.github.com/users/SoftMoonWebWare/followers
-    following_url: https://api.github.com/users/SoftMoonWebWare/following{/other_user}
-    gists_url: https://api.github.com/users/SoftMoonWebWare/gists{/gist_id}
-    starred_url: https://api.github.com/users/SoftMoonWebWare/starred{/owner}{/repo}
-    subscriptions_url: https://api.github.com/users/SoftMoonWebWare/subscriptions
-    organizations_url: https://api.github.com/users/SoftMoonWebWare/orgs
-    repos_url: https://api.github.com/users/SoftMoonWebWare/repos
-    events_url: https://api.github.com/users/SoftMoonWebWare/events{/privacy}
-    received_events_url: https://api.github.com/users/SoftMoonWebWare/received_events
-    type: User
-    site_admin: false
-  private: false
-  html_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
-  description: ! 'This PHP program will convert Komodo''s "keybindings by category"
-    HTML-output-dump-pagefile into an HTML page listing "keybindings by key".  It
-    will highlight keybindings that conflict with each-other.  It can also compare
-    and contrast different keybinding schemes. It can also include a "groomed" version
-    of the original "keybindings by category" tables with the keys dressed nice to
-    read them, again showing conflicting keys and comparing/contrasting different
-    schemes.  When the groomed category tables are included, page display options
-    include one full page, side-by-side, or top-over-bottom stacked. There is also
-    a navigation menu with quick-click to each key, and if included, category tables. '
-  fork: false
-  url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
-  forks_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/forks
-  keys_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/keys{/key_id}
-  collaborators_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/collaborators{/collaborator}
-  teams_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/teams
-  hooks_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/hooks
-  issue_events_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues/events{/number}
-  events_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/events
-  assignees_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/assignees{/user}
-  branches_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/branches{/branch}
-  tags_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/tags
-  blobs_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/blobs{/sha}
-  git_tags_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/tags{/sha}
-  git_refs_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/refs{/sha}
-  trees_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/trees{/sha}
-  statuses_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/statuses/{sha}
-  languages_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/languages
-  stargazers_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/stargazers
-  contributors_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/contributors
-  subscribers_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/subscribers
-  subscription_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/subscription
-  commits_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/commits{/sha}
-  git_commits_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/commits{/sha}
-  comments_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/comments{/number}
-  issue_comment_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues/comments{/number}
-  contents_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/contents/{+path}
-  compare_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/compare/{base}...{head}
-  merges_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/merges
-  archive_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/{archive_format}{/ref}
-  downloads_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/downloads
-  issues_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues{/number}
-  pulls_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/pulls{/number}
-  milestones_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/milestones{/number}
-  notifications_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/notifications{?since,all,participating}
-  labels_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/labels{/name}
-  releases_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/releases{/id}
-  created_at: '2014-02-19T01:26:19Z'
-  updated_at: '2014-03-26T16:46:22Z'
-  pushed_at: '2014-03-26T16:46:20Z'
-  git_url: git://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
-  ssh_url: git@github.com:SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
-  clone_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
-  svn_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
-  homepage: 
-  size: 220
-  stargazers_count: 0
-  watchers_count: 0
-  language: PHP
-  has_issues: true
-  has_downloads: true
-  has_wiki: true
-  has_pages: false
-  forks_count: 0
-  mirror_url: 
-  open_issues_count: 0
-  forks: 0
-  open_issues: 0
-  watchers: 0
-  default_branch: master
-  permissions:
-    admin: false
-    push: false
-    pull: true
-  network_count: 0
-  subscribers_count: 1
-  title: Keybinding Support
-  releases: []
-  last_update: '2014-03-26T16:46:20Z'
-  is_github: true
-  readme:
-    content: ! '<h1>Komodo-Edit-Keybinding-Support</h1>
-
-
-      <p>This PHP program will convert Komodo&#39;s &quot;keybindings by category&quot;
-      HTML-output-dump-pagefile into an HTML page listing &quot;keybindings by key&quot;.  It
-      will highlight keybindings that conflict with each-other.  It can also compare
-      and contrast different keybinding schemes. It can also include a &quot;groomed&quot;
-      version of the original &quot;keybindings by category&quot; tables with the
-      keys dressed nice to read them, again showing conflicting keys and comparing/contrasting
-      different schemes.  When the groomed category tables are included, page display
-      options include one full page, side-by-side, or top-over-bottom stacked. There
-      is also a navigation menu with quick-click to each key, and if included, category
-      tables. </p>
-
-'
-    name: README.md
-  download_count: 0
-Sublime Keybindings:
-  id: 20029403
+- id: 20029403
   name: Sublime Keybindings
   full_name: Komodo/Komodo-Sublime-Keybinds
   owner:
@@ -326,6 +204,12 @@ Sublime Keybindings:
       report any you encounter.
   last_update: '2014-05-21T17:09:03Z'
   is_github: true
+  category: &20298660
+    name: Keybindings
+    description: ''
+    resource: keybinds.yml
+    sort: 80
+    resources: 2
   readme:
     content: ! '<p>These keybindings mimmic those of Sublime Text, giving you a smooth
       transition
@@ -426,3 +310,124 @@ Sublime Keybindings:
 '
     name: readme.md
   download_count: 180
+- id: 16970153
+  name: Keybinding Support
+  full_name: SoftMoonWebWare/Komodo-Edit-Keybinding-Support
+  owner:
+    login: SoftMoonWebWare
+    id: 1432670
+    avatar_url: https://avatars.githubusercontent.com/u/1432670?v=3
+    gravatar_id: ''
+    url: https://api.github.com/users/SoftMoonWebWare
+    html_url: https://github.com/SoftMoonWebWare
+    followers_url: https://api.github.com/users/SoftMoonWebWare/followers
+    following_url: https://api.github.com/users/SoftMoonWebWare/following{/other_user}
+    gists_url: https://api.github.com/users/SoftMoonWebWare/gists{/gist_id}
+    starred_url: https://api.github.com/users/SoftMoonWebWare/starred{/owner}{/repo}
+    subscriptions_url: https://api.github.com/users/SoftMoonWebWare/subscriptions
+    organizations_url: https://api.github.com/users/SoftMoonWebWare/orgs
+    repos_url: https://api.github.com/users/SoftMoonWebWare/repos
+    events_url: https://api.github.com/users/SoftMoonWebWare/events{/privacy}
+    received_events_url: https://api.github.com/users/SoftMoonWebWare/received_events
+    type: User
+    site_admin: false
+  private: false
+  html_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
+  description: ! 'This PHP program will convert Komodo''s "keybindings by category"
+    HTML-output-dump-pagefile into an HTML page listing "keybindings by key".  It
+    will highlight keybindings that conflict with each-other.  It can also compare
+    and contrast different keybinding schemes. It can also include a "groomed" version
+    of the original "keybindings by category" tables with the keys dressed nice to
+    read them, again showing conflicting keys and comparing/contrasting different
+    schemes.  When the groomed category tables are included, page display options
+    include one full page, side-by-side, or top-over-bottom stacked. There is also
+    a navigation menu with quick-click to each key, and if included, category tables. '
+  fork: false
+  url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
+  forks_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/forks
+  keys_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/keys{/key_id}
+  collaborators_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/collaborators{/collaborator}
+  teams_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/teams
+  hooks_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/hooks
+  issue_events_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues/events{/number}
+  events_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/events
+  assignees_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/assignees{/user}
+  branches_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/branches{/branch}
+  tags_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/tags
+  blobs_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/blobs{/sha}
+  git_tags_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/tags{/sha}
+  git_refs_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/refs{/sha}
+  trees_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/trees{/sha}
+  statuses_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/statuses/{sha}
+  languages_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/languages
+  stargazers_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/stargazers
+  contributors_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/contributors
+  subscribers_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/subscribers
+  subscription_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/subscription
+  commits_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/commits{/sha}
+  git_commits_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/git/commits{/sha}
+  comments_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/comments{/number}
+  issue_comment_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues/comments{/number}
+  contents_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/contents/{+path}
+  compare_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/compare/{base}...{head}
+  merges_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/merges
+  archive_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/{archive_format}{/ref}
+  downloads_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/downloads
+  issues_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/issues{/number}
+  pulls_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/pulls{/number}
+  milestones_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/milestones{/number}
+  notifications_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/notifications{?since,all,participating}
+  labels_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/labels{/name}
+  releases_url: https://api.github.com/repos/SoftMoonWebWare/Komodo-Edit-Keybinding-Support/releases{/id}
+  created_at: '2014-02-19T01:26:19Z'
+  updated_at: '2014-03-26T16:46:22Z'
+  pushed_at: '2014-03-26T16:46:20Z'
+  git_url: git://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
+  ssh_url: git@github.com:SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
+  clone_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support.git
+  svn_url: https://github.com/SoftMoonWebWare/Komodo-Edit-Keybinding-Support
+  homepage: 
+  size: 220
+  stargazers_count: 0
+  watchers_count: 0
+  language: PHP
+  has_issues: true
+  has_downloads: true
+  has_wiki: true
+  has_pages: false
+  forks_count: 0
+  mirror_url: 
+  open_issues_count: 0
+  forks: 0
+  open_issues: 0
+  watchers: 0
+  default_branch: master
+  permissions:
+    admin: false
+    push: false
+    pull: true
+  network_count: 0
+  subscribers_count: 1
+  title: Keybinding Support
+  releases: []
+  last_update: '2014-03-26T16:46:20Z'
+  is_github: true
+  category: *20298660
+  readme:
+    content: ! '<h1>Komodo-Edit-Keybinding-Support</h1>
+
+
+      <p>This PHP program will convert Komodo&#39;s &quot;keybindings by category&quot;
+      HTML-output-dump-pagefile into an HTML page listing &quot;keybindings by key&quot;.  It
+      will highlight keybindings that conflict with each-other.  It can also compare
+      and contrast different keybinding schemes. It can also include a &quot;groomed&quot;
+      version of the original &quot;keybindings by category&quot; tables with the
+      keys dressed nice to read them, again showing conflicting keys and comparing/contrasting
+      different schemes.  When the groomed category tables are included, page display
+      options include one full page, side-by-side, or top-over-bottom stacked. There
+      is also a navigation menu with quick-click to each key, and if included, category
+      tables. </p>
+
+'
+    name: README.md
+  download_count: 0

@@ -184,16 +184,24 @@ priority: 1.0
         </p>
         <br class="clearfix">
 
-        <% data.addons.featured.each do |addon| -%>
-        <div>
-            <h2><%= addon.name %></h2>
-            <figure style="background-image: url('/assets/images/addons/<%= addon.img %>')"></figure>
-            <p>
-                <%= addon.description %>
-            </p>
-            <a href="<%= addon.link %>" class="button primary">Download</a>
+        <div class="block">
+            <h2>Recently Updated</h2>
+            <ul>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.all[0..9]  } ) %>
+            </ul>
         </div>
-        <% end -%>
+        <div class="block">
+            <h2>Most Popular</h2>
+            <ul>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.popular[0..9]  } ) %>
+            </ul>
+        </div>
+        <div class="block">
+            <h2>Most Downloaded</h2>
+            <ul>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.popular[0..9]  } ) %>
+            </ul>
+        </div>
     </div>
 </div>
 

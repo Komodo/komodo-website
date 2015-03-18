@@ -48,19 +48,18 @@ if data.has_key? "resources"
       next
     end
     
-    pageable[category] = resources.values.sort_by { |v,k| v["last_update"] }.reverse
+    pageable[category] = resources
     
-    resources.each() do |title,resource|
+    if ['all','downloads','popular'].include? category
+      next
+    end
+    
+    resources.each() do |resource|
       slug = get_resource_slug(resource)
-      resource["category"] = categories[category]
-      resources[title] = resource
       proxy "/resources/#{category}/#{slug}/index.html", "templates/proxy/resource.html", :locals => { :resource => resource, :category => categories[category] }, ignore: true
     end
     
-    all += resources.values
   end
-  
-  pageable["resources"] = all.sort_by { |v,k| v["last_update"] }.reverse
 end
 
 activate :pagination do
