@@ -1,9 +1,17 @@
 ---
 socialDescription: These @KomodoIDE screencasts are really helpful!
-classNames: sidebar-left
+classNames: sidebar-small
 sidebar: resources
 ---
 <h1>Komodo Screencasts</h1>
+
+<% if data.promotions.global.enabled %>
+    <h2 class="promotion global">
+        <a href="<%= data.promotions.global.link %>">
+            <%= data.promotions.global.description %>
+        </a>
+    </h2>
+<% end %>
 
 <ul class="screencasts">
     <% sitemap.where(:layout.equal => 'screencast').all().each() do |item| %>

@@ -31,6 +31,14 @@ priority: 0.8
 <h1>Komodo Features</h1>
 <p>Still not convinced? Check out our <a href="/testimonials">Testimonials!</a></p>
 
+<% if data.promotions.global.enabled %>
+    <h2 class="promotion global">
+        <a href="<%= data.promotions.global.link %>">
+            <%= data.promotions.global.description %>
+        </a>
+    </h2>
+<% end %>
+
 <div class="clearfix"></div>
 
 <div class="groups">

@@ -16,6 +16,14 @@ published: true
     Komodo IDE License Comparison
 </h1>
 
+<% if data.promotions.global.enabled %>
+    <h2 class="promotion global">
+        <a href="<%= data.promotions.global.link %>">
+            <%= data.promotions.global.description %>
+        </a>
+    </h2>
+<% end %>
+
 <div class="centered">
     <table class="centered">
         <thead>
@@ -30,8 +38,20 @@ published: true
             <tr>
                 <th width="100">Price per license</th>
                 <td>$99</td>
-                <td>$295</td>
-                <td>$595</td>
+                <td>
+                    <% if data.promotions.prices.komodo %>
+                        <del>$295</del> $<%= data.promotions.prices.komodo %></big>
+                    <% else %>
+                        $295
+                    <% end %>
+                </td>
+                <td>
+                    <% if data.promotions.prices.prostudio %>
+                        <del>$595</del> $<%= data.promotions.prices.prostudio %></big>
+                    <% else %>
+                        $595
+                    <% end %>
+                </td>
             </tr>
             <tr>
                 <th>All Komodo Features Included</th>

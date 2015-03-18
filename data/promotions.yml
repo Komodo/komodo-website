@@ -19,12 +19,10 @@ prices:
   komodo: 245
   komodous: 382
   fivepack: 1365
-enterprise: 
-  enabled: false
-  description: "Black Friday sale! $100 off with discount code <strong>BLACK100</strong>"
-personal: 
-  enabled: false
-  description: "Black Friday sale! $20 off with discount code <strong>BLACK20</strong>"
+global:
+  enabled: true
+  description: To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!
+  link: /pricing
 startpage: 
   latestEdit: 
     enabled: false

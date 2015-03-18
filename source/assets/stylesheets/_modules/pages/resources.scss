@@ -5,22 +5,10 @@
     .try-buy-buttons
     {
         position: absolute;
-        right: 100px;
+        right: 0;
         top: 17px;
     }
-    
-    .beta
-    {
-        position: absolute;
-        top: 10px;
-        right: 0;
-        padding: 10px;
-        font-size: 14pt;
-        font-weight: bold;
-        color: #FFF;
-        border-radius: 16px;
-        cursor: default !important;
-    }
+
 }
 
 .document-resource article

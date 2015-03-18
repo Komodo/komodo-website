@@ -1,3 +1,11 @@
+<% if data.promotions.global.enabled %>
+    <h2 class="promotion global">
+        <a href="<%= data.promotions.global.link %>">
+            <%= data.promotions.global.description %>
+        </a>
+    </h2>
+<% end %>
+
 <ul class="trail">
     <li>
         <a href="/resources">Resources</a>
@@ -10,8 +18,6 @@
     <% end %>
     </li>
 </ul>
-
-<div class="beta button primary">BETA</div>
 
 <div class="try-buy-buttons">
     <div class="inner">
