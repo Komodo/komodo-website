@@ -28,8 +28,6 @@ jQuery ->
     init = () ->
         fns = [
             rejectOldBrowsers
-            highlightCode
-            loadSplashScreenshots
             loadTestimonials
             bindAnalytics
             bindTooltips
@@ -38,12 +36,10 @@ jQuery ->
             loadTabs
             loadDownloadButtons
             loadNavmenu
-            #makeSplashResponsive
             loadSidebarCollapser
             loadDialogs
             loadTwitterFeed
             forceOpenExternal
-            loadTags
             animateElements
             hideFooterOverlap
             disableLinks
@@ -51,6 +47,7 @@ jQuery ->
             bindPaneSelector
             loadFancySelector
             bindPageShare
+            startScrollMagic
         ]
         for fn in fns
             setTimeout fn, 0
@@ -471,6 +468,115 @@ jQuery ->
     onPageShare = (e) ->
         if _gak
             _gak.push(['_trackSocial', e.network, e.action]);
+    
+    startScrollMagic = () ->
+        return unless jq('#splash-header').length
+    
+        w = jq window
+        header = jq "header"
+        wrap = jq "#splash-header-outer"
+        ss = jq "#splash-screenshots"
+        icons = jq "#splash-screenshots .icon"
+        ssd = jq "#splash-screenshots-description"
+        intro = jq ".intro"
+        
+        pusher = jq "<div>"
+        pusher.height "calc(100vh + 450px)"
+        pusher.insertBefore wrap
+        
+        init = true
+        keyFrame = 0;
+        
+        position = ->
+            stop = w.scrollTop()
+            keyFrameChanged = false
+            
+            if (keyFrame != 1 and stop < 450) or init
+                
+                keyFrame = 1
+                
+                header.css {
+                    position: "fixed"
+                    top: 0
+                    zIndex: 10
+                }
+                
+                wrap.css {
+                    position: "fixed"
+                    zIndex: 5
+                    width: "100%"
+                    top: 75
+                }
+                
+            if keyFrame != 2 and stop >= 450
+                
+                keyFrame = 2
+                
+                header.css {
+                    position: "absolute"
+                    top: 450
+                }
+                
+                wrap.css {
+                    position: "absolute"
+                    top: 525
+                }
+                
+            if keyFrame == 1
+                sstop = 250
+                if stop < 250
+                    sstop = stop
+                
+                ss.css {
+                    marginTop: 0 - sstop
+                }
+                
+                intro.css {
+                    opacity: (1 - (sstop / 200)).toFixed(1)
+                }
+
+                if stop > 150 and ! icons.is(":visible")
+                    icons.fadeIn()
+                    
+                if stop < 150 and icons.is(":visible")
+                    icons.fadeOut()
+                
+                ssd.css {
+                    opacity: ((sstop / 250)).toFixed(1)
+                }
+                
+                
+            if init
+                init = false
+                position()
+                
+        w.on "scroll", position
+        
+        position()
+        
+        wheel = (event) ->
+            if w.scrollTop() >= 450
+                return
+            
+            delta = 0
+            if event.wheelDelta
+                 delta = event.wheelDelta / 120
+            else if event.detail
+                delta = -event.detail / 3
+                
+            handle delta
+            
+            if event.preventDefault
+                event.preventDefault()
+            event.returnValue = false
+        
+        handle = (delta) ->
+            $('html, body').stop().scrollTop $(window).scrollTop() - 15 * delta
+        
+        if window.addEventListener
+            window.addEventListener 'DOMMouseScroll', wheel, false
+        window.onmousewheel = document.onmousewheel = wheel
+
 
     init()
 
