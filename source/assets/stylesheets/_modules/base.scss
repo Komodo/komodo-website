@@ -280,11 +280,6 @@ a.button
 {
     position: relative;
     
-    &.promoted
-    {
-        background: $promo-button-color !important;
-    }
-    
     .promotion
     {
         position: absolute;
@@ -294,6 +289,7 @@ a.button
         z-index: 10;
         padding: 5px;
         @include transform(rotate(-10deg));
+        background: $promo-button-color !important;
     }
     
     &.big .promotion
