@@ -16,17 +16,18 @@ priority: 0.7
 <div class="centered heading">
     <h1>Buy Komodo IDE and Pro Studio Bundles</h1>
     
-    <p>
-        Komodo IDE is the multi-language, cross-platform IDE for all your programming needs,
-        while our Pro Studio bundles feature additional features for Perl and Tcl developers.
-        Choose the product that's right for you!
-    </p>
-    
     <% if data.promotions.pricing.enabled %>
         <h2 class="promotion">
             <%= data.promotions.pricing.description %>
         </h2>
     <% end %>
+    
+    <p>
+        Komodo IDE is the multi-language, cross-platform IDE for all your programming needs,
+        while our Pro Studio bundles feature additional features for Perl and Tcl developers.
+        Choose the product that's right for you!
+    </p>
+
 </div>
 
 <div class="outer">
@@ -123,7 +124,7 @@ priority: 0.7
 
             <h1>
                 <% if data.promotions.prices.fivepack %>
-                    <big class="del"><sup>$</sup><del>1615</del></big>
+                    <big class="del xl"><sup>$</sup><del>1615</del></big>
                     <big class="promo"><sup>$</sup><%= data.promotions.prices.fivepack %></big>
                 <% else %>
                     <big><sup>$</sup>1615</big>

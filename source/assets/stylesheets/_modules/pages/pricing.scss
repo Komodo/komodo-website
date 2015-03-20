@@ -105,7 +105,12 @@
                         {
                             opacity: 0.4;
                             display: inline-block;
-                            margin-left: -60px;
+                            margin-left: -75px;
+                            
+                            &.xl
+                            {
+                                margin-left: -100px;
+                            }
                         }
                         
                         &.promo
@@ -113,6 +118,7 @@
                             font-size: 36px;
                             font-weight: bold;
                             display: inline-block;
+                            color: $promo-color;
                             
                             sup
                             {
