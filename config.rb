@@ -94,6 +94,7 @@ set :layouts_dir, "templates/layouts"
 set :partials_dir, 'templates/partials'
 
 page "*", :layout => "default"
+page "json/*", :layout => false
 
 set :title, "Komodo IDE"
 
