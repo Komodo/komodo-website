@@ -11,6 +11,11 @@
 <div class="centered">
     <a href="/pricing" class="button big">
         <i class="icon icon-shopping-cart"></i> &nbsp; Buy Komodo
+        <% if data.promotions.buttons.enabled %>
+            <div class="promotion badge">
+                ON SALE
+            </div>
+        <% end %>
     </a>
 </div>
 
