@@ -43,7 +43,7 @@
             {
                 @extend %ellipsis;
                 font-weight: bold;
-                margin: 10px 0 15px;
+                margin: 5px 0 15px;
                 overflow: visible;
             }
 
@@ -84,9 +84,14 @@
                     text-align: left;
                 }
             }
+            
+            ul + .centered
+            {
+                margin: 15px 0 5px;
+            }
         
         }
-
+        
     }
 
 }
