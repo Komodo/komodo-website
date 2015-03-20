@@ -1,6 +1,7 @@
 #splash-addons
 {
-    &, h1, h2, h3
+    & > .inner > h1,
+    & > .inner > p
     {
         color: #F0F0F0;
     }
@@ -33,7 +34,7 @@
         .block
         {
             text-align: center;
-            background: rgba(42,42,42,0.5);
+            background: rgba(255, 255, 255, 0.8);
             border-radius: 3px;
             padding: 15px;
             @include span-columns(4);
@@ -53,11 +54,6 @@
                 text-align: left;
             }
             
-            a
-            {
-                @include link(lighten($color-base-link,30%), $color-base-link-hover);
-            }
-            
             .description
             {
                 @extend %ellipsis;
@@ -66,7 +62,7 @@
 
             .preview
             {
-                margin: 5px 5px 0 0;
+                margin: 7px 10px 0 0;
                 
                 img
                 {
@@ -78,6 +74,15 @@
             li
             {
                 margin: 0 0 5px 0;
+                padding: 0 5px;
+                
+                h2
+                {
+                    font-size: 18px;
+                    margin: 0;
+                    font-weight: 400;
+                    text-align: left;
+                }
             }
         
         }

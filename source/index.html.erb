@@ -186,20 +186,29 @@ priority: 1.0
         <div class="block">
             <h2>Recently Updated</h2>
             <ul>
-                <%= partial('resource-list-small', :locals => { :resources => data.resources.all[0..9]  } ) %>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.all[0..4]  } ) %>
             </ul>
+            <div class="centered">
+                <a href="/resources">View All</a>
+            </div>
         </div>
         <div class="block">
             <h2>Most Popular</h2>
             <ul>
-                <%= partial('resource-list-small', :locals => { :resources => data.resources.popular[0..9]  } ) %>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.popular[0..4]  } ) %>
             </ul>
+            <div class="centered">
+                <a href="/resources/popular">View All</a>
+            </div>
         </div>
         <div class="block">
             <h2>Most Downloaded</h2>
             <ul>
-                <%= partial('resource-list-small', :locals => { :resources => data.resources.downloads[0..9]  } ) %>
+                <%= partial('resource-list-small', :locals => { :resources => data.resources.downloads[0..4]  } ) %>
             </ul>
+            <div class="centered">
+                <a href="/resources/downloads">View All</a>
+            </div>
         </div>
     </div>
 </div>

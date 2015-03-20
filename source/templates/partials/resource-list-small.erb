@@ -8,13 +8,9 @@
             <% end %>
         </a>
         <p>
-            <strong>
-                <a href="/resources/<%= resource.category.resource[0..-5] %>/<%= get_resource_slug(resource) %>/"><%= resource.title %></a>
-            </strong>
-            <span class="author">
-                <em>by</em>
-                <a href="<%= resource.owner.html_url %>"><%= resource.owner.login %></a>
-            </span>
+            <h2>
+                <a href="/resources/<%= resource.category.resource[0..-5] %>/<%= get_resource_slug(resource) %>/" title="by <%= resource.owner.login %>"><%= resource.title %></a>
+            </h2>
         <p>
         <p class="description"><%= resource.description %></p>
         <div class="clearfix"></div>
