@@ -132,9 +132,6 @@ jQuery ->
                     else
                         entry.source = entry.source_name
 
-                if entry.source_name == "Twitter"
-                    entry.name = '<a href="https://twitter.com/activestate' + entry.name + '" target="_blank">' + entry.name + '</a>'
-
                 newEntry.find("*[data-field]").each ->
                     elem = jq(this)
                     elem.show()
