@@ -228,9 +228,6 @@
     - 
       name: "Notifications Panel"
       description: "Keep track of all processes in one place."
-    - 
-      name: "Komodo Sync"
-      description: "Synchronize project items and preferences across all of your workstations."
 - 
   name: "Add-Ons and Customization"
   id: "ui"
