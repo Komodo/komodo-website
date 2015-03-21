@@ -84,7 +84,7 @@ jQuery ->
     loadSplashScreenshots = ->
         ss = jq("#splash-screenshots")
         return unless ss.length
-
+    
         platform = window.navigator.platform.toLowerCase()
         if platform.indexOf("linux") != -1
             platform = "linux"
@@ -111,7 +111,7 @@ jQuery ->
         ss.find(".twitter-follow-button").appendTo ss.find(".primary")
         
         elem.click ->
-            image = elem.css("background-image").replace('url(','').replace(')','')
+            image = elem.css("background-image").replace(/url\((?:"|'|)/,'').replace(/(?:"|'|)\)/,'')
             jq.magnificPopup.open {
                 items: src: image
                 type: 'image'
