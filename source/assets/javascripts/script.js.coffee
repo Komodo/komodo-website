@@ -109,6 +109,13 @@ jQuery ->
 
         ss.find(".promotion").appendTo ss.find(".primary")
         ss.find(".twitter-follow-button").appendTo ss.find(".primary")
+        
+        elem.click ->
+            image = elem.css("background-image").replace('url(','').replace(')','')
+            jq.magnificPopup.open {
+                items: src: image
+                type: 'image'
+            }
 
     # Load Testimonials
     loadTestimonials = ->

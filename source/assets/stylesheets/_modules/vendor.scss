@@ -195,3 +195,11 @@ form.mktoForm
         margin-left: 210px !important;
     }
 }
+
+/* Lightbox */
+
+.mfp-figure:after
+{
+    box-shadow: none !important;
+    background: transparent !important;
+}
