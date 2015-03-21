@@ -61,7 +61,7 @@
       class_names: extra markdown
 - 
   name: Advanced Editor
-  description: A world class editor that will facilitate anything you can think of. 
+  description: A world class editor that will facilitate anything you can think of 
   id: editor
   icon: pencil-square-o
   items:
@@ -108,7 +108,7 @@
       description: Use Embedded JavaScript to determine snippet contents at runtime.
 - 
   name: Code Intelligence
-  description: Let Komodo think about the mundane while you think on what works.
+  description: Let Komodo think about the mundane while you think on what works
   id: codeintel
   icon: lightbulb-o
   items: 
