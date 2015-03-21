@@ -51,6 +51,12 @@
             padding: 0;
             color: lighten($color-base-text, 10%);
             
+            strong
+            {
+                font-weight: normal;
+                font-size: 18px;
+            }
+            
             p
             {
                 margin: 0;
