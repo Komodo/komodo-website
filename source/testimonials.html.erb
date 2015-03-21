@@ -4,6 +4,14 @@ layout: default
 priority: 0.7
 ---
 
+<% if data.promotions.global.enabled %>
+    <h2 class="promotion global">
+        <a href="<%= data.promotions.global.link %>">
+            <%= data.promotions.global.description %>
+        </a>
+    </h2>
+<% end %>
+
 <h1>Komodo IDE Testimonials</h1>
 
 <div class="try-buy-buttons">

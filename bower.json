@@ -31,6 +31,7 @@
     "moment": "~2.5.1",
     "jquery-visible": "https://github.com/teamdf/jquery-visible.git#~1.1.0",
     "Font-Awesome": "~4.0.3",
-    "selectize": "~0.9.0"
+    "selectize": "~0.9.0",
+    "stickyfloat": "~7.5.0"
   }
 }

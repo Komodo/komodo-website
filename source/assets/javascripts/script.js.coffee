@@ -15,6 +15,7 @@
 #= require "moment/moment"
 #= require "jquery-visible/jquery.visible"
 #= require "selectize/dist/js/standalone/selectize"
+#= require "stickyfloat/stickyfloat.js"
 
 #= require "helpers/localStorage"
 #= require "helpers/handlebars"
@@ -51,6 +52,8 @@ jQuery ->
             bindPaneSelector
             loadFancySelector
             bindPageShare
+            loadStickyFloat
+            loadQuickNav
         ]
         for fn in fns
             setTimeout fn, 0
@@ -475,6 +478,48 @@ jQuery ->
     onPageShare = (e) ->
         if _gak
             _gak.push(['_trackSocial', e.network, e.action]);
+            
+    loadStickyFloat = ->
+        jq('.sticky').stickyfloat {
+            offsetY: 100
+            delay: 50
+            easing: 'swing'
+        }
+        
+    loadQuickNav = ->
+        qn = jq(".quick-nav").length
+        return unless qn
+    
+        w = jq window
+    
+        updateSelected = ->
+            stop = w.scrollTop() + (w.height() / 2)
+            
+            jq(".quick-nav li").each ->
+                el = jq this
+                a = el.find("a")
+                target =jq a.attr("href")
+                start = target.offset().top
+                end = start + target.height()
+                
+                if stop >= start and stop < end
+                    unless el.is("[selected]")
+                        jq(".quick-nav li[selected]").removeAttr("selected")
+                        el.attr("selected", "true")
+                    return false # stop iteration
+        
+        timer = null
+        w.scroll ->
+            clearTimeout timer
+            timer = setTimeout updateSelected, 100
+            
+        jq(".quick-nav li a").click ->
+            jq('html, body').animate {
+                scrollTop: jq( jq(this).attr("href") ).offset().top
+            }
+            return false
+        
+        updateSelected()
 
     init()
 

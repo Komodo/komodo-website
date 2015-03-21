@@ -1,315 +1,330 @@
 - 
-  name: "Advanced Editor"
-  id: "editor"
-  featured: 
-    - 
-      name: "Syntax Checker"
-      image: "editor-1"
-    - 
-      name: "Split View Editing"
-      image: "editor-2"
-    - 
-      name: "Column/Block Editing"
-      image: "editor-3"
+  name: What's New
+  id: new
+  icon: star
   items: 
     - 
-      name: "Multiple Selections"
-      description: "Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions."
-      isNew: true
-    - 
-      name: "Unified Menu Button"
-      description: "Komodo can be configured to use a collapsed toolbar button menu, instead of a full menu bar (Windows and Linux)."
-      isNew: true
-    - 
-      name: "Code Folding / Code Blocks"
-      description: "Code folding<br>Column/block editing,<br>Line/block commenting and more"
-    - 
-      name: "Smart Language Detection"
-      description: "Syntax checking and highlighting detects multiple languages within a file."
-    - 
-      name: "Split View and Multi-Window"
-      description: "Split a session to edit side by side or in multiple windows."
-    - 
-      name: "Variable Highlighting"
-      description: "Click on a variable to see all occurrences."
-    - 
-      name: "Auto Abbreviation Snippets"
-      description: "Type an abbreviation to automatically trigger snippet selection."
-    - 
-      name: "Key Bindings"
-      description: "Vi/Vim, emacs, OS X, Windows/Linux included."
-    - 
-      name: "Powerful Snippets and Macros"
-      description: "Insert snippets with abbreviations. Use macros to automate repetitive sequences."
-    - 
-      name: "Conditional Snippets"
-      description: "Use Embedded JavaScript to determine snippet contents at runtime."
+      name: Track Changes
+      description: The editor has gained a new left margin - which highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin will show a diff dialog of the changes - as well as letting you revert individual changes! Sweet!
+      img: trackchanges.png
+    -
+      name: Commando
+      description: This popup dialog is the combined successor of the Fast Open and Invoke Tool dialogs in Komodo 8. Commando provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
+      img: commando.png
+    -
+      name: GoLang Support
+      description: Golang is now supported in Komodo. We provide syntax coloring, code folding, syntax checking (linting) and code intelligenc
+      img: golang.png
+    -
+      name: Markdown Viewer
+      description: For Markdown files, Komodo provides a preview of the generated HTML directly within a Komodo split view and contents will dynamically update itself whenever you make a change to the Markdown text - it doesn't even need to be saved.
+      img: markdown.png
+    -
+      name: <a href="http://kopy.io">Kopy.io</a> Helper
+      description: Now you can easily share (like pastebin) snippets of code with other people directly from Komodo. Simple make a text selection and use the editor right-click context menu and choose Share Code via <a href="http://kopy.io">Kopy.io</a>. Even better is that <a href="http://kopy.io">Kopy.io</a> supports client side encryption, so you can make those shared pastes more secure.
+      img: kopy.png
+    -
+      name: Color Schemes and Themes
+      description: We've tweaked the Komodo color schemes and we've made Tomorrow_Dark the new default Komodo color scheme (a dark-based scheme). The Komodo UI has been updated to match the latest operating systems, so Komodo now looks even better. We also added the ability to tweak the editor line height spacing.
+      img: schemes.png
+    -
+      name: Notifications
+      description: Notification messages shown to the user now appear in a separate popup panel that overlays the main Komodo editor window (previously they appeared in the Komodo statusbar). This will make for more intuitive and informative use of Komodo - no more asking yourself "what just happened?".
+      img: notify.png
+    -
+      name: Language Icons
+      description: Language icons have been overhauled to be consistent and easily identifyable by their color and emblem. Komodo dynamically generates new icons for filetypes that it has never seen before, so you'll laways have unique icons for each language.
+      img: lang-icons.png
+    -
+      name: New Developer SDK
+      description: We've been overhauling the Komodo APIs, to make it easier to load and access the methods inside of Komodo. We're now making use of CommonJS (aka Node.js) require() calls to load individual modules.
+      img: sdk.png
+    -
+      name: Language Support
+      description: |
+        * *PHP 5.6 Support* - We've added support for PHP 5.6, with a new Xdebug module (for PHP debugging and Code Profiling), updates for keyword changes and updates to code intelligence to provide the latest API data for PHP 5.6.
+        * *Python Updates* - Python 3.4 is fully supported for syntax checking, debugging, code intelligence, etc…
+          We've added PEP 8 syntax checking - you can enable this in the Python Syntax Checking preferences.
+      markdown: true
+      class_names: extra markdown
+    -
+      name: And Lots More!
+      description: |
+        * tweaked the file icons, language icons, places icons, toolbox icons, preference page icons and code intelligence icons
+        * The menu bar (i.e. the File, Edit, …) is now hidden by default on Windows and Linux. You can use Alt to toggle the menu visibility.
+        * A boatload of Performance Improvements
+        * Preferences dialog improvements, simpler and easier to apply preferences.
+        * High DPI / Retina fixes / improvements
+        * Start Page has been removed and replaced by a "Quick Launch" page
+        * [And Much, much more](/changelog/latest)
+      markdown: true
+      class_names: extra markdown
 - 
-  name: "Code Intelligence"
-  id: "codeintel"
-  featured: 
-    - 
-      name: "Autocomplete and Calltips for most major languages"
-      image: "codeintel-1"
-    - 
-      name: "Code Browser"
-      description: "Structured source code for easier navigation"
-      image: "codeintel-2"
-    - 
-      name: "Autocomplete for API catalogs via XML files"
-      image: "codeintel-3"
-  items: 
-    - 
-      name: "Code Refactoring"
-      description: "Smart code-transformation capabilities include Rename Variable, Rename Class Member, and Method Extraction."
+  name: Advanced Editor
+  description: A world class editor that will facilitate anything you can think of. 
+  id: editor
+  icon: pencil-square-o
+  items:
+    -
+      name: Track Changes
+      description: A margin in the editor highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin will show a diff dialog allowing you to revert changes.
+      isNew: true
+    -
+      name: Markdown Viewer
+      description: Komodo provides a preview of the generated HTML directly within a split view and will update itself whenever you make a change to the Markdown text.
       isNew: true
     - 
-      name: "Autocomplete and Calltips"
-      description: "Supports many languages and detects multiple languages within a file."
+      name: Multiple Selections
+      description: Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions.
+      video: http://dev.komodoide.com:4567/screencasts/multiple-selections/
     - 
-      name: "Soft Characters, Matching Braces"
-      description: "Auto-insertion of braces and highlighting of matching braces.<br>Auto-Indentation and Auto-Formatting"
+      name: Unified Menu Button
+      description: Komodo can be configured to use a collapsed toolbar button menu, instead of a full menu bar (Windows and Linux).
     - 
-      name: "3rd Party Library Support"
-      description: "Included API Catalogs enable autocomplete and calltips for libraries like PyWin32 and jQuery."
+      name: Code Folding / Code Blocks
+      description: Code folding<br>Column/block editing,<br>Line/block commenting and more
     - 
-      name: "Sections List"
-      description: "View and filter a list of your functions, classes or elements."
+      name: Smart Language Detection
+      description: Syntax checking and highlighting detects multiple languages within a file.
     - 
-      name: "Code Browser"
-      description: "Navigate source code structure in a hierarchical, collapsible view."
+      name: Split View and Multi-Window
+      description: Split a session to edit side by side or in multiple windows.
     - 
-      name: "Go To Definition"
-      description: "Jump to definitions variables, classes, etc."
+      name: Variable Highlighting
+      description: Click on a variable to see all occurrences.
     - 
-      name: "DOM Viewer"
-      description: "Inspect and edit DOM tree of XML and HTML docs."
+      name: Auto Abbreviation Snippets
+      description: Type an abbreviation to automatically trigger snippet selection.
+      video: http://dev.komodoide.com:4567/screencasts/auto-abbreviations-snippets/
     - 
-      name: "XML Autocompletion"
-      description: "Autocompletion for XML dialects can be added via DTD or RelaxNG Schema."
+      name: Key Bindings
+      description: Vi/Vim, emacs, OS X, Windows/Linux included.
+      video: http://dev.komodoide.com:4567/screencasts/vi-mode/
+    - 
+      name: Powerful Snippets and Macros
+      description: Insert snippets with abbreviations. Use macros to automate repetitive sequences.
+    - 
+      name: Conditional Snippets
+      description: Use Embedded JavaScript to determine snippet contents at runtime.
 - 
-  name: "Graphical Debugging"
-  id: "debugger"
-  featured: 
-    - 
-      name: "Graphical Debugger"
-      description: "PHP 4.4 - 5.4, Python 2.4 - 3.3, Perl 5.8 - 5.16, Ruby 1.8 - 1.9, Tcl 8.4 - 8.6, Node.js"
-      image: "debug-1"
-    - 
-      name: "RX Toolkit"
-      image: "debug-2"
-    - 
-      name: "HTTP Inspector"
-      image: "debug-3"
+  name: Code Intelligence
+  description: Let Komodo think about the mundane while you think on what works.
+  id: codeintel
+  icon: lightbulb-o
   items: 
     - 
-      name: "Graphical Debugger"
-      description: "PHP 4.4 - 5.5, Python 2.4 - 3.3, Perl 5.8 - 5.16, Ruby 1.8 - 1.9, Tcl 8.4 - 8.6, Node.js"
+      name: Code Refactoring
+      description: Smart code-transformation capabilities include Rename Variable, Rename Class Member, and Method Extraction.
+      video: http://dev.komodoide.com:4567/screencasts/code-refactoring/
     - 
-      name: "Breakpoint Configuration"
-      description: "Set properties such as break on file, line, condition, function calls and returns, exceptions, etc."
+      name: Autocomplete and Calltips
+      description: Supports many languages and detects multiple languages within a file.
     - 
-      name: "Local and Remote"
-      description: "Debug programs running on a remote server or unsupported platform."
+      name: Soft Characters, Matching Braces
+      description: Auto-insertion of braces and highlighting of matching braces.<br>Auto-Indentation and Auto-Formatting
     - 
-      name: "RX Toolkit"
-      description: "Create and debug regular expressions"
+      name: 3rd Party Library Support
+      description: Included API Catalogs enable autocomplete and calltips for libraries like PyWin32 and jQuery.
     - 
-      name: "Consolidated View"
-      description: "View output, call stack, variables and watch variables in one pane."
+      name: Sections List
+      description: View and filter a list of your functions, classes or elements.
     - 
-      name: "Multithreaded Debugging"
-      description: "Break multiple threads. Mozilla engineers use Komodo to debug Python buildbot code."
+      name: Code Browser
+      description: Navigate source code structure in a hierarchical, collapsible view.
     - 
-      name: "Multi-Process Debugging"
-      description: "Debug multiple sessions simultaneously"
+      name: Go To Definition
+      description: Jump to definitions variables, classes, etc.
     - 
-      name: "HTTP Inspector"
-      description: "Inspect browser-server communications, ie. Ajax/HTTP"
+      name: DOM Viewer
+      description: Inspect and edit DOM tree of XML and HTML docs.
     - 
-      name: "Changed Variable Highlighting"
-      description: "Automatic highlighting of variables changed since last breakpoint."
-    - 
-      name: "Built on DBGp Protocol"
-      description: "Co-authored by ActiveState and currently used in many IDEs."
+      name: XML Autocompletion
+      description: Autocompletion for XML dialects can be added via DTD or RelaxNG Schema.
 - 
-  name: "Version Control and Integrated Tools"
-  id: "tools"
-  featured: 
-    - 
-      name: "Integrated Unit Testing"
-      description: "Major frameworks such as PHPUnit, Perl TAP, Python unittest, and Ruby\"s rake test"
-      image: "tools-1"
-    - 
-      name: "Version Control Systems "
-      description: "Subversion, Mercurial, Git, CVS, Perforce and Bazaar supported"
-      image: "tools-2"
-    - 
-      name: "Interactive Shells"
-      description: "Python, Ruby, Perl and Tcl"
-      image: "tools-3"
+  name: Graphical Debugging
+  name_short: Debugging
+  description: Powerful tools for debugging and inspecting your code
+  id: debugger
+  icon: bug
   items: 
     - 
-      name: "Version Control Systems"
-      description: "Support for Subversion, Mercurial, Git, CVS, Perforce and Bazaar.<br><br>Add/remove files, view diffs, view revision history, commit changes, revert, and push to remote repositories for distributed source code control systems."
+      name: Graphical Debugger
+      description: PHP 4.4 - 5.5, Python 2.4 - 3.3, Perl 5.8 - 5.16, Ruby 1.8 - 1.9, Tcl 8.4 - 8.6, Node.js
     - 
-      name: "Interactive Shells"
-      description: "Available for Python, Ruby, Perl and Tcl."
+      name: Breakpoint Configuration
+      description: Set properties such as break on file, line, condition, function calls and returns, exceptions, etc.
     - 
-      name: "Publishing"
-      description: "Keep local and remote directories in sync."
+      name: Local and Remote
+      description: Debug programs running on a remote server or unsupported platform.
     - 
-      name: "Browser Preview"
-      description: "Preview in a separate window, in the Editor pane or in split view."
+      name: RX Toolkit
+      description: Create and debug regular expressions
     - 
-      name: "Code Profiling"
-      description: "Analyze performance for Python (2x and 3x) and PHP (5.2 or higher), with read support for Callgrind/Cachegrind and pstats formats."
+      name: Consolidated View
+      description: View output, call stack, variables and watch variables in one pane.
     - 
-      name: "Integrated Unit Testing"
-      description: "Supports major frameworks such as PHPUnit, Perl TAP, Python unittest, and Ruby\"s rake test."
+      name: Multithreaded Debugging
+      description: Break multiple threads. Mozilla engineers use Komodo to debug Python buildbot code.
     - 
-      name: "Toolbox"
-      description: "Store snippets, macros and shell commands for easy access."
+      name: Multi-Process Debugging
+      description: Debug multiple sessions simultaneously
     - 
-      name: "Database Explorer"
-      description: "Examine database content for SQLite. Available extensions for MySQL and Oracle."
+      name: HTTP Inspector
+      description: Inspect browser-server communications, ie. Ajax/HTTP
     - 
-      name: "Perl Dev Kit, Tcl Dev Kit"
-      description: "Deploy Perl and Tcl applications within Komodo. Get more with Pro Studio."
+      name: Changed Variable Highlighting
+      description: Automatic highlighting of variables changed since last breakpoint.
     - 
-      name: "Stackato by ActiveState"
-      description: "Deploy to and debug applications in a powerful Platform-as-a-Service environment."
+      name: Built on DBGp Protocol
+      description: Co-authored by ActiveState and currently used in many IDEs.
 - 
-  name: "Workflow and File Management"
-  id: "nav"
-  featured: 
-    - 
-      name: "Fast Open"
-      description: "Quickly access files by typing a typing a few characters"
-      image: "nav-1"
-    - 
-      name: "\"Open Files\" Side Pane"
-      description: "Organizes open files by language"
-      image: "nav-2"
-    - 
-      name: "Notifications Panel"
-      description: "Keep track of all processes in one place"
-      image: "nav-3"
+  name: Version Control and Integrated Tools
+  name_short: VCS & Tools
+  description: All the tools you need right from inside your IDE
+  id: tools
+  icon: plus
   items: 
     - 
-      name: "Breadcrumbs Navigation"
-      description: "Breadcrumbs navigation bar shows the directory ancestors relative to the current editor file, allowing you to easily find and open related files."
+      name: Version Control Systems
+      description: Support for Subversion, Mercurial, Git, CVS, Perforce and Bazaar.
+    - 
+      name: Interactive Shells
+      description: Available for Python, Ruby, Perl and Tcl.
+    - 
+      name: Publishing
+      description: Keep local and remote directories in sync.
+    - 
+      name: Browser Preview
+      description: Preview in a separate window, in the Editor pane or in split view.
+    - 
+      name: Code Profiling
+      description: Analyze performance for Python (2x and 3x) and PHP (5.2 or higher), with read support for Callgrind/Cachegrind and pstats formats.
+    - 
+      name: Integrated Unit Testing
+      description: Supports major frameworks such as PHPUnit, Perl TAP, Python unittest, and Ruby\s rake test.
+    - 
+      name: Toolbox
+      description: Store snippets, macros and shell commands for easy access.
+    - 
+      name: Database Explorer
+      description: Examine database content for SQLite. Available extensions for MySQL and Oracle.
+    - 
+      name: Perl Dev Kit, Tcl Dev Kit
+      description: Deploy Perl and Tcl applications within Komodo. Get more with Pro Studio.
+    -
+      name: <a href="http://kopy.io">Kopy.io</a> Helper
+      description: Easily share snippets of code with other people directly from Komodo.
       isNew: true
     - 
-      name: "Open Files Side Pane"
-      description: "New side pane organizes all your open files by language."
-      isNew: true
-    - 
-      name: "File Sorting and Grouping"
-      description: "Sort and group the Open Files pane by language, file extension, directory and location."
-      isNew: true
-    - 
-      name: "Fast Open Shortcuts"
-      description: "Create shortcuts to long file paths."
-      isNew: true
-    - 
-      name: "Minimap Navigation"
-      description: "Reposition anywhere in your code from a high-level view."
-      isNew: true
-    - 
-      name: "Projects & Places"
-      description: "Manage your projects in the left sidebar. View your file systems categorized by project."
-    - 
-      name: "Fast Open"
-      description: "Find any file with minimal keystrokes."
-    - 
-      name: "History, Bookmarks, Braces"
-      description: "Jump to previous and marked lines, and matching braces."
-    - 
-      name: "Notifications Panel"
-      description: "Keep track of all processes in one place."
+      name: Stackato by ActiveState
+      description: Deploy to and debug applications in a powerful Platform-as-a-Service environment.
 - 
-  name: "Add-Ons and Customization"
-  id: "ui"
-  featured: 
-    - 
-      name: "Extensions/Add-Ons"
-      description: "Over 200 community-contributed add-ons Firefox-based system"
-      image: "extend-1"
-    - 
-      name: "Visual Styling"
-      description: "Customize Komodo with skins and icon sets"
-      image: "extend-2"
-    - 
-      name: "Floating Panes"
-      description: "Undock any feature side pane ie. Debug and place it anywhere"
-      image: "extend-3"
-  items: 
-    - 
-      name: "Abyss Dark Theme"
-      description: "\"Abyss\" native dark UI theme can be enabled in preferences. Goes well with \"Dark_Wombatsosia\" editor scheme."
+  name: Workflow and File Management
+  name_short: File Management
+  description: Komodo works <em>with</em> you to help navigate your files
+  id: nav
+  icon: files-o
+  items:
+    -
+      name: Commando
+      description: provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
       isNew: true
     - 
-      name: "Floating Side Panes"
-      description: "Undock components and move them anywhere on screen."
+      name: Breadcrumbs Navigation
+      description: Breadcrumbs navigation bar shows the directory ancestors relative to the current editor file, allowing you to easily find and open related files.
+      video: http://dev.komodoide.com:4567/screencasts/breadcrumbs/
+    - 
+      name: Open Files Side Pane
+      description: New side pane organizes all your open files by language.
+      video: http://dev.komodoide.com:4567/screencasts/open-files-widget/
+    - 
+      name: File Sorting and Grouping
+      description: Sort and group the Open Files pane by language, file extension, directory and location.
+    - 
+      name: Fast Open Shortcuts
+      description: Create shortcuts to long file paths.
+    - 
+      name: Minimap Navigation
+      description: Reposition anywhere in your code from a high-level view.
+    - 
+      name: Projects & Places
+      description: Manage your projects in the left sidebar. View your file systems categorized by project.
+      video: http://dev.komodoide.com:4567/screencasts/projects-and-what-theyre-for/
+    - 
+      name: History, Bookmarks, Braces
+      description: Jump to previous and marked lines, and matching braces.
+    - 
+      name: Notifications Panel
+      description: Keep track of all processes in one place.
+    -
+      name: Notifications
+      description: Shows messages upon triggered operations, allowing for intuitive use of the editor.
       isNew: true
-    - 
-      name: "Extensions/Add-Ons"
-      description: "Over 100 add-ons available through our Firefox-based system."
-    - 
-      name: "Visual Styling"
-      description: "Personalize with a wide variety of skins and iconsets."
-    - 
-      name: "Integrated Tools"
-      description: "Extend support for additional Version Control Systems and databases."
-    - 
-      name: "Editor Features"
-      description: "Customize and extend key bindings, syntax color schemes, auto-formatters and much more."
-    - 
-      name: "Autocomplete"
-      description: "Extend support for additional languages, frameworks and libraries."
 - 
-  name: "Dev Team Capabilities"
-  id: "collab"
-  featured: 
-    - 
-      name: "Code Collaboration"
-      description: "Edit a document with other users simultaneously"
-      image: "collab-1"
-    - 
-      name: "Stackato by ActiveState"
-      description: "Using Komodo IDE, deploy applications to the PaaS and debug within the cloud environment."
-      image: "collab-2"
-    - 
-      name: "Stackato by ActiveState"
-      description: "Using Komodo IDE, deploy applications to the PaaS and debug within the cloud environment."
-      image: "collab-3"
+  name: Add-Ons and Customization
+  name_short: Customization
+  description: You wont find another editor this customizable, nope - not even that one
+  id: ui
+  icon: users
   items: 
     - 
-      name: "Code Collaboration"
-      description: "Edit a document with multiple users simultaneously, no matter where they are."
+      name: Abyss Dark Theme
+      description: \Abyss\ native dark UI theme can be enabled in preferences. Goes well with \Dark_Wombatsosia\ editor scheme.
+      video: http://dev.komodoide.com:4567/screencasts/abyss-dark-ui-theme/
     - 
-      name: "Shared Toolbox"
-      description: "Store common snippets, macros, etc. via network share, source code control or the Publish feature."
+      name: Floating Side Panes
+      description: Undock components and move them anywhere on screen.
+      video: http://dev.komodoide.com:4567/screencasts/customizable-panes/
     - 
-      name: "Coding Standards and Control"
-      description: "Keep shared work consistent with version control system integration and auto-formatting."
+      name: Extensions/Add-Ons
+      description: Over 100 add-ons available through our Firefox-based system.
     - 
-      name: "Stackato by ActiveState"
-      description: "Run a Platform-as-a-Service (PaaS) on any cloud infrastructure.<br>Komodo IDE lets you debug and deploy applications to a consistent environment at each stage of the development process."
+      name: Visual Styling
+      description: Personalize with a wide variety of skins and iconsets.
     - 
-      name: "Extended Functionality"
-      description: "Scale projects as required with extensions for integrated technologies."
+      name: Integrated Tools
+      description: Extend support for additional Version Control Systems and databases.
+    - 
+      name: Editor Features
+      description: Customize and extend key bindings, syntax color schemes, auto-formatters and much more.
+    - 
+      name: Autocomplete
+      description: Extend support for additional languages, frameworks and libraries.
 - 
-  name: "Supported Languages"
-  id: "languages"
+  name: Dev Team Capabilities
+  name_short: Dev Teams
+  description: Programming doesn't have to be solitary, neither does Komodo
+  id: collab
+  icon: suitcase
   items: 
     - 
-      name: "Editing"
-      description: "PHP, Python, Perl, Ruby, HTML, JavaScript, CSS, various web templates, Node.js, Tcl, XSLT, CoffeeScript, LESS, SCSS and more"
+      name: Code Collaboration
+      description: Edit a document with multiple users simultaneously, no matter where they are.
     - 
-      name: "Code Intelligence"
-      description: "PHP, Python, Perl, Ruby, HTML, JavaScript, CSS, various web templates, Node.js, Txl, XSLT and more"
+      name: Shared Toolbox
+      description: Store common snippets, macros, etc. via network share, source code control or the Publish feature.
     - 
-      name: "Debugging"
-      description: "PHP, Python, Perl, Ruby, Node.js, Tcl, XSLT"
+      name: Coding Standards and Control
+      description: Keep shared work consistent with version control system integration and auto-formatting.
+    - 
+      name: Stackato by ActiveState
+      description: Run a Platform-as-a-Service (PaaS) on any cloud infrastructure.<br>Komodo IDE lets you debug and deploy applications to a consistent environment at each stage of the development process.
+    - 
+      name: Extended Functionality
+      description: Scale projects as required with extensions for integrated technologies.
+- 
+  name: Supported Languages
+  name_short: Languages
+  description: Brought to you by ActiveState, the dynamic languages expert
+  id: languages
+  icon: globe
+  items: 
+    - 
+      name: Editing
+      description: PHP, Python, Perl, Tcl, Go <span class="badge">NEW</span>, Ruby, Node.js, JavaScript, CoffeeScript, HTML, CSS, LESS, SCSS, various web templates, and more
+    - 
+      name: Code Intelligence
+      description: PHP, Python, Perl, Tcl, Go <span class="badge">NEW</span>, Ruby, Node.js, JavaScript, HTML, CSS, various web templates, and more
+    - 
+      name: Debugging
+      description: PHP, Python, Perl, Ruby, Node.js, Tcl, XSLT
