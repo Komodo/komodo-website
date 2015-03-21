@@ -82,6 +82,22 @@
     }
 }
 
+.container-index,
+.container-php,
+.container-python
+{
+    header
+    {
+        background: transparent !important;
+    }
+    
+    #splash-header-outer
+    {
+        margin-top: -75px;
+        padding-top: 75px;
+    }
+}
+
 .container-php,
 .container-python
 {
