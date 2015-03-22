@@ -49,7 +49,11 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0;
-            color: lighten($color-base-text, 10%);
+            
+            .description
+            {
+                color: lighten($color-base-text, 20%);
+            }
             
             strong
             {
