@@ -300,6 +300,11 @@ a.button
     }
 }
 
+.badge.promotion
+{
+    background: $promo-button-color !important;
+}
+
 .promotion.global
 {
     margin: 25px auto;
