@@ -1,7 +1,0 @@
-$(document).ready ->
-
-    header = "<div id=container><%- @partial('layouts/header.html.ect', @, {renderAfter: (result) ->  result = JSON.stringify(result); result.substr(1,result.length-2); }) %></div>"
-
-    $($(header)).insertBefore("#main")
-    
-    $("header .collapser").click -> $("#container header nav").toggleClass "expanded"
