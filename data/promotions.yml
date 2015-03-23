@@ -17,7 +17,7 @@ pricing:
 prices:
   prostudio: 495
   komodo: 245
-  komodous: 382
+  komodous: 332
   fivepack: 1365
 global:
   enabled: true
