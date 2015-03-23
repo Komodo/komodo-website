@@ -24,8 +24,10 @@ pagination:
         <%= post.date.strftime('%b %e, %Y') %>
     </span>
     <p>
-        <% if post.author[0].has_key? "profilePhoto" %>
-            <img src="<%= post.author[0].profilePhoto.url %>" alt="<%= post.author[0].name %>">
+        <% if post.has_key?("featuredImage") %>
+            <img src="<%= post.featuredImage.url %>">
+        <% elsif post.author[0].has_key? "profilePhoto" %>
+            <img class="author" src="<%= post.author[0].profilePhoto.url %>" alt="<%= post.author[0].name %>">
         <% end %>
     
         <%= summary(post.body) %>
