@@ -1,0 +1,18 @@
+---
+title: Komodo Startpage
+layout: startpage
+---
+
+<% promo = data.promotions.startpage.latestEdit %>
+<% if promo.enabled %>
+<a class="promotion" title="<%= promo.tooltip %>" href="<%= promo.link %>">
+    <div class="inner">
+        <%= promo.description %>
+    </div>
+</a>
+<% end %>
+
+<h1>Get Komodo IDE</h1>
+<p>Code faster with the worlds fiercest IDE</p>
+<a href="http://www.komodoide.com/" class="button primary">More Info</a>
+
