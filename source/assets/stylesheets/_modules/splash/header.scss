@@ -20,7 +20,7 @@
     overflow: hidden;
 
     padding: 20px 15px 0 15px;
-    height: 700px;
+    height: 750px;
     
     color: $color-header-base;
 
@@ -71,11 +71,18 @@
         font-size: 28pt;
         font-weight: 400;
         margin: 20px 0;
-
-        & + div
-        {
-            margin: 30px 0 30px;
-        }
+    }
+    
+    h2
+    {
+        font-size: 21px;
+        font-weight: 400;
+        margin: 30px 0 0;
+    }
+    
+    #splash-description
+    {
+        margin: 30px 0 30px;
     }
 
     @include media($tablet)

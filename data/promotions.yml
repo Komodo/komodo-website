@@ -1,6 +1,6 @@
 splash: 
   enabled: true
-  description: "ON SALE"
+  description: "Komodo 9 Released: Better, Faster, Stronger!"
   tooltip: ""
   link: "/pricing"
 nav: 

@@ -17,6 +17,13 @@ priority: 1.0
     </div>
 
     <h1>One IDE, All Your Languages</h1>
+    
+    <% if data.promotions.splash.enabled %>
+        <h2 class="promotion">
+            <%= data.promotions.splash.description %>
+        </h2>
+    <% end %>
+    
     <div id="splash-description">
         <p>
             Cross-Platform IDE for all your major languages, <br>
