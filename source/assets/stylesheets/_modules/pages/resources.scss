@@ -4,9 +4,18 @@
 {
     .try-buy-buttons
     {
-        position: absolute;
-        right: 0;
-        top: 17px;
+        @include media(min-width 960px)
+        {
+            position: absolute;
+            right: 0;
+            top: 17px;
+        }
+        
+        @include media(max-width 960px)
+        {
+            margin-bottom: 25px;
+            text-align: center;
+        }
     }
 
 }
@@ -54,8 +63,11 @@
 
     .details-meta
     {
-        float: right;
-        width: 40%;
+        @include media(min-width $tablet-size)
+        {
+            float: right;
+            width: 40%;
+        }
         
         dl
         {
@@ -116,8 +128,11 @@
 
     .download
     {
-        float: left;
-        width: 55%;
+        @include media(min-width $tablet-size)
+        {
+            float: left;
+            width: 55%;
+        }
         
         .release-meta
         {

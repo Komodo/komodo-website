@@ -6,9 +6,9 @@
 /* Include it again, cause Bourbon overrides some of our variables, grrr */
 @import "_modules/depend/variables";
 
-$nav-reduce: new-breakpoint(max-width 9999px);
-$nav-reduce-further: new-breakpoint(max-width 1000px);
-$nav-collapse: new-breakpoint(max-width 900px);
+$nav-reduce: max-width 9999px;
+$nav-reduce-further: max-width 1000px;
+$nav-collapse: max-width 900px;
 
 @import "_modules/depend/helpers";
 @import "_modules/depend/colors";

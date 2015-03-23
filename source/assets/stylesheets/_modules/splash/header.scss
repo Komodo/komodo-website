@@ -34,22 +34,25 @@
         @include link($color-header-link, $color-header-link-hover);
     }
 
-    @include media(new-breakpoint(max-width 1600px))
+    @include media(max-width 1600px)
     {
         padding-bottom: 55%;
         height: 0;
     }
 
-    @include media(new-breakpoint(max-width 1400px))
+    @include media(max-width 1400px)
     {
         height: 775px;
         padding-bottom: 0;
     }
+    
+    @include media(max-width 700px)
+    {
+        height: 600px;
+    }
 
     @include media($mobile)
     {
-        height: 750px;
-
         p
         {
             font-size: 11pt !important;

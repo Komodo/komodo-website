@@ -66,7 +66,7 @@
         }
     }
     
-    @include media(new-breakpoint(min-width 650px))
+    @include media(min-width 650px)
     {
         .left, .right
         {
@@ -105,7 +105,7 @@
     {
         height: 750px !important;
         
-        @include media(new-breakpoint(max-width 650px))
+        @include media(max-width 650px)
         {
             height: 800px !important;
             min-width: 480px;
@@ -127,7 +127,7 @@
         
         ul
         {
-            @include media(new-breakpoint(min-width 650px))
+            @include media(min-width 650px)
             {
                 display: inline-block;
                 vertical-align: top;

@@ -39,6 +39,11 @@
             padding: 15px;
             @include span-columns(4);
             
+            @include media(max-width 700px)
+            {
+                @include span-columns(12);
+            }
+            
             h2
             {
                 @extend %ellipsis;

@@ -9,7 +9,7 @@
         position: relative;
         margin: 0 25px;
         
-        @include media(new-breakpoint(max-width 1060px))
+        @include media(max-width 1060px)
         {
             display: block;
             width: 90%;

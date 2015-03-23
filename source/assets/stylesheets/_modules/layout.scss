@@ -97,12 +97,12 @@ footer, #footer_push
 {
     #container
     {
-        margin-bottom: -440px;
+        margin-bottom: -640px;
     }
 
     footer, #footer_push
     {
-        height: 440px;
+        height: 640px;
     }
 }
 
@@ -315,12 +315,15 @@ aside
     
     .inner
     {
-        position: absolute;
-        right: 0;
+        @include media(min-width 960px)
+        {
+            position: absolute;
+            right: 0;
+        }
     }
 }
 
-@include media(new-breakpoint(max-width 1279px))
+@include media(max-width 1279px)
 {
     .at4-share-outer
     {

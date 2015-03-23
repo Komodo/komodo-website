@@ -70,7 +70,7 @@
         }
     }
 
-    @include media(new-breakpoint(max-width 1050px))
+    @include media(max-width 1050px)
     {
         #splash-feature-column ul li
         {
@@ -78,7 +78,7 @@
         }
     }
 
-    @include media(new-breakpoint(max-width 800px))
+    @include media(max-width 800px)
     {
         #splash-feature-column ul li
         {
@@ -86,7 +86,7 @@
         }
     }
 
-    @include media(new-breakpoint(max-width 520px))
+    @include media(max-width 520px)
     {
         #splash-feature-column ul li
         {
