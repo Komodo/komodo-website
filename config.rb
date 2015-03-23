@@ -77,6 +77,10 @@ activate :komodo_resources
 
 activate :directory_indexes
 
+activate :deploy do |deploy|
+  deploy.method = :git
+end
+
 configure :development do
   activate :livereload
   set :site_url, "http://dev.komodoide.com:4567"

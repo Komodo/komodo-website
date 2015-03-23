@@ -23,6 +23,7 @@ gem 'middleman-search_engine_sitemap'
 #gem 'middleman-imageoptim', github: 'plasticine/middleman-imageoptim'
 gem 'middleman-syntax'
 gem 'contentful_middleman'
+gem 'middleman-deploy', '~> 1.0'
 
 #gem 'middleman-komodo_resources', path: '/home/nathan/Projects/middleman-komodo_resources'
 #gem 'github_api'

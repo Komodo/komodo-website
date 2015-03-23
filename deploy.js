@@ -19,7 +19,8 @@
             "rvm use 1.9.3",
             "bundle install",
             "middleman contentful",
-            "middleman resources"
+            "middleman resources",
+            "middleman build"
         ];
         
         var environment = process.env;
@@ -28,11 +29,10 @@
         // just compile it locally
         if (params.branch == "production")
         {
-            // Todo: production deploy
+            commands.push("middleman deploy");
         }
         else
         {
-            commands.push("middleman build");
             commands.push("rm -Rf " + __dirname + "/live");
             commands.push("mv " + __dirname + "/build " + __dirname + "/live");
             
