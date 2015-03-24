@@ -30,6 +30,8 @@
         if (params.branch == "production")
         {
             commands.push("middleman deploy");
+            
+            environment.KO_QA = "false";
         }
         else
         {

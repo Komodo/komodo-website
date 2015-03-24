@@ -87,7 +87,7 @@ configure :development do
 end
 
 configure :build do
-  set :site_url, ENV["KO_QA"] ? "http://qa.komodoide.com" : "http://komodoide.com"
+  set :site_url, ENV["KO_QA"] == "true" ? "http://qa.komodoide.com" : "http://komodoide.com"
 end
 
 set :css_dir, 'assets/stylesheets'
