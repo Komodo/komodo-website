@@ -29,33 +29,11 @@
     <body class="startpage">
 
         <div id="container">
-            <a name="top"></a>
             <header>
-                <div class="featured-wrap">
-                    <div class="featured">
-                        <%= yield %>
-                    </div>
-                    <img src="/assets/images/misc/komodo256.ide.png" align="right">
-                    <div class="links">
-                        <%= get_list(data.startpage.links, "unstyled") %>
-                    </div>
-                </div>
-                <div class="news">
-                    <% posts = get_recent_blogs() %>
-                    <% posts.first(5).each do |id,_post| %>
-                    <dl>
-                        <dt>
-                            <a href="<%= site_url %>/blog/<%= _post.slug.sub(/^(\d{4}-\d{2})-/,'\1/') %>">
-                                <%= _post.title %>
-                            </a>
-                        </dt>
-                        <dd>
-                            By <%= _post.author[0].name %>, <%= _post.date.strftime('%b %e, %Y') %>
-                        </dd>
-                    </dl>
-                    <% end %>
-                    <p><a href="<%= site_url %>/blog">View More..</a></p>
-                </div>
+                <a href="http://komodoide.com/features/?utm_source=komodoapp&utm_medium=startpage&utm_term=&utm_content=komodo-link&utm_campaign=komodo-9-launch">
+                    <img src="/assets/images/misc/komodo256.ide.png">
+                    <h1>Komodo 9 Released: Better, Faster, Stronger!</h1>
+                </a>
             </header>
         </div>
 
