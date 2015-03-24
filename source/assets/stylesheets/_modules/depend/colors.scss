@@ -18,8 +18,8 @@ $color-header-nav-link-hover:rgba(255,255,255,1);
 $color-header-link:         #9CBDCE;
 $color-header-link-hover:   lighten($color-header-link, 10%);
 
-$color-forum-header-link:         #67B5AF;
-$color-forum-header-link-hover:   lighten($color-header-link, 10%);
+$color-forum-header-link:         #3086B5;
+$color-forum-header-link-hover:   $color-base-link-hover;
 
 $color-shadow-highlight:    #4b8482;
 
