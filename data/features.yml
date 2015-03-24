@@ -307,6 +307,12 @@
     - 
       name: Extended Functionality
       description: Scale projects as required with extensions for integrated technologies.
+    -
+      name: Coding Standards
+      description: Komodo's Code Formatting feature helps teams keep their code looking consistent, readable, and maintainable. Configure third-party formatters, or your own, to quickly reformat selections or entire documents to conform to a specific coding style.
+    -
+      name: Easy Adoption
+      description: It's hard to convince a team of programmers who are strongly attached to their favorite editors or operating systems to buy into the idea of a standardized development environment. Komodo IDE has a number of advantages over other editors and IDEs which make team adoption easier.
 - 
   name: Supported Languages
   name_short: Languages
