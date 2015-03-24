@@ -7,10 +7,10 @@ nav:
       name: "Features"
     - 
       name: "Buy & Upgrade"
-      link: "pricing"
+      link: "/pricing"
     - 
       name: "Try"
-      link: "download"
+      link: "/download"
       sub: 
         - 
           name: "Archive"
