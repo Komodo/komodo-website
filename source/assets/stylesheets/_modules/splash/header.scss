@@ -1,5 +1,7 @@
 #splash-header-outer
 {
+    background: rgba(31,72,94,1);
+    @include linear-gradient(rgb(15, 34, 40) 0%,rgb(48, 87, 107) 80%);
     @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 400px,rgba(31,72,94,1) 700px,rgba(7,18,22,1) 100%);
 }
 
