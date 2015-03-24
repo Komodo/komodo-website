@@ -20,12 +20,12 @@
         <meta property="og:type" content="article" />
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         
-        <% if current_page.data.image %>
-        <meta property="og:image" content="<%= current_page.data.image %>" />
-        <% end %>
-    
         <% if defined?(post) and post.has_key?("featuredImage") %>
         <meta property="og:image" content="<%= post.featuredImage.url %>" />
+        <% elsif meta('image') %>
+        <meta property="og:image" content="<%= meta('image') %>" />
+        <% else %>
+        <meta property="og:image" content="<%= site_url %>/assets/images/screenshots/splash/mac-splash-php.png" />
         <% end %>
 
         <link rel="icon" href="/assets/images/favicon.ico">
