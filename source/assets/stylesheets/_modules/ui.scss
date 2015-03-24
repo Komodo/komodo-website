@@ -34,7 +34,9 @@
     border: 1px solid #494949;
     box-shadow: 0 0 6px 0 rgba(0,0,0,0.2);
     border-radius: 3px;
+    padding: 10px;
     @include linear-gradient(#F2F2F2, #EAEAEA);
+    z-index: 11;
 
     .ui-dialog-title
     {
@@ -45,6 +47,7 @@
     {
         font-weight: bold;
         border-bottom: 1px solid rgba(0,0,0,0.2);
+        padding-bottom: 10px;
     }
 
     .ui-dialog-titlebar-close
@@ -53,13 +56,17 @@
         top: auto;
         right: auto;
         float: right;
-        margin: 0 -10px 0 0;
         padding: 0;
     }
 
     .ui-dialog-content
     {
         font-size: 11pt;
+        
+        ul
+        {
+            list-style-type: disc;
+        }
     }
 }
 
@@ -68,6 +75,14 @@
 .ui-widget-overlay
 {
     background: rgba(0,0,0,0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vw;
+    z-index: 10;
+    top: 0;
+    left: 0;
 }
 
 /* Tabs */
