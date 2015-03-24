@@ -124,7 +124,12 @@ jQuery ->
     loadTestimonials = ->
         return unless jq(".testimonial blockquote").length
     
-        textFit(jq(".testimonial blockquote"))
+        textFit(jq(".testimonial blockquote"), {minFontSize: 12, multiLine: true})
+            
+        if jq(".document-testimonials").length
+            textFit(jq(".testimonial h2"), {multiLine: false})
+            return
+        
         jq.getJSON("/json/testimonials.json").done (data) ->
             pos = 0
             data = _.shuffle data
@@ -141,6 +146,9 @@ jQuery ->
                         entry.source = '<a href="' + entry.source + '" target="_blank">' + entry.source_name + '</a>'
                     else
                         entry.source = entry.source_name
+
+                if entry.source_name == "Twitter"
+                    entry.name = '<a href="https://twitter.com/' + entry.name + '" target="_blank">' + entry.name + '</a>'
 
                 newEntry.find("*[data-field]").each ->
                     elem = jq(this)
