@@ -1,7 +1,7 @@
 ---
 layout: false
 ---
-<% unless :environment == 'build' %>
+<% unless is_live %>
 User-agent: *
 Disallow: /
 <% else %>

@@ -83,11 +83,14 @@ end
 
 configure :development do
   activate :livereload
+  set :is_live, false
   set :site_url, "http://dev.komodoide.com:4567"
 end
 
 configure :build do
-  set :site_url, ENV["KO_QA"] == "true" ? "http://qa.komodoide.com" : "http://komodoide.com"
+  is_qa = ENV["KO_QA"] == "true"
+  set :is_live, ! is_qa
+  set :site_url, is_qa ? "http://qa.komodoide.com" : "http://komodoide.com"
 end
 
 set :css_dir, 'assets/stylesheets'
