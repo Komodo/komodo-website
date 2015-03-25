@@ -76,19 +76,18 @@ sidebar: resources
         <h3 id="automatic">Automatic</h3>
 
         <p>With Automatic resources all you do is supply the name and GitHub url of your resource, we will take care of the rest. To do this, use the following format:</p>
-        <pre><code class="hlyaml">Resource Name: https://github.com/MyUsername/MyRepository</code></pre>
+        <pre><code class="hl yaml">Resource Name: https://github.com/MyUsername/MyRepository</code></pre>
 
         <h3 id="semi-automatic">Semi-Automatic</h3>
 
         <p>Say you want us to retrieve all your repository data for you, but you want to override certain information that is being supplied by GitHub. You can do this by using the following format:</p>
         <pre>
-            <code class="hlyaml">Resource Name:
-                html_url: https://github.com/MyUsername/MyRepository # Required
-                owner: login: MyOtherNickname # Example
-                readme: 
-                    content: >
-                              Foo # Example
-            </code>
+            <code class="hl yaml">Resource Name:
+    html_url: https://github.com/MyUsername/MyRepository # Required
+    owner: login: MyOtherNickname # Example
+    readme: 
+        content: >
+                  Foo # Example</code>
         </pre>
 
         <p>To find out what fields you can override please check out the <a href="https://developer.github.com/v3/repos/#get">Github API documentation</a></p>
@@ -101,25 +100,24 @@ sidebar: resources
 
         <p>Note that you <strong>must not</strong> include the <code>id</code> or <code>html_url</code> fields.</p>
         <pre>
-        <code class="hlyaml">Resource Name:
-            # Required Fields
-            owner:
-                login: MyName
-                gravatar_id: fbf0600881da69934bad33192694d484 # Optional
-                html_url: https://github.com/MyName
-            created_at: 2014-03-24T00:00:00Z
-            updated_at: 2014-03-24T00:00:00Z
+        <code class="hl yaml">Resource Name:
+    # Required Fields
+    owner:
+        login: MyName
+        gravatar_id: fbf0600881da69934bad33192694d484 # Optional
+        html_url: https://github.com/MyName
+    created_at: 2014-03-24T00:00:00Z
+    updated_at: 2014-03-24T00:00:00Z
 
-            # The location where your Resource may be downloaded
-            raw_url: https://raw.github.com/Foo/Bar/file.txt
+    # The location where your Resource may be downloaded
+    raw_url: https://raw.github.com/Foo/Bar/file.txt
 
-            # Optional Fields
-            description: My Description
-            readme: 
-                content: >
-                          My Readme
-            homepage: https://..
-            </code>
+    # Optional Fields
+    description: My Description
+    readme: 
+        content: >
+                  My Readme
+    homepage: https://..</code>
         </pre>
 
         <h2>Submitting The Resource</h2>
