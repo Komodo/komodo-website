@@ -20,7 +20,7 @@ end
 
 pageable = {}
 
-if data.has_key? "blog"
+if data.has_key? "blog" and data.blog.has_key? "posts"
   data.blog.posts.each do |id, post|
     if /^\d{4}-\d{2}-/.match(post["slug"])
       post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
@@ -31,7 +31,7 @@ if data.has_key? "blog"
   
   pageable["blog"] = data.blog.posts
                       .reject { |k,v| v.tags.include? "press" }
-                      .sort_by { |k,v| v["date"] }
+                      .sort_by { |k,v| v ? v["date"] : false }
                       .reverse
   
   tags().each() do |name,posts|

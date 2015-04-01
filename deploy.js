@@ -18,8 +18,6 @@
         var commands = [
             "rvm use 1.9.3",
             "bundle install",
-            "rm -Rf data/blog",
-            "rm -Rf data/resources",
             "bundle exec middleman contentful",
             "bundle exec middleman resources",
             "bundle exec middleman build"
