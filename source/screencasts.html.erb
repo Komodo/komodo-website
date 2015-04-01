@@ -14,7 +14,7 @@ sidebar: resources
 <% end %>
 
 <ul class="screencasts">
-    <% sitemap.where(:layout.equal => 'screencast').all().each() do |item| %>
+    <% get_pages_by_layout("screencast").each() do |item| %>
     
     <li>
         <a href="<%= item.url %>">

@@ -280,7 +280,7 @@ priority: 1.0
         </div>
         <div id="splash-news-screencasts">
             <h1><a href="/screencasts">Screencasts</a></h1>
-                <% sitemap.where(:layout.equal => 'screencast').all()[0..5].each() do |item| %>
+                <% get_pages_by_layout('screencast')[0..5].each() do |item| %>
                 <a href="<%= item.url %>">
                     <i class="icon icon-youtube-play"></i>
                     <figure style="background-image: url('<%= vimeo_data(item.data.vimeo_id, "thumbnail_large") %>')"></figure>

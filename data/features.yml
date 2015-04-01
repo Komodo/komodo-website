@@ -11,6 +11,7 @@
       name: Commando (Go to Anything)
       description: This powerful popup dialog is the combined successor of the Fast Open and Invoke Tool dialogs in previous versions of Komodo. Commando provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
       img: commando.png
+      video: /screencasts/commando-go-to-anything/
     -
       name: GoLang Support
       description: Google Go (GoLang) is now supported in Komodo, and features syntax coloring, code folding, syntax checking (linting) and code intelligence
@@ -77,7 +78,7 @@
     - 
       name: Multiple Selections
       description: Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions.
-      video: http://dev.komodoide.com:4567/screencasts/multiple-selections/
+      video: screencasts/multiple-selections/
     - 
       name: Unified Menu Button
       description: Komodo can be configured to use a collapsed toolbar button menu, instead of a full menu bar (Windows and Linux only).
@@ -96,11 +97,11 @@
     - 
       name: Auto Abbreviation Snippets
       description: Type an abbreviation to automatically trigger snippet selection.
-      video: http://dev.komodoide.com:4567/screencasts/auto-abbreviations-snippets/
+      video: screencasts/auto-abbreviations-snippets/
     - 
       name: Key Bindings
       description: Vi/Vim, emacs, OS X, Windows/Linux included.
-      video: http://dev.komodoide.com:4567/screencasts/vi-mode/
+      video: screencasts/vi-mode/
     - 
       name: Powerful Snippets and Macros
       description: Insert snippets with abbreviations. Use macros to automate repetitive sequences.
@@ -116,7 +117,7 @@
     - 
       name: Code Refactoring
       description: Smart code transformation capabilities include Rename Variable, Rename Class Member, and Method Extraction.
-      video: http://dev.komodoide.com:4567/screencasts/code-refactoring/
+      video: screencasts/code-refactoring/
     - 
       name: Autocomplete and Calltips
       description: Supports many languages and detects multiple languages within a file.
@@ -227,14 +228,15 @@
       name: Commando
       description: Provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
       isNew: true
+      video: /screencasts/commando-go-to-anything/
     - 
       name: Breadcrumbs Navigation
       description: Breadcrumbs navigation bar shows the directory ancestors relative to the current editor file, allowing you to easily find and open related files.
-      video: http://dev.komodoide.com:4567/screencasts/breadcrumbs/
+      video: screencasts/breadcrumbs/
     - 
       name: Open Files Side Pane
       description: New side pane organizes all your open files by language.
-      video: http://dev.komodoide.com:4567/screencasts/open-files-widget/
+      video: screencasts/open-files-widget/
     - 
       name: File Sorting and Grouping
       description: Sort and group the Open Files pane by language, file extension, directory and location.
@@ -247,7 +249,7 @@
     - 
       name: Projects & Places
       description: Manage your projects in the left sidebar. View your file systems categorized by project.
-      video: http://dev.komodoide.com:4567/screencasts/projects-and-what-theyre-for/
+      video: screencasts/projects-and-what-theyre-for/
     - 
       name: History, Bookmarks, Braces
       description: Jump to previous and marked lines, and matching braces.
@@ -268,11 +270,11 @@
     - 
       name: Abyss Dark Theme
       description: \Abyss\ native dark UI theme can be enabled in preferences. Goes well with \Dark_Wombatsosia\ editor scheme.
-      video: http://dev.komodoide.com:4567/screencasts/abyss-dark-ui-theme/
+      video: screencasts/abyss-dark-ui-theme/
     - 
       name: Floating Side Panes
       description: Undock components and move them anywhere on screen.
-      video: http://dev.komodoide.com:4567/screencasts/customizable-panes/
+      video: screencasts/customizable-panes/
     - 
       name: Extensions/Add-Ons
       description: Over 100 add-ons available through our Firefox-based system.

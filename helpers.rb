@@ -48,6 +48,17 @@ module Helpers
     end
   end
   
+  def get_pages_by_layout(layout)
+    pages = Array.new
+    sitemap.where(:layout.equal => layout).all().each() do |page|
+      pages.push page
+    end
+    pages = pages.sort_by do |page|
+      page.data.date
+    end
+    return pages.reverse()
+  end
+  
   def get_list(ob, classAttr = "")
     r = ['<ul class="' + (classAttr) + '">']
     ob.each do |value|
