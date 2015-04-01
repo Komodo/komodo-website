@@ -18,9 +18,11 @@
         var commands = [
             "rvm use 1.9.3",
             "bundle install",
-            "middleman contentful",
-            "middleman resources",
-            "middleman build"
+            "rm -Rf data/blog",
+            "rm -Rf data/resources",
+            "bundle exec middleman contentful",
+            "bundle exec middleman resources",
+            "bundle exec middleman build"
         ];
         
         var environment = process.env;
