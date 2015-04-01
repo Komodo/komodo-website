@@ -15,6 +15,7 @@ activate :contentful do |cntf|
   cntf.cda_query     = { }
   cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
                          authors: '1kUEViTN4EmGiEaaeC6ouY' }
+  cntf.use_preview_api = environment == :development or ENV["KO_QA"] == "true"
 end
 
 pageable = {}
