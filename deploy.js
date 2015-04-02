@@ -29,7 +29,7 @@
         // just compile it locally
         if (params.branch == "production")
         {
-            commands.push("middleman deploy");
+            commands.push("bundle exec middleman deploy");
             
             environment.KO_QA = "false";
         }
