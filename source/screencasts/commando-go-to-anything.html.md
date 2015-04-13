@@ -10,4 +10,5 @@ A quick introduction into one of Komodo IDE 9's new features - Commando, or Go T
 The default shortcuts to open Commando are:
 
 Cmd+Shift+O - On Mac OSX
+
 Ctrl+Shift+O - On Windows or Linux
