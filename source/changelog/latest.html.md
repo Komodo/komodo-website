@@ -132,6 +132,36 @@ Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
 
+### 9.0.1 Bug Fixes
+
+*   Abyss: Fixed issues on Windows with double borders and white space above toolbar.
+*   Color Schemes: Use foreground color for caret color - fixes #75\. (Bug [issue #75](https://github.com/Komodo/KomodoEdit/issues/75))
+*   Commando: Cache is not updated when a shorcut is added - fixes #115\. (Bug [issue #115](https://github.com/Komodo/KomodoEdit/issues/115))
+*   Commando: Commando hangs when descriptions have complex values - fixes #111\. (Bug [issue #111](https://github.com/Komodo/KomodoEdit/issues/111))
+*   Commando: Commando prompts are behind commando panel on OSX - fixes #110\. (Bug [issue #110](https://github.com/Komodo/KomodoEdit/issues/110))
+*   Commando: Oversized menulist icon on HiDPI.
+*   Commando: Reload sections scope when switching files - fixes #114\. (Bug [issue #114](https://github.com/Komodo/KomodoEdit/issues/114))
+*   Editor: XML Auto-indentation causes infinite loop in edge cases - fixes #186\. (Bug [issue #186](https://github.com/Komodo/KomodoEdit/issues/186))
+*   Icons: Debug tab icon was oversized on HiDPI/Retina - fixes #72\. (Bug [issue #72](https://github.com/Komodo/KomodoEdit/issues/72))
+*   Notify: Pressing cog hides notification when priority is NOW - fixes #41\. (Bug [issue #41](https://github.com/Komodo/KomodoEdit/issues/41))
+*   Places: Duplicate contents when toggling a folder - fixes #61\. (Bug [issue #61](https://github.com/Komodo/KomodoEdit/issues/61))
+*   Places: Update places when a project is saved - fixes #129\. (Bug [issue #129](https://github.com/Komodo/KomodoEdit/issues/129))
+*   Printing: Use the global ko object - fixes #74 & fixes #135\. (Bug [issue #74](https://github.com/Komodo/KomodoEdit/issues/74))
+*   Run: Run command was not saving recent commands - fixes #37\. (Bug [issue #37](https://github.com/Komodo/KomodoEdit/issues/37))
+*   Trackchanges: Encoding issue on windows where characters end up garbled in the change dialog - fixes #69\. (Bug [issue #69](https://github.com/Komodo/KomodoEdit/issues/69))
+*   UI: Bottom pane height did not persist properly across restart - fixes #47\. (Bug [issue #47](https://github.com/Komodo/KomodoEdit/issues/47))
+*   UI: High CPU use on OSX when using Trackpad - fixes #99\. (Bug [issue #99](https://github.com/Komodo/KomodoEdit/issues/99))
+*   UI: Improve scrollbar contrast on dark color schemes.
+*   UI: Places widget dropdown menu had uppercase text - fixes #46\. (Bug [issue #46](https://github.com/Komodo/KomodoEdit/issues/46))
+*   UI: Ugly border showing around notifications on windows - fixes #108\. (Bug [issue #108](https://github.com/Komodo/KomodoEdit/issues/108))
+*   UI: fixed OSX Yosemite vibrancy effect in panes.
+*   fix Debugger: Required two attempts to start debugging.
+*   fix issue #149 - Debugger: Ensure Ctrl+F5 to skip debugger dialog works. (Bug [issue #149](https://github.com/Komodo/KomodoEdit/issues/149))
+*   fix issue #149 - Debugger: Ensure Ctrl+F5 to skip debugger dialog works. (Bug [issue #149](https://github.com/Komodo/KomodoEdit/issues/149))
+*   fix issue #58 - codeintel: allow go-lang prefs to pass to out-of-process codeintel. (Bug [issue #58](https://github.com/Komodo/KomodoEdit/issues/58))
+*   fix issue #85 - Tcl autocomplete insertion was incorrect for unicode. (Bug [issue #85](https://github.com/Komodo/KomodoEdit/issues/85))
+*   fix issue 171: Code Intelligence: Fix race condition when multiple windows opened at startup.
+
 ### 9.0.0 Bug Fixes
 
 *   Editor: Stop scrolling jumps when word wrap is enabled and editor is resized. (Bug [106383](http://bugs.activestate.com/show_bug.cgi?id=106383))
