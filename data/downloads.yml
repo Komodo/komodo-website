@@ -1,4 +1,4 @@
-ide-win32: "http://downloads.activestate.com/Komodo/releases/9.0.0/Komodo-IDE-9.0.1-87208.msi"
+ide-win32: "http://downloads.activestate.com/Komodo/releases/9.0.1/Komodo-IDE-9.0.1-87208.msi"
 ide-osx: "http://downloads.activestate.com/Komodo/releases/9.0.1/Komodo-IDE-9.0.1-87208-macosx-x86_64.dmg"
 ide-linux: "http://downloads.activestate.com/Komodo/releases/9.0.1/Komodo-IDE-9.0.1-87208-linux-x86.tar.gz"
 ide-linux64: "http://downloads.activestate.com/Komodo/releases/9.0.1/Komodo-IDE-9.0.1-87208-linux-x86_64.tar.gz"
