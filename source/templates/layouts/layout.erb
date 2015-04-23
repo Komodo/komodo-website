@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title><%= get_title(defined?(post) ? post : false) %></title>
+        <title><%= get_title(defined?(page_title) ? page_title : false) %></title>
         <meta name="description" content="<%= current_page.data.description || description %>" />
         <meta name="keywords" content="<%= current_page.data.keywords || keywords %>" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="<%= get_social_description(defined?(post) ? post : false, false) %>" />
+        <meta property="og:title" content="<%= get_social_description(defined?(page_title) ? page_title : false, false) %>" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         

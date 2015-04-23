@@ -26,7 +26,7 @@ if data.has_key? "blog" and data.blog.has_key? "posts"
       post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
     end
     
-    proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post }, ignore: true
+    proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post, :page_title => post.title }, ignore: true
   end
   
   pageable["blog"] = data.blog.posts
@@ -35,7 +35,7 @@ if data.has_key? "blog" and data.blog.has_key? "posts"
                       .reverse
   
   tags().each() do |name,posts|
-    proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts }, ignore: true
+    proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts, :page_title => name }, ignore: true
   end
 end
 
@@ -60,7 +60,7 @@ if data.has_key? "resources"
     
     resources.each() do |resource|
       slug = get_resource_slug(resource)
-      proxy "/resources/#{category}/#{slug}/index.html", "templates/proxy/resource.html", :locals => { :resource => resource, :category => categories[category] }, ignore: true
+      proxy "/resources/#{category}/#{slug}/index.html", "templates/proxy/resource.html", :locals => { :resource => resource, :category => categories[category], :page_title => resource.title }, ignore: true
     end
     
   end

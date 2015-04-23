@@ -1,9 +1,11 @@
 ---
-layout: default
-sidebar: resources
+layout: layout
 basenameOrig: resource
-classNames: sidebar-small
 ---
+
+<div id="content" class="sidebar sidebar-small document-resource">
+    <section role="main">
+        <article class="normalize">
 
 <ul class="trail">
     <li>
@@ -214,4 +216,18 @@ classNames: sidebar-small
         </p>
         <%= partial('comments') %>
     </div>
+</div>
+
+        </article>
+    </section>
+    <aside class="sidebar-resources normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <%= partial('sidebars/resources') %>
+        </div>
+    </aside>
 </div>

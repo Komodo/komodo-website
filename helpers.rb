@@ -1,39 +1,51 @@
 module Helpers
   
-  def get_title(post)
+  def get_effective_title(page_title)
     
     if current_page.data.title
       if get_basename() == "index" 
         return current_page.data.title
       else
-        return "#{current_page.data.title} | #{title}"
+        return current_page.data.title
       end
     end
     
-    if post
-      return "#{post.title} | #{title}"
+    if page_title
+      return page_title
     end
     
     return title
     
   end
   
-  def get_social_description(post, via = true)
+  def get_title(page_title)
+    
+    effective_title = get_effective_title(page_title)
+    
+    if current_page.data.title and get_basename() == "index"
+      return effective_title
+    end
+    
+    return "#{effective_title} | #{title}"
+    
+  end
+  
+  def get_social_description(page_title, via = true)
     if current_page.data.socialDescription
       return current_page.data.socialDescription
     end
-
-    page_title = post ? post.title : current_page.data.title
+    
+    page_title = get_effective_title(page_title)
   
-    if meta('layout') == 'blog'
-      if via
-        return page_title + ' via @KomodoIDE'
-      else
-        return page_title
-      end
+    if meta('layout') == 'blog' and via
+      return page_title + ' via @KomodoIDE'
     end
-
-    return social_description
+    
+    unless page_title.include? "Komodo"
+      page_title = page_title + " | Komodo IDE"
+    end
+    
+    return page_title
   end
   
   def get_basename()
