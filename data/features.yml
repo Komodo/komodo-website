@@ -7,6 +7,7 @@
       name: Track Changes
       description: The editor has gained a new left margin, which highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin shows a diff dialog of the changes, and allows you to revert individual changes. Sweet!
       img: trackchanges.png
+      video: /screencasts/track-changes/
     -
       name: Commando (Go to Anything)
       description: This powerful popup dialog is the combined successor of the Fast Open and Invoke Tool dialogs in previous versions of Komodo. Commando provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
@@ -71,6 +72,7 @@
       name: Track Changes
       description: A margin in the editor highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin will show a diff dialog allowing you to revert changes.
       isNew: true
+      video: /screencasts/track-changes/
     -
       name: Markdown Viewer
       description: Komodo provides a preview of the generated HTML directly within a split view and will update itself whenever you make a change to the Markdown text.
@@ -78,7 +80,7 @@
     - 
       name: Multiple Selections
       description: Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions.
-      video: screencasts/multiple-selections/
+      video: /screencasts/multiple-selections/
     - 
       name: Unified Menu Button
       description: Komodo can be configured to use a collapsed toolbar button menu, instead of a full menu bar (Windows and Linux only).
@@ -97,11 +99,11 @@
     - 
       name: Auto Abbreviation Snippets
       description: Type an abbreviation to automatically trigger snippet selection.
-      video: screencasts/auto-abbreviations-snippets/
+      video: /screencasts/auto-abbreviations-snippets/
     - 
       name: Key Bindings
       description: Vi/Vim, emacs, OS X, Windows/Linux included.
-      video: screencasts/vi-mode/
+      video: /screencasts/vi-mode/
     - 
       name: Powerful Snippets and Macros
       description: Insert snippets with abbreviations. Use macros to automate repetitive sequences.
@@ -117,7 +119,7 @@
     - 
       name: Code Refactoring
       description: Smart code transformation capabilities include Rename Variable, Rename Class Member, and Method Extraction.
-      video: screencasts/code-refactoring/
+      video: /screencasts/code-refactoring/
     - 
       name: Autocomplete and Calltips
       description: Supports many languages and detects multiple languages within a file.
@@ -232,11 +234,11 @@
     - 
       name: Breadcrumbs Navigation
       description: Breadcrumbs navigation bar shows the directory ancestors relative to the current editor file, allowing you to easily find and open related files.
-      video: screencasts/breadcrumbs/
+      video: /screencasts/breadcrumbs/
     - 
       name: Open Files Side Pane
       description: New side pane organizes all your open files by language.
-      video: screencasts/open-files-widget/
+      video: /screencasts/open-files-widget/
     - 
       name: File Sorting and Grouping
       description: Sort and group the Open Files pane by language, file extension, directory and location.
@@ -249,7 +251,7 @@
     - 
       name: Projects & Places
       description: Manage your projects in the left sidebar. View your file systems categorized by project.
-      video: screencasts/projects-and-what-theyre-for/
+      video: /screencasts/projects-and-what-theyre-for/
     - 
       name: History, Bookmarks, Braces
       description: Jump to previous and marked lines, and matching braces.
@@ -270,11 +272,11 @@
     - 
       name: Abyss Dark Theme
       description: \Abyss\ native dark UI theme can be enabled in preferences. Goes well with \Dark_Wombatsosia\ editor scheme.
-      video: screencasts/abyss-dark-ui-theme/
+      video: /screencasts/abyss-dark-ui-theme/
     - 
       name: Floating Side Panes
       description: Undock components and move them anywhere on screen.
-      video: screencasts/customizable-panes/
+      video: /screencasts/customizable-panes/
     - 
       name: Extensions/Add-Ons
       description: Over 100 add-ons available through our Firefox-based system.
