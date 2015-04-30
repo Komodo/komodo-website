@@ -21,6 +21,7 @@
       name: Markdown Viewer
       description: For Markdown files, Komodo provides a preview of the generated HTML directly within a Komodo split view and contents dynamically update  whenever you make a change to the Markdown text - it doesn't even need to be saved.
       img: markdown.png
+      video: /screencasts/markdown-viewer/
     -
       name: <a href="http://kopy.io">Kopy.io</a> Helper
       description: >
@@ -77,6 +78,7 @@
       name: Markdown Viewer
       description: Komodo provides a preview of the generated HTML directly within a split view and will update itself whenever you make a change to the Markdown text.
       isNew: true
+      video: /screencasts/markdown-viewer/
     - 
       name: Multiple Selections
       description: Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions.
