@@ -168,26 +168,11 @@ jQuery ->
     
     # Analytics
     bindAnalytics = ->
-        if _gak?
-            href = window.location.href
-            if href.indexOf("framed/?") != -1
-                href = href.substr(href.indexOf("?")+1)
-                prefix = window.location.pathname
-                prefix += "/" if prefix.substr(-1) != "/"
-                path = prefix + href.replace(/^https?:\/\//, '')
-
-            if path?
-
-                _gak('send', 'pageview', path)
-            else
-                _gak('send', 'pageview')
-
-        if _gaq? || _gak? || clicky?
+        if _gak? || clicky?
             jq("a[data-analytics]").click ->
                 elem = jq this
                 [category, action, label] = elem.data("analytics").split(":")
                 _gak("send", "event", category, action, label) if _gak?
-                _gaq.push(['_trackEvent', category, action, label]) if _gaq?
                 
                 clicky.log(window.location.href, [category, action, label].join(":"),
                            (if category is "download" then "download" else "outbound")) if clicky?
