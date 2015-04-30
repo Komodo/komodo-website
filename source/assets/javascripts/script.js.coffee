@@ -168,11 +168,11 @@ jQuery ->
     
     # Analytics
     bindAnalytics = ->
-        if _gak? || clicky?
+        if ga? || clicky?
             jq("a[data-analytics]").click ->
                 elem = jq this
                 [category, action, label] = elem.data("analytics").split(":")
-                _gak("send", "event", category, action, label) if _gak?
+                ga("send", "event", category, action, label) if ga?
                 
                 clicky.log(window.location.href, [category, action, label].join(":"),
                            (if category is "download" then "download" else "outbound")) if clicky?
@@ -469,8 +469,7 @@ jQuery ->
         jq(document).on('pageShared', onPageShare);
 
     onPageShare = (e) ->
-        if _gak
-            _gak.push(['_trackSocial', e.network, e.action]);
+        ga('send', 'social', e.network, e.action) if ga?
             
     loadStickyFloat = ->
         jq('.sticky').stickyfloat {
