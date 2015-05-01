@@ -14,11 +14,11 @@ pricing:
   enabled: false
   description: "To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!"
   tooltip: ""
-#prices:
-  #prostudio: 495
-  #komodo: 245
-  #komodous: 332
-  #fivepack: 1365
+prices:
+  prostudio: 
+  komodo: 
+  komodous: 
+  fivepack:
 global:
   enabled: false
   description: To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!
