@@ -9,7 +9,7 @@ nav:
   tooltip: ""
   link: "/pricing"
 buttons:
-  enabled: true
+  enabled: false
 pricing: 
   enabled: false
   description: "To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!"
