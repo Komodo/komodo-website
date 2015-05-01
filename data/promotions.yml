@@ -4,7 +4,7 @@ splash:
   tooltip: ""
   link: "/pricing"
 nav: 
-  enabled: true
+  enabled: false
   description: "ON SALE"
   tooltip: ""
   link: "/pricing"
