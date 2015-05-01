@@ -4,14 +4,14 @@ splash:
   tooltip: ""
   link: "/pricing"
 nav: 
-  enabled: true
+  enabled: false
   description: "ON SALE"
   tooltip: ""
   link: "/pricing"
 buttons:
-  enabled: true
+  enabled: false
 pricing: 
-  enabled: true
+  enabled: false
   description: "To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!"
   tooltip: ""
 prices:
@@ -20,7 +20,7 @@ prices:
   komodous: 332
   fivepack: 1365
 global:
-  enabled: true
+  enabled: false
   description: To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!
   link: /pricing
 startpage: 
