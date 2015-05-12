@@ -12,7 +12,7 @@ buttons:
   enabled: false
 pricing: 
   enabled: true
-  description: "Buy a 5-pack, get 1 lb Starbucks® Komodo Dragon® Blend coffee + 5 Komodo IDE coffee mugs. <sup>*</sup>"
+  description: "Buy a 5-pack, get 1 lb Starbucks® Komodo Dragon® Blend coffee + 5 Komodo IDE coffee mugs.<sup>*</sup>"
   tooltip: ""
 prices:
   prostudio: 
