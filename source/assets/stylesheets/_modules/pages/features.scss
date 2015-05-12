@@ -1,6 +1,6 @@
 .document-features
 {
-    article
+    .article-wrapper
     {
         @include media(min-width $tablet-size)
         {
@@ -8,6 +8,23 @@
         }
         
         position: relative;
+    }
+    
+    .title
+    {
+        margin-bottom: 35px;
+        
+        h3
+        {
+            margin-top: 10px;
+        }
+        
+        h1
+        {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 10px 0 10px;
+        }
     }
     
     .groups
@@ -28,7 +45,7 @@
             margin: 0 auto 25px;
             text-align: center;
             
-            .icon
+            & > .icon
             {
                 font-size: 48px;
             }
@@ -121,7 +138,7 @@
         @include media(min-width $tablet-size)
         {
             position: absolute;
-            top: 100px;
+            top: 80px;
             left: 0;
             width: 250px;
         }

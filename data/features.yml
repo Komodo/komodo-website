@@ -297,7 +297,11 @@
 - 
   name: Dev Team Capabilities
   name_short: Dev Teams
-  description: The perfect IDE for teams
+  description: >
+                <a href="http://www.activestate.com/sites/default/files/pdf/komodo-teams.pdf">
+                  <i class="icon icon-download"></i>
+                    Download Komodo for Teams datasheet
+                </a>
   id: collab
   icon: suitcase
   items: 
