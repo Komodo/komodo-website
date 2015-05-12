@@ -245,6 +245,13 @@
     .promotion
     {
         color: $promo-color;
+        line-height: 1.5;
+        
+        sup
+        {
+            font-weight: normal;
+            font-style: italic;
+        }
     }
 
 }

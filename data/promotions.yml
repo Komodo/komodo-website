@@ -11,8 +11,8 @@ nav:
 buttons:
   enabled: false
 pricing: 
-  enabled: false
-  description: "To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!"
+  enabled: true
+  description: "Buy a 5-pack, get 1 lb Starbucks® Komodo Dragon® Blend coffee + 5 Komodo IDE coffee mugs. <sup>*</sup>"
   tooltip: ""
 prices:
   prostudio: 
