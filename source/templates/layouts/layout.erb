@@ -21,9 +21,9 @@
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         
         <% if defined?(post) and post.has_key?("featuredImage") %>
-        <meta property="og:image" content="<%= post.featuredImage.url %>" />
+        <meta property="og:image" content="<%= (post.featuredImage.url.start_with?("http") ? "" : "http:") + post.featuredImage.url %>" />
         <% elsif meta('image') %>
-        <meta property="og:image" content="<%= meta('image') %>" />
+        <meta property="og:image" content="<%= meta('image')  %>" />
         <% else %>
         <meta property="og:image" content="<%= site_url %>/assets/images/screenshots/splash/mac-splash-php.png" />
         <% end %>
