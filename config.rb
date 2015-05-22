@@ -12,7 +12,7 @@ contentful_token = ENV['CONTENTFUL_TOKEN']
 activate :contentful do |cntf|
   cntf.space         = contentful_space
   cntf.access_token  = contentful_token
-  cntf.cda_query     = { }
+  cntf.cda_query     = { limit: 1000 }
   cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
                          authors: '1kUEViTN4EmGiEaaeC6ouY' }
   cntf.use_preview_api = ENV["KO_QA"] == "true"
