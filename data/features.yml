@@ -2,7 +2,19 @@
   name: What's New
   id: new
   icon: star
-  items: 
+  items:
+    - 
+      name: Package Manager Integration (IDE 9.1)
+      description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard. Commando will allow you to search for available and installed packages, and even for package managers that generally make this task fairly cumbersome (i.e. NPM and CPANM). Available for Bower, NPM, Composer, Gem, PIP, CPAN, PyPM and PPM.
+      img: packagemanager.png
+    - 
+      name: Shell Scope (IDE 9.1)
+      description: Easily run commands from Komodo right from Commando. Of course you could already run commands from Komodo, but now you can do it in style and without interrupting your workflow.
+      img: shell.png
+    - 
+      name: Improved Workspace Management (IDE 9.1)
+      description: We've significantly improved the workspace management functionality in Komodo IDE. Easily create your own custom configurations for Komodo and load them on the fly.
+      img: workspaces.png
     - 
       name: Track Changes
       description: The editor has gained a new left margin, which highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin shows a diff dialog of the changes, and allows you to revert individual changes. Sweet!
