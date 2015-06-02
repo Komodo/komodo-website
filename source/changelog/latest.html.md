@@ -1,15 +1,43 @@
 ---
-title: Komodo 9 Changelog
+title: Komodo 9.1 Changelog
 sidebar: download
 classNames: small-text markdown
 ---
 
-# Komodo IDE/Edit 9.0 Release Notes
+# Komodo IDE/Edit 9.1 Release Notes
 
 These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fixes](#details) and [known issues](#knownissues) for Komodo IDE and Komodo Edit.
 
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
+
+### 9.1
+
+ * **Package Manager integration**: You can now easily install and uninstall packages
+   using Commando, as well as perform all sorts of specific package manager actions.
+   Support for the following package managers (*IDE only*):
+   * Bower (web front-end)
+   * NPM (Node.JS)
+   * Composer (PHP)
+   * Gem (Ruby)
+   * PIP (Python)
+   * CPAN (Perl)
+   * PyPM (Python)
+   * PPM (Perl)
+ * **Scope Shell**: Commando has a new "shell" scope which allows you to easily run commands with minimum interruption from your workflow (*IDE only*).
+ * **Workspace management** has been significantly improved. Save your UI state and
+   opened files and restore them whenever you'd like (*IDE only*).
+ * Select Commando (Go to Anything) results by pressing ALT+number.
+ * The Commando user experience has had significant usability improvements.
+   Most notably when starting Commando you will now be presented with a convenient list of scopes that you can use to narrow down your search results.
+ * **Other Mentionables**
+    * Color Schemes: Use foreground color for caret color - fixes [#75](https://github.com/Komodo/KomodoEdit/issues/75).
+    * Commando: Don't preserve query when navigating backwards.
+    * Commando: Escape now clears the current search.
+    * SDK: Added the "shell" SDK, allowing you to easily run shell commands.
+    * UI: Improved scrollbar contrast on dark color schemes.
+    * UI: "Ugly border" showing around notifications on windows - fixes [#108](https://github.com/Komodo/KomodoEdit/issues/108).
+    * CodeIntel: Improve PHPDoc tooltip legibility - contributed by Defman - [PR #225](https://github.com/Komodo/KomodoEdit/pull/255)
 
 ### 9.0
 
@@ -109,7 +137,7 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 
 *   **Other Mentionables**
 
-        *   Statusbar has moved to be above the bottom pane (attached to the editor view)
+    *   Statusbar has moved to be above the bottom pane (attached to the editor view)
     *   CSS code formatter was added
     *   Preference page now has a simple and advanced mode
     *   Startpage has been removed - instead a _Quick Launch_ page is shown when no views are opened
@@ -131,6 +159,36 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 9.1 Bug Fixes
+
+ * Commando: Cache is not updated when a shorcut is added - fixes [#115](https://github.com/Komodo/KomodoEdit/issues/115).
+ * Commando: Commando hangs when descriptions have complex values - fixes [#111](https://github.com/Komodo/KomodoEdit/issues/111).
+ * Commando: Commando prompts are behind commando panel on OSX - fixes [#110](https://github.com/Komodo/KomodoEdit/issues/110).
+ * Commando: Oversized menulist icon on HiDPI.
+ * Commando: Reload sections scope when switching files - fixes [#114](https://github.com/Komodo/KomodoEdit/issues/114).
+ * Commando: Stops functioning when result entry has special characters - fixes [#266](https://github.com/Komodo/KomodoEdit/issues/266).
+ * Editor: XML Auto-indentation causes infinite loop in edge cases - fixes [#186](https://github.com/Komodo/KomodoEdit/issues/186).
+ * Icons: Debug tab icon was oversized on HiDPI/Retina - fixes [#72](https://github.com/Komodo/KomodoEdit/issues/72).
+ * Mac: Performance: Stop high CPU usage on Mac coming from scrollbar overlays. ([Bugzilla #106458](https://bugs.activestate.com/show_bug.cgi?id=))
+ * Markdown viewer: Improved markdown button reliability.
+ * Notify: Pressing cog hides notification when priority is NOW - fixes [#41](https://github.com/Komodo/KomodoEdit/issues/41).
+ * Other: Add back in way of opening the "Sample Project" - fixes [#265](https://github.com/Komodo/KomodoEdit/issues/265).
+ * Places: Duplicate contents when toggling a folder - fixes [#61](https://github.com/Komodo/KomodoEdit/issues/61).
+ * Places: Update places when a project is saved - fixes [#129](https://github.com/Komodo/KomodoEdit/issues/129).
+ * Run: Run command was not saving recent commands - fixes [#37](https://github.com/Komodo/KomodoEdit/issues/37).
+ * SDK: Shell: Added the ability to show the output of a command in a HUD panel.
+ * Skin: Komodo skin got reset to default each time a user upgraded - fixes [#215](https://github.com/Komodo/KomodoEdit/issues/215).
+ * Trackchanges: Encoding issue on windows where characters end up garbled in the change dialog - fixes [#69](https://github.com/Komodo/KomodoEdit/issues/69).
+ * UI: Bottom pane height did not persist properly across restart - fixes [#47](https://github.com/Komodo/KomodoEdit/issues/47).
+ * UI: High CPU use on OSX when using Trackpad - fixes [#99](https://github.com/Komodo/KomodoEdit/issues/99).
+ * UI: Places widget dropdown menu had uppercase text - fixes [#46](https://github.com/Komodo/KomodoEdit/issues/46).
+ * UI: fixed OSX Yosemite vibrancy effect in panes.
+ * Debugger: Required two attempts to start debugging.
+ * Code Intelligence: Fix race condition when multiple windows opened at startup - fixes [#171](https://github.com/Komodo/KomodoEdit/issues/171).
+ * Debugger: Ensure Ctrl+F5 to skip debugger dialog works - fixes [#149](https://github.com/Komodo/KomodoEdit/issues/149).
+ * Codeintel: allow go-lang prefs to pass to out-of-process codeintel - fixes [#58](https://github.com/Komodo/KomodoEdit/issues/58).
+ * Tcl: autocomplete insertion was incorrect for unicode - fixes [#85](https://github.com/Komodo/KomodoEdit/issues/85).
 
 ### 9.0.1 Bug Fixes
 

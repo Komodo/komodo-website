@@ -12,8 +12,13 @@ buttons:
   enabled: false
 pricing: 
   enabled: true
-  description: "Buy a 5-pack, get 1 lb Starbucks® Komodo Dragon® Blend coffee + 5 Komodo IDE coffee mugs.<sup>*</sup>"
+  description: Use coupon code PACKAGE15 to save 15% on Komodo thru June 30, plus get coffee + 5 mugs with a 5-pack purchase <sup>*</sup>
   tooltip: ""
+sale:
+  prostudio: false
+  komodopersonal: false
+  komodo: true
+  fivepack: true
 prices:
   prostudio: 
   komodo: 

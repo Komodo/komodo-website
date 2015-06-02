@@ -35,6 +35,10 @@ priority: 0.7
 
     <ul class="block">
         <li class="personal">
+            <% if data.promotions.sale.komodopersonal %>
+                <div class="ribbon-wrapper"><div class="ribbon">Sale</div></div>
+            <% end %>
+            
             <h2>Komodo IDE<br/>"Personal"</h2>
 
             <h1>
@@ -67,7 +71,11 @@ priority: 0.7
         </li>
         <li class="enterprise">
             <em class="popular">Most Popular</em>
-
+            
+            <% if data.promotions.sale.komodo %>
+                <div class="ribbon-wrapper"><div class="ribbon">Sale</div></div>
+            <% end %>
+            
             <h2>Komodo IDE</h2>
 
             <h1>
@@ -120,6 +128,10 @@ priority: 0.7
             </div>
         </li>
         <li class="packs">
+            <% if data.promotions.sale.fivepack %>
+                <div class="ribbon-wrapper"><div class="ribbon">Sale</div></div>
+            <% end %>
+            
             <h2>Komodo IDE For<br/>Teams (5-Packs)</h2>
 
             <h1>
@@ -297,7 +309,8 @@ priority: 0.7
             year's subscription for 5 annual Upgrades & Support plans.
         </p>
         <p>
-            <sup>*</sup> When you order a Komodo IDE 5-pack between May 13 and
+            <sup>*</sup> Offer does not apply to Personal licenses.
+            When you order a Komodo IDE 5-pack between May 13 and
             June 30, 2015, we'll send you 1 lb of Starbucks® Komodo Dragon®
             Blend coffee and 5 Komodo IDE 16 oz mugs. Offer only available for
             orders placed directly on our store or via PO (no resellers), only
