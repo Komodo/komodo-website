@@ -253,7 +253,51 @@
             font-style: italic;
         }
     }
-
+    
+    .ribbon-wrapper
+    {
+        width: 85px;
+        height: 88px;
+        overflow: hidden;
+        position: absolute;
+        top: -8px;
+        right: -6px;
+        
+        .ribbon
+        {
+            position: relative;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #333;
+            text-align: center;
+            @include transform(rotate(45deg));
+            padding: 7px 0;
+            left: -5px;
+            top: 15px;
+            width: 120px;
+            background: #BFDC7A;
+        }
+        
+        .ribbon:before, .ribbon:after
+        {
+            content: "";
+            border-top:   3px solid #6e8900;   
+            border-left:  3px solid transparent;
+            border-right: 3px solid transparent;
+            position:absolute;
+            bottom: -3px;
+        }
+        
+        .ribbon:before
+        {
+            left: 0;
+        }
+        .ribbon:after
+        {
+            right: 0;
+        }
+        
+    }
 }
 
 .document-license-comparison

@@ -220,6 +220,10 @@
     - 
       name: Integrated Unit Testing
       description: Supports major frameworks such as PHPUnit, Perl TAP, Python unittest, and Ruby's rake test.
+    -
+      name: Package Manager Integration
+      description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard.
+      isNew: true
     - 
       name: Toolbox
       description: Store snippets, macros and shell commands for easy access.
@@ -249,6 +253,14 @@
       name: Breadcrumbs Navigation
       description: Breadcrumbs navigation bar shows the directory ancestors relative to the current editor file, allowing you to easily find and open related files.
       video: /screencasts/breadcrumbs/
+    -
+      name: Shell Commands
+      description: Easily run shell commands right from Komodo using Commando.
+      isNew: true
+    -
+      name: Custom Workspaces
+      description: Easily create your own custom workspaces and load them on the fly.
+      isNew: true
     - 
       name: Open Files Side Pane
       description: New side pane organizes all your open files by language.
