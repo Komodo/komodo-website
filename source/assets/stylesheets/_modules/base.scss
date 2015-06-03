@@ -287,7 +287,7 @@ a.button
         bottom: -13px;
         font-size: 10px;
         z-index: 10;
-        padding: 5px;
+        padding: 3px;
         @include transform(rotate(-10deg));
         background: $promo-button-color !important;
     }
@@ -303,6 +303,7 @@ a.button
 .badge.promotion
 {
     background: $promo-button-color !important;
+    color: #333;;
 }
 
 .promotion.global
