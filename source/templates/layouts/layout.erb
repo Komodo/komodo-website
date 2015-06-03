@@ -21,7 +21,7 @@
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         
         <% if meta('image') %>
-        <meta property="og:image" content="<%= meta('image')  %>" />
+        <meta property="og:image" content="<%= meta('image', post)  %>" />
         <% else %>
         <meta property="og:image" content="<%= site_url %>/assets/images/screenshots/splash/mac-splash-php.png" />
         <% end %>

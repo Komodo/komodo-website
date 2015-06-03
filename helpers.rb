@@ -52,12 +52,12 @@ module Helpers
     return File.basename(current_page.path, ".*" )
   end
   
-  def meta(name)
+  def meta(name, post = false)
     if current_page.data.has_key?(name)
       return current_page.data[name]
     else
       if name == "image"
-        if defined?(post) and post.has_key?("featuredImage") and post.featuredImage.has_key?("url")
+        if post and post.has_key?("featuredImage") and post.featuredImage.has_key?("url")
           return (post.featuredImage.url.start_with?("http") ? "" : "http:") + post.featuredImage.url
         end
       end
