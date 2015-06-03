@@ -20,7 +20,9 @@
         <meta property="og:type" content="article" />
         <meta property="og:description" content="<%= current_page.data.description || description %>" />
         
-        <% if meta('image') %>
+        <% post = defined?(post) ? post : false %>
+        
+        <% if meta('image', post) %>
         <meta property="og:image" content="<%= meta('image', post)  %>" />
         <% else %>
         <meta property="og:image" content="<%= site_url %>/assets/images/screenshots/splash/mac-splash-php.png" />
