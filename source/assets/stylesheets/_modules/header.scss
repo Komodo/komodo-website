@@ -31,9 +31,9 @@ body.framed header
             {
                 position: absolute;
                 right: 5px;
-                top: 45px;
-                font-size: 12px;
-                padding: 5px;
+                top: 48px;
+                font-size: 11px;
+                padding: 2px;
                 z-index: 10;
                 @include transform(rotate(-5deg));
             }
