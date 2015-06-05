@@ -7,6 +7,7 @@
       name: Package Manager Integration (IDE 9.1)
       description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard. Commando will allow you to search for available and installed packages, and even for package managers that generally make this task fairly cumbersome (i.e. NPM and CPANM). Available for Bower, NPM, Composer, Gem, PIP, CPAN, PyPM and PPM.
       img: packagemanager.png
+      video: /screencasts/package-manager-integration/
     - 
       name: Shell Scope (IDE 9.1)
       description: Easily run commands from Komodo right from Commando. Of course you could already run commands from Komodo, but now you can do it in style and without interrupting your workflow.
@@ -224,6 +225,7 @@
       name: Package Manager Integration
       description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard.
       isNew: true
+      video: /screencasts/package-manager-integration/
     - 
       name: Toolbox
       description: Store snippets, macros and shell commands for easy access.
