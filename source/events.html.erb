@@ -1,0 +1,67 @@
+---
+title: Komodo Events
+description: Check out the events Komodo is participating in!
+socialDescription: Komodo IDE Events
+basenameOrig: events
+pagination:
+  for: events
+  per_page: 10
+---
+
+<% pagination.each do |id,event| %>
+<div class="entry">
+    
+    <% unless event.has_key?("summary") and event.summary %>
+        <% if event.has_key?("logo") %>
+            <img src="<%= event.logo.url %>" class="logo-small">
+        <% end %>
+    <% end %>
+    
+    <h1>
+        <a href="/events/<%= event.slug %>"><%= event.title %></a>
+    </h1>
+    <h3>
+        <span class="date">
+            <%= event.startDate.strftime('%b %e, %Y') %>
+            to <%= event.endDate.strftime('%b %e, %Y') %>
+        </span>
+        <% if event.has_key?("website") %>
+        <span class="website">    
+            <i class="icon icon-link"></i>
+            <a href="<%= event.website %>"><%= event.website %></a>
+        </span>
+        <% end %>
+        <% if event.has_key?("facebook") %>
+        <span class="facebook">    
+            <a href="<%= event.facebook %>"><i class="icon icon-facebook"></i></a>
+        </span>
+        <% end %>
+        <% if event.has_key?("twitter") %>
+        <span class="twitter">    
+            <a href="<%= event.twitter %>"><i class="icon icon-twitter"></i></a>
+        </span>
+        <% end %>
+        <% if event.has_key?("googlePlus") %>
+        <span class="googlePlus">    
+            <a href="<%= event.googlePlus %>"><i class="icon icon-google-plus"></i></a>
+        </span>
+        <% end %>
+    </h3>
+    <p>
+    
+        <% if event.has_key?("summary") and event.summary %>
+            <% if event.has_key?("logo") %>
+                <img src="<%= event.logo.url %>" class="logo">
+            <% end %>
+            <%= markitdown(event.summary) %>
+        <% end %>
+    </p>
+    <div class="clearfix"></div>
+    <hr/>
+</div>
+<div class="clearfix"></div>
+<% end %>
+
+<%= partial('pagination', :locals => { pagination: pagination }) %>
+
+<%= partial('addthis') %>

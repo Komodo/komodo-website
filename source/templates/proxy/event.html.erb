@@ -1,0 +1,60 @@
+---
+layout: layout
+basenameOrig: event-entry
+---
+
+<div id="content" class="document-event-entry
+                         <%= page_classes %>">
+    <section role="main">
+        <article class="normalize">
+            <% unless event.has_key?("summary") and event.summary %>
+                <% if event.has_key?("logo") %>
+                    <img src="<%= event.logo.url %>" class="logo-small">
+                <% end %>
+            <% end %>
+            
+            <h1>
+                <a href="/events">Events</a> &gt; <%= event.title %>
+            </h1>
+            <h3>
+                <span class="date">
+                    <%= event.startDate.strftime('%b %e, %Y') %>
+                    to <%= event.endDate.strftime('%b %e, %Y') %>
+                </span>
+                <% if event.has_key?("website") %>
+                <span class="website">    
+                    <i class="icon icon-link"></i>
+                    <a href="<%= event.website %>"><%= event.website %></a>
+                </span>
+                <% end %>
+                <% if event.has_key?("facebook") %>
+                <span class="facebook">    
+                    <a href="<%= event.facebook %>"><i class="icon icon-facebook"></i></a>
+                </span>
+                <% end %>
+                <% if event.has_key?("twitter") %>
+                <span class="twitter">    
+                    <a href="<%= event.twitter %>"><i class="icon icon-twitter"></i></a>
+                </span>
+                <% end %>
+                <% if event.has_key?("googlePlus") %>
+                <span class="googlePlus">    
+                    <a href="<%= event.googlePlus %>"><i class="icon icon-google-plus"></i></a>
+                </span>
+                <% end %>
+            </h3>
+            <p>
+                <% if event.has_key?("summary") and event.summary %>
+                    <% if event.has_key?("logo") %>
+                        <img src="<%= event.logo.url %>" class="logo">
+                    <% end %>
+                    <%= markitdown(event.summary) %>
+                <% end %>
+            </p>
+            
+            <%= partial('comments') %>
+        </article>
+    </section>
+</div>
+
+<%= partial('addthis') %>

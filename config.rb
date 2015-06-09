@@ -14,7 +14,8 @@ activate :contentful do |cntf|
   cntf.access_token  = contentful_token
   cntf.cda_query     = { limit: 1000 }
   cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
-                         authors: '1kUEViTN4EmGiEaaeC6ouY' }
+                         authors: '1kUEViTN4EmGiEaaeC6ouY',
+                         events: '15lufuGEz2oSe24m4eywmi' }
   cntf.use_preview_api = ENV["KO_QA"] == "true"
 end
 
@@ -37,6 +38,17 @@ if data.has_key? "cntf" and data.cntf.has_key? "posts"
   tags().each() do |name,posts|
     proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts, :page_title => name }, ignore: true
   end
+end
+
+if data.has_key? "cntf" and data.cntf.has_key? "events"
+  data.cntf.events.each do |id, event|
+    proxy "/events/#{event["slug"]}/index.html", "templates/proxy/event.html", :locals => { :event => event, :custom_meta => event, :page_title => event.title }, ignore: true
+  end
+  
+  present = DateTime.now
+  future = present + (365*10)
+  pageable["events"] = data.cntf.events
+                      .sort_by { |k,v| v.startDate < present ? future : v.startDate }
 end
 
 if data.has_key? "resources"
