@@ -166,7 +166,7 @@ module Helpers
   
   def tags()
     tags = {}
-    posts = data.blog.posts.sort_by { |k,v| v["date"] }.reverse
+    posts = data.cntf.posts.sort_by { |k,v| v["date"] }.reverse
     posts.each() do |id,post|
       post.tags.each() do |tag|
         unless tags.has_key? tag
@@ -216,7 +216,7 @@ module Helpers
   end
   
   def get_recent_blogs()
-    data.blog.posts
+    data.cntf.posts
       .reject { |k,v| v.tags.include? "press" }
       .sort_by { |k,v| v["date"] }
       .reverse

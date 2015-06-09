@@ -6,7 +6,7 @@ helpers Helpers
 set :url_root, "http://komodoide.com/"
 activate :search_engine_sitemap
 
-contentful_space = {blog: ENV['CONTENTFUL_SPACE']}
+contentful_space = {cntf: ENV['CONTENTFUL_SPACE']}
 contentful_token = ENV['CONTENTFUL_TOKEN']
 
 activate :contentful do |cntf|
@@ -20,8 +20,8 @@ end
 
 pageable = {}
 
-if data.has_key? "blog" and data.blog.has_key? "posts"
-  data.blog.posts.each do |id, post|
+if data.has_key? "cntf" and data.cntf.has_key? "posts"
+  data.cntf.posts.each do |id, post|
     if /^\d{4}-\d{2}-/.match(post["slug"])
       post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
     end
@@ -29,7 +29,7 @@ if data.has_key? "blog" and data.blog.has_key? "posts"
     proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post, :page_title => post.title }, ignore: true
   end
   
-  pageable["blog"] = data.blog.posts
+  pageable["blog"] = data.cntf.posts
                       .reject { |k,v| v.tags.include? "press" }
                       .sort_by { |k,v| v ? v["date"] : false }
                       .reverse
