@@ -5,7 +5,7 @@ title: Authors
 
 <h1>Authors</h1>
 
-<% data.blog.authors.sort_by { |k,v| v["name"] }.each() do |id,author| %>
+<% data.cntf.authors.sort_by { |k,v| v["name"] }.each() do |id,author| %>
 <% if author.has_key? "profilePhoto" %>
 <a name="<%= author.name.gsub(/[^a-zA-Z]/,'') %>"></a>
 <h2><%= author.name %></h2>

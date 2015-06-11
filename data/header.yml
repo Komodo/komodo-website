@@ -20,6 +20,9 @@ navigation:
       - 
         name: "Contribute"
         link: "{site.url}/resources/submit-instructions/"
+      -
+        name: "Events"
+        link: "{site.url}/events"
   - 
     name: "Blog"
   - 

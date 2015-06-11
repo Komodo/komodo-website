@@ -19,6 +19,6 @@
 /Gemfile.lock
 
 # Misc
-/data/blog
+/data/cntf
 /data/resources
-.blog-space-hash
+.cntf-space-hash

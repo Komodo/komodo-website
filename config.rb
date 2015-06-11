@@ -6,7 +6,7 @@ helpers Helpers
 set :url_root, "http://komodoide.com/"
 activate :search_engine_sitemap
 
-contentful_space = {blog: ENV['CONTENTFUL_SPACE']}
+contentful_space = {cntf: ENV['CONTENTFUL_SPACE']}
 contentful_token = ENV['CONTENTFUL_TOKEN']
 
 activate :contentful do |cntf|
@@ -14,14 +14,15 @@ activate :contentful do |cntf|
   cntf.access_token  = contentful_token
   cntf.cda_query     = { limit: 1000 }
   cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
-                         authors: '1kUEViTN4EmGiEaaeC6ouY' }
+                         authors: '1kUEViTN4EmGiEaaeC6ouY',
+                         events: '15lufuGEz2oSe24m4eywmi' }
   cntf.use_preview_api = ENV["KO_QA"] == "true"
 end
 
 pageable = {}
 
-if data.has_key? "blog" and data.blog.has_key? "posts"
-  data.blog.posts.each do |id, post|
+if data.has_key? "cntf" and data.cntf.has_key? "posts"
+  data.cntf.posts.each do |id, post|
     if /^\d{4}-\d{2}-/.match(post["slug"])
       post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
     end
@@ -29,7 +30,7 @@ if data.has_key? "blog" and data.blog.has_key? "posts"
     proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post, :page_title => post.title }, ignore: true
   end
   
-  pageable["blog"] = data.blog.posts
+  pageable["blog"] = data.cntf.posts
                       .reject { |k,v| v.tags.include? "press" }
                       .sort_by { |k,v| v ? v["date"] : false }
                       .reverse
@@ -37,6 +38,17 @@ if data.has_key? "blog" and data.blog.has_key? "posts"
   tags().each() do |name,posts|
     proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts, :page_title => name }, ignore: true
   end
+end
+
+if data.has_key? "cntf" and data.cntf.has_key? "events"
+  data.cntf.events.each do |id, event|
+    proxy "/events/#{event["slug"]}/index.html", "templates/proxy/event.html", :locals => { :event => event, :custom_meta => event, :page_title => event.title }, ignore: true
+  end
+  
+  present = DateTime.now
+  future = present + (365*10)
+  pageable["events"] = data.cntf.events
+                      .sort_by { |k,v| v.startDate < present ? future : v.startDate }
 end
 
 if data.has_key? "resources"
