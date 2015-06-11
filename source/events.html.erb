@@ -31,17 +31,17 @@ pagination:
             <a href="<%= event.website %>"><%= event.website %></a>
         </span>
         <% end %>
-        <% if event.has_key?("facebook") %>
+        <% if event.has_key?("facebook") and event.facebook %>
         <span class="facebook">    
             <a href="<%= event.facebook %>"><i class="icon icon-facebook"></i></a>
         </span>
         <% end %>
-        <% if event.has_key?("twitter") %>
+        <% if event.has_key?("twitter") and event.twitter %>
         <span class="twitter">    
             <a href="<%= event.twitter %>"><i class="icon icon-twitter"></i></a>
         </span>
         <% end %>
-        <% if event.has_key?("googlePlus") %>
+        <% if event.has_key?("googlePlus") and event.googlePlus %>
         <span class="googlePlus">    
             <a href="<%= event.googlePlus %>"><i class="icon icon-google-plus"></i></a>
         </span>
