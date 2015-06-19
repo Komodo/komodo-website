@@ -85,6 +85,38 @@
     #splash-description
     {
         margin: 30px 0 30px;
+
+        .more
+        {
+            position: relative;
+            cursor: default;
+
+            span:not(.languages)
+            {
+                text-decoration: underline;
+            }
+
+            .languages
+            {
+                display: none;
+
+                width: 400px;
+                position: absolute;
+                z-index: 15;
+                top: 25px;
+                right: 0;
+                background: rgba(0,0,0,0.8);
+                color: #FFF;
+                padding: 10px;
+                border-radius: 2px;
+                font-size: 10px;
+            }
+
+            &:hover .languages
+            {
+                display: block;
+            }
+        }
     }
 
     @include media($tablet)
