@@ -6,6 +6,7 @@
 }
 
 .container-python,
+.container-go,
 .container-php
 {
     #splash-header-outer
@@ -283,6 +284,12 @@
     a.python
     {
         color: #e6cc1a;
+        /*color: #1e80e1;*/
+    }
+    
+    a.go
+    {
+        color: #86B8CC;
         /*color: #1e80e1;*/
     }
 
