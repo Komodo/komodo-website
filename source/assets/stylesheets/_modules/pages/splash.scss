@@ -46,7 +46,9 @@
     }
 }
 
-.document-php,.document-python
+.document-php,
+.document-go,
+.document-python
 {
     padding-top: 0 !important;
     
@@ -84,6 +86,7 @@
 
 .container-index,
 .container-php,
+.container-go,
 .container-python
 {
     header
@@ -99,6 +102,7 @@
 }
 
 .container-php,
+.container-go,
 .container-python
 {
     #splash-header
@@ -185,6 +189,28 @@
         &.splash-osx
         {
             background-image: url(../images/screenshots/splash/mac-splash-python.png);
+        }
+    }
+}
+
+.container-go
+{
+    #splash-header #splash-screenshots figure
+    {
+        &.splash-windows
+        {
+            background-image: url(../images/screenshots/splash/win-splash-go.png);
+        }
+
+        &.splash-linux
+        {
+            background-image: url(../images/screenshots/splash/linux-splash-go.png);
+            padding-bottom: 72.8%;
+        }
+
+        &.splash-osx
+        {
+            background-image: url(../images/screenshots/splash/mac-splash-go.png);
         }
     }
 }

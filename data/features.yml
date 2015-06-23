@@ -357,11 +357,33 @@
   icon: globe
   items: 
     - 
-      name: Editing
-      description: Python, PHP, Perl, Tcl, Go <span class="badge">NEW</span>, Ruby, Node.js, JavaScript, CoffeeScript, HTML, CSS, LESS, SCSS, various web templates, and more
-    - 
       name: Code Intelligence
       description: Python, PHP, Perl, Tcl, Go <span class="badge">NEW</span>, Ruby, Node.js, JavaScript, HTML, CSS, various web templates, and more
     - 
       name: Debugging
       description: Python, PHP, Perl, Ruby, Node.js, Tcl, XSLT
+    - 
+      name: Editing
+      description: >
+        <small>
+        ActionScript, Ada, Apache, APDL, ASN1, Assembler, AutoIt, Avenue, Baan, Bash,
+        Batch, BlitzBasic, Bullant, C#, C++, CLW, CMake, Cobol, CoffeeScript, ConTeX,
+        Csound, CSS, Diff, Django, Eiffel, EJS, epMojo, Erlang, Errors, EScript,
+        Flagship, Forth, Fortran, Fortran 77, FreeBasic, Go, Gui4Cli, Haskell, HLSL,
+        HTML, HTML5, IDL, Ini, Java, JavaScript, JSON, Kix, Komodo Snippet,
+        LaravelBlade, LaTeX, Less, Lisp, Lot, Lout, Lua, Luddite, Makefile, Markdown,
+        Mason, Matlab, Metapost, MMIXAL, MSSQL, MXML, MySQL, Nimrod, nnCrontab, Node.js,
+        Nsis, Objective Caml, Octave, Pascal, Perl, PHP, PL-SQL, PostScript, POVRay,
+        PowerBasic, PowerPro, PowerShell, PureBasic, Python, Python3, REBOL, Regex,
+        reStructuredText, RHTML, Ruby, Sass, Scheme, Scriptol, SCSS, Smalltalk, Smarty,
+        SML, Sorcus, Specman-E, SQL, TACL, TADS3, TAL, Tcl, TemplateToolkit, TeX, Text,
+        TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
+        </small>
+    - 
+      name: Syntax Checking
+      description: >
+        ActionScript, Bash, CoffeeScript, CSS, Django, EJS, Go
+        <span class="badge">NEW</span>, HTML, JSON, LESS, Lua, Mason, MXML, Node.js,
+        JavaScript, Perl, PHP, Python, RHTML, Ruby, SASS, SCSS, Tcl,
+        TemplateToolkit, XBL, XML, XSLT, XUL
+      
