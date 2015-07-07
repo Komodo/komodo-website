@@ -149,7 +149,10 @@ module Helpers
   end
   
   def markitdown(source)
-    return Tilt['markdown'].new { source }.render()
+    renderer = Redcarpet::Render::HTML.new(prettify: true)
+    md = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true, :smartypants => true)
+    return md.render(source)
+    #return Tilt['markdown'].new { source }.render()
   end
   
   @@vimeo_cache = {}
