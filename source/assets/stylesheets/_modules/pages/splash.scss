@@ -217,3 +217,25 @@
         }
     }
 }
+
+.container-perl
+{
+    #splash-header #splash-screenshots figure
+    {
+        &.splash-windows
+        {
+            background-image: url(../images/screenshots/splash/win-splash-perl.png);
+        }
+
+        &.splash-linux
+        {
+            background-image: url(../images/screenshots/splash/linux-splash-perl.png);
+            padding-bottom: 72.8%;
+        }
+
+        &.splash-osx
+        {
+            background-image: url(../images/screenshots/splash/mac-splash-perl.png);
+        }
+    }
+}
