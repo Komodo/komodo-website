@@ -48,6 +48,7 @@
 
 .document-php,
 .document-go,
+.document-perl,
 .document-python
 {
     padding-top: 0 !important;
@@ -87,6 +88,7 @@
 .container-index,
 .container-php,
 .container-go,
+.container-perl,
 .container-python
 {
     header
@@ -103,6 +105,7 @@
 
 .container-php,
 .container-go,
+.container-perl,
 .container-python
 {
     #splash-header
@@ -211,6 +214,28 @@
         &.splash-osx
         {
             background-image: url(../images/screenshots/splash/mac-splash-go.png);
+        }
+    }
+}
+
+.container-perl
+{
+    #splash-header #splash-screenshots figure
+    {
+        &.splash-windows
+        {
+            background-image: url(../images/screenshots/splash/win-splash-perl.png);
+        }
+
+        &.splash-linux
+        {
+            background-image: url(../images/screenshots/splash/linux-splash-perl.png);
+            padding-bottom: 72.8%;
+        }
+
+        &.splash-osx
+        {
+            background-image: url(../images/screenshots/splash/mac-splash-perl.png);
         }
     }
 }
