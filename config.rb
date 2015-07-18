@@ -72,6 +72,10 @@ if data.has_key? "resources"
       next
     end
     
+    if category[0..3] == 'min_'
+      next
+    end
+    
     pageable[category] = resources
     
     if ['all','downloads','popular'].include? category
