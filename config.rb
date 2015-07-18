@@ -52,6 +52,14 @@ if data.has_key? "cntf" and data.cntf.has_key? "events"
 end
 
 if data.has_key? "resources"
+  data.resources.categories.each do |category|
+    name = category["resource"][0..-5]
+    _data = data.resources["min_" + name]
+    proxy "/json/resources/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+  end
+end
+
+if data.has_key? "resources"
   all = []
   
   categories = {}
