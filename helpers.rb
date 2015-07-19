@@ -197,6 +197,14 @@ module Helpers
     return slug.downcase
   end
   
+  def get_package_slug(resource)
+    slug = resource.title
+    slug = slug.gsub(/\s+/,'-')
+    slug = slug.gsub(/[^A-Za-z0-9-]/,'')
+    
+    return slug.downcase
+  end
+  
   def timeago(time)
     return unless time
     time = Time.parse(time.to_s)

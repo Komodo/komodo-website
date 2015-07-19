@@ -1,17 +1,17 @@
 <ul class="categories">
     <li>
         <h3>
-            <a href="/resources">All Resources</a>
+            <a href="/packages">All Packages</a>
         </h3>
     </li>
     <li>
         <h3>
-            <a href="/resources/popular">Most Popular</a>
+            <a href="/packages/popular">Most Popular</a>
         </h3>
     </li>
     <li>
         <h3>
-            <a href="/resources/downloads">Most Downloaded</a>
+            <a href="/packages/downloads">Most Downloaded</a>
         </h3>
     </li>
 </ul>
@@ -23,7 +23,7 @@
         <% next if category.resources == 0 %>
         <li>
             <h3>
-                <a href="<%= site_url %>/resources/<%= File.basename(category.resource, ".yml") %>"><%= category.name %></a>
+                <a href="<%= site_url %>/packages/<%= File.basename(category.resource, ".yml") %>"><%= category.name %></a>
             </h3>
         </li>
     <% end %>
@@ -35,10 +35,10 @@
 
 <ul class="disc">
     <li>
-        <a href="<%= site_url %>/resources/install-instructions">Install Resources</a>
+        <a href="<%= site_url %>/packages/install-instructions">Install Packages</a>
     </li>
     <li>
-        <a href="<%= site_url %>/resources/submit-instructions">Contribute</a>
+        <a href="<%= site_url %>/packages/submit-instructions">Submit a Package</a>
     </li>
     <li>
         <a href="<%= site_url %>/customize">Customize Komodo</a>

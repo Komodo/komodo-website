@@ -5,6 +5,9 @@ navigation:
   - 
     name: "Features"
   - 
+    name: "Packages"
+    link: "{site.url}/packages"
+  - 
     name: "Community"
     link: "http://forum.komodoide.com/"
     icon: "sort-down"
@@ -15,11 +18,8 @@ navigation:
       - 
         name: "Screencasts"
       - 
-        name: "Resources"
-        link: "{site.url}/resources"
-      - 
         name: "Contribute"
-        link: "{site.url}/resources/submit-instructions/"
+        link: "{site.url}/packages/submit-instructions/"
       -
         name: "Events"
         link: "{site.url}/events"

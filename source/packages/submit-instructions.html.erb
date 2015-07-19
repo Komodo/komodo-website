@@ -11,7 +11,7 @@ sidebar: resources
 
     <select class="selectize paneSelector" data-pane-prefix="pane-">
         <option value="">Select One..</option>
-        <option value="resources">Resources (addons, macros, snippets, etc)</option>
+        <option value="packages">Packages (addons, macros, snippets, etc)</option>
         <option value="blogs">Blogs</option>
         <option value="screencasts">Screencasts</option>
         <option value="code">Code</option>
@@ -26,8 +26,8 @@ sidebar: resources
 
 <div class="panes">
 
-    <div id="pane-resources" class="hide">
-        <h1 id="resource-guidelines">Resources</h1>
+    <div id="pane-packages" class="hide">
+        <h1 id="package-guidelines">Packages</h1>
 
         <p>
             <em>
@@ -39,14 +39,14 @@ sidebar: resources
             </em>
         </p>
 
-        <p>A Komodo Resource will work best if</p>
+        <p>A Komodo Package will work best if</p>
 
         <ul class="disc">
             <li>It's hosted on its own GitHub repository</li>
 
             <li>It has a readme in the root of its repository</li>
 
-            <li>It utilizes GitHub releases to distribute downloadable copies of the resource</li>
+            <li>It utilizes GitHub releases to distribute downloadable copies of the package</li>
         </ul>
 
         <p>Although all of the above is optional, we highly encourage you to follow these guidelines.</p>
@@ -58,31 +58,31 @@ sidebar: resources
             Komodo-Resources repository</a> on GitHub.
         </p>
 
-        <h2>Creating a Resource</h2>
+        <h2>Creating a Package</h2>
         <p>
-            For information on how to get started with your own resource please
+            For information on how to get started with your own package please
             check the
             <a href="/customize">Customize Komodo page</a>.
         </p>
 
-        <h2 id="adding-a-resource">Adding a Resource</h2>
+        <h2 id="adding-a-package">Adding a Package</h2>
 
-        <p>There are 3 ways to add a resource, fully-automatic, semi-automatic and manual. Both the automatic ways require you to use GitHub as described above.</p>
+        <p>There are 3 ways to add a package, fully-automatic, semi-automatic and manual. Both the automatic ways require you to use GitHub as described above.</p>
 
         <p>Whatever method you use, you will need to start by forking the
         <a href="https://github.com/Komodo/Komodo-Resources">Komodo-Resources repository</a>.
-        Edit the category file that your Resource relates to and follow one of the steps outlined below.</p>
+        Edit the category file that your Package relates to and follow one of the steps outlined below.</p>
 
         <h3 id="automatic">Automatic</h3>
 
-        <p>With Automatic resources all you do is supply the name and GitHub url of your resource, we will take care of the rest. To do this, use the following format:</p>
-        <pre><code class="hl yaml">Resource Name: https://github.com/MyUsername/MyRepository</code></pre>
+        <p>With Automatic packages all you do is supply the name and GitHub url of your package, we will take care of the rest. To do this, use the following format:</p>
+        <pre><code class="hl yaml">Package Name: https://github.com/MyUsername/MyRepository</code></pre>
 
         <h3 id="semi-automatic">Semi-Automatic</h3>
 
         <p>Say you want us to retrieve all your repository data for you, but you want to override certain information that is being supplied by GitHub. You can do this by using the following format:</p>
         <pre>
-            <code class="hl yaml">Resource Name:
+            <code class="hl yaml">Package Name:
     html_url: https://github.com/MyUsername/MyRepository # Required
     owner: login: MyOtherNickname # Example
     readme: 
@@ -94,13 +94,13 @@ sidebar: resources
 
         <h3 id="manual">Manual</h3>
 
-        <p>Say you're not using GitHub or your repository structure is not supported by our parser, you can then manually provide us with all of your Resource information.</p>
+        <p>Say you're not using GitHub or your repository structure is not supported by our parser, you can then manually provide us with all of your Package information.</p>
 
-        <p>You do this by providing us with your Resource information formatted in the same way as a repository is formatted in the <a href="https://developer.github.com/v3/repos/#get">Github API documentation</a>.</p>
+        <p>You do this by providing us with your Package information formatted in the same way as a repository is formatted in the <a href="https://developer.github.com/v3/repos/#get">Github API documentation</a>.</p>
 
         <p>Note that you <strong>must not</strong> include the <code>id</code> or <code>html_url</code> fields.</p>
         <pre>
-        <code class="hl yaml">Resource Name:
+        <code class="hl yaml">Package Name:
     # Required Fields
     owner:
         login: MyName
@@ -109,7 +109,7 @@ sidebar: resources
     created_at: 2014-03-24T00:00:00Z
     updated_at: 2014-03-24T00:00:00Z
 
-    # The location where your Resource may be downloaded
+    # The location where your Package may be downloaded
     raw_url: https://raw.github.com/Foo/Bar/file.txt
 
     # Optional Fields
@@ -120,7 +120,7 @@ sidebar: resources
     homepage: https://..</code>
         </pre>
 
-        <h2>Submitting The Resource</h2>
+        <h2>Submitting The Package</h2>
 
         <p>
             Once you are done making the changes make a
