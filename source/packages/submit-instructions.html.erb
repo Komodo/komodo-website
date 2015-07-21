@@ -11,7 +11,7 @@ sidebar: resources
 
     <select class="selectize paneSelector" data-pane-prefix="pane-">
         <option value="">Select One..</option>
-        <option value="resources">Resources (addons, macros, snippets, etc)</option>
+        <option value="packages">Packages (addons, macros, snippets, etc)</option>
         <option value="blogs">Blogs</option>
         <option value="screencasts">Screencasts</option>
         <option value="code">Code</option>
@@ -26,112 +26,45 @@ sidebar: resources
 
 <div class="panes">
 
-    <div id="pane-resources" class="hide">
-        <h1 id="resource-guidelines">Resources</h1>
-
-        <p>
-            <em>
-                <strong>Note:</strong>
-                For the latest instructions always check the
-                <a href="https://github.com/Komodo/Komodo-Resources/blob/master/readme.md" target="_blank">
-                    repository readme
-                </a>
-            </em>
+    <div id="pane-packages" class="hide">
+        <p id="package-guidelines">
+            We use GitHub for all our packages, follow the steps below to share your package via GitHub. Why do we use GitHub? Because we love GitHub and we want contributors to be fully in control of their own contributions.
         </p>
-
-        <p>A Komodo Resource will work best if</p>
-
-        <ul class="disc">
-            <li>It's hosted on its own GitHub repository</li>
-
-            <li>It has a readme in the root of its repository</li>
-
-            <li>It utilizes GitHub releases to distribute downloadable copies of the resource</li>
-        </ul>
-
-        <p>Although all of the above is optional, we highly encourage you to follow these guidelines.</p>
-
-        <h2>I Work by Example - Just show me the goods (TLDR)</h2>
-
+        
         <p>
-            Check out the <a href="https://github.com/Komodo/Komodo-Resources">
-            Komodo-Resources repository</a> on GitHub.
+            If you aren't familiar with git or GitHub <a href="https://guides.github.com/">we recommend reading up on it</a>.
         </p>
-
-        <h2>Creating a Resource</h2>
+        
+        <h1>How to Contribute a Package</h1>
+        
+        <ol class="decimal">
+            <li>
+                Create a <a href="https://github.com/new">new GitHub Public Repository</a> (<a href="https://help.github.com/articles/create-a-repo/">Help?</a>).
+            </li>
+            <li>
+                Select <strong>Initialize this repository with a README</strong>.
+            </li>
+            <li>
+                Click the Releases tab and press <strong>Create a new release</strong>.
+            </li>
+            <li>
+                Fill out the form and drag your package onto the <strong>Attach binaries</strong> section (ie. your addon `.xpi`, your color scheme `.ksf`, your macro `.komodotool`, etc).
+            </li>
+            <li>
+                Once saved, <a href="https://github.com/Komodo/Komodo-Resources">head over to our Komodo-Resources repository</a> and click on the file which best describes your package (eg. addons.yml).
+            </li>
+            <li>
+                Hit the pencil icon at the top right of the file, right next to <strong>Raw, Blame and History</strong>. Add your repository to the file using the format of: `My Addon Name: http://my-github-repo-url`, then hit <strong>Commit Changes</strong>
+            </li>
+            <li>
+                On the next screen hit the <strong>Create pull request</strong> button.
+            </li>
+        </ol>
+        
         <p>
-            For information on how to get started with your own resource please
-            check the
-            <a href="/customize">Customize Komodo page</a>.
+            Now that you have a github repository you can <a href="https://guides.github.com/introduction/getting-your-project-on-github/">push your code to your repository</a> and allow others to contribute to it. Your repository description and readme will show up on our Packages section.
         </p>
-
-        <h2 id="adding-a-resource">Adding a Resource</h2>
-
-        <p>There are 3 ways to add a resource, fully-automatic, semi-automatic and manual. Both the automatic ways require you to use GitHub as described above.</p>
-
-        <p>Whatever method you use, you will need to start by forking the
-        <a href="https://github.com/Komodo/Komodo-Resources">Komodo-Resources repository</a>.
-        Edit the category file that your Resource relates to and follow one of the steps outlined below.</p>
-
-        <h3 id="automatic">Automatic</h3>
-
-        <p>With Automatic resources all you do is supply the name and GitHub url of your resource, we will take care of the rest. To do this, use the following format:</p>
-        <pre><code class="hl yaml">Resource Name: https://github.com/MyUsername/MyRepository</code></pre>
-
-        <h3 id="semi-automatic">Semi-Automatic</h3>
-
-        <p>Say you want us to retrieve all your repository data for you, but you want to override certain information that is being supplied by GitHub. You can do this by using the following format:</p>
-        <pre>
-            <code class="hl yaml">Resource Name:
-    html_url: https://github.com/MyUsername/MyRepository # Required
-    owner: login: MyOtherNickname # Example
-    readme: 
-        content: >
-                  Foo # Example</code>
-        </pre>
-
-        <p>To find out what fields you can override please check out the <a href="https://developer.github.com/v3/repos/#get">Github API documentation</a></p>
-
-        <h3 id="manual">Manual</h3>
-
-        <p>Say you're not using GitHub or your repository structure is not supported by our parser, you can then manually provide us with all of your Resource information.</p>
-
-        <p>You do this by providing us with your Resource information formatted in the same way as a repository is formatted in the <a href="https://developer.github.com/v3/repos/#get">Github API documentation</a>.</p>
-
-        <p>Note that you <strong>must not</strong> include the <code>id</code> or <code>html_url</code> fields.</p>
-        <pre>
-        <code class="hl yaml">Resource Name:
-    # Required Fields
-    owner:
-        login: MyName
-        gravatar_id: fbf0600881da69934bad33192694d484 # Optional
-        html_url: https://github.com/MyName
-    created_at: 2014-03-24T00:00:00Z
-    updated_at: 2014-03-24T00:00:00Z
-
-    # The location where your Resource may be downloaded
-    raw_url: https://raw.github.com/Foo/Bar/file.txt
-
-    # Optional Fields
-    description: My Description
-    readme: 
-        content: >
-                  My Readme
-    homepage: https://..</code>
-        </pre>
-
-        <h2>Submitting The Resource</h2>
-
-        <p>
-            Once you are done making the changes make a
-            <a href="https://help.github.com/articles/creating-a-pull-request">pull request</a>
-            against the main Komodo-Resources repository, we will then review
-            your request and ask for changes, accept it or reject it as is relevant.</p>
-
-        <p>
-            Note that changes will not instantly take effect, the Komodo Resources
-            section is updated only once every hour.
-        </p>
+        
     </div>
 
     <div id="pane-blogs" class="hide">

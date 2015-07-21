@@ -280,6 +280,15 @@
         max-width: 750px;
         text-align: left;
     }
+    
+    ol.decimal
+    {
+        li
+        {
+            margin: 16px 0;
+            font-size: 16px;
+        }
+    }
 }
 
 .sidebar-resources

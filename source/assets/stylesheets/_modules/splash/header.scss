@@ -7,6 +7,7 @@
 
 .container-python,
 .container-go,
+.container-tcl,
 .container-perl,
 .container-php
 {
@@ -165,6 +166,11 @@
         a.perl
         {
             color: #5C7BC9;
+        }
+        
+        a.tcl
+        {
+            color: #34f197;
         }
     }
 

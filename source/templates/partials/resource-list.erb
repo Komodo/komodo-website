@@ -8,10 +8,10 @@
 
 <ul class="trail">
     <li>
-        <a href="/resources">Resources</a>
+        <a href="/packages">Packages</a>
     </li>
     <li>
-    <% if get_basename() == "resources" %>
+    <% if get_basename() == "packages" %>
         Latest
     <% else %>
         <%= current_page.data.title %>
@@ -66,7 +66,7 @@
             </div>
             <h3>
                 <strong>
-                    <a href="/resources/<%= resource.category.resource[0..-5] %>/<%= get_resource_slug(resource) %>/"><%= resource.title %></a>
+                    <a href="/packages/<%= resource.category.resource[0..-5] %>/<%= get_package_slug(resource) %>/"><%= resource.title %></a>
                 </strong>
                 <span class="author">
                     <em>by</em>

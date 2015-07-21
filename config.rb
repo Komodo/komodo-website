@@ -55,7 +55,7 @@ if data.has_key? "resources"
   data.resources.categories.each do |category|
     name = category["resource"][0..-5]
     _data = data.resources["min_" + name]
-    proxy "/json/resources/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+    proxy "/json/packages/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
   end
 end
 
@@ -84,10 +84,33 @@ if data.has_key? "resources"
     
     resources.each() do |resource|
       slug = get_resource_slug(resource)
-      proxy "/resources/#{category}/#{slug}/index.html", "templates/proxy/resource.html", :locals => { :resource => resource, :category => categories[category], :page_title => resource.title }, ignore: true
+      slug = get_package_slug(resource)
+      
+      proxy "/resources/#{category}/#{slug}/index.html",
+            "templates/proxy/redirect.html", :locals => {
+                :url => "http://komodoide.com/packages/#{category}/#{slug}/"
+            }, ignore: true
+            
+      proxy "/packages/#{category}/#{slug}/index.html",
+            "templates/proxy/resource.html", :locals => {
+                :resource => resource,
+                :category => categories[category],
+                :page_title => resource.title
+            }, ignore: true
     end
     
   end
+end
+
+# Redirects
+proxy "/resources/index.html",
+      "templates/proxy/redirect.html", :locals => { :url => "http://komodoide.com/packages/" }, ignore: true
+      
+dirname = File.dirname(__FILE__)
+Dir["#{dirname}/source/packages/*"].each() do |filename|
+  name = File.basename(filename).gsub(/\..*$/,'')
+  proxy "/resources/#{name}/index.html",
+        "templates/proxy/redirect.html", :locals => { :url => "http://komodoide.com/packages/#{name}/" }, ignore: true
 end
 
 activate :pagination do

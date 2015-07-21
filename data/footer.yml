@@ -19,8 +19,8 @@ nav:
       name: "Customize"
       sub: 
         - 
-          name: "Resources"
-          link: "/resources"
+          name: "Packages"
+          link: "/packages"
         - 
           name: "Get Involved"
           link: "/customize"
