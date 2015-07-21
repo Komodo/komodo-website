@@ -11,7 +11,12 @@ navigation:
     name: "Community"
     link: "http://forum.komodoide.com/"
     icon: "sort-down"
-    sub: 
+    sub:
+      -
+        name: "Blog"
+      -
+        name: "Events"
+        link: "{site.url}/events"
       - 
         name: "Forums"
         link: "http://forum.komodoide.com/"
@@ -20,11 +25,6 @@ navigation:
       - 
         name: "Contribute"
         link: "{site.url}/packages/submit-instructions/"
-      -
-        name: "Events"
-        link: "{site.url}/events"
-  - 
-    name: "Blog"
   - 
     name: "Try"
     link: "{site.url}/download"
