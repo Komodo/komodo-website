@@ -56,6 +56,7 @@ if data.has_key? "resources"
     name = category["resource"][0..-5]
     _data = data.resources["min_" + name]
     proxy "/json/packages/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+    proxy "/json/resources/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
   end
 end
 
