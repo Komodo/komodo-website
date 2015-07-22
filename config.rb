@@ -84,10 +84,10 @@ if data.has_key? "resources"
     end
     
     resources.each() do |resource|
-      slug = get_resource_slug(resource)
+      slugr = get_resource_slug(resource)
       slug = get_package_slug(resource)
       
-      proxy "/resources/#{category}/#{slug}/index.html",
+      proxy "/resources/#{category}/#{slugr}/index.html",
             "templates/proxy/redirect.html", :locals => {
                 :url => "http://komodoide.com/packages/#{category}/#{slug}/"
             }, ignore: true
