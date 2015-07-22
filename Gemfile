@@ -34,4 +34,5 @@ gem 'middleman-komodo_resources', github: 'Komodo/middleman-komodo_resources'
 
 gem 'redcarpet'
 gem 'RedCloth'
+gem "mime-types"
 
