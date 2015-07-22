@@ -126,13 +126,13 @@ module Helpers
     text = text.gsub(/\[(.*?)\](?:\[.*?\])?(?:\(.*?\))?/,'\1') # Strip markdown links
     text = text.gsub(%r{</?[^>]+?>}, '').gsub(/\n+/,' ') # Strip html and line endings
     text = text.gsub('Macro Monday - a new macro to dig into every Monday!','')
-    text = text.split(".")
-    if text.first().length > length
-      return text.first()[0...250] + "..."
+    _text = text.split(/[!,.]/)
+    if _text.first().length > length
+      return text[0...250] + " [...]"
     end
     
-    summary = text.shift + "."
-    text.each() do |sentence|
+    summary = _text.shift + "."
+    _text.each() do |sentence|
       if summary.length + sentence.length > 250
         break
       end
@@ -140,7 +140,13 @@ module Helpers
       summary += sentence + "."
     end
     
-    return summary
+    suffix = ""
+    if (summary.length != text.length)
+      summary = summary[0...summary.length-1]
+      suffix = " [...]"
+    end
+    
+    return text[0...summary.length] + suffix
   end
   
   def yaml(path)
