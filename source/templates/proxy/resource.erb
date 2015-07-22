@@ -181,7 +181,7 @@ basenameOrig: resource
         <div class="files">
             <a href="<%= resource.raw_url %>" class="button big primary">
                 <i class="icon icon-download"></i>
-                Download Source
+                Download "<%= File.basename(resource.raw_url) %>"
             </a>
         </div>
     <% end %>
