@@ -1,5 +1,10 @@
 module Helpers
   
+  def parseScheme(ksf)
+    require 'scheme'
+    return Scheme.new(ksf)
+  end
+  
   def get_effective_title(page_title)
     
     if current_page.data.title
