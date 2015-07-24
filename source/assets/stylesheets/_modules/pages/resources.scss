@@ -226,13 +226,26 @@
         {
             margin: 5px 15px 0 0;
             
-            img
+            figure
+            {
+                padding: 3px;
+            }
+            
+            img, figure
             {
                 width: 48px;
                 height: 48px;
+                
+                & > div
+                {
+                    float: left;
+                    width: 8px;
+                    height: 8px;
+                    margin: 3px;
+                }
             }
         }
-
+        
         .meta
         {
             font-size: 14px;

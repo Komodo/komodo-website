@@ -1,0 +1,6 @@
+<% colors = parseScheme(ksf) %>
+<figure class="scheme-preview" style="background: <%= colors.bg %>">
+    <% colors.fg.each do |color| %>
+        <div style="background-color: <%= color %>"></div>
+    <% end %>
+</figure>
