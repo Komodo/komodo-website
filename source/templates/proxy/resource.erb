@@ -3,9 +3,11 @@ layout: layout
 basenameOrig: resource
 ---
 
-<div id="content" class="sidebar sidebar-small document-resource">
+<div id="content" class="sidebar sidebar-left document-resource">
     <section role="main">
         <article class="normalize">
+
+<!-- Start Content -->
 
 <ul class="trail">
     <li>
@@ -37,123 +39,43 @@ basenameOrig: resource
     </div>
 </div>
 
-<h1><%= resource.title %></h1>
+<% if resource.has_key?("ksf") %>
+<%= partial('scheme-preview', :locals => { ksf: resource.ksf }) %>
+<hr/>
+<% end %>
 
-<p class="description"><%= resource.description %></p>
+<% if resource.has_key?("readme") %>
+    <div id="readme" class="readme user-input">
+    <%= resource.readme.content.force_encoding("UTF-8") %>
+    </div>
+<% else %>
+    <p class="description"><%= resource.description %></p>
+<% end %>
 
-<div class="details-meta">
-    <h2>Details</h2>
-    <dl>
-        <dt>Author</dt>
-        <dd>
-            <% if resource.owner.has_key? "avatar_url" %>
-            <a href="<%= resource.owner.html_url %>" class="push-left preview">
-                <img src="<%= resource.owner.avatar_url %>?s=18">
-            </a>
-            <% elsif resource.owner.has_key? "gravatar_id" %>
-            <a href="<%= resource.owner.html_url %>" class="push-left preview">
-                <img src="http://gravatar.com/avatar/<%= resource.owner.gravatar_id %>?d=identicon&s=18">
-            </a>
-            <% else%>
-            <i class="icon icon-user" title="Author"></i>
-            <% end %>
-            <a href="<%= resource.owner.html_url %>">
-                <span><%= resource.owner.login %></span>
-            </a>
-        </dd>
-        
-        <% if resource.releases and resource.releases.length > 0 %>
-        <% release = resource.releases.first() %>
-        <dt>Version</dt>
-        <dd>
-            <span>
-                <%= release.name %>
-                <% if release.prerelease%>
-                    (pre-release)
-                <% end %>
-            </span>
-            <a href="<%= release.html_url %>">view</a>
-        </dd>
-        <% end %>
-
-        <% if resource.has_key?("created_at") %>
-        <dt>Created</dt>
-        <dd title="<%= resource.created_at %>">
-            <%= timeago(resource.created_at) %>
-        </dd>
-        <% end %>
-
-        <% if resource.last_update != "2010-01-01T01:00:00Z" %>
-        <dt>Updated</dt>
-        <dd title="<%= resource.last_update %>">
-            <%= timeago(resource.last_update) %>
-        </dd>
-        <% end %>
-
-        <% if resource.homepage and resource.homepage.length > 0 %>
-        <dt>Homepage</dt>
-        <dd>
-            <a href="<%= resource.homepage %>">
-                <%= resource.homepage %>
-            </a>
-        </dd>
-        <% end %>
-
-        <% if resource.html_url%>
-        <dt>Github</dt>
-        <dd>
-            <a href="<%= resource.html_url %>">
-                <% if resource.full_name %>
-                    <%= resource.full_name %>
-                <% else %>
-                    <%= resource.html_url%>
-                <% end %>
-            </a>
-        </dd>
-        <% end %>
-
-        <% if resource.has_issues%>
-        <dt>Issues</dt>
-        <dd>
-            <span><%= resource.open_issues_count %></span>
-            <a href="<%= resource.html_url %>/issues">view</a>
-        </dd>
-        <% end %>
-
-        <% if resource.has_wiki%>
-        <dt>Wiki</dt>
-        <dd>
-            <a href="<%= resource.html_url %>/wiki">view</a>
-        </dd>
-        <% end %>
-
-        <% if resource.has_downloads%>
-        <dt>Downloads</dt>
-        <dd>
-            <span><%= resource.download_count %></span>
-            <a href="<%= resource.html_url %>/releases">view</a>
-        </dd>
-        <% end %>
-    
-        <% if resource.stargazers_count%>
-        <dt>Stars</dt>
-        <dd>
-            <span><%= resource.stargazers_count %></span>
-            <a href="<%= resource.html_url %>/stargazers">view</a>
-        </dd>
-        <% end %>
-    </dl>
+<div id="comments" class="comments">
+    <%= partial('comments') %>
 </div>
 
+<!-- End Content -->
+
+        </article>
+    </section>
+    <aside class="sidebar-resources normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+<!-- Start Sidebar -->
+
 <div class="download">
-    <h2>Download</h2>
     <% if resource.releases and resource.releases.length > 0 %>
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
         <% release = resource.releases.first() %>
         <% k = 0 %>
             <div class="release <%= 'hide' if k > 0 %> <%= k %>" id="release-<%= release.id %>">
-                <p><%= release.body %></p>
                 <div class="files centered">
                     <% if release.assets.length %>
                        <div class="assets">
@@ -161,7 +83,7 @@ basenameOrig: resource
                                <div>
                                <a href="https://github.com/<%= resource.full_name %>/releases/download/<%= release.tag_name %>/<%= asset.name %>" class="button big primary">
                                    <i class="icon icon-download"></i>
-                                   Download "<%= asset.label || asset.name %>"
+                                   Download
                                </a>
                                </div>
                            <% end %>
@@ -181,7 +103,7 @@ basenameOrig: resource
         <div class="files">
             <a href="<%= resource.raw_url %>" class="button big primary">
                 <i class="icon icon-download"></i>
-                Download "<%= File.basename(resource.raw_url) %>"
+                Download
             </a>
         </div>
     <% end %>
@@ -194,40 +116,112 @@ basenameOrig: resource
         </div>
     <% end %>
 </div>
+        
+        <div class="spacer"></div>
 
-<div class="clearfix"></div>
-
-<div class="tabs">
-    <ul>
-        <% if resource.has_key?("readme") %>
-        <li><a href="#readme">Readme</a></li>
+<div class="details-meta">
+    <dl>
+        <dt>
+            <i class="icon icon-user"></i>
+        </dt>
+        <dd>
+            <a href="<%= resource.owner.html_url %>">
+                <span><%= resource.owner.login %></span>
+            </a>
+            <% if resource.owner.has_key? "avatar_url" %>
+            <a href="<%= resource.owner.html_url %>" class="preview">
+                <img src="<%= resource.owner.avatar_url %>?s=18">
+            </a>
+            <% elsif resource.owner.has_key? "gravatar_id" %>
+            <a href="<%= resource.owner.html_url %>" class="preview">
+                <img src="http://gravatar.com/avatar/<%= resource.owner.gravatar_id %>?d=identicon&s=18">
+            </a>
+            <% end %>
+        </dd>
+        
+        <% if resource.homepage and resource.homepage.length > 0 %>
+        <dt>
+            <i class="icon icon-link"></i>
+        </dt>
+        <dd>
+            <a href="<%= resource.homepage %>">
+                <%= resource.homepage %>
+            </a>
+        </dd>
         <% end %>
-        <li><a href="#comments">Comments</a></li>
-    </ul>
-    <% if resource.has_key?("readme") %>
-        <div id="readme" class="readme user-input">
-        <%= resource.readme.content.force_encoding("UTF-8") %>
-        </div>
-    <% end %>
-    <div id="comments" class="comments">
-        <p>
-            Please note that the comment section is not a reliable resource for
-            support.
-        </p>
-        <%= partial('comments') %>
-    </div>
+
+        <% if resource.is_github %>
+        <dt>
+            <i class="icon icon-github"></i>
+        </dt>
+        <dd>
+            <a href="<%= resource.html_url %>">
+                <% if resource.full_name %>
+                    <%= resource.full_name %>
+                <% else %>
+                    <%= resource.html_url%>
+                <% end %>
+            </a>
+        </dd>
+        <% end %>
+    
+        <% if resource.last_update != "2010-01-01T01:00:00Z" %>
+        <dt>
+            <i class="icon icon-clock-o"></i>
+        </dt>
+        <dd title="<%= resource.last_update %>">
+            Updated <%= timeago(resource.last_update) %>
+        </dd>
+        <% end %>
+        
+        <% if resource.releases and resource.releases.length > 0 %>
+        <% release = resource.releases.first() %>
+        <dt>
+            <i class="icon icon-code-fork"></i>
+        </dt>
+        <dd>
+            <a href="<%= release.html_url %>">
+                Version 
+                <%= release.tag_name %>
+                <% if release.prerelease%>
+                    (pre-release)
+                <% end %>
+            </a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_issues%>
+        <dt>
+            <i class="icon icon-bug"></i>
+        </dt>
+        <dd>
+            <a href="<%= resource.html_url %>/issues">
+                <%= resource.open_issues_count %> issues
+            </a>
+        </dd>
+        <% end %>
+
+        <% if resource.has_downloads%>
+        <dt>
+            <i class="icon icon-cloud-download"></i>
+        </dt>
+        <dd>
+            <span><%= resource.download_count %> downloads</span>
+        </dd>
+        <% end %>
+    
+        <% if resource.stargazers_count%>
+        <dt>
+            <i class="icon icon-star"></i>
+        </dt>
+        <dd>
+            <span><%= resource.stargazers_count %> stars</span>
+        </dd>
+        <% end %>
+    </dl>
 </div>
 
-        </article>
-    </section>
-    <aside class="sidebar-resources normalize">
-        <div id="side-border"></div>
-        <button id="side-collapse" class="button big">
-            <i class="icon icon-chevron-left"></i>
-            <i class="icon icon-chevron-right"></i>
-        </button>
-        <div class="inner">
-            <%= partial('sidebars/resources') %>
+<!-- End Sidebar -->
         </div>
     </aside>
 </div>
