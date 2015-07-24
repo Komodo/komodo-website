@@ -54,6 +54,7 @@ jQuery ->
             bindPageShare
             loadStickyFloat
             loadQuickNav
+            loadSchemePreviews
         ]
         for fn in fns
             setTimeout fn, 0
@@ -512,6 +513,29 @@ jQuery ->
             return false
         
         updateSelected()
+        
+    loadSchemePreviews = ->
+        
+        qn = jq("#scheme-preview").length
+        return unless qn
+    
+        jq("#scheme-preview > pre").find("[class^=hljs-]").each ->
+            el = jq this
+            el.attr("class", el.attr("class").replace(/hljs-/g,'hl-'))
+        
+        jq("#scheme-preview > pre").find("*").contents().filter(-> this.nodeType == 3).each ->
+            html = this.nodeValue
+            html = html.replace(/([{}*:;.=,\(\)+])/g,':::$1:::')
+            html = html.replace(/(self)/g,':;:$1:;:')
+            this.nodeValue = html
+        
+        jq("#scheme-preview > pre > code").each ->
+            el = jq this
+            html = el.html()
+            html = html.replace(/:::([{}*:;.=,\(\)+]):::/g,'<span class="ko-operator">$1</span>')
+            html = html.replace(/:;:(self):;:/g,'<span class="ko-keyword">$1</span>')
+            el.html(html);
+        
 
     init()
 
