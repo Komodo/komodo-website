@@ -243,4 +243,18 @@ module Helpers
       .sort_by { |k,v| v["date"] }
       .reverse
   end
+  
+  def get_image(resource)
+    unless resource.has_key?("readme")
+      return
+    end
+    
+    content = resource.readme.content.force_encoding("UTF-8")
+    image = /<img src="(.*?)"/.match(content)
+    
+    if image
+      return image[1]
+    end
+  end
+  
 end

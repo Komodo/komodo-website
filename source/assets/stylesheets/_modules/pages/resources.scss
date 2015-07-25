@@ -217,44 +217,23 @@
     {
         margin: 0;
         padding: 0;
+        text-align: center;
     }
 
     & > ul:not(.trail) > li
     {
-        padding: 10px 2px;
-        border-bottom: 1px solid rgba(0,0,0,0.10);
-        line-height: 2.0;
-
-        &:nth-child(even)
-        {
-            background: rgba(255,255,255,0.2);
-        }
-
-        h3, p
-        {
-            margin: 0;
-        }
-
-        h3 .author
-        {
-            font-size: 11pt;
-
-            img
-            {
-                vertical-align: middle;
-                border-radius: 2px;
-            }
-        }
-
-        p
-        {
-            color: lighten($color-base-text, 10%);
-            @extend %ellipsis;
-        }
+        display: inline-block;
+        text-align: left;
+        width: 40%;
+        margin: 25px;
+        background: #F9F9F9;
+        border: 1px solid #E0E0E0;
+        border-radius: 2px;
+        vertical-align: top;
         
         .preview
         {
-            margin: 5px 15px 0 0;
+            margin: 10px;
             
             figure
             {
@@ -263,24 +242,59 @@
             
             img, figure
             {
-                width: 48px;
-                height: 48px;
+                width: 63px;
+                height: 63px;
                 
                 & > div
                 {
                     float: left;
-                    width: 8px;
-                    height: 8px;
-                    margin: 3px;
+                    width: 11px;
+                    height: 11px;
+                    margin: 4px;
                 }
             }
         }
+        
+        .info, .meta
+        {
+            padding: 10px;
+        }
+        
+        .info
+        {
+            h3
+            {
+                font-size: 24px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            
+            p
+            {
+                margin: 0 0 10px 0;
+            }
+            
+            .author
+            {
+                font-style: italic;
+                
+                img
+                {
+                    width: 16px;
+                    height: 16px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
         
         .meta
         {
             font-size: 14px;
             opacity: 0.8;
             min-width: 150px;
+            border-top: 1px solid #E0E0E0;
+            background: #EFF2F7;
 
             & > span
             {
