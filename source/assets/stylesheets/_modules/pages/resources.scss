@@ -231,6 +231,12 @@
         border-radius: 2px;
         vertical-align: top;
         
+        @include media(max-width 750px)
+        {
+            display: block;
+            width: auto;
+        }
+        
         .preview
         {
             margin: 10px;
