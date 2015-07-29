@@ -1,5 +1,5 @@
 <% colors = parseScheme(ksf) %>
-
+<% if colors.ready %>
 <style type="text/css">
 <%
 common = colors.color(['CommonStyles', 'default_fixed', 'fore'])
@@ -112,3 +112,4 @@ echo $foo1-&gt;mul()."";
 </p>
 
 <div class="spacer"></div>
+<% end %>
