@@ -28,7 +28,13 @@ class Scheme
   ]
   
   def initialize(ksf)
-    ksf = JSON.parse(ksf)
+    begin
+      ksf = JSON.parse(ksf)
+    rescue Exception => e
+      puts "Parsing KSF failed: #{e}"
+      @ready = false
+      return
+    end
     
     if ksf.has_key? "exports"
       ksf = ksf["exports"]
@@ -47,6 +53,11 @@ class Scheme
         end
     end
     @bg = @fg.shift
+    @ready = true
+  end
+  
+  def ready
+    @ready
   end
   
   def bg
