@@ -80,21 +80,23 @@ basenameOrig: resource
                     <% if release.assets.length %>
                        <div class="assets">
                            <% release.assets.each() do |asset| %>
-                               <div>
-                               <a href="https://github.com/<%= resource.full_name %>/releases/download/<%= release.tag_name %>/<%= asset.name %>" class="button big primary">
-                                   <i class="icon icon-download"></i>
-                                   Download
-                               </a>
-                               </div>
+                                <div>
+                                    <a href="<%= asset.browser_download_url %>" class="button big primary">
+                                        <i class="icon icon-download"></i>
+                                        <%= asset.name %>
+                                    </a>
+                                </div>
                            <% end %>
                        </div>
                     <% end %>
-                   <div class="source">
-                       <a href="https://github.com/<%= resource.full_name %>/archive/<%= release.name %>.zip" class="button">
-                           <i class="icon icon-download"></i>
-                           Download Source
-                       </a>
-                   </div>
+                    <% if release.has_key? "tag_name" %>
+                        <div class="source">
+                           <a href="https://github.com/<%= resource.full_name %>/archive/<%= release.name %>.zip" class="button">
+                               <i class="icon icon-download"></i>
+                               Download Source
+                           </a>
+                        </div>
+                    <% end %>
                 </div>
             </div>
         </div>
