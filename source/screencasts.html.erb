@@ -15,7 +15,7 @@ sidebar: resources
 
 <ul class="screencasts">
     <% get_pages_by_layout("screencast").each() do |item| %>
-    
+
     <li>
         <a href="<%= item.url %>">
             <i class="icon icon-youtube-play"></i>
@@ -28,7 +28,16 @@ sidebar: resources
                 </span>
                 <span class="duration">
                     <i class="icon icon-clock-o"></i>
-                    <%= (vimeo_data(item.data.vimeo_id, "duration") / 60.0).round(2).to_s.gsub('.', ':') %>
+                    <% len = vimeo_data(item.data.vimeo_id, "duration")
+                        if len > 60
+                            min = (len / 60) >> 0
+                            sec = (len % 60) < 10 ? "0#{len % 60}" : len % 60
+                            len = "#{min}:#{sec}"
+                        else
+                            len = "0:#{len}"
+                        end
+                    %>
+                    <%= len %>
                 </span>
             </div>
         </a>
