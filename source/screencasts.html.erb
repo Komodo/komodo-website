@@ -29,7 +29,7 @@ sidebar: resources
                 <span class="duration">
                     <i class="icon icon-clock-o"></i>
                     <% len = vimeo_data(item.data.vimeo_id, "duration")
-                        if len > 60
+                        if len >= 60
                             min = (len / 60) >> 0
                             sec = (len % 60) < 10 ? "0#{len % 60}" : len % 60
                             len = "#{min}:#{sec}"
