@@ -4,6 +4,37 @@
   icon: star
   items:
     - 
+      name: Docker and Vagrant Integration (IDE 9.2)
+      description: Commando now allows you to work with Docker and Vagrant directly within Komodo, thus decreasing disruptions and wasted time. You will be able to see your instance names and commands directly from the Commando panel, negating the need to be intimately knowledgeable with Docker and Vagrant.
+
+      img: docker.png
+    - 
+      name: Collaboration Improvements (IDE 9.2)
+      description: Collaboration has been given a significant face-lift and is now a joy to work with! Most notable are the new caret flags, indicating what your colleagues are editing. Code better with your teams with our updated collab tool.
+
+      img: collab.png
+    - 
+      name: Real-Time Spell Checking (IDE 9.2)
+      description: Automatically check for spelling errors in real-time, in-line with the code. Spelling errors can be easily found and corrected within the editor.
+
+      img: spelling.png
+    - 
+      name: Komodo Package Installer (9.2)
+      description: A new package installer allows packages such as add-ons, color schemes, skins, keybindings, and languages, to be installed directly from inside Komodo, providing easier access to new functionality and allowing developers to quickly turn to community contributions for specialized functionality to meet project requirements. 
+      img: packages.png
+    - 
+      name: EditorConfig Integration (9.2)
+      description: We now offer EditorConfig integration, allowing developers to define and maintain consistent coding styles between different projects, editors and IDEs. No more worrying about eg. consistent indentation across your project when working with multiple developers.
+      img: editorconfig.png
+    - 
+      name: Focus (Distraction-Free) Mode (9.2)
+      description: With a single keystroke, you can hide non-essential UI elements to pare down the Komodo UI and focus on your code. This is ideal if you like a clean minimalistic editor but sometimes just NEED to access some of the more advanced and crucial UI elements.
+      img: focusmode.png
+    - 
+      name: Crisper UI (9.2)
+      description: The UI is now even more clear  (particularly when using dark color schemes). Minor as it may seem, those small bevels and fuzzy borders were taking away from an otherwise perfect experience.
+      img: crisp.png
+    - 
       name: Package Manager Integration (IDE 9.1)
       description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard. Commando will allow you to search for available and installed packages, and even for package managers that generally make this task fairly cumbersome (i.e. NPM and CPANM). Available for Bower, NPM, Composer, Gem, PIP, CPAN, PyPM and PPM.
       img: packagemanager.png
@@ -12,10 +43,12 @@
       name: Shell Scope (IDE 9.1)
       description: Easily run commands from Komodo right from Commando. Of course you could already run commands from Komodo, but now you can do it in style and without interrupting your workflow.
       img: shell.png
+      video: /screencasts/commando-shell-scope/
     - 
       name: Improved Workspace Management (IDE 9.1)
       description: We've significantly improved the workspace management functionality in Komodo IDE. Easily create your own custom configurations for Komodo and load them on the fly.
       img: workspaces.png
+      video: /screencasts/custom-workspaces/
     - 
       name: Track Changes
       description: The editor has gained a new left margin, which highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin shows a diff dialog of the changes, and allows you to revert individual changes. Sweet!

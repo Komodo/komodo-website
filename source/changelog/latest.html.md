@@ -11,6 +11,18 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 9.2
+
+ * Docker and Vagrant Integration (IDE only) - You can now interact with Docker and Vagrant using Commando (under Commando > Shell).
+ * Collaboration Overhaul (IDE only) - Collaboration has been given a significant face-lift and is now a joy to work with! Code better with your teams with our updated collab tool.
+ * Real-time (in-line) spell checking (IDE Only) - Komodo will now check your code for spelling errors in real-time, and allow you to easily address spelling errors right within the editor.
+ * Package Installer - We are introducing an all new way to install addons, color schemes, skins, keybindings, languages, etc. Simply by using Commando, you can now install all your favourite "Packages" (previously called "Resources" or "Extensions").
+ * EditorConfig Integration (see issue [#271](https://github.com/Komodo/KomodoEdit/issues/271)) - Komodo now checks for .editorconfig files in your path, [you can read more about this here](http://komodoide.com/blog/editorconfig-your-komodo/).
+ * Focus Mode (aka Distraction Free Mode) - Clean up your IDE: easily hide non-essential UI with a keystroke, [you can read more about this here](http://komodoide.com/blog/focus-mode-aka-distraction-free-mode-in-komodo/).
+ * CSS3 Autocompletions - We already supported a ton of CSS3 in our autocompletions, but [thanks to Defman](https://github.com/Komodo/KomodoEdit/pull/434) we now support all of CSS3.
+ * Crisper UI - Particularly when using dark color schemes, the UI could feel a little bit "fuzzy" in the past, but no longer is that the case!
+ * A boatload of Commando enhancements and fixes (see below)
+
 ### 9.1
 
  * **Package Manager integration**: You can now easily install and uninstall packages
@@ -159,6 +171,50 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 9.2 Bug Fixes
+
+ * Abyss: The Abyss (dark) skin has been removed from Komodo. It is still available through the package installer, but it just isn't packaged with Komodo anymore.
+ * codeintel: Fixed potential crashes when autocompleting with multiple selections - fixes [#106](https://github.com/Komodo/KomodoEdit/issues/106).
+ * codeintel: PHP: correctly resolve methods returning "$this". -- [Thanks to wizza-smile](https://github.com/Komodo/KomodoEdit/pull/44)
+ * codeintel: Improved code documentation tooltips for methods - fixes [#203](https://github.com/Komodo/KomodoEdit/issues/203) -- [Thanks to Defman](https://github.com/Komodo/KomodoEdit/pull/255)
+ * Collab: Now works with track changes.
+ * Collab: Overhauled the sidepane.
+ * Collab: Added named caret "flags" for everyone editing a file, you can easily see who is editing what.
+ * Color Schemes: Allow for indicators to be square boxes, making for crisper UI.
+ * Commando: Commando (and its scopes) will now toggle when you press their "show" shortcuts - fixes [#413](https://github.com/Komodo/KomodoEdit/issues/413).
+ * Commando: Fix abnormal CPU usage after opening Commando - fixes [#411](https://github.com/Komodo/KomodoEdit/issues/411).
+ * Commando: Fix icons in commando being barely visible on dark backgrounds.
+ * Commando: Fix issue where excludes would not work on Windows - fixes [#117](https://github.com/Komodo/KomodoEdit/issues/117).
+ * Commando: Fix issue where history would not be cleared when switching between scopes.
+ * Commando: Fix issue where package manager binary locations would not update instantly.
+ * Commando: Fix issue where the tip would overlap the results.
+ * Commando: Fixed issue where certain commands (eg. Preferences) could not be executed - fixes [#364](https://github.com/Komodo/KomodoEdit/issues/364).
+ * Commando: Fixed issue where selecting "Open" from the expand menu would fail - fixes [#422](https://github.com/Komodo/KomodoEdit/issues/422) -- [Thanks to Defman](https://github.com/Komodo/KomodoEdit/pull/423)
+ * Commando: Fixed showing scrollbar when none is needed.
+ * Commando: OpenFiles: Open Files are now sorted entirely by their last access time.
+ * Commando: Removed the Navigation > Go To .. Menu's, Commando now facilitates this easily by itself.
+ * Commando: Significantly improved search responsiveness, especially on OSX.
+ * Debugger: nodejs: Forward interpreter flags to debugger properly - fixes [#357](https://github.com/Komodo/KomodoEdit/issues/357).
+ * Find: Don't throw exception when attempting a search on a non-editor view - fixes [#374](https://github.com/Komodo/KomodoEdit/issues/374).
+ * Icons: Add missing return statements, fixes most errors regarding ko-icon - fixes [#19](https://github.com/Komodo/KomodoEdit/issues/19).
+ * Keybindings: Don't need to restart unless there are multiple komodo windows - fixes [#336](https://github.com/Komodo/KomodoEdit/issues/336).
+ * Keybindings: Removed default Commando Sections scope keybinding, it was already used - fixes [#206](https://github.com/Komodo/KomodoEdit/issues/206).
+ * Other: Fix issue where some files would refuse to open - fixes [#217](https://github.com/Komodo/KomodoEdit/issues/217).
+ * Preferences: Fixed issue where some preference buttons would appear as white blocks on dark skins - fixes [#379](https://github.com/Komodo/KomodoEdit/issues/379) -- [Thanks to Defman](https://github.com/Komodo/KomodoEdit/pull/428)
+ * Publishing: failed when path had spaces.
+ * Refactoring: Fix missing replace field - fixes [#242](https://github.com/Komodo/KomodoEdit/issues/242).
+ * Remote Servers: not defined errors when trying to open a remote file - fixes [#369](https://github.com/Komodo/KomodoEdit/issues/369).
+ * Reporting: Added background error reporting, only used when users opt-in to analytics.
+ * Scimoz: Make indicators look crispy, no more fuzzy borders.
+ * Scintilla: Added support for highlighting CoffeeScript instance properties.
+ * SDK: Added "windows" SDK, which will provide quick access to different Komodo windows/panels/dialogs.
+ * SDK: Added the "views" module, allowing easy access to the Komodo views.
+ * SDK: Added the ko/locale SDK, allowing easy use of mozilla's "properties" bundles.
+ * Skin: Make editor look more crisp when using dark scheme by removing borders around it.
+ * Skinning: Fix white text on white background in shell output - fixes [#298](https://github.com/Komodo/KomodoEdit/issues/298).
+ * Skinning: Make HUD buttons flat, NO gradients!.
+ * Workspace2: Added manage workspace.
 
 ### 9.1 Bug Fixes
 
