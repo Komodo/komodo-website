@@ -375,4 +375,55 @@
     {
         padding-left: 30px;
     }
+    
+    .search-wrapper
+    {
+        position: relative;
+        
+        input
+        {
+            width: 180px;
+            padding: 4px;
+        }
+        
+        ul.results
+        {
+            display: none;
+            position: absolute;
+            border: 1px solid #E2E2E2;
+            background: #EDEDED;
+            width: 350px;
+            right: 0;
+            
+            &, li, h3, p
+            {
+                padding: 0;
+                margin: 0;
+            }
+            
+            li
+            {
+                padding: 4px;
+                
+                &:hover
+                {
+                    background: lighten($color-base-link-hover, 60%);
+                    cursor: pointer;
+                }
+                
+                h3
+                {
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                }
+                
+                p
+                {
+                    @extend %ellipsis;
+                    font-size: 0.7rem;
+                    font-style: italic;
+                }
+            }
+        }
+    }
 }

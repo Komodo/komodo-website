@@ -1,0 +1,13 @@
+<%
+jsonData = Array.new
+data.resources.all.each() do |resource|
+    jsonData.push({
+        "name" => resource.title,
+        "description" => resource.description,
+        "owner" => resource.owner.login,
+        "category" => resource.category.name,
+        "url" => "/packages/#{File.basename(resource.category.resource, ".yml")}/#{get_package_slug(resource)}"
+    })
+end
+%>
+<%= jsonData.to_json %>
