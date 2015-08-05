@@ -55,6 +55,7 @@ jQuery ->
             loadStickyFloat
             loadQuickNav
             loadSchemePreviews
+            loadPackageSearch
         ]
         for fn in fns
             setTimeout fn, 0
@@ -535,7 +536,58 @@ jQuery ->
             html = html.replace(/:::([{}*:;.=,\(\)+]):::/g,'<span class="ko-operator">$1</span>')
             html = html.replace(/:;:(self):;:/g,'<span class="ko-keyword">$1</span>')
             el.html(html);
+            
+    packageCache = null
+    loadPackageSearch = ->
+        input = jq("#package-search")
+        return unless input.length
+    
+        jq.getJSON "/json/packages/search.json", (data) ->
+            packageCache = data
+    
+        input.on "input", packageSearch.bind(this, false)
+        input.on "click", packageSearch.bind(this, false)
         
+    packageSearchTimer = null
+    packageSearch = (now) ->
+        unless now
+            packageSearchTimer = setTimeout(packageSearch.bind(this, true), 200)
+            return
+        
+        input = jq("#package-search")
+        results = jq("#package-search-results")
+        results.empty()
+        results.hide()
+        
+        query = input.val()
+        query = jq.trim(query).toLowerCase()
+        
+        return if query.length < 2
+        
+        query = query.split(/\s+/g)
+        
+        count = 0
+        for pkg in packageCache
+            searchString = (pkg.name + pkg.description).toLowerCase()
+            score = 0
+            for word in query
+                score++ if searchString.indexOf(word) != -1
+            
+            if score == 0
+                continue
+            
+            result = jq "<li>"
+            result.append(jq("<h3>").text(pkg.name))
+            result.append(jq("<p>").text(pkg.description))
+            result.data("url", pkg.url)
+            result.on "click", ->
+                el = jq this
+                window.location.href = el.data("url")
+                
+            results.append result
+            results.show()
+            
+            return if ++count == 10
 
     init()
 
