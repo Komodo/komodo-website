@@ -97,8 +97,6 @@ jQuery ->
             platform = "windows"
         else if platform.indexOf("mac") != -1
             platform = "osx"
-            
-        ss.addClass("using-" + platform)
 
         elem = ss.find(".splash-" + platform)
         oldPrimary = ss.find(".primary")

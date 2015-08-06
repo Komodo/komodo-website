@@ -179,7 +179,7 @@
         position: relative;
         margin-top: 15px;
 
-        & > figure
+        figure
         {
             display: block;
 
@@ -194,8 +194,15 @@
             background-size: 100%;
             background-repeat: no-repeat;
             z-index: 10;
-            cursor: pointer;
             
+            @include transition(all 0.2s);
+            
+            &:hover
+            {
+                margin-top: -10px;
+                cursor: pointer;
+            }
+
             &.secondary,
             &.tertiary
             {
@@ -216,131 +223,6 @@
             &.splash-osx
             {
                 background-image: url(../images/screenshots/splash/mac-splash-php.png);
-            }
-        }
-        
-        #screenshot-callouts
-        {
-            position: absolute;
-            width: 100%;
-            height: 852px;
-            
-            @include media(max-width 1040px)
-            {
-                display: none;
-            }
-            
-            figure
-            {
-                position: absolute;
-                z-index: 100;
-                width: 16px;
-                height: 16px;
-                border-radius: 16px;
-                background: #3FACE2;
-                border: 2px solid #3D82A0;
-                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
-                left: 50%;
-                
-                &:after
-                {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    z-index: 99;
-                    left: -3px;
-                    top: -3px;
-                    width: 18px;
-                    height: 18px;
-                    border-radius: 18px;
-                    background: transparent;
-                    border: 2px solid #3D82A0;
-                    animation: pulsate 3s ease-out infinite;
-                }
-                
-                p
-                {
-                    display: none;
-                    position: absolute;
-                    top: 25px;
-                    left: -100px;
-                    background: #3086B5;
-                    color: #FFF;
-                    width: 250px;
-                    border-radius: 2px;
-                    padding: 2px;
-                    font-family: monospace;
-                    font-size: 0.8rem;
-                }
-                
-                &:hover
-                {
-                    cursor: pointer;
-                    
-                    p
-                    {
-                        display: block;
-                    }
-                }
-                
-            }
-            
-            #callout-panel-switcher
-            {
-                top: 43px;
-                margin-left: -76px;
-            }
-            
-            #callout-panel
-            {
-                top: 64px;
-                margin-left: -345px;
-            }
-            
-            #callout-open-files
-            {
-                top: 222px;
-                margin-left: -380px;
-            }
-            
-            #callout-margin
-            {
-                top: 166px;
-                margin-left: -263px;
-            }
-            
-            #callout-commando
-            {
-                top: 33px;
-                margin-left: 380px;
-            }
-            
-            #callout-spelling
-            {
-                top: 300px;
-                margin-left: 80px;
-            }
-        }
-        
-        /* Offset callouts */
-        &.using-linux #screenshot-callouts
-        {
-            top: 4px;
-            left: 29px;
-            
-            #callout-spelling
-            {
-                margin-left: 132px;
-            }
-        }
-        
-        &.using-windows #screenshot-callouts
-        {
-            top: 6px;
-            
-            #callout-spelling
-            {
-                margin-left: 90px;
             }
         }
     }
