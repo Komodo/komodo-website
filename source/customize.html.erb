@@ -29,23 +29,10 @@ priority: 0.6
 <h2>Addons</h2>
 
 <p>
-    Komodo is easily extendible with addons. Addons are created and packaged the same
-    as they are for other Mozilla powered products, eg. Thunderbird, Firefox, etc.
+    You can easily use any of the existing addons available through our site and through the Komodo package installer,
+    or you can create your own ..
 </p>
 
-<div class="addons">
-    <% data.addons.featured.first(3) do |addon| -%>
-    <a href="<%= addon.link %>">
-        <h3 class="tooltip" title="<%= addon.name %>"><%= addon.name %></h3>
-        <figure style="background-image: url('/images/addons/<%= addon.img %>')" class="tooltip" title="<%= addon.description %>"></figure>
-    </a>
-    <% end %>
-    <a class="more" href="/resources">
-        More..
-    </a>
-</div>
-<div class="spacer"></div>
-<div class="spacer"></div>
 <a name="create-addons"></a>
 <h3>Create Your Own Addons</h3>
 
