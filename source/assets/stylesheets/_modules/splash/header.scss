@@ -236,13 +236,11 @@
                 z-index: 100;
                 width: 16px;
                 height: 16px;
-                border-radius: 24px;
+                border-radius: 16px;
                 background: #3FACE2;
-                border: 2px solid #449BC4;
+                border: 2px solid #3D82A0;
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
                 left: 50%;
-                transition: all ease-out 0.2s;
-                cursor: pointer;
                 
                 &:after
                 {
@@ -266,9 +264,9 @@
                     position: absolute;
                     top: 25px;
                     left: -100px;
-                    background: #A0D1E8;
-                    opacity: 0;
-                    color: #232323;
+                    background: #3086B5;
+                    opacity: 0.9;
+                    color: #FFF;
                     width: 250px;
                     border-radius: 2px;
                     padding: 2px;
@@ -277,14 +275,11 @@
                 
                 &:hover
                 {
-                    background: #A0D1E8;
-                    border: 2px solid #74A8BF;
+                    cursor: pointer;
                     
                     p
                     {
                         display: block;
-                        opacity: 0.9;
-                        animation: fadeInFromNone 0.2s ease-out;
                     }
                 }
                 
