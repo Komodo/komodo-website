@@ -114,3 +114,20 @@
         opacity: 0;
     }
 }
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display:none; 
+        opacity: 0;
+    }
+
+    1% {
+        display: block; 
+        opacity: 0;
+    }
+
+    100% {
+        display: block; 
+        opacity: 0.9;
+    }
+}
