@@ -1,10 +1,10 @@
 ---
-title: Komodo 9.1 Changelog
+title: Komodo 9.x Changelog
 sidebar: download
 classNames: small-text markdown
 ---
 
-# Komodo IDE/Edit 9.1 Release Notes
+# Komodo IDE/Edit 9.x Release Notes
 
 These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fixes](#details) and [known issues](#knownissues) for Komodo IDE and Komodo Edit.
 
