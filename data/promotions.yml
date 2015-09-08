@@ -11,8 +11,8 @@ nav:
 buttons:
   enabled: false
 pricing: 
-  enabled: false
-  description: Use coupon code PACKAGE15 to save 15% on Komodo thru June 30, plus get coffee + 5 mugs with a 5-pack purchase <sup>*</sup>
+  enabled: true
+  description: Do you have a promo code?<br/>Enter the code during checkout to get your discount.
   tooltip: ""
 sale:
   prostudio: false
