@@ -11,6 +11,10 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 9.2.1
+
+Maintenance release, see detailed changes [below](#details).
+
 ### 9.2
 
  * Docker and Vagrant Integration (IDE only) - You can now interact with Docker and Vagrant using Commando (under Commando > Shell).
@@ -172,7 +176,27 @@ Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
 
-### 9.2 Bug Fixes
+### 9.2.1
+
+ * Prefs: Added Vagrantfile file association.
+ * Syntax Highlighting: Added Docker syntax highlighting.
+ * Toolbox: fix issue preventing tools from saving - fixes [#504](https://github.com/Komodo/KomodoEdit/issues/504).
+ * Collab: Improve contact request user experience.
+ * Scintilla: Fixed crash caused by drag+drop on OSX - fixes [#371](https://github.com/Komodo/KomodoEdit/issues/371).
+ * Go: Fix issue where interpreter would not be properly detected.
+ * Python: Detect pyflakes properly in Python3.
+ * Publishing: Fixed auto push not working when path has spaces - fixes [#505](https://github.com/Komodo/KomodoEdit/issues/505).
+ * Commando: Fix issue where results would not update - fixes [#515](https://github.com/Komodo/KomodoEdit/issues/515).
+ * Commando: Shell: Don't default to running in container commands in an external terminal.
+ * Commando: Shell: Fix autocompletion triggering on partial matches.
+ * OSX: Ensure Scintilla dialog views' text is visible.
+ * Scintilla: Highlight JavaScript and CoffeeScript regex properly - fixes [#414](https://github.com/Komodo/KomodoEdit/issues/414).
+ * CodeIntel: Fixed reading from rails.cix catalog - fixes [#537](https://github.com/Komodo/KomodoEdit/issues/537).
+ * Keybindings: vi: Ensure the caret is scrolled into view after moving in visual mode - fixes [#436](https://github.com/Komodo/KomodoEdit/issues/436).
+ * Lint: Fixed linting for Javascript macros - fixes [#381](https://github.com/Komodo/KomodoEdit/issues/381).
+ * Scintilla: Ruby: Highlight keyword-style arguments correctly - fixes [#522](https://github.com/Komodo/KomodoEdit/issues/522).
+
+### 9.2 
 
  * Abyss: The Abyss (dark) skin has been removed from Komodo. It is still available through the package installer, but it just isn't packaged with Komodo anymore.
  * codeintel: Fixed potential crashes when autocompleting with multiple selections - fixes [#106](https://github.com/Komodo/KomodoEdit/issues/106).
@@ -216,7 +240,7 @@ and the Sections List only apply to Komodo IDE only.
  * Skinning: Make HUD buttons flat, NO gradients!.
  * Workspace2: Added manage workspace.
 
-### 9.1 Bug Fixes
+### 9.1 
 
  * Commando: Cache is not updated when a shorcut is added - fixes [#115](https://github.com/Komodo/KomodoEdit/issues/115).
  * Commando: Commando hangs when descriptions have complex values - fixes [#111](https://github.com/Komodo/KomodoEdit/issues/111).
@@ -246,7 +270,7 @@ and the Sections List only apply to Komodo IDE only.
  * Codeintel: allow go-lang prefs to pass to out-of-process codeintel - fixes [#58](https://github.com/Komodo/KomodoEdit/issues/58).
  * Tcl: autocomplete insertion was incorrect for unicode - fixes [#85](https://github.com/Komodo/KomodoEdit/issues/85).
 
-### 9.0.1 Bug Fixes
+### 9.0.1 
 
 *   Abyss: Fixed issues on Windows with double borders and white space above toolbar.
 *   Color Schemes: Use foreground color for caret color - fixes #75\. (Bug [issue #75](https://github.com/Komodo/KomodoEdit/issues/75))
@@ -276,7 +300,7 @@ and the Sections List only apply to Komodo IDE only.
 *   fix issue #85 - Tcl autocomplete insertion was incorrect for unicode. (Bug [issue #85](https://github.com/Komodo/KomodoEdit/issues/85))
 *   fix issue 171: Code Intelligence: Fix race condition when multiple windows opened at startup.
 
-### 9.0.0 Bug Fixes
+### 9.0.0 
 
 *   Editor: Stop scrolling jumps when word wrap is enabled and editor is resized. (Bug [106383](http://bugs.activestate.com/show_bug.cgi?id=106383))
 *   Mac: Color Picker: Ensure the system color picker works correctly. (Bug [105463](http://bugs.activestate.com/show_bug.cgi?id=105463))
@@ -285,7 +309,7 @@ and the Sections List only apply to Komodo IDE only.
 *   Projects: Ensure project restore loads the correct files. (Bug [106386](http://bugs.activestate.com/show_bug.cgi?id=106386))
 *   Places: Ensure SCC status icon changes for edited files. (Bug [104886](http://bugs.activestate.com/show_bug.cgi?id=104886))
 
-### 9.0.0c1 Bug Fixes
+### 9.0.0c1 
 
 *   Code Intelligence: PHP: Better scanning of if statements. (Bug [106103](http://bugs.activestate.com/show_bug.cgi?id=106103))
 *   Color Schemes: Twilight_Dark was made the default color scheme.
@@ -297,7 +321,7 @@ and the Sections List only apply to Komodo IDE only.
 *   Startup: Show "Getting Started" dialog on upgrades. (Bug [106007](http://bugs.activestate.com/show_bug.cgi?id=106007))
 *   File Paths: Collapse double-root "//" paths on Unix. (Bug [106180](http://bugs.activestate.com/show_bug.cgi?id=106180))
 
-### 9.0.0b1 Bug Fixes
+### 9.0.0b1 
 
 *   Check Configuration: Ensure Git, hg and bzr show the correct status. (Bug [97855](http://bugs.activestate.com/show_bug.cgi?id=97855))
 *   Code Intelligence: CSS: Show pseudo completions after ":". (Bug [104799](http://bugs.activestate.com/show_bug.cgi?id=104799))
@@ -330,7 +354,7 @@ and the Sections List only apply to Komodo IDE only.
 *   Syntax Checking: Tcl: Correct variable scope check inside try block. (Bug [101049](http://bugs.activestate.com/show_bug.cgi?id=101049))
 *   Syntax Checking: Tcl: Pass version to syntax checking validator. (Bug [103533](http://bugs.activestate.com/show_bug.cgi?id=103533))
 
-### 9.0.0a1 Bug Fixes
+### 9.0.0a1 
 
 *   Code Formatting: Html formatters now default to utf8 encoding. (Bug [102922](http://bugs.activestate.com/show_bug.cgi?id=102922))
 *   Code Intelligence: Create seperate preferences for showing completions, calltips. (Bug [68533](http://bugs.activestate.com/show_bug.cgi?id=68533))
