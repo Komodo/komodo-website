@@ -1,0 +1,1 @@
+exec('vagrant ssh -c "cd /vagrant && middleman server"')
