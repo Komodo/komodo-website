@@ -22,3 +22,5 @@
 /data/cntf
 /data/resources
 .cntf-space-hash
+.vagrant
+.tmp
