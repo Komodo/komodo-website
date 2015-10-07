@@ -4,7 +4,7 @@ description: Highlights of Komodo feature changes. Spans from Komodo v6 to v9.
 socialDescription: Komodo IDE for Go Development
 dontNormalize: true
 priority: 0.0
-classNames: no-grid
+classNames: no-grid splash-page promos
 image: /assets/images/screenshots/splash/mac-splash-go.png
 ---
 
@@ -72,84 +72,91 @@ image: /assets/images/screenshots/splash/mac-splash-go.png
 <div class="outer">
 <div class="inner">
 
-   <ul class="block" style="margin: auto; width: 70%; padding: 30px;">
-        <li style="float: left;  width: 25%; border:1px solid gray; padding: 20px;">         
-            <h2>v9: Apr 2015 - Present</h2>
-            <ul>
-                <li>Track Changes</li>
-                <li>Markdown Viewer</li>
-                <li>GoLang Support</li>
-                <li>Commando</li>
-                <li>Package Manager Integration</li>
-                <li>Real-time (in-line) spell checking</li>
-                <li>Docker and Vagrant Integration</li>
-                <li>Collaboration Overhaul</li>
-                <li>Focus Mode (aka Distraction Free Mode)</li>
-            </ul>
+   <ul class="block">
+        <li>
+            <div class="inner">
+                <h2>v9: Apr 2015 - Present</h2>
+                <ul>
+                    <li>Track Changes</li>
+                    <li>Markdown Viewer</li>
+                    <li>GoLang Support</li>
+                    <li>Commando (Go to Anything) <a href="/screencasts/commando-go-to-anything/"><i class="icon icon-film"></i></a></li>
+                    <li>Package Manager Integration</li>
+                    <li>Real-time (in-line) spell checking</li>
+                    <li>Docker and Vagrant Integration</li>
+                    <li>Collaboration Overhaul</li>
+                    <li>Focus Mode (aka Distraction Free Mode)</li>
+                </ul>
+            </div>
         </li>
-        <li style="float: left;  width: 25%; border: 1px solid gray; position: relative; padding: 20px;">         
-            <h2>v8: 2013 - Apr 2015</h2>
-
-            <ul>
-                <li>New UI</li>
-                <li>Minimap Scrollbar</li>
-                <li>Customizable panes/widgets</li>
-                <li>Code Refactoring</li>
-                <li>Abyss Skin (dark skin)</li>
-                <li>Breadcrumb Navigation</li>
-                <li>Open Files widget</li>
-                <li>Multiple Cursor Editing</li>
-                <li>Unified Menu Button</li>
-                <li>Custom Skins and Icons</li>
-            </ul>
+        <li>
+            <div class="inner">
+                <h2>v8: 2013 - Apr 2015</h2>
+                <ul>
+                    <li>New UI</li>
+                    <li>Minimap Scrollbar</li>
+                    <li>Customizable panes/widgets</li>
+                    <li>Code Refactoring</li>
+                    <li>Abyss Skin (dark skin)</li>
+                    <li>Breadcrumb Navigation</li>
+                    <li>Open Files widget</li>
+                    <li>Multiple Cursor Editing</li>
+                    <li>Unified Menu Button</li>
+                    <li>Custom Skins and Icons</li>
+                </ul>
+            </div>
         </li>
-        <li style="float: left;  width: 25%; border: 1px solid gray; position: relative; padding:20px;">         
-            <h2>v7: 2012 - 2013</h2>
-            <ul>
-            <li>Variable Highlighting</li>
-            <li>Language Extension - allows users to easily create their own language variations</li>
-            <li>Komodo Profile Sync</li>
-            <li>Code Collaboration</li>
-            <li>Fast Find Widget</li>
-            <li>Movable Widgets</li>
-            <li>Customizable Toolbar</li>
-            </ul>
+        <li>
+            <div class="inner">
+                <h2>v7: 2012 - 2013</h2>
+                <ul>
+                <li>Variable Highlighting</li>
+                <li>Easily create their own language variations</li>
+                <li>Komodo Profile Sync</li>
+                <li>Code Collaboration</li>
+                <li>Fast Find Widget</li>
+                <li>Movable Widgets</li>
+                <li>Customizable Toolbar</li>
+                </ul>
+            </div>
         </li>
         
-        <li style="float: left; width: 25%; border: 1px solid gray; position: relative; padding:20px;">         
-            <h2>v6: 2010 - 2012</h2>
-            <ul>
-            <li>File Browser Succeeded by "Places"</li>
-            <li>Database Explorer</li>
-            <li>File Publishing (upload to remote servers, eg. FTP)</li>
-            <li>Code Collaboration</li>
-            <li>Workspaces</li>
-            <li>Rewrites of several core components</li>
-            </ul>
+        <li>
+            <div class="inner">
+                <h2>v6: 2010 - 2012</h2>
+                <ul>
+                <li>File Browser Succeeded by "Places"</li>
+                <li>Database Explorer</li>
+                <li>File Publishing (upload to remote servers, eg. FTP)</li>
+                <li>Code Collaboration</li>
+                <li>Workspaces</li>
+                <li>Rewrites of several core components</li>
+                </ul>
+            </div>
         </li>
     </ul>
 </div>
 </div>
-    <div class="clearfix"></div>
 
+<div class="clearfix"></div>
 
-<p>&nbsp;</p>
-    <div class="try-buy-buttons centered">
-        <div class="inner">
-            <a class="button big primary" href="/download">
-                <i class="icon icon-download"></i> Try Komodo IDE
-            </a>
-            <a class="button big <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
-                <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
-                <% if data.promotions.buttons.enabled %>
-                    <div class="promotion badge">
-                        ON SALE
-                    </div>
-                <% end %>
-            </a>
-        </div>
+<div class="spacer"></div>
+<div class="try-buy-buttons centered">
+    <div class="inner">
+        <a class="button big primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button big <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+            <% if data.promotions.buttons.enabled %>
+                <div class="promotion badge">
+                    ON SALE
+                </div>
+            <% end %>
+        </a>
     </div>
 </div>
+<div class="spacer"></div>
 
 <!-- LivePerson -->
 <script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/88203588/?cmd=mTagRepstate&site=88203588&buttonID=12&divID=lpButDivID-1279824964197&bt=1&c=1"></script>
