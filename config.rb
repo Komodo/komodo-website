@@ -131,7 +131,7 @@ activate :deploy do |deploy|
 end
 
 configure :development do
-  activate :livereload
+  activate :livereload, :no_swf => true
   set :is_live, false
   set :site_url, "http://dev.komodoide.com:4567"
 end
