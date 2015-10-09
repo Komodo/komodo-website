@@ -1,7 +1,7 @@
 ---
 title: Collaboration - Team Editing
 layout: screencast
-date: 20115-10-08
+date: 2015-10-08
 vimeo_id: 141006777
 ---
 
