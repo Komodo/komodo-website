@@ -13,14 +13,14 @@
           img: docs.gif
         - 
           name: Run Code In-Line (IDE)
-          description: Hit a shortcut to run the current the current file using the configured interpreter, then quickly review its results. Useful to quickly test bits of code. This works on unsaved files as well as selections (ie. run only the selected text).
+          description: Hit a shortcut to run the current file using the configured interpreter, then quickly review its results. Useful to quickly test bits of code. This works on unsaved files as well as selections (ie. run only the selected text).
           img: runinline.gif
         - 
           name: Quick Bookmarks
           description: Quickly place numeric bookmarks and go to them, allowing you to use bookmarks as more than just reminders. Hit Ctrl+Shift+number to place a quick bookmark, then hit Ctrl+number to go to that bookmark.
           img: quickbookmarks.gif
         - 
-          name: Console Widget
+          name: Console Pane
           description: The new Console pane allows you to interact with the Komodo runtime much in the same way as you would use your browser developer tools console to interact with a website. This is especially useful for developers wanting to customize their Komodo experience.
           img: console.gif
         - 
@@ -37,6 +37,7 @@
           img: xml-carets.gif
         - 
           name: Elastic Tabstops
+          markdown: true
           description: Komodo now supports [Elastic Tabstops](http://nickgravgaard.com/elastic-tabstops/). Since this is intended only for files that use tab characters for indentation it is disabled by default. You can enable it under Indentation Preferences.
           img: tabstop.gif
         -
@@ -189,9 +190,10 @@
       name: Multiple Selections
       description: Select multiple positions in the editor, so that changes made at one position will be reflected in all selected positions.
       video: /screencasts/multiple-selections/
-    - 
-      name: Unified Menu Button
-      description: Komodo can be configured to use a collapsed toolbar button menu, instead of a full menu bar (Windows and Linux only).
+    -
+      name: Quick Bookmarks
+      description: Quickly place numeric bookmarks and go to them, allowing you to use bookmarks as more than just reminders.
+      isNew: true
     - 
       name: Code Folding / Code Blocks
       description: Code folding<br>Column/block editing,<br>Line/block commenting and more
@@ -213,11 +215,15 @@
       description: Vi/Vim, emacs, OS X, Windows/Linux included.
       video: /screencasts/vi-mode/
     - 
-      name: Powerful Snippets and Macros
+      name: Powerful Snippets, Macros and Userscripts
       description: Insert snippets with abbreviations. Use macros to automate repetitive sequences.
     - 
       name: Conditional Snippets
       description: Use Embedded JavaScript to determine snippet contents at runtime.
+    - 
+      name: Elastic Tabstops
+      description: Komodo automatically indents your code as you type, see <a href="http://nickgravgaard.com/elastic-tabstops/">Elastic Tabstops</a>.
+      isNew: true
 - 
   name: Code Intelligence
   description: Focus on your coding, and let Komodo sweat the details
@@ -297,8 +303,16 @@
   icon: plus
   items: 
     - 
+      name: Documentation browser
+      description: Allows you to quickly navigate the documentation for our codeintel supported languages.
+      isNew: true
+    - 
       name: Version Control Systems
       description: Support for Subversion, Mercurial, Git, CVS, Perforce and Bazaar.
+    -
+      name: Run Code In-Line
+      description: Hit a shortcut to run the current the buffer using the configured interpreter, then quickly review its results.
+      isNew: true
     - 
       name: Interactive Shells
       description: Available for Python, Ruby, Perl and Tcl.
@@ -321,7 +335,7 @@
       video: /screencasts/package-manager-integration/
     - 
       name: Toolbox
-      description: Store snippets, macros and shell commands for easy access.
+      description: Store snippets, macros, userscripts, shell commands, etc for easy access.
     - 
       name: Database Explorer
       description: Examine database content for SQLite. Available extensions for MySQL and Oracle.
@@ -391,9 +405,9 @@
   icon: users
   items: 
     - 
-      name: Abyss Dark Theme
-      description: \Abyss\ native dark UI theme can be enabled in preferences. Goes well with \Dark_Wombatsosia\ editor scheme.
-      video: /screencasts/abyss-dark-ui-theme/
+      name: Console Pane
+      description: The new Console pane allows you to interact with the Komodo runtime much in the same way as you would use your browser developer tools console to interact with a website.
+      isNew: true
     - 
       name: Floating Side Panes
       description: Undock components and move them anywhere on screen.
@@ -429,7 +443,7 @@
       description: Edit a document with multiple users simultaneously, no matter where they are.
     - 
       name: Shared Toolbox
-      description: Store common snippets, macros, etc. via network share, source code control or the Publish feature.
+      description: Store common snippets, macros, userscripts, etc. via network share, source code control or the Publish feature.
     - 
       name: Coding Standards and Control
       description: Keep shared work consistent with version control system integration and auto-formatting.
