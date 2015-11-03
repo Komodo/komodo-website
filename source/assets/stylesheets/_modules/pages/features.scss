@@ -76,7 +76,7 @@
                 color: lighten($color-base-text, 20%);
             }
             
-            strong
+            & > li > strong
             {
                 font-weight: normal;
                 font-size: 18px;
@@ -89,12 +89,12 @@
             
             img
             {
-                max-width: 200px;
-                max-height: 120px;
+                max-width: 400px;
+                max-height: 200px;
             }
         }
         
-        :not(#new) ul.features
+        .group:not(#new) ul.features
         {
             & > li
             {
@@ -106,28 +106,32 @@
             }
         }
         
-        #new ul.features
+        .group#new ul.features
         {
             & > li
             {
                 margin: 15px 0;
                 padding-bottom: 15px;
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                & > a.lightbox
+                {
+                    min-width: 400px;
+                    margin-right: 15px;
+                }
                 
                 &:not(:last-child)
                 {
                     border-bottom: 1px solid lighten($color-base-text, 60%);
                 }
                 
-                &:nth-child(odd) img
+                .inner > strong
                 {
-                    float: left;
-                    margin-right: 15px;
-                }
-                
-                &:nth-child(even) img
-                {
-                    float: right;
-                    margin-left: 15px;
+                    font-weight: normal;
+                    font-size: 18px;
                 }
             }
         }
@@ -191,5 +195,38 @@
         }
 
     }
+    
+    .tabs
+    {
+        text-align: center;
+
+        & > ul:first-child
+        {
+            margin: auto;
+            border-bottom-color: rgba(0, 0, 0, 0.15);
+            
+            li
+            {
+                display: inline-block;
+                float: none;
+
+                a
+                {
+                    padding: 0 10px;
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        & > div
+        {
+            &:not(:first-child)
+            {
+                display: none;
+            }
+        }
+
+    }
+
 
 }
