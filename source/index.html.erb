@@ -16,13 +16,7 @@ priority: 1.0
         </div>
     </div>
 
-    <% if data.promotions.splash.enabled %>
-        <h1 class="promotion">
-            <%= data.promotions.splash.description %>
-        </h1>
-    <% else %>
-        <h1>One IDE, All Your Languages</h1>
-    <% end %>
+    <h1>One IDE, All Your Languages</h1>
     
     <div id="splash-description">
         <p>
@@ -82,6 +76,12 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
             </p>
         </div>
     </div>
+    
+    <% if data.promotions.splash.enabled %>
+        <a id="promotion" href="<%= data.promotions.splash.link %>">
+            <%= data.promotions.splash.description %>
+        </a>
+    <% end %>
 
     <div id="splash-screenshots">
         
