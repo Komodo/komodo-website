@@ -30,7 +30,7 @@ nav:
       sub: 
         - 
           name: "Documentation"
-          link: "http://docs.activestate.com/komodo"
+          link: "http://docs.komodoide.com/"
         - 
           name: "Report Bug"
           link: "http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
@@ -38,10 +38,10 @@ nav:
   support: 
     - 
       name: "Documentation"
-      link: "http://docs.activestate.com/komodo"
+      link: "http://docs.komodoide.com/"
     - 
       name: "API Reference"
-      link: "http://docs.activestate.com/komodo/latest/macroapi.html#macroapi_top"
+      link: "http://docs.komodoide.com/SDK/api/commonjs"
     - 
       name: "&nbsp;"
       link: "#"
