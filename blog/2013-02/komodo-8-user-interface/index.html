@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>The New Komodo 8 User Interface | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="The New Komodo 8 User Interface" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body>
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+
+        <!-- Main Container -->
+        <div id="container" class="container-blog-entry">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="document-blog-entry
+                         sidebar
+                         drupal-import
+                         blog blog_2013-02 blog_2013-02_komodo-8-user-interface blog_2013-02_komodo-8-user-interface_index">
+    <section role="main">
+        <article class="normalize">
+            <h1>The New Komodo 8 User Interface</h1>
+            <div class="clearfix"></div>
+            <div class="content">
+                <div>
+        
+          <p><img alt="Linux UI Sample" class="as_left" src="/assets/images/blog/2013-02/komodo-8-mac-ui-sample.png" style="width: 210px; height: 174px;">Ever since I started using Komodo many years ago, I was intrigued by its ability and potential. No other IDE out there gave me the level of flexibility that Komodo did (and does).</p>
+  <p>As a web developer, being able to extend my editor of choice with some simple Javascript was amazing. However, the one thing that always bothered me more than anything else was its UI. While it certainly was not the worst I had ever seen in an IDE, it was not the best either. It felt bloated, inconsistent, and most importantly, it did not feel native to the platform.</p>
+  <p>That might sound a bit harsh, but when I spoke to the Komodo team, it turned out they agreed with me! As the old saying goes, you're often your own worst critic. Now, after joining the team, I have been given the opportunity to change that. We have since made a lot of progress on a new and improved UI. And with the release of the Komodo 8 beta, we'll let you be the judge!</p>
+  <div class="centerWrap">
+  <div id="Ko8UiSlideshow" class="lightbox slideshow" data-width="720" data-height="400">
+  <a href="/assets/images/blog/2013-02//platform-mac.png" rel="shadowbox"> <img alt="OSX UI" src="/assets/images/blog/2013-02/platform-mac-small.png"></a> <a href="/assets/images/blog/2013-02//platform-linux.png" rel="shadowbox"> <img alt="Linux UI" src="/assets/images/blog/2013-02/platform-linux-small.png"></a> <a href="/assets/images/blog/2013-02//platform-windows.png" rel="shadowbox"> <img alt="Windows UI" src="/assets/images/blog/2013-02/platform-windows-small.png"></a>
+  </div>
+  <p><em><small>(Note: The UI is still in development. Things can and will change.)</small></em></p>
+  </div>
+  <h2>Objectives</h2>
+  <p>The new UI had to be significantly different. It had to feel fresh and make you WANT to use it. But it also should not get in the way of an IDE's main purpose: writing code.</p>
+  <p>To this end, we made up our list of objectives:</p>
+  <ul>
+  <li>Feel native yet consistent on every platform</li>
+  <li>Use a consistent icon set</li>
+  <li>Maintain a consistent UI</li>
+  <li>Slim it down: no more thick borders or wasted margins</li>
+  <li>Hide rarely used UI elements</li>
+  </ul>
+  <p>You can probably tell the word &#8220;consistent&#8221; was used multiple times, and for good reason: as many developers added to Komodo's UI over the years, it became very inconsistent. Understandable, but it was time for a cleanup.</p>
+  <h3>Feel Native Yet Consistent</h3>
+  <p>Setting out to rehaul an entire UI is not simple, especially on a Mozilla project, where each component practically has its own UI styling.</p>
+  <p>To facilitate this process, we forked <a href="http://lesscss.org/" target="_blank">LESS</a> and made it compatible with Komodo, while still maintaining as much backwards compatibility as possible for future updates. We then set out to port the UI specific css to LESS, turning any rule that would differ between platforms into a variable. As a result, over 90 percent of the css rules are now identical between platforms, differing only in their values, which are easily controlled over centralized config files. This flexibility feeds back to the community. Developers are now able to easily create custom skins and iconsets for Komodo, simply by overriding these variables. More details on skins and iconsets will follow in a separate blog post in the near future.</p>
+  <h3>Use a Consistent Icon Set</h3>
+  <p><img alt="UI Icons" src="/assets/images/blog/2013-02/icons.png" style="width: 210px; height: 103px; float: left;">On to the next challenge: finding -- or creating -- a new and consistent icon set for Komodo.</p>
+  <p>This is not as simple as you might think, as we needed a consistent icon set which also looked native on every platform. In OSX's case, we also needed a retina variation (ie. double the size). Creating an icon set that facilitated this would be a long and time-consuming process, and finding a set that met our requirements would be challenging.</p>
+  <p>After much research, we finally settled on the <a href="http://icomoon.io/" target="_blank">IcoMoon</a> set, which is a monochrome set. It is also a set that is designed as SVG's, making them easily scalable to different sizes and even usable as an icon font. This flexibility made it an excellent choice. <a href="https://twitter.com/keyamoon" target="_blank">Keyamoon</a>, the creator of IcoMoon, has also been very supportive in our use of his icons and even made us some custom icons for some of the more specific buttons.</p>
+  <p>We first showed the new icons to our IDE users through the Komodo 8 Alpha 3 release. The feedback was mixed. Overall, people tended to like the monochrome icons but raised concerns that the lack of color variation made it hard to identify between icons. Following this crucial feedback, we added a &#8220;classic&#8221; icon set for those users preferring to stick with the originals. Of course, there will also be more icon sets and variations in the future. One I am personally planning on is adding color overlays to the monochrome set, allowing users to identify between a certain class of icons by their color.</p>
+  <h3>Maintain a Consistent UI</h3>
+  <p><img alt="UI sidebar" src="/assets/images/blog/2013-02/ko-consistent-ui.png" style="margin-right: 10px; width: 335px; height: 219px; float: right;">As with the icons, the UI itself had also become inconsistent. For example, the sidebar panels and their buttons were all over the place. Where users were accessing an option menu on the top right in one panel, the next one would have users access it on the left, or even worse, somewhere near the middle or bottom.</p>
+  <p>Things like this should be streamlined to the point where users should not have to &#8220;look&#8221; for UI elements. They should just be there.</p>
+  <h3 style="clear: none;">Slim It Down</h3>
+  <p style="clear: none;">The old Komodo UI was based on old OS styles. That meant thick buttons, heavy embossed borders, and lots of margins. However, things have changed, and these days an OS and its app look sleek, minimalistic and sexy -- and so should Komodo. In order to achieve this, we first had to lose some weight, that weight being bulky UI elements.</p>
+  <h3>Hide Rarely Used UI Elements</h3>
+  <p>It is a trend these days for software to remove features in order to make things easier for the rookie user. This is NOT what we wanted to do.</p>
+  <p>Komodo is a big IDE with a boatload of features. Many of those are used only occasionally, so why were they hogging up the UI permanently? To this end we set out to hide these UI elements while still preserving their functionality. For example, the Source Code Control buttons are generally not used directly from the toolbar, so why were they taking up so much space? We turned them into a dropdown menu, and we preserved the existing functionality for those that prefer it. It is simply turned off by default.</p>
+  <h2>Comparing New and Old</h2>
+  <p>Having worked on the new UI for a few months now, I had honestly not used the old UI for quite a while. So when I recently launched Komodo 7, I was quite struck (and pleased) by the contrast between new and old.</p>
+  <div class="centerWrap">
+  <div id="koBeforeAfter">
+  <img alt="After" src="/assets/images/blog/2013-02/ko-new-small.png"><img alt="Before" src="/assets/images/blog/2013-02/ko-old-small.png">
+  </div>
+  </div>
+  <div class="centerWrap"><em><small>(hover your mouse to move the comparison slider)</small></em></div>
+  <h2>The Future of the UI</h2>
+  <p>Though a lot has already been done, I see this as a continuous project. Big steps have been taken in modernizing the UI but I expect this to be a continuous trend with future updates, though the contrast will obviously not be as big.</p>
+  <p>So please &#8211; <a href="http://activestate.com/komodo-ide/downloads" target="_blank" title="Download Komodo 8.0 Beta">try out the Komodo IDE 8 beta</a> and let us know how you feel about the new UI. We look forward to your feedback!</p>
+  <style type="text/css">
+  .centerWrap
+  {
+      text-align: center;
+  }
+  .slideshowlite {
+      position:relative;
+      border: 1px solid #AFAFAF;
+      overflow:hidden;
+      margin: 0 auto;
+      text-align: left;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+  }
+  .slideshowlite a {
+      position:absolute;
+      z-index:1;
+      width:100%;
+      height:100%;
+      text-align:center;
+  }
+  .slideshowlite img {
+      border: none;
+      max-width: none !important;
+  }
+  /* pagination control */
+  .slideshowlite ul,.slideshowlite ol {
+      list-style:none;
+      position:absolute;
+      margin:0;
+      padding:0;
+      bottom:5px;
+      right:5px;
+      z-index:3;
+  }
+  .slideshowlite ul li,.slideshowlite ol li {
+      float:left;
+      margin:0 3px;
+      width:16px;
+      list-style-image: none;
+  }
+  .slideshowlite ul li a {
+      position:relative;
+      display:block;
+      text-decoration:none;
+      text-align:center;
+      font-size:11px;
+  }
+  .slideshowlite ul li a.current {
+      color:#111;
+      font-weight:bold;
+  }
+  .slideshowlite ul li a:hover {
+      color:#fff;
+  }
+  
+  /* Before / after */
+  #koBeforeAfter {
+      margin: 0 auto;
+      text-align: left;
+      width:720px;
+      height:533px;
+      border: 1px solid #AFAFAF;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+  }      
+  
+  #koBeforeAfter img {
+      max-width: none;
+      width:720px;
+      height:533px;
+  }
+  
+  .ba-mask {  /* first image */  
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:100;
+      border-right:4px solid rgba(200,200,200,0.5);
+      overflow:hidden;
+  }
+   
+  .ba-bg {    /* second image */
+      position:absolute;
+      top:0;
+      left:0;
+      z-index:0;
+  }</style>
+  <script type="text/javascript">
+  
+  window.addEventListener("load", function() {
+     $.fn.extend({
+          //plugin name - qbeforeafter
+          qbeforeafter: function(options) {
+    
+              var defaults = {
+                  defaultgap: 360,           
+                  leftgap: 0,
+                  rightgap: 0,
+                  caption: false,
+                  reveal: 0.5,
+                  width: 400,
+                  height: 200
+              };
+                
+              var options = $.extend(defaults, options);
+            
+              return this.each(function() {
+   
+              var o = options;
+              var i = $(this);
+              var img_mask = i.children('img:eq(0)').attr('src');
+              var img_bg = i.children('img:eq(1)').attr('src');
+              var img_cap_one = i.children('img:eq(0)').attr('alt');
+               
+              var width = defaults.width;
+              var height = defaults.height;
+                   
+              i.children('img').hide();      
+                   
+              i.css({'overflow': 'hidden', 'position': 'relative'});
+              i.append('<div class="ba-mask"></div>');
+              i.append('<div class="ba-bg"></div>');         
+              i.append('<div class="ba-caption">' + img_cap_one + '</div>');
+                   
+              i.children('.ba-mask, .ba-bg').width(width);
+              i.children('.ba-mask, .ba-bg').height(height);
+              i.children('.ba-mask').animate({'width':width - o.defaultgap}, 1000);
+               
+              i.children('.ba-mask').css('backgroundImage','url(' + img_mask + ')');
+              i.children('.ba-bg').css('backgroundImage','url(' + img_bg + ')'); 
+   
+              if (o.caption) i.children('.ba-caption').show();
+   
+              }).mousemove(function (e) {
+   
+                  var o = options;
+                  var i = $(this);
+                   
+                  pos_img = i.offset()['left'];
+                  pos_mouse = e.pageX;       
+                  new_width = pos_mouse - pos_img;
+                  img_width = i.width();
+                  img_cap_one = i.children('img:eq(0)').attr('alt');
+                  img_cap_two = i.children('img:eq(1)').attr('alt');             
+   
+                  if (new_width > o.leftgap && (img_width - o.rightgap) >= new_width) {         
+                      i.children('.ba-mask').width(new_width);
+                  }
+                   
+                  if ((img_width * o.reveal) >= new_width) {           
+                      i.children('.ba-caption').html(img_cap_two);
+                  } else {
+                      i.children('.ba-caption').html(img_cap_one);           
+                  }                  
+               
+              });
+          }
+     });
+     
+     $("#koBeforeAfter").qbeforeafter({width: 720, height: 533});
+  });
+  
+  </script>
+</div>
+
+            </div>
+            
+            <hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+        var disqus_shortname = 'komodoide';
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </article>
+    </section>
+    <aside class="sidebar-blog normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <a href="/resources/submit-instructions/#pane-blogs" class="button big submit-content">
+    Submit Content
+</a>
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button " href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+<div class="info">
+    <h1>Blog Info</h1>
+
+        <img src="//images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg" alt="Nathan Rijksen">
+
+    <p>
+        <strong>By:</strong>
+        <a href="/authors#NathanRijksen">Nathan Rijksen</a>
+    </p>
+
+    <p>
+        <strong>Tags: </strong>
+            <a href="/blog/tagged/komodo 8">komodo 8</a>
+            <a href="/blog/tagged/UI">UI</a>
+    </p>
+    <p><strong>Date Posted: </strong>Feb 12, 2013</p>
+</div>
+<div class="clearfix"></div>
+<div class="blogs">
+    <h1>Recent Blogs</h1>
+    <ul>
+        <li>
+            <a href="/blog/komodo-ide-user-story-defman">Komodo IDE User Story: Defman</a>
+        </li>
+        <li>
+            <a href="/blog/team-editing-komodo-collaboration-tool">Team Editing: Komodo Collaboration Tool</a>
+        </li>
+        <li>
+            <a href="/blog/first-komodo-9-3-nightly-available">First Komodo 9.3 Nightly Available</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-ron-stewart">Komodo IDE User Story: Q&A with Ron Stewart</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason">Komodo IDE User Story: Q&A with Gregg Thomason</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer">Komodo IDE User Story: Q&A with Rebecca Billings, Sr. QA Engineer</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-9-2-1-released">Komodo 9.2.1 Released</a>
+        </li>
+        <li>
+            <a href="/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages">"No Brainer" Licensing for Komodo (and our other Tools and Languages)</a>
+        </li>
+        <li>
+            <a href="/blog/extend-your-editor-using-komodo-packages-in-9-2">Extend Your Editor Using Komodo Packages in 9.2</a>
+        </li>
+        <li>
+            <a href="/blog/tabula-rasa-a-clean-slate-for-komodo">Tabula Rasa: a Clean Slate for Komodo</a>
+        </li>
+    </ul>
+</div>
+
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    <a href="/screencasts/collaboration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/537777738_640.jpg')"></figure>
+        <span>Collaboration - Team Editing</span>
+    </a>
+    <a href="/screencasts/komodo-packages/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/531680682_640.jpg')"></figure>
+        <span>Komodo Packages</span>
+    </a>
+    <a href="/screencasts/komodo-9-2-whats-new/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/529308211_640.jpg')"></figure>
+        <span>Komodo 9.2 - What's New?</span>
+    </a>
+    <a href="/screencasts/commando-shell-scope/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/523290537_640.jpg')"></figure>
+        <span>Commando Shell Scope</span>
+    </a>
+    <a href="/screencasts/custom-workspaces/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521616726_640.jpg')"></figure>
+        <span>Custom Workspaces</span>
+    </a>
+    <a href="/screencasts/package-manager-integration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521575176_640.jpg')"></figure>
+        <span>Package Manager Integration</span>
+    </a>
+</div>
+
+        </div>
+    </aside>
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f64104503ca631" async="async"></script>
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://bugs.activestate.com/enter_bug.cgi?product=Komodo' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1700-409 Granville St.,
+                        Vancouver, BC,
+                        V6C 1T2, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2015 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>Saving Keystrokes with Macro-Like Snippets | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="Saving Keystrokes with Macro-Like Snippets | Komodo IDE" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body>
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+
+        <!-- Main Container -->
+        <div id="container" class="container-blog-entry">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="document-blog-entry
+                         sidebar
+                         drupal-import
+                         blog blog_2012-12 blog_2012-12_saving-keystrokes-macro-snippets blog_2012-12_saving-keystrokes-macro-snippets_index">
+    <section role="main">
+        <article class="normalize">
+            <h1>Saving Keystrokes with Macro-Like Snippets</h1>
+            <div class="clearfix"></div>
+            <div class="content">
+                <div>
+        
+          <img style="width: auto" src="/assets/images/blog/2012-12/komodo-orb-128.png" class="as_feature_img as_left"><p>Snippets and macros have been a part of Komodo since the beginning. <a target='_new"' href="http://docs.activestate.com/komodo/8.0/snippets.html">Snippets</a> are for inserting frequently-used pieces of boilerplate text into documents. They have some pre-canned functionality in their shortcuts, but can't be extended. <a target="_new" href="http://docs.activestate.com/komodo/8.0/macros.html">Macros</a> are for running arbitrary code, in JavaScript or Python, but it's much harder to just insert text into a document than with a snippet.</p>
+  
+  <h2>Adding Smarts to Snippets</h2>
+  
+  <p>My personal issue with snippets harkens back to <a href="http://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two">the 7&#177;2 problem</a>: the more snippets I need to learn to speed up a set of tasks, the more likely I am to fall back on my reasonable typing skills. Where I really want a boost is for tedious, repetitive operations. That word, "repetitive", implies being able to add a dynamic component to snippets. But the old snippets didn't support that, so I usually ignored them. I wasn't going to create one snippet to insert two <code>li</code> tags, another to insert three of them. I can do without frivolously overloading my cognitive abilities that way. What I really wanted was to make snippets more "macro-like", expecting there wouldn't be too much <a target="_new" href="http://snltranscripts.jt.org/75/75ishimmer.phtml">floor-wax-dessert-topping confusion</a>.</p>
+  
+  <div style="float: right; padding-left: 20px;"><img src="/assets/images/blog/2012-12/haveit.png"></div>
+  
+  <p>Additionally, many people have requested alternative ways to invoke <a target="_new" href="http://docs.activestate.com/komodo/8.0/abbreviations.html">abbreviations</a> besides the Ctrl-T (Cmd-T on OSX) key-sequence built into Komodo. In particular, people have requested that a simple tab key expand abbreviations. While addressing this problem, we decided it was time to add some features we and our customers have been talking about for a long time. This post is about what we did. All the features described here are available in Komodo 8, so you can <a href="http://downloads.activestate.com/Komodo/releases/">download it</a> and try them out right now.</p>
+  
+  <h2>Auto-Abbreviations</h2>
+  
+  <p>The first step was to free up abbreviations from the tyranny of the <code>cmd_expandAbbrev</code> keybinding, namely the above-mentioned Ctrl-T. Now, by default, when you type the name of an active abbreviation snippet, followed by a valid trigger character, the text will be replaced with the snippet contents.</p>
+  
+  <h3>The Two-Minute Abbreviation Refresher Course</h3>
+  
+  <p>If you haven't used abbreviations before, here's how they work. When you're editing a document in some language, say Python, any snippets that are associated with Python abbreviations are candidates. There are three ways a snippet can be a candidate. In all three ways, the snippet must live somewhere inside a toolbox folder named "Abbreviations" (and there can be more than one such folder in the toolbox).  Here are the specifics for the three ways:</p>
+  
+  <ol>
+  <li>The snippet is inside a folder named "Python", which is itself below a folder named "Abbreviations".</li>
+  <li>The snippet is next to a folder named "Python". This is to accommodate similar languages, such as Python and Python3, or JavaScript and Node.js.</li>
+  <li>The snippet is found somewhere inside a folder named "*", which sits next to a folder named "Python". This is a continuation of the previous step, but allows you to create a richer hierarchy of common snippets. Many of the sample snippets that ship with Komodo have now been moved into a folder called "keywords", and for "Python-common", we put that under a "*" folder. This scheme assumes that no one is going to one day create a language called "*". As long as programmers use the Unix command-line to run programs, it won't. So this scheme should be good for basically forever. And as long as we're mentioning the command-line, the folder corresponding to the toolbox folder "*" is actually called "_".</li>
+  </ol>
+  <p>When an abbreviation is triggered, it is replaced with the contents of the snippet it names.</p>
+  
+  <p>Did I mention that abbreviations can only contain name-characters (ASCII letters, digits, and a smattering of characters like "-", "_", "=", and ".")? You can use any characters in a snippet name, but then those snippets can only be inserted by double-clicking or dragging them.</p>
+  
+  <h3>Triggering Abbreviations</h3>
+  
+  <p>When the global Auto-Abbreviation preference is on (now the default), and you press one of the trigger characters after an abbreviation name, Komodo will replace the text with the snippet contents. You can set which keys trigger an abbreviation under <code>Preferences|Editor|Smart Editing|Auto-Abbreviations</code>. We expect the two most commonly used characters are Space and Tab (which is represented by the standard <code>\t</code>, as there is no good way to represent a tab in a Mozilla textbox), but just for fun we added many other punctuation characters. Note that both the abbreviation and the trigger will be replaced by the snippet. You can use <code>\r</code> to specify that pressing <code>Return</code> triggers abbreviation. You can also use the standard <code>\xHH</code> and <code>\uHHHH</code> forms to indicate byte and Unicode values respectively (where the "H" refers to any hexadecimal character).</p>
+  
+  <p>By default, each created snippet is not an auto-abbreviation. To make it one, simply check the "Auto-Abbreviation" checkbox in the snippet properties. Note that the samples shipped with Komodo have this property turned on. And while we're on the subject, this would be a good time to delete any old sample folders in the toolbox, and keep only the version 8 ones. If you have two snippets with the same name in two different folders, Komodo might choose the newer one when it's trying to match an Auto-Abbreviation, but choose the older one when you press Ctrl-T (the old way). The newer versions are more useful, but won't be selected if older ones are present.</p>
+  
+  <h3>Preventing Auto-Abbreviations</h3>
+  
+  <p>Except for HTML, Komodo won't bother matching abbreviations in comments or strings (in HTML, they also trigger in default mode). But there might be times where you need to type an abbreviation name, and not have it expand. It's cumbersome to temporarily turn off the auto-abbreviation property; this feature is supposed to save work, not create more. A quicker way is to simply press Shift+Space. Also, auto-abbreviation expansion only happens when the cursor is at the end of the line. So if you really need to type something like "def:" in a Ruby file outside string/comment context, you could type <code>def[shift+space][back-arrow]:[delete]</code> (please let me know the use-case for that).</p>
+  
+  <h2>EJS: Making Snippets Smarter</h2>
+  
+  <h3>Adding JavaScript Code to Snippets</h3>
+  
+  <p>No doubt there are plenty of web pages that are still generated from CGI Perl scripts containing long runs of <code>print</code> statements with embedded angle-brackets, but not many new sites are built that way now. Most people use a template language to reverse the files, where the document to output contains a bit of markup that lets the programming language decide what to insert at runtime. Komodo supports many of these out of the box, like RHTML, Template Toolkit, PHP, Smarty, Django, Mason, Mojolicious. We recently added support for EJS (Embedded JavaScript), a simple language that lets you embed (normally) server-side JavaScript into your documents.</p>
+  
+  <p>Well, Komodo has a powerful built-in JavaScript engine. We asked ourselves if it would be a good idea if we ran snippets through an EJS preprocessor before inserting them into the document. After spending a couple of hours hooking EJS up to the snippet processor and looking at the results, we realized there was no going back. Templates rock for snippets as well.</p>
+  
+  <h3>EJS in a Nutshell</h3>
+  
+  <p>In an EJS file, everything between <code>&lt;%</code> and <code>%&gt;</code> is JavaScript <strong>control</strong> code. This is where your <code>if</code> statements go. You can define functions inside <code>&lt;%</code> and <code>%&gt;</code> tags. You can even use <code>while</code> and <code>for</code> loops in them, and a later section here describes a good use for them.</p>
+  
+  <p>Everything between <code>&lt;%=</code> and <code>%&gt;</code> is run through the JavaScript evaluator, and its results are written to the snippet's replacement text. I call this <strong>emitted</strong> JavaScript.</p>
+  
+  <p>Everything else is treated like current snippet contents.</p>
+  
+  <h3>A Sample: Flipping Coins in Snippets</h3>
+  
+  <p>This code sometimes prints the current month, and other times prints the current date:</p>
+  
+  <p class="syntax">
+  <span class="linenumbers">&#160;&#160;&#160;1&#160;&#160;&#160;&#160;</span><span class="operators">&lt;%</span><span class="default">&#160;</span><span class="keywords">var</span><span class="default">&#160;</span><span class="identifiers">m</span><span class="default">&#160;</span><span class="operators">=</span><span class="default">&#160;</span><span class="keywords">new</span><span class="default">&#160;</span><span class="identifiers">Date</span><span class="operators">();</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;2&#160;&#160;&#160;&#160;</span><span class="keywords">var</span><span class="default">&#160;</span><span class="identifiers">isHeads</span><span class="default">&#160;</span><span class="operators">=</span><span class="default">&#160;</span><span class="identifiers">Math</span><span class="operators">.</span><span class="identifiers">random</span><span class="operators">()</span><span class="default">&#160;</span><span class="operators">&lt;</span><span class="default">&#160;</span><span class="numbers">0.5</span><span class="operators">;</span><span class="default">&#160;</span><span class="comments">/*&#160;Treat&#160;under&#160;as&#160;"Heads"&#160;*/</span><span class="default">&#160;</span><span class="operators">%&gt;</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;3&#160;&#160;&#160;&#160;</span><span class="default">Current&#160;date&#160;part:&#160;</span><span class="operators">&lt;%</span><span class="default">&#160;</span><span class="keywords">if</span><span class="default">&#160;</span><span class="operators">(</span><span class="identifiers">isHeads</span><span class="operators">)</span><span class="default">&#160;</span><span class="operators">{</span><span class="default">&#160;</span><span class="operators">%&gt;</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;4&#160;&#160;&#160;&#160;</span><span class="default">Month:&#160;</span><span class="operators">&lt;%=</span><span class="default">&#160;</span><span class="identifiers">m</span><span class="operators">.</span><span class="identifiers">getMonth</span><span class="operators">()</span><span class="default">&#160;</span><span class="operators">%&gt;</span><span class="default">&#160;</span><span class="operators">&lt;%</span><span class="default">&#160;</span><span class="operators">}</span><span class="default">&#160;</span><span class="keywords">else</span><span class="default">&#160;</span><span class="operators">{</span><span class="default">&#160;</span><span class="operators">%&gt;</span><span class="default">&#160;Date:&#160;</span><span class="operators">&lt;%=</span><span class="default">&#160;</span><span class="identifiers">m</span><span class="operators">.</span><span class="identifiers">getDate</span><span class="operators">()</span><span class="default">&#160;</span><span class="operators">%&gt;</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;5&#160;&#160;&#160;&#160;</span><span class="operators">&lt;%</span><span class="default">&#160;</span><span class="operators">}</span><span class="default">&#160;</span><span class="operators">%&gt;</span>
+  </p>
+  
+  
+  
+  <p>If you have even a passing familiarity with JavaScript, the above snippet should be straightforward. If you associate it with an abbreviation called, say, <code>rdate</code>, and repeatedly expand it and undo it, you should see the month half the time, the date the other half.</p>
+  
+  <p>The snippet also illustrates the main gotcha of taking this template-approach to text-creation. When you're generating HTML, you normally aren't concerned too much about the creation of spaces and newlines. But when you're inserting text into your documents, everyone cares about every single space. If you're questioning that, search the Komodo bug database for bugs against the editor, with keywords like "indent", "tab", and "space". Here are the whitespace rules for snippets.</p>
+  
+  <p>First, if an EJS close-tag is followed by a newline, that newline is always thrown away <em>before the EJS is evaluated.</em> This is why that comment in line <strong>2</strong> above uses the older <code>/*...*/</code> and not <code>//...</code>. If we used the <code>//...</code> comment, and tried to expand the abbreviation, nothing would happen, and Komodo would put a "Snippet Insertion Deliberately Suppressed" message in the status bar. This is because of the way Komodo removes newlines before evaluation. So while some JavaScript pundits deprecate the old-style form of comments, they're safer in snippets.</p>
+  
+  <p>Beyond this, whitespace is added during snippet insertion as it was in earlier versions. Each leading tab in a snippet line is replaced by one <code>indentWidth</code>'s worth of spaces. And then if tabs are on, each <code>tabWidth</code>'s worth of leading spaces is converted back to a tab. Even if you never use tabs in your final documents, you always want to use leading tabs in your snippets, not spaces.</p>
+  
+  <p>I'm finding that the lines in some of the sample snippets were getting very long. But keep in mind that inside <em>control</em> EJS tags, newlines are ignored. So there's nothing wrong with putting <code>%&gt;</code> tags at the start of the subsequent line.</p>
+  
+  <h2>Case Study: Handling Ruby Keywords</h2>
+  
+  <h3>Giving You More Control</h3>
+  
+  <div style="float: left; padding-right: 20px;"><img src="/assets/images/blog/2012-12/ruby.png"></div>
+  
+  <p>Ruby was the first keyword-based language Komodo supported. All the other core languages used either braces, indentation, or angle brackets to denote structure.  Making Ruby a first-class member of the Komodo family meant carrying over features like auto-indent and auto-dedent to a keyword-based language. We added a special-case language service to handle indentation and "end" insertion for Ruby. If you've coded with Ruby in Komodo, you've seen this when you typed a keyword like "class" or "if" or "def", and Komodo quietly inserted an "end" one line below at the same level of indentation. It was cool, and useful, and it bugged most of the Komodo team members that nothing else in Komodo behaved like this. We're all about coding to the universal, and handling special-cases via data-driven tables, not code. It seemed wrong to dedicate all that code just to make writing Ruby code easier.</p>
+  
+  <p>Earlier in 2012 I was taking one of those online university courses, which used Matlab, another keyword-structure language with "end" statements.  During an ActiveState hackathon I added a language service for keyword-based languages (including the various Basics, Pascal, Lua, and Ruby). Unlike those other keyword-based languages, in Ruby some keywords like <code>if</code> start a block in most situations</p>
+  
+  <p class="syntax">
+  <span class="linenumbers">&#160;&#160;&#160;1&#160;&#160;&#160;&#160;</span><span class="keywords">if</span><span class="default">&#160;</span><span class="identifiers">starts_at_line</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;2&#160;&#160;&#160;&#160;</span><span class="default">&#160;&#160;</span><span class="identifiers">puts</span><span class="default">&#160;</span><span class="strings">"a&#160;regular&#160;block"</span>
+  <br><span class="linenumbers">&#160;&#160;&#160;3&#160;&#160;&#160;&#160;</span><span class="keywords">end</span></p>
+  
+  
+  <p>But they qualify a statement when occurring in other positions, like here:</p>
+  
+  <p class="syntax">
+  <span class="linenumbers">&#160;&#160;&#160;1&#160;&#160;&#160;&#160;</span><span class="identifiers">puts</span><span class="default">&#160;</span><span class="strings">"qualifier&#160;if&#160;'if'&#160;guards&#160;this&#160;action"</span><span class="default">&#160;</span><span class="keywords">if</span><span class="default">&#160;</span><span class="identifiers">near_end_of_line</span></p>
+</div>
+
+            </div>
+            
+            <hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+        var disqus_shortname = 'komodoide';
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </article>
+    </section>
+    <aside class="sidebar-blog normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <a href="/resources/submit-instructions/#pane-blogs" class="button big submit-content">
+    Submit Content
+</a>
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button " href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+<div class="info">
+    <h1>Blog Info</h1>
+
+        <img src="//images.contentful.com/bj1g69m2935w/NG8IorgmqIyOaK6USkAOG/2cdb490e97ea0b4ae3fecb8817c74dbf/EricPromislow.jpg" alt="Eric Promislow">
+
+    <p>
+        <strong>By:</strong>
+        <a href="/authors#EricPromislow">Eric Promislow</a>
+    </p>
+
+    <p>
+        <strong>Tags: </strong>
+            <a href="/blog/tagged/abbreviations">abbreviations</a>
+            <a href="/blog/tagged/editing">editing</a>
+            <a href="/blog/tagged/macro">macro</a>
+    </p>
+    <p><strong>Date Posted: </strong>Dec 18, 2012</p>
+</div>
+<div class="clearfix"></div>
+<div class="blogs">
+    <h1>Recent Blogs</h1>
+    <ul>
+        <li>
+            <a href="/blog/komodo-ide-user-story-defman">Komodo IDE User Story: Defman</a>
+        </li>
+        <li>
+            <a href="/blog/team-editing-komodo-collaboration-tool">Team Editing: Komodo Collaboration Tool</a>
+        </li>
+        <li>
+            <a href="/blog/first-komodo-9-3-nightly-available">First Komodo 9.3 Nightly Available</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-ron-stewart">Komodo IDE User Story: Q&A with Ron Stewart</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason">Komodo IDE User Story: Q&A with Gregg Thomason</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer">Komodo IDE User Story: Q&A with Rebecca Billings, Sr. QA Engineer</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-9-2-1-released">Komodo 9.2.1 Released</a>
+        </li>
+        <li>
+            <a href="/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages">"No Brainer" Licensing for Komodo (and our other Tools and Languages)</a>
+        </li>
+        <li>
+            <a href="/blog/extend-your-editor-using-komodo-packages-in-9-2">Extend Your Editor Using Komodo Packages in 9.2</a>
+        </li>
+        <li>
+            <a href="/blog/tabula-rasa-a-clean-slate-for-komodo">Tabula Rasa: a Clean Slate for Komodo</a>
+        </li>
+    </ul>
+</div>
+
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    <a href="/screencasts/collaboration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/537777738_640.jpg')"></figure>
+        <span>Collaboration - Team Editing</span>
+    </a>
+    <a href="/screencasts/komodo-packages/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/531680682_640.jpg')"></figure>
+        <span>Komodo Packages</span>
+    </a>
+    <a href="/screencasts/komodo-9-2-whats-new/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/529308211_640.jpg')"></figure>
+        <span>Komodo 9.2 - What's New?</span>
+    </a>
+    <a href="/screencasts/commando-shell-scope/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/523290537_640.jpg')"></figure>
+        <span>Commando Shell Scope</span>
+    </a>
+    <a href="/screencasts/custom-workspaces/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521616726_640.jpg')"></figure>
+        <span>Custom Workspaces</span>
+    </a>
+    <a href="/screencasts/package-manager-integration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521575176_640.jpg')"></figure>
+        <span>Package Manager Integration</span>
+    </a>
+</div>
+
+        </div>
+    </aside>
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f64104503ca631" async="async"></script>
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://bugs.activestate.com/enter_bug.cgi?product=Komodo' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1700-409 Granville St.,
+                        Vancouver, BC,
+                        V6C 1T2, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2015 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>

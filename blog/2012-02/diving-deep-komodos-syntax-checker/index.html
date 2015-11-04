@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>Diving Deep Into Komodo's Syntax Checker | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="Diving Deep Into Komodo's Syntax Checker" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body>
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+
+        <!-- Main Container -->
+        <div id="container" class="container-blog-entry">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="document-blog-entry
+                         sidebar
+                         drupal-import
+                         blog blog_2012-02 blog_2012-02_diving-deep-komodos-syntax-checker blog_2012-02_diving-deep-komodos-syntax-checker_index">
+    <section role="main">
+        <article class="normalize">
+            <h1>Diving Deep Into Komodo's Syntax Checker</h1>
+            <div class="clearfix"></div>
+            <div class="content">
+                <pre><code class="prettyprint">        &lt;style type=&quot;text/css&quot;&gt;
+  h2, h3, h4 { clear: both }
+  dl { clear: both; } dt { float: left; clear: left; width: 100px; text-align: right; font-weight: bold; }
+  dt:after { content: &quot;:&quot;; } dd { margin: 0 0 0 110px; padding: 0 0 0.5em 0; }
+&lt;/style&gt;
+</code></pre>
+
+<p><p>The <a href="http://activestate.com/blog/2012/02/syntax-checking-revisited-komodo-7">previous post on Komodo&#39;s new syntax checker</a> showed how it works out of the box. This post shows how to take more control of the system and add your own syntax checkers. There are a few bits of code in this piece, and if you aren&#39;t familiar with the Komodo/Mozilla extension system, you might want to first have a look at an introduction. As of this writing, <a href="https://developer.mozilla.org/en/Building_an_Extension">https://developer.mozilla.org/en/Building<em>an</em>Extension</a> contains a good overview.</p></p>
+
+<p><p>When we first shipped the UDL syntax-description language for Komodo, I wrote a blog post showing how to use it to add Haml support for Komodo. The blog post has been lost to the sands of time and typepad, but Haml support still hasn&#39;t made it to core Komodo, so it&#39;s a good choice to show how to add a syntax checker to it. If you aren&#39;t familiar with Haml, it&#39;s a bracket-free preprocessor for HTML most often used in Rails apps. You can read more at <a href="haml-lang.com">haml-lang.com</a>.</p></p>
+
+<p><p>You can find a description and the code for the highlighter at <a href="http://community.activestate.com/forum-topic/haml-syntax-highlighter-v">http://community.activestate.com/forum-topic/haml-syntax-highlighter-v</a>. Later on in this post I&#39;ll show you how to get the UDL code for the highlighter, so you don&#39;t have to type it in again.</p></p>
+
+<p><h2>Building an Instant Extension</h2></p>
+
+<p><p>It&#39;s almost all code and keystrokes from here on in, so fire up <a target="_new" title="Download Komodo IDE 7" href="http://activestate.com/komodo-ide/downloads">Komodo 7.0</a>, and start clicking away.</p></p>
+
+<p><p>Komodo has had project templates for quickly building Komodo and Mozilla extensions for a long time, but they&#39;ve changed slightly with version 7. To create a new extension, create a project via the menu item [Project | New From Template | Create Komodo Extension Project]. Create a new directory to house this project, and call the project file haml.komodoproject.</p></p>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image1_newKoExt.png">
+       <img title="Project|New From Template|Create Komodo Extension" alt="Project|New From Template|Create Komodo Extension" style="width: auto" src="/assets/images/blog/2012-02/image1-newkoext.png" class="as_feature_img as_left"></a></p>
+
+<p><p style="clear:both">The Komodo Extension configuration box now appears. Fill in the following fields:</p></p>
+
+<p><dl>
+  <dt>Name</dt></p>
+
+<pre><code class="prettyprint">&lt;dd&gt;Haml&lt;/dd&gt;
+
+&lt;dt&gt;Version&lt;/dt&gt;
+
+&lt;dd&gt;Leave it at the 0.1 default.&lt;/dd&gt;
+
+&lt;dt&gt;Description&lt;/dt&gt;
+
+&lt;dd&gt;You can leave this blank.&lt;/dd&gt;
+
+&lt;dt&gt;Author&lt;/dt&gt;
+
+&lt;dd&gt;Put your name here for posterity&lt;/dd&gt;
+
+&lt;dt&gt;Domain&lt;/dt&gt;
+
+&lt;dd&gt;Any domain works here&lt;/dd&gt;
+
+&lt;dt&gt;Home Page&lt;/dt&gt;
+
+&lt;dd&gt;You can leave this blank.&lt;/dd&gt;
+</code></pre>
+
+<p></dl>
+  <a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image2_koExtConfig.png">
+       <img title="Sample Komodo Extension configuration box" alt="Sample Komodo Extension configuration box" style="width: auto" src="/assets/images/blog/2012-02/image2-koextconfig.png" class="as_feature_img as_left"></a></p>
+
+<p><p style="clear:both">If you bring up the Toolbox (menu [Views | Tabs &amp; Sidebars | Toolbox]) you&#39;ll notice that the new project has its own toolbox icon, which should contain two items: Build and Reconfigure. The Reconfigure item will let you revisit the configuration box. We&#39;ll be using that Build icon later to build the new extension. When you close the haml project this toolbox will be closed as well. Conversely, if you find these tools aren&#39;t available after a restart, it probably means you need to reopen the haml project.</p></p>
+
+<p><h3>Checking the Generated Code</h3></p>
+
+<p><p>Make sure the Places tab is visible in Komodo (if not, you can reveal it via menu [View| Tabs &amp; Sidebars | Places]). Double-click on the install.rdf file for a quick sanity check. Don&#39;t worry if this is the first time you&#39;ve seen an RDF Mozilla extension file. The main field to look at is the &quot;em:name&quot; field -- this is the name that will show up in the Komodo Addons list. If you want to change anything here, you can either edit the install.rdf file, or double-click the Reconfigure icon to reload the configuration window from the current state of the install.rdf file.</p></p>
+
+<p><p>You can also delete the chrome.p.manifest file -- it&#39;s useful for doing advanced development with pointer files, where you can update an extension without having to reinstall it. The chrome.manifest file doesn&#39;t need any updating.</p></p>
+
+<p><h3>Adding the Colorizer</h3></p>
+
+<p><p>Download <a href="http://community.activestate.com/files/haml_bundle.zip">haml<em>bundle.zip</a>, unzip haml</em>bundle.zip, delete it as well as haml_language-0.1.0-ko.xpi, and unzip and then delete the haml.zip file. It should produce a udl directory containing four .udl files -- move this udl directory to the same level as the &quot;content&quot; folder in the haml directory.</p></p>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image3_overview.png">
+       <img title="Overview with files" alt="Overview with files" style="width: auto" src="/assets/images/blog/2012-02/image3-overview.png" class="as_feature_img as_left"></a></p>
+
+<p><p style="clear:both">The UDL files describe the colorizer, but we also need to tell Komodo a bit about the Haml language. Create a folder next to the &quot;content&quot; folder called &quot;components&quot;, and create a Python XPCOM file by right-clicking on the folder, choosing &quot;New File From Template...&quot;. In that dialog choose &quot;Mozilla Development&quot; on the left side, &quot;XPCOM Component (Python)&quot; on the right side, and giving the file a name like &quot;koHamlLanguage.py&quot;. The directory field should already be pointing at the components folder.</p></p>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image4_newComponent.png">
+       <img title="Creating a new component file" alt="Creating a new component file" style="width: auto" src="/assets/images/blog/2012-02/image4-newcomponent.png" class="as_feature_img as_left"></a></p>
+
+<p><p style="clear:both">The file will come up with some highlighted tabstops. In this case, the only line we want to keep is the one that assigns the generated UUID to the <em>reg</em>clsid_ variable. Everything else should be replaced with this code:</p></p>
+
+<pre><code class="prettyprint lang-python">from xpcom import components
+from koXMLLanguageBase import koHTMLLanguageBase
+
+class koHamlLanguage(koHTMLLanguageBase):
+    name = &quot;Haml&quot;
+    lexresLangName = name
+    _reg_desc_ = &quot;%s Language&quot; % name
+    _reg_clsid_ = &quot;{[[UUID]]}&quot;
+    _reg_contractid_ = &quot;@activestate.com/koLanguage?language=%s;1&quot; % name
+    _reg_categories_ = [(&quot;komodo-language&quot;, name)]
+
+    defaultExtension = &#39;.haml&#39;
+    primary = 1
+    supportsSmartIndent = &quot;text&quot;
+    searchURL = &quot;http://haml-lang.com/docs.html&quot;
+
+    lang_from_udl_family = {&#39;CSL&#39;: &#39;JavaScript&#39;, &#39;TPL&#39;: &#39;Haml&#39;, &#39;M&#39;: &#39;HTML&#39;,
+                            &#39;CSS&#39;: &#39;CSS&#39;, &#39;SSL&#39;: &quot;Ruby&quot;}
+
+    sample = &quot;&quot;&quot;
+#content
+  .left.column
+    %h2 Welcome to our site!
+    %p= print_information
+  .right.column
+    = render :partial =&amp;gt; &quot;sidebar&quot;
+    &quot;&quot;&quot;
+</code></pre>
+
+<p><p>The easiest way to replace the &quot;[[UUID]]&quot; with an actual UUID is by selecting it, running the Run Command &quot;uuidgen&quot; with &quot;Insert Output&quot; checked, and then deleting the inserted newline. If you&#39;re on Windows and don&#39;t have a command that can generate UUIDs, you could always create another Python XPCOM component, and copy and paste its UUID here.</p></p>
+
+<p><h3>Ready to Roll, Step 1</h3></p>
+
+<p><p>At this point, you&#39;re a couple of steps from having Haml colorizing in your Komodo installation:</p></p>
+
+<p><ol>
+  <li>Build the extension by double-clicking the &quot;Build&quot; icon in the haml folder in the Toolbox.</li></p>
+
+<pre><code class="prettyprint">&lt;li&gt; Assuming there are no errors, there should be a new file in the Places folder with a name like &quot;haml-0.1-ko.xpi&quot;. Double-clicking on this should bring up the Add-ons Manager window, with a green notice that the extension was successfully installed. Press the &quot;Restart now&quot; button, which will install the extension and, as the button implies, restart Komodo.
+</code></pre>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image5_new_ext.png">
+       <img title="New Extension Dialog" alt="New Extension Dialog" style="width: auto" src="/assets/images/blog/2012-02/image5-new-ext.png" class="as_feature_img as_left"></a>
+    </li></p>
+
+<pre><code class="prettyprint">&lt;li style=&quot;clear:both&quot;&gt;If you run into any problems here, please add a comment below.&lt;/li&gt;
+</code></pre>
+
+<p></ol>
+  <p>After Komodo restarts, create a new file called &quot;test.haml&quot;. The language field in the status bar should say &quot;Haml&quot;. If not, you&#39;ll need to go directly to the comment field and enter a bug. If you&#39;re still here, paste in this Haml code:</p></p>
+
+<pre><code class="prettyprint lang-haml">  !!!
+  %html
+    %head
+      %title My New Blog
+    %body
+      %div#anotherFoo
+        %p
+          first para
+        %p   { :xmlns =&amp;gt; &#39;myNamespace&#39; }
+          stuff
+        %p second para
+        %ul
+          %li item1
+          %li item2
+</code></pre>
+
+<p><p>You should see something similar to the image in the screenshot, with at least the leading &quot;%&quot; and &quot;#&#39; characters showing up in one color, and element names showing up in another.</p></p>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image6_haml_coloring.png">
+       <img title="Sample Coloring" alt="Sample Coloring" style="width: auto" src="/assets/images/blog/2012-02/image6-haml-coloring.png" class="as_feature_img as_left"></a></p>
+
+<p><h2>Adding the Syntax Checker</h2></p>
+
+<p><p>Only one more file is all we need to add Haml syntax checking to this extension.</p></p>
+
+<p><p>First, change the version field in install.rdf from &quot;0.1&quot; to &quot;0.2&quot;. I prefer to increment the version field every time I make a non-trivial change, although it isn&#39;t totally necessary.</p></p>
+
+<p><p>Second, create another Python XPCOM file in the folder components called &quot;koHamlLinter.py&quot;, with these contents:</p></p>
+
+<pre><code class="prettyprint lang-python">&quot;&quot;&quot;koHamlLinter - syntax-check Haml code with haml --check &quot;&quot;&quot;
+
+  import os, sys
+  import re, which
+  import tempfile
+  import process
+  import koprocessutils
+  from xpcom import components, nsError, ServerException
+  import logging
+  from pprint import pprint# , pformat
+
+  import koLintResult
+  from koLintResult import KoLintResult, getProxiedEffectivePrefs
+  from koLintResults import koLintResults
+  import koprocessutils
+
+  import projectUtils
+
+  # Log messages can be read in real time via
+  # Help | Troubleshooting | View Log File
+  log = logging.getLogger(&#39;koHamlLinter&#39;)
+  log.setLevel(logging.DEBUG)
+
+  class koHamlLinter:
+      _com_interfaces_ = [components.interfaces.koILinter]
+      # !!!! Remember to create a unique UUID !!!!
+      _reg_clsid_ = &quot;{d66e34de-2235-481a-ac56-2e9c722b3c65}&quot;
+      _reg_contractid_ = &quot;@activestate.com/koLinter?language=Haml;1&quot;
+      _reg_categories_ = [
+           (&quot;category-komodo-linter&quot;, &#39;Haml&#39;),
+      ]
+      _reg_desc_ = &quot;Haml Linter&quot;
+
+      def lint(self, request):
+          text = request.content.encode(request.encoding.python_encoding_name)
+          return self.lint_with_text(request, text)
+
+      def lint_with_text(self, request, text):
+          # This linter should really pull out Ruby and CSS parts for separate checking.
+          # Haml only is a start.
+          if not text:
+              return None
+          env = koprocessutils.getUserEnv()
+          path = env[&quot;PATH&quot;].split(os.pathsep)
+          try:
+              hamlPath = which.which(&quot;haml&quot;, path=path)
+              if os.path.exists(hamlPath + &quot;.bat&quot;):
+                  hamlPath = hamlPath + &quot;.bat&quot;
+          except which.WhichError:
+              # Note: hardwired path for my system.
+              # If you&#39;re on Windows, make sure that the Ruby in the path is the same
+              # version as the one for Haml.
+              hamlPath = r&#39;c:\Ruby192\bin\haml.bat&#39;
+          textlines = text.splitlines()
+          tmpfilename = tempfile.mktemp() + &#39;.haml&#39;
+          fout = open(tmpfilename, &#39;wb&#39;)
+          fout.write(text)
+          fout.close()
+          cmd = [hamlPath, &quot;--check&quot;, tmpfilename]
+          cwd = request.cwd or None
+          # We only need the stdout result.
+          try:
+              p = process.ProcessOpen(cmd, cwd=cwd, env=env, stdin=None)
+              stdout, stderr = p.communicate()
+              #log.debug(&quot;haml run: stdout:%s, stderr:%s&quot;, stdout, stderr)
+              #if stderr:
+              #    log.error(&quot;Failed to run %s: %s&quot;, cmd, stderr)
+              warnLines = stderr.splitlines(0) # Don&#39;t need the newlines.
+              #log.debug(&quot;haml =&amp;gt; %s&quot;, stderr)
+          except:
+              log.exception(&quot;Failed to run %s&quot;, cmd)
+              stderr = &quot;&quot;
+              warnLines = []
+          finally:
+              os.unlink(tmpfilename)
+          ptn = re.compile(r&#39;^Syntax error on line (\d+):(.*)$&#39;)
+          results = koLintResults()
+          for line in warnLines:
+              m = ptn.match(line)
+              if m:
+                  lineNo = int(m.group(1))
+                  desc = &quot;Haml: %s: %s&quot; % (&quot;error&quot;, m.group(2))
+                  severity = koLintResult.SEV_ERROR
+                  koLintResult.createAddResult(results, textlines, severity, lineNo, desc)
+          return results
+</code></pre>
+
+<p><p>There are several items worth pointing out in this file:</p></p>
+
+<p><p>The <em>reg</em>categories_ field at the start of the class tells Komodo this class is a Linter class. The language field in the category list tells Komodo this class is used to lint Haml. You can have more than one class lint files in a particular language, and Komodo will get results from each linter and combine the results into one view.</p></p>
+
+<p><p>You might have noticed that there are two methods, &quot;lint&quot; and &quot;lint<em>with</em>text&quot;. In general, the lint method pulls the text out of the request argument, and invokes lint<em>with</em>text to do all the work. Your class should be configured the same.</p></p>
+
+<p><p>Finally, lint<em>with</em>text finds a Haml interpreter, invokes it with the &quot;--check&quot; argument and the name of a temporary file containing the current contents, pulls out any arguments, parses them, and returns a set of lint results to be displayed in the buffer.</p></p>
+
+<p><p>As long as you know the Haml colorizer is working, you can remove a test menuitem from content/haml_overlay.xul by removing the commandset and menupopup elements, and all their contents.</p></p>
+
+<p><h3>Checking the Checker</h3></p>
+
+<p><p>Run the Build tool again, and this time double-click on hamlextension-0.2-ko.xpi. Komodo should highlight a line that the Haml interpreter isn&#39;t happy about. The Syntax Checking Status box is showing that in Haml you can&#39;t provide content both on the same line as a p element, and nested within it. Delete either the braced content or the inner line, and the squiggly should disappear.</p></p>
+
+<p><a rel="shadowbox[Screenshots]" href="http://activestate.com/sites/default/files/blog_import_images/image7_error_highlighting.png">
+       <img title="sample error highlighting" alt="Sample error highlighting" style="width: auto" src="/assets/images/blog/2012-02/image7-error-highlighting.png" class="as_feature_img as_left"></a></p>
+
+<p><h3>Troubleshooting</h3></p>
+
+<p><p>No squiggles? There are several reasons why:</p></p>
+
+<p><ul>
+  <li>Haml isn&#39;t installed. Run <tt>gem install haml</tt> with the same Ruby that is in Komodo&#39;s path to install it.</li></p>
+
+<pre><code class="prettyprint">&lt;li&gt;There&#39;s a version mismatch between the Ruby you&#39;re running in Komodo and the Haml that is in the path. Adjust the &lt;tt&gt;PATH&lt;/tt&gt; variable in &lt;tt&gt;Preferences | Environment&lt;/tt&gt; to fix this.&lt;/li&gt;
+
+&lt;li&gt;You&#39;re using a new version of Haml that generates messages which the above code doesn&#39;t process. In this case uncomment some of the log statements near the call to &lt;tt&gt;process.ProcessOpen&lt;/tt&gt;, rebuild, restart Komodo, bring up the sample file and then view the log at [Help | Troubleshooting | View Log File].&lt;/li&gt;
+</code></pre>
+
+<p></ul>
+  <h3>Preferences For Free</h3></p>
+
+<p><p>You also get a free simple preference: right-click on the file&#39;s tab, choose Properties and Settings, and then choose the &quot;Syntax Checking&quot; tab. You should see that the Language dropdown is set to &quot;Haml&quot;, and the &quot;Check syntax for Haml&quot; button is checked. If you uncheck that and press &quot;OK&quot;, there should be no squiggles, even if you reintroduce the known problem.</p></p>
+
+<p><p>That actually covers the basics for writing a linter for a new language (or a new linter for an existing language). The rest of this article heads into the deep end.</p></p>
+
+<p><h3>See You Later, Aggregator</h3></p>
+
+<p><p>If you&#39;ve stuck with me this far, you&#39;ve probably noticed (at least) three things that I haven&#39;t explained. First, why bother with the &quot;lint<em>with</em>text&quot; method? Second, you might have noticed that Komodo 7 supports optional alternative linters, such as pylint for Python or jslint for JavaScript. If someone came up with a &quot;hamlLint&quot; for Haml, how could it be incorporated? Third, Haml files are usually used as a substitute for RHTML files (AKA .html.erb files). These files typically contain bits of Ruby code, and could even contain CSS code, in the form of HTML style elements or attributes. What if there are errors in that part of the document? So far they&#39;re going to be ignored.</p></p>
+
+<p><p>Handling multiple linters is more straightforward (and in fact, most of the time you won&#39;t have to do anything). When more than one class registers a &quot;category-komodo-linter&quot; class using the <em>reg</em>categories_ mechanism, Komodo creates an &quot;aggregator linter&quot; class for that language, based on the generic linter aggregator class defined in <a href="https://github.com/Komodo/KomodoEdit/blob/master/src/lint/koHTMLLinter.py">https://github.com/Komodo/KomodoEdit/blob/master/src/lint/koHTMLLinter.py</a> . When Komodo is about to run a syntax-check on a document that&#39;s in a language with multiple aggregators, Komodo will use the generated aggregator class to invoke the separate linters, collect results, remove duplicates, and display all the results.</p></p>
+
+<p><p>You probably won&#39;t need to write your own aggregator. Core Komodo has only one custom aggregator, for HTML; all the others use the built-in generic aggregator.</p></p>
+
+<p><p>And the HTML linter is interesting, because it shows how Komodo now does syntax-checking on multi-language documents. There&#39;s too much code involved to dump here, but you can see how we process HTML files in the Komodo HTML linter file, browsable at <a href="https://github.com/Komodo/KomodoEdit/blob/master/src/lint/koHTMLLinter.py">https://github.com/Komodo/KomodoEdit/blob/master/src/lint/koHTMLLinter.py</a> . In a nutshell, Komodo sends the full HTML file to the usual HTML syntax checker. But it also identifies all the JavaScript sections, and creates a separate file containing the JavaScript code only. Any text in the HTML file that isn&#39;t JavaScript is replaced with a space character, so the line and column numbers of any lines the JavaScript checker complains about are kept in sync with the original document. If you wanted to extend the Haml linter like so, you would use code similar to this:</p></p>
+
+<pre><code class="prettyprint lang-python">  textParts = { &quot;Haml&quot;: text, &quot;Ruby&quot; : rubyText, &quot;CSS&quot;: cssText }
+  for langName, langText in textParts.items():
+    newLintResults = self._linterByName(langName).lint_with_text(langText)
+    # Merge newLintResults into current lint results
+</code></pre>
+
+<p><p>That&#39;s the first reason for the lint<em>with</em>text method: all it does is analyze a blob of text, without caring about the document it originated in.</p></p>
+
+<p><p>Finally, you might be wondering how to add a preference field for your language to the Syntax Checking preference page. Again, much of the time you don&#39;t have to do anything. When Komodo shows a selected language that contains a linter but no specific preferences, it displays a generic checkbox. The name of this pref is &quot;genericLinter:Haml&quot; (or insert your own language in place of &quot;Haml&quot;), and it&#39;s consulted by the code that invokes your linter, so you don&#39;t need to actually check it.</p></p>
+
+<p><p>However, if you&#39;re either adding an additional linter for a particular language, or expect others will be, you&#39;ll want to add your own XUL and JavaScript to manage the linter&#39;s prefs. In general this will involve adding a XUL file that adds a vbox to the deck with id &quot;docSyntaxCheckByLang&quot;, JavaScript code that implements an interface containing a couple of methods, and adding a line to the chrome.manifest file that maps the new preference XUL to <tt>chrome://komodo/content/pref/pref-syntax-checking.xul</tt>.</p></p>
+
+            </div>
+            
+            <hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+        var disqus_shortname = 'komodoide';
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </article>
+    </section>
+    <aside class="sidebar-blog normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <a href="/resources/submit-instructions/#pane-blogs" class="button big submit-content">
+    Submit Content
+</a>
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button " href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+<div class="info">
+    <h1>Blog Info</h1>
+
+        <img src="//images.contentful.com/bj1g69m2935w/NG8IorgmqIyOaK6USkAOG/2cdb490e97ea0b4ae3fecb8817c74dbf/EricPromislow.jpg" alt="Eric Promislow">
+
+    <p>
+        <strong>By:</strong>
+        <a href="/authors#EricPromislow">Eric Promislow</a>
+    </p>
+
+    <p>
+        <strong>Tags: </strong>
+            <a href="/blog/tagged/codeintel">codeintel</a>
+            <a href="/blog/tagged/syntax checking">syntax checking</a>
+    </p>
+    <p><strong>Date Posted: </strong>Feb 22, 2012</p>
+</div>
+<div class="clearfix"></div>
+<div class="blogs">
+    <h1>Recent Blogs</h1>
+    <ul>
+        <li>
+            <a href="/blog/komodo-ide-user-story-defman">Komodo IDE User Story: Defman</a>
+        </li>
+        <li>
+            <a href="/blog/team-editing-komodo-collaboration-tool">Team Editing: Komodo Collaboration Tool</a>
+        </li>
+        <li>
+            <a href="/blog/first-komodo-9-3-nightly-available">First Komodo 9.3 Nightly Available</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-ron-stewart">Komodo IDE User Story: Q&A with Ron Stewart</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason">Komodo IDE User Story: Q&A with Gregg Thomason</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer">Komodo IDE User Story: Q&A with Rebecca Billings, Sr. QA Engineer</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-9-2-1-released">Komodo 9.2.1 Released</a>
+        </li>
+        <li>
+            <a href="/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages">"No Brainer" Licensing for Komodo (and our other Tools and Languages)</a>
+        </li>
+        <li>
+            <a href="/blog/extend-your-editor-using-komodo-packages-in-9-2">Extend Your Editor Using Komodo Packages in 9.2</a>
+        </li>
+        <li>
+            <a href="/blog/tabula-rasa-a-clean-slate-for-komodo">Tabula Rasa: a Clean Slate for Komodo</a>
+        </li>
+    </ul>
+</div>
+
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    <a href="/screencasts/collaboration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/537777738_640.jpg')"></figure>
+        <span>Collaboration - Team Editing</span>
+    </a>
+    <a href="/screencasts/komodo-packages/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/531680682_640.jpg')"></figure>
+        <span>Komodo Packages</span>
+    </a>
+    <a href="/screencasts/komodo-9-2-whats-new/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/529308211_640.jpg')"></figure>
+        <span>Komodo 9.2 - What's New?</span>
+    </a>
+    <a href="/screencasts/commando-shell-scope/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/523290537_640.jpg')"></figure>
+        <span>Commando Shell Scope</span>
+    </a>
+    <a href="/screencasts/custom-workspaces/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521616726_640.jpg')"></figure>
+        <span>Custom Workspaces</span>
+    </a>
+    <a href="/screencasts/package-manager-integration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521575176_640.jpg')"></figure>
+        <span>Package Manager Integration</span>
+    </a>
+</div>
+
+        </div>
+    </aside>
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f64104503ca631" async="async"></script>
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://bugs.activestate.com/enter_bug.cgi?product=Komodo' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1700-409 Granville St.,
+                        Vancouver, BC,
+                        V6C 1T2, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2015 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>Komodo 8 Changelog | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="Komodo 8 Changelog" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body>
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+
+        <!-- Main Container -->
+        <div id="container" class="container-ide-8">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+                <div id="content" class="document-ide-8
+                             sidebar
+                             small-text markdown
+                             
+                             changelog changelog_ide-8 changelog_ide-8_index">
+        <section role="main">
+            <article class="normalize">
+                <h1>Komodo IDE/Edit 8.5 Release Notes</h1>
+
+<p>These Release Notes cover <a href="#whatsnew">what&rsquo;s new</a>, <a href="#details">detailed changes and bug fixes</a> and <a href="#knownissues">known issues</a> for Komodo IDE and Komodo Edit.</p>
+
+<h2><a name="whatsnew">What&rsquo;s New in Komodo IDE/Edit</a></h2>
+
+<h3>8.5</h3>
+
+<ul>
+<li><p><strong>Code Refactoring</strong>: The new Komodo refactoring component
+    has these smart code-transformation capabilities:</p>
+
+<ul>
+<li>  <strong>Rename Variable</strong>: quickly and easily rename
+  variables in the editor. It uses inline markers and multiple cursor
+  selections to easily change the name of a code variable.</li>
+<li>  <strong>Rename Class Member</strong>: similar to rename variable,
+  but works on all instances and across multiple files.</li>
+<li>  <strong>Method Extraction</strong>: move parts of your code into a
+  new function. Any variables used in the selected text are refactored
+  into function arguments and are then passed to the extracted
+  method.
+Note that code refactoring will only work with languages that provide
+code intelligence information (i.e. PHP, Perl, Python, Ruby, JavaScript,
+Node.js).</li>
+</ul></li>
+<li><p><strong>Abyss theme</strong>: A new dark theme for the Komodo user
+    interface has been added. This theme affects the Komodo UI elements
+    outside of the main editor (i.e. different from Komodo color schemes
+    which only affect the main editor colors). You can enable Abyss in the
+    Komodo <em>Appearance</em> preferences.</p></li>
+<li><p><strong>PHP 5.5 Support</strong>: We&rsquo;ve added support for PHP 5.5, with
+    a new Xdebug module (for PHP debugging and Code Profiling), updates for
+    the two new keywords (yield, finally) and updates to code intelligence
+    to provide the latest API data for PHP 5.5.</p></li>
+<li><p><strong>Breadcrumbs</strong>: A file and directory navigation bar has
+    been added to the Komodo statusbar. This bar shows the directory
+    ancestors relative to the current editor file, allowing you to easily
+    find and open related files. You can use mouse and/or keyboard to
+    navigate entries and filter down the list of files displayed.</p></li>
+<li><p><strong>Multiple Selections</strong>: In addition to Komodo&rsquo;s
+    rectangular (column) editing, you can now have multiple caret positions
+    in the editor. Typing or editing commands will be reflected at all caret
+    locations. Use the editor&rsquo;s right-click context menu and click on
+    &rsquo;<em>Select &gt; Multiple Selection - Add</em>&rsquo;. Then you can use
+    Ctrl+Click (Cmd+Click on the Mac) to place additional carets and
+    selections.</p></li>
+<li><p><strong>Button Menu</strong>: Komodo can now be configured to use a
+    collapsed toolbar button menu, instead of a full menu bar (does not
+    apply to Mac OS X). This can be useful when you want to maximize your
+    vertical editing space. A bonus of this feature is that the last used
+    menu items will also be displayed in the top-level of the button menu,
+    making it quick and easy to run the same menu command again.</p></li>
+<li><p><strong>Python Symbols</strong>: Due to popular demand, we&rsquo;ve now added
+    two-character length triggering for Python symbols. For example, when
+    you type &ldquo;im&rdquo; you&rsquo;ll now see completions for &ldquo;import&rdquo; as well as any
+    local variables, functions, classes and builtins that are in scope and
+    have a name starting with &ldquo;im&rdquo;.</p></li>
+<li><p><strong>Code Intelligence Out-Of-Process</strong>: Komodo&rsquo;s code
+    intelligence system (code scanning, calltips, completions, goto
+    definition, refactoring, etc&hellip;) is now handled by an external process.
+    Mostly you won&rsquo;t notice any changes in functionality, but this does boost
+    Komodo&rsquo;s responsiveness whilst editing.</p></li>
+<li><p><strong>Mac Improvements</strong>: Drawing is smoother and Komodo can
+    draw using the integrated graphics card. There were some edge cases on
+    Retina screens where drawing glitches could occur in the editor
+    component, leaving unwanted artefacts - this has now been fixed. Komodo
+    can now work with the integrated graphics card - which can lead to
+    improved battery life on laptops.</p></li>
+<li><p><strong>Performance</strong>: Various performance tweaks were made to
+    Komodo 8.5 to improve the editing performance, as well as improving the
+    search speed, syntax checking times and general responsiveness of
+    Komodo.</p></li>
+<li><p><strong>Other Mentionables</strong></p>
+
+<ul>
+<li>  Side pane scrollbars now fade out when they are not in use</li>
+<li>  Open Files now includes additional sorting and grouping options</li>
+<li>  Font Quality (anti-aliasing) preferences were added (Windows and Mac OS X)</li>
+<li>  Komodo now updated to use the Mozilla 24, Scintilla 3.34 and Python 2.7.5</li>
+</ul></li>
+</ul>
+
+<h2><a name="details">Detailed Changes and Bug Fixes in Komodo IDE/Edit</a></h2>
+
+<p>Changes related to Debugging, Interactive Shells, Source Code
+Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer,
+Stackato and the Sections List only apply to Komodo IDE only.</p>
+
+<h3>8.5.4 Bug Fixes</h3>
+
+<ul>
+<li>   Code Intelligence: CSS: Show pseudo completions after &ldquo;:&rdquo;.</li>
+<li>   Code Intelligence: PHP: Fix memory leak in PHP file scanning. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102643">102643</a>)</li>
+<li>   Code Intelligence: JavaScript: Ensure document completions work inside of HTML. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102993">102993</a>)</li>
+<li>   Debugging: Python 3: Update log-level matching code to work on Python 3.4. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103631">103631</a>)</li>
+<li>   Debugging: Tcl: Update appLaunch.tcl file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101199">101199</a>)</li>
+<li>   Editor: Automatically enable word-wrap when a file has long lines. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=93790">93790</a>)</li>
+<li>   Editor: Django: Highlight &lsquo;elif&rsquo; tag, &#39;elseif&rsquo; in Twig (and improve auto-indent). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101792">101792</a>)</li>
+<li>   Editor: Fix high DPI popup positioning on Windows. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100492">100492</a>)</li>
+<li>   Editor: When changing case in column selection, stay in column selection. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100269">100269</a>)</li>
+<li>   Find: Ensure find markers are not added more than once. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104553">104553</a>)</li>
+<li>   Find: Stop find options from changing when using multi caret commands. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103329">103329</a>)</li>
+<li>   Places: After creating a new file, open it and display it in places. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=94287">94287</a>)</li>
+<li>   Places: Cull deleted items in places history menu. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98684">98684</a>)</li>
+<li>   Preferences: Indentation Settings: Allow per language settings to be saved. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99431">99431</a>)</li>
+<li>   Projects: When opening a new project is aborted, keep the old project on the MRU list. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=94201">94201</a>)</li>
+<li>   SDK: Ensure koext startlang works with &ndash;is-html-based argument (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104551">104551</a>).</li>
+<li>   Source Code Control: Checkout: Remember the checkout textbox url. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99395">99395</a>)</li>
+<li>   Source Code Control: Git: Ensure git submodules are properly detected in commit dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95701">95701</a>)</li>
+<li>   Syntax Checking: Python: Reinstate passing &ndash;rcfile to pylint, and add tests to verify it works. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101777">101777</a>)</li>
+<li>   Syntax Checking: Python: Tell pylint where to find .pylintrc. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101777">101777</a>)</li>
+<li>   Toolbox: Stop duplication of snippets when dropping snippet text. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103113">103113</a>)</li>
+<li>   UI: Re-enable word-wrap in output panels (command output, debugger output). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98471">98471</a>)</li>
+</ul>
+
+<h3>8.5.3 Bug Fixes</h3>
+
+<ul>
+<li>  Code Intelligence: Fix case where codeintel startup could fail due to race condition. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101543">101543</a>)</li>
+<li>  Code Intelligence: Performance: Avoid rescanning dependent files on modification. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101312">101312</a>)</li>
+<li>  Code Intelligence: PHP: Allow goto definition on foreach variables. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100701">100701</a>)</li>
+<li>  Code Intelligence: Python: Ensure code scanning supports the &ldquo;yield from&rdquo; syntax. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101404">101404</a>)</li>
+<li>  Code Intelligence: Sections List: Ensure HTML/XML section lists are updated after editor modifications. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101442">101442</a>)</li>
+<li>  Code Intelligence: Sections List: Sometimes the list would not show due to a recursion error. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101280">101280</a>)</li>
+<li>  Crash Reports: Re-enable the crash report dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101006">101006</a>)</li>
+<li>  Debugger: Make sure we can debug Python3 programs that contain non-ascii data in strings (and comments). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101268">101268</a>)</li>
+<li>  Debugger: PHP: Update Xdebug to version 2.2.3. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101265">101265</a>)</li>
+<li>  Debugger: Tcl: Include a Tcl debug engine for Win64, and choose it at runtime when the tclsh.exe or wish.exe interpreter is 64-bit. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101199">101199</a>)</li>
+<li>  Debugger: When starting a remote-debugging session, make sure the pref for stopping at the first breakpoint is respected. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100884">100884</a>)</li>
+<li>  Editor: Ensure caret is scrolled into view when opening files and jumping to definitions. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98866">98866</a>)</li>
+<li>  Editor: Make sure cmd_addNextWordToCaretSet (default binding: Ctrl-D) works in presence of high-bit chars in the document. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100931">100931</a>)</li>
+<li>  Editor: Minimap: Don&rsquo;t change the first line in the screen when tabbing/shift-tabbing a block with the minimap visible. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101318">101318</a>)</li>
+<li>  Editor: Minimap: Improve editor scroll handling and scrolling performance when minimap is enabled. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100956">100956</a>)</li>
+<li>  Editor: Performance: Speed up UDL processing for files with very long lines (includes PHP, XML, HTML, Django, etc). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101267">101267</a>)</li>
+<li>  Editor: Prefs: Increase the file size limits that control switching to a plain-text language. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101629">101629</a>)</li>
+<li>  Editor: Prevent repeatedly pressing Ctrl-D (Add next word to multiple selection) from crashing Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100955">100955</a>)</li>
+<li>  History: Make sure history db corruptions do not cause startup failures. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101551">101551</a>)</li>
+<li>  Hyperlinks: Ensure the PHP include handler works over the full include statement. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101505">101505</a>)</li>
+<li>  Languages: Support C++11 keywords. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101299">101299</a>)</li>
+<li>  Linux: Editor: Allow rectangular paste on Linux. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=82591">82591</a>)</li>
+<li>  Mac: Disable the scroll width preference, as it can mess up the editor display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=88586">88586</a>)</li>
+<li>  Mac: Editor: Focus the editor when mouse clicking on the line number margin. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101290">101290</a>)</li>
+<li>  Mac: Editor: Make sure text is pasted into every selection when a multiple-selection/caret session is in effect. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101220">101220</a>)</li>
+<li>  Macros: Make sure macro and snippet contents are always up to date when editing them in the editor. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101263">101263</a>)</li>
+<li>  Macros: Show accurate macro line numbers for syntax errors and runtime errors when executing macros. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95519">95519</a>)</li>
+<li>  Preferences: Make sure project internationalization settings are correctly saved to project prefs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101174">101174</a>)</li>
+<li>  Refactoring: Make sure undo (and other operations that end multi-caret editing sessions) don&rsquo;t corrupt the undo-stack. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100837">100837</a>)</li>
+<li>  Rx Toolkit: Don&rsquo;t throw an exception on startup when the regex field is empty. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100694">100694</a>)</li>
+<li>  Rx Toolkit: Clear errors when switching between different regex languages. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97340">97340</a>)</li>
+<li>  Source Code Control: The Git push dialog no longer gets stuck at the end of a push. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99920">99920</a>)</li>
+<li>  Syntax Checking: Make sure files are linted when they are first opened. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101552">101552</a>)</li>
+<li>  Syntax Checking: PyLint: Support pylint 1.0, which stopped supporting the -i argument. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100028">100028</a>)</li>
+<li>  Syntax Checking: PyLint: Support pylint for Python3 code. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=96733">96733</a>)</li>
+<li>  Syntax Checking: RHTML: Wrap &lt;%= &hellip; %&gt; constructs with &#39;Proc.new {&rsquo; &hellip; &rsquo;}.call;&rsquo; to avoid bugus syntax errors. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100835">100835</a>)</li>
+<li>  UI: Added a Getting Started dialog to Komodo that helps new users get the basics of Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98250">98250</a>)</li>
+<li>  UI: Button text in the toolbar will now properly show when using a hidpi (cupertino) icon set. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100933">100933</a>)</li>
+<li>  UI: Icons: Checkboxes and radio boxes were sometimes not showing in menu&rsquo;s under Abyss.</li>
+<li>  UI: Moved trial message out of statusbar and into notification, so that its not blocking breadcrumbs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100548">100548</a>)</li>
+<li>  Windows: Support high DPI on Windows, for editor right-clicking and context menus. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100492">100492</a>)</li>
+</ul>
+
+<h3>8.5.2 Bug Fixes</h3>
+
+<ul>
+<li>  Code Intelligence: Reduce memory usage by properly clearing requests and working variables. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100994">100994</a>)</li>
+<li>  Editor: When saving, fix the &ldquo;Strip trailing whitespace&rdquo; preference from removing lines. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100967">100967</a>)</li>
+</ul>
+
+<h3>8.5.1 Bug Fixes</h3>
+
+<ul>
+<li>  Code Browser: Fix case where code browser can stop working when editing HTML code.</li>
+<li>  Code Intelligence: JavasSript: Add rudimentary support for ES6 fat arrow functions. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100070">100070</a>)</li>
+<li>  Code Intelligence: Python: Include 2 character keywords in the local symbols completion list. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100471">100471</a>)</li>
+<li>  Code Intelligence: Tcl: Ensure completions get inserted on Tab keypress. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100332">100332</a>)</li>
+<li>  Colour Picker: Added keybinding to launch colour picker without an existing hex colour. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99413">99413</a>)</li>
+<li>  Debugging: Python: Prevent debugger crash when debugging numpy. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100540">100540</a>)</li>
+<li>  Editor: Don&rsquo;t throw an exception on null views when closing all buffers. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100508">100508</a>)</li>
+<li>  Editor: Ensure saveAs works when linting is disabled. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100476">100476</a>)</li>
+<li>  Editor: On close, if an untitled buffer failed to save then leave the buffer open. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100455">100455</a>)</li>
+<li>  Editor: Speed up editor scrolling. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100536">100536</a>)</li>
+<li>  Editor: Stop a breakpoint click from also performing code folding. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100390">100390</a>)</li>
+<li>  File Associations: Associate &ldquo;.inl&rdquo; file extension to the C++ language. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99525">99525</a>)</li>
+<li>  Mac: Allow hyperlinks to work after the editor is scrolled. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100487">100487</a>)</li>
+<li>  Mac: Ensure python is installed correctly for out-of-process codeintel. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98931">98931</a>)</li>
+<li>  Mac: Ensure retina icons are enabled. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100549">100549</a>)</li>
+<li>  Mac: Fix variable highlight coloring after scrolling. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100361">100361</a>)</li>
+<li>  Mac: Stop high CPU usage when idle. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100457">100457</a>)</li>
+<li>  Find: Stop editor background color from leaking into the find bar. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100441">100441</a>)</li>
+<li>  Places: Support copying folders. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100160">100160</a>)</li>
+<li>  Refactoring: Rename Variable: Don&rsquo;t give up when an occurrence of the current variable occurs inside a comment or default text. Accept it, and carry on. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100499">100499</a>)</li>
+<li>  Remote Files: Stop delay when switching between remote file editor tabs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100525">100525</a>)</li>
+<li>  Spellcheck: Make sure the spellchecker correctly replaces with the suggested text. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100612">100612</a>)</li>
+<li>  Startup: If no buffers are loaded, stop history from trying to log the current buffer. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100501">100501</a>)</li>
+<li>  Syntax Checking: JSLint: Get jslint and jshint working again by allowing for the scriptArgs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100530">100530</a>)</li>
+<li>  Unit Testing: Support creating unittests for Python3. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98705">98705</a>)</li>
+</ul>
+
+<h3>8.5.0 Bug Fixes</h3>
+
+<ul>
+<li>  Collaboration: Allow ko.collaboration.shareCurrentTabInNewSession. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95867">95867</a>)</li>
+<li>  Editor: Add a pref to control whether tab skips over soft characters. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95685">95685</a>)</li>
+<li>  Editor: After pressing tab, update the caretX setting. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95409">95409</a>)</li>
+<li>  Editor: Ensure &ldquo;Save as&rdquo; properly maintains the language name. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100142">100142</a>)</li>
+<li>  Editor: Implement select current/next word in multi-caret sessions. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99924">99924</a>)</li>
+<li>  Editor: Mac: Allow scrolling with magic mouse and trackpad. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99862">99862</a>)</li>
+<li>  Editor: Mac: Ensure mouse actions use the correct editor co-ordinates. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100140">100140</a>)</li>
+<li>  Editor: Mac: Fix drawing glitch in the editor. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99863">99863</a>)</li>
+<li>  Editor: Mac: Stop editor glitches when resizing the editor view. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99863">99863</a>)</li>
+<li>  Editor: Mac: Stop white flashes when using a dark background. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100251">100251</a>)</li>
+<li>  Editor: Show matching tag when clicking between &ldquo;&lt;&rdquo; and &ldquo;/&rdquo; in an end-tag. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=96641">96641</a>)</li>
+<li>  Editor: When ESC (or cmd_cancel) is pressed, turn off adjacent soft characters. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100228">100228</a>)</li>
+<li>  Editor: When dragging text, remove the large opaque drag image. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100041">100041</a>)</li>
+<li>  Interpolation Shortcuts: Get %node interpolation working. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98915">98915</a>)</li>
+<li>  Preferences: Persist word wrap setting on a per document basis. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100275">100275</a>)</li>
+<li>  Syntax Checking: At startup verify that klint is ready to fill in the syntax checking status pane. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100198">100198</a>)</li>
+<li>  Syntax Checking: After switching to a language without linting, clear the syntax checking status panel. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97951">97951</a>)</li>
+</ul>
+
+<h3>8.5.0b3 Bug Fixes</h3>
+
+<ul>
+<li>  Bug 100000, Yay!? (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100000#c7">100000</a>)</li>
+<li>  Breadcrumbs: Move into the statusbar so that they don&rsquo;t use up any additional screen real estate.</li>
+<li>  Code Intelligence: Catalogs: Don&rsquo;t force a catalog zone update when setting catalog dirs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99807">99807</a>)</li>
+<li>  Code Intelligence: Improve performing of directory scanning. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100077">100077</a>)</li>
+<li>  Code Intelligence: Python: Ensure calltip for @staticmethod functions is correct. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=86260">86260</a>)</li>
+<li>  Code Intelligence: Python: Offer completions for local symbols (variables, classes, &hellip;). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=59937">59937</a>)</li>
+<li>  Code Intelligence: Python3: Process function annotations. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99671">99671</a>)</li>
+<li>  Code Profiling: Better detection of recursion in the hierarchical view. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=92444">92444</a>)</li>
+<li>  Code Profiling: Load the profile data asynchronously. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=92444">92444</a>)</li>
+<li>  Debugger: Fix regarding high-bit characters in values (and property names). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99588">99588</a>)</li>
+<li>  Debugger: Support remote debugging from Windows to non-Windows machines. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99683">99683</a>)</li>
+<li>  Editor: Abbreviations: Support auto-abbreviations for all text-like languages, not just the HTML-like ones. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99817">99817</a>)</li>
+<li>  Editor: Added &ldquo;fast characters&rdquo;, typing &ldquo;;&rdquo; before a run of soft characters at the end of a line will move over and harden the soft characters. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99812">99812</a>)</li>
+<li>  Editor: Allow tab to hop over soft characters to the right. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95685">95685</a>)</li>
+<li>  Editor: Easy xml tag movement using Html Tag Relocator command. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=96261">96261</a>)</li>
+<li>  Editor: Ensure that pressing tab in a rectangular &ldquo;line&rdquo; selection inserts a tab or correct # of spaces at each line. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99066">99066</a>)</li>
+<li>  Editor: If pressing tab and there&rsquo;s a multi-line selection, favor indenting the selection over moving to the next tabstop. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99067">99067</a>)</li>
+<li>  Editor: Mac: Ensure fonts look the same as previous Komodo versions. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99891">99891</a>)</li>
+<li>  Editor: Mac: Ensure margins are redrawn when scrolling the editor. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99808">99808</a>)</li>
+<li>  Editor: When saving as a different filename, only re-guess the language if the file extension has changed. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99822">99822</a>)</li>
+<li>  File Picker: Disable &ldquo;Unresponsive Script&rdquo; warnings when browsing for files. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=91614">91614</a>)</li>
+<li>  Keybindings: Mac: Allow shifted and unshifted cmd key variations. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=92880">92880</a>)</li>
+<li>  Keybindings: Mac: Change jump to matching brace keybinding to Cmd+Shift+M. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98394">98394</a>)</li>
+<li>  Preferences: Ensure lang-specific settings get saved. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99431">99431</a>)</li>
+<li>  Preferences: Fonts: Add preference for controlling anti aliasing and font smoothing (Windows, Mac). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98036">98036</a>)</li>
+<li>  Preferences: Persist language when changed via the file preferences dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99822">99822</a>)</li>
+<li>  Projects: Fixed the &ldquo;Manage the Most Recent Project Lists&rdquo; dialog so it actually removes selected projects. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99770">99770</a>)</li>
+<li>  Refactoring: Extract Method: Detect parallel assignments to variables. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99788">99788</a>)</li>
+<li>  Refactoring: Extract Method: Implement extraction of top-level code in Python. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99441">99441</a>)</li>
+<li>  UI: Abyss skin now styles all windows, not just the main editor window. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99448">99448</a>)</li>
+<li>  UI: Fixed skin detection issues on Xubuntu. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99825">99825</a>)</li>
+<li>  UI: Statusbar: Fix background drawing glitch when the loading icon is showing. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100039">100039</a>)</li>
+<li>  UI: Statusbar: Remove background glitch when the loading icon is displayed. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100039">100039</a>)</li>
+<li>  Workspace: Restore the workspace by default. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99772">99772</a>)</li>
+</ul>
+
+<h3>8.5.0b2 Bug Fixes</h3>
+
+<ul>
+<li>  Debugger: Tcl: Ensure Linux 64-bit remote debug package contains correct executables. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99608">99608</a>)</li>
+<li>  Debugger: Tcl: Ensure the debugger honors hit-count breakpoints. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98756">98756</a>)</li>
+<li>  Dialogs: Stop popup dialogs from using the whole screen width. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99506">99506</a>)</li>
+<li>  Editor: Auto Abbreviations: Disable HTML style and script abbreviations. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99499">99499</a>)</li>
+<li>  Editor: Auto Abbreviations: Allow auto abbreviation command (Ctrl + T) in Text files. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99605">99605</a>)</li>
+<li>  Editor: When opening a file make sure the cursor is in view.  This broke moving to Komodo 8.0. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98866">98866</a>)</li>
+<li>  File Associations: Ensure &ldquo;.htaccess&rdquo; is recognized as an Apache file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99558">99558</a>)</li>
+<li>  Mac: Retina detection has been improved.</li>
+<li>  Open Files: Files will now show SCC icons.</li>
+<li>  Performance: Various performance tweaks to speed up editing, searching and syntax checking.</li>
+<li>  Refactoring: Add a keybinding for the Rename Variable command. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99440">99440</a>)</li>
+<li>  Syntax Checking: CSS: Add a Mozilla based CSS checker. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=89710">89710</a>)</li>
+<li>  Syntax Checking: Django: Look for settings.py in sibling directories. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99362">99362</a>)</li>
+<li>  Syntax Checking: HTML: All HTML template languages now default to HTML5 doctype. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99062">99062</a>)</li>
+<li>  UI: Skin: The iconset for the Ambiance skin is now properly detected automatically when Ambiance is auto-selected.</li>
+<li>  UI: Menu Button: The main menubar can now be collapsed into a single toolbar button.</li>
+</ul>
+
+<h3>8.5.0b1 Bug Fixes</h3>
+
+<ul>
+<li>  Breadcrumbs: Komodo now comes with Breadcrumbs, allowing you to easily navigate the directory structure of the currently opened file.</li>
+<li>  Codeintel: Track line numbers of function-arguments so go-to-definition doesn&rsquo;t go to line 1 column 1. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99177">99177</a>)</li>
+<li>  Debugger: Node.js: Move to upstream _debugger.js. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98180">98180</a>)</li>
+<li>  Debugger: Python: Ensure breakpoints continue to work after exec() builtin is called. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98951">98951</a>)</li>
+<li>  Debugger: Python: Report types of ints and bools correctly, not as &ldquo;str&rdquo;. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98546">98546</a>)</li>
+<li>  Debugger: Tcl: Ensure the debugger will honor &#39;break when hit-count is a multiple of X&rsquo; breakpoint properties. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98756">98756</a>)</li>
+<li>  Debugger: XSLT: Add Linux x86_64 version of the xslt debugger. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=90774">90774</a>)</li>
+<li>  Editor: Abbreivations: Allow expanding in single-line comments. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98154">98154</a>)</li>
+<li>  Editor: After opening a file, ensure the caret is visible. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98866">98866</a>)</li>
+<li>  Editor: Better handling of column selection undo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99068">99068</a>)</li>
+<li>  Editor: Ruby: Syntax-highlighting had trouble distinguishing code like &ldquo;a&lt;&lt;x&rdquo;. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99260">99260</a>)</li>
+<li>  Editor: Stop invalid scrolling (jumping) back to line 0. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98577">98577</a>)</li>
+<li>  Keybindings: Vi: Preserve the caret position when a search doesn&rsquo;t match anywhere. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99018">99018</a>)</li>
+<li>  Fast Open: Enable shortcuts for upgraded Komodo profiles. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98889">98889</a>)</li>
+<li>  Fast Open: Fixed a memory leak with Fast Open project caching. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99023">99023</a>)</li>
+<li>  Fast Open: Mac: Ensure file icons are not double sized on retina displays. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98798">98798</a>)</li>
+<li>  Formatters: JavaScript: Expose js_beautify formatting options in preferences. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98905">98905</a>)</li>
+<li>  Open Files: Added various sorting and grouping options.</li>
+<li>  Places/Toolbox: Ensure drag/drop works for tree widgets in floating panes. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98472">98472</a>)</li>
+<li>  Projects &amp; Places: You can now double click a folder to expand/collapse it (if &ldquo;double click to make folder root&rdquo; is turned off).</li>
+<li>  Publishing: Enforce configurations to have a name. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=96023">96023</a>)</li>
+<li>  Remote Files: SFTP: Enable zlib compression if supported by the server. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98376">98376</a>)</li>
+<li>  Startup: Mac: Stop system Python modules from interfering with Komodo&rsquo;s internal Python. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98957">98957</a>)</li>
+<li>  Syntax Checking: Ensure &ldquo;clear lint results on change&rdquo; preference works correctly. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97965">97965</a>)</li>
+<li>  Syntax Checking: Don&rsquo;t redraw markers based on an out-of-date error locations; just let the usual editing operations push the markers around. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97965">97965</a>)</li>
+<li>  Toolbox: Add a &ldquo;treat<em>as</em>ejs&rdquo; field to snippets, default false. Komodo will run snippet code through EJS only when this setting is enabled. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98464">98464</a>)</li>
+<li>  User Interface: Don&rsquo;t change the focus when toggling open the bottom pane.</li>
+<li>  User Interface: Toolbar elements in the bottom pane have been reorganized to be consistent and intuitive.</li>
+</ul>
+
+<h2><a name="knownissues">Known Issues</a></h2>
+
+<p>To view the status of outstanding Komodo issues,
+including those that have been fixed in this release, or to
+add comments or additional issues, please visit the
+<a href="http://bugs.activestate.com/query.cgi?product=Komodo">Komodo
+Bug Database</a>.</p>
+
+<h3><a name="install_issues" id="install_issues">Installation &amp; Upgrade</a></h3>
+
+<ul>
+<li>  Windows Vista will prompt you to either &#39;Allow&rsquo; or
+&#39;Deny&rsquo; the installation. Click on &#39;Allow&rsquo; and Komodo will
+install normally.</li>
+<li>  The Komodo installer requires up to 230 MB in your
+TMP directory (as indicated by the value of your &#39;TMP&rsquo;
+environment variable) during installation, even if you
+plan to install Komodo to another drive. If you do not
+have the required space on this drive, manually set the
+&#39;TMP&rsquo; environment variable to another directory with
+sufficient space. Ensure that you have enough space,
+temporarily, for installation. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=7057">7057</a>)</li>
+<li>  If you try to install Komodo on Windows and the MSI
+install fails with error 2355, your MSI file is corrupt.
+Please download Komodo again and re-run the MSI install.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=7405">7405</a>)</li>
+</ul>
+
+<h3><a name="Startup_Issues" id="Startup_Issues">Startup and Shutdown</a></h3>
+
+<ul>
+<li>  Slow performance on NoMachine (remote desktop) has been
+reported - <a href="http://bugs.activestate.com/show_bug.cgi?id=93841">bug 93841</a>.</li>
+<li>  On Windows, <em>Direct Folders</em> application can cause shutdown hangs</li>
+<li><a href="http://bugs.activestate.com/show_bug.cgi?id=101357">bug 101357</a>.</li>
+</ul>
+
+<h3><a name="Editing_Issues" id="Editing_Issues">Editing</a></h3>
+
+<ul>
+<li>  <a href="http://docs.activestate.com/komodo/latest/tabstops.html">Tabstop syntax</a> has changed in
+Komodo 5.0. Abbreviation from the Toolbox|Samples directory of pre-5.0
+versions of Komodo will not work as expected with the current
+implementation. Delete the older versions to use the ones featured in
+the &ldquo;Samples (5.0.0)&rdquo; directory. Alternatively, if you have made
+modifications to these snippets or have implemented your own using
+tabstops linked by name, consult the documentation and revise
+them using numbered linking.</li>
+<li>  By design, Komodo does not attempt Replace in Files operations on
+unknown file types. However, file association preferences can be used
+to associate a user-defined extension with a language category (e.g.
+&ldquo;Text&rdquo;) which then enables replacements for that file type.</li>
+<li>  Linux users may need to install the <acronym title="Smart Common
+Input Method">SCIM</acronym> platform packages for non-ASCII text entry.
+See &ldquo;<a href="http://docs.activestate.com/komodo/latest/install.html#System_Req_Lin">Linux Software
+Prerequisites</a>&rdquo; in the Installation Guide for details. (Bug
+70812)</li>
+<li>  While autocomplete on many of the modules in the Python PyWin32
+packages works, Komodo&rsquo;s PyWin32 API catalog currently does not have
+information for: pythoncom and the binary sub-modules of win32com.</li>
+<li>  The macro recorder will record events that it cannot
+handle, such as the opening of dialogs. The only dialog
+that can be opened via a macro is the Find dialog; other
+dialogs will cause the macro to stop.</li>
+<li>  Languages that are read right to left (e.g. Middle Eastern
+languages like Arabic) are not supported. All Latin, Cyrillic and
+Far East languages are fully supported. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=75477">75477</a>)</li>
+<li>  On slow networks, users may notice performance
+degradation when editing files on network machines.
+Performance can be improved by disabling the Komodo
+function that checks if files on disk have changed. Use
+the <a href="http://docs.activestate.com/komodo/latest/prefs.html#prefs_editor">Editor
+Preferences</a> to disable this feature. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=18297">18297</a>)</li>
+<li>  Interpolation shortcuts in snippets are not executed
+when the snippet is inserted in the Editor Pane via
+dragging and dropping.</li>
+<li>  On Linux, GTK2 hard codes &#39;Ctrl&rsquo;+&#39;Shift&rsquo; to use
+international input. Therefore, all key bindings
+involving &#39;Ctrl&rsquo;+&#39;Shift&rsquo;+ (any valid hexadecimal
+character) do not work in Komodo. A workaround is to
+start Komodo with the command: <code>export
+GTK_IM_MODULE=xim; ./komodo&#39;</code>. Otherwise, key
+bindings of this kind must be changed. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38205">38205</a>)</li>
+<li>  When copying text that does not have Windows line
+endings into another application, which expects Windows
+line endings, the text may not retain the desired
+formatting. The text is often pasted as a single line.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36791">36791</a>)</li>
+<li>  Code snippets that are 8-bit-encoded and contain
+high-bit characters may have the wrong encoding (or no
+encoding) when inserted from the Toolbox into a UTF-8
+encoded file in the Editor Pane. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36769">36769</a>)</li>
+<li>  When editing a code comment in Komodo you may use
+&lt;Shift+Enter&gt; to start a new line <em>within</em>
+the comment &ndash; the comment prefix is added automatically.
+Komodo may fail to properly add the comment prefix if
+many new lines are added quickly with repeated
+&lt;Shift+Enter&gt; presses. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38658">38658</a>)</li>
+</ul>
+
+<h3><a name="Debugging_Issues" id="Debugging_Issues">Debugging</a></h3>
+
+<ul>
+<li>  PHP: The <code>xdebug.remote_autostart</code> option will
+interfere with local debugging configuration in Komodo if it is
+enabled. If you need this option enabled for remote debugging, set the
+<strong>Path to alternate PHP configuration file</strong> under
+<strong>Preferences|Languages|PHP</strong> to point to a copy of
+php.ini without this option.</li>
+<li>  PHP: A non-empty <code>doc_root</code> setting in <em>php.ini</em>
+causes a &#39;No input file specified&rsquo; error when starting a local
+debugging session with CGI emulation. The Web Developer Suite 2.0
+package and others use this setting, and it is copied into the
+debugging version of <em>php.ini</em> during PHP auto-config. Comment
+this setting out in the file specified in
+&#39;Preferences|Languages|PHP|Path to alternate PHP configuration file&rsquo;
+to avoid this problem.</li>
+<li>  Python: Breakpoints will not work with the <a href="http://psyco.sourceforge.net/">Psyco</a> extension enabled.
+The Komodo <a href="http://docs.activestate.com/komodo/latest/trouble.html#psyco_debug">FAQ</a> has a
+work-around solution.</li>
+<li>  <strong>Tcl 8.5</strong>: Tcl Beta releases contain
+only version-specific executables (e.g.
+<code>tclsh85.exe</code> and <code>wish85.exe</code>).
+Komodo does not automatically find these in the path. To
+use them, specify the executables manually in
+<strong>Edit|Preferences&hellip;|Languages|Tcl|Interpreters</strong>,
+or create non-versioned symlinks/shortcuts to the
+versioned executables.</li>
+<li>  The Perl debugger uses <code>alarm()</code>
+internally. This can conflict with some Perl frameworks
+and modules (such as <acronym title="Perl Object Environment">POE</acronym>) which use
+<code>alarm()</code> as well. To work around this
+problem, add <code>alarm=0</code> to the
+<code>PERLDB_OPTS</code> environment variable (in the
+Environment tab of the Debugger Options) which stops the
+debugger from using <code>alarm()</code>. With this
+work-around in place, the Break Now button and menu item
+will not work in debugging sessions.</li>
+<li>  Python debugging with IronPython does not currently
+work as there is no support for Python debugging hooks in
+IronPython.</li>
+<li>  In PerlApp executables, it is now possible to step
+into loaded modules, but not to set breakpoints in
+them.</li>
+<li>  PHP 5.0.0, 5.0.1 and 5.0.2 do not work with the
+debugger extension. You can use PHP version 4.4.x,
+a version greater than PHP 5.0.2.</li>
+<li>  If the debug listener (<strong>Debug|Listen for
+Debugger Connections</strong>) is off, multithreaded
+applications may not run or debug as expected. Only the
+main thread operates through the debugger. To debug
+multithreaded applications, turn on debug listening prior
+to debugging. (Debug listening is turned on by default.)
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32776">32776</a>)</li>
+<li>  PHP configurations that use Zend Extensions (such as
+PHP Accelerator) are not compatible with the Komodo PHP
+debugger. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=21890">21890</a>)</li>
+<li>  Due to the way the core Perl interpreter works, it is
+not possible to step over &ldquo;require&rdquo; statements. (Bug
+18776)</li>
+<li>  You cannot debug &#39;freestanding&rsquo; executables created
+with the PDK in Komodo. Instead, build a &#39;dependant&rsquo;
+executable, which requires a local install of
+ActivePerl.</li>
+<li>  The variable watcher does not work when debugging
+<code>_\\machine\d$\path\to\perl_script.pl_</code>.
+It does work when opening the same file via a UNC path
+that does not include a &rsquo;$&rsquo; character. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=19558">19558</a>)</li>
+<li>  When debugging remote applications, Komodo fails if
+the remote process does not have valid stdout and stderr
+handles. GUI applications, such as those started with
+&ldquo;wperl.exe&rdquo; or &ldquo;pythonw.exe&rdquo;, or those using the
+Pythonwin or wxPython frameworks, or those with certain
+embedded applications, can have invalid stdout and stderr
+handles. Until we resolve this issue, try to run and
+debug your remote program under perl.exe or
+python.exe.</li>
+<li>  Python, XSLT and PHP debugging require TCP/IP to be
+installed and properly configured, even if you are
+debugging scripts locally. While TCP/IP is configured by
+default on most systems, early versions of Windows may
+require manual TCP/IP configuration.</li>
+<li>  When debugging a GUI script in Komodo, adding a
+&ldquo;watched variable&rdquo; when <em>not</em> stopped at a
+breakpoint can cause Komodo to hang. You must manually
+terminate the script being debugged to stop Komodo from
+hanging. The problem occurs because the GUI script, while
+in its message loop, does not respond to Komodo&rsquo;s request
+for the variable value. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=23516">23516</a>)</li>
+<li>  If the Komodo debugger is configured to use a
+specific port, when Komodo is shut down, the port is
+sometimes not immediately released. If Komodo is
+restarted before the port is released by the operating
+system, a message is displayed advising that the system
+is unable to bind that port. As a workaround, we suggest
+configuring port 0 as the Komodo debugging port and using
+the debugger proxy for remote debugging. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32821">32821</a>)</li>
+<li>  Breaking into a running Perl script can only occur
+while crossing sub boundaries in the Perl code, as that&rsquo;s
+currently the only chance the Perl debugger has to check
+to see if the IDE has sent the break command. (Bug
+35611)</li>
+<li>  When debugging Perl, if you set a breakpoint on the
+<code>while</code> statement, the debugger stops on the
+breakpoint only once, namely before the first pass
+through the loop. This is a limitation in the Perl
+interpreter. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34866">34866</a>)</li>
+<li>  Komodo debugger uses TCP/IP networking for
+communications. On systems with firewalls installed, the
+debugger may fail if the firewall is not configured to
+allow Komodo to listen for connections. On Windows, you
+may see a &ldquo;Windows Security Alert&rdquo; dialog asking if you
+want to allow Komodo to listen for connections, you will
+need to unblock Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=21684">21684</a>)</li>
+<li>  The Perl debugger cannot trap fatal runtime errors.
+Users can accomplish this in their code by wrapping
+problematic code in an <code>eval</code> block, and then
+testing for an exception. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33855">33855</a>)</li>
+<li>  Komodo does not provide proper source debugging in
+Python <code>exec</code> and <code>eval</code>
+statements. This is a limitation of Python&rsquo;s interpreter.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40336">40336</a>)</li>
+<li>  When debugging PHP on a remote Linux machine from a
+local Windows machine, the debugging option &ldquo;Try to find
+files on the local system when remote debugging&rdquo; has no
+effect. This is due to differences in Unix and Win32 file
+paths. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=39137">39137</a>)</li>
+<li>  When debugging Python, Komodo does not permit you to
+set local variables in the interactive shell. However,
+you can edit those values from the program&rsquo;s variable
+viewers, such as the <strong>Watch</strong> and
+<strong>Locals</strong> panes on the
+<strong>Debug</strong> tab. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36794">36794</a>)</li>
+<li>  When debugging PHP scripts on Komodo with CGI
+emulation, you may need to change the setting for
+<code>cgi.force_redirect</code> in the <em>php.ini</em>
+file. You may also need to set an environment variable in
+the Debugger Options dialog box: &ldquo;REDIRECT_STATUS=200
+OK&rdquo;. These settings vary depending on your system and the
+configuration of PHP. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=35021">35021</a>)</li>
+<li>  When Debugging PHP, the <strong>HTML</strong> pane of
+the <strong>Output</strong> tab does not refresh
+automatically. To refresh the contents of this pane,
+click the &ldquo;Reload HTML view&rdquo; button on the
+<strong>Output</strong> tab. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36999">36999</a>)</li>
+<li>  Komodo supports full Unicode debugging with Perl 5.8.
+Although Perl 5.6 can be used for debugging programs with
+single-byte encodings (e.g. cp1251), it is recommended
+that programmers with multi-byte character sets upgrade
+to Perl 5.8.5 or better. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36760">36760</a>)</li>
+<li>  When debugging Python, if you launch the debugger
+from a directory containing a module with the same name
+as one of the modules used by the debugger, the wrong
+file is used. For example, if you have a file named
+<em>logging.py</em> in the directory where the debugger
+is launched, the debugger will fail. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36783">36783</a>)</li>
+<li>  When stepping through Perl files, the Komodo debugger
+displays the wrong print results in the
+<strong>Locals</strong> window of the
+<strong>Debug</strong> tab. This is because Perl provides
+only one iterator for each collection variable. The
+Komodo debugger must iterate through a hash or an array
+in order to display the values in Komodo. A workaround is
+to display the <strong>Watch</strong> pane instead of the
+<strong>Locals</strong> pane, and type the names of the
+expressions that you want to view. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33668">33668</a>)</li>
+<li>  As of Komodo 5.0, the Perl debugger emits numeric hash keys with
+embedded underscores. For example, a hash key of &#39;123456789&rsquo; now
+appears in the variables tabs as &#39;123<em>456</em>789&rsquo;.</li>
+<li>  Breakpoints don&rsquo;t work in files with symlinks in their path. The
+debugger engine calculates whether to break based on the actual file
+path. To work around this limitation, load the file in Komodo using
+the real path, or create a hard link (e.g. on Linux, use &#39;ln&rsquo; without
+the &rsquo;-s&rsquo; option). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=79147">79147</a>)</li>
+</ul>
+
+<h3><a name="Interactive_Shell_Issues" id="Interactive_Shell_Issues">Interactive Shell</a></h3>
+
+<ul>
+<li>  The interactive shell does not initialize properly when invoked
+while the Command Output tab has focus. To avoid this, switch focus to
+another tab or sidebar before starting the interactive shell.</li>
+<li>  Perl: Only pattern variables $1 .. $9 are preserved
+across each query. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34528">34528</a>)</li>
+<li>  Python: The getpass package requires the use of a tty
+on UNIX systems. Komodo does not provide a tty in its
+interactive shell so getpass will fail with an exception.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34259">34259</a>)</li>
+</ul>
+
+<h3><a name="Source_Code_Control_Issues" id="Source_Code_Control_Issues">Source Code Control</a></h3>
+
+<ul>
+<li>  The SCC Checkout wizard, SCC Commit and SCC Push features does not
+correctly handle password authentication. SCC commands requiring password
+authentication should be done at the command line, or be setup to use
+password-less authentication mechanisms.</li>
+<li>  A bug in CVS will cause WinCVS and TortoiseCVS to
+detect file changes when a Komodo project has merely been
+opened. The problem is likely a bug in the cvshome.org
+executable or in the cvsnt.org executable, which are used
+by both WinCVS and TortoiseCVS. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=21085">21085</a>)</li>
+<li>  Komodo&rsquo;s integration with the Perforce commit/submit
+command cannot commit files that are not in the default
+changelist. These files must be submitted via an external
+interface (e.g. p4, P4Win). Note that any files checked
+out inside Komodo are in the default changelist, so this
+limitation should only apply to users who already use an
+external interface to their Perforce repository. (Bug
+27070)</li>
+<li>  If the Perforce connection cannot be established,
+checking the status of files in a Perforce repository
+will hang Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=35058">35058</a>)</li>
+<li>  If you are using CVS Source Code Control, note that
+the very first time you log in to a repository, cvs.exe
+fails to create the .cvspass file correctly and will
+return an error. Repeat the command to login a second
+time and correctly generate the file. This is a CVS bug.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=20353">20353</a>)</li>
+</ul>
+
+<h3><a name="OSX_Issues" id="OSX_Issues">Mac OS X</a></h3>
+
+<ul>
+<li>  If you have two drives with the same name, and you
+use the file open dialog in a Mozilla application, the
+directory menu (top middle of dialog) may crash when
+clicked. To avoid this, rename one of the hard
+drives.</li>
+<li>  New Custom Menus created in a Project or in the
+Toolbox will not appear until Komodo has been
+restarted.</li>
+<li>  Throughout the Komodo documentation there are
+references to key bindings that use the &#39;Cmd&rsquo; key. This
+key may be better known to OS X users as the &#39;Command&rsquo;
+key. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=41959">41959</a>)</li>
+<li>  Komodo will shut down and restart itself the first
+time it is run after installation. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40143">40143</a>)</li>
+<li>  Display of text during editing (&ldquo;painting&rdquo;) may
+sometimes be slow or pause momentarily.</li>
+<li>  Certain UI elements stop working after changing key
+bindings. Restarting Komodo fixes this. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38683">38683</a>)</li>
+<li>  When saving a file, Komodo does not set file
+information (type and creator) for the OS X Finder to
+know that Komodo created the file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38745">38745</a>)</li>
+<li>  Breakpoints cannot be removed when debugging XSLT
+scripts. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40072">40072</a>)</li>
+<li>  PHP debugging will not work with the PHP build
+distributed with OS X because it does not load external
+modules. To use PHP debugging on OS X, build PHP from
+source or download a binary from <a href="http://www.entropy.ch/software/macosx/php">http://www.entropy.ch/software/macosx/php</a></li>
+</ul>
+
+<p>(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=39901">39901</a>)
+*   Komodo is sometimes recognized as a web browser by
+  some applications on OS X (e.g. Safari&rsquo;s &ldquo;Default Web
+  Browser&rdquo; setting). Using Komodo as the default web
+  browser is not recommended.
+*   Application menu items that have multi-key key
+  bindings will not show their key bindings in a pop-up
+  tool tip on OS X. This is a limitation in OS X.
+*   Context menus may not display unless you hold down
+  the mouse button for a period of time. This is because
+  the Komodo editor is implemented in Mozilla as a plugin,
+  and it does not access the appropriate context menu event
+  to handle this behavior properly without interfering
+  with other mouse events (for example, drag and drop).
+  (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=41216">41216</a>)
+*   Due to a limitation in the Mozilla code base, key
+  bindings for the <strong>Next File</strong> and
+  <strong>Previous File</strong> options on the
+  <strong>Window</strong> menu are not displayed next to
+  the menu items. The key bindings are &#39;Cmd&rsquo;+&#39;PageDown&rsquo; to
+  view the next file and &#39;Cmd&rsquo;+&#39;PageUp&rsquo; to view the
+  previous file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40716">40716</a>)</p>
+
+<h3><a name="Linux_Issues" id="Linux_Issues">Linux</a></h3>
+
+<ul>
+<li>  The <strong>Fonts and Colors</strong> pane in the
+Preferences dialog box displays the same list of fonts in
+both the Fixed and Proportional lists. There is no
+programmatic way to identify whether a font is
+proportional or not on GTK; therefore, users must know
+the properties of the individual fonts when modifying
+these values. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=27206">27206</a>)</li>
+<li>  Install Komodo into a directory path that only
+includes alphanumeric characters. Komodo is known to have
+trouble with paths that include spaces and some
+non-alphanumeric characters.</li>
+<li>  Key bindings defined in the window manager (such as
+KDE) take precedence over Komodo key bindings. In the
+case of conflicts, you must either change the Komodo key
+bindings or the window manager key bindings. (Bug
+30926)</li>
+<li>  You cannot move an existing Komodo installation to a
+new directory. You must uninstall Komodo from the
+existing location and reinstall it in the new location.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=19478">19478</a>)</li>
+<li>  Red Hat Linux 9.0 is known to have threading library
+bugs in its glibc that may cause Komodo to hang in
+certain situations. The recommended solution is to
+upgrade to the latest glibc for Red Hat Linux 9.0. (Bug
+24340)</li>
+<li><p>Using colon-separated include paths in the Perl
+shebang line causes a parse failure on some versions of
+Perl. Instead of using &ldquo;/usr/bin/perl -cwT
+-I/path1:/path2 yourscript.pl&rdquo;, try using multiple
+include arguments such as &ldquo;/usr/bin/perl -cwT -I/path1
+-I/path2 yourscript.pl&rdquo;</p>
+
+<p>(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33524">33524</a>)</p></li>
+<li><p>Komodo may not start up correctly on some Linux
+systems if C++ compatibility libraries have not been
+installed. On Fedora and Red Hat systems, install the
+&ldquo;compat-libstdc++&rdquo; package. On SuSE, install the &ldquo;compat&rdquo;
+package. On Gentoo, as root, run <code>emerge
+lib-compat</code>. This is not thought to be a problem on
+Debian systems. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36244">36244</a>)</p></li>
+<li><p>Komodo is not compatible with Kubuntu 11.04 or OpenSuSE
+11.4.  Workaround in bug (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=90985#c26">90985</a>).</p></li>
+</ul>
+
+<h3><a name="Other_Issues" id="Other_Issues">Other</a></h3>
+
+<ul>
+<li>  A limitation in the parser used by the DOM Viewer
+causes HTML elements embedded in JavaScript strings to
+appear as element nodes of the current document. Placing
+the JavaScript in a CDATA section or a comment avoids
+this problem.</li>
+<li>  Komodo inherits a Mozilla bug whereby certain video
+drivers on Windows cause Komodo to crash. If you
+experience this behavior, upgrade your video driver to
+the latest version. If the problem persists, reduce the
+color definition assigned to the driver (<strong>Control
+Panel|Display|Settings</strong>). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32746">32746</a>)</li>
+<li>  Komodo inherits a <a href="http://bugzilla.mozilla.org/show_bug.cgi?id=230512">Mozilla
+bug</a> regarding display on dual-monitor systems where
+the secondary monitor is to the left of the primary
+monitor (causing negative coordinate results). The Komodo
+display occasionally fails to refresh; Komodo must be
+stopped and restarted to fix the display (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=26852">26852</a>)</li>
+<li>  The Palm Desktop for Windows software makes exclusive
+use of the &#39;Ctrl&rsquo;+&#39;Shift&rsquo;+&rsquo;T&rsquo; key combination, thus
+making this combination unavailable in Komodo. (Bug
+27851)</li>
+<li>  When using the PDK <strong>Build Standalone
+Application</strong> feature in Komodo with Perl 5.8.0 on
+a Linux installation where the environment is set to use
+UTF-8, you must add a module &#39;utf8&rsquo; on the modules tab.
+This is the equivalent of &#39;perlapp &ndash;add utf8&rsquo;. This does
+not affect Perl 5.6.x or future versions of Perl 5.8.1 or
+higher. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=26898">26898</a>)</li>
+<li>  On Windows, some interactive commands may not work
+properly when run from the <strong>Command
+Output</strong> tab of the Output Pane. You must run
+these commands in a separate shell. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=23176">23176</a>)</li>
+<li>  Perforce client version 2001.1 and previous for
+Windows is known to hang when used for Komodo&rsquo;s Perforce
+integration. Upgrading to the most recent version of
+Perforce is known to fix the problem. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=19959">19959</a>)</li>
+<li>  The Output tab cuts off lines at 250 characters. (Bug
+20711)</li>
+<li>  Macros will not record certain commands, including
+(but possibly not limited to)
+&#39;Ctrl&rsquo;+&#39;Shift&rsquo;+&#39;B&rsquo;|&#39;R&rsquo;|&#39;E&rsquo;|&rsquo;D&rsquo; (toggle toolbars or button
+text), &#39;Ctrl&rsquo;+&#39;Shift&rsquo;+&#39;N&rsquo; (new default file), and View as
+Language menu items.</li>
+<li>  If you are using the Pop-Up Stopper ad-blocking
+program (Pop-Up Zapper on OS X), it will close the Rx
+Toolkit window immediately after it is opened. (Bug
+21768)</li>
+<li>  When you schedule a new file to be added using CVS,
+CVS will not permit you to remove the file from the
+repository using the &ldquo;revert changes&rdquo; command. (Bug
+27192)</li>
+<li>  Users of the Japanese version of Windows XP may
+experience difficulties in starting Komodo.</li>
+<li>  The <strong>Open</strong> field in the Open/Find
+Toolbar does not automatically display a drop-down list
+of directories when an UNC path is typed. Currently, the
+list is only displayed when a the path includes a
+subdirectory. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=29011">29011</a>)</li>
+<li>  When creating a &ldquo;diff&rdquo; in Komodo
+(<strong>Tools|Compare Files</strong>), the line endings
+of the files are normalized to Unix style line endings.
+Lines in files that have different line endings are not
+displayed differently in the diff (unless other
+differences are present), but a warning is provided to
+the user in the &#39;diff&rsquo; window, or the &#39;no difference&rsquo;
+dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32932">32932</a>)</li>
+<li>  In Komodo&rsquo;s Rx Toolkit, the match offsets for Unicode
+or high-bit data are incorrect. When matching, the
+program does not account for UTF-8 multi-byte characters.
+(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33287">33287</a>)</li>
+<li>  When adding new key bindings via the Preferences
+dialog box, Komodo displays a message indicating that the
+key bindings will not take effect until Komodo is
+restarted. However, some changes do take effect
+immediately.(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36710">36710</a>)</li>
+<li>  If you rename a folder that was added to a custom
+menu, the name is changed in Komodo&rsquo;s Toolbox but not on
+the menu itself. A workaround is to move the renamed
+folder out and then back into the associated custom menu
+icon in the Toolbox. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36679">36679</a>)</li>
+<li>  A newly created custom menu is added to the Toolbox
+but is not immediately displayed alongside existing
+toolbars. Restarting Komodo causes the new toolbar to
+display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078</a>)</li>
+</ul>
+
+            </article>
+        </section>
+            <aside class="sidebar-download normalize">
+                <div id="side-border"></div>
+                <button id="side-collapse" class="button big">
+                    <i class="icon icon-chevron-left"></i>
+                    <i class="icon icon-chevron-right"></i>
+                </button>
+                <div class="inner">
+                    
+<div class="centered">
+    <a href="/download" class="button primary big">
+        <i class="icon icon-download"></i> &nbsp; Download Komodo
+    </a>
+</div>
+
+
+<div class="centered">
+    <a href="/pricing" class="button big">
+        <i class="icon icon-shopping-cart"></i> &nbsp; Buy Komodo
+    </a>
+</div>
+
+<h2>Releases</h2>
+
+<ul class="disc">
+    <li>
+        Komodo IDE/Edit 9.3.0 -
+        <a href="http://downloads.activestate.com/Komodo/releases/9.3.0/">archive</a>
+        |
+        <a href="/changelog/latest">changelog</a>
+    </li>
+    <li>
+        Komodo IDE/Edit 8.5.4 -
+        <a href="http://downloads.activestate.com/Komodo/releases/8.5.4/">archive</a>
+        |
+        <a href="/changelog/ide-8">changelog</a>
+    </li>
+    <li>
+        Komodo IDE/Edit 7.1.3 -
+        <a href="http://downloads.activestate.com/Komodo/releases/7.1.3/">archive</a>
+        |
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-7.html">changelog</a>
+    </li>
+</ul>
+<a href="http://downloads.activestate.com/Komodo/releases/">View Full Archive</a>
+|
+<a href="http://downloads.activestate.com/Komodo/nightly/">Nightly Builds</a>
+
+<h2>Changelogs</h2>
+
+<ul class="disc">
+    <li>
+        <a href="/changelog/latest">Komodo IDE/Edit 9.* (March 2015)</a>
+    </li>
+    <li>
+        <a href="/changelog/ide-8">Komodo IDE/Edit 8.5.* (August 2014)</a>
+    </li>
+    <li>
+        <a href="/changelog/ide-8">Komodo IDE/Edit 8.* (March 2013)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-7.html">Komodo IDE/Edit 7.* (February 2012)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-6.1.html">Komodo IDE/Edit 6.1.* (February 2011)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-6.0.html">Komodo IDE/Edit 6.0.* (October 2010)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-5.2.html">Komodo IDE/Edit 5.2.* (August 2009)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-5.1.html">Komodo IDE/Edit 5.1.* (March 2009)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-5.0.html">Komodo IDE/Edit 5.0.* (November 4, 2008)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-4.4.html">Komodo IDE/Edit 4.4.* (June 24, 2008)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-4.3.html">Komodo IDE/Edit 4.3.* (March 6, 2008)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/ide-4.2.html">Komodo IDE/Edit 4.2.* (September 17, 2007)</a>
+    </li>
+    <li>
+        <a href="http://docs.activestate.com/komodo/latest/releases/old.html#ko41">Komodo IDE/Edit 1.1 to 4.1.1</a>
+    </li>
+</ul>
+
+                </div>
+            </aside>
+    </div>
+
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://bugs.activestate.com/enter_bug.cgi?product=Komodo' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Komodo 8 Changelog" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1700-409 Granville St.,
+                        Vancouver, BC,
+                        V6C 1T2, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2015 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>

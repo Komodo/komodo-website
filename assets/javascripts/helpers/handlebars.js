@@ -1,0 +1,1 @@
+Handlebars.registerHelper("dateFormat",function(r,e){if(window.moment){var t=e.hash.format||"MMM Do, YYYY";return moment(Date(r)).format(t)}return r});

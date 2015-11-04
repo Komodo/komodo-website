@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>How To Contribute to Komodo | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="How To Contribute to Komodo" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+        
+    </head>
+    <body>
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+
+        <!-- Main Container -->
+        <div id="container" class="container-submit-instructions">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+                <div id="content" class="document-submit-instructions
+                             sidebar
+                             sidebar-small
+                             
+                             packages packages_submit-instructions packages_submit-instructions_index">
+        <section role="main">
+            <article class="normalize">
+                <div class="selector">
+
+    <h1>What Would You Like to Contribute?</h1>
+
+    <select class="selectize paneSelector" data-pane-prefix="pane-">
+        <option value="">Select One..</option>
+        <option value="packages">Packages (addons, macros, snippets, etc)</option>
+        <option value="blogs">Blogs</option>
+        <option value="screencasts">Screencasts</option>
+        <option value="code">Code</option>
+        <option value="bugs">Bug Reports</option>
+        <option value="documentation">Documentation</option>
+        <option value="other">Other</option>
+    </select>
+
+</div>
+
+<hr>
+
+<div class="panes">
+
+    <div id="pane-packages" class="hide">
+        <p id="package-guidelines">
+            We use GitHub for all our packages (previously called resources), follow the steps below to share your package via GitHub. Why do we use GitHub? Because we love GitHub and we want contributors to be fully in control of their own contributions.
+        </p>
+        
+        <p>
+            If you aren't familiar with git or GitHub <a href="https://guides.github.com/">we recommend reading up on it</a>.
+        </p>
+        
+        <h1>How to Contribute a Package</h1>
+        
+        <ol class="decimal">
+            <li>
+                Create a <a href="https://github.com/new">new GitHub Public Repository</a> (<a href="https://help.github.com/articles/create-a-repo/">Help?</a>).
+            </li>
+            <li>
+                Select <strong>Initialize this repository with a README</strong>.
+            </li>
+            <li>
+                Click the Releases tab and press <strong>Create a new release</strong>.
+            </li>
+            <li>
+                Fill out the form and drag your package onto the <strong>Attach binaries</strong> section (ie. your addon `.xpi`, your color scheme `.ksf`, your macro `.komodotool`, etc).
+            </li>
+            <li>
+                Once saved, <a href="https://github.com/Komodo/Packages">head over to our Packages repository</a> and click on the file which best describes your package (eg. addons.yml).
+            </li>
+            <li>
+                Hit the pencil icon at the top right of the file, right next to <strong>Raw, Blame and History</strong>. Add your repository to the file using the format of: `My Addon Name: http://my-github-repo-url`, then hit <strong>Commit Changes</strong>
+            </li>
+            <li>
+                On the next screen hit the <strong>Create pull request</strong> button.
+            </li>
+        </ol>
+        
+        <p>
+            Now that you have a github repository you can <a href="https://guides.github.com/introduction/getting-your-project-on-github/">push your code to your repository</a> and allow others to contribute to it. Your repository description and readme will show up on our Packages section.
+        </p>
+        
+    </div>
+
+    <div id="pane-blogs" class="hide">
+        <h1>Blogs</h1>
+        <p>
+            We accept blogs from anyone willing to submit content that is in some
+            way Komodo related. Your blog does not need to have Komodo as its main
+            topic, for example you can submit blogs for:
+        </p>
+        <ul class="disc">
+            <li>
+                How you created your website using technology X
+            </li>
+            <li>
+                What tools you're using to automate your workflow
+            </li>
+            <li>
+                What macro's / snippets / etc. you've developed to help you with your work
+            </li>
+            <li>
+                Etc.
+            </li>
+        </ul>
+
+        <h2>
+            Submitting a Blog
+        </h2>
+        <p>
+            Blogs can be written entirely in markdown, so you don't need to run
+            a copy of the Komodo Website just to test your blog - use any markdown
+            editor you prefer.
+        </p>
+        <p>
+            To submit your blog you need to:
+        </p>
+        <ol class="decimal">
+            <li>
+                Fork the
+                <a href="https://github.com/Komodo/komodo-website">Komodo-Website repository</a>
+            </li>
+            <li>
+                Create your blog under the
+                <a href="https://github.com/Komodo/komodo-website/tree/master/src/pages/blog">
+                    relevant date folder
+                </a><br>
+                <em>if the right date folder does not exist create it.</em>
+            </li>
+            <li>
+                Create your blog file using the format <code>title-of-my-blog.hmtl.md</code>
+            </li>
+            <li>
+                Use the following template for the start of your blog:
+                <pre>
+                    <code>---
+title: Title of My Blog
+author: My Name
+date: YYYY-MM-DD
+tags: [tag1, tag2, tag3]
+description: A short introduction to my blog, this will be visible on the blog list page. Do not include line breaks or any special markup.
+layout: blog
+---</code>
+                </pre>
+            </li>
+            <li>
+                Write your blog underneath using Markdown or HTML
+            </li>
+            <li>
+                Once done, commit your changes and submit a
+                <a href="https://help.github.com/articles/creating-a-pull-request">pull request</a>
+            </li>
+        </ol>
+    </div>
+
+    <div id="pane-screencasts" class="hide">
+        <h1>Screencasts</h1>
+        <p>
+            We currently do not have a workflow set up yet to contribute screencasts.
+        </p>
+        <p>
+            If you would like to submit a screencast please email us at
+            <a href="mailto:komodo@activestate.com?subject=Screencast%20Submission">komodo@activestate.com</a> with a link to your video.
+        </p>
+    </div>
+
+    <div id="pane-code" class="hide">
+        <h1>Code</h1>
+        <p>
+            To contribute actual code to Komodo Edit (and indirectly Komodo IDE)
+            you can fork the
+            <a href="https://github.com/Komodo/KomodoEdit">Komodo Edit repository on github</a>.
+            From there your first step will be to
+            <a href="https://github.com/Komodo/KomodoEdit/blob/master/README.md#building-komodo">
+                get your own Komodo build going</a>
+            so you can test your changes.
+            <br>
+            Once you have your build going there are two ways you can contribute
+            to Komodo development:
+        </p>
+
+        <h2>Solving Bugs</h2>
+        <p>
+            Want to get your hands dirty? You can
+            <a href="https://github.com/Komodo/KomodoEdit/issues/" target="_blank">
+                search for open bugs on our Bug Tracker
+            </a>.
+        </p>
+
+        <p>
+            To be able to fix a bug you'll need to get your own build of Komodo Edit
+            running; you can
+            <a href="https://github.com/Komodo/KomodoEdit">
+                obtain the source and instructions from our GitHub repository
+            </a>.
+        </p>
+
+        <p>
+            To avoid working on a bug that is already being worked on by someone else,
+            please express your intent in the bug report before starting.
+        </p>
+
+        <h2>Implementing Features</h2>
+        <p>
+            Just like with bugs, you can
+            <a href="https://github.com/Komodo/KomodoEdit/labels/Enhancement" target="_blank">
+                search our Bug Tracker
+            </a>
+            for open Enhancement requests.
+        </p>
+        <p>
+            If you have your own idea for a feature that you would like to implement
+            that you think should be part of the core Komodo experience, please
+            <a href="https://github.com/Komodo/KomodoEdit/issues/new">
+            file an enhancement request</a> for it and express your intent to implement it.
+        </p>
+    </div>
+
+    <div id="pane-bugs" class="hide">
+        <h1>Bug Reports</h1>
+        <p>
+            The most obvious way to help any software project is to
+            <a href="https://github.com/Komodo/KomodoEdit/issues/new" target="_blank">report bugs</a>.
+        </p>
+
+        <p>
+            If you really want to help out with this we'd encourage you to try our
+            <a href="http://downloads.activestate.com/Komodo/nightly/">
+            nightly builds</a> and help us catch bugs early.
+        </p>
+    </div>
+
+    <div id="pane-documentation" class="hide">
+        <h1>Documentation</h1>
+        <p>
+            Writing documentation is a big part of any software project. We recognize
+            this and have recently launched our new <a href="http://docs.komodoide.com">
+            documentation website</a>. Which we will continue to build and emphasize.
+        </p>
+
+        <p>
+            To contribute to our documentation you can fork the
+            <a href="https://github.com/Komodo/komodo-documentation">
+                komodo-documentation repository
+            </a>
+            and start submitting
+            <a href="https://help.github.com/articles/creating-a-pull-request">pull requests</a>
+            .
+        </p>
+    </div>
+
+    <div id="pane-other" class="hide">
+        <h1>Other</h1>
+        <p>
+            If you wish to contribute in some other way please
+            <a href="http://forum.komodoide.com/">post about it on our forums</a>.
+            We will let you know what the best procedure is for getting your
+            contributions used in our projects.
+        </p>
+    </div>
+</div>
+
+            </article>
+        </section>
+            <aside class="sidebar-resources normalize">
+                <div id="side-border"></div>
+                <button id="side-collapse" class="button big">
+                    <i class="icon icon-chevron-left"></i>
+                    <i class="icon icon-chevron-right"></i>
+                </button>
+                <div class="inner">
+                    <div class="search-wrapper">
+    <input type="search" id="package-search" placeholder="Search Keywords"/>
+    <ul id="package-search-results" class="results"></ul>
+</div>
+
+<hr>
+
+<ul class="categories">
+    <li>
+        <h3>
+            <a href="/packages">All Packages</a>
+        </h3>
+    </li>
+    <li>
+        <h3>
+            <a href="/packages/popular">Most Popular</a>
+        </h3>
+    </li>
+    <li>
+        <h3>
+            <a href="/packages/downloads">Most Downloaded</a>
+        </h3>
+    </li>
+</ul>
+
+<hr>
+
+<ul class="categories">
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/addons">Addons</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/userscripts">Userscripts</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/toolbox">Toolbox</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/schemes">Color Schemes</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/skins">Skins</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/languages">Languages</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/keybinds">Keybindings</a>
+            </h3>
+        </li>
+        <li>
+            <h3>
+                <a href="http://komodoide.com/packages/misc">Miscellaneous</a>
+            </h3>
+        </li>
+</ul>
+
+<hr>
+
+<h2>How To ..</h2>
+
+<ul class="disc">
+    <li>
+        <a href="http://komodoide.com/packages/install-instructions">Install Packages</a>
+    </li>
+    <li>
+        <a href="http://komodoide.com/packages/submit-instructions#pane-packages">Submit a Package</a>
+    </li>
+    <li>
+        <a href="http://komodoide.com/customize">Customize Komodo</a>
+    </li>
+</ul>
+
+                </div>
+            </aside>
+    </div>
+
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://bugs.activestate.com/enter_bug.cgi?product=Komodo' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="How To Contribute to Komodo" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1700-409 Granville St.,
+                        Vancouver, BC,
+                        V6C 1T2, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2015 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>

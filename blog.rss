@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Komodo Blogs</title>
+        <description>Komodo blog RSS feed.  </description>
+        <link>http://komodoide.com/blog/</link>
+        <language>en</language>
+        <webMaster>support@activestate.com (ActiveState Support)</webMaster>
+        <lastBuildDate>Tue, 3 Nov 2015 17:14:18 -0800</lastBuildDate>
+        <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo IDE User Story: Defman</title>
+                <link>http://komodoide.com/blog/komodo-ide-user-story-defman</link>
+                <pubDate>Wed, 14 Oct 2015 17:00:00 -0700</pubDate>
+                <description>I love the diversity of our users. We've featured prior user stories with developers who first learned to program using FORTRAN or BASIC. Today's story features a Komodo user on the opposite end of that spectrum [...]</description>
+                <guid>http://komodoide.com/blog/komodo-ide-user-story-defman</guid>
+            </item>
+            <item>
+                <title>Team Editing: Komodo Collaboration Tool</title>
+                <link>http://komodoide.com/blog/team-editing-komodo-collaboration-tool</link>
+                <pubDate>Wed, 7 Oct 2015 17:00:00 -0700</pubDate>
+                <description>As many of you are aware, in Komodo IDE we have a feature call Collaboration. It's a simple tool with huge implications.  Collaboration allows you to work with any number of people on a single document or many documents in a session [...]</description>
+                <guid>http://komodoide.com/blog/team-editing-komodo-collaboration-tool</guid>
+            </item>
+            <item>
+                <title>First Komodo 9.3 Nightly Available</title>
+                <link>http://komodoide.com/blog/first-komodo-9-3-nightly-available</link>
+                <pubDate>Mon, 5 Oct 2015 17:00:00 -0700</pubDate>
+                <description>We have been hard at work, very hard. Don't believe us? Check out the laundry list of changes below. And that's only the stuff worth an explicit mention. We have only just reached feature-freeze for 9 [...]</description>
+                <guid>http://komodoide.com/blog/first-komodo-9-3-nightly-available</guid>
+            </item>
+            <item>
+                <title>Komodo IDE User Story: Q&A with Ron Stewart</title>
+                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-ron-stewart</link>
+                <pubDate>Fri, 2 Oct 2015 17:00:00 -0700</pubDate>
+                <description>Our latest story features long-time Komodo user Ron Stewart. Ron's been using Komodo for over seven years and uses it as his primary development editor. As a project manager, team lead [...]</description>
+                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-ron-stewart</guid>
+            </item>
+            <item>
+                <title>Komodo IDE User Story: Q&A with Gregg Thomason</title>
+                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason</link>
+                <pubDate>Thu, 24 Sep 2015 17:00:00 -0700</pubDate>
+                <description>We love finding out more about our users and this week we’re sharing a Q&A with Gregg Thomason (aka neurobashing). Gregg is a long-time Komodo user (since version 4 [...]</description>
+                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason</guid>
+            </item>
+            <item>
+                <title>Komodo IDE User Story: Q&A with Rebecca Billings, Sr. QA Engineer</title>
+                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer</link>
+                <pubDate>Tue, 15 Sep 2015 17:00:00 -0700</pubDate>
+                <description>Komodo IDE and Komodo Edit are being used by tens of thousands of programmers around the world. We've  have been serving the developer community for over 18 years--Komodo turns 15 this year--and it's always great to hear *how* we're helping them [...]</description>
+                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer</guid>
+            </item>
+            <item>
+                <title>Komodo 9.2.1 Released</title>
+                <link>http://komodoide.com/blog/komodo-9-2-1-released</link>
+                <pubDate>Tue, 8 Sep 2015 17:00:00 -0700</pubDate>
+                <description>Komodo 9.2 has been well received, but there were a ton of changes, and as often happens in software development, there were a few regressions. 9.2.1 aims to resolve these as well as some longer-standing issues [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-2-1-released</guid>
+            </item>
+            <item>
+                <title>"No Brainer" Licensing for Komodo (and our other Tools and Languages)</title>
+                <link>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages</link>
+                <pubDate>Thu, 3 Sep 2015 17:00:00 -0700</pubDate>
+                <description>As the new Director of Engineering at ActiveState, I've had the opportunity in the past few days to engage in some interesting discussions about software licensing [...]</description>
+                <guid>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages</guid>
+            </item>
+            <item>
+                <title>Extend Your Editor Using Komodo Packages in 9.2</title>
+                <link>http://komodoide.com/blog/extend-your-editor-using-komodo-packages-in-9-2</link>
+                <pubDate>Mon, 24 Aug 2015 17:00:00 -0700</pubDate>
+                <description>One feature I've been looking to work on forever was the ability to easily manage your Komodo packages. You could already manage addons in Komodo, but the experience always left something lacking for me. With Komodo 9.2 [...]</description>
+                <guid>http://komodoide.com/blog/extend-your-editor-using-komodo-packages-in-9-2</guid>
+            </item>
+            <item>
+                <title>Tabula Rasa: a Clean Slate for Komodo</title>
+                <link>http://komodoide.com/blog/tabula-rasa-a-clean-slate-for-komodo</link>
+                <pubDate>Wed, 19 Aug 2015 17:00:00 -0700</pubDate>
+                <description>Some of you may be familiar with the Spacemodo skin I did a while ago (almost 2 years ago, it seems). My mission with that skin was to give Komodo a lightweight skin [...]</description>
+                <guid>http://komodoide.com/blog/tabula-rasa-a-clean-slate-for-komodo</guid>
+            </item>
+            <item>
+                <title>Getting More from Komodo IDE Docker and Vagrant Integration</title>
+                <link>http://komodoide.com/blog/getting-more-from-komodo-ides-docker-and-vagrant-integration</link>
+                <pubDate>Wed, 5 Aug 2015 17:00:00 -0700</pubDate>
+                <description>We recently released Komodo 9.2, which boasts integration with Docker and Vagrant, as well as a boatload of other features and enhancements. Unfortunately, syntax highlighting for Dockerfile and Vagrantfile did not quite make the cut due to timing [...]</description>
+                <guid>http://komodoide.com/blog/getting-more-from-komodo-ides-docker-and-vagrant-integration</guid>
+            </item>
+            <item>
+                <title>Komodo 9.2 Released: Docker & Vagrant Integration, Package Installer, and much more ..</title>
+                <link>http://komodoide.com/blog/komodo-9-2-released-docker-and-vagrant-integration-package-installer-and</link>
+                <pubDate>Tue, 4 Aug 2015 17:00:00 -0700</pubDate>
+                <description>Only two months after releasing Komodo 9.1, we're excited to announce yet another release, this one even bigger and better than the last [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-2-released-docker-and-vagrant-integration-package-installer-and</guid>
+            </item>
+            <item>
+                <title>My First Komodo Contribution: Spell Check!</title>
+                <link>http://komodoide.com/blog/my-first-komodo-contribution-spell-check</link>
+                <pubDate>Tue, 28 Jul 2015 17:00:00 -0700</pubDate>
+                <description> Having recently joined the Komodo team, I've been given the opportunity to write about my experience so far in contributing to Komodo and getting familiar with its code base. My first task was creating an integrated [...]</description>
+                <guid>http://komodoide.com/blog/my-first-komodo-contribution-spell-check</guid>
+            </item>
+            <item>
+                <title>Komodo 9.2 Pre-Release Ready for Testing</title>
+                <link>http://komodoide.com/blog/komodo-9-2-pre-release-ready-for-testing</link>
+                <pubDate>Tue, 21 Jul 2015 17:00:00 -0700</pubDate>
+                <description> It's Komodo 9.2 pre-release time! We're coming to you with a ton of goodies this release, but we need you to help us test things out! Please read on to learn more about the changes [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-2-pre-release-ready-for-testing</guid>
+            </item>
+            <item>
+                <title>The Komodo in Cascadia(JS)</title>
+                <link>http://komodoide.com/blog/the-komodo-in-cascadia</link>
+                <pubDate>Sun, 19 Jul 2015 17:00:00 -0700</pubDate>
+                <description>From July 8th to 11th 2015, I was away from the office to attend a conference.  The office was in shambles without me (or so I'd like to think) but I did return and everything is back to normal. I went to the conference in Washington state [...]</description>
+                <guid>http://komodoide.com/blog/the-komodo-in-cascadia</guid>
+            </item>
+    </channel>
+</rss>
