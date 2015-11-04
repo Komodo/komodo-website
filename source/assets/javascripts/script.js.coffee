@@ -9,7 +9,6 @@
 #= require "highlightjs/highlight.pack"
 #= require "tooltipster/js/jquery.tooltipster"
 #= require "magnific-popup/dist/jquery.magnific-popup"
-#= require "github.commits.widget/js/github.commits.widget"
 #= require "jquery-slideshow-lite/js/jquery.slideshow.lite"
 #= require "handlebars/handlebars"
 #= require "moment/moment"
@@ -35,7 +34,6 @@ jQuery ->
             bindAnalytics
             bindTooltips
             bindLightbox
-            loadGithubCommits
             loadTabs
             loadDownloadButtons
             loadNavmenu
@@ -236,17 +234,6 @@ jQuery ->
                 width: elem.data("width")
                 height: elem.data("height")
                 pauseSeconds: elem.data("pause") || 6
-
-    # Github commits widget
-    loadGithubCommits = ->
-        jq(".github-commits").each ->
-            el = jq this
-            el.githubInfoWidget
-                user: el.data("gh-user") || "Komodo"
-                repo: el.data("gh-repo") || "KomodoEdit"
-                branch: el.data("gh-branch") || "master"
-                last: el.data("gh-amount") || 5
-                avatarSize: el.data("gh-avatarSize") || 16
 
     # Tabs
     loadTabs = ->

@@ -4,8 +4,7 @@
 
     & > img
     {
-        width: 90%;
-        max-width: 794px;
+        width: 95%;
     }
 
     p a.button
@@ -23,117 +22,63 @@
         }
     }
 
-    .details
+    .comparison
     {
-        @include outer-container;
-        margin-top: 30px;
-
-        & > div
-        {
-            @include span-columns(5.8);
-
-            &.opensource
-            {
-                @include shift(0.4);
-            }
-        }
-
-        .comparison
-        {
-            & > h2
-            {
-                text-align: left;
-            }
-
-            & > a
-            {
-                float: right;
-                margin-top: -33px;
-            }
-
-            table
-            {
-                @extend %textured-box-bare;
-                display: table;
-                width: 100%;
-
-                tr, th, td
-                {
-                    background-color: transparent;
-                    border: 0;
-                }
-
-                tbody th
-                {
-                    font-weight: 400;
-                }
-
-                tbody th, tbody td
-                {
-                    padding: 4px 8px;
-                }
-
-                thead, td
-                {
-                    text-align: center;
-                }
-
-                thead th
-                {
-                    white-space: nowrap;
-                }
-
-                td
-                {
-                    font-size: 14pt;
-                    font-weight: bold;
-                }
-            }
-        }
-
-        .opensource
+        margin-top: 50px;
+        
+        & > h2
         {
             text-align: left;
         }
 
-        $tablet: max-width 960px min-width 750px;
-        @include media($tablet)
+        & > a
         {
-            .comparison table
-            {
-                thead th
-                {
-                    font-size: 9pt;
-                }
-
-                th, tbody th, tbody td
-                {
-                    padding: 2px 4px;
-                }
-
-                th
-                {
-                    font-size: 9.5pt;
-                }
-
-                td
-                {
-                    font-size: 12pt;
-                }
-            }
+            float: right;
+            margin-top: -33px;
         }
 
-        $mobile: max-width 750px;
-        @include media($mobile)
+        table
         {
-            & > div
-            {
-                @include span-columns(11.8);
+            display: table;
+            width: 100%;
+            font-size: 1.2rem;
 
-                &.opensource
-                {
-                    @include shift(0);
-                }
+            tr, th, td
+            {
+                border: 0;
+            }
+
+            tbody th
+            {
+                font-weight: 400;
+            }
+
+            tbody th, tbody td
+            {
+                padding: 4px 8px;
+            }
+
+            thead, td
+            {
+                text-align: center;
+            }
+
+            thead th
+            {
+                white-space: nowrap;
+                text-align: center;
+            }
+            
+            thead th:first-child,
+            td:first-child
+            {
+                text-align: left;
+            }
+
+            td:not(:first-child)
+            {
+                font-size: 1.8rem;
+                font-weight: bold;
             }
         }
     }
