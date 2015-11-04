@@ -72,46 +72,59 @@ priority: 0.8
     <div class="groups">
         
         <% group = data.features.find { |f| f.id = "new" } %>
-        <div class="group-<%= group.id %>" id="<%= group.id %>">
+        <div class="group group-<%= group.id %>" id="<%= group.id %>">
             <div class="head">
                 <h2><%= group.name %></h2>
             </div>
-            <ul class="features">
-                <% group.items.each() do |feature| %>
-                <li>
-                    <% if feature.img %>
-                    <a href="<%= image_path('screenshots/features/'+feature.img) %>" class="lightbox">
-                        <img src="<%= image_path('screenshots/features/thumb/'+feature.img) %>">
-                    </a>
+            <div class="tabs">
+                <ul>
+                    <% group.groups.each() do |subgroup| %>
+                    <li>
+                        <a href="#<%= subgroup.id %>"><%= subgroup.name %></a>
+                    </li>
                     <% end %>
-                    <strong><%= feature.name %></strong>
-                    <% if feature.video %>
-                        <a href="<%= feature.video %>">
-                            <i class="icon icon-film"></i>
+                </ul>
+                <% group.groups.each() do |subgroup| %>
+                <ul id="<%= subgroup.id %>" class="features">
+                    <% subgroup.items.each() do |feature| %>
+                    <li>
+                        <% if feature.img %>
+                        <a href="<%= image_path('screenshots/features/'+feature.img) %>" class="lightbox">
+                            <img src="<%= image_path('screenshots/features/thumb/'+feature.img) %>">
                         </a>
-                    <% end %>
-                    <% if feature.isNew %>
-                    <span class="badge">
-                        NEW
-                    </span>
-                    <% end %>
-                    <div class="description <%= feature.class_names or "" %>">
-                        <% if feature.markdown %>
-                            <%= markitdown(feature.description) %>
-                        <% else %>
-                            <p><%= feature.description %></p>
                         <% end %>
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
+                        <div class="inner">
+                            <strong><%= feature.name %></strong>
+                            <% if feature.video %>
+                                <a href="<%= feature.video %>">
+                                    <i class="icon icon-film"></i>
+                                </a>
+                            <% end %>
+                            <% if feature.isNew %>
+                            <span class="badge">
+                                NEW
+                            </span>
+                            <% end %>
+                            <div class="description <%= feature.class_names or "" %>">
+                                <% if feature.markdown %>
+                                    <%= markitdown(feature.description) %>
+                                <% else %>
+                                    <p><%= feature.description %></p>
+                                <% end %>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <% end %>
+                </ul>
                 <% end %>
-            </ul>
-            <div class="clearfix"></div>
+                <div class="clearfix"></div>
+            </div>
         </div>
     
         <% data.features.each() do |group| %>
         <% next if group.id == "new" %>
-        <div class="group-<%= group.id %>" id="<%= group.id %>">
+        <div class="group group-<%= group.id %>" id="<%= group.id %>">
             <div class="head">
                 <i class="icon icon-<%= group.icon %>"></i>
                 <h2><%= group.name %></h2>

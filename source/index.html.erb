@@ -16,13 +16,7 @@ priority: 1.0
         </div>
     </div>
 
-    <% if data.promotions.splash.enabled %>
-        <h1 class="promotion">
-            <%= data.promotions.splash.description %>
-        </h1>
-    <% else %>
-        <h1>One IDE, All Your Languages</h1>
-    <% end %>
+    <h1>One IDE, All Your Languages</h1>
     
     <div id="splash-description">
         <p>
@@ -82,8 +76,36 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
             </p>
         </div>
     </div>
+    
+    <% if data.promotions.splash.enabled %>
+        <a id="promotion" href="<%= data.promotions.splash.link %>">
+            <%= data.promotions.splash.description %>
+        </a>
+    <% end %>
 
     <div id="splash-screenshots">
+        
+        <div id="screenshot-callouts">
+            <figure id="callout-panel-switcher">
+                <p>Easily toggle your important panels and widgets from the toolbar</p>
+            </figure>
+            <figure id="callout-panel">
+                <p>Your panels hold any number of widgets which you can easily move and combine to your liking</p>
+            </figure>
+            <figure id="callout-open-files">
+                <p>Navigate through your open files, sort results and group them by language, path, custom patterns</p>
+            </figure>
+            <figure id="callout-margin">
+                <p>Place breakpoints, collapse blocks of code, track change-sets, use bookmarks, all easily accessible from your editor margin</p>
+            </figure>
+            <figure id="callout-commando">
+                <p>Quickly go to anything, whether it's a file, a project, a command, a bookmark .. you name it</p>
+            </figure>
+            <figure id="callout-multicaret">
+                <p>Multi-caret is an integral part of many Komodo features</p>
+            </figure>
+        </div>
+        
         <figure class="splash-windows secondary"></figure>
         <figure class="splash-osx primary"></figure>
         <figure class="splash-linux tertiary"></figure>
@@ -205,10 +227,10 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
 <!-- Addons -->
 <div id="splash-addons">
     <div class="inner">
-        <h1>Resources</h1>
+        <h1>Packages</h1>
         <p>
-            Resources allow you to enhance Komodo through addons, skins,
-            color schemes, macros, key bindings, etc.
+            Packages allow you to enhance Komodo through addons, skins,
+            color schemes, userscripts, key bindings, etc.
         </p>
         <br class="clearfix">
 

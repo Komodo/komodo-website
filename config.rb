@@ -57,6 +57,12 @@ if data.has_key? "resources"
     _data = data.resources["min_" + name]
     proxy "/json/packages/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
     proxy "/json/resources/#{name}.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+    
+    if name == "userscripts"
+        proxy "/json/packages/macros.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+        proxy "/json/resources/macros.json", "templates/proxy/json.json", :locals => { :data => _data }, ignore: true
+    end
+    
   end
 end
 
@@ -89,7 +95,7 @@ if data.has_key? "resources"
       
       proxy "/resources/#{category}/#{slugr}/index.html",
             "templates/proxy/redirect.html", :locals => {
-                :url => "http://komodoide.com/packages/#{category}/#{slug}/"
+                :url => "/packages/#{category}/#{slug}/"
             }, ignore: true
             
       proxy "/packages/#{category}/#{slug}/index.html",
@@ -105,13 +111,16 @@ end
 
 # Redirects
 proxy "/resources/index.html",
-      "templates/proxy/redirect.html", :locals => { :url => "http://komodoide.com/packages/" }, ignore: true
+      "templates/proxy/redirect.html", :locals => { :url => "/packages/" }, ignore: true
+      
+proxy "/packages/macros/index.html",
+      "templates/proxy/redirect.html", :locals => { :url => "/packages/userscripts" }, ignore: true
       
 dirname = File.dirname(__FILE__)
 Dir["#{dirname}/source/packages/*"].each() do |filename|
   name = File.basename(filename).gsub(/\..*$/,'')
   proxy "/resources/#{name}/index.html",
-        "templates/proxy/redirect.html", :locals => { :url => "http://komodoide.com/packages/#{name}/" }, ignore: true
+        "templates/proxy/redirect.html", :locals => { :url => "/packages/#{name}/" }, ignore: true
 end
 
 activate :pagination do

@@ -11,6 +11,85 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 9.3
+
+ * **Documentation browser (IDE)**: Allows you to quickly navigate the
+   documentation for our codeintel supported languages. Giving you quick access
+   to basic documentation, with shortcuts to online documentation and contextual
+   actions (insert snippet). This is entirely keyboard driven through Commando.
+   
+ * **Run Code In-Line (IDE)**: Hit a shortcut to run the current the current
+   file using the configured interpreter, then quickly review its results.
+   Useful to quickly test bits of code. This works on unsaved files as well as
+   selections (ie. run only the selected text).
+   
+ * **Quick Bookmarks**: Quickly place numeric bookmarks and go to them, allowing
+   you to use bookmarks as more than just reminders. Hit Ctrl+Shift+number to
+   place a quick bookmark, then hit Ctrl+number to go to that bookmark.
+
+ * **Console Widget**: The new Console pane allows you to interact with the
+   Komodo runtime much in the same way as you would use your browser developer
+   tools console to interact with a website. This is especially useful for
+   developers wanting to customize their Komodo experience.
+
+ * **CSS Auto-Completions**: CSS, LESS, and SCSS files now support
+   auto-completions and code browsing. This will also work when editing HTML and
+   using CSS classes or ID's in your markup. With the 9.3.0 release this only
+   works for CSS files living at the same or a lower level as the HTML file, we
+   will very soon be supporting this project wide.
+
+ * **Auto-Wrap Delimiters**: When pressing a delimiter (eg. double quotes) while
+   having text selected the text will be wrapped by that delimiter. Delimiters
+   are configurable from your Preferences and can be disabled entirely.
+
+ * **Auto multi-caret for HTML/XML tags**: When selecting an HTML (XML) tag the
+   corresponding start/end tag will also be selected, allowing you to change the
+   start and end tag without having to select each individually.
+
+ * **Elastic Tabstops**: Komodo now supports [Elastic
+   Tabstops](http://nickgravgaard.com/elastic-tabstops/). Since this is intended
+   only for files that use tab characters for indentation it is disabled by
+   default. You can enable it under Indentation Preferences.
+
+ * **In-line Syntax Checking:** When syntax errors/warnings occur a small
+   notification popup will show at the bottom right corner of your editor
+   window.
+ 
+ * **Package Manager 2.0:** You can now fully manage your packages via Komodo,
+   ie. uninstall, update, etc. (the previous version only allowed you to
+   install). Advanced functionality currently only works for addons, skins, and
+   languages.
+ 
+ * **Enhanced Multi-Caret Mode:** Multiple caret mode is now much more flexible
+   and useful, allowing for more complex actions than before. You can also now
+   set multi-carets with ctrl+click.
+
+ * **Embedded Find/Replace:** Find and replace has been significantly overhauled
+   and is now part of the editor (rather than a popup dialog).
+
+ * **Multiple Find Result Tabs:** Every search now opens in its own result tab,
+   you are no longer limited to 2 tabs. Find results now also show a new input
+   field that allow you to search again with the same input but a different
+   search pattern.
+
+ * **Macros renamed to Userscripts:** Toolbox Macros have been renamed to
+   Userscripts. Macros also still exist but only through the toolbar or menu
+   interface. When you save them to your toolbox they effectively become
+   userscripts.
+
+ * **Quick Start on Tabs:** When opening a new tab you now get a view that lets
+   you pick what to do with the tab; eg. create a new file, open files, new file
+   from template, recent file, etc.
+
+ * **New & Improved File Icons:** The language icons have been updated to be
+   more distinctive and less generic looking.
+
+ * **Commando has gotten a visual overhaul:** More lightweight, no borders or
+   gradients. Commando now feels as lightweight as it is.
+
+ * **Tons and tons of UX improvements:** An ongoing effort to make Komodo the
+   most user friendly IDE out there by many miles.
+
 ### 9.2.1
 
 Maintenance release, see detailed changes [below](#details).
@@ -175,6 +254,120 @@ Maintenance release, see detailed changes [below](#details).
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 9.3.0
+
+ * CSS: Fixed CSS linting.
+ * CoffeeScript: Fixed lexing of numeric ranges - fixes [#387](https://github.com/Komodo/KomodoEdit/issues/387).
+ * Collab: Improve contact request user experience.
+ * Commando: Commando now includes project live folders in file searches - fixes [#116](https://github.com/Komodo/KomodoEdit/issues/116).
+ * Commando: Fix issue where results would not update - fixes [#515](https://github.com/Komodo/KomodoEdit/issues/515).
+ * Commando: Fix results not aligning properly.
+ * Commando: Improve responsiveness (reduce UI blocking).
+ * Commando: Limit the search depth for files - fixes [#545](https://github.com/Komodo/KomodoEdit/issues/545).
+ * Commando: Shell: Don't default to running in container commands in an external terminal.
+ * Commando: Shell: Fix autocompletion triggering on partial matches.
+ * Commando: Shell: Show more appropriate information about running containers.
+ * Commando: Updated commando dialog styling to be less border-heavy.
+ * Commando: Will now save the state for the scope that Commando is initialized with.
+ * Commands: The Command Output widget now allows you to run quick commands right from the widget.
+ * CommonJS: ko/editor: add gotoLine. Defaults for `_posToAbsolute`.
+ * Console: Added a new console widget, which lets you quickly access the Komodo javascript runtime.
+ * Date: Thu Sep 24 12:24:39 2015 -0400.
+ * Do not attempt to toggle breakpoints in terminal views - fixes [#133](https://github.com/Komodo/KomodoEdit/issues/133).
+ * Docs: The Komodo help dialog has been removed in favour of the new documentation site.
+ * Documentation Browser: Komodo now comes with a built-in documentation browser, covering anything from Komodo itself to the API's of your favourite languages.
+ * Editor: Fix unsaved changes not reflecting changes on disk - fixes [#83](https://github.com/Komodo/KomodoEdit/issues/83).
+ * Editor: Support rename-tag in languages that can contain HTML (eg. php).
+ * Editor: The find/replace window is now embedded into the editor, just like quick find.
+ * EditorConfig: Make editorconfig less aggressive, don't set any prefs and don't force a pref if it was already explicitly set.
+ * Find: Each search now opens in its own tab, so you can have as many searches open as you like.
+ * Find: Expose find prev results for results tab.
+ * Find: Find All button appears in Repace dialog. Fixes [#733](https://github.com/Komodo/KomodoEdit/issues/733).
+ * Find: MarkAll btn didn't appear if Rplc enabled while dialog open.
+ * Find: Tabbing order in embedded find. Fixes [#734](https://github.com/Komodo/KomodoEdit/issues/734).
+ * Find: fix cmd_findNextResult (fixed [#136](https://github.com/Komodo/KomodoEdit/issues/136)).
+ * General: Added new troubleshooting options that will reset certain aspects of your Komodo configuration.
+ * General: Expose "show quick launch" ability to user through a command.
+ * HUD: Hud styling has been made more flat and more contrasting.
+ * History: Komodo now stores your history as you move through a file, letting you go back to previous areas you visited.
+ * Icons: Added FontAwesome icons, allowing you to use font awesome for your tools and addons.
+ * Icons: Generated icons now try to be a little bit more stylish.
+ * Icons: Hud icons now actually use hud colors.
+ * Icons: The language icons for our main languages have been updated to reflect their official logo.
+ * Linter: Lint messages are now shown above the syntax checking icon as they occur.
+ * Notifications: Most notifications will now show in a smaller pop-in at the bottom right of the screen.
+ * Notifications: You can now disable opacity and/or animations for notifications.
+ * Notify: Fix notify stealing focus.
+ * OSX: Ensure view is visible after un-hide - fixes [#564](https://github.com/Komodo/KomodoEdit/issues/564).
+ * Open Files: Tabs can now be sorted according to the open files sort settings.
+ * Open Files: You can now close file groups or all files from the Open Files widget.
+ * Packages: Addon management is now fully handled through Commando, the old addon interface has been disabled.
+ * Perl: Updated to native Scintilla Perl lexer - fixes [#525](https://github.com/Komodo/KomodoEdit/issues/525).
+ * Places: Fixed renaming files with the same case-insensitive name on Windows - fixes [#155](https://github.com/Komodo/KomodoEdit/issues/155).
+ * Publishing: Fixed auto push not working when path has spaces - fixes [#505](https://github.com/Komodo/KomodoEdit/issues/505).
+ * Quickbookmarks: Add editor context menu.
+ * Run In-Line: You can now quickly run your current file/selection without saving.
+ * SDK: Added debug module, currently it's only use is to retrieve the size of a javascript object.
+ * SDK: Editor: Made the editor SDK more flexible. You can now use it with custom scintilla instances.
+ * SDK: File: Don't depend on Mozilla SDK for dirname and basename.
+ * Scintilla: Highlight JavaScript and CoffeeScript regex properly - fixes [#414](https://github.com/Komodo/KomodoEdit/issues/414).
+ * TCL: Updated the TDK dependencies to 5.4.1.
+ * Tcl: Fixed Tcl lexer to update fold levels when exiting line comments - fixes [#590](https://github.com/Komodo/KomodoEdit/issues/590).
+ * Toolbox: Remove Samples logic. Install in root tools on new profiles.
+ * UI: Added the "New Tab" command, this shows the quick start page whenever you open a new tab.
+ * UI: Breadcrumbs have been made to use up slightly less space in the statusbar.
+ * UI: Don't show file path for certain views fixes [#686](https://github.com/Komodo/KomodoEdit/issues/686).
+ * UI: Fix pixelated fonts in sidebars when using Komodo on OSX with a Retina screen.
+ * UI: Linter: The syntax checker icon in the statusbar now shows you linting results when clicked.
+ * UI: Linting: The syntax checking pane has been removed, the same functionality is now accessible from the statusbar.
+ * UI: Notification design has been simplified (flat design, no gradients or shadows).
+ * Workspace2: Offer to save new files if dirty.
+ * codeintel: Automatically hide the completion list if its one completion has been typed - fixes [#656](https://github.com/Komodo/KomodoEdit/issues/656).
+ * codeintel: Do not log errors when attempting to scan images - fixes [#602](https://github.com/Komodo/KomodoEdit/issues/602).
+ * codeintel: Ensure OOP codeintel has access to user extensions' Python library paths - fixed [#598](https://github.com/Komodo/KomodoEdit/issues/598).
+ * codeintel: Fixed Perl parser to handle nested ()'s in variable assignment - fixes [#633](https://github.com/Komodo/KomodoEdit/issues/633).
+ * codeintel: Fixed a few Tcl bugs - fixes [#722](https://github.com/Komodo/KomodoEdit/issues/722).
+ * codeintel: Fixed reading from rails.cix catalog - fixes [#537](https://github.com/Komodo/KomodoEdit/issues/537).
+ * codeintel: Fixed some instances of PHP completion with `foreach` - fixes [#142](https://github.com/Komodo/KomodoEdit/issues/142).
+ * codeintel: Fixed variable highlighting with UTF-8 characters in the document - fixes [#642](https://github.com/Komodo/KomodoEdit/issues/642).
+ * codeintel: Gracefully handle more than two Python 3 syntax errors in code browser - fixes [#238](https://github.com/Komodo/KomodoEdit/issues/238).
+ * codeintel: PHP: Handle cases when a variable has the same name as a builtin function - fixes [#123](https://github.com/Komodo/KomodoEdit/issues/123).
+ * codeintel: PHP: Support PHP 7's grouped "use" declarations.
+ * codeintel: PHP: Support PHP 7's new anonymous classes.
+ * codeintel: Perl: Show 'logically defined or' parameters in calltip - fixes [#449](https://github.com/Komodo/KomodoEdit/issues/449).
+ * coffeescript: Coffeescript has no block comment syntax - fixes [#567](https://github.com/Komodo/KomodoEdit/issues/567).
+ * console: auto-complete: Disable caching. var objs don't update.
+ * docker: Added missing 'LABEL' keyword.
+ * drag and drop: Fixed file drag and drop onto quick launch view - fixes [#77](https://github.com/Komodo/KomodoEdit/issues/77).
+ * editing: Added preference for wrapping selection with typed delimiter (enabled by default).
+ * editing: Allow Ctrl or Alt key to toggle making rectangular selections with the mouse - #fixes 690.
+ * editing: Fixed errors with 'cmd_delete' in non-editor view - fixes [#408](https://github.com/Komodo/KomodoEdit/issues/408).
+ * editing: HTML/XML: Added ability to edit matching tag in place via multiple selection.
+ * editor: Changed column selection modifier to be Alt on Linux.
+ * find: Fixed incremental find skipping twice on OSX on Enter keypress - fixes [#130](https://github.com/Komodo/KomodoEdit/issues/130).
+ * installer: Warn if GDK version 2.24 dependency is not met during Linux installation - fixes [#296](https://github.com/Komodo/KomodoEdit/issues/296).
+ * keybindings: vi: Ensure the caret is scrolled into view after moving in visual mode - fixes [#436](https://github.com/Komodo/KomodoEdit/issues/436).
+ * languages: Added support for Mustache.
+ * languages: JavaScript: Enable ES6 backquoted string highlighting - fixes [#743](https://github.com/Komodo/KomodoEdit/issues/743).
+ * languages: Lua: Updated keywords and added syntax highlighting for standard libraries.
+ * languages: PHP: Highlight class and function identifiers.
+ * languages: Python: Support new keywords in 3.5.
+ * languages: R: Added syntax highlighting for R.
+ * lint: Allow inline display of lint results.
+ * lint: CoffeeScript: Upgraded CoffeeScript linter - fixes [#550](https://github.com/Komodo/KomodoEdit/issues/550).
+ * lint: Fixed linting for Javascript macros - fixes [#381](https://github.com/Komodo/KomodoEdit/issues/381).
+ * lint: JSON: Added dedicated JSON linter - fixes [#127](https://github.com/Komodo/KomodoEdit/issues/127).
+ * open files: Handle URI-encoded '#' and ':' when opening files at line numbers - fixes [#314](https://github.com/Komodo/KomodoEdit/issues/314).
+ * places: Do not show editing preferences in "File Preferences" dialog if the file is not open - fixes [#430](https://github.com/Komodo/KomodoEdit/issues/430).
+ * places: Ensure places file filters are in sync with project file filters - fixes [#455](https://github.com/Komodo/KomodoEdit/issues/455).
+ * python: Detect pyflakes properly in Python3.
+ * scintilla: Fixed Markdown lexer to highlight italic, bold, etc. spans - fixes [#658](https://github.com/Komodo/KomodoEdit/issues/658).
+ * scintilla: Ruby: Highlight keyword-style arguments correctly - fixes [#522](https://github.com/Komodo/KomodoEdit/issues/522).
+ * scintilla: Swift: Initial Swift syntax-highlighting support.
+ * spellcheck: Added new command to jump to the next misspelled word - fixes [#588](https://github.com/Komodo/KomodoEdit/issues/588).
+ * spellcheck: Allow "Ignore" for words with no spelling suggestions - fixes [#493](https://github.com/Komodo/KomodoEdit/issues/493).
+ * terminal: Do not auto-scroll terminal output if the scroll position is above the last line - fixes [#630](https://github.com/Komodo/KomodoEdit/issues/630).
 
 ### 9.2.1
 
