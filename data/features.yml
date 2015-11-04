@@ -8,6 +8,10 @@
       id: 93
       items:
         - 
+          name: Language Updates
+          description: Support for PHP 7 and Python 3.5, syntax highlighting & checking support for Lua, Syntax highlighting support for Swift, Mustache, R Lang.
+          img: languages93.png
+        - 
           name: Documentation browser (IDE)
           description: Allows you to quickly navigate the documentation for our codeintel supported languages. Giving you quick access to basic documentation, with shortcuts to online documentation and contextual actions (insert snippet). This is entirely keyboard driven through Commando.
           img: docs.gif
