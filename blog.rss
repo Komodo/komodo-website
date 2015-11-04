@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 3 Nov 2015 18:10:14 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 3 Nov 2015 19:35:42 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 9.3 Released - Yours Forever!</title>
+                <link>http://komodoide.com/blog/komodo-9-3-released-yours-forever</link>
+                <pubDate>Tue, 3 Nov 2015 16:00:00 -0800</pubDate>
+                <description>It's finally here, possibly our most major minor release ever - Komodo 9.3. There is so much in this release we could almost have called it Komodo 10, but we didn't [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-3-released-yours-forever</guid>
+            </item>
             <item>
                 <title>Komodo IDE User Story: Defman</title>
                 <link>http://komodoide.com/blog/komodo-ide-user-story-defman</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 21 Jul 2015 17:00:00 -0700</pubDate>
                 <description> It's Komodo 9.2 pre-release time! We're coming to you with a ton of goodies this release, but we need you to help us test things out! Please read on to learn more about the changes [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-2-pre-release-ready-for-testing</guid>
-            </item>
-            <item>
-                <title>The Komodo in Cascadia(JS)</title>
-                <link>http://komodoide.com/blog/the-komodo-in-cascadia</link>
-                <pubDate>Sun, 19 Jul 2015 17:00:00 -0700</pubDate>
-                <description>From July 8th to 11th 2015, I was away from the office to attend a conference.  The office was in shambles without me (or so I'd like to think) but I did return and everything is back to normal. I went to the conference in Washington state [...]</description>
-                <guid>http://komodoide.com/blog/the-komodo-in-cascadia</guid>
             </item>
     </channel>
 </rss>
