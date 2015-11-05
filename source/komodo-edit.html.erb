@@ -6,41 +6,51 @@ socialDescription: Komodo Edit
 priority: 0.8
 ---
 
-<div class="try-buy-buttons global">
-    <div class="inner">
-        <a class="button primary" href="/download">
-            <i class="icon icon-download"></i> Try Komodo IDE
-        </a>
-        <a class="button <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
-            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
-            <% if data.promotions.buttons.enabled %>
-                <div class="promotion badge">
-                    ON SALE
-                </div>
-            <% end %>
-        </a>
-    </div>
-</div>
-
 <h1>Komodo Edit</h1>
 <p>
     Komodo Edit is the <u><em>free</em></u> and
     <a href="https://github.com/Komodo/KomodoEdit">Open-Source</a> counterpart
-    of <strong><a href="/">Komodo IDE</a></strong>.<br>
-    Looking for a powerful editor without all the advanced functionality an
-    IDE comes with? Komodo Edit is for you.
+    of <strong><a href="/">Komodo IDE</a></strong>.
 </p>
 
-<img src="/assets/images/screenshots/splash/edit-vs-ide.png">
-
-<div id="splash-download-wrap">
-    <div id="splash-download-buttons">
-        <a class="button big" href="/download#edit">
-            <i class="icon icon-download"></i> Download Edit
-        </a>
-        <a class="button primary big" href="/download">
-            <i class="icon icon-download"></i> Try Komodo IDE
-        </a>
+<div id="splash">
+    <div id="screenshot">
+        <img src="/assets/images/screenshots/splash/edit-vs-ide.png">
+    </div>
+    <div id="buttons">
+        <div id="edit-button">
+            <div class="text">
+                <p>
+                    Looking for a powerful editor without all the advanced
+                    functionality an IDE comes with?<br/>
+                    Komodo Edit is for you
+                </p>
+            </div>
+            <a class="button big" href="/download#edit">
+                Download Edit
+            </a>
+            <strong>&nbsp;</strong>
+        </div>
+        <div id="ide-button">
+            <div class="text">
+                <div class="inner">
+                    <p>
+                        Do you need..
+                    </p>
+                    <ul>
+                        <li>Debugging</li>
+                        <li>Unit Testing</li>
+                        <li>Collaboration</li>
+                        <li><a href="#comparison">And much more ..</a></li>
+                    </ul>
+                    <p>Komodo IDE is for you</p>
+                </div>
+            </div>
+            <a class="button primary big" href="/download">
+                <i class="icon icon-download"></i> Try Komodo IDE
+            </a>
+            <strong>Most Popular</strong>
+        </div>
     </div>
 </div>
 
@@ -63,36 +73,6 @@ priority: 0.8
           <td>Multi-Language Editor</td>
           <td>✓</td>
           <td>✓</td>
-        </tr>
-        <tr>
-          <td>Auto-complete &amp; Calltips</td>
-          <td>✓</td>
-          <td>✓</td>
-        </tr>
-        <tr>
-            <td>Multiple Selections</td>
-            <td>✓</td>
-            <td>✓</td>
-        </tr>
-        <tr>
-            <td>Toolbox</td>
-            <td>✓</td>
-            <td>✓</td>
-        </tr>
-        <tr>
-            <td>Projects &amp; Places Manager</td>
-            <td>✓</td>
-            <td>✓</td>
-        </tr>
-        <tr>
-            <td>Skins & Icon Sets</td>
-            <td>✓</td>
-            <td>✓</td>
-        </tr>
-        <tr>
-            <td>Minimap</td>
-            <td>✓</td>
-            <td>✓</td>
         </tr>
         <tr>
             <td>Track Changes <span class="badge">NEW</span></td>
@@ -152,6 +132,36 @@ priority: 0.8
         <tr>
             <td>Track Changes with VCS <span class="badge">NEW</span></td>
             <td>&nbsp;</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+          <td>Auto-complete &amp; Calltips</td>
+          <td>✓</td>
+          <td>✓</td>
+        </tr>
+        <tr>
+            <td>Multiple Selections</td>
+            <td>✓</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>Toolbox</td>
+            <td>✓</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>Projects &amp; Places Manager</td>
+            <td>✓</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>Skins & Icon Sets</td>
+            <td>✓</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>Minimap</td>
+            <td>✓</td>
             <td>✓</td>
         </tr>
         <tr>
