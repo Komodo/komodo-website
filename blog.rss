@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 13 Nov 2015 11:27:42 -0800</lastBuildDate>
+        <lastBuildDate>Fri, 13 Nov 2015 11:43:46 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Webinar: The One IDE for all Your Needs</title>
+                <link>http://komodoide.com/blog/webinar-the-one-ide-for-all-your-needs</link>
+                <pubDate>Fri, 13 Nov 2015 16:00:00 -0800</pubDate>
+                <description>Komodo has long been the ideal IDE for team development environments, in any industry and for any team size, platform, or language. We recently released Komodo 9.3, packed with tons of great new features [...]</description>
+                <guid>http://komodoide.com/blog/webinar-the-one-ide-for-all-your-needs</guid>
+            </item>
             <item>
                 <title>Komodo 9.3 Released - Yours Forever!</title>
                 <link>http://komodoide.com/blog/komodo-9-3-released-yours-forever</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 28 Jul 2015 17:00:00 -0700</pubDate>
                 <description> Having recently joined the Komodo team, I've been given the opportunity to write about my experience so far in contributing to Komodo and getting familiar with its code base. My first task was creating an integrated [...]</description>
                 <guid>http://komodoide.com/blog/my-first-komodo-contribution-spell-check</guid>
-            </item>
-            <item>
-                <title>Komodo 9.2 Pre-Release Ready for Testing</title>
-                <link>http://komodoide.com/blog/komodo-9-2-pre-release-ready-for-testing</link>
-                <pubDate>Tue, 21 Jul 2015 17:00:00 -0700</pubDate>
-                <description> It's Komodo 9.2 pre-release time! We're coming to you with a ton of goodies this release, but we need you to help us test things out! Please read on to learn more about the changes [...]</description>
-                <guid>http://komodoide.com/blog/komodo-9-2-pre-release-ready-for-testing</guid>
             </item>
     </channel>
 </rss>
