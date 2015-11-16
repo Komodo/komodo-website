@@ -3175,18 +3175,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/userscripts/cgchoffman--worspacesaverestoretool/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/userscripts/worspace-saverestore-tool/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://komodoide.com/resources/userscripts/cgchoffman--transpose/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3199,6 +3187,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/userscripts/cgchoffman--worspacesaverestoretool/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/userscripts/worspace-saverestore-tool/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/userscripts/toddw-as--sccannotate/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3206,18 +3206,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/userscripts/scc-annotate/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/userscripts/naatan--autoallmanbraces/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/userscripts/auto-allman-braces/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3259,6 +3247,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/userscripts/naatan--openterminalhere/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/userscripts/open-terminal-here/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/userscripts/cgchoffman--createsnippetfromtext/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3278,18 +3278,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/userscripts/copy-find-results/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/userscripts/naatan--openterminalhere/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/userscripts/open-terminal-here/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3331,18 +3319,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/userscripts/toddw-as--incrementalnumbering/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/userscripts/incremental-numbering/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://komodoide.com/resources/userscripts/naatan--phpdocandjsdoc/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3350,6 +3326,18 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/userscripts/phpdoc-and-jsdoc/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/userscripts/toddw-as--incrementalnumbering/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/userscripts/incremental-numbering/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3578,6 +3566,18 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/languages/moose/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/toolbox/defman21--allmanbraces/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/toolbox/allman-braces/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4394,6 +4394,18 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/skins/classic/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/schemes/defman21--l33tgram/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/l33tgram/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
