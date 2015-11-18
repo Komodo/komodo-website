@@ -11,6 +11,10 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 9.3.1
+
+Maintenance release, see detailed changes [below](#details).
+
 ### 9.3
 
  * **Documentation browser (IDE)**: Allows you to quickly navigate the
@@ -254,6 +258,24 @@ Maintenance release, see detailed changes [below](#details).
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 9.3.1
+
+ * Commando: Fix miss-alignment when opened from the toolbar - fixes [#789](https://github.com/Komodo/KomodoEdit/issues/789).
+ * Commando: Fix non-recursive searches not working - fixes [#834](https://github.com/Komodo/KomodoEdit/issues/834).
+ * Console: Fixed object keys not dumping in some cases - fixes [#790](https://github.com/Komodo/KomodoEdit/issues/790).
+ * Debug: Fix run without debugging throwing error - fixes [#835](https://github.com/Komodo/KomodoEdit/issues/835).
+ * Find: Restore focus after the find frame closes - fixes [#805](https://github.com/Komodo/KomodoEdit/issues/805).
+ * Linting: Only notify about the first linting error (don't bombard users with notifications) - fixes [#818](https://github.com/Komodo/KomodoEdit/issues/818).
+ * OpenFiles: Fix tab sorting won't toggle - fixes [#841](https://github.com/Komodo/KomodoEdit/issues/841).
+ * Runinline: Consider global environment preferences - fixes [#810](https://github.com/Komodo/KomodoEdit/issues/810).
+ * Troubleshooting: Fix safe-mode on OSX - fixes [#776](https://github.com/Komodo/KomodoEdit/issues/776).
+ * UI: Fix missing checkmark icons in menu's on OSX - fixes [#801](https://github.com/Komodo/KomodoEdit/issues/801).
+ * debugger: All versions of NodeJS should be supported now - fixes [#747](https://github.com/Komodo/KomodoEdit/issues/747).
+ * elastic tabstops: Respect tab width preference - fixes [#820](https://github.com/Komodo/KomodoEdit/issues/820).
+ * install: More robust GDK version checker for Linux - fixes [#799](https://github.com/Komodo/KomodoEdit/issues/799).
+ * CodeIntel: Autocompletion doesn't show in some cases - fixes [#871](https://github.com/Komodo/KomodoEdit/issues/871).
+ * CodeIntel: CSS codeintel should read all CSS files in the project - fixes [#783](https://github.com/Komodo/KomodoEdit/issues/783).
 
 ### 9.3.0
 
