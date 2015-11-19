@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 18 Nov 2015 21:01:58 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 18 Nov 2015 21:21:41 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Flash Sale and Webinar Today!</title>
+                <link>http://komodoide.com/blog/flash-sale-and-webinar-today</link>
+                <pubDate>Wed, 18 Nov 2015 16:00:00 -0800</pubDate>
+                <description>Today's a big day for Komodo...   - Komodo is turning 15 years old (happy birthday, old friend!)  - We're hosting an Introduction to Komodo demo/webcast  - We're offering unprecendented one-day savings on licenses! Join us for a webinar [...]</description>
+                <guid>http://komodoide.com/blog/flash-sale-and-webinar-today</guid>
+            </item>
             <item>
                 <title>Webinar: The One IDE for all Your Needs</title>
                 <link>http://komodoide.com/blog/webinar-the-one-ide-for-all-your-needs</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 4 Aug 2015 17:00:00 -0700</pubDate>
                 <description>Only two months after releasing Komodo 9.1, we're excited to announce yet another release, this one even bigger and better than the last [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-2-released-docker-and-vagrant-integration-package-installer-and</guid>
-            </item>
-            <item>
-                <title>My First Komodo Contribution: Spell Check!</title>
-                <link>http://komodoide.com/blog/my-first-komodo-contribution-spell-check</link>
-                <pubDate>Tue, 28 Jul 2015 17:00:00 -0700</pubDate>
-                <description> Having recently joined the Komodo team, I've been given the opportunity to write about my experience so far in contributing to Komodo and getting familiar with its code base. My first task was creating an integrated [...]</description>
-                <guid>http://komodoide.com/blog/my-first-komodo-contribution-spell-check</guid>
             </item>
     </channel>
 </rss>
