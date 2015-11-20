@@ -1,8 +1,8 @@
 splash: 
   enabled: true
-  description: "15 Years of Komodo<br/>ONE DAY SALE"
+  description: "Komodo 9.3 Released<br/>See What's New"
   tooltip: ""
-  link: "/blog/flash-sale-and-webinar-today/"
+  link: "/features"
 nav: 
   enabled: false
   description: "ON SALE"
