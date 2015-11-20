@@ -6,14 +6,14 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 20 Nov 2015 08:20:48 -0800</lastBuildDate>
+        <lastBuildDate>Fri, 20 Nov 2015 11:56:10 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
             <item>
-                <title>Flash Sale and Webinar Today!</title>
-                <link>http://komodoide.com/blog/flash-sale-and-webinar-today</link>
-                <pubDate>Wed, 18 Nov 2015 16:00:00 -0800</pubDate>
-                <description>Today's a big day for Komodo...   - Komodo is turning 15 years old (happy birthday, old friend!)  - We're hosting an Introduction to Komodo demo/webcast  - We're offering unprecendented one-day savings on licenses! Join us for a webinar [...]</description>
-                <guid>http://komodoide.com/blog/flash-sale-and-webinar-today</guid>
+                <title>Komodo 9.3.1 Released</title>
+                <link>http://komodoide.com/blog/komodo-9-3-1-released</link>
+                <pubDate>Thu, 19 Nov 2015 16:00:00 -0800</pubDate>
+                <description>Roughly 3 weeks after our release of 9.3.0 we have 9.3.1 ready for you. This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-3-1-released</guid>
             </item>
             <item>
                 <title>Webinar: The One IDE for all Your Needs</title>
