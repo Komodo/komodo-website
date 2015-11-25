@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 25 Nov 2015 09:10:59 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 25 Nov 2015 12:10:36 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo Webinar Questions</title>
+                <link>http://komodoide.com/blog/komodo-webinar-questions</link>
+                <pubDate>Tue, 24 Nov 2015 16:00:00 -0800</pubDate>
+                <description>Some of you might have heard that Nathan and I took time out of our dev schedules to do an *Intro to Komodo* webinar on the 19th of November, 2015.  What you may not know is that everyone asked a TON of questions [...]</description>
+                <guid>http://komodoide.com/blog/komodo-webinar-questions</guid>
+            </item>
             <item>
                 <title>Komodo 9.3.1 Released</title>
                 <link>http://komodoide.com/blog/komodo-9-3-1-released</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 5 Aug 2015 17:00:00 -0700</pubDate>
                 <description>We recently released Komodo 9.2, which boasts integration with Docker and Vagrant, as well as a boatload of other features and enhancements. Unfortunately, syntax highlighting for Dockerfile and Vagrantfile did not quite make the cut due to timing [...]</description>
                 <guid>http://komodoide.com/blog/getting-more-from-komodo-ides-docker-and-vagrant-integration</guid>
-            </item>
-            <item>
-                <title>Komodo 9.2 Released: Docker & Vagrant Integration, Package Installer, and much more ..</title>
-                <link>http://komodoide.com/blog/komodo-9-2-released-docker-and-vagrant-integration-package-installer-and</link>
-                <pubDate>Tue, 4 Aug 2015 17:00:00 -0700</pubDate>
-                <description>Only two months after releasing Komodo 9.1, we're excited to announce yet another release, this one even bigger and better than the last [...]</description>
-                <guid>http://komodoide.com/blog/komodo-9-2-released-docker-and-vagrant-integration-package-installer-and</guid>
             </item>
     </channel>
 </rss>
