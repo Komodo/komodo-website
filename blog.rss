@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Mon, 7 Dec 2015 06:02:10 -0800</lastBuildDate>
+        <lastBuildDate>Mon, 14 Dec 2015 12:21:38 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo Quick Bookmarks</title>
+                <link>http://komodoide.com/blog/komodo-quick-bookmarks</link>
+                <pubDate>Tue, 8 Dec 2015 16:00:00 -0800</pubDate>
+                <description>A feature that you may or may not be aware of in Komodo is the Quick Bookmarks tool.  The Quick Bookmarks extend bookmarks to make them faster to use by allowing you to access specific bookmarks with a single keystroke [...]</description>
+                <guid>http://komodoide.com/blog/komodo-quick-bookmarks</guid>
+            </item>
             <item>
                 <title>Komodo Webinar Questions</title>
                 <link>http://komodoide.com/blog/komodo-webinar-questions</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 19 Aug 2015 17:00:00 -0700</pubDate>
                 <description>Some of you may be familiar with the Spacemodo skin I did a while ago (almost 2 years ago, it seems). My mission with that skin was to give Komodo a lightweight skin [...]</description>
                 <guid>http://komodoide.com/blog/tabula-rasa-a-clean-slate-for-komodo</guid>
-            </item>
-            <item>
-                <title>Getting More from Komodo IDE Docker and Vagrant Integration</title>
-                <link>http://komodoide.com/blog/getting-more-from-komodo-ides-docker-and-vagrant-integration</link>
-                <pubDate>Wed, 5 Aug 2015 17:00:00 -0700</pubDate>
-                <description>We recently released Komodo 9.2, which boasts integration with Docker and Vagrant, as well as a boatload of other features and enhancements. Unfortunately, syntax highlighting for Dockerfile and Vagrantfile did not quite make the cut due to timing [...]</description>
-                <guid>http://komodoide.com/blog/getting-more-from-komodo-ides-docker-and-vagrant-integration</guid>
             </item>
     </channel>
 </rss>

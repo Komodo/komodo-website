@@ -613,6 +613,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/komodo-quick-bookmarks/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/using-custom-workspaces-with-komodo-9-1/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1244,6 +1250,30 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/Komodo ide/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/development/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/efficient/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/time saving/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -2173,6 +2203,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/tagged/statistics/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/tagged/komodo-9/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -2180,18 +2216,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/tagged/trackchanges/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/development/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/statistics/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3433,6 +3457,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/languages/urkonn--julia/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/languages/julia/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/languages/polymeris--clojure/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3721,6 +3757,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/addons/babobski--beautifyjs/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/beautify-js/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/addons/jasonbarnabe--stylish/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3728,6 +3776,18 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/stylish/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/babobski--fontawesomepane/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/fontawesome-pane/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -3841,18 +3901,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/babobski--beautifyjs/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/beautify-js/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://komodoide.com/resources/addons/manngo--htmltools/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3884,18 +3932,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/html-entities-pane/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/babobski--fontawesomepane/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/fontawesome-pane/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

@@ -219,6 +219,65 @@ if (extensions.beautifyjs) {
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify_JS();
 }
+<code>
+To execute beautify on after file save, you can set up this macro (trigger after file safe)
+</code>javascript
+(function() {
+    if (extensions.beautifyjs) {
+        var view    = ko.views.manager.currentView;
+        var scimoz  = view.scimoz;
+        var notify  = require(&quot;notify/notify&quot;);</p>
+
+<pre><code>    // if no current view is open
+    if (view === null){
+        return false;
+    }
+
+    // if file isn&#39;t saved we cant get it&#39;s extension
+    var file = view.koDoc.file;
+    if (file === null) {
+        return false;
+    }
+
+
+    switch (file.ext) {
+        case &#39;.html&#39;:
+        case &#39;.xhtml&#39;:
+            try {
+                extensions.beautifyjs.beautify_HTML();
+            } catch(e) {
+                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
+            }
+            break;
+        case &#39;.css&#39;:
+            try {
+                extensions.beautifyjs.beautify_CSS();
+            } catch(e) {
+                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
+            }
+            break;
+        case &#39;.js&#39;:
+            try {
+                extensions.beautifyjs.beautify_JS();
+            } catch(e) {
+                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
+            }
+            break;
+        default:
+            return;
+            break;
+    }
+
+    try {
+        ko.commands.doCommand(&#39;cmd_save&#39;);
+    } catch(e) {
+        notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
+    }
+
+}
+</code></pre>
+
+<p>}).apply();
 ```</p>
 
     </div>
@@ -259,18 +318,18 @@ if (extensions.beautifyjs) {
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-2012902">
+            <div class="release  0" id="release-2280191">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.1/Beautify-js-1.1.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.3/komodo-beautify-js1.3.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Beautify-js-1.1.xpi
+                                        komodo-beautify-js1.3.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/updated notifications .zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/added fallback to entire document if no selection is made.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -309,17 +368,17 @@ if (extensions.beautifyjs) {
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-10-24T11:03:49Z">
-            Updated 6 weeks ago
+        <dd title="2015-12-13T20:14:32Z">
+            Updated a day ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.1">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.3">
                 Version 
-                1.1
+                1.3
             </a>
         </dd>
 
@@ -336,7 +395,7 @@ if (extensions.beautifyjs) {
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>5238 downloads</span>
+            <span>5385 downloads</span>
         </dd>
     
         <dt>
