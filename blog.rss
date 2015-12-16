@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 16 Dec 2015 10:37:45 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 16 Dec 2015 11:48:06 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo User Story: Jake Day Williams</title>
+                <link>http://komodoide.com/blog/komodo-user-story-jake-day-williams</link>
+                <pubDate>Wed, 16 Dec 2015 16:00:00 -0800</pubDate>
+                <description>Learning a new programming language isn't easy for everyone, and there is no better place than YouTube find a good tutorial to see code in action. In your search to learn PHP or Ruby, you may have stumbled upon Jake Day Williams' channel, WiLDacademy [...]</description>
+                <guid>http://komodoide.com/blog/komodo-user-story-jake-day-williams</guid>
+            </item>
             <item>
                 <title>Komodo Quick Bookmarks</title>
                 <link>http://komodoide.com/blog/komodo-quick-bookmarks</link>
@@ -105,13 +112,6 @@
                 <pubDate>Mon, 24 Aug 2015 17:00:00 -0700</pubDate>
                 <description>One feature I've been looking to work on forever was the ability to easily manage your Komodo packages. You could already manage addons in Komodo, but the experience always left something lacking for me. With Komodo 9.2 [...]</description>
                 <guid>http://komodoide.com/blog/extend-your-editor-using-komodo-packages-in-9-2</guid>
-            </item>
-            <item>
-                <title>Tabula Rasa: a Clean Slate for Komodo</title>
-                <link>http://komodoide.com/blog/tabula-rasa-a-clean-slate-for-komodo</link>
-                <pubDate>Wed, 19 Aug 2015 17:00:00 -0700</pubDate>
-                <description>Some of you may be familiar with the Spacemodo skin I did a while ago (almost 2 years ago, it seems). My mission with that skin was to give Komodo a lightweight skin [...]</description>
-                <guid>http://komodoide.com/blog/tabula-rasa-a-clean-slate-for-komodo</guid>
             </item>
     </channel>
 </rss>
