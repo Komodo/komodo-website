@@ -11,6 +11,10 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 9.3.2
+
+Maintenance release, see detailed changes [below](#details).
+
 ### 9.3.1
 
 Maintenance release, see detailed changes [below](#details).
@@ -258,6 +262,34 @@ Maintenance release, see detailed changes [below](#details).
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 9.3.2
+
+ * Collab: Fix issue where user indicators would show on top of windows.
+ * Collab: Use tooltip instead of panels, to eliminate focus issues.
+ * EditorConfig: Reverted a change that made some prefs not apply - fixes [#908](https://github.com/Komodo/KomodoEdit/issues/908).
+ * Find: Fix "where" section not remembered - fixes [#873](https://github.com/Komodo/KomodoEdit/issues/873).
+ * Find: Keep focus inside find frame when tabbing - fixes [#888](https://github.com/Komodo/KomodoEdit/issues/888).
+ * Fixed regression in Perl interpolated variable highlighting with Scintilla upgrade - fixes [#914](https://github.com/Komodo/KomodoEdit/issues/914).
+ * Linter: Show at most 10 results at a time.
+ * Non-scannable UDL languages like XML do not have scopes; do not raise errors - fixes [#906](https://github.com/Komodo/KomodoEdit/issues/906).
+ * Notifications: Corner notifications should not be too wide.
+ * Notifications: Fixed notifications stealing focus, for real this time - fixes [#816](https://github.com/Komodo/KomodoEdit/issues/816), fixes [#837](https://github.com/Komodo/KomodoEdit/issues/837).
+ * Projects: Fix editor prefs missing under Project prefs - fixes [#929](https://github.com/Komodo/KomodoEdit/issues/929).
+ * Projects: Fixed [#860](https://github.com/Komodo/KomodoEdit/issues/860) can't open projects with " " in name.
+ * Projects: Places opens in wrong context in newWindow. fixes [#932](https://github.com/Komodo/KomodoEdit/issues/932).
+ * SCSS: Use '//' for line comments in SCSS - fixes [#866](https://github.com/Komodo/KomodoEdit/issues/866).
+ * UI: Highlight focused elements in the HUD - fixes [#883](https://github.com/Komodo/KomodoEdit/issues/883).
+ * codeintel: Buffers with only one token should not cause errors anymore - fixes [#796](https://github.com/Komodo/KomodoEdit/issues/796).
+ * codeintel: Do not create extra, unnecessary CIX files on Windows - fixes [#870](https://github.com/Komodo/KomodoEdit/issues/870).
+ * codeintel: Do not error on blank documents - fixes [#895](https://github.com/Komodo/KomodoEdit/issues/895).
+ * codeintel: PHP: Fixed interface method inheritence - fixes [#751](https://github.com/Komodo/KomodoEdit/issues/751).
+ * codeintel: golang: Fixed codeintel crash in some instances of "goto definition" - fixes [#461](https://github.com/Komodo/KomodoEdit/issues/461).
+ * editor: Do not auto-expand abbreviations when recording macros or when there is a column selection - fixes [#811](https://github.com/Komodo/KomodoEdit/issues/811).
+ * editor: Fixed out-of-control drag-and-drop for large files and word wrap - fixes [#901](https://github.com/Komodo/KomodoEdit/issues/901).
+ * editor: Ignore smart wrapping when performing a key combination - fixes [#865](https://github.com/Komodo/KomodoEdit/issues/865).
+ * editor: minimap: Do not allow markers to be shown - fixes [#855](https://github.com/Komodo/KomodoEdit/issues/855).
+ * Projects: Fixed projects failing to open in new windows due to space in filename - fixes [#860](https://github.com/Komodo/KomodoEdit/issues/860).
 
 ### 9.3.1
 
