@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 18 Dec 2015 10:00:50 -0800</lastBuildDate>
+        <lastBuildDate>Fri, 18 Dec 2015 10:22:49 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 9.3.2 Released</title>
+                <link>http://komodoide.com/blog/komodo-9-3-2-rele</link>
+                <pubDate>Thu, 17 Dec 2015 16:00:00 -0800</pubDate>
+                <description>Time for another maintenance release! This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues.  Most notably, this release fixed the flickering issue on OSX [...]</description>
+                <guid>http://komodoide.com/blog/komodo-9-3-2-rele</guid>
+            </item>
             <item>
                 <title>Komodo User Story: Jake Day Williams</title>
                 <link>http://komodoide.com/blog/komodo-user-story-jake-day-williams</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 3 Sep 2015 17:00:00 -0700</pubDate>
                 <description>As the new Director of Engineering at ActiveState, I've had the opportunity in the past few days to engage in some interesting discussions about software licensing [...]</description>
                 <guid>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages</guid>
-            </item>
-            <item>
-                <title>Extend Your Editor Using Komodo Packages in 9.2</title>
-                <link>http://komodoide.com/blog/extend-your-editor-using-komodo-packages-in-9-2</link>
-                <pubDate>Mon, 24 Aug 2015 17:00:00 -0700</pubDate>
-                <description>One feature I've been looking to work on forever was the ability to easily manage your Komodo packages. You could already manage addons in Komodo, but the experience always left something lacking for me. With Komodo 9.2 [...]</description>
-                <guid>http://komodoide.com/blog/extend-your-editor-using-komodo-packages-in-9-2</guid>
             </item>
     </channel>
 </rss>
