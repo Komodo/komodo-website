@@ -147,6 +147,10 @@
 
 <h2>What&rsquo;s New in Komodo IDE/Edit</h2>
 
+<h3>9.3.2</h3>
+
+<p>Maintenance release, see detailed changes <a href="#details">below</a>.</p>
+
 <h3>9.3.1</h3>
 
 <p>Maintenance release, see detailed changes <a href="#details">below</a>.</p>
@@ -384,6 +388,36 @@ your own custom search &ldquo;scopes&rdquo;.</li>
 <p>Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.</p>
+
+<h3>9.3.2</h3>
+
+<ul>
+<li>Collab: Fix issue where user indicators would show on top of windows.</li>
+<li>Collab: Use tooltip instead of panels, to eliminate focus issues.</li>
+<li>EditorConfig: Reverted a change that made some prefs not apply - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/908">#908</a>.</li>
+<li>Find: Fix &ldquo;where&rdquo; section not remembered - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/873">#873</a>.</li>
+<li>Find: Keep focus inside find frame when tabbing - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/888">#888</a>.</li>
+<li>Fixed regression in Perl interpolated variable highlighting with Scintilla upgrade - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/914">#914</a>.</li>
+<li>Linter: Show at most 10 results at a time.</li>
+<li>Non-scannable UDL languages like XML do not have scopes; do not raise errors - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/906">#906</a>.</li>
+<li>Notifications: Corner notifications should not be too wide.</li>
+<li>Notifications: Fixed notifications stealing focus, for real this time - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/816">#816</a>, fixes <a href="https://github.com/Komodo/KomodoEdit/issues/837">#837</a>.</li>
+<li>Projects: Fix editor prefs missing under Project prefs - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/929">#929</a>.</li>
+<li>Projects: Fixed <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a> can&rsquo;t open projects with &ldquo; &rdquo; in name.</li>
+<li>Projects: Places opens in wrong context in newWindow. fixes <a href="https://github.com/Komodo/KomodoEdit/issues/932">#932</a>.</li>
+<li>SCSS: Use &rsquo;//&rsquo; for line comments in SCSS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/866">#866</a>.</li>
+<li>UI: Highlight focused elements in the HUD - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/883">#883</a>.</li>
+<li>codeintel: Buffers with only one token should not cause errors anymore - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/796">#796</a>.</li>
+<li>codeintel: Do not create extra, unnecessary CIX files on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/870">#870</a>.</li>
+<li>codeintel: Do not error on blank documents - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/895">#895</a>.</li>
+<li>codeintel: PHP: Fixed interface method inheritence - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/751">#751</a>.</li>
+<li>codeintel: golang: Fixed codeintel crash in some instances of &ldquo;goto definition&rdquo; - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/461">#461</a>.</li>
+<li>editor: Do not auto-expand abbreviations when recording macros or when there is a column selection - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/811">#811</a>.</li>
+<li>editor: Fixed out-of-control drag-and-drop for large files and word wrap - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/901">#901</a>.</li>
+<li>editor: Ignore smart wrapping when performing a key combination - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/865">#865</a>.</li>
+<li>editor: minimap: Do not allow markers to be shown - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/855">#855</a>.</li>
+<li>Projects: Fixed projects failing to open in new windows due to space in filename - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a>.</li>
+</ul>
 
 <h3>9.3.1</h3>
 
@@ -1192,8 +1226,8 @@ display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078<
 
 <ul class="disc">
     <li>
-        Komodo IDE/Edit 9.3.1 -
-        <a href="http://downloads.activestate.com/Komodo/releases/9.3.1/">archive</a>
+        Komodo IDE/Edit 9.3.2 -
+        <a href="http://downloads.activestate.com/Komodo/releases/9.3.2/">archive</a>
         |
         <a href="/changelog/latest">changelog</a>
     </li>
