@@ -163,6 +163,97 @@
     </div>
 </div>
 
+<style type="text/css">
+
+#scheme-preview pre code
+{
+    background: #f8efe9;
+    color: #000000;
+}
+
+#python .hl-keyword { color: #00488a }
+#python .ko-keyword { color: #871f78 }
+#python .hl-string { color: #aa3700 }
+#python .hl-class .hl-title { color: #009900 }
+#python .hl-function .hl-title { color: #006600 }
+#python .hl-function .hl-params { color: #000000 }
+#python .hl-comment { color: #666666 }
+#python .ko-operator { color: #781f87 }
+#python .hl-number { color: #c11300 }
+
+
+#php .hl-keyword { color: #00488a }
+#php .ko-keyword { color: #871f78 }
+#php .hl-string { color: #aa3700 }
+#php .hl-class .hl-title { color: #ca0000 }
+#php .hl-function .hl-title { color: #ca0000 }
+#php .hl-function .hl-params { color: #000000 }
+#php .hl-comment { color: #666666 }
+#php .ko-operator { color: #781f87 }
+#php .hl-variable { color: #000000 }
+#php .hl-number { color: #c11300 }
+</style>
+
+<div id="scheme-preview" class="tabs">
+    <pre id="python"><code>
+import math
+class Class:
+    """ this is a docstring """
+    def __init__(self, arg): # one line comment
+        self.x = arg + math.cos(arg + arg)
+        s = 'a string'
+    
+    def display(self, value):
+        print value
+        
+    def increment(self, value):
+        value = value + 1
+        print value
+    
+xyz = Class('foo')
+xyz.increment(10)
+    </code></pre>
+    
+    <pre id="php" style="display: none"><code>
+&lt;?php
+class foo {
+    // a comment
+    var $a;
+    var $b;
+    function display() {
+        echo "This is class foo";
+        echo "a = ".$this-&gt;a."";
+        echo "b = {$this-&gt;b}";
+    }
+    function mul() {
+        return $this-&gt;a*$this-&gt;b;
+    }
+};
+
+$foo1 = new foo;
+$foo1-&gt;a = 2;
+$foo1-&gt;b = 5;
+$foo1-&gt;display();
+echo $foo1-&gt;mul()."";
+    </code></pre>
+    
+    <ul id="scheme-preview-selector">
+        <li>
+            <a href="#python">Python</a>
+        </li>
+        <li>
+            <a href="#php">PHP</a>
+        </li>
+    </ul>
+</div>
+
+<p style="text-align: center">
+    <strong>Warning:</strong> This preview is an approximation, the color scheme may look different within Komodo.
+</p>
+
+<div class="spacer"></div>
+
+<hr/>
 
     <p class="description">Color Scheme For Komodo</p>
 
@@ -200,11 +291,26 @@
 <!-- Start Sidebar -->
 
 <div class="download">
-        <div class="files">
-            <a href="https://github.com/krizoek/Komodo_NeutralEye/archive/master.zip" class="button big primary">
-                <i class="icon icon-download"></i>
-                Download Source
-            </a>
+        <div class="releases">
+        <!-- release = resource.releases.each_with_index() do |release,k| -->
+            <div class="release  0" id="release-2363033">
+                <div class="files centered">
+                       <div class="assets">
+                                <div>
+                                    <a href="https://github.com/krizoek/Komodo_NeutralEye/releases/download/1.0/NeutralEye.ksf" class="button big primary">
+                                        <i class="icon icon-download"></i>
+                                        NeutralEye.ksf
+                                    </a>
+                                </div>
+                       </div>
+                        <div class="source">
+                           <a href="https://github.com/krizoek/Komodo_NeutralEye/archive/Neutral Eye Komodo Scheme.zip" class="button">
+                               <i class="icon icon-download"></i>
+                               Download Source
+                           </a>
+                        </div>
+                </div>
+            </div>
         </div>
 </div>
         
@@ -237,17 +343,26 @@
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-12-18T17:20:34Z">
-            Updated 2 weeks ago
+        <dd title="2016-01-02T14:16:53Z">
+            Updated 2 hours ago
         </dd>
         
+        <dt>
+            <i class="icon icon-code-fork"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/krizoek/Komodo_NeutralEye/releases/tag/1.0">
+                Version 
+                1.0
+            </a>
+        </dd>
 
         <dt>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
             <a href="https://github.com/krizoek/Komodo_NeutralEye/issues">
-                1 issues
+                0 issues
             </a>
         </dd>
 
