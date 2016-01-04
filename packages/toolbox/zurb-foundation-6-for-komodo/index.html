@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Beautify js | Komodo IDE</title>
+        <title>Zurb Foundation 6 for Komodo | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Beautify js | Komodo IDE" />
+        <meta property="og:title" content="Zurb Foundation 6 for Komodo" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -143,12 +143,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/addons">
-            Addons
+        <a href="/packages/toolbox">
+            Toolbox
         </a>
     </li>
     <li>
-        Beautify js
+        Zurb Foundation 6 for Komodo
     </li>
 </ul>
 
@@ -165,121 +165,58 @@
 
 
     <div id="readme" class="readme user-input">
-    <h1>Beautify js</h1>
+    <pre>Zurb Foundation 6 - Snippets for Komodo
+=======================================
+Komodo Edit/IDE is an editor that supports multiple languages and was developed by company ActiveState.
+Home page - http://komodoide.com/
+Komodo Edit home page - http://komodoide.com/komodo-edit/
 
-<p>js beautify for komodo edit/ide.</p>
+Preface
+=======
+Zurb Fondation 6 (http://foundation.zurb.com/index.html) - a new version of the popular framework. 
+All snippets confirmed to be working in the current version 6.1 and is made in Komodo toolbox-formats (*.komodotool).
 
-<p>This little beautifier will reformat css, html and javascript.<br>
-Based on the the <a href="http://jsbeautifier.org/" target="_blank">jsbeautifier.org</a>.</p>
+I. Install
+==========
+Method i - drag and drop the downloaded *.komodotool onto your toolbox. 
 
-<h2>Usage</h2>
+Method ii - Import
+  - open toolbox,
+  - click the "gear" icon,
+  - select the import option
+(To import the downloaded archive, extract it and select the option "Import folder from file system")
 
-<p><b>Goto to Tools</b> -&gt; <b>Beautify js</b> and select an option, or right-click on your file</p>
+Method iii - Manual: unzip the archive and copy the result in komodo profile directory in Tool directory.
 
-<ul>
-<li><strong><em>Beautify (auto detect)</em></strong><br>
-Beautify selected HTML/CSS/javascript (this will be auto-detected).</li>
-<li><strong><em>Beautify HTML</em></strong><br>
-Beautify selected HTML.</li>
-<li><strong><em>Beautify CSS</em></strong><br>
-Beautify selected CSS.</li>
-<li><strong><em>Beautify Javascript</em></strong><br> 
-Beautify selected javascript.</li>
-</ul>
+P.S.Komodo stores preferences, macros, templates, keybinding schemes and other settings in a user-specific directory called the user data directory. The name and location of this directory varies depending on the operating system and Komodo version:
 
-<h2>Options</h2>
+  - Windows Vista, Windows 7, Windows 8 or newer
+    C:\Users\<user>\AppData\Local\ActiveState\Komodo[IDE|Edit]\<version>
+  - Windows XP or older
+    C:\Documents and Settings\<username>\Local Settings\Application Data\ActiveState\Komodo[IDE|Edit]\<version>
+  - Linux
+    /home/<user>/.komodo[ide|edit]/<version>
+  - Mac OS X
+    /Users/<user>/Library/Application Support/Komodo[IDE|Edit]/<version>
 
-<p>The option panel is accessible true the add on screen.<br><br>
-<img src="https://raw.githubusercontent.com/babobski/Beautify-js/master/screenshot.png" alt="screenshot option panel"></p>
+P.P.S Toolboxes stored in Tool directory
 
-<h2>Macro's/key bindings</h2>
-
-<p>To trigger Beautify js on a key binding, you have to set up a macro(this macro auto detects html/css/javascript).</p>
-
-<p><code>javascript
-if (extensions.beautifyjs) {
-    extensions.beautifyjs.beautify();
-}
-</code>
-For the marco you can set up a key binding as trigger.</p>
-
-<p>You can also set up key bindings for the type specific marcro&#39;s
-```javascript
-// HTML
-if (extensions.beautifyjs) {
-    extensions.beautifyjs.beautify_HTML();
-}</p>
-
-<p>// CSS
-if (extensions.beautifyjs) {
-    extensions.beautifyjs.beautify_CSS();
-}</p>
-
-<p>// Javascript
-if (extensions.beautifyjs) {
-    extensions.beautifyjs.beautify_JS();
-}
-<code>
-To execute beautify on after file save, you can set up this macro (trigger after file safe)
-</code>javascript
-(function() {
-    if (extensions.beautifyjs) {
-        var view    = ko.views.manager.currentView;
-        var scimoz  = view.scimoz;
-        var notify  = require(&quot;notify/notify&quot;);</p>
-
-<pre><code>    // if no current view is open
-    if (view === null){
-        return false;
-    }
-
-    // if file isn&#39;t saved we cant get it&#39;s extension
-    var file = view.koDoc.file;
-    if (file === null) {
-        return false;
-    }
+Method iv - clone github repo:
+  - cd Komodo profile directory
+  - in terminal: git clone https://github.com/vallyol/zf6-komodo.git
+  - open Komodo Edit/IDE and ... use :)
 
 
-    switch (file.ext) {
-        case &#39;.html&#39;:
-        case &#39;.xhtml&#39;:
-            try {
-                extensions.beautifyjs.beautify_HTML();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        case &#39;.css&#39;:
-            try {
-                extensions.beautifyjs.beautify_CSS();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        case &#39;.js&#39;:
-            try {
-                extensions.beautifyjs.beautify_JS();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        default:
-            return;
-            break;
-    }
+II. How to use
+==============
+Open toolbox, select snippet. Double click - insert code to your project
 
-    try {
-        ko.commands.doCommand(&#39;cmd_save&#39;);
-    } catch(e) {
-        notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-    }
-
-}
-</code></pre>
-
-<p>}).apply();
-```</p>
-
+III. Resources
+==============
+Komodo Edit - http://komodoide.com/komodo-edit/
+Zurb Foundation - http://foundation.zurb.com/index.html
+Github - https://github.com/
+</pre>
     </div>
 
 <div id="comments" class="comments">
@@ -316,26 +253,11 @@ To execute beautify on after file save, you can set up this macro (trigger after
 <!-- Start Sidebar -->
 
 <div class="download">
-        <div class="releases">
-        <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-2280191">
-                <div class="files centered">
-                       <div class="assets">
-                                <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.3/komodo-beautify-js1.3.xpi" class="button big primary">
-                                        <i class="icon icon-download"></i>
-                                        komodo-beautify-js1.3.xpi
-                                    </a>
-                                </div>
-                       </div>
-                        <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/added fallback to entire document if no selection is made.zip" class="button">
-                               <i class="icon icon-download"></i>
-                               Download Source
-                           </a>
-                        </div>
-                </div>
-            </div>
+        <div class="files">
+            <a href="https://github.com/vallyol/zf6-komodo/archive/master.zip" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
         </div>
 </div>
         
@@ -347,11 +269,11 @@ To execute beautify on after file save, you can set up this macro (trigger after
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski">
-                <span>babobski</span>
+            <a href="https://github.com/vallyol">
+                <span>vallyol</span>
             </a>
-            <a href="https://github.com/babobski" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/3530262?v=3?s=18">
+            <a href="https://github.com/vallyol" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/11002949?v=3?s=18">
             </a>
         </dd>
         
@@ -360,33 +282,24 @@ To execute beautify on after file save, you can set up this macro (trigger after
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js">
-                    babobski/Beautify-js
+            <a href="https://github.com/vallyol/zf6-komodo">
+                    vallyol/zf6-komodo
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-12-13T20:14:32Z">
-            Updated 3 weeks ago
+        <dd title="2015-12-27T20:25:20Z">
+            Updated a week ago
         </dd>
         
-        <dt>
-            <i class="icon icon-code-fork"></i>
-        </dt>
-        <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.3">
-                Version 
-                1.3
-            </a>
-        </dd>
 
         <dt>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/issues">
+            <a href="https://github.com/vallyol/zf6-komodo/issues">
                 0 issues
             </a>
         </dd>
@@ -395,14 +308,14 @@ To execute beautify on after file save, you can set up this macro (trigger after
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>6783 downloads</span>
+            <span>0 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>4 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>
