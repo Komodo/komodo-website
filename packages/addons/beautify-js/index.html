@@ -185,6 +185,8 @@ Beautify selected HTML.</li>
 Beautify selected CSS.</li>
 <li><strong><em>Beautify Javascript</em></strong><br> 
 Beautify selected javascript.</li>
+<li><strong><em>Beautify Settings</em></strong><br> 
+This will open the settings window.</li>
 </ul>
 
 <h2>Options</h2>
@@ -192,19 +194,21 @@ Beautify selected javascript.</li>
 <p>The option panel is accessible true the add on screen.<br><br>
 <img src="https://raw.githubusercontent.com/babobski/Beautify-js/master/screenshot.png" alt="screenshot option panel"></p>
 
-<h2>Macro's/key bindings</h2>
+<h2>Key Bindings</h2>
 
-<p>To trigger Beautify js on a key binding, you have to set up a macro(this macro auto detects html/css/javascript).</p>
+<p>You can set up key bindings for all of the available beautify options.<br>
+<b>Preferences &gt; Key Bindings &gt; Beautify</b>
+<img src="https://github.com/babobski/Beautify-js/raw/master/screenshot2.png" alt="screenshot key bindings"></p>
 
-<p><code>javascript
+<h2>Userscripts</h2>
+
+<p>You can use beautify js inside a userscript, below are a few example&#39;s how to set up such userscript.</p>
+
+<p>```javascript
+// AUTO DETECT (JS/HTML/CSS)
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify();
 }
-</code>
-For the marco you can set up a key binding as trigger.</p>
-
-<p>You can also set up key bindings for the type specific marcro&#39;s
-```javascript
 // HTML
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify_HTML();
@@ -318,18 +322,18 @@ To execute beautify on after file save, you can set up this macro (trigger after
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-2280191">
+            <div class="release  0" id="release-2442949">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.3/komodo-beautify-js1.3.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.4/Beautify-js-1.4.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        komodo-beautify-js1.3.xpi
+                                        Beautify-js-1.4.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/added fallback to entire document if no selection is made.zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/added key bindings and made the settings easier to discover.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -368,17 +372,17 @@ To execute beautify on after file save, you can set up this macro (trigger after
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-12-13T20:14:32Z">
-            Updated 5 weeks ago
+        <dd title="2016-01-17T22:39:55Z">
+            Updated 34 minutes ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.3">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.4">
                 Version 
-                1.3
+                1.4
             </a>
         </dd>
 
@@ -387,7 +391,7 @@ To execute beautify on after file save, you can set up this macro (trigger after
         </dt>
         <dd>
             <a href="https://github.com/babobski/Beautify-js/issues">
-                3 issues
+                1 issues
             </a>
         </dd>
 
@@ -395,7 +399,7 @@ To execute beautify on after file save, you can set up this macro (trigger after
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>7623 downloads</span>
+            <span>7629 downloads</span>
         </dd>
     
         <dt>
