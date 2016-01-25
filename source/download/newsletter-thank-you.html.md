@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Thank You For Singing Up
+title: Thank You For Signing Up
 sidebar: download
 priority: 0
 ---
