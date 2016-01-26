@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Sat, 23 Jan 2016 15:02:38 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 26 Jan 2016 10:59:35 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>JSX and React: A Komodo Syntax Highlighting Case Study</title>
+                <link>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</link>
+                <pubDate>Tue, 26 Jan 2016 16:00:00 -0800</pubDate>
+                <description>An often overlooked feature in Komodo is the ability to create extensions for highlighting the syntax of new and custom languages. It seems that every week brings news of a new language on the block. The good news is that with a little bit of work [...]</description>
+                <guid>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</guid>
+            </item>
             <item>
                 <title>Komodo 9.3.2 Released</title>
                 <link>http://komodoide.com/blog/komodo-9-3-2-rele</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 8 Sep 2015 17:00:00 -0700</pubDate>
                 <description>Komodo 9.2 has been well received, but there were a ton of changes, and as often happens in software development, there were a few regressions. 9.2.1 aims to resolve these as well as some longer-standing issues [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-2-1-released</guid>
-            </item>
-            <item>
-                <title>"No Brainer" Licensing for Komodo (and our other Tools and Languages)</title>
-                <link>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages</link>
-                <pubDate>Thu, 3 Sep 2015 17:00:00 -0700</pubDate>
-                <description>As the new Director of Engineering at ActiveState, I've had the opportunity in the past few days to engage in some interesting discussions about software licensing [...]</description>
-                <guid>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages</guid>
             </item>
     </channel>
 </rss>

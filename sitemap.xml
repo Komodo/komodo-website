@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/startpage/6/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,19 +44,19 @@
   </url>
   <url>
     <loc>http://komodoide.com/startpage/4/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://komodoide.com/startpage/5/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://komodoide.com/startpage/3/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -68,7 +68,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/startpage/7/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -452,7 +452,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/download/newsletter-thank-you/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <lastmod>2016-01-26T10:56:53-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -901,6 +901,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/komodo-ide-user-story-defman/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1268,6 +1274,24 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/react/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/jsx/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/syntax highlighting/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1688,12 +1712,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/tagged/vagrant/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/syntax highlighting/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -2233,6 +2251,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/tagged/statistics/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/tagged/komodo-9/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -2240,12 +2264,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/tagged/trackchanges/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/statistics/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -5192,6 +5210,12 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/pages/12/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/pages/13/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
