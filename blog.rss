@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 2 Feb 2016 12:08:49 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 2 Feb 2016 13:51:02 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo UI/UX & Customization</title>
+                <link>http://komodoide.com/blog/komodo-ui-ux-and-customization</link>
+                <pubDate>Mon, 1 Feb 2016 16:00:00 -0800</pubDate>
+                <description>Back in November, with the help of our talented marketing team, Nathan and I hosted a webinar to show our new/potential/existing users the major features of Komodo, how to use them and how to customize them. Now if you're like me [...]</description>
+                <guid>http://komodoide.com/blog/komodo-ui-ux-and-customization</guid>
+            </item>
             <item>
                 <title>JSX and React: A Komodo Syntax Highlighting Case Study</title>
                 <link>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 15 Sep 2015 17:00:00 -0700</pubDate>
                 <description>Komodo IDE and Komodo Edit are being used by tens of thousands of programmers around the world. We've  have been serving the developer community for over 18 years--Komodo turns 15 this year--and it's always great to hear *how* we're helping them [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer</guid>
-            </item>
-            <item>
-                <title>Komodo 9.2.1 Released</title>
-                <link>http://komodoide.com/blog/komodo-9-2-1-released</link>
-                <pubDate>Tue, 8 Sep 2015 17:00:00 -0700</pubDate>
-                <description>Komodo 9.2 has been well received, but there were a ton of changes, and as often happens in software development, there were a few regressions. 9.2.1 aims to resolve these as well as some longer-standing issues [...]</description>
-                <guid>http://komodoide.com/blog/komodo-9-2-1-released</guid>
             </item>
     </channel>
 </rss>
