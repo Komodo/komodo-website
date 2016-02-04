@@ -3871,6 +3871,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/addons/1ec5--avim/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/avim/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/addons/htd--newsourcetree/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -3938,18 +3950,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/relative-includes/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/1ec5--avim/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/avim/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
