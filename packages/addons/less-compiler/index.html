@@ -168,80 +168,75 @@
     <h1>Less Compiler for Komodo Edit/Ide</h1>
 
 <p>a LESS 2.5.3 compiler for Komodo Edit/Ide.<br>
-Based on the old  <a href="https://community.activestate.com/node/7416">LESS</a> compiler (with LESS version 1.2.1), its updated to work with the (latest) LESS 2.5.3 version.
-A bug with the @import is now fixed (is handled by the extension it self. A function to compile only one file while editing less files is added
-and you can set up auto completion for your Less @vars.</p>
+This addon allows you to compile LESS files and will give auto completion on the LESS @vars.</p>
 
 <h2>Usage</h2>
 
-<p>Goto to Tools -&gt; LESS and select an option.</p>
+<p>If you install this addon. default the compiler is enabled.<br>
+When you edit a LESS file the file will be compiled to a CSS file.<br>
+The addon lets you set up a <em>File Watcher</em> or multiple <em>File Scopes</em> so you can work with imports and multiple less files in one project or multiple open projects( max. 3 ).<br>
+There are also some options available trough the menu.</p>
+
+<h3>Menu options</h3>
+
+<p><strong>Tools &gt; LESS &gt; ...</strong>
+ * <strong>Compile Saved File into CSS</strong><br>
+Takes a .less file and creates a .css file with the same name in the same spot as the .less file.
+ * <strong>Compile Current Buffer (including imports)</strong><br>
+ into CSS. Takes the contents of the current buffer and turns it into CSS.
+ * <strong>Compile Selection into CSS (including imports)</strong><br>
+Takes the current selection and turns it into CSS
+ * <strong>Compile and Compress Saved File into CSS</strong><br>
+ Takes a .less file and creates a .css file with the same name in the same spot as the .less file. The .less file will be compressed/minified.
+ * <strong>Compile and Compress Current Buffer (including imports)</strong><br>
+ into CSS. Takes the contents of the current buffer and turns it into compressed CSS.
+ * <strong>Compile and Compress Selection into CSS (including imports)</strong><br>
+ takes the current selection and turns it into compressed CSS.
+ * <strong>Collect @vars</strong><br>
+ collect all the LESS @vars for auto completion.
+ * <strong>File Watcher</strong>
+  * <strong>Enable File Watcher for current file</strong><br>
+  Enables a file watcher for current LESS file 
+  * <strong>disable File Watcher</strong><br>
+  Disables the file watcher
+ * <strong>Less Settings</strong><br>
+ This will open the settings window.</p>
+
+<h3>Statusbar</h3>
+
+<p>When editing Less files, a Less statusbar will be shown.<br>
+The statusbar well tell you, if the compiler is enabled/disabled, if a file watcher or file scope is active and it will show errors if present.<br>
+<img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot01.png" alt="Screensot"><br>
+Trough the statusbar you can easily configure the settings.</p>
+
+<h4>Statusbar options</h4>
 
 <ul>
-<li><strong><em>Compile Saved File into CSS</em></strong><br>
-takes a .less file and creates a .css file with the same name in the same spot as the .less file.</li>
-<li><strong><em>Compile Current Buffer <small>(including @imports)</small></em></strong><br>
-into CSS takes the contents of the current buffer and turns it into CSS.</li>
-<li><strong><em>Compile Selection into CSS <small>(including @imports)</small></em></strong><br> 
-takes the current selection and turns it into CSS.</li>
-<li><strong><em>Compile and Compress Saved File into CSS</em></strong><br>
-takes a .less file and creates a .css file with the same name in the same spot as the .less file. The .less file will be compressed/minified.</li>
-<li><strong><em>Compile and Compress Current Buffer <small>(including @imports)</small></em></strong><br>
-into CSS takes the contents of the current buffer and turns it into compressed CSS.</li>
-<li><strong><em>Compile and Compress Selection into CSS <small>(including @imports)</small></em></strong><br> 
-takes the current selection and turns it into compressed CSS.</li>
-<li><strong><em>Collect @vars <small>(including @imports)</small></em></strong><br> 
-collect all the LESS @vars for auto completion.</li>
-<li><strong>File Watcher</strong><ul>
-<li>
-<strong>Enable File Watcher for current file</strong><br>
-Enables a file watcher for current LESS file
-</li>
-<li>
-<strong>disable File Watcher</strong><br>
-Disables the file watcher
-</li>
+<li><strong>Disable Compiler</strong><br>
+This will disable the compiler</li>
+<li><strong>Enable File Watcher</strong><br>
+This will enable a file watcher for the current file, when you edit less file&#39;s only the &quot;Watched file&quot; will be compiled</li>
+<li><strong>File Scopes</strong><br>
+This will open a window where you can set file scopes, so you can work with multiple output files in one project or work with multiple projects.</li>
+<li><strong>Settings</strong><br>
+This will open the settings window.</li>
 </ul>
 
-<p></ul>
-<em>When you right-click on the file you get the same option list (LESS &gt; options).</em></p>
+<h3>Autocompletion</h3>
 
-<h2>Macro's</h2>
+<p>This addon will provide you with LESS var auto completion.<br>
+The vars will be search automatically( on file open and after you pressed @ on save ).<br>
+You can also trigger the search trough the menu.<br>
+When you type @ a auto completion box will be shown.<br>
+<img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/Screenshot02.png" alt="Screenshot"></p>
 
-<p>You can create a macro that will automatically turn a .less file into CSS when you save. Use the following code and have it trigger After file save:</p>
+<h3>File Scopes</h3>
 
-<p><code>javascript
-if (extensions.less) {
-    extensions.less.compileFile();
-}
-</code>
-<p>The following macro will compile and compress the css.</p>
-<code>javascript
-if (extensions.less) {
-    extensions.less.compileCompressFile();
-}
-</code></p>
-
-<h2>@vars completion</h2>
-
-<p>This extension also includes a @var auto completion for a better LESS integration in Komodo.<br>
-This completion box is triggered when you type <code>@</code>, if you are at the start of the line a default box will be displayed with <code>@import, @media, @font-face, @key-frames, @page, @charset, @namespace, @-webkit-keyframes</code></p>
-<p>To set up the auto completion you will have to set 2 macro's the first one is to enable the completion, and the other to get the @vars from your document.<br>
-A known <b>bug</b> is that after insertion white space is added, i created a "fix" if you type <code>;</code> or <code>)</code> the white space is removed and if there is a additional <code>;</code> or <code>)</code> it will be removed (for or Emmet users).</p>
-<p>The following macro will trigger a custom auto completion box with LESS @vars (trigger after start up).  
-</p>
-
-<p><code>javascript
-if (extensions.less) {
-    extensions.less.varCompletion();
-}
-</code>
- <p>The next macro is for getting the @vars form your document (current view or the file where the file watcher is enabled including @imports) (trigger on custom key binding, i use <kbd>Alt</kbd> + <kbd>g</kbd>)<br>
- if you working with LESS and you have not search for @vars and you trigger the completion (by typing @ not on the beginning of a line) the extension will search in the current document.</p>
- <code>javascript
- if (extensions.less) {
-    extensions.less.getVars(); 
-}
-</code></p>
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot03.png" alt="screenshot"><br>
+In the file scopes window, you can setup up to 3 file scopes.<br>
+For each file scope you can set a output file( this file will be triggered if a less file is in the current scope ) and set up to 3 include folders.<br>
+If a LESS file is inside(recursively) a file scope, the selected output file will be compiled on save.
+This allows you to work with multiple file scopes in one project or allows to work with multiple open projects( komodo windows )</p>
 
     </div>
 
@@ -281,18 +276,18 @@ if (extensions.less) {
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-2054052">
+            <div class="release  0" id="release-2566483">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/1.3.1/Komodo-Less-Compiler-1.3.1.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/2.0/Komodo-Less-Compiler-2.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Komodo-Less-Compiler-1.3.1.xpi
+                                        Komodo-Less-Compiler-2.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/bugfix getvars.zip" class="button">
+                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/Major addon update.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -331,17 +326,17 @@ if (extensions.less) {
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-02-06T13:26:04Z">
-            Updated 3 hours ago
+        <dd title="2016-02-06T18:46:38Z">
+            Updated an hour ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/1.3.1">
+            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/2.0">
                 Version 
-                1.3.1
+                2.0
             </a>
         </dd>
 
@@ -358,7 +353,7 @@ if (extensions.less) {
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>6538 downloads</span>
+            <span>6543 downloads</span>
         </dd>
     
         <dt>
