@@ -36,7 +36,7 @@
     border-radius: 3px;
     padding: 10px;
     @include linear-gradient(#F2F2F2, #EAEAEA);
-    z-index: 11;
+    z-index: 110;
 
     .ui-dialog-title
     {
@@ -76,11 +76,11 @@
 {
     background: rgba(0,0,0,0.5);
     position: fixed;
+    z-index: 100;
     width: 100%;
     height: 100%;
     width: 100vw;
     height: 100vw;
-    z-index: 10;
     top: 0;
     left: 0;
 }

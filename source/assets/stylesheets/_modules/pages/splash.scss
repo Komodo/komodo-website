@@ -51,7 +51,8 @@
 .document-perl,
 .document-tcl,
 .document-python,
-.splash-page
+.splash-page,
+.document-web-ide
 {
     padding-top: 0 !important;
     
@@ -92,7 +93,8 @@
 .container-go,
 .container-tcl,
 .container-perl,
-.container-python
+.container-python,
+.container-web-ide
 {
     header
     {
@@ -110,7 +112,8 @@
 .container-go,
 .container-tcl,
 .container-perl,
-.container-python
+.container-python,
+.container-web-ide
 {
     #splash-header
     {
@@ -156,7 +159,8 @@
     }
 }
 
-.container-php
+.container-php,
+.container-web-ide
 {
     #splash-header #splash-screenshots figure
     {
@@ -250,4 +254,130 @@
     {
         background-image: url(../images/screenshots/splash/win-splash-tcl.png);
     }
+}
+
+.container-web-ide
+{
+    @include media(max-height 800px)
+    {
+        #splash-header
+        {
+            overflow: inherit !important;
+        }
+    }
+    
+    .splash-ko10-tease
+    {
+        position: absolute;
+        left: 0;
+        z-index: 10;
+        width: 157px;
+        height: 157px;
+        background-image: url(../images/misc/ko10tease.png);
+        background-repeat: no-repeat;
+        
+        &:hover
+        {
+            &:after
+            {
+                content:'';
+                z-index: 11;
+                width: 157px;
+                height: 157px;
+                display: block;
+                position: absolute;
+                background: #000;
+                opacity: 0.3;
+                
+                -webkit-clip-path: polygon(0 0, 0 100%, 100% 0);
+                clip-path: polygon(0 0, 0 100%, 100% 0);
+            }
+        }
+    }
+    
+    #screenshots-inner-box
+    {
+        position: absolute;
+        z-index: 11;
+        top: 100px;
+        left: 50%;
+        margin-left: -300px;
+        width: 600px;
+        color: #0A0A0A;
+        background: rgba(255,255,255,0.9);
+        padding: 25px;
+        border-radius: 3px;
+        backdrop-filter: blur(10px);
+        border: 3px solid #3F8AFF;
+        
+        @include media(max-width 599px)
+        {
+            width: 400px;
+            margin-left: -200px;
+        }
+        
+        h2, p
+        {
+            color: #0A0A0A;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        #splash-download-wrap
+        {
+            margin-bottom: 0;
+        }
+    }
+    
+    #splash-download-buttons
+    {
+        .button
+        {
+            width: 300px !important;
+            padding: 18px 15px 16px 15px !important;
+            background: #3F8AFF !important;
+            
+            p { color: #FFF; }
+        }
+    }
+    
+    .quick-features ul
+    {
+        @include media(min-width 650px)
+        {
+            width: calc(33% - 30px) !important;
+        }
+        
+        @include media(max-width 650px)
+        {
+            margin-left: -120px;
+            
+            li
+            {
+                display: inline;
+                
+                &:not(:last-child):after
+                {
+                    content: ", ";
+                }
+            }
+        }
+        
+        padding: 0;
+        
+        &:not(:last-child)
+        {
+            margin-right: 30px !important;
+        }
+    }
+}
+
+.fullscreen-splash
+{
+    
+    #splash-header
+    {
+        height: calc(100vh - 75px) !important;
+    }
+    
 }
