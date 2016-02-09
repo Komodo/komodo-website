@@ -259,6 +259,7 @@ aside
     .inner
     {
         position: fixed;
+        z-index: 999;
         right: 50px;
         bottom: 0;
         padding: 5px 10px;
@@ -327,5 +328,18 @@ aside
     .at4-share-outer
     {
         display: none;
+    }
+}
+
+body.footer-disabled
+{
+    #container
+    {
+        margin-bottom: 0;
+    }
+    
+    #content
+    {
+        padding-bottom: 0;
     }
 }

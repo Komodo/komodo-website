@@ -37,7 +37,7 @@
 
         
     </head>
-    <body>
+    <body class="<%= current_page.data.disableFooter ? "footer-disabled" : "" %>">
 
         <noscript>
             <div id="noscript-warning">
@@ -59,9 +59,12 @@
             <a name="top"></a>
             <%= partial('header') %>
             <%= yield %>
+            <% if not current_page.data.disableFooter %>
             <div id="footer_push"></div>
+            <% end %>
         </div>
 
+        <% if not current_page.data.disableFooter %>
         <!-- Footer -->
         <footer>
             <div class="columns">
@@ -125,6 +128,7 @@
                 </div>
             </div>
         </footer>
+        <% end %>
         
         <!-- Analytics -->
         <% if is_live %>
