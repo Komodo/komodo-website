@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 10 Feb 2016 12:03:53 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 10 Feb 2016 15:02:43 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Debugging with Komodo IDE</title>
+                <link>http://komodoide.com/blog/debugging-with-komodo-ide</link>
+                <pubDate>Wed, 10 Feb 2016 16:00:00 -0800</pubDate>
+                <description>Komodo supports debugging (*IDE ONLY*) for all of it's major dynamic languages which includes Python, PHP, Go, Perl, Tcl, Ruby, NodeJS and JavaScript [...]</description>
+                <guid>http://komodoide.com/blog/debugging-with-komodo-ide</guid>
+            </item>
             <item>
                 <title>Komodo UI/UX & Customization</title>
                 <link>http://komodoide.com/blog/komodo-ui-ux-and-customization</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 24 Sep 2015 17:00:00 -0700</pubDate>
                 <description>We love finding out more about our users and this week we’re sharing a Q&A with Gregg Thomason (aka neurobashing). Gregg is a long-time Komodo user (since version 4 [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason</guid>
-            </item>
-            <item>
-                <title>Komodo IDE User Story: Q&A with Rebecca Billings, Sr. QA Engineer</title>
-                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer</link>
-                <pubDate>Tue, 15 Sep 2015 17:00:00 -0700</pubDate>
-                <description>Komodo IDE and Komodo Edit are being used by tens of thousands of programmers around the world. We've  have been serving the developer community for over 18 years--Komodo turns 15 this year--and it's always great to hear *how* we're helping them [...]</description>
-                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-rebecca-billings-sr-qa-engineer</guid>
             </item>
     </channel>
 </rss>
