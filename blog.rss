@@ -6,14 +6,14 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 18 Feb 2016 12:12:44 -0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Feb 2016 15:12:18 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
             <item>
                 <title>Komodo Packages</title>
-                <link>http://komodoide.com/blog/komodo packages</link>
+                <link>http://komodoide.com/blog/komodo-packages</link>
                 <pubDate>Thu, 18 Feb 2016 16:00:00 -0800</pubDate>
                 <description>In Komodo we have a concept of Packages. A package is any external item that can be added to Komodo [...]</description>
-                <guid>http://komodoide.com/blog/komodo packages</guid>
+                <guid>http://komodoide.com/blog/komodo-packages</guid>
             </item>
             <item>
                 <title>Debugging with Komodo IDE</title>
