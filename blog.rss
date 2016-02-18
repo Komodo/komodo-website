@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 18 Feb 2016 09:12:15 -0800</lastBuildDate>
+        <lastBuildDate>Thu, 18 Feb 2016 12:12:44 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo Packages</title>
+                <link>http://komodoide.com/blog/komodo packages</link>
+                <pubDate>Thu, 18 Feb 2016 16:00:00 -0800</pubDate>
+                <description>In Komodo we have a concept of Packages. A package is any external item that can be added to Komodo [...]</description>
+                <guid>http://komodoide.com/blog/komodo packages</guid>
+            </item>
             <item>
                 <title>Debugging with Komodo IDE</title>
                 <link>http://komodoide.com/blog/debugging-with-komodo-ide</link>
@@ -105,13 +112,6 @@
                 <pubDate>Fri, 2 Oct 2015 17:00:00 -0700</pubDate>
                 <description>Our latest story features long-time Komodo user Ron Stewart. Ron's been using Komodo for over seven years and uses it as his primary development editor. As a project manager, team lead [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-ron-stewart</guid>
-            </item>
-            <item>
-                <title>Komodo IDE User Story: Q&A with Gregg Thomason</title>
-                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason</link>
-                <pubDate>Thu, 24 Sep 2015 17:00:00 -0700</pubDate>
-                <description>We love finding out more about our users and this week we’re sharing a Q&A with Gregg Thomason (aka neurobashing). Gregg is a long-time Komodo user (since version 4 [...]</description>
-                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-gregg-thomason</guid>
             </item>
     </channel>
 </rss>
