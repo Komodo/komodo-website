@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 19 Feb 2016 15:17:30 -0800</lastBuildDate>
+        <lastBuildDate>Wed, 24 Feb 2016 09:34:01 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo's Commando Tool</title>
+                <link>http://komodoide.com/blog/komodos-commando-tool</link>
+                <pubDate>Tue, 23 Feb 2016 16:00:00 -0800</pubDate>
+                <description>Komodo's Commando tool is a workhorse in Komodo. Through the Commando window you can access all of Komodo's internal commands, all toolbox items, open any file on your computer, find code symbols related to your file and project, etc [...]</description>
+                <guid>http://komodoide.com/blog/komodos-commando-tool</guid>
+            </item>
             <item>
                 <title>Komodo Packages</title>
                 <link>http://komodoide.com/blog/komodo-packages</link>
@@ -105,13 +112,6 @@
                 <pubDate>Mon, 5 Oct 2015 17:00:00 -0700</pubDate>
                 <description>We have been hard at work, very hard. Don't believe us? Check out the laundry list of changes below. And that's only the stuff worth an explicit mention. We have only just reached feature-freeze for 9 [...]</description>
                 <guid>http://komodoide.com/blog/first-komodo-9-3-nightly-available</guid>
-            </item>
-            <item>
-                <title>Komodo IDE User Story: Q&A with Ron Stewart</title>
-                <link>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-ron-stewart</link>
-                <pubDate>Fri, 2 Oct 2015 17:00:00 -0700</pubDate>
-                <description>Our latest story features long-time Komodo user Ron Stewart. Ron's been using Komodo for over seven years and uses it as his primary development editor. As a project manager, team lead [...]</description>
-                <guid>http://komodoide.com/blog/komodo-ide-user-story-q-and-a-with-ron-stewart</guid>
             </item>
     </channel>
 </rss>
