@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 1 Mar 2016 09:18:55 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 1 Mar 2016 12:12:28 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Code Intelligence in Komodo</title>
+                <link>http://komodoide.com/blog/code-int</link>
+                <pubDate>Tue, 1 Mar 2016 16:00:00 -0800</pubDate>
+                <description>All of our main languages like, Python, PHP, Ruby, Perl, Javascript, NodeJS, Go, Tcl and HTML, among others have code intelligence support.   Not only does this mean that you get code intelligence for native language functions, classes [...]</description>
+                <guid>http://komodoide.com/blog/code-int</guid>
+            </item>
             <item>
                 <title>Komodo's Commando Tool</title>
                 <link>http://komodoide.com/blog/komodos-commando-tool</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 7 Oct 2015 17:00:00 -0700</pubDate>
                 <description>As many of you are aware, in Komodo IDE we have a feature call Collaboration. It's a simple tool with huge implications.  Collaboration allows you to work with any number of people on a single document or many documents in a session [...]</description>
                 <guid>http://komodoide.com/blog/team-editing-komodo-collaboration-tool</guid>
-            </item>
-            <item>
-                <title>First Komodo 9.3 Nightly Available</title>
-                <link>http://komodoide.com/blog/first-komodo-9-3-nightly-available</link>
-                <pubDate>Mon, 5 Oct 2015 17:00:00 -0700</pubDate>
-                <description>We have been hard at work, very hard. Don't believe us? Check out the laundry list of changes below. And that's only the stuff worth an explicit mention. We have only just reached feature-freeze for 9 [...]</description>
-                <guid>http://komodoide.com/blog/first-komodo-9-3-nightly-available</guid>
             </item>
     </channel>
 </rss>
