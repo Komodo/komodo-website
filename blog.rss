@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 3 Mar 2016 09:02:47 -0800</lastBuildDate>
+        <lastBuildDate>Thu, 3 Mar 2016 15:18:26 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Track Changes: For Programmers Who Sometimes Make Mistakes</title>
+                <link>http://komodoide.com/blog/track-change</link>
+                <pubDate>Thu, 3 Mar 2016 16:00:00 -0800</pubDate>
+                <description>As you may well be aware, I am an excellent programmer.  What you may not be aware of is that I SOMETIMES make mistakes.  When one of these most uncommon events occur [...]</description>
+                <guid>http://komodoide.com/blog/track-change</guid>
+            </item>
             <item>
                 <title>Code Intelligence in Komodo</title>
                 <link>http://komodoide.com/blog/code-int</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 14 Oct 2015 17:00:00 -0700</pubDate>
                 <description>I love the diversity of our users. We've featured prior user stories with developers who first learned to program using FORTRAN or BASIC. Today's story features a Komodo user on the opposite end of that spectrum [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ide-user-story-defman</guid>
-            </item>
-            <item>
-                <title>Team Editing: Komodo Collaboration Tool</title>
-                <link>http://komodoide.com/blog/team-editing-komodo-collaboration-tool</link>
-                <pubDate>Wed, 7 Oct 2015 17:00:00 -0700</pubDate>
-                <description>As many of you are aware, in Komodo IDE we have a feature call Collaboration. It's a simple tool with huge implications.  Collaboration allows you to work with any number of people on a single document or many documents in a session [...]</description>
-                <guid>http://komodoide.com/blog/team-editing-komodo-collaboration-tool</guid>
             </item>
     </channel>
 </rss>
