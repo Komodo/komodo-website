@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 8 Mar 2016 09:02:53 -0800</lastBuildDate>
+        <lastBuildDate>Tue, 8 Mar 2016 21:02:46 -0800</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo File Management</title>
+                <link>http://komodoide.com/blog/file-managem</link>
+                <pubDate>Tue, 8 Mar 2016 16:00:00 -0800</pubDate>
+                <description>Komodo, as it should, provides robust tools to work with your projects files. The first is Komodo's Places pane. Places allows you to easily perform file specific function (eg. contextual SCC commands, publishing commands, copy/paste/cut/delete, etc [...]</description>
+                <guid>http://komodoide.com/blog/file-managem</guid>
+            </item>
             <item>
                 <title>Track Changes: For Programmers Who Sometimes Make Mistakes</title>
                 <link>http://komodoide.com/blog/track-change</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 3 Nov 2015 16:00:00 -0800</pubDate>
                 <description>It's finally here, possibly our most major minor release ever - Komodo 9.3. There is so much in this release we could almost have called it Komodo 10, but we didn't [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-3-released-yours-forever</guid>
-            </item>
-            <item>
-                <title>Komodo IDE User Story: Defman</title>
-                <link>http://komodoide.com/blog/komodo-ide-user-story-defman</link>
-                <pubDate>Wed, 14 Oct 2015 17:00:00 -0700</pubDate>
-                <description>I love the diversity of our users. We've featured prior user stories with developers who first learned to program using FORTRAN or BASIC. Today's story features a Komodo user on the opposite end of that spectrum [...]</description>
-                <guid>http://komodoide.com/blog/komodo-ide-user-story-defman</guid>
             </item>
     </channel>
 </rss>
