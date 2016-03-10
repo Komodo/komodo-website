@@ -11,16 +11,16 @@ nav:
 buttons:
   enabled: false
 pricing: 
-  enabled: true
+  enabled: false
   description: Do you have a promo code?<br/>Enter the code during checkout to get your discount.
   tooltip: ""
 sale:
   prostudio: false
-  komodopersonal: false
   komodo: false
   fivepack: false
 prices:
-  prostudio: 
+  prostudio:
+  komodopersonal:
   komodo: 
   komodous: 
   fivepack:
