@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 29 Mar 2016 09:03:39 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 29 Mar 2016 12:03:10 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Smart Snippets</title>
+                <link>http://komodoide.com/blog/smart-snippets</link>
+                <pubDate>Tue, 29 Mar 2016 17:00:00 -0700</pubDate>
+                <description>Komodo snippets and abbreviations are nothing new to code editing (they've been in Komodo almost since the beginning 15 years ago). But something that Komodo has that others may not...smart snippets [...]</description>
+                <guid>http://komodoide.com/blog/smart-snippets</guid>
+            </item>
             <item>
                 <title>Komodo Quick Bookmarks</title>
                 <link>http://komodoide.com/blog/quick-bookmarks</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 19 Nov 2015 16:00:00 -0800</pubDate>
                 <description>Roughly 3 weeks after our release of 9.3.0 we have 9.3.1 ready for you. This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-3-1-released</guid>
-            </item>
-            <item>
-                <title>Webinar: The One IDE for all Your Needs</title>
-                <link>http://komodoide.com/blog/webinar-the-one-ide-for-all-your-needs</link>
-                <pubDate>Fri, 13 Nov 2015 16:00:00 -0800</pubDate>
-                <description>Komodo has long been the ideal IDE for team development environments, in any industry and for any team size, platform, or language. We recently released Komodo 9.3, packed with tons of great new features [...]</description>
-                <guid>http://komodoide.com/blog/webinar-the-one-ide-for-all-your-needs</guid>
             </item>
     </channel>
 </rss>
