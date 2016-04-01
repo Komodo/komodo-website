@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 31 Mar 2016 03:11:10 -0700</lastBuildDate>
+        <lastBuildDate>Fri, 1 Apr 2016 00:09:42 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Configuring Komodo</title>
+                <link>http://komodoide.com/blog/configuring-komodo</link>
+                <pubDate>Thu, 31 Mar 2016 17:00:00 -0700</pubDate>
+                <description>Komodo has been written with the concept of "make the best guess then allow custom changes".  For 90% of Komodo features, you should simply be able to start Komodo and use it, and it will just work.   At start up [...]</description>
+                <guid>http://komodoide.com/blog/configuring-komodo</guid>
+            </item>
             <item>
                 <title>Smart Snippets</title>
                 <link>http://komodoide.com/blog/smart-snippets</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 24 Nov 2015 16:00:00 -0800</pubDate>
                 <description>Some of you might have heard that Nathan and I took time out of our dev schedules to do an *Intro to Komodo* webinar on the 19th of November, 2015.  What you may not know is that everyone asked a TON of questions [...]</description>
                 <guid>http://komodoide.com/blog/komodo-webinar-questions</guid>
-            </item>
-            <item>
-                <title>Komodo 9.3.1 Released</title>
-                <link>http://komodoide.com/blog/komodo-9-3-1-released</link>
-                <pubDate>Thu, 19 Nov 2015 16:00:00 -0800</pubDate>
-                <description>Roughly 3 weeks after our release of 9.3.0 we have 9.3.1 ready for you. This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues [...]</description>
-                <guid>http://komodoide.com/blog/komodo-9-3-1-released</guid>
             </item>
     </channel>
 </rss>
