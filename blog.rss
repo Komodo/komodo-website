@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 5 Apr 2016 09:03:08 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 5 Apr 2016 12:03:31 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Go-to-Definiton</title>
+                <link>http://komodoide.com/blog/go-to-definition</link>
+                <pubDate>Tue, 5 Apr 2016 17:00:00 -0700</pubDate>
+                <description>Komodo Go to Definition is a helpful tool to quickly see the definition of any construct in your code.  Whether it's a function, a variable, a class, class member or global [...]</description>
+                <guid>http://komodoide.com/blog/go-to-definition</guid>
+            </item>
             <item>
                 <title>Configuring Komodo</title>
                 <link>http://komodoide.com/blog/configuring-komodo</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 8 Dec 2015 16:00:00 -0800</pubDate>
                 <description>A feature that you may or may not be aware of in Komodo is the Quick Bookmarks tool.  The Quick Bookmarks extend bookmarks to make them faster to use by allowing you to access specific bookmarks with a single keystroke [...]</description>
                 <guid>http://komodoide.com/blog/komodo-quick-bookmarks</guid>
-            </item>
-            <item>
-                <title>Komodo Webinar Questions</title>
-                <link>http://komodoide.com/blog/komodo-webinar-questions</link>
-                <pubDate>Tue, 24 Nov 2015 16:00:00 -0800</pubDate>
-                <description>Some of you might have heard that Nathan and I took time out of our dev schedules to do an *Intro to Komodo* webinar on the 19th of November, 2015.  What you may not know is that everyone asked a TON of questions [...]</description>
-                <guid>http://komodoide.com/blog/komodo-webinar-questions</guid>
             </item>
     </channel>
 </rss>

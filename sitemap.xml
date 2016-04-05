@@ -1015,6 +1015,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/go-to-definition/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/2014-05/git-submodules/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1346,6 +1352,12 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/no-brainer-licensing-for-komodo-and-our-other-tools-and-languages/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/Go To Definition/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
