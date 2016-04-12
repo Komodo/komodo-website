@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 12 Apr 2016 09:03:38 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 12 Apr 2016 11:47:30 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 10 Alpha Pre-release Now Available</title>
+                <link>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</link>
+                <pubDate>Mon, 11 Apr 2016 17:00:00 -0700</pubDate>
+                <description> Releasing an alpha/beta of your product is like showing everyone your new baby. Everyone is excited, but he's still very fragile, and you're scared someone might look at them the wrong way. Komodo 10 has come a long way [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</guid>
+            </item>
             <item>
                 <title>Komodo Toolbox</title>
                 <link>http://komodoide.com/blog/komodo-toolbox</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 17 Dec 2015 16:00:00 -0800</pubDate>
                 <description>Time for another maintenance release! This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues.  Most notably, this release fixed the flickering issue on OSX [...]</description>
                 <guid>http://komodoide.com/blog/komodo-9-3-2-rele</guid>
-            </item>
-            <item>
-                <title>Komodo User Story: Jake Day Williams</title>
-                <link>http://komodoide.com/blog/komodo-user-story-jake-day-williams</link>
-                <pubDate>Wed, 16 Dec 2015 16:00:00 -0800</pubDate>
-                <description>Learning a new programming language isn't easy for everyone, and there is no better place than YouTube find a good tutorial to see code in action. In your search to learn PHP or Ruby, you may have stumbled upon Jake Day Williams' channel, WiLDacademy [...]</description>
-                <guid>http://komodoide.com/blog/komodo-user-story-jake-day-williams</guid>
             </item>
     </channel>
 </rss>
