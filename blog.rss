@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 22 Apr 2016 09:03:11 -0700</lastBuildDate>
+        <lastBuildDate>Fri, 22 Apr 2016 09:22:25 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Help Us Test Komodo IDE 10 and We'll Give You $50</title>
+                <link>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</link>
+                <pubDate>Thu, 21 Apr 2016 17:00:00 -0700</pubDate>
+                <description>As you may have heard, we released our Komodo 10 alpha last week so the community can help us run it through its paces. We've already received a ton of helpful bug reports but we want MORE [...]</description>
+                <guid>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</guid>
+            </item>
             <item>
                 <title>Komodo 10 Alpha Pre-release Now Available</title>
                 <link>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 26 Jan 2016 16:00:00 -0800</pubDate>
                 <description>An often overlooked feature in Komodo is the ability to create extensions for highlighting the syntax of new and custom languages. It seems that every week brings news of a new language on the block. The good news is that with a little bit of work [...]</description>
                 <guid>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</guid>
-            </item>
-            <item>
-                <title>Komodo 9.3.2 Released</title>
-                <link>http://komodoide.com/blog/komodo-9-3-2-rele</link>
-                <pubDate>Thu, 17 Dec 2015 16:00:00 -0800</pubDate>
-                <description>Time for another maintenance release! This release is focussed entirely on stability and resolves bugs introduced in 9.3 as well as some longer standing issues.  Most notably, this release fixed the flickering issue on OSX [...]</description>
-                <guid>http://komodoide.com/blog/komodo-9-3-2-rele</guid>
             </item>
     </channel>
 </rss>

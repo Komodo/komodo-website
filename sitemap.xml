@@ -1135,6 +1135,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/blog/2013-09/one-week-left-komodo-ide/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -1369,19 +1375,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/blog/tagged/komodo/</loc>
+    <loc>http://komodoide.com/blog/tagged/test/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/blog/tagged/komodo 10/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/pre-release/</loc>
+    <loc>http://komodoide.com/blog/tagged/alpha/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1393,7 +1393,25 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/blog/tagged/alpha/</loc>
+    <loc>http://komodoide.com/blog/tagged/komodo 10/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/bugs/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/komodo/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/blog/tagged/pre-release/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -1526,12 +1544,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/blog/tagged/fixes/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/blog/tagged/bugs/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
