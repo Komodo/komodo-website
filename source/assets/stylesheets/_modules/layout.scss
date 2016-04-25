@@ -265,7 +265,7 @@ aside
         padding: 5px 10px;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
-        background: #294E5F;
+        background: #4C4C4C;
     }
 
     table, tr, td, a
@@ -275,7 +275,7 @@ aside
         margin: 0;
         padding: 0;
     }
-
+    
     tr:not(.lpStaticButtonTR), .lpStaticButtonTR img
     {
         display: none;
@@ -286,8 +286,7 @@ aside
         content: "Chat With Sales";
         line-height: 1;
         font-weight: bold;
-        
-        @include link($color-header-link, $color-header-link-hover);
+        color: #FFF;
     }
 
     .lpStaticButtonTR a:after

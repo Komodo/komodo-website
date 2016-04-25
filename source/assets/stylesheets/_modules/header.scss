@@ -19,6 +19,8 @@ body.framed header
     
     .outer
     {
+        background: #FFF;
+        border-bottom: 1px solid #dfdede;
         min-height: 75px;
 
         .inner
@@ -45,8 +47,8 @@ body.framed header
     {
         display: inline-block;
         margin-left: 5px;
-        margin-top: 13px;
-        width: 240px;
+        margin-top: 11.5px;
+        width: 157px;
         height: 48px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
         background-size: 100%;
@@ -104,6 +106,7 @@ body.framed header
                         padding: 5px;
                         background: rgba(darken($color-header-background, 5%), 0.9);
                         @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
+                        color: $color-header-menu-link;
 
                         &:hover
                         {
@@ -115,6 +118,11 @@ body.framed header
                 &.has-sub:hover
                 {
                     background: rgba(darken($color-header-background, 5%), 0.9);
+                    
+                    a
+                    {
+                        color: $color-header-menu-link;
+                    }
 
                     ul
                     {
@@ -126,11 +134,10 @@ body.framed header
             li a
             {
                 font-family: $font-header-nav;
-                font-weight: 400;
-                font-size: 13pt;
+                font-weight: 600;
+                font-size: 12pt;
                 color: $color-header-nav-link;
                 text-decoration: none;
-                letter-spacing: 1px;
                 @include link($color-header-nav-link, $color-header-nav-link-hover);
 
                 &:hover
