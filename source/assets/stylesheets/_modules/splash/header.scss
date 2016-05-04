@@ -1,21 +1,7 @@
 #splash-header-outer
 {
-    background: rgba(31,72,94,1);
-    @include linear-gradient(rgb(15, 34, 40) 0%,rgb(48, 87, 107) 80%);
-    @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 400px,rgba(31,72,94,1) 700px,rgba(7,18,22,1) 100%);
-}
-
-.container-python,
-.container-go,
-.container-tcl,
-.container-perl,
-.container-php,
-.container-web-ide
-{
-    #splash-header-outer
-    {
-        @include radial-gradient(ellipse at bottom, rgba(74,98,102,1) 200px,rgba(31,72,94,1) 500px,rgba(7,18,22,1) 100%);
-    }    
+    @include background-image(url(../images/layout/header-bg.png));
+    background-size: 75%;
 }
 
 #splash-header
@@ -238,7 +224,7 @@
                 width: 16px;
                 height: 16px;
                 border-radius: 24px;
-                background: #00AEFF;
+                background: #D39000;
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
                 left: 50%;
                 transition: all ease-out 0.2s;
@@ -256,7 +242,7 @@
                     height: 18px;
                     border-radius: 18px;
                     background: transparent;
-                    border: 2px solid #00AEFF;
+                    border: 2px solid #FFD06D;
                     animation: pulsate 3s ease-out infinite;
                 }
                 
@@ -266,7 +252,7 @@
                     position: absolute;
                     top: 25px;
                     left: -100px;
-                    background: #0090FF;
+                    background: #282828;
                     opacity: 0;
                     color: #F2F2F2;
                     width: 250px;
@@ -278,7 +264,7 @@
                 
                 &:hover
                 {
-                    background: #0090FF;
+                    background: #FFD06D;
                     
                     p
                     {
@@ -376,7 +362,7 @@
         right: 150px;
         bottom: 20px;
         border-radius: 2px;
-        background: #0090FF;
+        background: #c32a1b;
         color: #FFF;
         font-weight: bold;
         font-size: 1.2rem;
@@ -388,7 +374,7 @@
         
         &:hover
         {
-            background: #3E94D6;
+            background: #AA1A0D;
             cursor: pointer;
         }
         
