@@ -189,6 +189,11 @@ body.framed header
             display: none;
         }
         
+        nav > ul li a
+        {
+            @include link($color-header-menu-link, $color-header-menu-link-hover);
+        }
+        
         .nav-wrap
         {
             display: relative;
