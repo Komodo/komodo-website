@@ -159,26 +159,19 @@
     }
 }
 
-.container-php,
 .container-web-ide
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-php.png);
-        }
+        background-image: url(../images/screenshots/splash/web.png);
+    }
+}
 
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-php.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-php.png);
-        }
+.container-php
+{
+    #splash-header #splash-screenshots figure
+    {
+        background-image: url(../images/screenshots/splash/php.png);
     }
 }
 
@@ -186,21 +179,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-python.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-python.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-python.png);
-        }
+        background-image: url(../images/screenshots/splash/python.png);
     }
 }
 
@@ -208,21 +187,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-go.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-go.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-go.png);
-        }
+        background-image: url(../images/screenshots/splash/go.png);
     }
 }
 
@@ -230,21 +195,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-perl.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-perl.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-perl.png);
-        }
+        background-image: url(../images/screenshots/splash/perl.png);
     }
 }
 
@@ -252,7 +203,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        background-image: url(../images/screenshots/splash/win-splash-tcl.png);
+        background-image: url(../images/screenshots/splash/tcl.png);
     }
 }
 

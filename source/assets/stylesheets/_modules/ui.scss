@@ -72,9 +72,18 @@
 
 /* Wrapper - blackout */
 
-.ui-widget-overlay
+#blackout
 {
-    background: rgba(0,0,0,0.5);
+    display: none;
+}
+
+.ui-widget-overlay,
+#blackout
+{
+    @include background-image(url(../images/layout/header-bg.png));
+    background-size: 1550px 480px;
+    opacity: 0.9;
+    
     position: fixed;
     z-index: 100;
     width: 100%;

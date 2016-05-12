@@ -19,6 +19,7 @@
 
 #= require "helpers/localStorage"
 #= require "helpers/handlebars"
+#= require "helpers/easing"
 #= require "twitter"
 
 jQuery ->
@@ -30,6 +31,8 @@ jQuery ->
         fns = [
             rejectOldBrowsers
             highlightCode
+            loadBlackout
+            loadSplashCallouts
             loadSplashScreenshots
             loadTestimonials
             bindAnalytics
@@ -84,45 +87,101 @@ jQuery ->
     # Highlight Code
     highlightCode = ->
         jq('pre code').each (i, e) ->  hljs.highlightBlock e
-
+        
+    loadBlackout = ->
+        blackout = jq("#blackout")
+        blackout.on "click", (e) ->
+            if e.target == blackout[0]
+                blackout.trigger "hide"
+                blackout.fadeOut(100)
+        
+    loadSplashCallouts = ->
+        return unless jq("#splash-screenshots").length
+    
+        childWidth = 600
+        childHeight = 200
+        animDuration = 200
+        
+        $("#selectors > *").on "click", ->
+            selector = jq this
+            selector.children().children().css(opacity: 0);
+            selector.children().show();
+            
+            children = selector.children().children()
+            offset = selector.offset()
+            
+            delay = 0
+            childNo = 0
+            totalHeight = children.length * childHeight
+            
+            leftPos = Math.round((window.innerWidth/2) - (childWidth / 2))
+            topPos = Math.round((window.innerHeight/2) - (totalHeight / 2))
+            
+            jq("#blackout").fadeIn(children.length * animDuration)
+            jq("#blackout").on "hide", ->
+                jq("body > .callout").hide 100, ->
+                    jq(this).remove()
+            
+            children.each ->
+                child = jq this
+                child = child.clone()
+                child.appendTo("body")
+                child.addClass("callout")
+                child.css({left: offset.left, top: offset.top})
+                child.children("img").css({opacity: 0})
+                child.delay(delay).animate({
+                    opacity: 1,
+                    left: leftPos,
+                    top: topPos + (childHeight * childNo)
+                }, animDuration, 'easeOutBack')
+                childNo++
+                delay+= animDuration
+                
+            setTimeout(
+                -> jq("body > .callout > img").animate({opacity: 1}, 100),
+                delay)
+            
+                
     # Splash Screenshots
     loadSplashScreenshots = ->
-        ss = jq("#splash-screenshots")
+        ss = jq("#splash-screenshots figure")
         return unless ss.length
     
-        platform = window.navigator.platform.toLowerCase()
-        if platform.indexOf("linux") != -1
-            platform = "linux"
-        else if platform.indexOf("win") != -1
-            platform = "windows"
-        else if platform.indexOf("mac") != -1
-            platform = "osx"
-            
-        ss.addClass("using-" + platform)
-
-        elem = ss.find(".splash-" + platform)
-        oldPrimary = ss.find(".primary")
-
-        if elem and !elem.hasClass("primary")
-            if elem.hasClass("secondary")
-                elemClass = "secondary"
-            else
-                elemClass = "tertiary"
-
-            elem.removeClass elemClass
-            elem.addClass "primary"
-            oldPrimary.removeClass "primary"
-            oldPrimary.addClass elemClass
-
-        ss.find(".promotion").appendTo ss.find(".primary")
-        ss.find(".twitter-follow-button").appendTo ss.find(".primary")
+        ignoreNext = false
         
-        elem.click ->
-            image = elem.css("background-image").replace(/url\((?:"|'|)/,'').replace(/(?:"|'|)\)/,'')
-            jq.magnificPopup.open {
-                items: src: image
-                type: 'image'
-            }
+        ss.each ->
+            shot = jq this
+            shot.data("original-width", shot.width())
+    
+        ss.on "mouseover", ->
+            if ignoreNext
+                ignoreNext = false
+                return
+            
+            shot = jq this
+            siblings = shot.prevAll("figure")
+            stop = false
+            
+            maxWidth = 40 + (siblings.length * 40)
+            
+            siblings.each ->
+                sibling = jq this
+                maxWidth = maxWidth - 40
+                sibling.stop().animate({width: maxWidth}, 'easeInOutBack')
+                
+            ignoreNext = true
+            
+        jq("#splash-screenshots").on "mouseout", (e) ->
+            ignoreNext = false
+            
+            t = jq e.relatedTarget
+            if t.attr("id") and t.attr("id").indexOf("selector") == 0
+                return
+            
+            ss.each ->
+                shot = jq this
+                if shot.data("original-width") and shot.data("original-width") != shot.width()
+                    shot.stop().animate({width: shot.data("original-width")})
 
     # Load Testimonials
     loadTestimonials = ->
