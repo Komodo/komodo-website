@@ -98,8 +98,6 @@ jQuery ->
     loadSplashCallouts = ->
         return unless jq("#splash-screenshots").length
     
-        childWidth = 600
-        childHeight = 200
         animDurationTotal = 400
         
         $("#selectors > *").on "click", ->
@@ -107,6 +105,14 @@ jQuery ->
             
             children = selector.children().children()
             offset = selector.offset()
+            
+            # sync with header.scss
+            if window.innerWidth > 650 and window.innerHeight > 800
+                childWidth = 600
+                childHeight = 200
+            else
+                childWidth = 400
+                childHeight = 110
             
             animDuration = Math.round(animDurationTotal / children.length)
             delay = 0
@@ -117,14 +123,20 @@ jQuery ->
             topPos = Math.round((window.innerHeight/2) - (totalHeight / 2))
             
             jq("#blackout").fadeIn(children.length * animDuration)
-            jq("#blackout").on "hide", ->
-                jq("body > .callout").hide 100, ->
+            
+            callouts = jq("#callouts")
+            callouts.show()
+            jq("#blackout").on "hide", (e) ->
+                
+                jq("#callouts > .callout").hide 100, ->
                     jq(this).remove()
+                    callouts.hide()
+                    jq("#blackout").fadeOut(100)
             
             children.each ->
                 child = jq this
                 child = child.clone()
-                child.appendTo("body")
+                child.appendTo("#callouts")
                 child.addClass("callout")
                 child.css({opacity: 0, left: offset.left, top: offset.top})
                 child.children("img").css({opacity: 0})
@@ -137,7 +149,7 @@ jQuery ->
                 delay+= animDuration
                 
             setTimeout(
-                -> jq("body > .callout > img").animate({opacity: 1}, 100),
+                -> jq("#callouts > .callout > img").animate({opacity: 1}, 100),
                 delay)
             
                 

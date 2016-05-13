@@ -240,7 +240,9 @@
             font-size: 24px;
             position: absolute;
             top: -30px;
-            right: 20px;
+            left: 50%;
+            margin-left: 380px;
+            width: 200px;
         }
         
         .platforms
@@ -248,7 +250,9 @@
             font-size: 48px;
             position: absolute;
             top: -58px;
-            left: 20px;
+            left: 50%;
+            margin-left: -550px;
+            width: 155px;
         }
         
         @include keyframes(border-pulse) {
@@ -459,27 +463,67 @@
     
 }
 
-.callout
+#callouts
 {
-    list-style: none;
+    display: none;
     position: fixed;
-    z-index: 110;
-    width: 600px;
-    height: 180px;
-    background: rgb(61, 61, 61);
-    color: #FFF;
+    left: 50%;
+    top: 50%;
+    z-index: 115;
     
-    img
+    @media screen and (max-height: 800px), screen and (max-width: 650px)
     {
-        max-width: 180px;
-        max-height: 180px;
-        margin-right: 10px;
-        float: left;
+        .callout
+        {
+            height: 100px !important;
+            width: 400px !important;
+            
+            h2
+            {
+                font-size: 14px;
+            }
+            
+            h2, p
+            {
+                margin: 5px 0;
+            }
+            
+            span
+            {
+                font-size: 10px;
+                line-height: 15px;
+            }
+            
+            img
+            {
+                max-width: 100px !important;
+                max-height: 100px !important;
+            }
+        }
     }
     
-    span
+    .callout
     {
-        display: block;
-        padding: 10px;
+        list-style: none;
+        position: fixed;
+        z-index: 110;
+        width: 600px;
+        height: 180px;
+        background: rgb(61, 61, 61);
+        color: #FFF;
+        
+        img
+        {
+            max-width: 180px;
+            max-height: 180px;
+            margin-right: 10px;
+            float: left;
+        }
+        
+        span
+        {
+            display: block;
+            padding: 10px;
+        }
     }
 }
