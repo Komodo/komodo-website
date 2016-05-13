@@ -38,6 +38,11 @@
         font-size: 14pt;
         font-weight: 300;
     }
+    
+    strong
+    {
+        font-size: 14pt;
+    }
 
     h1
     {
@@ -48,9 +53,28 @@
     
     h2
     {
-        font-size: 21px;
+        font-size: 21pt;
         font-weight: 400;
         margin: 30px 0 0;
+    }
+    
+    #splash-description-continued
+    {
+        margin: 30px 0 0;
+        
+        h3
+        {
+            font-size: 16pt;
+            font-weight: 700;
+            margin: 0 0 15px;
+            line-height: 24px;
+        }
+        
+        p, .spaced, .button
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
     
     #splash-description

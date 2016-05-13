@@ -12,7 +12,7 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 
 %button
 {
-    font-size: 9.5pt;
+    font-size: 9.5pt !important;
     font-weight: bold;
     padding: 8px;
     color: #FFF;
@@ -22,6 +22,13 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     @include transition(box-shadow 0.1s ease-in-out, color 0.2s ease-in-out);
     border-radius: 2px;
     text-align: center;
+    
+    p
+    {
+        font-size: 8pt !important;
+        margin: 0 !important;
+        font-weight: normal !important;
+    }
 
     &:hover
     {
@@ -32,8 +39,13 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
     &.big
     {
         font-family: $font-impact;
-        font-size: 14pt;
+        font-size: 14pt !important;
         padding: 15px 20px;
+        
+        p
+        {
+            font-size: 10pt !important;
+        }
     }
 
     &.small
@@ -51,12 +63,14 @@ $font-mono: Monaco, Consolas, "Lucida Console", monospace;
 %button-green
 {
     @extend %button;
+    color: #FFF !important;
     @include gradient-green;
 }
 
 %button-grey
 {
     @extend %button;
+    color: #FFF !important;
     @include gradient-grey;
 }
 
