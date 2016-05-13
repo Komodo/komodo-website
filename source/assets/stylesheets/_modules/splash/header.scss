@@ -243,6 +243,14 @@
             right: 20px;
         }
         
+        .platforms
+        {
+            font-size: 48px;
+            position: absolute;
+            top: -58px;
+            left: 20px;
+        }
+        
         @include keyframes(border-pulse) {
             0% {
                 border: 2px solid rgba(221,172,46, 0.2);
