@@ -104,8 +104,6 @@ jQuery ->
         
         $("#selectors > *").on "click", ->
             selector = jq this
-            selector.children().children().css(opacity: 0);
-            selector.children().show();
             
             children = selector.children().children()
             offset = selector.offset()
@@ -127,7 +125,7 @@ jQuery ->
                 child = child.clone()
                 child.appendTo("body")
                 child.addClass("callout")
-                child.css({left: offset.left, top: offset.top})
+                child.css({opacity: 0, left: offset.left, top: offset.top})
                 child.children("img").css({opacity: 0})
                 child.delay(delay).animate({
                     opacity: 1,
