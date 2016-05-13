@@ -56,6 +56,39 @@
     #splash-description
     {
         margin: 30px 0 30px;
+        
+        & > img
+        {
+            float: left;
+        }
+        
+        & > p,
+        & > h1,
+        & > h2
+        {
+            margin-left: 260px;
+        }
+        
+        @include media(max-width 800px)
+        {
+            & > img
+            {
+                float: none;
+            }
+            
+            & > p,
+            & > h1,
+            & > h2
+            {
+                margin-left: 0 !important;
+            }
+        }
+        
+        & > p
+        {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
         .more
         {
@@ -108,13 +141,7 @@
 
     #splash-description
     {
-        text-align: center;
-        
-        p
-        {
-            margin: auto;
-            width: 80%;
-        }
+        text-align: left;
         
         a.php
         {
@@ -247,12 +274,18 @@
         
         .platforms
         {
+            opacity: 0.3;
             font-size: 48px;
             position: absolute;
             top: -58px;
             left: 50%;
             margin-left: -550px;
             width: 155px;
+            
+            &:hover
+            {
+                opacity: 1;
+            }
         }
         
         @include keyframes(border-pulse) {
@@ -384,6 +417,11 @@
             }
         }
         
+    }
+    
+    #splash-download-edit
+    {
+        margin: 30px 0 10px;
     }
 
     /* Download Buttons */
