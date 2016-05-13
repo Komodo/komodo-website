@@ -100,7 +100,7 @@ jQuery ->
     
         childWidth = 600
         childHeight = 200
-        animDuration = 200
+        animDurationTotal = 400
         
         $("#selectors > *").on "click", ->
             selector = jq this
@@ -108,6 +108,7 @@ jQuery ->
             children = selector.children().children()
             offset = selector.offset()
             
+            animDuration = Math.round(animDurationTotal / children.length)
             delay = 0
             childNo = 0
             totalHeight = children.length * childHeight
