@@ -115,11 +115,10 @@
                 text-align: left;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 
-                & > a.lightbox
+                & > img
                 {
-                    min-width: 400px;
+                    max-width: 400px;
                     margin-right: 15px;
                 }
                 
