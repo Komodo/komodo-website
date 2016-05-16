@@ -136,14 +136,6 @@
 {
     #splash-header
     {
-        height: 750px !important;
-        
-        @include media(max-width 650px)
-        {
-            height: 800px !important;
-            min-width: 480px;
-        }
-        
         h1
         {
             margin-bottom: 10px;
