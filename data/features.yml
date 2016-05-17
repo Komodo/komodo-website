@@ -4,176 +4,77 @@
   icon: star
   groups:
     -
-      name: 9.3
-      id: 93
+      name: 10
+      id: 10
       items:
         - 
-          name: Language Updates
-          description: Support for PHP 7 and Python 3.5, syntax highlighting & checking support for Lua, Syntax highlighting support for Swift, Mustache, R Lang.
-          img: languages93.png
+          name: Chrome Remote Debugging (IDE)
+          description: Debug your code in Chrome, from Komodo! No more context switching or locating the same code you've been working on again in the Chrome dev tools. You can write code, place breakpoints and debug all right from inside Komodo.
+          img: chromedebug.png
         - 
-          name: Documentation browser (IDE)
-          description: Allows you to quickly navigate the documentation for our codeintel supported languages. Giving you quick access to basic documentation, with shortcuts to online documentation and contextual actions (insert snippet). This is entirely keyboard driven through Commando.
-          img: docs.gif
+          name: Gulp, Grunt, NPM task runner Integration (IDE)
+          description: Komodo now integrates with Gulp, Grunt and NPM tasks. The integration allows you to run commands for those task runners in your shell scope (inside Commando), it also adds a button to your dynamic toolbar (new in Komodo 10) which lets you quickly run commands via those task runners.
+          img: gulp.png
         - 
-          name: Run Code In-Line (IDE)
-          description: Hit a shortcut to run the current file using the configured interpreter, then quickly review its results. Useful to quickly test bits of code. This works on unsaved files as well as selections (ie. run only the selected text).
-          img: runinline.gif
+          name: PhoneGap & Cordova Integration (IDE)
+          description: Quickly access PhoneGap and Cordova via your "dynamic toolbar", as well as interact with them via the Commando shell scope. Komodo automatically detects your configuration and provides contextual actions.
+          img: cordova.png
+        -
+          name: Support For React, Ember, Angular, TypeScript, ES6
+          description: We've put a lot of focus on individual frameworks in Komodo 10, a trend you can expect to continue. With this iteration we focused on some of the most popular JS frameworks and derivatives.
+          img: react.png
         - 
-          name: Quick Bookmarks
-          description: Quickly place numeric bookmarks and go to them, allowing you to use bookmarks as more than just reminders. Hit Ctrl+Shift+number to place a quick bookmark, then hit Ctrl+number to go to that bookmark.
-          img: quickbookmarks.gif
+          name: Ruby 2.1+ Debugging (IDE)
+          description: In addition to Ruby 1.x and 2.0 Debugging you can now debug Ruby 2.1 and beyond. This also includes REPL support for these versions.
+          img: rubydebug.png
         - 
-          name: Console Pane
-          description: The new Console pane allows you to interact with the Komodo runtime much in the same way as you would use your browser developer tools console to interact with a website. This is especially useful for developers wanting to customize their Komodo experience.
-          img: console.gif
+          name: Symbol Browser (IDE)
+          description: The section scope (inside Commando) now allows you to browse symbols across your entire project. So you can easily jump to classes, functions, properties, or other symbols no matter where they are in your project.
+          img: symbol.png
         - 
-          name: CSS Auto-Completions
-          description: CSS, LESS, and SCSS files now support auto-completions and code browsing. This will also work when editing HTML and using CSS classes or ID's in your markup. With the 9.3.0 release this only works for CSS files living at the same or a lower level as the HTML file, we will very soon be supporting this project wide.
-          img: css-completions.gif
+          name: New Interface
+          description: The entire user interface has been given a big facelift. This facelift isn't just about making Komodo more attractive and enjoyable to use; a ton of user experience work has gone into the facelift, making Komodo 10 the most user friendly Komodo we've ever released. Don't like the new colors? Change them using the color scheme editor.
+          img: ui.png
         - 
-          name: Auto-Wrap Delimiters
-          description: When pressing a delimiter (eg. double quotes) while having text selected the text will be wrapped by that delimiter. Delimiters are configurable from your Preferences and can be disabled entirely.
-          img: autowrap.gif
+          name: First Start Wizard
+          description: When you first start Komodo (or when you update between major versions) Komodo will now show you a short and simple first start wizard that lets you customize Komodo to your likings. Tabs or spaces? The bias is all yours.
+          img: wizard.png
         - 
-          name: Auto multi-caret for HTML/XML tags
-          description: When selecting an HTML (XML) tag the corresponding start/end tag will also be selected, allowing you to change the start and end tag without having to select each individually.
-          img: xml-carets.gif
+          name: New Default Keybindings
+          description: New default key bindings that are based on industry standards and cold hard logic; if it doesn't make sense it shouldn't be a (default) keybind.
+          img: keybinds.png
         - 
-          name: Elastic Tabstops
-          markdown: true
-          description: Komodo now supports [Elastic Tabstops](http://nickgravgaard.com/elastic-tabstops/). Since this is intended only for files that use tab characters for indentation it is disabled by default. You can enable it under Indentation Preferences.
-          img: tabstop.gif
+          name: Other Editor Keybindings
+          description: Keybindings for other editors and IDE's are now available in Komodo, allowing for an easy transition from your old editor.
+          img: quickbookmarks.png
+          img: keybinds2.png
+        - 
+          name: New Version Control UX
+          description: The version control user experience has been completely overhauled, making for easier and more intuitive interaction with your repositories.
+          img: vcs.png
+        -
+          name: Improved PHP CodeIntel
+          description: Komodo 10 supports PSR4, allowing for smarter CodeIntel for all PHP frameworks that use the PSR4 specification.
+        -
+          name: Improved JavaScript CodeIntel
+          description: Enhancements have been made in JS module detection and general JS parsing, making Komodo 10's JS support the best it's ever been.
+        -
+          name: Performance Improvements
+          description: Komodo 10 has received significant performance improvements. File opening, closing, saving, typing, .. you name it. Additionally we've fixed a long standing memory leak which caused users to have to restart Komodo every few days, that should no longer be the case.
         -
           name: And so much more!
           markdown: true
           class_names: extra markdown
           description: |
-            * **In-line Syntax Checking:** When syntax errors/warnings occur a small notification popup will show at the bottom right corner of your editor window.
-            * **Package Manager 2.0:** You can now fully manage your packages via Komodo, ie. uninstall, update, etc. (the previous version only allowed you to install). Advanced functionality currently only works for addons, skins, and languages.
-            * **Enhanced Multi-Caret Mode:** Multiple caret mode is now much more flexible and useful, allowing for more complex actions than before. You can also now set multi-carets with ctrl+click.
-            * **Embedded Find/Replace:** Find and replace has been significantly overhauled and is now part of the editor (rather than a popup dialog).
-            * **Multiple Find Result Tabs:** Every search now opens in its own result tab, you are no longer limited to 2 tabs. Find results now also show a new input field that allow you to search again with the same input but a different search pattern.
-            * **Macros renamed to Userscripts:** Toolbox Macros have been renamed to Userscripts. Macros also still exist but only through the toolbar or menu interface. When you save them to your toolbox they effectively become userscripts.
-            * **Quick Start on Tabs:** When opening a new tab you now get a view that lets you pick what to do with the tab; eg. create a new file, open files, new file from template, recent file, etc.
-            * **New & Improved File Icons:** The language icons have been updated to be more distinctive and less generic looking.
-            * **Commando has gotten a visual overhaul:** More lightweight, no borders or gradients. Commando now feels as lightweight as it is.
-            * **Tons and tons of UX improvements:** An ongoing effort to make Komodo the most user friendly IDE out there by many miles.
-    -
-      name: 9.2
-      id: 92
-      items:
-        - 
-          name: Docker and Vagrant Integration (IDE)
-          description: Commando now allows you to work with Docker and Vagrant directly within Komodo, thus decreasing disruptions and wasted time. You will be able to see your instance names and commands directly from the Commando panel, negating the need to be intimately knowledgeable with Docker and Vagrant.
-          img: docker.png
-        - 
-          name: Collaboration Improvements (IDE)
-          description: Collaboration has been given a significant face-lift and is now a joy to work with! Most notable are the new caret flags, indicating what your colleagues are editing. Code better with your teams with our updated collab tool.
-          img: collab.png
-        - 
-          name: Real-Time Spell Checking (IDE)
-          description: Automatically check for spelling errors in real-time, in-line with the code. Spelling errors can be easily found and corrected within the editor.
-          img: spelling.png
-        - 
-          name: Komodo Package Installer
-          description: A new package installer allows packages such as add-ons, color schemes, skins, keybindings, and languages, to be installed directly from inside Komodo, providing easier access to new functionality and allowing developers to quickly turn to community contributions for specialized functionality to meet project requirements. 
-          img: packages.png
-        - 
-          name: EditorConfig Integration
-          description: We now offer EditorConfig integration, allowing developers to define and maintain consistent coding styles between different projects, editors and IDEs. No more worrying about eg. consistent indentation across your project when working with multiple developers.
-          img: editorconfig.png
-        - 
-          name: Focus (Distraction-Free) Mode
-          description: With a single keystroke, you can hide non-essential UI elements to pare down the Komodo UI and focus on your code. This is ideal if you like a clean minimalistic editor but sometimes just NEED to access some of the more advanced and crucial UI elements.
-          img: focusmode.png
-        - 
-          name: Crisper UI
-          description: The UI is now even more clear  (particularly when using dark color schemes). Minor as it may seem, those small bevels and fuzzy borders were taking away from an otherwise perfect experience.
-          img: crisp.png
-    -
-      name: 9.1
-      id: 91
-      items:
-        - 
-          name: Package Manager Integration (IDE)
-          description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard. Commando will allow you to search for available and installed packages, and even for package managers that generally make this task fairly cumbersome (i.e. NPM and CPANM). Available for Bower, NPM, Composer, Gem, PIP, CPAN, PyPM and PPM.
-          img: packagemanager.png
-          video: /screencasts/package-manager-integration/
-        - 
-          name: Shell Scope (IDE)
-          description: Easily run commands from Komodo right from Commando. Of course you could already run commands from Komodo, but now you can do it in style and without interrupting your workflow.
-          img: shell.png
-          video: /screencasts/commando-shell-scope/
-        - 
-          name: Improved Workspace Management (IDE)
-          description: We've significantly improved the workspace management functionality in Komodo IDE. Easily create your own custom configurations for Komodo and load them on the fly.
-          img: workspaces.png
-          video: /screencasts/custom-workspaces/
-    -
-      name: 9.0
-      id: 90
-      items:
-        - 
-          name: Track Changes
-          description: The editor has gained a new left margin, which highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin shows a diff dialog of the changes, and allows you to revert individual changes. Sweet!
-          img: trackchanges.png
-          video: /screencasts/track-changes/
-        -
-          name: Commando (Go to Anything)
-          description: This powerful popup dialog is the combined successor of the Fast Open and Invoke Tool dialogs in previous versions of Komodo. Commando provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
-          img: commando.png
-          video: /screencasts/commando-go-to-anything/
-        -
-          name: GoLang Support
-          description: Google Go (GoLang) is now supported in Komodo, and features syntax coloring, code folding, syntax checking (linting) and code intelligence
-          img: golang.png
-        -
-          name: Markdown Viewer
-          description: For Markdown files, Komodo provides a preview of the generated HTML directly within a Komodo split view and contents dynamically update  whenever you make a change to the Markdown text - it doesn't even need to be saved.
-          img: markdown.png
-          video: /screencasts/markdown-viewer/
-        -
-          name: <a href="http://kopy.io">Kopy.io</a> Helper
-          description: >
-            Like pastebin, now you can easily share snippets of code with other people directly from Komodo. Simply make a text selection and use the editor: right-click context menu and choose Share Code via <a href="http://kopy.io">Kopy.io</a>. <a href="http://kopy.io">Kopy.io</a> supports client side encryption, so you can make those shared pastes more secure.
-          img: kopy.png
-        -
-          name: Color Schemes and Themes
-          description: We've updated the Komodo color schemes and we've made <em>Tomorrow_Dark</em> the new default Komodo color scheme (a dark-based scheme). The Komodo UI has been updated to match the latest operating systems, so Komodo now looks even better. We also added the ability to tweak the editor line height spacing.
-          img: schemes.png
-        -
-          name: Notifications
-          description: Notification messages shown to the user now appear in a separate popup panel that overlays the main Komodo editor window (they previously appeared in the Komodo statusbar). This makes for a more intuitive and informative use of Komodo; no more asking yourself "What just happened?".
-          img: notify.png
-        -
-          name: Language Icons
-          description: Language icons have been overhauled to be consistent and easily identifiable by their colors and emblems. Komodo dynamically generates new icons for filetypes that it has not previously encountered, so you'll always have unique icons for each language.
-          img: lang-icons.png
-        -
-          name: New Developer SDK
-          description: An overhaul of the Komodo APIs makes it easier to load and access the methods inside of Komodo. We're now making use of CommonJS (aka Node.js) require() calls to load individual modules.
-          img: sdk.png
-        -
-          name: Language Support
-          description: |
-            * *PHP Updates:* We've added support for PHP 5.6, with a new Xdebug module (for PHP debugging and Code Profiling), updates for keyword changes and updates to code intelligence to provide the latest API data for PHP 5.6.
-            * *Python Updates:* Python 3.4 is fully supported for syntax checking, debugging, code intelligence, etc…
-              We've also added PEP 8 syntax checking - you can enable this in the Python Syntax Checking preferences.
-          markdown: true
-          class_names: extra markdown
-        -
-          name: And Lots More!
-          description: |
-            * Changes to the file, language, places, toolbox, preference page and code intelligence icons
-            * The menu bar (i.e. the File, Edit, etc.) is now hidden by default on Windows and Linux. Use Alt to toggle the menu visibility.
-            * Tons of Performance Improvements
-            * Preferences dialog improvements, simpler and easier to apply preferences
-            * High DPI/Retina fixes/improvements
-            * Komodo start page has been removed and replaced by a "Quick Launch" page
-            * [And much, much more](/changelog/latest)
-          markdown: true
-          class_names: extra markdown
+            * Entire UI is not skinnable using the color scheme editor
+            * Improved source code control UI and UX (IDE only)
+            * New SCC Commit Dialog (IDE only)
+            * New SCC Widget (IDE only)
+            * Improved unit testing UI and UX (IDE only)
+            * Improved color picker UI and UX
+            * New color scheme editor
+            * New UI SDK (used in our new [First Start Wizard](https://github.com/Komodo/KomodoEdit/blob/10.0.0-alpha1/src/chrome/komodo/content/startupWizard/startupWizard.js#L53))
+            * and much much more ..
 - 
   name: Advanced Editor
   description: A powerful editor that facilitates anything you can dream of 
@@ -183,12 +84,10 @@
     -
       name: Track Changes
       description: A margin in the editor highlights unsaved changes, as well as any uncommitted SCC changes. Clicking on the margin will show a diff dialog allowing you to revert changes.
-      isNew: true
       video: /screencasts/track-changes/
     -
       name: Markdown Viewer
       description: Komodo provides a preview of the generated HTML directly within a split view and will update itself whenever you make a change to the Markdown text.
-      isNew: true
       video: /screencasts/markdown-viewer/
     - 
       name: Multiple Selections
@@ -197,7 +96,6 @@
     -
       name: Quick Bookmarks
       description: Quickly place numeric bookmarks and go to them, allowing you to use bookmarks as more than just reminders.
-      isNew: true
     - 
       name: Code Folding / Code Blocks
       description: Code folding<br>Column/block editing,<br>Line/block commenting and more
@@ -227,13 +125,16 @@
     - 
       name: Elastic Tabstops
       description: Komodo automatically indents your code as you type, see <a href="http://nickgravgaard.com/elastic-tabstops/">Elastic Tabstops</a>.
-      isNew: true
 - 
   name: Code Intelligence
   description: Focus on your coding, and let Komodo sweat the details
   id: codeintel
   icon: lightbulb-o
-  items: 
+  items:
+    - 
+      name: Symbol Browser
+      description: Quickly find symbols (classes, methods, etc) across your projects.
+      isNew: true
     - 
       name: Code Refactoring
       description: Smart code transformation capabilities include Rename Variable, Rename Class Member, and Method Extraction.
@@ -271,7 +172,11 @@
   items: 
     - 
       name: Graphical Debugger
-      description: PHP 4.4 - latest, Python 2.4 - latest, Perl 5.*, Ruby 1.8 - 2.0, Tcl 8.4 - latest, Node.js
+      description: PHP 4.4 - latest, Python 2.4 - latest, Perl 5.*, Ruby, Tcl 8.4 - latest, Node.js
+    - 
+      name: Chrome Debugging
+      isNew: true
+      description: Debug web apps running in Google Chrome using Komodo
     - 
       name: Breakpoint Configuration
       description: Set properties such as break on file, line, condition, function calls and returns, exceptions, etc.
@@ -305,18 +210,20 @@
   description: All the tools you need in one IDE
   id: tools
   icon: plus
-  items: 
+  items:
+    - 
+      name: Build System Integrations
+      description: Quickly run build system commands, integrates with PhoneGap, Cordova, Gulp, Grunt, NPM
+      isNew: true
     - 
       name: Documentation browser
       description: Allows you to quickly navigate the documentation for our codeintel supported languages.
-      isNew: true
     - 
       name: Version Control Systems
       description: Support for Subversion, Mercurial, Git, CVS, Perforce and Bazaar.
     -
       name: Run Code In-Line
       description: Hit a shortcut to run the current the buffer using the configured interpreter, then quickly review its results.
-      isNew: true
     - 
       name: Interactive Shells
       description: Available for Python, Ruby, Perl and Tcl.
@@ -335,7 +242,6 @@
     -
       name: Package Manager Integration
       description: Easily manage your project dependencies right from Komodo, using nothing but your keyboard.
-      isNew: true
       video: /screencasts/package-manager-integration/
     - 
       name: Toolbox
@@ -349,7 +255,6 @@
     -
       name: <a href="http://kopy.io">Kopy.io</a> Helper
       description: Easily share snippets of code with other people directly from Komodo.
-      isNew: true
 - 
   name: Workflow and File Management
   name_short: File Management
@@ -360,7 +265,6 @@
     -
       name: Commando
       description: Provides fuzzy matching, match highlighting, search for files (find any file under a folder), toolbox search, bookmark integration, shortcuts (go-tool) integration as well as custom category filtering.
-      isNew: true
       video: /screencasts/commando-go-to-anything/
     - 
       name: Breadcrumbs Navigation
@@ -369,11 +273,9 @@
     -
       name: Shell Commands
       description: Easily run shell commands right from Komodo using Commando.
-      isNew: true
     -
       name: Custom Workspaces
       description: Easily create your own custom workspaces and load them on the fly.
-      isNew: true
     - 
       name: Open Files Side Pane
       description: New side pane organizes all your open files by language.
@@ -400,7 +302,6 @@
     -
       name: Notifications
       description: Shows messages upon triggered operations, allowing for intuitive use of the editor.
-      isNew: true
 - 
   name: Add-Ons and Customization
   name_short: Customization
@@ -411,7 +312,6 @@
     - 
       name: Console Pane
       description: The new Console pane allows you to interact with the Komodo runtime much in the same way as you would use your browser developer tools console to interact with a website.
-      isNew: true
     - 
       name: Floating Side Panes
       description: Undock components and move them anywhere on screen.
@@ -473,6 +373,10 @@
     - 
       name: Debugging
       description: Python, PHP, Perl, Ruby, Node.js, Tcl, XSLT
+    - 
+      name: New Editing Languages
+      isNew: true
+      description: React, Ember, Angular, TypeScript, ES6
     - 
       name: Editing
       description: >

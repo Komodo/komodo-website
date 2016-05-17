@@ -16,14 +16,14 @@ pricing:
   tooltip: ""
 sale:
   prostudio: false
-  komodo: false
-  fivepack: false
+  komodo: true
+  fivepack: true
 prices:
-  prostudio:
+  prostudio: 495
   komodopersonal:
-  komodo: 
-  komodous: 
-  fivepack:
+  komodo: 245
+  komodous: 344
+  fivepack: 1425
 global:
   enabled: false
   description: To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!

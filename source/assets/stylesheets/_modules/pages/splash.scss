@@ -3,6 +3,26 @@
 @import '../splash/addons';
 @import '../splash/news';
 
+.splash-block
+{
+    @include outer-container;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    
+    .spaced
+    {
+        padding: 10px 0;
+    }
+}
+
+.splash-block-background
+{
+    @include background-image(url(../images/layout/header-bg.png));
+    background-size: 1550px 480px;
+    color: $color-header-base;
+    padding-top: 1px;
+}
+
 .document-index
 {
     padding: 0 !important;
@@ -112,19 +132,10 @@
 .container-go,
 .container-tcl,
 .container-perl,
-.container-python,
-.container-web-ide
+.container-python
 {
     #splash-header
     {
-        height: 750px !important;
-        
-        @include media(max-width 650px)
-        {
-            height: 800px !important;
-            min-width: 480px;
-        }
-        
         h1
         {
             margin-bottom: 10px;
@@ -159,26 +170,110 @@
     }
 }
 
-.container-php,
 .container-web-ide
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
+        background-image: url(../images/screenshots/splash/web.png);
+    }
+    
+    #splash-description
+    {
+        text-align: center !important;
+    }
+    
+    #splash-description-continued
+    {
+        h3
         {
-            background-image: url(../images/screenshots/splash/win-splash-php.png);
+            height: 36pt;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .testimonials
+        {
+            p
+            {
+                font-size: 16pt;
+            }
+            
+            p.colored
+            {
+                color: #FCB315;
+            }
+        }
+    }
+    
+    .splash-block .testimonials
+    {
+        &, li
+        {
+            margin: 0;
+            list-style: none;
+        }
+        
+        li
+        {
+            font-size: 18pt;
+            margin-bottom: 25px;
+        }
+        
+        li:nth-child(1) { padding-left: 20px; }
+        li:nth-child(2) { padding-left: 80px; }
+        li:nth-child(3) { padding-left: 150px; }
+        li:nth-child(4) { padding-left: 30px; }
+        li:nth-child(5) { padding-left: 100px; }
+        li:nth-child(6) { padding-left: 70px; }
+        li:nth-child(7) { padding-left: 20px; }
+    }
+    
+    .splash-block .screenshots
+    {
+        float: right;
+        position: relative;
+        height: 450px;
+        margin-left: 50px;
+        
+        img
+        {
+            width: 400px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        }
+        
+        img:nth-child(1)
+        {
+            margin-right: 50px;
+        }
+        
+        img:nth-child(2)
+        {
+            position: absolute;
+            right: 0;
+            top: 110px;
         }
 
-        &.splash-linux
+        img:nth-child(3)
         {
-            background-image: url(../images/screenshots/splash/linux-splash-php.png);
-            padding-bottom: 72.8%;
+            position: absolute;
+            top: 220px;
+            right: 60px;
         }
+    }
+    
+    .quick-features
+    {
+        margin: 15px auto;
+        padding-left: 120px;
+    }
+}
 
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-php.png);
-        }
+.container-php
+{
+    #splash-header #splash-screenshots figure
+    {
+        background-image: url(../images/screenshots/splash/php.png);
     }
 }
 
@@ -186,21 +281,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-python.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-python.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-python.png);
-        }
+        background-image: url(../images/screenshots/splash/python.png);
     }
 }
 
@@ -208,21 +289,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-go.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-go.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-go.png);
-        }
+        background-image: url(../images/screenshots/splash/go.png);
     }
 }
 
@@ -230,21 +297,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        &.splash-windows
-        {
-            background-image: url(../images/screenshots/splash/win-splash-perl.png);
-        }
-
-        &.splash-linux
-        {
-            background-image: url(../images/screenshots/splash/linux-splash-perl.png);
-            padding-bottom: 72.8%;
-        }
-
-        &.splash-osx
-        {
-            background-image: url(../images/screenshots/splash/mac-splash-perl.png);
-        }
+        background-image: url(../images/screenshots/splash/perl.png);
     }
 }
 
@@ -252,7 +305,7 @@
 {
     #splash-header #splash-screenshots figure
     {
-        background-image: url(../images/screenshots/splash/win-splash-tcl.png);
+        background-image: url(../images/screenshots/splash/tcl.png);
     }
 }
 

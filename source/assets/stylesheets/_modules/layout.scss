@@ -6,6 +6,36 @@
     margin: 0 0 -270px;
 }
 
+.grid-2
+{
+    @include outer-container;
+    
+    & > *
+    {
+        @include span-columns(6);
+    }
+}
+
+.grid-3
+{
+    @include outer-container;
+    
+    & > *
+    {
+        @include span-columns(4);
+    }
+}
+
+.grid-4
+{
+    @include outer-container;
+    
+    & > *
+    {
+        @include span-columns(3);
+    }
+}
+
 #content
 {
     padding: 25px 0;

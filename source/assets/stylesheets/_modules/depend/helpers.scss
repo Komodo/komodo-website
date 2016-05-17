@@ -99,21 +99,6 @@
     *zoom: 1;
 }
 
-/* Pulsate */
-@include keyframes(pulsate) {
-    0% {
-        @include transform(scale(1));
-        opacity: 0.8;
-    }
-    30% {
-        @include transform(scale(2));
-        opacity: 0;
-    }
-    100% {
-        @include transform(scale(2));
-        opacity: 0;
-    }
-}
 
 @-webkit-keyframes fadeInFromNone {
     0% {

@@ -76,22 +76,23 @@ priority: 0.8
             <div class="head">
                 <h2><%= group.name %></h2>
             </div>
-            <div class="tabs">
+            
+            <div class="no_tabs">
+                <!--
                 <ul>
-                    <% group.groups.each() do |subgroup| %>
+                    < % group.groups.each() do |subgroup| %>
                     <li>
-                        <a href="#<%= subgroup.id %>"><%= subgroup.name %></a>
+                        <a href="#< %= subgroup.id %>">< %= subgroup.name %></a>
                     </li>
-                    <% end %>
+                    < % end %>
                 </ul>
+                -->
                 <% group.groups.each() do |subgroup| %>
                 <ul id="<%= subgroup.id %>" class="features">
                     <% subgroup.items.each() do |feature| %>
                     <li>
                         <% if feature.img %>
-                        <a href="<%= image_path('screenshots/features/'+feature.img) %>" class="lightbox">
-                            <img src="<%= image_path('screenshots/features/thumb/'+feature.img) %>">
-                        </a>
+                        <img src="<%= image_path('screenshots/features/'+feature.img) %>">
                         <% end %>
                         <div class="inner">
                             <strong><%= feature.name %></strong>

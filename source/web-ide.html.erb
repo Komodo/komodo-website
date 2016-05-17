@@ -4,7 +4,7 @@ description: Komodo is a full featured PHP IDE that supports major web technolog
 socialDescription: Komodo IDE for Web Development
 dontNormalize: true
 priority: 0.9
-classNames: no-grid fullscreen-splash
+classNames: no-grid
 disableFooter: true
 ---
 
@@ -17,115 +17,265 @@ disableFooter: true
             </div>
         </div>
     
-        <h1>Komodo: The Best Web IDE</h1>
         <div id="splash-description">
+            <img src="/assets/images/layout/splash-logo-vertical.png"/>
+            
+            <h1>The Best IDE for Web and Mobile Developers</h1>
+            <h2>
+                Making it even easier for web, mobile and app developers to experience
+                their favourite frameworks, languages and tools.
+            </h2>
+            
             <p>
-                Komodo is a full featured Web Development IDE that supports major web technologies including:
+                You can now experience a faster, easier-to-use IDE that lets you stay in-the-zone and get more done. Get all your favorite frameworks, languages, and tools in one cross-platform, polyglot IDE.
             </p>
                 
-            <div class="quick-features">
-                <ul class="disc">
-                    <li>JavaScript</li>
-                    <li>HTML5</li>
-                    <li>CSS</li>
-                    <li>Node.js</li>
-                    <li>NPM</li>
-                    <li>Bower</li>
-                    <li>jQuery, YUI, dojo, ...</li>
-                    <li>PHP, Ruby, Python, ...</li>
-                </ul>
-                <ul class="disc">
-                    <li>Laravel (Blade)</li>
-                    <li>Drupal</li>
-                    <li>Zend Framework</li>
-                    <li>Django</li>
-                    <li>Flask</li>
-                    <li>Mozilla/Firefox</li>
-                    <li>Markdown</li>
-                    <li>...</li>
-                </ul>
-                <ul class="disc">
-                    <li><strong>Coming Soon:</strong></li>
-                    <li>Angular JS</li>
-                    <li>React</li>
-                    <li>Ember</li>
-                    <li>Grunt</li>
-                    <li>Gulp</li>
-                    <li>PhoneGap</li>
-                    <li>...</li>
-                </ul>
-            </div>
-            
         </div>
-    
-        <!--
-        <div id="splash-download-wrap">
-            <div id="splash-download-buttons">
-                <a class="button primary big" href="/download">
-                    <i class="icon icon-download"></i> Try Now
-                    <p>21 day fully functional trial</p>
-                </a>
-                <a class="button big <%= 'promoted' if data.promotions.buttons.enabled %>" href="/pricing">
-                    <i class="icon icon-shopping-cart"></i> Buy Now
-                    <p>Choose the right license for you</p>
-                    <% if data.promotions.buttons.enabled %>
-                        <div class="promotion badge">
-                            ON SALE
-                        </div>
-                    <% end %>
-                </a>
-            </div>
-        </div>
-        -->
-    
-        <div id="splash-screenshots">
-            
-            <div id="screenshots-inner-box">
-                <h2>Komodo 10 is coming soon!</h2>
-                <p>
-                    Making it even easier for web, mobile and app developers to
-                    experience their favourite frameworks, languages and tools
-                </p>
-                
-                <div id="splash-download-wrap">
-                    <div id="splash-download-buttons">
-                        <a class="button primary big" href="#beta-signup" data-modal>
-                            Sign up for our Beta
-                            <p>be the first to get notified</p>
-                        </a>
-                    </div>
+        
+        <div id="splash-description-continued">
+            <div class="grid-3 spaced">
+                <div>
+                    <h3>Seamless Integrations: Cordova/PhoneGap, gulp, Grunt</h3>
+                    <p>
+                        When you go mobile, we're ready! A button on the side
+                        automatically shows up if Komodo detects you are using the
+                        Cordova or PhoneGap build systems and interacts to
+                        facilitate common tasks. Works with gulp and Grunt too!
+                    </p>
                 </div>
                 
+                <div>
+                    <h3>Remote Chrome Debugging</h3>
+                    <p>
+                        Write and debug in one spot. Now you don't have to search
+                        for your code again in your browser to place breakpoints--no
+                        more jumping back and forth between your editor and browser! 
+                    </p>
+                </div>
+                
+                <div>
+                    <h3>All Your Favorite Web Frameworks and Languages are supported</h3>
+                    <p>
+                        As a cross-platform, polyglot IDE, Komodo provides you with
+                        a wide range of support. Komodo X now supports Ruby 2.x,
+                        TypeScript, ES6, PSR4 for PHP and new built-in support for
+                        frameworks Ember, Angular JS, and React
+                    </p>
+                </div>
             </div>
             
-            <!--
-            <div class="beta-sign-up">
-                <a class="button primary big" href="/download">
-                    Sign up for the Beta
-                </a>
+            <p>
+                Plus, Komodo X gives you a better user experience. The new UI,
+                new colour picker, and new first start wizard lets you customize
+                Komodo. Setup your IDE so it looks the way you want. 
+            </p>
+            
+            <h3>Find out why users call Komodo X</h3>
+            
+            <div class="grid-3 testimonials">
+                <p class="colored">"...delicious..."</p>
+                <p>"...so sexy looking..."</p>
+                <p class="colored">"...pretty damn cool…"</p>
             </div>
-        -->
-            <figure class="splash-windows secondary">
-                <a href="#beta-signup" data-modal class="splash-ko10-tease"></a>
-            </figure>
-            <figure class="splash-osx primary">
-                <a href="#beta-signup" data-modal class="splash-ko10-tease"></a>
-            </figure>
-            <figure class="splash-linux tertiary">
-                <a href="#beta-signup" data-modal class="splash-ko10-tease"></a>
-            </figure>
+            
+            <h3>Download and start your 21-day trial.</h3>
+            
+            <a class="button primary big" href="/download">
+                <i class="icon icon-download"></i> Try Now
+                <p>21 day fully functional trial</p>
+            </a>
+            
         </div>
+        
     </div>
 </div>
 
-<div id="beta-signup" title="Beta Signup" class="hide" data-modal>
-    <p>
-        Sign up for the Komodo 10 beta and be the first to be notified when it is available.
-    </p>
-    <script src="//app-sjg.marketo.com/js/forms2/js/forms2.min.js"></script>
-    <form id="mktoForm_1298"></form>
-    <script>MktoForms2.loadForm("//app-sjg.marketo.com", "894-ACS-622", 1298);</script>
+<div class="splash-block">
+    <h1 class="centered">
+        What users are saying about Komodo X ...
+    </h1>
+    
+    <div class="screenshots">
+        <img src="/assets/images/screenshots/splash/web-solarized.png"/>
+        <img src="/assets/images/screenshots/splash/web-cupertino.png"/>
+        <img src="/assets/images/screenshots/splash/web.png"/>
+    </div>
+    
+    <ul class="testimonials">
+        <li>"...loving the speed improvements...man everything loads so much faster :)..."</li>
+        <li>"...looks delicious..."</li>
+        <li>"...so sexy looking..."</li>
+        <li>"...pretty damn cool..."</li>
+        <li>"...I think [Komodo] 10 is going to be the shizz for you guys :)..."</li>
+        <li>"...i like that it has all the languages already..."</li>
+        <li>"...I don't think people understand just how moddable komodo is..."</li>
+    </ul>
+    
+    <div class="spaced centered">
+        <a class="button primary big" href="/download">
+            <i class="icon icon-download"></i> Try Now
+            <p>21 day fully functional trial</p>
+        </a>
+    </div>
+    
 </div>
+
+<div class="splash-block-background">
+<div class="splash-block">
+    <h1 class="centered">
+        We've got the functionality you need
+    </h1>
+    
+    <p class="centered">Komodo is a full featured Web Development IDE that supports major web technologies including:</p>
+    <div class="quick-features grid-3">
+        <ul class="disc">
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Node.js</li>
+            <li>NPM</li>
+            <li>Bower</li>
+            <li>jQuery, YUI, dojo, ...</li>
+            <li>PHP, Ruby, Python, ...</li>
+        </ul>
+        <ul class="disc">
+            <li>Laravel (Blade)</li>
+            <li>Drupal</li>
+            <li>Zend Framework</li>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>Mozilla/Firefox</li>
+            <li>Markdown</li>
+            <li>...</li>
+        </ul>
+        <ul class="disc">
+            <li>Angular JS</li>
+            <li>React</li>
+            <li>Ember</li>
+            <li>TypeScript</li>
+            <li>Grunt</li>
+            <li>Gulp</li>
+            <li>Cordova</li>
+            <li>PhoneGap</li>
+            <li>...</li>
+        </ul>
+    </div>
+    
+    <div class="spaced centered">
+        <a class="button primary big" href="/download">
+            <i class="icon icon-download"></i> Try Now
+            <p>21 day fully functional trial</p>
+        </a>
+    </div>
+</div>
+</div>
+
+<div class="splash-block">
+    
+    <h1 class="centered">
+        Being a multi-language IDE, Komodo also supports all major languages
+        including Python, NodeJS, Ruby, Go, Perl, Tcl, and more
+    </h1>
+    
+    <div class="detailed-features grid-2">
+        <div>
+            <h2>Advanced Editor / Intelligent Code Editor</h2>
+            <p>
+                Komodo IDE helps PHP devs write code faster and more accurately, with
+                multi-language syntax checking and highlighting, auto-complete, calltips,
+                snippets, macros and other productivity-enhancing features. With code
+                refactoring (renaming variables and class members, extracting methods), you can
+                make global code changes, saving time compared to making changes manually. Also
+                includes code folding, split view, multi-window editing, smart syntax checking
+                and highlighting, snippets and macros, and more.
+            </p>
+            
+            <h2>Graphical Debugging</h2>
+            <p>
+                Enjoy debugging for PHP 4.4 and higher. Run it locally in the IDE or
+                remotely on an external server or platform. Configure breakpoints, create
+                and debug regular expressions with the RX Toolkit.
+            </p>
+                
+            <h2>Unit Testing for PHP</h2>
+            <p>
+                Create and run unit tests with PHPUnit, and detect performance issues with
+                function-by-function code profiling (also reads Callgrind/Cachegrind
+                format).
+            </p>
+            
+            <h2>PHP IDE for Teams</h2>
+            <p>
+                Code Collaboration allows you and your team to edit a document with multiple
+                users simultaneously. The Komodo Shared Toolbox allows you to store common
+                snippets, macros, and more via network share, source code control, or the
+                Publish feature. Coding Standards lets you keep shared work consistent with
+                version control and auto-formatting, while Komodo’s extended functionality
+                allows you to scale your projects as required with extensions for integrated
+                technologies.
+            </p>
+        </div>
+        <div>
+            <h2>Code Intelligence</h2>
+            <p>
+                Code efficiently with auto-complete and calltips for PHP in Komodo IDE. Code
+                refactoring features smart code-transformation capabilities including Rename
+                Variable, Rename Class Member, and Method Extraction. Structure code easily
+                with Code Browser. Komodo supports any framework (ie. Cake PHP, jQuery) and
+                PHPDoc.
+            </p>
+                
+            <h2>Version Control &amp; Integrated Tools</h2>
+            <p>
+                Version control, interactive shells, code profiling, integrated user
+                testing, toolbox and publishing support. Subversion, Mercurial, Git,
+                Perforce, Bazaar, CVS are also supported. Build, edit, and debug regular
+                expressions with the Regex Toolkit. The Database Explorer supports SQLite
+                with extensions for MySQL and Oracle.
+            </p>
+                
+            <h2>Code Profiling</h2>
+            <p>
+                Analyze code performance function-by-function and detect hotspots. The code
+                profiler analyzes programs on a function-by-function basis, tracking which
+                function calls are made, and how long calls take to complete. Code profiling
+                supports PHP 5.2 and higher.
+            </p>
+                
+            <h2>Extend &amp; Customize</h2>
+            <p>
+                Vi/Vim, emacs and other included key bindings provide you with a familiar
+                editing experience, straight out of the box. Customize your UI and editor
+                pane with a variety of themes, and extend your editing and IDE functionality
+                with a multitude of available add-ons. Extend color schemes, syntax
+                checkers, and more.
+            </p>
+        </div>
+    </div>
+    
+    <p class="centered">
+        Check out the more
+        <a href="/features">
+        complete list of Komodo features
+        </a>
+        or:
+    </p>
+    
+    <div class="spaced centered">
+        <a class="button primary big" href="/download">
+            <i class="icon icon-download"></i> Try Now
+            <p>21 day fully functional trial</p>
+        </a>
+        <a class="button big" href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Now
+            <p>Choose the right license for you</p>
+        </a>
+    </div>
+    
+</div>
+
+
+
 
 <!-- LivePerson -->
 <!-- <script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/88203588/?cmd=mTagRepstate&site=88203588&buttonID=12&divID=lpButDivID-1279824964197&bt=1&c=1"></script> -->

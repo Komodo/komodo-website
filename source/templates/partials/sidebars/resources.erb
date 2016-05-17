@@ -27,7 +27,7 @@
 
 <ul class="categories">
     <% data.resources.categories.each() do |category| %>
-        <% next if category.resources == 0 %>
+        <% next if category.resources == 0 or category.resource == "skins.yml" %>
         <li>
             <h3>
                 <a href="<%= site_url %>/packages/<%= File.basename(category.resource, ".yml") %>"><%= category.name %></a>
