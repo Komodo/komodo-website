@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 17 May 2016 03:03:01 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 17 May 2016 04:40:39 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo X Released - It's 10X Better</title>
+                <link>http://komodoide.com/blog/komodo-x-released</link>
+                <pubDate>Mon, 16 May 2016 17:00:00 -0700</pubDate>
+                <description>The moment is finally here, Komodo X (10) is released and it's like 10 times better! The pun sounded so horrible when I came up with it, I just had to use it. But it really is a LOT better [...]</description>
+                <guid>http://komodoide.com/blog/komodo-x-released</guid>
+            </item>
             <item>
                 <title>Help Us Test Komodo IDE 10 and We'll Give You $50</title>
                 <link>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</link>
@@ -105,13 +112,6 @@
                 <pubDate>Mon, 1 Feb 2016 16:00:00 -0800</pubDate>
                 <description>Back in November, with the help of our talented marketing team, Nathan and I hosted a webinar to show our new/potential/existing users the major features of Komodo, how to use them and how to customize them. Now if you're like me [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ui-ux-and-customization</guid>
-            </item>
-            <item>
-                <title>JSX and React: A Komodo Syntax Highlighting Case Study</title>
-                <link>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</link>
-                <pubDate>Tue, 26 Jan 2016 16:00:00 -0800</pubDate>
-                <description>An often overlooked feature in Komodo is the ability to create extensions for highlighting the syntax of new and custom languages. It seems that every week brings news of a new language on the block. The good news is that with a little bit of work [...]</description>
-                <guid>http://komodoide.com/blog/jsx-and-react-a-komodo-syntax-highlighting-case-study</guid>
             </item>
     </channel>
 </rss>
