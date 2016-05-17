@@ -476,7 +476,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/</loc>
-    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
+    <lastmod>2016-05-16T17:24:42-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -4826,6 +4826,18 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/schemes/materia/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/schemes/kalzekdor--consolegray/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/console-gray/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
