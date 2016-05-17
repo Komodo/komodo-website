@@ -6,27 +6,27 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 17 May 2016 06:13:34 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 17 May 2016 07:54:40 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
             <item>
-                <title>Komodo X Released - It's 10X Better</title>
+                <title>Komodo X Released - It&#x27;s 10X Better</title>
                 <link>http://komodoide.com/blog/komodo-x-released</link>
-                <pubDate>Mon, 16 May 2016 17:00:00 -0700</pubDate>
-                <description>The moment is finally here, Komodo X (10) is released and it's like 10 times better! The pun sounded so horrible when I came up with it, I just had to use it. But it really is a LOT better [...]</description>
+                <pubDate>Tue, 17 May 2016 17:00:00 -0700</pubDate>
+                <description>The moment is finally here, Komodo X (10) is released and it&#x27;s like 10 times better! The pun sounded so horrible when I came up with it, I just had to use it. But it really is a LOT better [...]</description>
                 <guid>http://komodoide.com/blog/komodo-x-released</guid>
             </item>
             <item>
-                <title>Help Us Test Komodo IDE 10 and We'll Give You $50</title>
+                <title>Help Us Test Komodo IDE 10 and We&#x27;ll Give You $50</title>
                 <link>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</link>
                 <pubDate>Thu, 21 Apr 2016 17:00:00 -0700</pubDate>
-                <description>As you may have heard, we released our Komodo 10 alpha last week so the community can help us run it through its paces. We've already received a ton of helpful bug reports but we want MORE [...]</description>
+                <description>As you may have heard, we released our Komodo 10 alpha last week so the community can help us run it through its paces. We&#x27;ve already received a ton of helpful bug reports but we want MORE [...]</description>
                 <guid>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</guid>
             </item>
             <item>
                 <title>Komodo 10 Alpha Pre-release Now Available</title>
                 <link>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</link>
                 <pubDate>Mon, 11 Apr 2016 17:00:00 -0700</pubDate>
-                <description> Releasing an alpha/beta of your product is like showing everyone your new baby. Everyone is excited, but he's still very fragile, and you're scared someone might look at them the wrong way. Komodo 10 has come a long way [...]</description>
+                <description> Releasing an alpha&#x2F;beta of your product is like showing everyone your new baby. Everyone is excited, but he&#x27;s still very fragile, and you&#x27;re scared someone might look at them the wrong way. Komodo 10 has come a long way [...]</description>
                 <guid>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</guid>
             </item>
             <item>
@@ -40,35 +40,35 @@
                 <title>Go-to-Definiton</title>
                 <link>http://komodoide.com/blog/go-to-definition</link>
                 <pubDate>Tue, 5 Apr 2016 17:00:00 -0700</pubDate>
-                <description>Komodo Go to Definition is a helpful tool to quickly see the definition of any construct in your code.  Whether it's a function, a variable, a class, class member or global [...]</description>
+                <description>Komodo Go to Definition is a helpful tool to quickly see the definition of any construct in your code.  Whether it&#x27;s a function, a variable, a class, class member or global [...]</description>
                 <guid>http://komodoide.com/blog/go-to-definition</guid>
             </item>
             <item>
                 <title>Configuring Komodo</title>
                 <link>http://komodoide.com/blog/configuring-komodo</link>
                 <pubDate>Thu, 31 Mar 2016 17:00:00 -0700</pubDate>
-                <description>Komodo has been written with the concept of "make the best guess then allow custom changes".  For 90% of Komodo features, you should simply be able to start Komodo and use it, and it will just work.   At start up [...]</description>
+                <description>Komodo has been written with the concept of &quot;make the best guess then allow custom changes&quot;.  For 90% of Komodo features, you should simply be able to start Komodo and use it, and it will just work.   At start up [...]</description>
                 <guid>http://komodoide.com/blog/configuring-komodo</guid>
             </item>
             <item>
                 <title>Smart Snippets</title>
                 <link>http://komodoide.com/blog/smart-snippets</link>
                 <pubDate>Tue, 29 Mar 2016 17:00:00 -0700</pubDate>
-                <description>Komodo snippets and abbreviations are nothing new to code editing (they've been in Komodo almost since the beginning 15 years ago). But something that Komodo has that others may not...smart snippets [...]</description>
+                <description>Komodo snippets and abbreviations are nothing new to code editing (they&#x27;ve been in Komodo almost since the beginning 15 years ago). But something that Komodo has that others may not...smart snippets [...]</description>
                 <guid>http://komodoide.com/blog/smart-snippets</guid>
             </item>
             <item>
                 <title>Komodo Quick Bookmarks</title>
                 <link>http://komodoide.com/blog/quick-bookmarks</link>
                 <pubDate>Thu, 10 Mar 2016 16:00:00 -0800</pubDate>
-                <description>Komodo's quick bookmarks are a logical extension of the existing bookmarks.  They were implemented, once again, with our users' speed and concentration in mind.  They allow you to very quickly navigate to and from points of interest in your code [...]</description>
+                <description>Komodo&#x27;s quick bookmarks are a logical extension of the existing bookmarks.  They were implemented, once again, with our users&#x27; speed and concentration in mind.  They allow you to very quickly navigate to and from points of interest in your code [...]</description>
                 <guid>http://komodoide.com/blog/quick-bookmarks</guid>
             </item>
             <item>
                 <title>Komodo File Management</title>
                 <link>http://komodoide.com/blog/file-managem</link>
                 <pubDate>Tue, 8 Mar 2016 16:00:00 -0800</pubDate>
-                <description>Komodo, as it should, provides robust tools to work with your projects files. The first is Komodo's Places pane. Places allows you to easily perform file specific function (eg. contextual SCC commands, publishing commands, copy/paste/cut/delete, etc [...]</description>
+                <description>Komodo, as it should, provides robust tools to work with your projects files. The first is Komodo&#x27;s Places pane. Places allows you to easily perform file specific function (eg. contextual SCC commands, publishing commands, copy&#x2F;paste&#x2F;cut&#x2F;delete, etc [...]</description>
                 <guid>http://komodoide.com/blog/file-managem</guid>
             </item>
             <item>
@@ -86,10 +86,10 @@
                 <guid>http://komodoide.com/blog/code-int</guid>
             </item>
             <item>
-                <title>Komodo's Commando Tool</title>
+                <title>Komodo&#x27;s Commando Tool</title>
                 <link>http://komodoide.com/blog/komodos-commando-tool</link>
                 <pubDate>Tue, 23 Feb 2016 16:00:00 -0800</pubDate>
-                <description>Komodo's Commando tool is a workhorse in Komodo. Through the Commando window you can access all of Komodo's internal commands, all toolbox items, open any file on your computer, find code symbols related to your file and project, etc [...]</description>
+                <description>Komodo&#x27;s Commando tool is a workhorse in Komodo. Through the Commando window you can access all of Komodo&#x27;s internal commands, all toolbox items, open any file on your computer, find code symbols related to your file and project, etc [...]</description>
                 <guid>http://komodoide.com/blog/komodos-commando-tool</guid>
             </item>
             <item>
@@ -107,10 +107,10 @@
                 <guid>http://komodoide.com/blog/debugging-with-komodo-ide</guid>
             </item>
             <item>
-                <title>Komodo UI/UX & Customization</title>
+                <title>Komodo UI&#x2F;UX &amp; Customization</title>
                 <link>http://komodoide.com/blog/komodo-ui-ux-and-customization</link>
                 <pubDate>Mon, 1 Feb 2016 16:00:00 -0800</pubDate>
-                <description>Back in November, with the help of our talented marketing team, Nathan and I hosted a webinar to show our new/potential/existing users the major features of Komodo, how to use them and how to customize them. Now if you're like me [...]</description>
+                <description>Back in November, with the help of our talented marketing team, Nathan and I hosted a webinar to show our new&#x2F;potential&#x2F;existing users the major features of Komodo, how to use them and how to customize them. Now if you&#x27;re like me [...]</description>
                 <guid>http://komodoide.com/blog/komodo-ui-ux-and-customization</guid>
             </item>
     </channel>
