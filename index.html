@@ -28,8 +28,7 @@
         <!-- Styles -->
         <link href="/assets/stylesheets/style.css" rel="stylesheet" />
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
-
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700|Kalam' rel='stylesheet' type='text/css'>
         
     </head>
     <body class="">
@@ -48,6 +47,9 @@
         <script type="text/javascript">
             document.body.classList.remove("no-js")
         </script>
+        
+        <div id="blackout"></div>
+        <div id="callouts"></div>
 
         <!-- Main Container -->
         <div id="container" class="container-index">
@@ -149,23 +151,38 @@
             <div id="lpButDivID-1279824964197"></div>
         </div>
     </div>
-
-    <h1>One IDE, All Your Languages</h1>
     
     <div id="splash-description">
+        <img src="/assets/images/layout/splash-logo-vertical.png"/>
+        
+        <h1>New Release: Komodo IDE X</h1>
+        
+        <h2>New UI, New Integrations, New Frameworks</h2>
+        
         <p>
-            Cross-Platform IDE for all your major languages, <br>
+            Komodo IDE is faster and easier-to-use. New integrations with build
+            systems let you start in-the-zone and get more done. Get your
+            favorite frameworks, languages, and tools in once cross-platform,
+            polygot IDE.
+        </p>
+        
+        <p>
+            <strong>Start your 21-Day Trial today</strong>
+        </p>
+        
+        <p>
+            Komodo supports all your major languages, including<br>
             including
             <a href="/python" class="python">Python</a>,
             <a href="/php" class="php">PHP</a>,
             <a href="/go" class="go">Go</a>,
             <a href="/perl" class="perl">Perl</a>,
             <a href="/tcl" class="tcl">Tcl</a>,
-            Ruby,
-            NodeJS,
-            HTML,
-            CSS,
-            JavaScript
+            <a href="/web-ide" class="ruby">Ruby</a>,
+            <a href="/web-ide" class="node">NodeJS</a>,
+            <a href="/web-ide" class="html">HTML</a>,
+            <a href="/web-ide" class="css">CSS</a>,
+            <a href="/web-ide" class="js">JavaScript</a>
             <span class="more">
                 <span>and more</span>
                 <span class="languages">
@@ -198,49 +215,325 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
                 
             </a>
         </div>
-        <div id="splash-download-edit">
-            <p>
-                Just want the basics?
-                <a href="/komodo-edit">Check out Komodo Edit</a>
-            </p>
-        </div>
     </div>
     
-        <a id="promotion" href="/features">
-            Komodo 9.3 Released<br/>See What's New
-        </a>
-
     <div id="splash-screenshots">
         
-        <div id="screenshot-callouts">
-            <figure id="callout-panel-switcher">
-                <p>Easily toggle your important panels and widgets from the toolbar</p>
-            </figure>
-            <figure id="callout-panel">
-                <p>Your panels hold any number of widgets which you can easily move and combine to your liking</p>
-            </figure>
-            <figure id="callout-open-files">
-                <p>Navigate through your open files, sort results and group them by language, path, custom patterns</p>
-            </figure>
-            <figure id="callout-margin">
-                <p>Place breakpoints, collapse blocks of code, track change-sets, use bookmarks, all easily accessible from your editor margin</p>
-            </figure>
-            <figure id="callout-commando">
-                <p>Quickly go to anything, whether it's a file, a project, a command, a bookmark .. you name it</p>
-            </figure>
-            <figure id="callout-multicaret">
-                <p>Multi-caret is an integral part of many Komodo features</p>
-            </figure>
+        <div class="make-it-own">
+            Make it your own!
         </div>
         
-        <figure class="splash-windows secondary"></figure>
-        <figure class="splash-osx primary"></figure>
-        <figure class="splash-linux tertiary"></figure>
+        <div class="platforms" title="We support Windows, OSX and Linux. Komodo does NOT use Java.">
+            <i class="icon icon-windows" aria-hidden="true"></i>
+            <i class="icon icon-apple" aria-hidden="true"></i>
+            <i class="icon icon-linux" aria-hidden="true"></i>
+        </div>
+        
+        <div id="selectors">
+           <div id="selector-sidebar">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/dynamictools.png"/>
+                        <span>
+                            <h2>Dynamic Toolbar</h2>
+                            <p>
+                                Komodo X features a dynamic toolbar which detects
+                                what tools you are using, giving you quick access
+                                to them when you need them. 
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/gulp.png"/>
+                        <span>
+                            <h2>gulp.js, Grunt * NPM Integration</h2>
+                            <p>
+                                Komodo X integrates with your JS task runner, allowing
+                                you to quickly run your tasks without leaving your IDE.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/cordova.png"/>
+                        <span>
+                            <h2>Cordova & PhoneGap Integration</h2>
+                            <p>
+                                Interact with your Cordova & PhoneGap builds right
+                                from inside Komodo. Run emulators, build targets, etc.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/scc.png"/>
+                        <span>
+                            <h2>Version Control at Your Fingertips</h2>
+                            <p>
+                                Quick access to your version control system, whether
+                                it's Git, Mercurial, SVN, CVS, Bazaar or Perforce.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-commando">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/commando.png"/>
+                        <span>
+                            <h2>Commando (Go to Anything)</h2>
+                            <p>
+                                Commando is THE way of interacting with just about
+                                anything in Komodo. Locate a file, run a command/snippet,
+                                toggle word wrap, whatever you can think of.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/symbolBrowser.png"/>
+                        <span>
+                            <h2>Symbol Browser</h2>
+                            <p>
+                                New in Komodo X is the Symbol Browser, which as the
+                                name implies allows you to quickly locate symbols
+                                across your project.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-debug">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/debug-chrome.png"/>
+                        <span>
+                            <h2>Chrome Debugging</h2>
+                            <p>
+                                Debug your web apps without chrome developer tools,
+                                place your breakpoints where you write your code.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/debug-ruby.png"/>
+                        <span>
+                            <h2>Ruby 2.x Debugging</h2>
+                            <p>
+                                Komodo IDE has allowed you to debug Ruby 1.9 for a while,
+                                with Komodo X you can now debug any version of Ruby.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/REPL.png"/>
+                        <span>
+                            <h2>Read Print Eval Loop (REPL)</h2>
+                            <p>
+                                Komodo IDE integrates with various REPL implementations,
+                                allowing you to quickly test code or run a REPL while
+                                debugging.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-macro">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/macro.png"/>
+                        <span>
+                            <h2>Macro Recording</h2>
+                            <p>
+                                Easily record code interactions and save them as
+                                userscripts to your toolbox for later use. 
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/toolbox.png"/>
+                        <span>
+                            <h2>Toolbox</h2>
+                            <p>
+                                Recorded Macro's are saved as userscripts and can
+                                be accessed from your toolbox, which can hold a large
+                                selection of your own tools.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-ui">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/ui.png"/>
+                        <span>
+                            <h2>Quick Access</h2>
+                            <p>
+                                Quick access to toggle focus mode, toggle a pane or
+                                access the Komodo menu (also accessible by pressing ALT).
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/customize.png"/>
+                        <span>
+                            <h2>Customizable</h2>
+                            <p>
+                                Komodo X is EXTREMELY customizable without writing
+                                ANY custom code. Odds are if there is something
+                                you'd like to change; you can.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-tools">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/tools.png"/>
+                        <span>
+                            <h2>Tools</h2>
+                            <p>
+                                Quick access to toggle Komodo IDE's various tools,
+                                REPL, code profiler, regex editor, HTTP inspector,
+                                Language Documentation, they're all at your fingertips.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/regex.png"/>
+                        <span>
+                            <h2>Regex Editor</h2>
+                            <p>
+                                The Regex editor has received a large UX overhaul
+                                in Komodo 10, making it a joy to use.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-vcs">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/scc.png"/>
+                        <span>
+                            <h2>Version Control at Your Fingertips</h2>
+                            <p>
+                                Quick access to your version control system, whether
+                                it's Git, Mercurial, SVN, CVS, Bazaar or Perforce.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/scc1.png"/>
+                        <span>
+                            <h2>Commit Files</h2>
+                            <p>
+                                Komodo X has a brand new commit dialog which can
+                                be also be added from your bottom pane version control widget.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/scc2.png"/>
+                        <span>
+                            <h2>VCS History</h2>
+                            <p>
+                                Quickly reference your VCS history either via a
+                                dialog or via your version control widget.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-unittesting">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/unittest.png"/>
+                        <span>
+                            <h2>Run Unit Tests</h2>
+                            <p>
+                                Run unit tests and quickly reference the results,
+                                Komodo IDE supports a variety of testing frameworks.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-changetracker">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/trackchanges.png"/>
+                        <span>
+                            <h2>Change Tracker</h2>
+                            <p>
+                                Reference changes made since your last commit and
+                                quickly revert or share your changes via <a href="http://kopy.io">kopy.io</a>.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-multicaret">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/multicaret.png"/>
+                        <span>
+                            <h2>Multi Caret</h2>
+                            <p>
+                                Komodo's intelligent multi caret mode allows you
+                                to quickly rename common occurences of code, or
+                                manually create as many carets as you need.
+                            </p>
+                        </span>
+                    </li>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/refactoring.png"/>
+                        <span>
+                            <h2>Refactoring</h2>
+                            <p>
+                                Komodo's refactoring feature in many cases uses
+                                multiple carets to make your interaction as seamless
+                                as possible.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+           <div id="selector-spelling">
+                <ul>
+                    <li>
+                        <img src="/assets/images/screenshots/splash/callouts/spellchecker.png"/>
+                        <span>
+                            <h2>Spell Checker</h2>
+                            <p>
+                                Focus on writing your code and let Komodo worry
+                                about whether or not you spelled something right.
+                            </p>
+                        </span>
+                    </li>
+                </ul>
+           </div> 
+        </div>
+        
+        <!-- Screenshot -->
+        <figure class="primary"></figure> 
+        <figure class="cupertino"></figure>
+        <figure class="base16"></figure>
+        <figure class="redmond"></figure>
+        <figure class="solarized"></figure>
 
         <!--
         <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @KomodoIDE</a>
         -->
     </div>
+    
+    <div id="splash-download-edit">
+        <p>
+            Just want the basics?
+            <a href="/komodo-edit">Check out Komodo Edit</a>
+        </p>
+    </div>
+    
 </div>
 </div>
 
@@ -252,31 +545,49 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
 
     <div id="splash-feature-column">
         <ul>
+            
             <li>
-                <img src="/assets/images/screenshots/featured/commando.png"/>
-                <h2>Commando</h2>
+                <img src="/assets/images/screenshots/featured/cordova.png"/>
+                <h2>Cordova & PhoneGap</h2>
                 <p>
-                    Quick access to all your files, tools, bookmarks, you name it.
-                    Commando paves the way!
+                    Run emulators, build targets, interact with Cordova & PhoneGap
+                    effortlessly.
                 </p>
                 <span class="badge">NEW</span>
             </li>
             <li>
-                <img src="/assets/images/screenshots/featured/trackchanges.png"/>
-                <h2>Track Changes</h2>
+                <img src="/assets/images/screenshots/featured/gulp.png"/>
+                <h2>Gulp, Grunt, Gulp</h2>
                 <p>
-                    Easily reference what changes you have made, revert back or
-                    share the change via <a href="http://kopy.io">kopy.io</a>.
+                    Integrates with Gulp, Grunt and NPM, giving you quick access
+                    to common tasks.
                 </p>
                 <span class="badge">NEW</span>
             </li>
+            <li>
+                <img src="/assets/images/screenshots/featured/react.png"/>
+                <h2>Angular, Ember, React, ..</h2>
+                <p>
+                    Komodo supports various popular modern web frameworks.
+                </p>
+                <span class="badge">NEW</span>
+            </li>
+            <li>
+                <img src="/assets/images/screenshots/featured/chrome.png"/>
+                <h2>Chrome Debugging</h2>
+                <p>
+                    Debug web apps without chrome dev tools, place
+                    your breakpoints where you write your code.
+                </p>
+                <span class="badge">NEW</span>
+            </li>
+
             <li>
                 <img src="/assets/images/screenshots/featured/docker.png"/>
                 <h2>Docker & Vagrant</h2>
                 <p>
                     Run commands on your available instances, using auto-completions and hints.
                 </p>
-                <span class="badge">NEW</span>
             </li>
             <li>
                 <img src="/assets/images/screenshots/featured/packagemanager.png"/>
@@ -284,15 +595,6 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
                 <p>
                     Integrates with Bower, NPM, Composer, Gem, PIP, CPAN, PyPM and PPM.
                 </p>
-                <span class="badge">NEW</span>
-            </li>
-            <li>
-                <img src="/assets/images/screenshots/featured/shell.png"/>
-                <h2>Shell Integration</h2>
-                <p>
-                    Easily run shell commands right from inside Komodo.
-                </p>
-                <span class="badge">NEW</span>
             </li>
             <li>
                 <img src="/assets/images/screenshots/featured/codeintel.png"/>
@@ -317,13 +619,6 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
                 </p>
             </li>
             <li>
-                <img src="/assets/images/screenshots/featured/crossplatform.png"/>
-                <h2>Cross-Platform</h2>
-                <p>
-                    Identical features for Mac, Linux and Windows. 
-                </p>
-            </li>
-            <li>
                 <img src="/assets/images/screenshots/featured/debug.png"/>
                 <h2>Debugging</h2>
                 <p>
@@ -333,9 +628,9 @@ TracWiki, Twig, VBScript, Verilog, VHDL, VisualBasic, XBL, XML, XSLT, XUL, YAML
             </li>
             <li>
                 <img src="/assets/images/screenshots/featured/packages.png"/>
-                <h2>Packages and Customization</h2>
+                <h2>Customization</h2>
                 <p>
-                    Install and use community contributions from directly inside
+                    Install and use community contributions directly from inside
                     of Komodo. 
                 </p>
             </li>

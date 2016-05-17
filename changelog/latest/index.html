@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Komodo 9.x Changelog | Komodo IDE</title>
+        <title>Komodo 10.0 Changelog | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Komodo 9.x Changelog" />
+        <meta property="og:title" content="Komodo 10.0 Changelog" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -28,8 +28,7 @@
         <!-- Styles -->
         <link href="/assets/stylesheets/style.css" rel="stylesheet" />
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
-
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700|Kalam' rel='stylesheet' type='text/css'>
         
     </head>
     <body class="">
@@ -48,6 +47,9 @@
         <script type="text/javascript">
             document.body.classList.remove("no-js")
         </script>
+        
+        <div id="blackout"></div>
+        <div id="callouts"></div>
 
         <!-- Main Container -->
         <div id="container" class="container-latest">
@@ -139,7 +141,7 @@
                              changelog changelog_latest changelog_latest_index">
         <section role="main">
             <article class="normalize">
-                <h1>Komodo IDE/Edit 9.x Release Notes</h1>
+                <h1>Komodo IDE/Edit 10.0 Release Notes</h1>
 
 <p>These Release Notes cover <a href="#whatsnew">what&rsquo;s new</a>, <a href="#details">detailed changes and bug fixes</a> and <a href="#knownissues">known issues</a> for Komodo IDE and Komodo Edit.</p>
 
@@ -147,238 +149,101 @@
 
 <h2>What&rsquo;s New in Komodo IDE/Edit</h2>
 
-<h3>9.3.2</h3>
-
-<p>Maintenance release, see detailed changes <a href="#details">below</a>.</p>
-
-<h3>9.3.1</h3>
-
-<p>Maintenance release, see detailed changes <a href="#details">below</a>.</p>
-
-<h3>9.3</h3>
+<h3>10.0</h3>
 
 <ul>
-<li><p><strong>Documentation browser (IDE)</strong>: Allows you to quickly navigate the
-documentation for our codeintel supported languages. Giving you quick access
-to basic documentation, with shortcuts to online documentation and contextual
-actions (insert snippet). This is entirely keyboard driven through Commando.</p></li>
-<li><p><strong>Run Code In-Line (IDE)</strong>: Hit a shortcut to run the current the current
-file using the configured interpreter, then quickly review its results.
-Useful to quickly test bits of code. This works on unsaved files as well as
-selections (ie. run only the selected text).</p></li>
-<li><p><strong>Quick Bookmarks</strong>: Quickly place numeric bookmarks and go to them, allowing
-you to use bookmarks as more than just reminders. Hit Ctrl+Shift+number to
-place a quick bookmark, then hit Ctrl+number to go to that bookmark.</p></li>
-<li><p><strong>Console Widget</strong>: The new Console pane allows you to interact with the
-Komodo runtime much in the same way as you would use your browser developer
-tools console to interact with a website. This is especially useful for
-developers wanting to customize their Komodo experience.</p></li>
-<li><p><strong>CSS Auto-Completions</strong>: CSS, LESS, and SCSS files now support
-auto-completions and code browsing. This will also work when editing HTML and
-using CSS classes or ID&rsquo;s in your markup. With the 9.3.0 release this only
-works for CSS files living at the same or a lower level as the HTML file, we
-will very soon be supporting this project wide.</p></li>
-<li><p><strong>Auto-Wrap Delimiters</strong>: When pressing a delimiter (eg. double quotes) while
-having text selected the text will be wrapped by that delimiter. Delimiters
-are configurable from your Preferences and can be disabled entirely.</p></li>
-<li><p><strong>Auto multi-caret for HTML/XML tags</strong>: When selecting an HTML (XML) tag the
-corresponding start/end tag will also be selected, allowing you to change the
-start and end tag without having to select each individually.</p></li>
-<li><p><strong>Elastic Tabstops</strong>: Komodo now supports <a href="http://nickgravgaard.com/elastic-tabstops/">Elastic
-Tabstops</a>. Since this is intended
-only for files that use tab characters for indentation it is disabled by
-default. You can enable it under Indentation Preferences.</p></li>
-<li><p><strong>In-line Syntax Checking:</strong> When syntax errors/warnings occur a small
-notification popup will show at the bottom right corner of your editor
-window.</p></li>
-<li><p><strong>Package Manager 2.0:</strong> You can now fully manage your packages via Komodo,
-ie. uninstall, update, etc. (the previous version only allowed you to
-install). Advanced functionality currently only works for addons, skins, and
-languages.</p></li>
-<li><p><strong>Enhanced Multi-Caret Mode:</strong> Multiple caret mode is now much more flexible
-and useful, allowing for more complex actions than before. You can also now
-set multi-carets with ctrl+click.</p></li>
-<li><p><strong>Embedded Find/Replace:</strong> Find and replace has been significantly overhauled
-and is now part of the editor (rather than a popup dialog).</p></li>
-<li><p><strong>Multiple Find Result Tabs:</strong> Every search now opens in its own result tab,
-you are no longer limited to 2 tabs. Find results now also show a new input
-field that allow you to search again with the same input but a different
-search pattern.</p></li>
-<li><p><strong>Macros renamed to Userscripts:</strong> Toolbox Macros have been renamed to
-Userscripts. Macros also still exist but only through the toolbar or menu
-interface. When you save them to your toolbox they effectively become
-userscripts.</p></li>
-<li><p><strong>Quick Start on Tabs:</strong> When opening a new tab you now get a view that lets
-you pick what to do with the tab; eg. create a new file, open files, new file
-from template, recent file, etc.</p></li>
-<li><p><strong>New &amp; Improved File Icons:</strong> The language icons have been updated to be
-more distinctive and less generic looking.</p></li>
-<li><p><strong>Commando has gotten a visual overhaul:</strong> More lightweight, no borders or
-gradients. Commando now feels as lightweight as it is.</p></li>
-<li><p><strong>Tons and tons of UX improvements:</strong> An ongoing effort to make Komodo the
-most user friendly IDE out there by many miles.</p></li>
-</ul>
+<li><p><strong>New User Interface</strong>:
+The entire user interface has been given a big facelift. This facelift isn&rsquo;t
+just about making Komodo more attractive and enjoyable to use; a ton of user
+experience work has gone into the facelift. On the technical end, these
+changes make Komodo far more maintainable and far less prone to interface
+related bugs. Possibly the biggest feature, though, is that you can define
+your own colors. Every color scheme now also extends to the user interface,
+so you can tweak and style not just how your code looks, but also how Komodo
+looks. Or not&ndash;it&rsquo;s entirely up to you, of course.</p>
 
-<h3>9.2.1</h3>
+<p>For those who prefer not to have their user interface change too much we&rsquo;ve
+also introduced some preferences which let you essentially use the &ldquo;classic&rdquo;
+approach to UI in many places.</p>
 
-<p>Maintenance release, see detailed changes <a href="#details">below</a>.</p>
+<p>These changes do mean that skins and iconsets for Komodo 8 and 9 will no
+longer work.</p></li>
+<li><p><strong>The Dynamic Toolbar</strong>:
+The dynamic toolbar is a new UI element in Komodo 10 which holds toolbar
+buttons that provide contextual actions to your files and project. They
+show and hide based on what you&rsquo;re doing and provide information and actions
+based on how your files and projects are configured. For example the version
+control dynamic button will show you how many files have changed and allow
+you to quickly open eg. file or project history, or the commit dialog.</p>
 
-<h3>9.2</h3>
-
-<ul>
-<li>Docker and Vagrant Integration (IDE only) - You can now interact with Docker and Vagrant using Commando (under Commando &gt; Shell).</li>
-<li>Collaboration Overhaul (IDE only) - Collaboration has been given a significant face-lift and is now a joy to work with! Code better with your teams with our updated collab tool.</li>
-<li>Real-time (in-line) spell checking (IDE Only) - Komodo will now check your code for spelling errors in real-time, and allow you to easily address spelling errors right within the editor.</li>
-<li>Package Installer - We are introducing an all new way to install addons, color schemes, skins, keybindings, languages, etc. Simply by using Commando, you can now install all your favourite &ldquo;Packages&rdquo; (previously called &ldquo;Resources&rdquo; or &ldquo;Extensions&rdquo;).</li>
-<li>EditorConfig Integration (see issue <a href="https://github.com/Komodo/KomodoEdit/issues/271">#271</a>) - Komodo now checks for .editorconfig files in your path, <a href="http://komodoide.com/blog/editorconfig-your-komodo/">you can read more about this here</a>.</li>
-<li>Focus Mode (aka Distraction Free Mode) - Clean up your IDE: easily hide non-essential UI with a keystroke, <a href="http://komodoide.com/blog/focus-mode-aka-distraction-free-mode-in-komodo/">you can read more about this here</a>.</li>
-<li>CSS3 Autocompletions - We already supported a ton of CSS3 in our autocompletions, but <a href="https://github.com/Komodo/KomodoEdit/pull/434">thanks to Defman</a> we now support all of CSS3.</li>
-<li>Crisper UI - Particularly when using dark color schemes, the UI could feel a little bit &ldquo;fuzzy&rdquo; in the past, but no longer is that the case!</li>
-<li>A boatload of Commando enhancements and fixes (see below)</li>
-</ul>
-
-<h3>9.1</h3>
-
-<ul>
-<li><strong>Package Manager integration</strong>: You can now easily install and uninstall packages
-using Commando, as well as perform all sorts of specific package manager actions.
-Support for the following package managers (<em>IDE only</em>):
-
-<ul>
-<li>Bower (web front-end)</li>
-<li>NPM (Node.JS)</li>
-<li>Composer (PHP)</li>
-<li>Gem (Ruby)</li>
-<li>PIP (Python)</li>
-<li>CPAN (Perl)</li>
-<li>PyPM (Python)</li>
-<li>PPM (Perl)</li>
-</ul></li>
-<li><strong>Scope Shell</strong>: Commando has a new &ldquo;shell&rdquo; scope which allows you to easily run commands with minimum interruption from your workflow (<em>IDE only</em>).</li>
-<li><strong>Workspace management</strong> has been significantly improved. Save your UI state and
-opened files and restore them whenever you&rsquo;d like (<em>IDE only</em>).</li>
-<li>Select Commando (Go to Anything) results by pressing ALT+number.</li>
-<li>The Commando user experience has had significant usability improvements.
-Most notably when starting Commando you will now be presented with a convenient list of scopes that you can use to narrow down your search results.</li>
-<li><strong>Other Mentionables</strong>
-
-<ul>
-<li>Color Schemes: Use foreground color for caret color - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/75">#75</a>.</li>
-<li>Commando: Don&rsquo;t preserve query when navigating backwards.</li>
-<li>Commando: Escape now clears the current search.</li>
-<li>SDK: Added the &ldquo;shell&rdquo; SDK, allowing you to easily run shell commands.</li>
-<li>UI: Improved scrollbar contrast on dark color schemes.</li>
-<li>UI: &ldquo;Ugly border&rdquo; showing around notifications on windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/108">#108</a>.</li>
-<li>CodeIntel: Improve PHPDoc tooltip legibility - contributed by Defman - <a href="https://github.com/Komodo/KomodoEdit/pull/255">PR #225</a></li>
-</ul></li>
-</ul>
-
-<h3>9.0</h3>
-
-<ul>
-<li><p><strong>Track Changes</strong>: The editor has gained a new left margin,
-    which highlights unsaved changes, as well as any uncommitted SCC
-    changes. Clicking on the margin will show a diff dialog of the changes,
-    and you can also revert these individual changes.</p></li>
-<li><p><strong>Markdown Viewer</strong>: When a markdown file is open in
-    Komodo, you&rsquo;ll be able to easily HTML preview that markdown with a click
-    of a button. The Komodo markdown viewer uses GitHub markdown styling.</p></li>
-<li><p><strong>Go Lang</strong>: Initial support for the Go programming
-    language has been added to Komodo. It provides syntax coloring, code
-    folding, syntax checking (linting) and code intelligence with
-    completions, calltips, outline and goto definition.</p></li>
-<li><p><strong>Commando</strong>: This popup dialog is the combined successor
-    of the &ldquo;Fast Open&rdquo; dialog and &ldquo;Invoke Tool&rdquo; dialog. Commando provides
-    the following search tools and features:</p>
-
-<ul>
-<li>  fuzzy matching</li>
-<li>  string match highlighting in the results panel</li>
-<li>  find any file under a particular folder</li>
-<li>  tool (macro, run command, snippet, &hellip;) search</li>
-<li>  bookmark integration</li>
-<li>  shortcuts (go-tool) integration</li>
-<li>  custom category filtering
-Commando also comes with an easy to use API so that you can easily add
-your own custom search &ldquo;scopes&rdquo;.</li>
-</ul></li>
-<li><p><strong>Kopy.io</strong>: This allows you to easily share snippets of
-    code with other people (like a pastebin) directly from Komodo. Simple
-    make a text selection and right-click and use the <em>Share Code via
-    Kopy.io</em>. Even better is that Kopy.io supports client side
-    encryption, so you can make those shared pastes more secure.</p></li>
-<li><p><strong>Notifications</strong>: Messages shown to the user now appear in
-    a separate popup panel that overlays the main Komodo editor window
-    (previously they appeared in the Komodo statusbar). There are
-    notification preferences which allows you to control which messages get
-    displayed in the popup panel.</p></li>
-<li><p><strong>Icons</strong>: Most of the Komodo UI icons have been updated -
-    here is a list of the most noticeable icon changes:</p>
-
-<ul>
-<li>  file icons</li>
-<li>  language icons</li>
-<li>  places icons</li>
-<li>  toolbox icons</li>
-<li>  preference page</li>
-<li>  code intelligence icons (completions, sections list, code browser)</li>
-</ul></li>
-<li><p><strong>Color Schemes</strong>: We&rsquo;ve changed all the default Komodo
-    color schemes. All schemes included in Komodo are now Base16, that is,
-    they are based on a set of 16 different base colors, which are re-used
-    by different parts of the scheme. You can also tweak the editor line
-    height spacing now directly in the color scheme preferences page.</p></li>
-<li><p><strong>Menu Bar</strong>: The Komodo main menu bar is now hidden by
-    default (Windows and Linux. You can use the Alt key to toggle the menu
-    visibility. Whilst the top-level menu is hidden, the unified button menu
-    will be visible in the toolbar. You can also control menu visibility
-    through the <em>View &gt; Toolbars</em> menu.</p></li>
-<li><p><strong>PHP 5.6 Support</strong>: We&rsquo;ve added support for PHP 5.6, with
-    a new Xdebug module (for PHP debugging and Code Profiling), updates for
-    keyword changes and updates to code intelligence to provide the latest
-    API data for PHP 5.6.</p></li>
-<li><p><strong>Python PEP 8 Syntax Checking</strong>: PEP 8 syntax checking has
-    been added. You can turn it on by visiting the Python Syntax Checking
-    preferences. For those that don&rsquo;t know - PEP 8 is the official style
-    guide for Python code.</p></li>
-<li><p><strong>CSS Code Formatting</strong>: Komodo now includes a CSS code
-    formatter - so you can keep your CSS looking beautifully structured.
-    We&rsquo;re using a JavaScript
-    <a href="https://github.com/senchalabs/cssbeautify">CSS Beautify</a>
-    library from Sencha Labs.</p></li>
-<li><p><strong>Komodo Developer APIs</strong>: We&rsquo;ve been overhauling the
-    Komodo APIs, to make it easier to load and access the methods inside
-    of Komodo. We&rsquo;re now making use of CommonJS (aka Node.js)
-    <em>require()</em> calls to load individual modules - you can see the
-    full list of supported modules in the
-    <a href="https://github.com/Komodo/KomodoEdit/tree/master/src/chrome/komodo/content/sdk">sdk directory</a>.
-    Examples and more information can be found in the
-    <a href="https://github.com/Komodo/KomodoEdit/wiki/Komodo-9-Require">Komodo wiki</a>.
-    We&rsquo;ve also added convenient <em>console.log()</em> and friends support -
-    the messages show up in the Komodo Notifications pane.</p></li>
-<li><p><strong>Performance</strong>: Various performance tweaks were made to
-    Komodo to improve the editing performance, as well as improving the
-    search speed, syntax checking times and general responsiveness of
-    Komodo.</p></li>
-<li><p><strong>Other Mentionables</strong></p>
-
-<ul>
-<li>  Statusbar has moved to be above the bottom pane (attached to the editor view)</li>
-<li>  CSS code formatter was added</li>
-<li>  Preference page now has a simple and advanced mode</li>
-<li>  Startpage has been removed - instead a <em>Quick Launch</em> page is shown when no views are opened</li>
-<li>  Workspaces can be saved and loaded on demand - see the <em>File &gt; Workspace</em> menu</li>
-<li>  High DPI configurations on Windows should work correctly - no blurred fonts</li>
-<li>  Tab Width indentation preference has changed from 8 spaces to 4 spaces</li>
-<li>  Find Results now has a toolbar command to copy the find results to the clipboard</li>
-<li>  SCC Commit dialog now displays the current branch name</li>
-<li>  Re-organised various menus, including tab and editor context menus</li>
-<li>  Sections list (IDE) has merged with breadcrumbs widget</li>
-<li>  Tabs v&rsquo;s spaces indentation detection was improved</li>
-<li>  Komodo was updated to use the Mozilla 31 code base</li>
-<li>  Opt-in analytics module was added. This is entirely optional and we do not track user specific information.</li>
-<li>  Komodo Sync has been removed for Komodo 9; similar functionality may be re-introduced in a later version of Komodo.</li>
-</ul></li>
+<p>The dynamic toolbar is very developer friendly, so you can easily create
+your own buttons or download ones that were contributed by other developers.</p></li>
+<li><p><strong>First Start Wizard</strong>:
+When you first start Komodo (or when you update between major versions)
+Komodo will now show you a short and simple first start wizard that lets you
+customize Komodo to your likings. Tabs or spaces? The bias is all yours.</p></li>
+<li><p><strong>New Default Keybindings</strong>:
+Our old defaults (which are still available as &ldquo;Legacy&rdquo; keybindings) were an
+accumulation of 10+ years of changes. Needless to say they became messy and
+illogical. With Komodo 10 we dumped them entirely and started from scratch.
+A rule of thumb here was that if something didn&rsquo;t make sense then it didn&rsquo;t
+deserve a default binding, the user can define these themselves. We also
+reviewed other editors complete default keybinding sets to find
+commonalities in the industry. The new bindings are based on logic and
+sensible defaults that programmers have become accustomed to.</p></li>
+<li><p><strong>Other Editor Keybindings</strong>:
+We are introducing keybindings for other editors and IDE&rsquo;s to facilitate
+developers transitioning to Komodo. These can be accessed from your Keybinding
+preferences or via the First Start wizard.</p></li>
+<li><p><strong>Chrome Remote Debugging (IDE only)</strong>:
+Debug your code in Chrome, from Komodo! No more context switching or
+locating the same code you&rsquo;ve been working on again in the Chrome dev tools.
+You can write code, place breakpoints and debug all right from inside
+Komodo.</p></li>
+<li><p><strong>Debugging for Ruby 2.1 And Beyond (IDE only)</strong>:
+Due to the library that Komodo was depending on for Ruby debugging no longer
+working in Ruby version 2.1 and beyond we have not been able to properly
+support those versions for a while now. With Komodo 10 that changes, we&rsquo;ve
+been hard at work at Ruby 2.1+ support and are confident in introducing it
+with Komodo 10. This also includes Ruby 2.1+ REPL support.</p></li>
+<li><p><strong>Gulp, Grunt, NPM task runner Integration (IDE only)</strong>:
+Komodo now integrates with Gulp, Grunt and NPM tasks. The
+integration allows you to run commands for those task runners in your shell
+scope (inside Commando), it also adds a button to your dynamic toolbar (new in
+Komodo 10) which lets you quickly run commands via those task runners. This
+button is only visible when your project uses one of these tools. So for
+example, if you have a Gulp task called &ldquo;Concatenate&rdquo; you can just hit the
+Gulp button and hit &ldquo;Concatenate&rdquo;.</p></li>
+<li><p><strong>PhoneGap &amp; Cordova Integration (IDE only)</strong>:
+Quickly access PhoneGap and Cordova via your &ldquo;dynamic toolbar&rdquo;, as well
+as interact with them via the Commando shell scope. Komodo automatically
+detects your configuration and provides contextual actions.</p></li>
+<li><p><strong>Symbol Browser (IDE only)</strong>:
+The section scope (inside Commando) now allows you to browse symbols across
+your entire project. So you can easily jump to classes, functions,
+properties, or other symbols no matter where they are in your project.</p></li>
+<li><p><strong>Improved Node.js and PHP CodeIntel</strong>:
+JavaScript and PHP CodeIntel has had significant improvements, NodeJS modules
+and PSR4 classes are fully supported as well as various new features of each
+language.</p></li>
+<li><p><strong>Support For React, Ember, Angular, TypeScript, ES6</strong>:
+We&rsquo;ve put a lot of focus on individual frameworks in Komodo 10, a trend you
+can expect to continue. With this iteration we focused on some of the most
+popular JS frameworks and derivatives.</p></li>
+<li><p><strong>Performance Improvements</strong>:
+Komodo 10 has received significant performance improvements. File opening,
+closing, saving, typing, .. you name it. Additionally we&rsquo;ve fixed a long
+standing memory leak which caused users to have to restart Komodo every few
+days, that should no longer be the case.</p></li>
+<li><p><strong>Other Mentionables</strong></p></li>
+<li><p>Improved source code control UI and UX (IDE only)</p></li>
+<li><p>New SCC Commit Dialog (IDE only)</p></li>
+<li><p>New SCC Widget (IDE only)</p></li>
+<li><p>Improved unit testing UI and UX (IDE only)</p></li>
+<li><p>Improved color picker UI and UX</p></li>
+<li><p>New color scheme editor</p></li>
+<li><p>New UI SDK (used in our new <a href="https://github.com/Komodo/KomodoEdit/blob/10.0.0-alpha1/src/chrome/komodo/content/startupWizard/startupWizard.js#L53">First Start Wizard</a>)</p></li>
+<li><p>and much much more (see below) ..</p></li>
 </ul>
 
 <p><a name="details"></a></p>
@@ -389,815 +254,171 @@ your own custom search &ldquo;scopes&rdquo;.</li>
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.</p>
 
-<h3>9.3.2</h3>
+<h3>10.0.0</h3>
 
 <ul>
-<li>Collab: Fix issue where user indicators would show on top of windows.</li>
-<li>Collab: Use tooltip instead of panels, to eliminate focus issues.</li>
-<li>EditorConfig: Reverted a change that made some prefs not apply - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/908">#908</a>.</li>
-<li>Find: Fix &ldquo;where&rdquo; section not remembered - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/873">#873</a>.</li>
-<li>Find: Keep focus inside find frame when tabbing - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/888">#888</a>.</li>
-<li>Fixed regression in Perl interpolated variable highlighting with Scintilla upgrade - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/914">#914</a>.</li>
-<li>Linter: Show at most 10 results at a time.</li>
-<li>Non-scannable UDL languages like XML do not have scopes; do not raise errors - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/906">#906</a>.</li>
-<li>Notifications: Corner notifications should not be too wide.</li>
-<li>Notifications: Fixed notifications stealing focus, for real this time - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/816">#816</a>, fixes <a href="https://github.com/Komodo/KomodoEdit/issues/837">#837</a>.</li>
-<li>Projects: Fix editor prefs missing under Project prefs - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/929">#929</a>.</li>
-<li>Projects: Fixed <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a> can&rsquo;t open projects with &ldquo; &rdquo; in name.</li>
-<li>Projects: Places opens in wrong context in newWindow. fixes <a href="https://github.com/Komodo/KomodoEdit/issues/932">#932</a>.</li>
-<li>SCSS: Use &rsquo;//&rsquo; for line comments in SCSS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/866">#866</a>.</li>
-<li>UI: Highlight focused elements in the HUD - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/883">#883</a>.</li>
-<li>codeintel: Buffers with only one token should not cause errors anymore - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/796">#796</a>.</li>
-<li>codeintel: Do not create extra, unnecessary CIX files on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/870">#870</a>.</li>
-<li>codeintel: Do not error on blank documents - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/895">#895</a>.</li>
-<li>codeintel: PHP: Fixed interface method inheritence - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/751">#751</a>.</li>
-<li>codeintel: golang: Fixed codeintel crash in some instances of &ldquo;goto definition&rdquo; - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/461">#461</a>.</li>
-<li>editor: Do not auto-expand abbreviations when recording macros or when there is a column selection - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/811">#811</a>.</li>
-<li>editor: Fixed out-of-control drag-and-drop for large files and word wrap - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/901">#901</a>.</li>
-<li>editor: Ignore smart wrapping when performing a key combination - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/865">#865</a>.</li>
-<li>editor: minimap: Do not allow markers to be shown - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/855">#855</a>.</li>
-<li>Projects: Fixed projects failing to open in new windows due to space in filename - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a>.</li>
-</ul>
-
-<h3>9.3.1</h3>
-
-<ul>
-<li>Commando: Fix miss-alignment when opened from the toolbar - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/789">#789</a>.</li>
-<li>Commando: Fix non-recursive searches not working - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/834">#834</a>.</li>
-<li>Console: Fixed object keys not dumping in some cases - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/790">#790</a>.</li>
-<li>Debug: Fix run without debugging throwing error - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/835">#835</a>.</li>
-<li>Find: Restore focus after the find frame closes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/805">#805</a>.</li>
-<li>Linting: Only notify about the first linting error (don&rsquo;t bombard users with notifications) - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/818">#818</a>.</li>
-<li>OpenFiles: Fix tab sorting won&rsquo;t toggle - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/841">#841</a>.</li>
-<li>Runinline: Consider global environment preferences - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/810">#810</a>.</li>
-<li>Troubleshooting: Fix safe-mode on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/776">#776</a>.</li>
-<li>UI: Fix missing checkmark icons in menu&rsquo;s on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/801">#801</a>.</li>
-<li>debugger: All versions of NodeJS should be supported now - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/747">#747</a>.</li>
-<li>elastic tabstops: Respect tab width preference - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/820">#820</a>.</li>
-<li>install: More robust GDK version checker for Linux - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/799">#799</a>.</li>
-<li>CodeIntel: Autocompletion doesn&rsquo;t show in some cases - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/871">#871</a>.</li>
-<li>CodeIntel: CSS codeintel should read all CSS files in the project - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/783">#783</a>.</li>
-</ul>
-
-<h3>9.3.0</h3>
-
-<ul>
-<li>CSS: Fixed CSS linting.</li>
-<li>CoffeeScript: Fixed lexing of numeric ranges - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/387">#387</a>.</li>
-<li>Collab: Improve contact request user experience.</li>
-<li>Commando: Commando now includes project live folders in file searches - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/116">#116</a>.</li>
-<li>Commando: Fix issue where results would not update - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/515">#515</a>.</li>
-<li>Commando: Fix results not aligning properly.</li>
-<li>Commando: Improve responsiveness (reduce UI blocking).</li>
-<li>Commando: Limit the search depth for files - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/545">#545</a>.</li>
-<li>Commando: Shell: Don&rsquo;t default to running in container commands in an external terminal.</li>
-<li>Commando: Shell: Fix autocompletion triggering on partial matches.</li>
-<li>Commando: Shell: Show more appropriate information about running containers.</li>
-<li>Commando: Updated commando dialog styling to be less border-heavy.</li>
-<li>Commando: Will now save the state for the scope that Commando is initialized with.</li>
-<li>Commands: The Command Output widget now allows you to run quick commands right from the widget.</li>
-<li>CommonJS: ko/editor: add gotoLine. Defaults for <code>_posToAbsolute</code>.</li>
-<li>Console: Added a new console widget, which lets you quickly access the Komodo javascript runtime.</li>
-<li>Date: Thu Sep 24 12:24:39 2015 -0400.</li>
-<li>Do not attempt to toggle breakpoints in terminal views - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/133">#133</a>.</li>
-<li>Docs: The Komodo help dialog has been removed in favour of the new documentation site.</li>
-<li>Documentation Browser: Komodo now comes with a built-in documentation browser, covering anything from Komodo itself to the API&rsquo;s of your favourite languages.</li>
-<li>Editor: Fix unsaved changes not reflecting changes on disk - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/83">#83</a>.</li>
-<li>Editor: Support rename-tag in languages that can contain HTML (eg. php).</li>
-<li>Editor: The find/replace window is now embedded into the editor, just like quick find.</li>
-<li>EditorConfig: Make editorconfig less aggressive, don&rsquo;t set any prefs and don&rsquo;t force a pref if it was already explicitly set.</li>
-<li>Find: Each search now opens in its own tab, so you can have as many searches open as you like.</li>
-<li>Find: Expose find prev results for results tab.</li>
-<li>Find: Find All button appears in Repace dialog. Fixes <a href="https://github.com/Komodo/KomodoEdit/issues/733">#733</a>.</li>
-<li>Find: MarkAll btn didn&rsquo;t appear if Rplc enabled while dialog open.</li>
-<li>Find: Tabbing order in embedded find. Fixes <a href="https://github.com/Komodo/KomodoEdit/issues/734">#734</a>.</li>
-<li>Find: fix cmd_findNextResult (fixed <a href="https://github.com/Komodo/KomodoEdit/issues/136">#136</a>).</li>
-<li>General: Added new troubleshooting options that will reset certain aspects of your Komodo configuration.</li>
-<li>General: Expose &ldquo;show quick launch&rdquo; ability to user through a command.</li>
-<li>HUD: Hud styling has been made more flat and more contrasting.</li>
-<li>History: Komodo now stores your history as you move through a file, letting you go back to previous areas you visited.</li>
-<li>Icons: Added FontAwesome icons, allowing you to use font awesome for your tools and addons.</li>
-<li>Icons: Generated icons now try to be a little bit more stylish.</li>
-<li>Icons: Hud icons now actually use hud colors.</li>
-<li>Icons: The language icons for our main languages have been updated to reflect their official logo.</li>
-<li>Linter: Lint messages are now shown above the syntax checking icon as they occur.</li>
-<li>Notifications: Most notifications will now show in a smaller pop-in at the bottom right of the screen.</li>
-<li>Notifications: You can now disable opacity and/or animations for notifications.</li>
-<li>Notify: Fix notify stealing focus.</li>
-<li>OSX: Ensure view is visible after un-hide - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/564">#564</a>.</li>
-<li>Open Files: Tabs can now be sorted according to the open files sort settings.</li>
-<li>Open Files: You can now close file groups or all files from the Open Files widget.</li>
-<li>Packages: Addon management is now fully handled through Commando, the old addon interface has been disabled.</li>
-<li>Perl: Updated to native Scintilla Perl lexer - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/525">#525</a>.</li>
-<li>Places: Fixed renaming files with the same case-insensitive name on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/155">#155</a>.</li>
-<li>Publishing: Fixed auto push not working when path has spaces - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/505">#505</a>.</li>
-<li>Quickbookmarks: Add editor context menu.</li>
-<li>Run In-Line: You can now quickly run your current file/selection without saving.</li>
-<li>SDK: Added debug module, currently it&rsquo;s only use is to retrieve the size of a javascript object.</li>
-<li>SDK: Editor: Made the editor SDK more flexible. You can now use it with custom scintilla instances.</li>
-<li>SDK: File: Don&rsquo;t depend on Mozilla SDK for dirname and basename.</li>
-<li>Scintilla: Highlight JavaScript and CoffeeScript regex properly - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/414">#414</a>.</li>
-<li>TCL: Updated the TDK dependencies to 5.4.1.</li>
-<li>Tcl: Fixed Tcl lexer to update fold levels when exiting line comments - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/590">#590</a>.</li>
-<li>Toolbox: Remove Samples logic. Install in root tools on new profiles.</li>
-<li>UI: Added the &ldquo;New Tab&rdquo; command, this shows the quick start page whenever you open a new tab.</li>
-<li>UI: Breadcrumbs have been made to use up slightly less space in the statusbar.</li>
-<li>UI: Don&rsquo;t show file path for certain views fixes <a href="https://github.com/Komodo/KomodoEdit/issues/686">#686</a>.</li>
-<li>UI: Fix pixelated fonts in sidebars when using Komodo on OSX with a Retina screen.</li>
-<li>UI: Linter: The syntax checker icon in the statusbar now shows you linting results when clicked.</li>
-<li>UI: Linting: The syntax checking pane has been removed, the same functionality is now accessible from the statusbar.</li>
-<li>UI: Notification design has been simplified (flat design, no gradients or shadows).</li>
-<li>Workspace2: Offer to save new files if dirty.</li>
-<li>codeintel: Automatically hide the completion list if its one completion has been typed - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/656">#656</a>.</li>
-<li>codeintel: Do not log errors when attempting to scan images - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/602">#602</a>.</li>
-<li>codeintel: Ensure OOP codeintel has access to user extensions&rsquo; Python library paths - fixed <a href="https://github.com/Komodo/KomodoEdit/issues/598">#598</a>.</li>
-<li>codeintel: Fixed Perl parser to handle nested ()&rsquo;s in variable assignment - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/633">#633</a>.</li>
-<li>codeintel: Fixed a few Tcl bugs - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/722">#722</a>.</li>
-<li>codeintel: Fixed reading from rails.cix catalog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/537">#537</a>.</li>
-<li>codeintel: Fixed some instances of PHP completion with <code>foreach</code> - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/142">#142</a>.</li>
-<li>codeintel: Fixed variable highlighting with UTF-8 characters in the document - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/642">#642</a>.</li>
-<li>codeintel: Gracefully handle more than two Python 3 syntax errors in code browser - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/238">#238</a>.</li>
-<li>codeintel: PHP: Handle cases when a variable has the same name as a builtin function - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/123">#123</a>.</li>
-<li>codeintel: PHP: Support PHP 7&rsquo;s grouped &ldquo;use&rdquo; declarations.</li>
-<li>codeintel: PHP: Support PHP 7&rsquo;s new anonymous classes.</li>
-<li>codeintel: Perl: Show &lsquo;logically defined or&rsquo; parameters in calltip - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/449">#449</a>.</li>
-<li>coffeescript: Coffeescript has no block comment syntax - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/567">#567</a>.</li>
-<li>console: auto-complete: Disable caching. var objs don&rsquo;t update.</li>
-<li>docker: Added missing &#39;LABEL&rsquo; keyword.</li>
-<li>drag and drop: Fixed file drag and drop onto quick launch view - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/77">#77</a>.</li>
-<li>editing: Added preference for wrapping selection with typed delimiter (enabled by default).</li>
-<li>editing: Allow Ctrl or Alt key to toggle making rectangular selections with the mouse - #fixes 690.</li>
-<li>editing: Fixed errors with &#39;cmd_delete&rsquo; in non-editor view - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/408">#408</a>.</li>
-<li>editing: HTML/XML: Added ability to edit matching tag in place via multiple selection.</li>
-<li>editor: Changed column selection modifier to be Alt on Linux.</li>
-<li>find: Fixed incremental find skipping twice on OSX on Enter keypress - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/130">#130</a>.</li>
-<li>installer: Warn if GDK version 2.24 dependency is not met during Linux installation - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/296">#296</a>.</li>
-<li>keybindings: vi: Ensure the caret is scrolled into view after moving in visual mode - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/436">#436</a>.</li>
-<li>languages: Added support for Mustache.</li>
-<li>languages: JavaScript: Enable ES6 backquoted string highlighting - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/743">#743</a>.</li>
-<li>languages: Lua: Updated keywords and added syntax highlighting for standard libraries.</li>
-<li>languages: PHP: Highlight class and function identifiers.</li>
-<li>languages: Python: Support new keywords in 3.5.</li>
-<li>languages: R: Added syntax highlighting for R.</li>
-<li>lint: Allow inline display of lint results.</li>
-<li>lint: CoffeeScript: Upgraded CoffeeScript linter - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/550">#550</a>.</li>
-<li>lint: Fixed linting for Javascript macros - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/381">#381</a>.</li>
-<li>lint: JSON: Added dedicated JSON linter - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/127">#127</a>.</li>
-<li>open files: Handle URI-encoded &rsquo;#&rsquo; and &rsquo;:&rsquo; when opening files at line numbers - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/314">#314</a>.</li>
-<li>places: Do not show editing preferences in &ldquo;File Preferences&rdquo; dialog if the file is not open - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/430">#430</a>.</li>
-<li>places: Ensure places file filters are in sync with project file filters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/455">#455</a>.</li>
-<li>python: Detect pyflakes properly in Python3.</li>
-<li>scintilla: Fixed Markdown lexer to highlight italic, bold, etc. spans - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/658">#658</a>.</li>
-<li>scintilla: Ruby: Highlight keyword-style arguments correctly - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/522">#522</a>.</li>
-<li>scintilla: Swift: Initial Swift syntax-highlighting support.</li>
-<li>spellcheck: Added new command to jump to the next misspelled word - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/588">#588</a>.</li>
-<li>spellcheck: Allow &ldquo;Ignore&rdquo; for words with no spelling suggestions - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/493">#493</a>.</li>
-<li>terminal: Do not auto-scroll terminal output if the scroll position is above the last line - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/630">#630</a>.</li>
-</ul>
-
-<h3>9.2.1</h3>
-
-<ul>
-<li>Prefs: Added Vagrantfile file association.</li>
-<li>Syntax Highlighting: Added Docker syntax highlighting.</li>
-<li>Toolbox: fix issue preventing tools from saving - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/504">#504</a>.</li>
-<li>Collab: Improve contact request user experience.</li>
-<li>Scintilla: Fixed crash caused by drag+drop on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/371">#371</a>.</li>
-<li>Go: Fix issue where interpreter would not be properly detected.</li>
-<li>Python: Detect pyflakes properly in Python3.</li>
-<li>Publishing: Fixed auto push not working when path has spaces - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/505">#505</a>.</li>
-<li>Commando: Fix issue where results would not update - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/515">#515</a>.</li>
-<li>Commando: Shell: Don&rsquo;t default to running in container commands in an external terminal.</li>
-<li>Commando: Shell: Fix autocompletion triggering on partial matches.</li>
-<li>OSX: Ensure Scintilla dialog views&rsquo; text is visible.</li>
-<li>Scintilla: Highlight JavaScript and CoffeeScript regex properly - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/414">#414</a>.</li>
-<li>CodeIntel: Fixed reading from rails.cix catalog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/537">#537</a>.</li>
-<li>Keybindings: vi: Ensure the caret is scrolled into view after moving in visual mode - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/436">#436</a>.</li>
-<li>Lint: Fixed linting for Javascript macros - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/381">#381</a>.</li>
-<li>Scintilla: Ruby: Highlight keyword-style arguments correctly - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/522">#522</a>.</li>
-</ul>
-
-<h3>9.2</h3>
-
-<ul>
-<li>Abyss: The Abyss (dark) skin has been removed from Komodo. It is still available through the package installer, but it just isn&rsquo;t packaged with Komodo anymore.</li>
-<li>codeintel: Fixed potential crashes when autocompleting with multiple selections - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/106">#106</a>.</li>
-<li>codeintel: PHP: correctly resolve methods returning &ldquo;$this&rdquo;. &ndash; <a href="https://github.com/Komodo/KomodoEdit/pull/44">Thanks to wizza-smile</a></li>
-<li>codeintel: Improved code documentation tooltips for methods - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/203">#203</a> &ndash; <a href="https://github.com/Komodo/KomodoEdit/pull/255">Thanks to Defman</a></li>
-<li>Collab: Now works with track changes.</li>
-<li>Collab: Overhauled the sidepane.</li>
-<li>Collab: Added named caret &ldquo;flags&rdquo; for everyone editing a file, you can easily see who is editing what.</li>
-<li>Color Schemes: Allow for indicators to be square boxes, making for crisper UI.</li>
-<li>Commando: Commando (and its scopes) will now toggle when you press their &ldquo;show&rdquo; shortcuts - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/413">#413</a>.</li>
-<li>Commando: Fix abnormal CPU usage after opening Commando - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/411">#411</a>.</li>
-<li>Commando: Fix icons in commando being barely visible on dark backgrounds.</li>
-<li>Commando: Fix issue where excludes would not work on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/117">#117</a>.</li>
-<li>Commando: Fix issue where history would not be cleared when switching between scopes.</li>
-<li>Commando: Fix issue where package manager binary locations would not update instantly.</li>
-<li>Commando: Fix issue where the tip would overlap the results.</li>
-<li>Commando: Fixed issue where certain commands (eg. Preferences) could not be executed - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/364">#364</a>.</li>
-<li>Commando: Fixed issue where selecting &ldquo;Open&rdquo; from the expand menu would fail - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/422">#422</a> &ndash; <a href="https://github.com/Komodo/KomodoEdit/pull/423">Thanks to Defman</a></li>
-<li>Commando: Fixed showing scrollbar when none is needed.</li>
-<li>Commando: OpenFiles: Open Files are now sorted entirely by their last access time.</li>
-<li>Commando: Removed the Navigation &gt; Go To .. Menu&rsquo;s, Commando now facilitates this easily by itself.</li>
-<li>Commando: Significantly improved search responsiveness, especially on OSX.</li>
-<li>Debugger: nodejs: Forward interpreter flags to debugger properly - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/357">#357</a>.</li>
-<li>Find: Don&rsquo;t throw exception when attempting a search on a non-editor view - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/374">#374</a>.</li>
-<li>Icons: Add missing return statements, fixes most errors regarding ko-icon - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/19">#19</a>.</li>
-<li>Keybindings: Don&rsquo;t need to restart unless there are multiple komodo windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/336">#336</a>.</li>
-<li>Keybindings: Removed default Commando Sections scope keybinding, it was already used - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/206">#206</a>.</li>
-<li>Other: Fix issue where some files would refuse to open - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/217">#217</a>.</li>
-<li>Preferences: Fixed issue where some preference buttons would appear as white blocks on dark skins - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/379">#379</a> &ndash; <a href="https://github.com/Komodo/KomodoEdit/pull/428">Thanks to Defman</a></li>
-<li>Publishing: failed when path had spaces.</li>
-<li>Refactoring: Fix missing replace field - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/242">#242</a>.</li>
-<li>Remote Servers: not defined errors when trying to open a remote file - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/369">#369</a>.</li>
-<li>Reporting: Added background error reporting, only used when users opt-in to analytics.</li>
-<li>Scimoz: Make indicators look crispy, no more fuzzy borders.</li>
-<li>Scintilla: Added support for highlighting CoffeeScript instance properties.</li>
-<li>SDK: Added &ldquo;windows&rdquo; SDK, which will provide quick access to different Komodo windows/panels/dialogs.</li>
-<li>SDK: Added the &ldquo;views&rdquo; module, allowing easy access to the Komodo views.</li>
-<li>SDK: Added the ko/locale SDK, allowing easy use of mozilla&rsquo;s &ldquo;properties&rdquo; bundles.</li>
-<li>Skin: Make editor look more crisp when using dark scheme by removing borders around it.</li>
-<li>Skinning: Fix white text on white background in shell output - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/298">#298</a>.</li>
-<li>Skinning: Make HUD buttons flat, NO gradients!.</li>
-<li>Workspace2: Added manage workspace.</li>
-</ul>
-
-<h3>9.1</h3>
-
-<ul>
-<li>Commando: Cache is not updated when a shorcut is added - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/115">#115</a>.</li>
-<li>Commando: Commando hangs when descriptions have complex values - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/111">#111</a>.</li>
-<li>Commando: Commando prompts are behind commando panel on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/110">#110</a>.</li>
-<li>Commando: Oversized menulist icon on HiDPI.</li>
-<li>Commando: Reload sections scope when switching files - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/114">#114</a>.</li>
-<li>Commando: Stops functioning when result entry has special characters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/266">#266</a>.</li>
-<li>Editor: XML Auto-indentation causes infinite loop in edge cases - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/186">#186</a>.</li>
-<li>Icons: Debug tab icon was oversized on HiDPI/Retina - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/72">#72</a>.</li>
-<li>Mac: Performance: Stop high CPU usage on Mac coming from scrollbar overlays. (<a href="https://bugs.activestate.com/show_bug.cgi?id=">Bugzilla #106458</a>)</li>
-<li>Markdown viewer: Improved markdown button reliability.</li>
-<li>Notify: Pressing cog hides notification when priority is NOW - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/41">#41</a>.</li>
-<li>Other: Add back in way of opening the &ldquo;Sample Project&rdquo; - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/265">#265</a>.</li>
-<li>Places: Duplicate contents when toggling a folder - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/61">#61</a>.</li>
-<li>Places: Update places when a project is saved - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/129">#129</a>.</li>
-<li>Run: Run command was not saving recent commands - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/37">#37</a>.</li>
-<li>SDK: Shell: Added the ability to show the output of a command in a HUD panel.</li>
-<li>Skin: Komodo skin got reset to default each time a user upgraded - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/215">#215</a>.</li>
-<li>Trackchanges: Encoding issue on windows where characters end up garbled in the change dialog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/69">#69</a>.</li>
-<li>UI: Bottom pane height did not persist properly across restart - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/47">#47</a>.</li>
-<li>UI: High CPU use on OSX when using Trackpad - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/99">#99</a>.</li>
-<li>UI: Places widget dropdown menu had uppercase text - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/46">#46</a>.</li>
-<li>UI: fixed OSX Yosemite vibrancy effect in panes.</li>
-<li>Debugger: Required two attempts to start debugging.</li>
-<li>Code Intelligence: Fix race condition when multiple windows opened at startup - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/171">#171</a>.</li>
-<li>Debugger: Ensure Ctrl+F5 to skip debugger dialog works - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/149">#149</a>.</li>
-<li>Codeintel: allow go-lang prefs to pass to out-of-process codeintel - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/58">#58</a>.</li>
-<li>Tcl: autocomplete insertion was incorrect for unicode - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/85">#85</a>.</li>
-</ul>
-
-<h3>9.0.1</h3>
-
-<ul>
-<li>  Abyss: Fixed issues on Windows with double borders and white space above toolbar.</li>
-<li>  Color Schemes: Use foreground color for caret color - fixes #75. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/75">issue #75</a>)</li>
-<li>  Commando: Cache is not updated when a shorcut is added - fixes #115. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/115">issue #115</a>)</li>
-<li>  Commando: Commando hangs when descriptions have complex values - fixes #111. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/111">issue #111</a>)</li>
-<li>  Commando: Commando prompts are behind commando panel on OSX - fixes #110. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/110">issue #110</a>)</li>
-<li>  Commando: Oversized menulist icon on HiDPI.</li>
-<li>  Commando: Reload sections scope when switching files - fixes #114. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/114">issue #114</a>)</li>
-<li>  Editor: XML Auto-indentation causes infinite loop in edge cases - fixes #186. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/186">issue #186</a>)</li>
-<li>  Icons: Debug tab icon was oversized on HiDPI/Retina - fixes #72. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/72">issue #72</a>)</li>
-<li>  Notify: Pressing cog hides notification when priority is NOW - fixes #41. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/41">issue #41</a>)</li>
-<li>  Places: Duplicate contents when toggling a folder - fixes #61. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/61">issue #61</a>)</li>
-<li>  Places: Update places when a project is saved - fixes #129. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/129">issue #129</a>)</li>
-<li>  Printing: Use the global ko object - fixes #74 &amp; fixes #135. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/74">issue #74</a>)</li>
-<li>  Run: Run command was not saving recent commands - fixes #37. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/37">issue #37</a>)</li>
-<li>  Trackchanges: Encoding issue on windows where characters end up garbled in the change dialog - fixes #69. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/69">issue #69</a>)</li>
-<li>  UI: Bottom pane height did not persist properly across restart - fixes #47. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/47">issue #47</a>)</li>
-<li>  UI: High CPU use on OSX when using Trackpad - fixes #99. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/99">issue #99</a>)</li>
-<li>  UI: Improve scrollbar contrast on dark color schemes.</li>
-<li>  UI: Places widget dropdown menu had uppercase text - fixes #46. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/46">issue #46</a>)</li>
-<li>  UI: Ugly border showing around notifications on windows - fixes #108. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/108">issue #108</a>)</li>
-<li>  UI: fixed OSX Yosemite vibrancy effect in panes.</li>
-<li>  fix Debugger: Required two attempts to start debugging.</li>
-<li>  fix issue #149 - Debugger: Ensure Ctrl+F5 to skip debugger dialog works. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/149">issue #149</a>)</li>
-<li>  fix issue #149 - Debugger: Ensure Ctrl+F5 to skip debugger dialog works. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/149">issue #149</a>)</li>
-<li>  fix issue #58 - codeintel: allow go-lang prefs to pass to out-of-process codeintel. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/58">issue #58</a>)</li>
-<li>  fix issue #85 - Tcl autocomplete insertion was incorrect for unicode. (Bug <a href="https://github.com/Komodo/KomodoEdit/issues/85">issue #85</a>)</li>
-<li>  fix issue 171: Code Intelligence: Fix race condition when multiple windows opened at startup.</li>
-</ul>
-
-<h3>9.0.0</h3>
-
-<ul>
-<li>  Editor: Stop scrolling jumps when word wrap is enabled and editor is resized. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106383">106383</a>)</li>
-<li>  Mac: Color Picker: Ensure the system color picker works correctly. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105463">105463</a>)</li>
-<li>  Mac: Ensure editor contents are shown after workspace restore. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105056">105056</a>)</li>
-<li>  Mac: Stop editor margin click from blocking the editor focus. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106378">106378</a>)</li>
-<li>  Projects: Ensure project restore loads the correct files. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106386">106386</a>)</li>
-<li>  Places: Ensure SCC status icon changes for edited files. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104886">104886</a>)</li>
-</ul>
-
-<h3>9.0.0c1</h3>
-
-<ul>
-<li>  Code Intelligence: PHP: Better scanning of if statements. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106103">106103</a>)</li>
-<li>  Color Schemes: Twilight_Dark was made the default color scheme.</li>
-<li>  Editor: Indentation: Stop strange characters when indenting unicode. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=80493">80493</a>)</li>
-<li>  Mac: Editor: Stop editor region going blank in dialogs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105056">105056</a>)</li>
-<li>  Mac: The UI for Komodo on OSX has been overhauled to fit the latest OSX release (Yosemite).</li>
-<li>  Preferences: Project preference categories should not be sortable. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106013">106013</a>)</li>
-<li>  Run Commands: Ensure output text is correctly colored. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105933">105933</a>)</li>
-<li>  Startup: Show &ldquo;Getting Started&rdquo; dialog on upgrades. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106007">106007</a>)</li>
-<li>  File Paths: Collapse double-root &ldquo;//&rdquo; paths on Unix. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=106180">106180</a>)</li>
-</ul>
-
-<h3>9.0.0b1</h3>
-
-<ul>
-<li>  Check Configuration: Ensure Git, hg and bzr show the correct status. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97855">97855</a>)</li>
-<li>  Code Intelligence: CSS: Show pseudo completions after &ldquo;:&rdquo;. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104799">104799</a>)</li>
-<li>  Code Intelligence: PHP: Better detection of foreach variables. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100701">100701</a>)</li>
-<li>  Code Intelligence: Perl: Add variable completions on &ldquo;$&rdquo;. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105007">105007</a>)</li>
-<li>  Code Intelligence: Perl: Correct parsing of perl assignment expressions. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105308">105308</a>)</li>
-<li>  Debugging: Node.js: Ensure stderr messages are relayed to Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105402">105402</a>)</li>
-<li>  Debugging: Perl: Fix mod_perl from skipping breakpoints. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105124">105124</a>)</li>
-<li>  Debugging: Tcl: Update appLaunch.tcl file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101199">101199</a>)</li>
-<li>  Debugging: XSLT: Linux: Update binary for Linux x86 compatibility. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105706">105706</a>)</li>
-<li>  Editor: Django: Update list of django tags and filter names. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104511">104511</a>)</li>
-<li>  Editor: Ensure goto line focuses the editor. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104827">104827</a>)</li>
-<li>  Editor: Ensure tooltip positions are correct on high DPI monitors. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104640">104640</a>)</li>
-<li>  Editor: Indentation: Catch when indentation is set to zero. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105905">105905</a>)</li>
-<li>  Find and Replace: Ensure find markers are not added more than once. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104553">104553</a>)</li>
-<li>  Find and Replace: Handle unicode replacement correctly. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105541">105541</a>)</li>
-<li>  Find and Replace: Mac: Show marked changes should not stop mouse. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=93333">93333</a>)</li>
-<li>  Installer: Linux: Use xdg-desktop scripts to install menu and icon. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101857">101857</a>)</li>
-<li>  Keybindings: Emacs: Ensure Ctrl+K (cut to end of line) works correctly. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105506">105506</a>)</li>
-<li>  Keybindings: Vi: Ensure line up/down commands work in line wrap mode. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=87356">87356</a>)</li>
-<li>  Preferences: Added prefs to control HTML matching tag highlighting. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95667">95667</a>)</li>
-<li>  Preferences: Better handling for corrupted pref files. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105385">105385</a>)</li>
-<li>  Preferences: Default file encoding is now UTF-8. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=90424">90424</a>)</li>
-<li>  Preferences: Ensure formatter preference sets are saved correctly. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105850">105850</a>)</li>
-<li>  Project Templates: Ensure prefs are saved as part of the template. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104535">104535</a>)</li>
-<li>  Remote Files: Allow defining a SSH private key for SFTP/SCP connections. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=67948">67948</a>)</li>
-<li>  SDK: Ensure koext startlang works with &ndash;is-html-based argument. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104551">104551</a>)</li>
-<li>  Startup: Linux: Ensure compatibility with different shell&rsquo;s. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105122">105122</a>)</li>
-<li>  Syntax Checking: Ensure working on latin-1 file encoding. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=105635">105635</a>)</li>
-<li>  Syntax Checking: Tcl: Correct variable scope check inside try block. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101049">101049</a>)</li>
-<li>  Syntax Checking: Tcl: Pass version to syntax checking validator. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103533">103533</a>)</li>
-</ul>
-
-<h3>9.0.0a1</h3>
-
-<ul>
-<li>  Code Formatting: Html formatters now default to utf8 encoding. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102922">102922</a>)</li>
-<li>  Code Intelligence: Create seperate preferences for showing completions, calltips. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=68533">68533</a>)</li>
-<li>  Code Intelligence: Detect out-of-memory errors and restart the process. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103067">103067</a>)</li>
-<li>  Code Intelligence: Fix memory leak in PHP file scanning. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102643">102643</a>)</li>
-<li>  Code Intelligence: JavaScript: Ensure document completions work inside of HTML. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102993">102993</a>)</li>
-<li>  Code Intelligence: PHP: Fix return type for PDO::prepare(). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103603">103603</a>)</li>
-<li>  Debugger: Add a command to start debugging, but skipping the options dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103724">103724</a>)</li>
-<li>  Debugger: Ignore breakpoint margin clicks when the language is not debuggable. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=97200">97200</a>)</li>
-<li>  Debugger: Python 3: Ensure debugging can work on Python 3.4. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103631">103631</a>)</li>
-<li>  Editor: Automatically enable word-wrap when a file has long lines. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=93790">93790</a>)</li>
-<li>  Editor: Fix transpose-words so it works more like in Emacs. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=73994">73994</a>)</li>
-<li>  Editor: Fix transposeCharacters command, add tests. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=73992">73992</a>)</li>
-<li>  Editor: Highlight &#39;elif&rsquo; tag in Django, &#39;elseif&rsquo; in Twig (and improve auto-indent). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101792">101792</a>)</li>
-<li>  Editor: Make Transpose-characters work the same way Emacs does. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=73992">73992</a>)</li>
-<li>  Editor: When changing case in column selection, stay in column selection. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=100269">100269</a>)</li>
-<li>  Editor: when moving to or opening a file at a particular location, make sure the caret/selection is visible. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98866">98866</a>)</li>
-<li>  Find: Add ability to copy the results to the clipboard. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=91733">91733</a>)</li>
-<li>  Find: For replace, always populate the replace textbox with the last replace text. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=91177">91177</a>)</li>
-<li>  Find: Stop find options from changing when using multi caret commands. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103329">103329</a>)</li>
-<li>  Find: Use last searched pattern, never populate with the word under cursor. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=91177">91177</a>)</li>
-<li>  Hyperlinks: Ensure Komodo can display hyperlinks where titles contain html-sensitive characters. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102098">102098</a>)</li>
-<li>  Keybindings: Vi: Added scroll commands zz z. and z-. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=69495">69495</a>)</li>
-<li>  Keybindings: Vi: Ensure jump to matching brace works like vi does. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=104053">104053</a>)</li>
-<li>  Languages: Add CMake as a recognized language. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102854">102854</a>)</li>
-<li>  Perl lexing: recognize that {&hellip;} after &rsquo;&amp;&rsquo; is a named func, not a block. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101817">101817</a>)</li>
-<li>  Places: After creating a new file, open it and display it in places. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=94287">94287</a>)</li>
-<li>  Places: Cull deleted items in placesParentDirectoriesMenu. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98684">98684</a>)</li>
-<li>  Prefs: Make sure the search box can be used to select primary languages. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102207">102207</a>)</li>
-<li>  Projects: When opening a new project is aborted, keep the old project on the MRU list. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=94201">94201</a>)</li>
-<li>  Source Code Control: Checkout now allows &ldquo;~&rdquo; home directory based paths. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103575">103575</a>)</li>
-<li>  Source Code Control: Checkout: Remember the checkout textbox url. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=99395">99395</a>)</li>
-<li>  Source Code Control: Git: Ensure git submodules are properly detected in commit dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=95701">95701</a>)</li>
-<li>  Syntax Checking: Python: Tell pylint where to find .pylintrc. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101777">101777</a>)</li>
-<li>  Syntax Checking: Python: Reinstate passing &ndash;rcfile to pylint, and add tests to verify it works. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=101777">101777</a>)</li>
-<li>  Toolbox: Stop duplication of snippets when dropping snippet text. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=103113">103113</a>)</li>
-<li>  UI: Side Panes: Re-enable word-wrap in output panels (command output, debugger output). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=98471">98471</a>)</li>
-<li>  UI: Statusbar: Hide the encoding widget when it&rsquo;s not applicable. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=102565">102565</a>)</li>
+<li>  CodeIntel: Fixed large memory leak that would keep a CI record around after closing a file - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/627">#627</a>.</li>
+<li>  Collab: Fix issue where user indicators would show on top of windows.</li>
+<li>  Collab: Use tooltip instead of panels, to eliminate focus issues.</li>
+<li>  ColorScheme Editor: The color scheme editor has been significantly overhauled.</li>
+<li>  ColorSchemes: Significantly improved color scheme saving performance.</li>
+<li>  Commando: Fix miss-alignment when opened from the toolbar - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/789">#789</a>.</li>
+<li>  Commando: Fix non-recursive searches not working - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/834">#834</a>.</li>
+<li>  Console: Fixed object keys not dumping in some cases - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/790">#790</a>.</li>
+<li>  Date: Fri Mar 4 12:05:32 2016 -0500.</li>
+<li>  Debug: Fix run without debugging throwing error - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/835">#835</a>.</li>
+<li>  Editor: Fix allow file contents to override .. always being on - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/995">#995</a>.</li>
+<li>  EditorConfig: Reverted a change that made some prefs not apply - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/908">#908</a>.</li>
+<li>  Find: Don&rsquo;t show a notification when closing a find result tab - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/979">#979</a>.</li>
+<li>  Find: Fix &ldquo;where&rdquo; section not remembered - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/873">#873</a>.</li>
+<li>  Find: Keep focus inside find frame when tabbing - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/888">#888</a>.</li>
+<li>  Find: Restore focus after the find frame closes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/805">#805</a>.</li>
+<li>  Fixed regression in Perl interpolated variable highlighting with Scintilla upgrade - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/914">#914</a>.</li>
+<li>  HTTPInspector: Fix failure to initialize.</li>
+<li>  InitService: Implemented partial upgrades.</li>
+<li>  JSX: Fixed syntax highlighting bug that created extraneous fold points - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1087">#1087</a>.</li>
+<li>  Key bindings: Fixed Mac OSX regression with Cmd+Shift+Up - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/885">#885</a>.</li>
+<li>  Less: Catch file resolving exceptions.</li>
+<li>  Less: Fixed highlighting of class selectors - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/652">#652</a>.</li>
+<li>  Less: Recognize errors from later versions of Less - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1061">#1061</a>.</li>
+<li>  Linter: Show at most 10 results at a time.</li>
+<li>  Linting: Only notify about the first linting error (don&rsquo;t bombard users with notifications) - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/818">#818</a>.</li>
+<li>  Linux: Potentially fixed Scintilla pixel-related issues with font scaling values != 1.0 - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/162">#162</a>.</li>
+<li>  Non-scannable UDL languages like XML do not have scopes; do not raise errors - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/906">#906</a>.</li>
+<li>  Notifications: Corner notifications should not be too wide.</li>
+<li>  Notifications: Fixed notifications stealing focus, for real this time - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/816">#816</a>, fixes <a href="https://github.com/Komodo/KomodoEdit/issues/837">#837</a>.</li>
+<li>  OpenFiles: Fix tab sorting won&rsquo;t toggle - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/841">#841</a>.</li>
+<li>  Packages: Only ever install the latest available - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/950">#950</a>.</li>
+<li>  Places: view manager fails with no project open.</li>
+<li>  Projects: Fix editor prefs missing under Project prefs - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/929">#929</a>.</li>
+<li>  Projects: Fixed <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a> can&rsquo;t open projects with &ldquo; &rdquo; in name.</li>
+<li>  Projects: Places opens in wrong context in newWindow. fixes <a href="https://github.com/Komodo/KomodoEdit/issues/932">#932</a>.</li>
+<li>  Python: Fixed autoindentation corner-case with dictionaries - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/632">#632</a>.</li>
+<li>  Regex Tool: UI Overhaul.</li>
+<li>  Runinline: Consider global environment preferences - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/810">#810</a>.</li>
+<li>  SCC: Added an &ldquo;Open Web Service&rdquo; command/menu.</li>
+<li>  SCSS: Use &rsquo;//&rsquo; for line comments in SCSS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/866">#866</a>.</li>
+<li>  SDK: Keybindings: Extended SDK and fixed usedBy.</li>
+<li>  Schemes: keybindings: new default bindings for all platforms.</li>
+<li>  Scope: Sections: Komodo now has project wide symbol browsing.</li>
+<li>  Syntax Checking: Added the syntax checking widget back in (IDE only).</li>
+<li>  Troubleshooting: Fix safe-mode on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/776">#776</a>.</li>
+<li>  UI: Added support for userChrome.less.</li>
+<li>  UI: Fix missing checkmark icons in menu&rsquo;s on OSX - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/801">#801</a>.</li>
+<li>  UI: Highlight focused elements in the HUD - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/883">#883</a>.</li>
+<li>  UI: The new Komodo interface is fully customizable, you can pick your own colors rn=.</li>
+<li>  UX: Added classic mode (aka I don&rsquo;t like changes mode).</li>
+<li>  UX: Closing multiple files at the same time is now significantly faster.</li>
+<li>  UX: Find: The find frame now no longer closes when focus is lost.</li>
+<li>  UX: Improve speed and UX feedback when opening multiple files.</li>
+<li>  Unit Testing: Improved the user experience.</li>
+<li>  codeintel: Allow autocompletion in anonymous classes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1140">#1140</a>.</li>
+<li>  codeintel: Buffers with only one token should not cause errors anymore - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/796">#796</a>.</li>
+<li>  codeintel: CSS: Added flex support from Defman21&rsquo;s PR.</li>
+<li>  codeintel: CSS: Fixed failure to detect selectors in some instances - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/938">#938</a>.</li>
+<li>  codeintel: CSS: added pointer-events property from Defman21 - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1090">#1090</a>.</li>
+<li>  codeintel: Complete PHP interfaces in &ldquo;use&rdquo; statements - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/176">#176</a>.</li>
+<li>  codeintel: Do not create extra, unnecessary CIX files on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/870">#870</a>.</li>
+<li>  codeintel: Do not error on blank documents - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/895">#895</a>.</li>
+<li>  codeintel: Extract correct type information for PHP variables from &rsquo;@var&rsquo; phpdoc in compound declarations - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/752">#752</a>.</li>
+<li>  codeintel: Fail gracefully when the database is incomplete - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1351">#1351</a>.</li>
+<li>  codeintel: Fixed buggy side-effect of identifying PSR-4 autoloaded classes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1241">#1241</a>.</li>
+<li>  codeintel: Fixed computation of the section the current line is in - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1171">#1171</a>.</li>
+<li>  codeintel: Fixed more instances of PHP completion with <code>foreach</code> - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/142">#142</a>.</li>
+<li>  codeintel: Handle nested selectors in LESS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1092">#1092</a>.</li>
+<li>  codeintel: Handle nested selectors in SCSS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1093">#1093</a>.</li>
+<li>  codeintel: JQuery: Updated catalog to v1.12.1.</li>
+<li>  codeintel: JavaScript: Include HTML5 API by default in stdlib catalog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1170">#1170</a>.</li>
+<li>  codeintel: Javascript: Enable local variable visibility for closures - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/502">#502</a>.</li>
+<li>  codeintel: Javascript: Handle scoped variables in class constructors properly as closures.</li>
+<li>  codeintel: Less/SASS: Do not show autocompletions for &rsquo;:&rsquo; after variable names - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1091">#1091</a>.</li>
+<li>  codeintel: Less/SCSS: Added autocompletion for variables - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/737">#737</a>.</li>
+<li>  codeintel: NodeJS: Added &ldquo;catalogs&rdquo; for NodeJS v0.10, v0.12, v4.4, and v5.9.</li>
+<li>  codeintel: PHP: Added PHP 7.0 stdlib catalog.</li>
+<li>  codeintel: PHP: Fixed interface method inheritence - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/751">#751</a>.</li>
+<li>  codeintel: PHP: Initial implementation of recognizing PSR-4 autoloaded classes.</li>
+<li>  codeintel: Perl: Autocomplete builtins - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/987">#987</a>.</li>
+<li>  codeintel: Perl: Updated Perl stdlib catalog to Perl 5.22.</li>
+<li>  codeintel: Python: &ldquo;Goto Definition&rdquo; should work on both module names and aliases - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1107">#1107</a>.</li>
+<li>  codeintel: Python: Added stdlib catalogs for 3.4 and 3.5.</li>
+<li>  codeintel: Recognize Javascript ES6 rest parameters.</li>
+<li>  codeintel: Recognize Perl private functions - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1084">#1084</a>.</li>
+<li>  codeintel: Recognize anonymous PHP functions as parameters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/980">#980</a>.</li>
+<li>  codeintel: Recognize variables assigned to anonymous classes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1047">#1047</a>.</li>
+<li>  codeintel: Ruby: Added stdlib catalogs for Ruby 2.2 and 2.3.</li>
+<li>  codeintel: catalogs: Added Ember.js API catalog and CIX generator.</li>
+<li>  codeintel: golang: Fixed codeintel crash in some instances of &ldquo;goto definition&rdquo; - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/461">#461</a>.</li>
+<li>  collab: Show all active sessions in tab&rsquo;s &ldquo;Share in existing session&rdquo; context menu - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/578">#578</a>.</li>
+<li>  color schemes: Ensure consistency in applying color schemes - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/730">#730</a>.</li>
+<li>  debug: JavaScript: Debugging JavaScript uses Chrome now; use NodeJS to explicitly debug with the NodeJS debugger.</li>
+<li>  debugger: All versions of NodeJS should be supported now - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/747">#747</a>.</li>
+<li>  debugging: Allow removing breakpoint markers that have moved during editing - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/256">#256</a>, 807.</li>
+<li>  django: Fixed Django linter for Python3 - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/140">#140</a>.</li>
+<li>  editing: Added command and keybindings to remove previously selected word in multi-caret session - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/869">#869</a>.</li>
+<li>  editing: Added option to disable Ctrl+Click creating multiple selections - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1081">#1081</a>.</li>
+<li>  editing: Added option to retain selected text when smart wrapping - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/904">#904</a>.</li>
+<li>  editing: After smart-selecting XML/HTML tags, typing &rsquo; &rsquo; consolidates the selection to the opening tag - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1019">#1019</a>.</li>
+<li>  editing: Allow smart wrap selections to work with &lsquo;Shift&#39;ed characters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/986">#986</a>.</li>
+<li>  editing: Fixed line duplicate up/down at document boundaries - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1201">#1201</a>.</li>
+<li>  editing: Fixed regression of in-line selection duplication - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/84">#84</a>.</li>
+<li>  editing: Handle encoding mismatch when attempting to pre-process saved files - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/997">#997</a>.</li>
+<li>  editing: PHP: Added preference for selecting the &rsquo;$&rsquo; in PHP variables - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/863">#863</a>.</li>
+<li>  editing: Prevent line/block commenting and uncommenting from removing line markers - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1110">#1110</a>.</li>
+<li>  editing: Smart Wrapping: Define &ldquo;plain-text&rdquo; to be in the same Scintilla style - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1023">#1023</a>.</li>
+<li>  editing: Take care not to delete markers when cleaning EOLs or stripping whitespace - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/754">#754</a>.</li>
+<li>  editing: XML: Auto-close XML tags with multiple carets - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/812">#812</a>.</li>
+<li>  editing: spell check: Added command to ignore words - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/947">#947</a>.</li>
+<li>  editor: Do not auto-expand abbreviations when recording macros or when there is a column selection - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/811">#811</a>.</li>
+<li>  editor: Fix potential division by zero error in smart backspace - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1106">#1106</a>.</li>
+<li>  editor: Fixed incorrect indent calculation - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/966">#966</a>.</li>
+<li>  editor: Fixed never-ending regexp for double-clicking numbers - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1015">#1015</a>.</li>
+<li>  editor: Fixed out-of-control drag-and-drop for large files and word wrap - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/901">#901</a>.</li>
+<li>  editor: Ignore smart wrapping when performing a key combination - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/865">#865</a>.</li>
+<li>  editor: Optimize block selection - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1158">#1158</a>.</li>
+<li>  editor: minimap: Do not allow markers to be shown - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/855">#855</a>.</li>
+<li>  elastic tabstops: Drastically improve performance in large files - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1034">#1034</a>.</li>
+<li>  elastic tabstops: Respect tab width preference - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/820">#820</a>.</li>
+<li>  find: Give better feedback on bad regular expressions - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/443">#443</a>.</li>
+<li>  install: More robust GDK version checker for Linux - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/799">#799</a>.</li>
+<li>  interactive shell: Fixed pasting into non-empty lines in interactive shells - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/292">#292</a>.</li>
+<li>  interactive shell: Improve toggle interactive shell experience - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1264">#1264</a>.</li>
+<li>  koextgen: Ensure extension name is valid for user-defined languages - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/983">#983</a>.</li>
+<li>  languages: Added JSERB from Eric Promislow.</li>
+<li>  languages: Added syntax highlighting and linting for TypeScript.</li>
+<li>  languages: New AngularJS lexer and codeintel support.</li>
+<li>  launch new Window: Fixed <a href="https://github.com/Komodo/KomodoEdit/issues/860">#860</a> opening project.</li>
+<li>  lint: JS: Upgraded JSHint to v2.6.3 and removed JSLint and options wizard - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/603">#603</a>.</li>
+<li>  lint: JavaScript: Use common JSHint options like &#39;moz&rsquo; and &#39;esnext&rsquo; by default - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/797">#797</a>.</li>
+<li>  lint: Mark whole words in CSS lint warnings - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/931">#931</a>.</li>
+<li>  lint: Prevent &#39;unused&rsquo; JSHint warning when editing userscripts - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1135">#1135</a>.</li>
+<li>  lint: Workaround pylint&rsquo;s handling of relative imports - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1175">#1175</a>.</li>
+<li>  lint: jsx: Added linting for JSX.</li>
+<li>  lint: stop assuming all multi-lang files are markup-based.</li>
+<li>  prefs: Prevent tab width from being set to zero - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1009">#1009</a>.</li>
+<li>  schemes: Legacy: move original keybindings to legacy scheme.</li>
+<li>  scintilla: JavaScript: Patched Scintilla to syntax highlight JavaScript ES6 templates.</li>
+<li>  spell check: Added option to not spell check the contents of strings - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/827">#827</a>.</li>
+<li>  unittest: Fixed parsing of Perl&rsquo;s Test::Simple and Test::More unittest output - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/319">#319</a>.</li>
+<li>  unittest: Support Ruby 1.9+ and Rails 4+ (Test::Unit only, MiniTest unsupported).</li>
+<li>  unittest: Support and require PHPUnit 4+ - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/302">#302</a>.</li>
 </ul>
 
 <p><a name="knownissues"></a></p>
 
 <h2>Known Issues</h2>
 
-<p>To view the status of outstanding Komodo issues,
-including those that have been fixed in this release, or to
-add comments or additional issues, please visit the
-<a href="http://bugs.activestate.com/query.cgi?product=Komodo">Komodo
-Bug Database</a>.</p>
+<h3>Linux HiDPI Support</h3>
 
-<h3><a name="install_issues" id="install_issues">Installation &amp; Upgrade</a></h3>
+<p>Our HiDPI support for Linux has progressed but is still not complete. The best
+support is currently provided to Ubuntu, although the implementation is still not
+complete. Most notably the editor fonts will by default be a lot bigger than
+intended. You can work around this by manually changing your editor font size.</p>
 
-<ul>
-<li>  The Komodo installer requires up to 300 MB in your
-TMP directory (as indicated by the value of your &#39;TMP&rsquo;
-environment variable) during installation, even if you
-plan to install Komodo to another drive. If you do not
-have the required space on this drive, manually set the
-&#39;TMP&rsquo; environment variable to another directory with
-sufficient space. Ensure that you have enough space,
-temporarily, for installation. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=7057">7057</a>)</li>
-<li>  If you try to install Komodo on Windows and the MSI
-install fails with error 2355, your MSI file is corrupt.
-Please download Komodo again and re-run the MSI install.
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=7405">7405</a>)</li>
-</ul>
+<p>Additionally auto completions may appear miss-aligned, there is currently no
+workaround for this.</p>
 
-<h3><a name="Startup_Issues" id="Startup_Issues">Startup and Shutdown</a></h3>
-
-<ul>
-<li>  Slow startup may occur if the PATH environment contains networked drives
-
-<ul>
-<li><a href="https://bugs.activestate.com/show_bug.cgi?id=103996">bug 103996</a>.</li>
-</ul></li>
-<li>  Slow performance on NoMachine (remote desktop) has been
-reported - <a href="http://bugs.activestate.com/show_bug.cgi?id=93841">bug 93841</a>.</li>
-<li>  On Windows, <em>Direct Folders</em> application can cause shutdown hangs</li>
-<li><a href="http://bugs.activestate.com/show_bug.cgi?id=101357">bug 101357</a>.</li>
-</ul>
-
-<h3><a name="Editing_Issues" id="Editing_Issues">Editing</a></h3>
-
-<ul>
-<li>  By design, Komodo does not attempt Replace in Files operations on
-unknown file types. However, file association preferences can be used
-to associate a user-defined extension with a language category (e.g.
-&ldquo;Text&rdquo;) which then enables replacements for that file type.</li>
-<li>  While autocomplete on many of the modules in the Python PyWin32
-packages works, Komodo&rsquo;s PyWin32 API catalog currently does not have
-information for: pythoncom and the binary sub-modules of win32com.</li>
-<li>  The macro recorder will record events that it cannot
-handle, such as the opening of dialogs. The only dialog
-that can be opened via a macro is the Find dialog; other
-dialogs will cause the macro to stop.</li>
-<li>  Languages that are read right to left (e.g. Middle Eastern
-languages like Arabic) are not supported. All Latin, Cyrillic and
-Far East languages are fully supported. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=75477">75477</a>)</li>
-<li>  On slow networks, users may notice performance
-degradation when editing files on network machines.
-Performance can be improved by disabling the Komodo
-function that checks if files on disk have changed. Use
-the <a href="../prefs.html#prefs_editor">Editor
-Preferences</a> to disable this feature. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=18297">18297</a>)</li>
-<li>  On Linux, GTK2 hard codes &#39;Ctrl&rsquo;+&#39;Shift&rsquo; to use
-international input. Therefore, all key bindings
-involving &#39;Ctrl&rsquo;+&#39;Shift&rsquo;+ (any valid hexadecimal
-character) do not work in Komodo. A workaround is to
-start Komodo with the command: <code>export
-GTK_IM_MODULE=xim; ./komodo&#39;</code>. Otherwise, key
-bindings of this kind must be changed. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38205">38205</a>)</li>
-<li>  When editing a code comment in Komodo you may use
-&lt;Shift+Enter&gt; to start a new line <em>within</em>
-the comment &ndash; the comment prefix is added automatically.
-Komodo may fail to properly add the comment prefix if
-many new lines are added quickly with repeated
-&lt;Shift+Enter&gt; presses. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38658">38658</a>)</li>
-</ul>
-
-<h3><a name="Debugging_Issues" id="Debugging_Issues">Debugging</a></h3>
-
-<ul>
-<li>  PHP: The <code>xdebug.remote_autostart</code> option will
-interfere with local debugging configuration in Komodo if it is
-enabled. If you need this option enabled for remote debugging, set the
-<strong>Path to alternate PHP configuration file</strong> under
-<strong>Preferences|Languages|PHP</strong> to point to a copy of
-php.ini without this option.</li>
-<li>  PHP: A non-empty <code>doc_root</code> setting in <em>php.ini</em>
-causes a &#39;No input file specified&rsquo; error when starting a local
-debugging session with CGI emulation. The Web Developer Suite 2.0
-package and others use this setting, and it is copied into the
-debugging version of <em>php.ini</em> during PHP auto-config. Comment
-this setting out in the file specified in
-&#39;Preferences|Languages|PHP|Path to alternate PHP configuration file&rsquo;
-to avoid this problem.</li>
-<li>  The Perl debugger uses <code>alarm()</code>
-internally. This can conflict with some Perl frameworks
-and modules (such as <acronym title=
-"Perl Object Environment">POE</acronym>) which use
-<code>alarm()</code> as well. To work around this
-problem, add <code>alarm=0</code> to the
-<code>PERLDB_OPTS</code> environment variable (in the
-Environment tab of the Debugger Options) which stops the
-debugger from using <code>alarm()</code>. With this
-work-around in place, the Break Now button and menu item
-will not work in debugging sessions.</li>
-<li>  Python debugging with IronPython does not currently
-work as there is no support for Python debugging hooks in
-IronPython.</li>
-<li>  In PerlApp executables, it is now possible to step
-into loaded modules, but not to set breakpoints in
-them.</li>
-<li>  If the debug listener (<strong>Debug|Listen for
-Debugger Connections</strong>) is off, multithreaded
-applications may not run or debug as expected. Only the
-main thread operates through the debugger. To debug
-multithreaded applications, turn on debug listening prior
-to debugging. (Debug listening is turned on by default.)
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32776">32776</a>)</li>
-<li>  PHP configurations that use Zend Extensions (such as
-PHP Accelerator) are not compatible with the Komodo PHP
-debugger. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=21890">21890</a>)</li>
-<li>  Due to the way the core Perl interpreter works, it is
-not possible to step over &ldquo;require&rdquo; statements. (Bug
-18776)</li>
-<li>  You cannot debug &#39;freestanding&rsquo; executables created
-with the PDK in Komodo. Instead, build a &#39;dependant&rsquo;
-executable, which requires a local install of
-ActivePerl.</li>
-<li>  The variable watcher does not work when debugging
-<code>_\\machine\d$\path\to\perl_script.pl_</code>.
-It does work when opening the same file via a UNC path
-that does not include a &rsquo;$&rsquo; character. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=19558">19558</a>)</li>
-<li>  When debugging remote applications, Komodo may fail if
-the remote process does not have valid stdout and stderr
-handles. GUI applications, such as those started with
-&ldquo;wperl.exe&rdquo; or &ldquo;pythonw.exe&rdquo;, or those using the
-Pythonwin or wxPython frameworks, or those with certain
-embedded applications, can have invalid stdout and stderr
-handles. Until we resolve this issue, try to run and
-debug your remote program under perl.exe or
-python.exe.</li>
-<li>  Komodo debugging requires TCP/IP to be enabled, even if
-you are debugging scripts locally. TCP/IP is enabled by
-default on most systems. On systems with firewalls installed,
-the debugger may fail if the firewall is not configured to
-allow Komodo to listen for connections. On Windows, you
-may see a &ldquo;Windows Security Alert&rdquo; dialog asking if you
-want to allow Komodo to listen for connections, you will
-need to unblock Komodo. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=21684">21684</a>)</li>
-<li>  When debugging a GUI script in Komodo, adding a
-&ldquo;watched variable&rdquo; when <em>not</em> stopped at a
-breakpoint can cause Komodo to hang. You must manually
-terminate the script being debugged to stop Komodo from
-hanging. The problem occurs because the GUI script, while
-in its message loop, does not respond to Komodo&rsquo;s request
-for the variable value. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=23516">23516</a>)</li>
-<li>  If the Komodo debugger is configured to use a
-specific port, when Komodo is shut down, the port is
-sometimes not immediately released. If Komodo is
-restarted before the port is released by the operating
-system, a message is displayed advising that the system
-is unable to bind that port. As a workaround, we suggest
-configuring port 0 as the Komodo debugging port and using
-the debugger proxy for remote debugging. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32821">32821</a>)</li>
-<li>  Breaking into a running Perl script can only occur
-while crossing sub boundaries in the Perl code, as that&rsquo;s
-currently the only chance the Perl debugger has to check
-to see if the IDE has sent the break command. (Bug
-35611)</li>
-<li>  When debugging Perl, if you set a breakpoint on the
-<code>while</code> statement, the debugger stops on the
-breakpoint only once, namely before the first pass
-through the loop. This is a limitation in the Perl
-interpreter. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34866">34866</a>)</li>
-<li>  The Perl debugger cannot trap fatal runtime errors.
-Users can accomplish this in their code by wrapping
-problematic code in an <code>eval</code> block, and then
-testing for an exception. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33855">33855</a>)</li>
-<li>  Komodo does not provide proper source debugging in
-Python <code>exec</code> and <code>eval</code>
-statements. This is a limitation of Python&rsquo;s interpreter.
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40336">40336</a>)</li>
-<li>  When debugging PHP on a remote Linux machine from a
-local Windows machine, the debugging option &ldquo;Try to find
-files on the local system when remote debugging&rdquo; has no
-effect. This is due to differences in Unix and Win32 file
-paths. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=39137">39137</a>)</li>
-<li>  When debugging Python, Komodo does not permit you to
-set local variables in the interactive shell. However,
-you can edit those values from the program&rsquo;s variable
-viewers, such as the <strong>Watch</strong> and
-<strong>Locals</strong> panes on the
-<strong>Debug</strong> tab. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36794">36794</a>)</li>
-<li>  When debugging PHP scripts on Komodo with CGI
-emulation, you may need to change the setting for
-<code>cgi.force_redirect</code> in the <em>php.ini</em>
-file. You may also need to set an environment variable in
-the Debugger Options dialog box: &ldquo;REDIRECT_STATUS=200
-OK&rdquo;. These settings vary depending on your system and the
-configuration of PHP. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=35021">35021</a>)</li>
-<li>  When Debugging PHP, the <strong>HTML</strong> pane of
-the <strong>Output</strong> tab does not refresh
-automatically. To refresh the contents of this pane,
-click the &ldquo;Reload HTML view&rdquo; button on the
-<strong>Output</strong> tab. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36999">36999</a>)</li>
-<li>  Komodo supports full Unicode debugging with Perl 5.8.
-Although Perl 5.6 can be used for debugging programs with
-single-byte encodings (e.g. cp1251), it is recommended
-that programmers with multi-byte character sets upgrade
-to Perl 5.8.5 or better. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36760">36760</a>)</li>
-<li>  When debugging Python, if you launch the debugger
-from a directory containing a module with the same name
-as one of the modules used by the debugger, the wrong
-file is used. For example, if you have a file named
-<em>logging.py</em> in the directory where the debugger
-is launched, the debugger will fail. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36783">36783</a>)</li>
-<li>  When stepping through Perl files, the Komodo debugger
-displays the wrong print results in the
-<strong>Locals</strong> window of the
-<strong>Debug</strong> tab. This is because Perl provides
-only one iterator for each collection variable. The
-Komodo debugger must iterate through a hash or an array
-in order to display the values in Komodo. A workaround is
-to display the <strong>Watch</strong> pane instead of the
-<strong>Locals</strong> pane, and type the names of the
-expressions that you want to view. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33668">33668</a>)</li>
-<li>  As of Komodo 5.0, the Perl debugger emits numeric hash keys with
-embedded underscores. For example, a hash key of &#39;123456789&rsquo; now
-appears in the variables tabs as &#39;123<em>456</em>789&rsquo;.</li>
-<li>  Breakpoints don&rsquo;t work in files with symlinks in their path. The
-debugger engine calculates whether to break based on the actual file
-path. To work around this limitation, load the file in Komodo using
-the real path, or create a hard link (e.g. on Linux, use &#39;ln&rsquo; without
-the &rsquo;-s&rsquo; option). (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=79147">79147</a>)</li>
-</ul>
-
-<h3><a name="Interactive_Shell_Issues" id="Interactive_Shell_Issues">Interactive Shell</a></h3>
-
-<ul>
-<li>  The interactive shell does not initialize properly when invoked
-while the Command Output tab has focus. To avoid this, switch focus to
-another tab or sidebar before starting the interactive shell.</li>
-<li>  Perl: Only pattern variables $1 .. $9 are preserved
-across each query. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34528">34528</a>)</li>
-<li>  Python: The getpass package requires the use of a tty
-on UNIX systems. Komodo does not provide a tty in its
-interactive shell so getpass will issue a warning.
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=34259">34259</a>)</li>
-</ul>
-
-<h3><a name="Source_Code_Control_Issues" id="Source_Code_Control_Issues">Source Code Control</a></h3>
-
-<ul>
-<li>  The SCC Checkout wizard, SCC Commit and SCC Push features does not
-correctly handle password authentication. SCC commands requiring password
-authentication should be done at the command line, or be setup to use
-password-less authentication mechanisms.</li>
-<li>  Komodo&rsquo;s integration with the Perforce commit/submit
-command cannot commit files that are not in the default
-changelist. These files must be submitted via an external
-interface (e.g. p4, P4Win). Note that any files checked
-out inside Komodo are in the default changelist, so this
-limitation should only apply to users who already use an
-external interface to their Perforce repository. (Bug
-27070)</li>
-<li>  If the Perforce connection cannot be established,
-checking the status of files in a Perforce repository
-may hang the Komodo Source Code Control system. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=35058">35058</a>)</li>
-<li>  If you are using CVS Source Code Control, note that
-the very first time you log in to a repository, cvs.exe
-fails to create the .cvspass file correctly and will
-return an error. Repeat the command to login a second
-time and correctly generate the file. This is a CVS bug.
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=20353">20353</a>)</li>
-</ul>
-
-<h3><a name="OSX_Issues" id="OSX_Issues">Mac OS X</a></h3>
-
-<ul>
-<li>  If you have two drives with the same name, and you
-use the file open dialog in a Mozilla application, the
-directory menu (top middle of dialog) may crash when
-clicked. To avoid this, rename one of the hard
-drives.</li>
-<li>  New Custom Menus created in a Project or in the
-Toolbox will not appear until Komodo has been
-restarted.</li>
-<li>  Throughout the Komodo documentation there are
-references to key bindings that use the &#39;Cmd&rsquo; key. This
-key may be better known to OS X users as the &#39;Command&rsquo;
-key. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=41959">41959</a>)</li>
-<li>  Display of text during editing (&ldquo;painting&rdquo;) may
-sometimes be slow or pause momentarily.</li>
-<li>  Certain UI elements stop working after changing key
-bindings. Restarting Komodo fixes this. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38683">38683</a>)</li>
-<li>  When saving a file, Komodo does not set file
-information (type and creator) for the OS X Finder to
-know that Komodo created the file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=38745">38745</a>)</li>
-<li>  Breakpoints cannot be removed when debugging XSLT
-scripts. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40072">40072</a>)</li>
-<li>  PHP debugging may not work with the PHP build
-distributed with OS X because it does not load external
-modules. To use PHP debugging on OS X, build PHP from
-source or download a binary from <a href="http://www.entropy.ch/software/macosx/php">http://www.entropy.ch/software/macosx/php</a></li>
-</ul>
-
-<p>(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=39901">39901</a>)
-*   Application menu items that have multi-key key
-  bindings will not show their key bindings in a pop-up
-  tool tip on OS X. This is a limitation in OS X.
-*   Context menus may not display unless you hold down
-  the mouse button for a period of time. This is because
-  the Komodo editor is implemented in Mozilla as a plugin,
-  and it does not access the appropriate context menu event
-  to handle this behavior properly without interfering
-  with other mouse events (for example, drag and drop).
-  (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=41216">41216</a>)
-*   Due to a limitation in the Mozilla code base, key
-  bindings for the <strong>Next File</strong> and
-  <strong>Previous File</strong> options on the
-  <strong>Window</strong> menu are not displayed next to
-  the menu items. The key bindings are &#39;Cmd&rsquo;+&#39;PageDown&rsquo; to
-  view the next file and &#39;Cmd&rsquo;+&#39;PageUp&rsquo; to view the
-  previous file. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40716">40716</a>)</p>
-
-<h3><a name="Linux_Issues" id="Linux_Issues">Linux</a></h3>
-
-<ul>
-<li>  The <strong>Fonts and Colors</strong> pane in the
-Preferences dialog box displays the same list of fonts in
-both the Fixed and Proportional lists. There is no
-programmatic way to identify whether a font is
-proportional or not on GTK; therefore, users must know
-the properties of the individual fonts when modifying
-these values. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=27206">27206</a>)</li>
-<li>  Key bindings defined in the window manager (such as
-KDE) take precedence over Komodo key bindings. In the
-case of conflicts, you must either change the Komodo key
-bindings or the window manager key bindings. (Bug
-30926)</li>
-<li>  You cannot move an existing Komodo installation to a
-new directory. You must uninstall Komodo from the
-existing location and reinstall it in the new location.
-(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=19478">19478</a>)</li>
-<li><p>Using colon-separated include paths in the Perl
-shebang line causes a parse failure on some versions of
-Perl. Instead of using &ldquo;/usr/bin/perl -cwT
--I/path1:/path2 yourscript.pl&rdquo;, try using multiple
-include arguments such as &ldquo;/usr/bin/perl -cwT -I/path1
--I/path2 yourscript.pl&rdquo;</p>
-
-<p>(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=33524">33524</a>)</p></li>
-<li><p>Komodo may not start up correctly on some Linux
-systems if C++ compatibility libraries have not been
-installed. On Fedora and Red Hat systems, install the
-&ldquo;compat-libstdc++&rdquo; package. On SuSE, install the &ldquo;compat&rdquo;
-package. On Gentoo, as root, run <code>emerge
-lib-compat</code>. This is not thought to be a problem on
-Debian systems. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36244">36244</a>)</p></li>
-<li><p>Komodo is not compatible with Kubuntu 11.04 or OpenSuSE
-11.4.  Workaround in bug (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=90985#c26">90985</a>).</p></li>
-</ul>
-
-<h3><a name="Other_Issues" id="Other_Issues">Other</a></h3>
-
-<ul>
-<li>  On Windows, some interactive commands may not work
-properly when run from the <strong>Command
-Output</strong> tab of the Output Pane. You must run
-these commands in a separate shell. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=23176">23176</a>)</li>
-<li>  Macros will not record certain commands, including
-(but possibly not limited to)
-&#39;Ctrl&rsquo;+&#39;Shift&rsquo;+&#39;B&rsquo;|&#39;R&rsquo;|&#39;E&rsquo;|&rsquo;D&rsquo; (toggle toolbars or button
-text), &#39;Ctrl&rsquo;+&#39;Shift&rsquo;+&#39;N&rsquo; (new default file), and View as
-Language menu items.</li>
-<li>  When you schedule a new file to be added using CVS,
-CVS will not permit you to remove the file from the
-repository using the &ldquo;revert changes&rdquo; command. (Bug
-27192)</li>
-<li>  The <strong>Open</strong> field in the Open/Find
-Toolbar does not automatically display a drop-down list
-of directories when an UNC path is typed. Currently, the
-list is only displayed when a the path includes a
-subdirectory. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=29011">29011</a>)</li>
-<li>  When creating a &ldquo;diff&rdquo; in Komodo
-(<strong>Tools|Compare Files</strong>), the line endings
-of the files are normalized to Unix style line endings.
-Lines in files that have different line endings are not
-displayed differently in the diff (unless other
-differences are present), but a warning is provided to
-the user in the &#39;diff&rsquo; window, or the &#39;no difference&rsquo;
-dialog. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=32932">32932</a>)</li>
-<li>  When adding new key bindings via the Preferences
-dialog box, Komodo displays a message indicating that the
-key bindings will not take effect until Komodo is
-restarted. However, some changes do take effect
-immediately.(Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36710">36710</a>)</li>
-<li>  If you rename a folder that was added to a custom
-menu, the name is changed in Komodo&rsquo;s Toolbox but not on
-the menu itself. A workaround is to move the renamed
-folder out and then back into the associated custom menu
-icon in the Toolbox. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=36679">36679</a>)</li>
-<li>  A newly created custom menu is added to the Toolbox
-but is not immediately displayed alongside existing
-toolbars. Restarting Komodo causes the new toolbar to
-display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078</a>)</li>
-</ul>
+<p>These issues will be resolved in a future update and are considered a priority
+for the dev team.</p>
 
             </article>
         </section>
@@ -1226,22 +447,10 @@ display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078<
 
 <ul class="disc">
     <li>
-        Komodo IDE/Edit 9.3.2 -
-        <a href="http://downloads.activestate.com/Komodo/releases/9.3.2/">archive</a>
+        Komodo IDE/Edit 10.0.0 -
+        <a href="http://downloads.activestate.com/Komodo/releases/10.0.0/">archive</a>
         |
         <a href="/changelog/latest">changelog</a>
-    </li>
-    <li>
-        Komodo IDE/Edit 8.5.4 -
-        <a href="http://downloads.activestate.com/Komodo/releases/8.5.4/">archive</a>
-        |
-        <a href="/changelog/ide-8">changelog</a>
-    </li>
-    <li>
-        Komodo IDE/Edit 7.1.3 -
-        <a href="http://downloads.activestate.com/Komodo/releases/7.1.3/">archive</a>
-        |
-        <a href="http://docs.activestate.com/komodo/latest/releases/ide-7.html">changelog</a>
     </li>
 </ul>
 <a href="http://downloads.activestate.com/Komodo/releases/">View Full Archive</a>
@@ -1252,7 +461,10 @@ display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078<
 
 <ul class="disc">
     <li>
-        <a href="/changelog/latest">Komodo IDE/Edit 9.* (March 2015)</a>
+        <a href="/changelog/latest">Komodo IDE/Edit 10.* (May 2016)</a>
+    </li>
+    <li>
+        <a href="/changelog/ide-9">Komodo IDE/Edit 9.* (March 2015)</a>
     </li>
     <li>
         <a href="/changelog/ide-8">Komodo IDE/Edit 8.5.* (August 2014)</a>
@@ -1466,7 +678,7 @@ display. (Bug <a href="http://bugs.activestate.com/show_bug.cgi?id=40078">40078<
                     <p>&nbsp;</p>
                     <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
 
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Komodo 9.x Changelog" data-dnt="true">Tweet</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Komodo 10.0 Changelog" data-dnt="true">Tweet</a>
 
                     <p>&nbsp;</p>
 

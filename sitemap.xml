@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/komodo-edit/</loc>
-    <lastmod>2015-11-05T11:56:25-08:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -176,7 +176,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/download/</loc>
-    <lastmod>2016-04-12T11:44:22-07:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -338,7 +338,7 @@
   </url>
   <url>
     <loc>http://komodoide.com/features/</loc>
-    <lastmod>2016-05-04T15:32:10-07:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -355,8 +355,14 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/changelog/ide-9/</loc>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/changelog/latest/</loc>
-    <lastmod>2015-12-18T09:58:34-08:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -470,13 +476,13 @@
   </url>
   <url>
     <loc>http://komodoide.com/</loc>
-    <lastmod>2016-05-04T15:32:10-07:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://komodoide.com/web-ide/</loc>
-    <lastmod>2016-05-04T15:32:10-07:00</lastmod>
+    <lastmod>2016-05-16T17:06:55-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
