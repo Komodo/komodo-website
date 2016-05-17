@@ -66,7 +66,7 @@
           markdown: true
           class_names: extra markdown
           description: |
-            * Entire UI is not skinnable using the color scheme editor
+            * Entire UI is now skinnable using the color scheme editor
             * Improved source code control UI and UX (IDE only)
             * New SCC Commit Dialog (IDE only)
             * New SCC Widget (IDE only)

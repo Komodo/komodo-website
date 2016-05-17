@@ -111,6 +111,7 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 
 * **Other Mentionables**
 
+* Entire UI is now skinnable using the color scheme editor
 * Improved source code control UI and UX (IDE only)
 * New SCC Commit Dialog (IDE only)
 * New SCC Widget (IDE only)
