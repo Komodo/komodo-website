@@ -149,6 +149,7 @@ body.startpage
             top: 50%;
             @include transform(translateY(-50%));
 
+            margin-top: -5pt;
             color: #FFF;
             font-size: 11pt;
             line-height: 1.2;

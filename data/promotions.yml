@@ -30,22 +30,22 @@ global:
   link: /pricing
 startpage: 
   latestEdit: 
-    enabled: false
-    description: "Black Friday<br/>Sale!!*"
+    enabled: true
+    description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   latestIde: 
-    enabled: false
-    description: "Black Friday<br/>Sale!!"
+    enabled: true
+    description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   latestTrial: 
-    enabled: false
-    description: "Black Friday<br/>Sale!!"
+    enabled: true
+    description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   old: 
-    enabled: false
-    description: "Black Friday<br/>Sale!!"
+    enabled: true
+    description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
