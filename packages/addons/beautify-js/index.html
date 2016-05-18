@@ -191,6 +191,10 @@ Beautify selected javascript.</li>
 This will open the settings window.</li>
 </ul>
 
+<h3>Ide only</h3>
+
+<p>Same menu is availible under <strong>code &gt; format &gt; beautify js</strong></p>
+
 <h2>Options</h2>
 
 <p>The option panel is accessible true the add on screen.<br><br>
@@ -225,65 +229,6 @@ if (extensions.beautifyjs) {
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify_JS();
 }
-<code>
-To execute beautify on after file save, you can set up this macro (trigger after file safe)
-</code>javascript
-(function() {
-    if (extensions.beautifyjs) {
-        var view    = ko.views.manager.currentView;
-        var scimoz  = view.scimoz;
-        var notify  = require(&quot;notify/notify&quot;);</p>
-
-<pre><code>    // if no current view is open
-    if (view === null){
-        return false;
-    }
-
-    // if file isn&#39;t saved we cant get it&#39;s extension
-    var file = view.koDoc.file;
-    if (file === null) {
-        return false;
-    }
-
-
-    switch (file.ext) {
-        case &#39;.html&#39;:
-        case &#39;.xhtml&#39;:
-            try {
-                extensions.beautifyjs.beautify_HTML();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        case &#39;.css&#39;:
-            try {
-                extensions.beautifyjs.beautify_CSS();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        case &#39;.js&#39;:
-            try {
-                extensions.beautifyjs.beautify_JS();
-            } catch(e) {
-                notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-            }
-            break;
-        default:
-            return;
-            break;
-    }
-
-    try {
-        ko.commands.doCommand(&#39;cmd_save&#39;);
-    } catch(e) {
-        notify.send(&#39;Error: &#39; + e.message, &#39;tools&#39;);
-    }
-
-}
-</code></pre>
-
-<p>}).apply();
 ```</p>
 
     </div>
@@ -324,18 +269,18 @@ To execute beautify on after file save, you can set up this macro (trigger after
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-2442949">
+            <div class="release  0" id="release-3255349">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/1.4/Beautify-js-1.4.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/2.0/BeautifyJS-2.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Beautify-js-1.4.xpi
+                                        BeautifyJS-2.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/added key bindings and made the settings easier to discover.zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/Updated to K10 and added ide menu.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -374,17 +319,17 @@ To execute beautify on after file save, you can set up this macro (trigger after
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-01-17T22:39:55Z">
-            Updated 17 weeks ago
+        <dd title="2016-05-18T20:14:46Z">
+            Updated 2 hours ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/1.4">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/2.0">
                 Version 
-                1.4
+                2.0
             </a>
         </dd>
 
@@ -401,7 +346,7 @@ To execute beautify on after file save, you can set up this macro (trigger after
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>14352 downloads</span>
+            <span>14359 downloads</span>
         </dd>
     
         <dt>
