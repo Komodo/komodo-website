@@ -33,7 +33,7 @@ nav:
           link: "http://docs.komodoide.com/"
         - 
           name: "Report Bug"
-          link: "http://bugs.activestate.com/enter_bug.cgi?product=Komodo"
+          link: "https://github.com/Komodo/KomodoEdit/issues"
           target: "_blank"
   support: 
     - 
