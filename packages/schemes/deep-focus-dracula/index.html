@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Abyss | Komodo IDE</title>
+        <title>Deep Focus Dracula | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Abyss | Komodo IDE" />
+        <meta property="og:title" content="Deep Focus Dracula | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/skins">
-            Skins
+        <a href="/packages/schemes">
+            Color Schemes
         </a>
     </li>
     <li>
-        Abyss
+        Deep Focus Dracula
     </li>
 </ul>
 
@@ -165,26 +165,110 @@
     </div>
 </div>
 
+<style type="text/css">
+
+#scheme-preview pre code
+{
+    background: #232323;
+    color: #ffc66d;
+}
+
+#python .hl-keyword { color: #cc7832 }
+#python .ko-keyword { color: #7587a6 }
+#python .hl-string { color: #6a8759 }
+#python .hl-class .hl-title { color: #cc7832 }
+#python .hl-function .hl-title { color: #9876aa }
+#python .hl-function .hl-params { color: #ffc66d }
+#python .hl-comment { color: #e0e0e0 }
+#python .ko-operator { color: #a9b7c6 }
+#python .hl-number { color: #5396ba }
+
+
+#php .hl-keyword { color: #cc7832 }
+#php .ko-keyword { color: #7587a6 }
+#php .hl-string { color: #6a8759 }
+#php .hl-class .hl-title { color: #ffc66d }
+#php .hl-function .hl-title { color: #ffc66d }
+#php .hl-function .hl-params { color: #ffc66d }
+#php .hl-comment { color: #e0e0e0 }
+#php .ko-operator { color: #a9b7c6 }
+#php .hl-variable { color: #ffc66d }
+#php .hl-number { color: #5396ba }
+</style>
+
+<div id="scheme-preview" class="tabs">
+    <pre id="python"><code>
+import math
+class Class:
+    """ this is a docstring """
+    def __init__(self, arg): # one line comment
+        self.x = arg + math.cos(arg + arg)
+        s = 'a string'
+    
+    def display(self, value):
+        print value
+        
+    def increment(self, value):
+        value = value + 1
+        print value
+    
+xyz = Class('foo')
+xyz.increment(10)
+    </code></pre>
+    
+    <pre id="php" style="display: none"><code>
+&lt;?php
+class foo {
+    // a comment
+    var $a;
+    var $b;
+    function display() {
+        echo "This is class foo";
+        echo "a = ".$this-&gt;a."";
+        echo "b = {$this-&gt;b}";
+    }
+    function mul() {
+        return $this-&gt;a*$this-&gt;b;
+    }
+};
+
+$foo1 = new foo;
+$foo1-&gt;a = 2;
+$foo1-&gt;b = 5;
+$foo1-&gt;display();
+echo $foo1-&gt;mul()."";
+    </code></pre>
+    
+    <ul id="scheme-preview-selector">
+        <li>
+            <a href="#python">Python</a>
+        </li>
+        <li>
+            <a href="#php">PHP</a>
+        </li>
+    </ul>
+</div>
+
+<p style="text-align: center">
+    <strong>Warning:</strong> This preview is an approximation, the color scheme may look different within Komodo.
+</p>
+
+<div class="spacer"></div>
+
+<hr/>
 
     <div id="readme" class="readme user-input">
-    <p><img src="https://github.com/Komodo/Abyss-Skin/raw/master/screenshot.png" alt="Screenshot"></p>
+    <h1>Deep-Focus-Dracula</h1>
 
-<h1>Building Abyss</h1>
+<p>K10 color-scheme based on the deep focus skin and dracula color-scheme</p>
 
-<p>To build Abyss please refer to the documentation on building an extension:</p>
+<h2>Skin</h2>
 
-<p>http://community.activestate.com/forum/introduction-building-komodo-extension</p>
+<p><img src="https://github.com/babobski/Deep-Focus-Dracula/raw/master/screenshot01.png" alt="screenshot"></p>
 
-<p>Note that Komodo skins need to be built using the --unjarred flag, ie.</p>
+<h2>Color-scheme colors</h2>
 
-<p>koext build --unjarred</p>
-
-<p>Once you have built and installed your own version of Abyss you can activate it
-under Preferences &gt; Appearance &gt; Skin.</p>
-
-<p>Note that if you were already using the version of Abyss provided with Komodo
-you will need to switch back and forth between another skin in order to apply
-your own version of Abyss.</p>
+<p><img src="https://github.com/babobski/Deep-Focus-Dracula/raw/master/screenshot02.jpg" alt="screenshot"></p>
 
     </div>
 
@@ -224,18 +308,18 @@ your own version of Abyss.</p>
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-1585942">
+            <div class="release  0" id="release-3275865">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/Komodo/Abyss-Skin/releases/download/1.1.1/abyss_skin-1.1.1-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Deep-Focus-Dracula/releases/download/1.0/Deep.Focus.ksf" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        abyss_skin-1.1.1-ko.xpi
+                                        Deep.Focus.ksf
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/Komodo/Abyss-Skin/archive/1.1.1.zip" class="button">
+                           <a href="https://github.com/babobski/Deep-Focus-Dracula/archive/First Release of Deep Focus - Dracula.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -253,11 +337,11 @@ your own version of Abyss.</p>
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo">
-                <span>Komodo</span>
+            <a href="https://github.com/babobski">
+                <span>babobski</span>
             </a>
-            <a href="https://github.com/Komodo" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/5132872?v=3?s=18">
+            <a href="https://github.com/babobski" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/3530262?v=3?s=18">
             </a>
         </dd>
         
@@ -266,25 +350,25 @@ your own version of Abyss.</p>
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/Abyss-Skin">
-                    Komodo/Abyss-Skin
+            <a href="https://github.com/babobski/Deep-Focus-Dracula">
+                    babobski/Deep-Focus-Dracula
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-08-02T09:42:59Z">
-            Updated 42 weeks ago
+        <dd title="2016-05-21T15:29:27Z">
+            Updated 6 hours ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/Abyss-Skin/releases/tag/1.1.1">
+            <a href="https://github.com/babobski/Deep-Focus-Dracula/releases/tag/1.0">
                 Version 
-                1.1.1
+                1.0
             </a>
         </dd>
 
@@ -292,8 +376,8 @@ your own version of Abyss.</p>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/Abyss-Skin/issues">
-                4 issues
+            <a href="https://github.com/babobski/Deep-Focus-Dracula/issues">
+                0 issues
             </a>
         </dd>
 
@@ -301,14 +385,14 @@ your own version of Abyss.</p>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>20002 downloads</span>
+            <span>3 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>14 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>
