@@ -170,7 +170,7 @@
     <h1>Less Compiler for Komodo Edit/Ide</h1>
 
 <p>a LESS 2.6.1 compiler for Komodo Edit/Ide.<br>
-This addon allows you to compile LESS files.</p>
+This addon allows you to compile LESS files and will give auto completion on the LESS @vars.</p>
 
 <h2>Usage</h2>
 
@@ -194,6 +194,8 @@ Takes the current selection and turns it into CSS
  into CSS. Takes the contents of the current buffer and turns it into compressed CSS.
  * <strong>Compile and Compress Selection into CSS (including imports)</strong><br>
  takes the current selection and turns it into compressed CSS.
+ * <strong>Collect @vars</strong><br>
+ collect all the LESS @vars for auto completion.
  * <strong>File Watcher</strong>
   * <strong>Enable File Watcher for current file</strong><br>
   Enables a file watcher for current LESS file 
@@ -221,6 +223,14 @@ This will open a window where you can set file scopes, so you can work with mult
 <li><strong>Settings</strong><br>
 This will open the settings window.</li>
 </ul>
+
+<h3>Autocompletion</h3>
+
+<p>This addon will provide you with LESS var auto completion.<br>
+The vars will be search automatically( on file open and after you pressed @ on save ).<br>
+You can also trigger the search trough the menu.<br>
+When you type @ a auto completion box will be shown.<br>
+<img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/Screenshot02.png" alt="Screenshot"></p>
 
 <h3>File Scopes</h3>
 
@@ -268,18 +278,18 @@ This allows you to work with multiple file scopes in one project or allows to wo
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-3276544">
+            <div class="release  0" id="release-3289914">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/2.1.0/Komodo-Less-Compiler-2.1.0.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/2.1.1/Komodo-Less-Compiler-2.1.1.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Komodo-Less-Compiler-2.1.0.xpi
+                                        Komodo-Less-Compiler-2.1.1.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/Updated to komodo X.zip" class="button">
+                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/autocompletion is back and added notification options.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -318,17 +328,17 @@ This allows you to work with multiple file scopes in one project or allows to wo
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-05-21T16:36:34Z">
-            Updated 2 days ago
+        <dd title="2016-05-24T06:08:55Z">
+            Updated 58 minutes ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/2.1.0">
+            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/2.1.1">
                 Version 
-                2.1.0
+                2.1.1
             </a>
         </dd>
 
@@ -345,7 +355,7 @@ This allows you to work with multiple file scopes in one project or allows to wo
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>11351 downloads</span>
+            <span>11360 downloads</span>
         </dd>
     
         <dt>
