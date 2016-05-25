@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 24 May 2016 21:03:13 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 25 May 2016 09:23:20 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Chrome Debugging in Komodo X, Code and Debug in One Place</title>
+                <link>http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place</link>
+                <pubDate>Tue, 24 May 2016 17:00:00 -0700</pubDate>
+                <description>Let me set the stage: You are a web developer. You spend many hours a week writing javascript, running javascript and debugging javascript. You&#x27;re very adept at it, you write your code, fire up a web server and point Chrome at it [...]</description>
+                <guid>http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place</guid>
+            </item>
             <item>
                 <title>Komodo X Released - It&#x27;s 10X Better</title>
                 <link>http://komodoide.com/blog/komodo-x-released</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 10 Feb 2016 16:00:00 -0800</pubDate>
                 <description>Komodo supports debugging (*IDE ONLY*) for all of its major dynamic languages which includes Python, PHP, Go, Perl, Tcl, Ruby, NodeJS and JavaScript [...]</description>
                 <guid>http://komodoide.com/blog/debugging-with-komodo-ide</guid>
-            </item>
-            <item>
-                <title>Komodo UI&#x2F;UX &amp; Customization</title>
-                <link>http://komodoide.com/blog/komodo-ui-ux-and-customization</link>
-                <pubDate>Mon, 1 Feb 2016 16:00:00 -0800</pubDate>
-                <description>Back in November, with the help of our talented marketing team, Nathan and I hosted a webinar to show our new&#x2F;potential&#x2F;existing users the major features of Komodo, how to use them and how to customize them. Now if you&#x27;re like me [...]</description>
-                <guid>http://komodoide.com/blog/komodo-ui-ux-and-customization</guid>
             </item>
     </channel>
 </rss>
