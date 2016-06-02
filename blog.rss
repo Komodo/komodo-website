@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 2 Jun 2016 09:03:39 -0700</lastBuildDate>
+        <lastBuildDate>Thu, 2 Jun 2016 10:34:52 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>5 Reasons to use an IDE Instead of an Editor</title>
+                <link>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</link>
+                <pubDate>Wed, 1 Jun 2016 17:00:00 -0700</pubDate>
+                <description>The word *editor* and IDE (integrated development environments) are often mistakenly used interchangeably. However, there are some big differences between the two. The extra functionality you get with an IDE can provide significant time savings [...]</description>
+                <guid>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</guid>
+            </item>
             <item>
                 <title>Chrome Debugging in Komodo X, Code and Debug in One Place</title>
                 <link>http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 18 Feb 2016 16:00:00 -0800</pubDate>
                 <description>In Komodo we have a concept of Packages. A package is any external item that can be added to Komodo [...]</description>
                 <guid>http://komodoide.com/blog/komodo-packages</guid>
-            </item>
-            <item>
-                <title>Debugging with Komodo IDE</title>
-                <link>http://komodoide.com/blog/debugging-with-komodo-ide</link>
-                <pubDate>Wed, 10 Feb 2016 16:00:00 -0800</pubDate>
-                <description>Komodo supports debugging (*IDE ONLY*) for all of its major dynamic languages which includes Python, PHP, Go, Perl, Tcl, Ruby, NodeJS and JavaScript [...]</description>
-                <guid>http://komodoide.com/blog/debugging-with-komodo-ide</guid>
             </item>
     </channel>
 </rss>
