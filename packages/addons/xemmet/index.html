@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Byte or Char Position | Komodo IDE</title>
+        <title>Xemmet | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Byte or Char Position | Komodo IDE" />
+        <meta property="og:title" content="Xemmet | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/userscripts">
-            Userscripts
+        <a href="/packages/addons">
+            Addons
         </a>
     </li>
     <li>
-        Byte or Char Position
+        Xemmet
     </li>
 </ul>
 
@@ -167,8 +167,61 @@
 
 
     <div id="readme" class="readme user-input">
-    <p>Show the Byte or Char position of your cursor in the Statusbar beside Ln and Col.
-For more info check the <a href="http://komodoide.com/blog/2014-03/show-absolute-position-in-statusbar/">Absolute Cursor Position in Statusbar</a> blog.</p>
+    <h1>Xemmet</h1>
+
+<p>Emmet for Komodo X.</p>
+
+<p>Features:</p>
+
+<ul>
+<li>Expand abbreviations (by Tab) in: HTML, RHTML, ERB, CSS, SCSS, LESS</li>
+<li>Wrap Selection with Abbreviation in HTML</li>
+<li>Custom snippets</li>
+<li>Custom file formats where Xemmet should work</li>
+</ul>
+
+<h2>Expand abbreviations</h2>
+
+<p>This is the main feature of this add-on. It could expand <code>div&gt;h1{Hello}</code> to
+<code>html
+&lt;div&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/div&gt;
+</code></p>
+
+<p>See Emmet documentation for more information.</p>
+
+<h2>Wrap Selection</h2>
+
+<p>In HTML, you can select a block of text or code, and press <kbd>Ctrl+Tab</kbd>
+to wrap the selection with an Emmet abbreviation. Xemmet will notice you
+when you Enter Wrap Abbreviation mode. Don&#39;t remove your selection, just start
+typing an abbreviation. Once you&#39;re done, press Tab to complete the action.</p>
+
+<p>By default, this feature works only in HTML, RHTML and ERB (to avoid bugs).
+If you want to able to use this feature in any language, go to Prefs - Smart
+Editing, find Xemmet and disable <strong>both</strong> &quot;Xemmet works only in HTML &amp; CSS&quot; and
+&quot;Wrap Selection works only in HTML&quot;.</p>
+
+<p>I&#39;d not recommend to disable these options.</p>
+
+<p>To leave the mode, press Esc.</p>
+
+<h2>Custom snippets</h2>
+
+<p>You can add or modify your snippets in Preferences - Smart Editing.</p>
+
+<p><strong>NOTE:</strong> new snippets won&#39;t appear immediately after you&#39;ve added them.</p>
+
+<p>To modify a snippet, just press on it. Your changes will be displayed
+immediately.</p>
+
+<h2>Custom file formats</h2>
+
+<p>By default, Xemmet works only in specific HTML-/CSS-like languages (such as
+ERB, LESS, CSS). If you want to add more languages where Xemmet should work,
+go to Prefs - Smart Editing. There are 2 textboxes where you can write languages
+where you want to see Xemmet actions.</p>
 
     </div>
 
@@ -208,16 +261,22 @@ For more info check the <a href="http://komodoide.com/blog/2014-03/show-absolute
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js">
+            <div class="release  0" id="release-3371397">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/Komodo/macros/blob/master/automagic_snippets_from_text.js" class="button big primary">
+                                    <a href="https://github.com/Defman21/Xemmet/releases/download/0.4.3/xemmet-0.4.3-ko.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        automagic_snippets_from_text.js
+                                        xemmet-0.4.3-ko.xpi
                                     </a>
                                 </div>
                        </div>
+                        <div class="source">
+                           <a href="https://github.com/Defman21/Xemmet/archive/Xemmet 0.4.3.zip" class="button">
+                               <i class="icon icon-download"></i>
+                               Download Source
+                           </a>
+                        </div>
                 </div>
             </div>
         </div>
@@ -231,43 +290,63 @@ For more info check the <a href="http://komodoide.com/blog/2014-03/show-absolute
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/cgchoffman">
-                <span>cgchoffman</span>
+            <a href="https://github.com/Defman21">
+                <span>Defman21</span>
             </a>
-            <a href="https://github.com/cgchoffman" class="preview">
-                <img src="http://gravatar.com/avatar/d1a00b9762070a83e9f9dac8f615bb3d?d=identicon&s=18">
+            <a href="https://github.com/Defman21" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/7100645?v=3?s=18">
             </a>
         </dd>
         
+
         <dt>
-            <i class="icon icon-link"></i>
+            <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/macros">
-                https://github.com/Komodo/macros
+            <a href="https://github.com/Defman21/Xemmet">
+                    Defman21/Xemmet
             </a>
         </dd>
-
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2014-03-31T00:00:00+00:00">
-            Updated 114 weeks ago
+        <dd title="2016-06-03T21:08:57Z">
+            Updated an hour ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="">
+            <a href="https://github.com/Defman21/Xemmet/releases/tag/0.4.3">
                 Version 
-                
+                0.4.3
             </a>
         </dd>
 
+        <dt>
+            <i class="icon icon-bug"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/Defman21/Xemmet/issues">
+                2 issues
+            </a>
+        </dd>
 
+        <dt>
+            <i class="icon icon-cloud-download"></i>
+        </dt>
+        <dd>
+            <span>3 downloads</span>
+        </dd>
     
+        <dt>
+            <i class="icon icon-star"></i>
+        </dt>
+        <dd>
+            <span>0 stars</span>
+        </dd>
     </dl>
 </div>
 
