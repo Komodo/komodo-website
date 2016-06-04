@@ -171,57 +171,45 @@
 
 <p>Emmet for Komodo X.</p>
 
-<p>Features:</p>
-
-<ul>
-<li>Expand abbreviations (by Tab) in: HTML, RHTML, ERB, CSS, SCSS, LESS</li>
-<li>Wrap Selection with Abbreviation in HTML</li>
-<li>Custom snippets</li>
-<li>Custom file formats where Xemmet should work</li>
-</ul>
+<p>This add-on implements only Expand Abbreviation and Wrap Selection features
+from Emmet. If you want to get all features, install <a href="https://github.com/Defman21/komodo-emmet">Emmet for Komodo</a></p>
 
 <h2>Expand abbreviations</h2>
 
-<p>This is the main feature of this add-on. It could expand <code>div&gt;h1{Hello}</code> to
+<p>This is the main feature of this add-on. It could expand
+<code>ul#nav&gt;li.item$*4&gt;a{Item $}</code> to
 <code>html
-&lt;div&gt;
-    &lt;h1&gt;Hello&lt;/h1&gt;
-&lt;/div&gt;
+&lt;ul id=&quot;nav&quot;&gt;
+    &lt;li class=&quot;item1&quot;&gt;&lt;a&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item2&quot;&gt;&lt;a&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item3&quot;&gt;&lt;a&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;item4&quot;&gt;&lt;a&gt;Item 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </code></p>
 
 <p>See Emmet documentation for more information.</p>
 
 <h2>Wrap Selection</h2>
 
-<p>In HTML, you can select a block of text or code, and press <kbd>Ctrl+Tab</kbd>
-to wrap the selection with an Emmet abbreviation. Xemmet will notice you
-when you Enter Wrap Abbreviation mode. Don&#39;t remove your selection, just start
-typing an abbreviation. Once you&#39;re done, press Tab to complete the action.</p>
+<p>In HTML, you can make a selection and press <kbd>Ctrl+Tab</kbd>
+to enter Wrap Selection mode. Replace your selection with Emmmet
+abbreviation. Once you&#39;re done, press Tab to wrap your selection with
+your abbreviation.</p>
 
-<p>By default, this feature works only in HTML, RHTML and ERB (to avoid bugs).
-If you want to able to use this feature in any language, go to Prefs - Smart
-Editing, find Xemmet and disable <strong>both</strong> &quot;Xemmet works only in HTML &amp; CSS&quot; and
-&quot;Wrap Selection works only in HTML&quot;.</p>
+<p>By default, this feature works only in HTML based languages.
+You can disable this limitation in Prefs - Smart Editing.</p>
 
 <p>I&#39;d not recommend to disable these options.</p>
 
-<p>To leave the mode, press Esc.</p>
+<p>To leave this mode, press Esc.</p>
 
 <h2>Custom snippets</h2>
 
-<p>You can add or modify your snippets in Preferences - Smart Editing.</p>
+<p>To add a new snippet, first create folders &quot;html&quot; and &quot;css&quot; in
+<code>Komodo Toolbox- Abbreviations</code>. Then create a snippet inside one of these
+folders. The name of your snippet should starts with <code>xemmet_</code>.</p>
 
-<p><strong>NOTE:</strong> new snippets won&#39;t appear immediately after you&#39;ve added them.</p>
-
-<p>To modify a snippet, just press on it. Your changes will be displayed
-immediately.</p>
-
-<h2>Custom file formats</h2>
-
-<p>By default, Xemmet works only in specific HTML-/CSS-like languages (such as
-ERB, LESS, CSS). If you want to add more languages where Xemmet should work,
-go to Prefs - Smart Editing. There are 2 textboxes where you can write languages
-where you want to see Xemmet actions.</p>
+<p>See Komodo Documentation for more information about Snippets.</p>
 
     </div>
 
@@ -261,18 +249,18 @@ where you want to see Xemmet actions.</p>
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-3371397">
+            <div class="release  0" id="release-3372011">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/Defman21/Xemmet/releases/download/0.4.3/xemmet-0.4.3-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/Defman21/Xemmet/releases/download/0.5/xemmet-0.5-ko.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        xemmet-0.4.3-ko.xpi
+                                        xemmet-0.5-ko.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/Defman21/Xemmet/archive/Xemmet 0.4.3.zip" class="button">
+                           <a href="https://github.com/Defman21/Xemmet/archive/Xemmet 0.5.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -311,7 +299,7 @@ where you want to see Xemmet actions.</p>
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-06-03T21:08:57Z">
+        <dd title="2016-06-03T23:34:53Z">
             Updated an hour ago
         </dd>
         
@@ -319,9 +307,9 @@ where you want to see Xemmet actions.</p>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Defman21/Xemmet/releases/tag/0.4.3">
+            <a href="https://github.com/Defman21/Xemmet/releases/tag/0.5">
                 Version 
-                0.4.3
+                0.5
             </a>
         </dd>
 
@@ -330,7 +318,7 @@ where you want to see Xemmet actions.</p>
         </dt>
         <dd>
             <a href="https://github.com/Defman21/Xemmet/issues">
-                2 issues
+                1 issues
             </a>
         </dd>
 
@@ -338,7 +326,7 @@ where you want to see Xemmet actions.</p>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>3 downloads</span>
+            <span>5 downloads</span>
         </dd>
     
         <dt>
