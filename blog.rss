@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 7 Jun 2016 14:15:37 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 7 Jun 2016 15:05:07 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Top 11 Tips and Tricks for Komodo X</title>
+                <link>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</link>
+                <pubDate>Tue, 7 Jun 2016 17:00:00 -0700</pubDate>
+                <description> I would like to start this post by thanking those of you who have mild to severe OCD and yet still clicked our provocative title.   I realized while writing another blog post that we hadn’t written a Komodo Tips and Tricks post for over 3 years [...]</description>
+                <guid>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</guid>
+            </item>
             <item>
                 <title>5 Reasons to use an IDE Instead of an Editor</title>
                 <link>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 23 Feb 2016 16:00:00 -0800</pubDate>
                 <description>Komodo&#x27;s Commando tool is a workhorse in Komodo. Through the Commando window you can access all of Komodo&#x27;s internal commands, all toolbox items, open any file on your computer, find code symbols related to your file and project, etc [...]</description>
                 <guid>http://komodoide.com/blog/komodos-commando-tool</guid>
-            </item>
-            <item>
-                <title>Komodo Packages</title>
-                <link>http://komodoide.com/blog/komodo-packages</link>
-                <pubDate>Thu, 18 Feb 2016 16:00:00 -0800</pubDate>
-                <description>In Komodo we have a concept of Packages. A package is any external item that can be added to Komodo [...]</description>
-                <guid>http://komodoide.com/blog/komodo-packages</guid>
             </item>
     </channel>
 </rss>
