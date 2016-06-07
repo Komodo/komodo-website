@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Style Spy | Komodo IDE</title>
+        <title>Oceanicnext | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Style Spy | Komodo IDE" />
+        <meta property="og:title" content="Oceanicnext | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/addons">
-            Addons
+        <a href="/packages/schemes">
+            Color Schemes
         </a>
     </li>
     <li>
-        Style Spy
+        Oceanicnext
     </li>
 </ul>
 
@@ -165,42 +165,110 @@
     </div>
 </div>
 
+<style type="text/css">
+
+#scheme-preview pre code
+{
+    background: #1b2b34;
+    color: #c0c5ce;
+}
+
+#python .hl-keyword { color: #c594c5 }
+#python .ko-keyword { color: #ec5f67 }
+#python .hl-string { color: #99c794 }
+#python .hl-class .hl-title { color: #fac863 }
+#python .hl-function .hl-title { color: #6699cc }
+#python .hl-function .hl-params { color: #c0c5ce }
+#python .hl-comment { color: #65737e }
+#python .ko-operator { color: #6699cc }
+#python .hl-number { color: #f99157 }
+
+
+#php .hl-keyword { color: #c594c5 }
+#php .ko-keyword { color: #ec5f67 }
+#php .hl-string { color: #99c794 }
+#php .hl-class .hl-title { color: #cdd3de }
+#php .hl-function .hl-title { color: #cdd3de }
+#php .hl-function .hl-params { color: #c0c5ce }
+#php .hl-comment { color: #65737e }
+#php .ko-operator { color: #6699cc }
+#php .hl-variable { color: #ec5f67 }
+#php .hl-number { color: #f99157 }
+</style>
+
+<div id="scheme-preview" class="tabs">
+    <pre id="python"><code>
+import math
+class Class:
+    """ this is a docstring """
+    def __init__(self, arg): # one line comment
+        self.x = arg + math.cos(arg + arg)
+        s = 'a string'
+    
+    def display(self, value):
+        print value
+        
+    def increment(self, value):
+        value = value + 1
+        print value
+    
+xyz = Class('foo')
+xyz.increment(10)
+    </code></pre>
+    
+    <pre id="php" style="display: none"><code>
+&lt;?php
+class foo {
+    // a comment
+    var $a;
+    var $b;
+    function display() {
+        echo "This is class foo";
+        echo "a = ".$this-&gt;a."";
+        echo "b = {$this-&gt;b}";
+    }
+    function mul() {
+        return $this-&gt;a*$this-&gt;b;
+    }
+};
+
+$foo1 = new foo;
+$foo1-&gt;a = 2;
+$foo1-&gt;b = 5;
+$foo1-&gt;display();
+echo $foo1-&gt;mul()."";
+    </code></pre>
+    
+    <ul id="scheme-preview-selector">
+        <li>
+            <a href="#python">Python</a>
+        </li>
+        <li>
+            <a href="#php">PHP</a>
+        </li>
+    </ul>
+</div>
+
+<p style="text-align: center">
+    <strong>Warning:</strong> This preview is an approximation, the color scheme may look different within Komodo.
+</p>
+
+<div class="spacer"></div>
+
+<hr/>
 
     <div id="readme" class="readme user-input">
-    <h3>The Basics</h3>
+    <h1>Oceanicnext</h1>
 
-<p>Style Spy is an extension for <a href="http://komodoide.com/">Komodo IDE</a> and <a href="http://komodoide.com/komodo-edit/">Komodo Edit</a>.
-It simplifies debugging and prototyping styles used in the Komodo editor.</p>
+<p>Oceanicnext color scheme for Komodo X.</p>
 
-<h3>Installation</h3>
+<p><img src="https://github.com/Defman21/oceanicnext-komodo/raw/master//screenshot.png?raw=true" alt="screen"></p>
 
-<p>The extension XPI is available at https://ervumlens.github.io/ko-stylespy .</p>
+<h1>Installation</h1>
 
-<p>Once installed, the extension adds a new <code>Style Spy</code> menu under the main <code>Tools</code> menu.</p>
+<p>Open Commando - Packages, find Oceanicnext and press Enter to install it.</p>
 
-<h3>Usage</h3>
-
-<p>The best place to learn about Style Spy is in Style Spy itself.
-Open the <code>Help</code> item under the <code>Tools</code> &rarr; <code>Style Spy</code> menu to read about functionality.</p>
-
-<p>Here is a brief animation showing Style Spy in use.
-<img src="https://github.com/ervumlens/ko-stylespy/raw/master/screenshot-2.gif" alt="Animation of Style Spy in use."></p>
-
-<h3>Build</h3>
-
-<p>Building Style Spy requires the <a href="http://coffeescript.org">CoffeeScript</a> compiler available from the environment <code>PATH</code> and an installation of Komodo Edit or IDE.
-The <a href="https://github.com/ervumlens/ko-stylespy"><code>ko-stylespy</code></a> repository includes Komodo macros that build the extension.
-Just clone the repo, open a new Komodo project from within the <code>ko-stylespy</code> directory, and run the macros from the Komodo toolbox.</p>
-
-<h3>Questions? Problems? Suggestions?</h3>
-
-<p>Report bugs, make enhancement requests, or ask questions at https://github.com/ervumlens/ko-stylespy/issues . Just click on the big &quot;New Issue&quot; button.</p>
-
-<h3>Thank Yous</h3>
-
-<p>Thanks to Komodo Edit&#39;s developers and contributors, past and present, for making an editor that&#39;s enjoyable to use.</p>
-
-<p>Thanks to Jeremy Ashkenas for creating CoffeeScript.</p>
+<p><a href="https://github.com/voronianski/oceanic-next-color-scheme">Original scheme</a></p>
 
     </div>
 
@@ -240,18 +308,18 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-1773433">
+            <div class="release  0" id="release-3393544">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/ervumlens/ko-stylespy/releases/download/v1.0.2/stylespy-1.0.2-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/Defman21/oceanicnext-komodo/releases/download/1.0/Oceanicnext.ksf" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        stylespy-1.0.2-ko.xpi
+                                        Oceanicnext.ksf
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/ervumlens/ko-stylespy/archive/ko-stylespy v1.0.2.zip" class="button">
+                           <a href="https://github.com/Defman21/oceanicnext-komodo/archive/Oceanicnext.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -269,11 +337,11 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/ervumlens">
-                <span>ervumlens</span>
+            <a href="https://github.com/Defman21">
+                <span>Defman21</span>
             </a>
-            <a href="https://github.com/ervumlens" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/13005338?v=3?s=18">
+            <a href="https://github.com/Defman21" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/7100645?v=3?s=18">
             </a>
         </dd>
         
@@ -281,8 +349,8 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
             <i class="icon icon-link"></i>
         </dt>
         <dd>
-            <a href="https://ervumlens.github.io/ko-stylespy">
-                https://ervumlens.github.io/ko-stylespy
+            <a href="http://defman.me/schemes/oceanicnext/">
+                http://defman.me/schemes/oceanicnext/
             </a>
         </dd>
 
@@ -290,25 +358,25 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/ervumlens/ko-stylespy">
-                    ervumlens/ko-stylespy
+            <a href="https://github.com/Defman21/oceanicnext-komodo">
+                    Defman21/oceanicnext-komodo
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-09-05T20:57:54Z">
-            Updated 39 weeks ago
+        <dd title="2016-06-07T20:30:52Z">
+            Updated 12 minutes ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/ervumlens/ko-stylespy/releases/tag/v1.0.2">
+            <a href="https://github.com/Defman21/oceanicnext-komodo/releases/tag/1.0">
                 Version 
-                v1.0.2
+                1.0
             </a>
         </dd>
 
@@ -316,8 +384,8 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/ervumlens/ko-stylespy/issues">
-                5 issues
+            <a href="https://github.com/Defman21/oceanicnext-komodo/issues">
+                0 issues
             </a>
         </dd>
 
@@ -325,14 +393,14 @@ Just clone the repo, open a new Komodo project from within the <code>ko-stylespy
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>11533 downloads</span>
+            <span>0 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>2 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>
