@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 8 Jun 2016 12:03:36 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 8 Jun 2016 14:15:04 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo X Webinar: Questions and Answers</title>
+                <link>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</link>
+                <pubDate>Thu, 9 Jun 2016 17:00:00 -0700</pubDate>
+                <description>On June 6, 2016 at 10 am PDT, NathanR and myself (CareyH) introduced Komodo X to the world (just under 100 people…) in a live webcast. Our goal was to show off some of the new features in action and let people ask questions about what they heard, saw [...]</description>
+                <guid>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</guid>
+            </item>
             <item>
                 <title>Top 11 Tips and Tricks for Komodo X</title>
                 <link>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 1 Mar 2016 16:00:00 -0800</pubDate>
                 <description>All of our main languages like, Python, PHP, Ruby, Perl, Javascript, NodeJS, Go, Tcl and HTML, among others have code intelligence support.   Not only does this mean that you get code intelligence for native language functions, classes [...]</description>
                 <guid>http://komodoide.com/blog/code-int</guid>
-            </item>
-            <item>
-                <title>Komodo&#x27;s Commando Tool</title>
-                <link>http://komodoide.com/blog/komodos-commando-tool</link>
-                <pubDate>Tue, 23 Feb 2016 16:00:00 -0800</pubDate>
-                <description>Komodo&#x27;s Commando tool is a workhorse in Komodo. Through the Commando window you can access all of Komodo&#x27;s internal commands, all toolbox items, open any file on your computer, find code symbols related to your file and project, etc [...]</description>
-                <guid>http://komodoide.com/blog/komodos-commando-tool</guid>
             </item>
     </channel>
 </rss>
