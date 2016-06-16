@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 16 Jun 2016 11:07:12 -0700</lastBuildDate>
+        <lastBuildDate>Thu, 16 Jun 2016 11:57:37 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 10.0.1 Released</title>
+                <link>http://komodoide.com/blog/komodo-10-0-1-released</link>
+                <pubDate>Wed, 15 Jun 2016 17:00:00 -0700</pubDate>
+                <description>We hope everyone has been enjoying Komodo X so far. Today we&#x27;re releasing our first update, which is focussed entirely on stability and primarily resolves bugs introduced in 10.0.0 as well as a few longer standing issues [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-0-1-released</guid>
+            </item>
             <item>
                 <title>Komodo X Webinar: Questions and Answers</title>
                 <link>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 3 Mar 2016 16:00:00 -0800</pubDate>
                 <description>As you may well be aware, I am an excellent programmer.  What you may not be aware of is that I SOMETIMES make mistakes.  When one of these most uncommon events occur [...]</description>
                 <guid>http://komodoide.com/blog/track-change</guid>
-            </item>
-            <item>
-                <title>Code Intelligence in Komodo</title>
-                <link>http://komodoide.com/blog/code-int</link>
-                <pubDate>Tue, 1 Mar 2016 16:00:00 -0800</pubDate>
-                <description>All of our main languages like, Python, PHP, Ruby, Perl, Javascript, NodeJS, Go, Tcl and HTML, among others have code intelligence support.   Not only does this mean that you get code intelligence for native language functions, classes [...]</description>
-                <guid>http://komodoide.com/blog/code-int</guid>
             </item>
     </channel>
 </rss>

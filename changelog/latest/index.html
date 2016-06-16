@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Komodo 10.0 Changelog | Komodo IDE</title>
+        <title>Komodo 10 Changelog | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Komodo 10.0 Changelog" />
+        <meta property="og:title" content="Komodo 10 Changelog" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -141,13 +141,17 @@
                              changelog changelog_latest changelog_latest_index">
         <section role="main">
             <article class="normalize">
-                <h1>Komodo IDE/Edit 10.0 Release Notes</h1>
+                <h1>Komodo IDE/Edit 10 Release Notes</h1>
 
 <p>These Release Notes cover <a href="#whatsnew">what&rsquo;s new</a>, <a href="#details">detailed changes and bug fixes</a> and <a href="#knownissues">known issues</a> for Komodo IDE and Komodo Edit.</p>
 
 <p><a name="whatsnew"></a></p>
 
 <h2>What&rsquo;s New in Komodo IDE/Edit</h2>
+
+<h3>10.0.1</h3>
+
+<p><a href="#details">See below</a></p>
 
 <h3>10.0</h3>
 
@@ -255,6 +259,62 @@ days, that should no longer be the case.</p></li>
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.</p>
 
+<h3>10.0.1</h3>
+
+<ul>
+<li>  Breadcrumbs: Remote breadcrumbs not showing file listings - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1690">#1690</a>.</li>
+<li>  CodeIntel: Limit symbol browser to files residing in your project / places root - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1457">#1457</a>.</li>
+<li>  Commando: Don&rsquo;t break on remote folders - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1657">#1657</a>.</li>
+<li>  Commands: Improved &ldquo;cmd_movetab&rdquo; description - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1413">#1413</a>.</li>
+<li>  Debugging: NodeJS: Remove leftover Chrome interpreter parameters from a JS debug configuration after switching to NodeJS - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1456">#1456</a>.</li>
+<li>  Debugging: Run without debugging key binding skips settings dialog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1624">#1624</a>.</li>
+<li>  Editor: Block uncomment error on blank lines - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1509">#1509</a>.</li>
+<li>  Editor: Color hyperlinks not clickable - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1335">#1335</a>.</li>
+<li>  Editor: Remove source code pro from default fonts (incompatible with Cyrillic characters) - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1484">#1484</a>.</li>
+<li>  Find: Do not show &ldquo;include&rdquo; field for anything other than &ldquo;in files&rdquo; searches - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/858">#858</a>.</li>
+<li>  Find: Skip badly encoded filenames in &ldquo;find in files&rdquo; rather than erroring out - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1602">#1602</a>.</li>
+<li>  Formatters: Fail gracefully, fixes custom formatters not working.</li>
+<li>  Help: Removed outdated menu items - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1512">#1512</a>.</li>
+<li>  Icons: Don&rsquo;t render two reload icons.</li>
+<li>  Icons: Increase padding on pref category icons - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1486">#1486</a>.</li>
+<li>  Icons: Missing runcmd icon. Fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1586">#1586</a>.</li>
+<li>  Indentation: Honor &lsquo;useTabs&rsquo; setting if &#39;allow override&rsquo; is unchecked - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1518">#1518</a>.</li>
+<li>  Keybindings: Changed find next and debugging key bindings for OSX to be more user friendly and consistent - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1665">#1665</a>.</li>
+<li>  Keybindings: Vi: Line up/down should navigate over folded code - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1549">#1549</a>.</li>
+<li>  Linter: Removed &ldquo;builtin&rdquo; options for Less and SCSS linting options (note: you can still lint these languages - no functional change) - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1607">#1607</a>.</li>
+<li>  PHP 7: Updated stdlib catalog to include common constants and array members - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1633">#1633</a>.</li>
+<li>  Places: Fail gracefully when failing on file - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1510">#1510</a>.</li>
+<li>  Prefs: Prefs failing to load properly when restoring sub-category - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1598">#1598</a>.</li>
+<li>  Prefs: Re-enable the &ldquo;environment&rdquo; button - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1511">#1511</a>.</li>
+<li>  SCC: Always sort by date descending - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1527">#1527</a>.</li>
+<li>  SCC: Git not shown on checkout dialog - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1468">#1468</a>.</li>
+<li>  SCC: History: Added the revision column again - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1534">#1534</a>.</li>
+<li>  SCC: New files not being committed - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1481">#1481</a>.</li>
+<li>  SDK: Editor: Add getWindowPosition method.</li>
+<li>  Startup Wizard: Skip schemes that fail to load - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1538">#1538</a>.</li>
+<li>  UI: About dialog overlapping contributor list - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1632">#1632</a>.</li>
+<li>  UI: Bottom pane hiding toolbar if too small - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1540">#1540</a>.</li>
+<li>  UI: Change default font-size to 1rem (up from 0.9rem).</li>
+<li>  UI: Environment variable editing window too small - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1407">#1407</a>.</li>
+<li>  UI: Force minimap width (prevents it getting squashed) - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1529">#1529</a>.</li>
+<li>  UI: Inconsistencies in the cupertino color scheme - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1438">#1438</a>.</li>
+<li>  UI: Limit places icons size to 14px - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1404">#1404</a>.</li>
+<li>  UI: Menubar cut off when window is maximized on Windows - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1461">#1461</a>.</li>
+<li>  UI: Minimap border color.</li>
+<li>  UI: Missing buttons in pref dialogs - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1506">#1506</a>.</li>
+<li>  UI: Missing findresults copy icon - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1503">#1503</a>.</li>
+<li>  UI: missing reload button in browser preview - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1603">#1603</a>.</li>
+<li>  UI: Offset editor tooltips so they don&rsquo;t overlap and flicker - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1477">#1477</a>.</li>
+<li>  UI: Publishing icons overlapping text - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1495">#1495</a>.</li>
+<li>  UI: Reduce size of file status icons (collab, publishing, readonly).</li>
+<li>  UI: Side toolbar doesn&rsquo;t stay hidden after restart - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1482">#1482</a>.</li>
+<li>  UI: Statusbar position indicators causing UI to jump - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1536">#1536</a>.</li>
+<li>  UI: Styling of check configuration window - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/716">#716</a>.</li>
+<li>  UX: Don&rsquo;t propegate events on dynamic toolbar buttons - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1563">#1563</a>.</li>
+<li>  Other: Allow stop-restart during addon uninstall / install - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1594">#1594</a>.</li>
+<li>  Other: Multi-window errors/exceptions - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1686">#1686</a>.</li>
+</ul>
+
 <h3>10.0.0</h3>
 
 <ul>
@@ -359,7 +419,7 @@ and the Sections List only apply to Komodo IDE only.</p>
 <li>  editing: Added option to disable Ctrl+Click creating multiple selections - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1081">#1081</a>.</li>
 <li>  editing: Added option to retain selected text when smart wrapping - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/904">#904</a>.</li>
 <li>  editing: After smart-selecting XML/HTML tags, typing &rsquo; &rsquo; consolidates the selection to the opening tag - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1019">#1019</a>.</li>
-<li>  editing: Allow smart wrap selections to work with &lsquo;Shift&#39;ed characters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/986">#986</a>.</li>
+<li>  editing: Allow smart wrap selections to work with &#39;Shift&#39;ed characters - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/986">#986</a>.</li>
 <li>  editing: Fixed line duplicate up/down at document boundaries - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/1201">#1201</a>.</li>
 <li>  editing: Fixed regression of in-line selection duplication - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/84">#84</a>.</li>
 <li>  editing: Handle encoding mismatch when attempting to pre-process saved files - fixes <a href="https://github.com/Komodo/KomodoEdit/issues/997">#997</a>.</li>
@@ -448,8 +508,8 @@ for the dev team.</p>
 
 <ul class="disc">
     <li>
-        Komodo IDE/Edit 10.0.0 -
-        <a href="http://downloads.activestate.com/Komodo/releases/10.0.0/">archive</a>
+        Komodo IDE/Edit 10.0.1 -
+        <a href="http://downloads.activestate.com/Komodo/releases/10.0.1/">archive</a>
         |
         <a href="/changelog/latest">changelog</a>
     </li>
@@ -679,7 +739,7 @@ for the dev team.</p>
                     <p>&nbsp;</p>
                     <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
 
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Komodo 10.0 Changelog" data-dnt="true">Tweet</a>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="Komodo 10 Changelog" data-dnt="true">Tweet</a>
 
                     <p>&nbsp;</p>
 
