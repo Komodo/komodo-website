@@ -1,15 +1,19 @@
 ---
-title: Komodo 10.0 Changelog
+title: Komodo 10 Changelog
 sidebar: download
 classNames: small-text markdown
 ---
 
-# Komodo IDE/Edit 10.0 Release Notes
+# Komodo IDE/Edit 10 Release Notes
 
 These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fixes](#details) and [known issues](#knownissues) for Komodo IDE and Komodo Edit.
 
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
+
+### 10.0.1
+
+ [See below](#details)
 
 ### 10.0
 
@@ -128,6 +132,60 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 10.0.1
+
+*   Breadcrumbs: Remote breadcrumbs not showing file listings - fixes [#1690](https://github.com/Komodo/KomodoEdit/issues/1690).
+*   CodeIntel: Limit symbol browser to files residing in your project / places root - fixes [#1457](https://github.com/Komodo/KomodoEdit/issues/1457).
+*   Commando: Don't break on remote folders - fixes [#1657](https://github.com/Komodo/KomodoEdit/issues/1657).
+*   Commands: Improved "cmd_movetab" description - fixes [#1413](https://github.com/Komodo/KomodoEdit/issues/1413).
+*   Debugging: NodeJS: Remove leftover Chrome interpreter parameters from a JS debug configuration after switching to NodeJS - fixes [#1456](https://github.com/Komodo/KomodoEdit/issues/1456).
+*   Debugging: Run without debugging key binding skips settings dialog - fixes [#1624](https://github.com/Komodo/KomodoEdit/issues/1624).
+*   Editor: Block uncomment error on blank lines - fixes [#1509](https://github.com/Komodo/KomodoEdit/issues/1509).
+*   Editor: Color hyperlinks not clickable - fixes [#1335](https://github.com/Komodo/KomodoEdit/issues/1335).
+*   Editor: Remove source code pro from default fonts (incompatible with Cyrillic characters) - fixes [#1484](https://github.com/Komodo/KomodoEdit/issues/1484).
+*   Find: Do not show "include" field for anything other than "in files" searches - fixes [#858](https://github.com/Komodo/KomodoEdit/issues/858).
+*   Find: Skip badly encoded filenames in "find in files" rather than erroring out - fixes [#1602](https://github.com/Komodo/KomodoEdit/issues/1602).
+*   Formatters: Fail gracefully, fixes custom formatters not working.
+*   Help: Removed outdated menu items - fixes [#1512](https://github.com/Komodo/KomodoEdit/issues/1512).
+*   Icons: Don't render two reload icons.
+*   Icons: Increase padding on pref category icons - fixes [#1486](https://github.com/Komodo/KomodoEdit/issues/1486).
+*   Icons: Missing runcmd icon. Fixes [#1586](https://github.com/Komodo/KomodoEdit/issues/1586).
+*   Indentation: Honor 'useTabs' setting if 'allow override' is unchecked - fixes [#1518](https://github.com/Komodo/KomodoEdit/issues/1518).
+*   Keybindings: Changed find next and debugging key bindings for OSX to be more user friendly and consistent - fixes [#1665](https://github.com/Komodo/KomodoEdit/issues/1665).
+*   Keybindings: Vi: Line up/down should navigate over folded code - fixes [#1549](https://github.com/Komodo/KomodoEdit/issues/1549).
+*   Linter: Removed "builtin" options for Less and SCSS linting options (note: you can still lint these languages - no functional change) - fixes [#1607](https://github.com/Komodo/KomodoEdit/issues/1607).
+*   PHP 7: Updated stdlib catalog to include common constants and array members - fixes [#1633](https://github.com/Komodo/KomodoEdit/issues/1633).
+*   Places: Fail gracefully when failing on file - fixes [#1510](https://github.com/Komodo/KomodoEdit/issues/1510).
+*   Prefs: Prefs failing to load properly when restoring sub-category - fixes [#1598](https://github.com/Komodo/KomodoEdit/issues/1598).
+*   Prefs: Re-enable the "environment" button - fixes [#1511](https://github.com/Komodo/KomodoEdit/issues/1511).
+*   SCC: Always sort by date descending - fixes [#1527](https://github.com/Komodo/KomodoEdit/issues/1527).
+*   SCC: Git not shown on checkout dialog - fixes [#1468](https://github.com/Komodo/KomodoEdit/issues/1468).
+*   SCC: History: Added the revision column again - fixes [#1534](https://github.com/Komodo/KomodoEdit/issues/1534).
+*   SCC: New files not being committed - fixes [#1481](https://github.com/Komodo/KomodoEdit/issues/1481).
+*   SDK: Editor: Add getWindowPosition method.
+*   Startup Wizard: Skip schemes that fail to load - fixes [#1538](https://github.com/Komodo/KomodoEdit/issues/1538).
+*   UI: About dialog overlapping contributor list - fixes [#1632](https://github.com/Komodo/KomodoEdit/issues/1632).
+*   UI: Bottom pane hiding toolbar if too small - fixes [#1540](https://github.com/Komodo/KomodoEdit/issues/1540).
+*   UI: Change default font-size to 1rem (up from 0.9rem).
+*   UI: Environment variable editing window too small - fixes [#1407](https://github.com/Komodo/KomodoEdit/issues/1407).
+*   UI: Force minimap width (prevents it getting squashed) - fixes [#1529](https://github.com/Komodo/KomodoEdit/issues/1529).
+*   UI: Inconsistencies in the cupertino color scheme - fixes [#1438](https://github.com/Komodo/KomodoEdit/issues/1438).
+*   UI: Limit places icons size to 14px - fixes [#1404](https://github.com/Komodo/KomodoEdit/issues/1404).
+*   UI: Menubar cut off when window is maximized on Windows - fixes [#1461](https://github.com/Komodo/KomodoEdit/issues/1461).
+*   UI: Minimap border color.
+*   UI: Missing buttons in pref dialogs - fixes [#1506](https://github.com/Komodo/KomodoEdit/issues/1506).
+*   UI: Missing findresults copy icon - fixes [#1503](https://github.com/Komodo/KomodoEdit/issues/1503).
+*   UI: missing reload button in browser preview - fixes [#1603](https://github.com/Komodo/KomodoEdit/issues/1603).
+*   UI: Offset editor tooltips so they don't overlap and flicker - fixes [#1477](https://github.com/Komodo/KomodoEdit/issues/1477).
+*   UI: Publishing icons overlapping text - fixes [#1495](https://github.com/Komodo/KomodoEdit/issues/1495).
+*   UI: Reduce size of file status icons (collab, publishing, readonly).
+*   UI: Side toolbar doesn't stay hidden after restart - fixes [#1482](https://github.com/Komodo/KomodoEdit/issues/1482).
+*   UI: Statusbar position indicators causing UI to jump - fixes [#1536](https://github.com/Komodo/KomodoEdit/issues/1536).
+*   UI: Styling of check configuration window - fixes [#716](https://github.com/Komodo/KomodoEdit/issues/716).
+*   UX: Don't propegate events on dynamic toolbar buttons - fixes [#1563](https://github.com/Komodo/KomodoEdit/issues/1563).
+*   Other: Allow stop-restart during addon uninstall / install - fixes [#1594](https://github.com/Komodo/KomodoEdit/issues/1594).
+*   Other: Multi-window errors/exceptions - fixes [#1686](https://github.com/Komodo/KomodoEdit/issues/1686).
 
 ### 10.0.0
 
