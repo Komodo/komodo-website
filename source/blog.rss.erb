@@ -15,10 +15,10 @@ layout: false
         <% posts.first(15).each do |id,post| %>
             <% id = "/blog/" + post.slug.sub(/^(\d{4}-\d{2})-/,'\1/') %>
             <item>
-                <title><%= post.title %></title>
+                <title><%=h post.title %></title>
                 <link><%= site_url + id %></link>
                 <pubDate><%= DateTime.parse(post.date.to_s()).rfc2822() %></pubDate>
-                <description><%= summary(post.body) %></description>
+                <description><%=h summary(post.body) %></description>
                 <guid><%= site_url + id %></guid>
             </item>
     <% end %>
