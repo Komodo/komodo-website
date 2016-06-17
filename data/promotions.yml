@@ -1,5 +1,5 @@
 splash: 
-  enabled: true
+  enabled: false
   description: "Komodo 9.3 Released<br/>See What's New"
   tooltip: ""
   link: "/features"
@@ -16,14 +16,14 @@ pricing:
   tooltip: ""
 sale:
   prostudio: false
-  komodo: true
-  fivepack: true
+  komodo: false
+  fivepack: false
 prices:
-  prostudio: 495
+  prostudio: 
   komodopersonal:
-  komodo: 245
-  komodous: 344
-  fivepack: 1425
+  komodo: 
+  komodous: 
+  fivepack: 
 global:
   enabled: false
   description: To celebrate the launch of Komodo 9, enjoy great savings on new licenses and upgrades through April 30th!
