@@ -154,7 +154,7 @@
 <li>To get your feedback on how these improvements can be made better</li>
 </ol>
 
-<h3>1. Chrome Remote Debugging</h3>
+<h3><a name="chrome_remote_debugging">1. Chrome Remote Debugging</a></h3>
 
 <p>This is a big one. You can now debug the Javascript in your running web application in real time, in Komodo. There is no need to switch applications when you&#39;ve narrowed down the issue in the Chrome Developer tools, because you&#39;re already looking at the code in your editor.</p>
 
@@ -167,7 +167,7 @@
 
 <p>For more detail, you can also watch a short screencast showcasing <a href="http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place">Chrome remote debugging</a>.</p>
 
-<h3>2. Dynamic Tool bar</h3>
+<h3><a name="dynamic_toolbar">2. Dynamic Tool bar</a></h3>
 
 <p>In an effort to give you what you need when you need it (and vice versa) we&#39;ve added a new side bar.  I can hear some of you groan, &quot;stop using my screen real estate!&quot; but bare with me!  At the top of this toolbar we have the dynamic buttons for various tools within and external to Komodo. These buttons detect when a file or project is relevant to the tools it provides and only then shows itself.</p>
 
@@ -196,24 +196,24 @@
 
 <p>Tools you need, only when you need them (I&#39;m quitting my dev job and switching to writing marketing slogans after this).</p>
 
-<h3>3. Color Scheme Editor</h3>
+<h3><a name="color_scheme_editor">3. Color Scheme Editor</a></h3>
 
 <p>In Komodo X there is a VERY cool new tool. A totally redesigned Color Scheme editor. Not only does it facilitate you changing the editor syntax coloring but also allows you to configure every other color that appears in Komodo and I
 mean EVERYTHING. File version control status, error/warning/info message coloring, button color, etc. Even people like me, who can barely be bothered to design a new player on Wii, will appreciate the level of detail you can manipulate. I&#39;ve added warming orangie-yellow to the default color scheme to give it a hint of sunshine and nuts (I now have no idea what I&#39;m talking about but doesn&#39;t that sound nice?). Interesting insider note: The orangie-yellow was included in one of the original iterations of the new default color scheme but was removed just before release. #exciting </p>
 
 <p>If you create a new color scheme that you&#39;re proud of please let us know and share it on <a href="http://komodoide.com/packages/schemes/">komodoide.com</a> so other users can enjoy it and potentially iterate on it.</p>
 
-<h3>4. Version Control Widget</h3>
+<h3><a name="version_control">4. Version Control Widget</a></h3>
 
 <p>A new tool that integrates so seamlessly into the Komodo UI that you might have missed it is the new Version Control Widget in the bottom pane. This widget was designed with the same previously stated design mindset: What you need, when you need it.</p>
 
 <p>What do you typically need from you version control tool?  Commit your code then see who broke it up stream (because it certainly wasn&#39;t me!).  The VCW gives you quick access to Project and files commit history as well as a very fast commit dialog that allows you to &quot;add&quot; (whatever that means for your particular VC system) only the files you want to commit (with a single file diff displayed beside it), write a commit message and done.  These changes also came with the new dynamic version control button in the dynamic button toolbar which provides contextual commands when they are relevant.</p>
 
-<h3>5. Familiar Key Bindings</h3>
+<h3><a name="keybindings">5. Familiar Key Bindings</a></h3>
 
 <p>So... you&#39;re sick of JetBrains or Sublime and you want to use a new, fast, useful editor.  Well we have you covered.  We added four new key binding sets to make the migration from your old editor easier.  You can choose these from the First Start Wizard or from the Preferences.  While we&#39;re here; you&#39;ll also notice that the default Komodo bindings changed.  If this angers you beyond measure then you can easily switch to the <em>Legacy</em> set in your preferences.</p>
 
-<h3>6. UI SDK</h3>
+<h3><a name="ui_sdk">6. UI SDK</a></h3>
 
 <p>In Komodo X we&#39;ve extended our SDKs to include tools for building Komodo UI elements.  You would never know about this unless you read these words or you are active in our forums. The entire First Start Wizard is written using the
 new UI SDK so possibilities for Userscript and Addon developers are endless and EASY.</p>
@@ -275,7 +275,7 @@ p.open({
        });
 </code></pre>
 
-<h3>7. Classic Mode</h3>
+<h3><a name="classic_mode">7. Classic Mode</a></h3>
 
 <p>We realized that with such drastic changes to how Komodo looks that some users simply would not have it.  A quik tip to getting back to the Classics: </p>
 
@@ -283,25 +283,25 @@ p.open({
 
 <p>This will bring back a classic layout to the Komodo UI.</p>
 
-<h3>8. Project Wide Symbol Browser</h3>
+<h3><a name="symbol_browser">8. Project Wide Symbol Browser</a></h3>
 
 <p>If you are a veteran Komodo user then you&#39;ve likely used the Sections List in Komodo to quickly access variables and functions in your file.  In Komodo 9 this was added to a Commando scope.  In Komodo 10 we stepped it up and made it project wide.  Now you can simply press <em>Ctrl + Shift + O</em>, start typing your variable or functions name (fuzzily), select it when it appears and you&#39;re golden.  You can always use Go-To-Definition as well which has been around since the beginning but we like to give you options ;)</p>
 
 <p><strong>The next 3 are not Komodo X specific but have been added since the last blog post of this type and are REALLY useful</strong></p>
 
-<h3>9. Run-In-Line</h3>
+<h3><a name="run_in_line">9. Run-In-Line</a></h3>
 
 <p>This feature allows you to run any piece of code or file live to see what it will do.  In previous versions you would need to copy the relevant code and paste it into an interactive shell.  Now simply select the code you’re interested, Press <em>Ctrl + B</em> (as of Komodo X) or from the <em>Command scope</em> in Commando type “run in line” and press enter.  This will open a panel over the editor and display the output of the selected code.</p>
 
 <p><img src="/assets/images/blog/2016-06/run-in-line.gif"></p>
 
-<h3>10. Custom Workspaces</h3>
+<h3><a name="custom_workspaces">10. Custom Workspaces</a></h3>
 
 <p>Komodo has always automatically saved your current workspace (open files, open/closed panels, open project(s), open windows and their position, etc.) but there has been a relatively recent addition to this feature that allows you to save custom workspaces.  Selecting File &gt; Save Workspace will save the state of every open window (all the aspects mentioned above) and allow you to restore that workspace easily using File &gt; Open &gt; Workspace.</p>
 
 <p><img src="/assets/images/blog/2016-06/workspace.gif"></p>
 
-<h3>11. Partial move and Partial Select</h3>
+<h3><a name="partial_select_move_cursor">11. Partial move and Partial Select</a></h3>
 
 <p>This isn’t new at all... I don’t think very many people know about this one though.  I found it invaluable once I discovered it. Coming into this project 7 years after it started in 2004, I’m constantly finding new features.  In Komodo 10 you can use <em>Ctrl + Alt + Left/Right</em> to move through a string PARTway.  For example, in camalCase the cursor will move to the next capital letter for example.  Or if you use under_scores in your variables, the cursor will jump to the next underscore.  To select just add <em>Shift</em> to the same key sequence.</p>
 
