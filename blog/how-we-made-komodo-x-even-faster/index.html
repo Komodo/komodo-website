@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <!-- Standard Meta -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Site Properities -->
+        <title>How We Made Komodo X Even Faster | Komodo IDE</title>
+        <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
+        
+        <!-- Social Media Properties -->
+        <meta property="og:title" content="How We Made Komodo X Even Faster" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
+        
+        
+        <meta property="og:image" content="http://images.contentful.com/bj1g69m2935w/5hZy7M0xok8cowOouYwUw4/75f256e01d2baaf62bff09c5fb1b0760/python-before.png" />
+
+        <link rel="icon" href="/assets/images/favicon.ico">
+
+        <!-- Styles -->
+        <link href="/assets/stylesheets/style.css" rel="stylesheet" />
+
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700|Kalam' rel='stylesheet' type='text/css'>
+        
+    </head>
+    <body class="">
+
+        <noscript>
+            <div id="noscript-warning">
+                <h2>JavaScript Recommended</h2>
+                <p>
+                    Some of the functionality on this website relies on JavaScript
+                    to be enabled. Your experience will unfortunately be negatively
+                    affected if you do not use JavaScript.
+                </p>
+            </div>
+        </noscript>
+
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
+        
+        <div id="blackout"></div>
+        <div id="callouts"></div>
+
+        <!-- Main Container -->
+        <div id="container" class="container-blog-entry">
+            <a name="top"></a>
+            <header>
+    <div class="outer">
+        <div class="inner">
+            <div class="nav-wrap">
+                
+                
+                <span class="collapser button primary">
+                    <i class="icon icon-bars fa fa-bars"></i>
+                </span>
+                <!-- Navigation -->
+                <nav>
+                    <ul class="unstyled">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/' title='Community' target='_self'>
+<span class='link-name'>Community</span>
+<i class='icon icon-sort-down'></i>
+</a>
+<ul class="">
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/events' title='Events' target='_self'>
+<span class='link-name'>Events</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/screencasts' title='Screencasts' target='_self'>
+<span class='link-name'>Screencasts</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/packages/submit-instructions/' title='Contribute' target='_self'>
+<span class='link-name'>Contribute</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href='http://komodoide.com/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+</ul>
+                </nav>
+            </div>
+
+            <!-- Logo -->
+            <a href="http://komodoide.com"><figure id="header-logo"></figure></a>
+        </div>
+    </div>
+</header>
+
+            <div id="content" class="document-blog-entry
+                         sidebar
+                         
+                         blog blog_how-we-made-komodo-x-even-faster blog_how-we-made-komodo-x-even-faster_index">
+    <section role="main">
+        <article class="normalize">
+            <h1>How We Made Komodo X Even Faster</h1>
+            <div class="clearfix"></div>
+            <div class="content">
+                <p>Komodo has always been a very fast IDE. So much so that combined with its minimalistic UI many users tend to confuse Komodo IDE with an editor. Of course Komodo is an editor too, but to call it just an editor would be doing it a disservice.</p>
+
+<p>But as fast as Komodo has always been, it inevitably got a bit slower over the years. For example typing has always been instant, but after using Komodo for a whole day you could start to notice some delay. Similarly file opening, switching and closing was snappy and fast, until you got to the point where you were working with 20+ files, then it would start to slow down a little. And applying color schemes could take anywhere from a few seconds to a full minute depending on how many files you had open.</p>
+
+<p>All of these performance issues were annoying users and Komodo developers alike, and with Komodo X we decided to dedicate a significant amount of time to hunt them down. </p>
+
+<h2>Finding the Bottlenecks</h2>
+
+<p>The first step in speeding up our code would be to analyze the code and find out where the performance is bottlenecked. This is easier said than done; it&#39;s not like code has some sort of built-in performance analyzer that shows you exactly what it is doing and how long it&#39;s taking to do it...except that it does! This is where code profiling comes into play, something Komodo itself has various levels of support for (both in creating profiling reports and analyzing them). But Komodo has so many moving parts it becomes quite a challenge. Not only does it have JavaScript code running on the frontend, it also has Python code running on the backend, and this Python code runs on different threads and in some cases even in different processes. Making sense of all this is a challenge.</p>
+
+<h2>Profiling Javascript</h2>
+
+<p>Komodo is based on Mozilla, which luckily has a large amount of developer tools. One of these tools is Cleopatra, which is a web based tool that will analyze profiling reports generated by Mozilla&#39;s profiler tool.</p>
+
+<p>You might be wondering - why couldn’t I use Komodo&#39;s built-in profiler tool? Well unfortunately Mozilla decided to roll their own format for the profiler reports, which Komodo does not support. Komodo&#39;s profiler tool only supports standardized formats such as cachegrind.</p>
+
+<p>Before I could start analyzing the profiling report I would have to generate it. For this I could use <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Profiling_with_the_Built-in_Profiler#Profiling_JS_benchmark_(xpcshell)">@mozilla.org/tools/profiler</a>, which is Mozilla&#39;s SDK for accessing the profiler. Unfortunately this SDK is not well documented nor is it very intuitive to use, so I wrapped it with our own <a href="https://github.com/Komodo/KomodoIDE/blob/master/src/chrome/komodo/content/sdk/profiler.js">ko/profiler</a> SDK. </p>
+
+<p>The steps to actually profile some code were fairly simple, and boil down to the following:</p>
+
+<pre><code class="prettyprint lang-JavaScript">// Start Profiler
+var profiler = require(&quot;ko/profiler&quot;); 
+profiler.enable(); 
+profiler.start(); 
+
+// Perform action that we want to profile
+ko.open.URI(&#39;file:///home/nathan/Projects/komodo-dev/Construct&#39;); 
+
+// Save profiler result and end it
+setTimeout(function() { 
+  require(&quot;ko/profiler&quot;).save(); 
+  profiler.stop(); 
+}, 2000);
+</code></pre>
+
+<p>Ending the profiler is on a timeout because the code in question might fire some additional events, as it does in this case. Of course timeouts are a big red flag in production code, but for testing/profiling it is completely fine.</p>
+
+<p>The code you see above would allow me to easily profile Komodo file opening, and see how my changes affected the bottom line.</p>
+
+<p>When I ran this code I could run down the chain of commands and find out what command in particular was causing a slowdown. In this case I found that the call <code class="prettyprint">applyColorScheme()</code> in scintilla.xml (a XUL binding) was running unreasonably slow. </p>
+
+<p><a href="/assets/images/blog/performance-blog/cleopatra-before.png" class="lightbox" title="JavaScript Profiler Before Improvements">
+<img src="/assets/images/blog/performance-blog/cleopatra-before.png">
+</a></p>
+
+<p>Upon inspection of that code I found that the code that was running slow was in Python. So now let’s have a look at profiling Python.</p>
+
+<h2>Profiling Python</h2>
+
+<p>Profiling Python is a little bit more interesting, mainly because now I get to use Komodo itself. For this I used <a href="https://docs.python.org/2/library/profile.html">cProfile</a>, a python library built for this exact purpose. Using it is simple and straightforward:</p>
+
+<pre><code class="prettyprint lang-python">import cProfile
+pr = cProfile.Profile()
+pr.enable()
+# MY CODE
+pr.disable()
+pr.dump_stats(&#39;/tmp/profiledump&#39;)
+</code></pre>
+
+<p>This would sample anything between enable() and disable(). Using this code I narrowed down the issue that was causing <code class="prettyprint">applyColorScheme()</code> to be far slower than it needed to be. </p>
+
+<p><a href="/assets/images/blog/performance-blog/python-before.png" class="lightbox" title="Python Profiler Before Improvements">
+<img src="/assets/images/blog/performance-blog/python-before.png">
+</a></p>
+
+<p>I found that Komodo was polling available system fonts for every buffer that was opened / had a color scheme applied. Polling system fonts is sadly a slow process, but a simple fix was to simply cache the results and voila - file opening and color scheme switching is now as snappy as can be.</p>
+
+<p><a href="/assets/images/blog/performance-blog/python-after.png" class="lightbox" title="Python Profiler After Improvements">
+<img src="/assets/images/blog/performance-blog/python-after.png">
+</a></p>
+
+<p>And running the profiler again in JS also reflected the improved file opening performance:</p>
+
+<p><a href="/assets/images/blog/performance-blog/cleopatra-after.png" class="lightbox" title="JavaScript Profiler After Improvements">
+<img src="/assets/images/blog/performance-blog/cleopatra-after.png">
+</a></p>
+
+<h2>Fixing a Long Standing Memory Leak</h2>
+
+<p>Those of you who have used Komodo for a number of years have probably noticed that Komodo starts to use more and more memory the longer you have it running. Unfortunately, there was a memory leak, though it wasn&#39;t a very serious one.  The leak increased Komodo&#39;s memory usage slightly each time you opened a file and it&#39;s impact was really only felt if you opened many files or used Komodo for a long time. Many developers got into the habit of restarting Komodo once per day. Unfortunately as simple as it was to reproduce this bug, it wasn&#39;t nearly as simple to find its cause. </p>
+
+<p>To find the cause I started by looking at different tools we could use to profile memory usage. Python has various tools available to it for this task, but unfortunately because of PyXPCOM being extremely complex many of these tools didn&#39;t make the cut as they quite simply failed to analyze our Python code, leading to exceptions of various kinds. After much digging I finally landed on <a href="https://pypi.python.org/pypi/meliae">Meliae</a>, which luckily was able to inspect Komodo&#39;s Python code just fine. However being able to inspect our running code is just one thing, the other thing is being able to analyze it. For this I landed on a tool called <a href="http://www.vrplumber.com/programming/runsnakerun/">RunSnakeRun</a>, which has a component called &quot;runsnakemem&quot; that is used for analyzing memory usage. </p>
+
+<p>Having my tools in place I fired up Komodo, started the memory profiler, opened a bunch of files and then closed them, then finished the profiler and parsed it into &quot;runsnakemem&quot;. The results were very telling:</p>
+
+<p><a href="/assets/images/blog/performance-blog/snakemem.png" class="lightbox" title="Memory Profiler showing the leak">
+<img src="/assets/images/blog/performance-blog/snakemem.png">
+</a></p>
+
+<p>Why was Komodo holding on to codeintel buffers for file buffers that were no longer open? It could be a cache, but given the size of them that would have been overkill. Most likely this was our memory leak. However, while it gave me more context it still didn&#39;t give me the cause of the leak. Unfortunately, there was no simple tool that could point me to the exact location. All I could do was use all the variables at my disposal to narrow down the exact cause of the leak. After much digging I finally narrowed it down to <a href="https://github.com/Komodo/KomodoEdit/blob/9.3.x/src/codeintel/src/komodo/koCodeIntel.py#L268">this line</a>. Komodo is adding the codeintel buffer to memory, but after searching around for a bit I could not find any reference whatsoever to it being removed again. It seems it was holding on to them for caching purposes, but a proper cache needs to clean itself every once in a while, which just wasn&#39;t happening.</p>
+
+<p>The fix was simple, the code in question already had all the logic in place to rebuild the cache if the entry didn&#39;t exist. And the performance gains from the cache itself were very negligible. So I simply <a href="https://github.com/Komodo/KomodoEdit/commit/c4bd7c15a92523129a437d67a1a173522378da12">hooked it up to remove the cached entry whenever the file was closed</a>. After this I fired up my Komodo build and opened a couple dozen files and closed them again, all the while observing Komodo&#39;s memory usage. I was happy to observe that this indeed solved the memory leak.</p>
+
+<p>I&#39;ve been using Komodo X for months now and am happy to report that the memory leak has not resurfaced and I can keep Komodo running for as long as I like.</p>
+
+<h2>The Never Ending Battle</h2>
+
+<p>Fixing bugs, improving performance, enhancing UX .. these things are never ending in software development. We have made significant improvements in Komodo X, and received a ton of positive feedback on how snappy Komodo X feels. But we&#39;re never done, we will continue to focus our efforts on these areas for future releases. We are dedicated not just to releasing new awesome features, but also to keeping Komodo stable, snappy and easy to use.</p>
+
+            </div>
+            
+            <hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+        var disqus_shortname = 'komodoide';
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        </article>
+    </section>
+    <aside class="sidebar-blog normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+            <a href="/packages/submit-instructions/#pane-blogs" class="button big submit-content">
+    Submit Content
+</a>
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button " href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
+    </div>
+</div>
+<div class="info">
+    <h1>Blog Info</h1>
+
+        <img src="//images.contentful.com/bj1g69m2935w/5hTDHHCCtGiW48aU8EKmqo/16ebc63a407a1f3ad30c109aa06415a6/NathanRijksen.jpg" alt="Nathan Rijksen">
+
+    <p>
+        <strong>By:</strong>
+        <a href="/authors#NathanRijksen">Nathan Rijksen</a>
+    </p>
+
+    <p>
+        <strong>Tags: </strong>
+            <a href="/blog/tagged/performance">performance</a>
+            <a href="/blog/tagged/profiling">profiling</a>
+            <a href="/blog/tagged/enhancements">enhancements</a>
+            <a href="/blog/tagged/komodo">komodo</a>
+            <a href="/blog/tagged/improvements">improvements</a>
+            <a href="/blog/tagged/mozprofiler">mozprofiler</a>
+            <a href="/blog/tagged/koprofiler">koprofiler</a>
+            <a href="/blog/tagged/cprofile">cprofile</a>
+            <a href="/blog/tagged/meliae">meliae</a>
+            <a href="/blog/tagged/runsnakerun">runsnakerun</a>
+    </p>
+    <p><strong>Date Posted: </strong>Jun 23, 2016</p>
+</div>
+<div class="clearfix"></div>
+<div class="blogs">
+    <h1>Recent Blogs</h1>
+    <ul>
+        <li>
+            <a href="/blog/how-we-made-komodo-x-even-faster">How We Made Komodo X Even Faster</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-10-0-1-released">Komodo 10.0.1 Released</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-x-webinar-questions-and-answers">Komodo X Webinar: Questions and Answers</a>
+        </li>
+        <li>
+            <a href="/blog/top-11-tips-and-tricks-for-komodo-x">Top 11 Tips and Tricks for Komodo X</a>
+        </li>
+        <li>
+            <a href="/blog/5-reasons-to-use-an-ide-instead-of-an-editor">5 Reasons to use an IDE Instead of an Editor</a>
+        </li>
+        <li>
+            <a href="/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place">Chrome Debugging in Komodo X, Code and Debug in One Place</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-x-released">Komodo X Released - It's 10X Better</a>
+        </li>
+        <li>
+            <a href="/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50">Help Us Test Komodo IDE 10 and We'll Give You $50</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-10-alpha-pre-release-now-available">Komodo 10 Alpha Pre-release Now Available</a>
+        </li>
+        <li>
+            <a href="/blog/komodo-toolbox">Komodo Toolbox</a>
+        </li>
+    </ul>
+</div>
+
+<div class="screencasts">
+    <h1>Recent Screencasts</h1>
+    <a href="/screencasts/quick-bookmarks/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/547032316_640.jpg')"></figure>
+        <span>Quick Bookmarks</span>
+    </a>
+    <a href="/screencasts/collaboration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/537777738_640.jpg')"></figure>
+        <span>Collaboration - Team Editing</span>
+    </a>
+    <a href="/screencasts/komodo-packages/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/531680682_640.jpg')"></figure>
+        <span>Komodo Packages</span>
+    </a>
+    <a href="/screencasts/komodo-9-2-whats-new/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/529308211_640.jpg')"></figure>
+        <span>Komodo 9.2 - What's New?</span>
+    </a>
+    <a href="/screencasts/commando-shell-scope/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/523290537_640.jpg')"></figure>
+        <span>Commando Shell Scope</span>
+    </a>
+    <a href="/screencasts/package-manager-integration/">
+        <i class="icon icon-youtube-play"></i>
+        <figure style="background-image: url('http://i.vimeocdn.com/video/521575176_640.jpg')"></figure>
+        <span>Package Manager Integration</span>
+    </a>
+</div>
+
+        </div>
+    </aside>
+</div>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54f64104503ca631" async="async"></script>
+            <div id="footer_push"></div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="columns">
+                <div class="navigation">
+                    <h3>Navigation</h3>
+                    <ul class="">
+<li>
+<a href='http://komodoide.com' title='Home' target='_self'>
+<span class='link-name'>Home</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/features' title='Features' target='_self'>
+<span class='link-name'>Features</span>
+</a>
+</li>
+<li>
+<a href='/pricing' title='Buy & Upgrade' target='_self'>
+<span class='link-name'>Buy & Upgrade</span>
+</a>
+</li>
+<li class="has-sub">
+<a href='/download' title='Try' target='_self'>
+<span class='link-name'>Try</span>
+</a>
+<ul class="">
+<li>
+<a href='http://downloads.activestate.com/Komodo/' title='Archive' target='_self'>
+<span class='link-name'>Archive</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://komodoide.com/customize' title='Customize' target='_self'>
+<span class='link-name'>Customize</span>
+</a>
+<ul class="">
+<li>
+<a href='/packages' title='Packages' target='_self'>
+<span class='link-name'>Packages</span>
+</a>
+</li>
+<li>
+<a href='/customize' title='Get Involved' target='_self'>
+<span class='link-name'>Get Involved</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="has-sub">
+<a href='http://forum.komodoide.com/category/support' title='Support' target='_self'>
+<span class='link-name'>Support</span>
+</a>
+<ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues' title='Report Bug' target='_blank'>
+<span class='link-name'>Report Bug</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+                </div>
+                <div class="support">
+                    <h3>Support</h3>
+                    <ul class="">
+<li>
+<a href='http://docs.komodoide.com/' title='Documentation' target='_self'>
+<span class='link-name'>Documentation</span>
+</a>
+</li>
+<li>
+<a href='http://docs.komodoide.com/SDK/api/commonjs' title='API Reference' target='_self'>
+<span class='link-name'>API Reference</span>
+</a>
+</li>
+<li>
+<a href='#' title='&nbsp;' target='_self'>
+<span class='link-name'>&nbsp;</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo/KomodoEdit/issues/new' title='Report a Bug' target='_blank'>
+<span class='link-name'>Report a Bug</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Ask the Community' target='_self'>
+<span class='link-name'>Ask the Community</span>
+</a>
+</li>
+</ul>
+
+                    <h3>ActiveState</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company' title='About' target='_blank'>
+<span class='link-name'>About</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact' target='_blank'>
+<span class='link-name'>Contact</span>
+</a>
+</li>
+<li>
+<a href='http://www.activestate.com/company/careers' title='Careers' target='_blank'>
+<span class='link-name'>Careers</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="communicate">
+                    <ul class="social">
+<li>
+<a href='http://twitter.com/KomodoIDE' title='Twitter' target='_blank'>
+<img src='/assets/images/icons/sm/twitter-24x24.png' alt='Twitter'/>
+<span class='link-name'>Twitter</span>
+</a>
+</li>
+<li>
+<a href='https://www.facebook.com/komodoide' title='Facebook' target='_blank'>
+<img src='/assets/images/icons/sm/facebook-24x24.png' alt='Facebook'/>
+<span class='link-name'>Facebook</span>
+</a>
+</li>
+<li>
+<a href='https://plus.google.com/u/0/115431120071336108525/posts' title='Google+' target='_blank'>
+<img src='/assets/images/icons/sm/google+-24x24.png' alt='Google+'/>
+<span class='link-name'>Google+</span>
+</a>
+</li>
+<li>
+<a href='https://vimeo.com/channels/komodo' title='Vimeo' target='_blank'>
+<img src='/assets/images/icons/sm/vimeo-24x24.png' alt='Vimeo'/>
+<span class='link-name'>Vimeo</span>
+</a>
+</li>
+<li>
+<a href='https://github.com/Komodo' title='GitHub' target='_blank'>
+<img src='/assets/images/icons/sm/github-24x24.png' alt='GitHub'/>
+<span class='link-name'>GitHub</span>
+</a>
+</li>
+<li>
+<a href='http://stackoverflow.com/questions/tagged/komodo' title='StackOverflow' target='_blank'>
+<img src='/assets/images/icons/sm/stackoverflow-24x24.png' alt='StackOverflow'/>
+<span class='link-name'>StackOverflow</span>
+</a>
+</li>
+<li>
+<a href='/blog.rss' title='RSS Feed' target='_blank'>
+<img src='/assets/images/icons/sm/feed-24x24.png' alt='RSS Feed'/>
+<span class='link-name'>RSS Feed</span>
+</a>
+</li>
+</ul>
+
+                    <p>&nbsp;</p>
+                    <a href="https://twitter.com/KomodoIDE" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @KomodoIDE</a>
+
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="" data-dnt="true">Tweet</a>
+
+                    <p>&nbsp;</p>
+
+                    <script>
+                        document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
+                    </script>
+
+                    <h3>Communicate</h3>
+                    <ul class="">
+<li>
+<a href='http://www.activestate.com/company/contact-us' title='Contact Us' target='_self'>
+<span class='link-name'>Contact Us</span>
+</a>
+</li>
+<li>
+<a href='http://komodoide.com/blog' title='Blog' target='_self'>
+<span class='link-name'>Blog</span>
+</a>
+</li>
+<li>
+<a href='http://forum.komodoide.com/' title='Forums' target='_self'>
+<span class='link-name'>Forums</span>
+</a>
+</li>
+<li>
+<a href='http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor' title='IRC' target='_blank'>
+<span class='link-name'>IRC</span>
+</a>
+</li>
+<li>
+<a href='http://code.activestate.com/lists#ActiveState' title='Mailing Lists' target='_self'>
+<span class='link-name'>Mailing Lists</span>
+</a>
+</li>
+</ul>
+                </div>
+                <div class="newsletter">
+                    <!--
+                    <form>
+                        <h3>Newsletter Sign Up</h3>
+                        <input type="text" placeholder="Enter your E-Mail address"/>
+                    </form>
+                    -->
+
+                    <p>
+                        ActiveState Software Inc.
+                        Suite 1000-1177 West Hastings St.,
+                        Vancouver, BC,
+                        V6E 2K3, Canada
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        General Enquiries: 778.786.1100 <br>
+                        Fax: 778.786.1133 <br>
+                        Sales: 1.866.631.4581
+                    </p>
+                    <p>&nbsp;</p>
+                    <p class="copytrade">
+                        © 2016 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>
+                        <a href="/privacy">Privacy Policy</a> |
+                        <a href="http://www.activestate.com/komodo-ide/license-agreement">License Terms</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Analytics -->
+            <!-- Google Analytics -->
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+              
+              ga('create', 'UA-47685083-1', 'auto');
+              ga('require', 'linkid', 'linkid.js');
+              ga('send', 'pageview');
+              
+              ga('create', 'UA-20072-24', 'auto', {'allowLinker': true, name: 'AS'});
+              ga('AS.require', 'linker');
+              ga('AS.require', 'linkid', 'linkid.js');
+              ga('AS.linker:autoLink', ['activestate.com']);
+              ga('AS.send', 'pageview');
+            </script>
+    
+            <!-- Adwords -->
+            <script type="text/javascript">
+            /* <![CDATA[ */
+            var google_conversion_id = 1071420929;
+            var google_custom_params = window.google_tag_params;
+            var google_remarketing_only = true;
+            /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+            <div style="display:inline;">
+            <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1071420929/?value=0&amp;guid=ON&amp;script=0"/>
+            </div>
+            </noscript>
+    
+            <!-- Clicky -->
+            <script type="text/javascript">
+            var clicky_site_ids = clicky_site_ids || [];
+            clicky_site_ids.push(100751147);
+            (function() {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.async = true;
+              s.src = '//static.getclicky.com/js';
+              ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+            })();
+            </script>
+            <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100751147ns.gif" /></p></noscript>
+
+
+        <!-- Marketo -->
+        <script type="text/javascript">
+        (function() {
+          var didInit = false;
+          function initMunchkin() {
+            if(didInit === false) {
+              didInit = true;
+              Munchkin.init('894-ACS-622');
+            }
+          }
+          var s = document.createElement('script');
+          s.type = 'text/javascript';
+          s.async = true;
+          s.src = '//munchkin.marketo.net/munchkin.js';
+          s.onreadystatechange = function() {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              initMunchkin();
+            }
+          };
+          s.onload = initMunchkin;
+          document.getElementsByTagName('head')[0].appendChild(s);
+        })();
+        </script>
+
+        <!-- Scripts -->
+        <script>
+        //<![CDATA[
+            window.twttr = (function (d,s,id) {
+            var t, js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+            js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+            return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+            }(document, "script", "twitter-wjs"));
+            twttr.ready(function (twttr) {
+                twttr.events.bind('tweet', function (event) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: event.target.baseURI,
+                        network: "Twitter",
+                        action: "Tweet"
+                    });
+                    if (ga) ga('send', 'social', 'Twitter', 'Tweet');
+                });
+            });
+
+            (function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=252636704908473&version=v2.0";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+            window.fbAsyncInit = function() {
+                // init the FB JS SDK
+
+                FB.Event.subscribe('edge.create', function(href, widget) {
+                    $.event.trigger({
+                        type: "pageShared",
+                        url: href,
+                        network: "Facebook",
+                        action: "like"
+                    });
+                });
+            };
+        //]]>
+        </script>
+        
+        <script src="/assets/javascripts/script.js"></script>
+    </body>
+</html>
