@@ -284,60 +284,6 @@ aside
     text-align: center;
 }
 
-.assistance
-{
-    .inner
-    {
-        position: fixed;
-        z-index: 999;
-        right: 50px;
-        bottom: 0;
-        padding: 5px 10px;
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px;
-        background: #4C4C4C;
-    }
-
-    table, tr, td, a
-    {
-        border: 0 !important;
-        background: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    tr:not(.lpStaticButtonTR), .lpStaticButtonTR img
-    {
-        display: none;
-    }
-
-    .lpStaticButtonTR a:before
-    {
-        content: "Chat With Sales";
-        line-height: 1;
-        font-weight: bold;
-        color: #FFF;
-    }
-
-    .lpStaticButtonTR a:after
-    {
-        display: inline-block;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        content: "\f075";
-
-        color: #FFF;
-        line-height: 1;
-        font-size: 21pt;
-        padding-left: 5px;
-        vertical-align: middle;
-    }
-}
-
 .try-buy-buttons.global
 {
     position: relative;
