@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Oceamodo | Komodo IDE</title>
+        <title>TortoiseSVN menu for Komodo | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Oceamodo | Komodo IDE" />
+        <meta property="og:title" content="TortoiseSVN menu for Komodo" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/skins">
-            Skins
+        <a href="/packages/toolbox">
+            Toolbox
         </a>
     </li>
     <li>
-        Oceamodo
+        TortoiseSVN menu for Komodo
     </li>
 </ul>
 
@@ -167,29 +167,38 @@
 
 
     <div id="readme" class="readme user-input">
-    <h1>Description</h1>
+    <h1>Komodo-TortoiseSVN</h1>
 
-<p>Oceamodo skin for Komodo</p>
+<p>TortoiseSVN snippets collection for Komodo edit / ide.   </p>
 
-<p><img src="https://github.com/Defman21/Oceamodo/raw/master/screen.png" alt="Screenshot"></p>
+<h2>Usage</h2>
 
-<h1>Building</h1>
+<p>The default path of TortoiseSVN is set to <code>C:\Program Files\TortoiseSVN\</code>.
+If you have TortoiseSVN in another directory, right click on snippet and change it with correct path <strong>WITH</strong> a trailing slash.
+You also need to remember to escape the backslash (<code>\\</code> instead of <code>\</code>).</p>
 
-<ul>
-<li>Go to the folder with the source.</li>
-<li>Open the terminal in this folder (or navigate to the folder from the terminal).</li>
-<li>Run:</li>
-<li>For Windows: <code>koext.py build --unjarred</code></li>
-<li>For *nix (Mac OS and Linux): <code>koext build --unjarred</code></li>
-<li>If this commands doesn&#39;t works for you - you should use absolute path to <code>koext(.py)</code>. It&#39;s placed in <code>&lt;komdoo install dir&gt;/lib/sdk/bin/</code></li>
-</ul>
+<p>The menu contains:</p>
 
-<h1>Changelog</h1>
+<pre><code>Menu  | Command 
+----- | ------- 
+Clean up this project | `svn cleanup`
+Commit all files currently open | `svn commit -m &quot;Message&quot; file1 file2 ...` 
+Commit current file |  `svn commit -m &quot;Message&quot; currentFile`  
+Commit current file&#39;s directory | `TortoiseProc /command:commit /path:&quot;currentFilePath&quot;` 
+Commit current project | `TortoiseProc /command:commit /path:&quot;currentProjectPath&quot;` 
+Show diff with previous version | `svn di currentFile` 
+Update current project |  `svn update currentProjectPath`
+</code></pre>
 
-<ul>
-<li>1.0 - first release</li>
-<li>2.0 (plained)</li>
-</ul>
+<h3>Search for Snippet</h3>
+
+<p>By hitting <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>k</kbd> a search window will popup, when you type <code>TortoiseSVN</code> all the Tortoise snippets will be shown.
+This is a fast way to search inside your snippets.</p>
+
+<h3>Setting up key bindings</h3>
+
+<p>You can add a key binding to a snippet by right clicking on a snippet, go to properties and you will see here a tab key binding,
+here you can set your key binding for the snippet.</p>
 
     </div>
 
@@ -227,26 +236,11 @@
 <!-- Start Sidebar -->
 
 <div class="download">
-        <div class="releases">
-        <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-800396">
-                <div class="files centered">
-                       <div class="assets">
-                                <div>
-                                    <a href="https://github.com/Defman21/Oceamodo/releases/download/v1.0/oceamodo-1.0-ko.xpi" class="button big primary">
-                                        <i class="icon icon-download"></i>
-                                        oceamodo-1.0-ko.xpi
-                                    </a>
-                                </div>
-                       </div>
-                        <div class="source">
-                           <a href="https://github.com/Defman21/Oceamodo/archive/Oceamodo 1.0.zip" class="button">
-                               <i class="icon icon-download"></i>
-                               Download Source
-                           </a>
-                        </div>
-                </div>
-            </div>
+        <div class="files">
+            <a href="https://github.com/chalda-pnuzig/Komodo-TortoiseSVN/archive/master.zip" class="button big primary">
+                <i class="icon icon-download"></i>
+                Download Source
+            </a>
         </div>
 </div>
         
@@ -258,54 +252,37 @@
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Defman21">
-                <span>Defman21</span>
+            <a href="https://github.com/chalda-pnuzig">
+                <span>chalda-pnuzig</span>
             </a>
-            <a href="https://github.com/Defman21" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/7100645?v=3?s=18">
+            <a href="https://github.com/chalda-pnuzig" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/16133710?v=3?s=18">
             </a>
         </dd>
         
-        <dt>
-            <i class="icon icon-link"></i>
-        </dt>
-        <dd>
-            <a href="http://devbevariour.cf/k/oceamodo">
-                http://devbevariour.cf/k/oceamodo
-            </a>
-        </dd>
 
         <dt>
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Defman21/Oceamodo">
-                    Defman21/Oceamodo
+            <a href="https://github.com/chalda-pnuzig/Komodo-TortoiseSVN">
+                    chalda-pnuzig/Komodo-TortoiseSVN
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-02-18T19:24:45Z">
-            Updated 70 weeks ago
+        <dd title="2016-06-23T15:48:53Z">
+            Updated a day ago
         </dd>
         
-        <dt>
-            <i class="icon icon-code-fork"></i>
-        </dt>
-        <dd>
-            <a href="https://github.com/Defman21/Oceamodo/releases/tag/v1.0">
-                Version 
-                v1.0
-            </a>
-        </dd>
 
         <dt>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Defman21/Oceamodo/issues">
+            <a href="https://github.com/chalda-pnuzig/Komodo-TortoiseSVN/issues">
                 0 issues
             </a>
         </dd>
@@ -314,14 +291,14 @@
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>13043 downloads</span>
+            <span>0 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>1 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>
