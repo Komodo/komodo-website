@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 29 Jun 2016 09:10:36 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 29 Jun 2016 09:31:12 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>10 Komodo Features Web Developers Will Love</title>
+                <link>http://komodoide.com/blog/10-komodo-features-web-developers-will-love</link>
+                <pubDate>Wed, 29 Jun 2016 17:00:00 -0700</pubDate>
+                <description>Komodo IDE X adds a ton of new features, many of which targeted at web developers. We realize that while not everyone may consider themselves a web developer, most developers these days will be using web technologies to some degree [...]</description>
+                <guid>http://komodoide.com/blog/10-komodo-features-web-developers-will-love</guid>
+            </item>
             <item>
                 <title>How We Made Komodo X Even Faster</title>
                 <link>http://komodoide.com/blog/how-we-made-komodo-x-even-faster</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 10 Mar 2016 16:00:00 -0800</pubDate>
                 <description>Komodo&#x27;s quick bookmarks are a logical extension of the existing bookmarks.  They were implemented, once again, with our users&#x27; speed and concentration in mind.  They allow you to very quickly navigate to and from points of interest in your code [...]</description>
                 <guid>http://komodoide.com/blog/quick-bookmarks</guid>
-            </item>
-            <item>
-                <title>Komodo File Management</title>
-                <link>http://komodoide.com/blog/file-managem</link>
-                <pubDate>Tue, 8 Mar 2016 16:00:00 -0800</pubDate>
-                <description>Komodo, as it should, provides robust tools to work with your projects files. The first is Komodo&#x27;s Places pane. Places allows you to easily perform file specific function (eg. contextual SCC commands, publishing commands, copy&#x2F;paste&#x2F;cut&#x2F;delete, etc [...]</description>
-                <guid>http://komodoide.com/blog/file-managem</guid>
             </item>
     </channel>
 </rss>
