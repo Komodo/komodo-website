@@ -165,6 +165,95 @@
     </div>
 </div>
 
+<style type="text/css">
+
+#scheme-preview pre code
+{
+    background: #1b2b34;
+    color: #c0c5ce;
+}
+
+#python .hl-keyword { color: #c594c5 }
+#python .ko-keyword { color: #ec5f67 }
+#python .hl-string { color: #99c794 }
+#python .hl-class .hl-title { color: #fac863 }
+#python .hl-function .hl-title { color: #6699cc }
+#python .hl-function .hl-params { color: #c0c5ce }
+#python .hl-comment { color: #65737e }
+#python .ko-operator { color: #6699cc }
+#python .hl-number { color: #f99157 }
+
+
+#php .hl-keyword { color: #c594c5 }
+#php .ko-keyword { color: #ec5f67 }
+#php .hl-string { color: #99c794 }
+#php .hl-class .hl-title { color: #cdd3de }
+#php .hl-function .hl-title { color: #cdd3de }
+#php .hl-function .hl-params { color: #c0c5ce }
+#php .hl-comment { color: #65737e }
+#php .ko-operator { color: #6699cc }
+#php .hl-variable { color: #ec5f67 }
+#php .hl-number { color: #f99157 }
+</style>
+
+<div id="scheme-preview" class="tabs">
+    <pre id="python"><code>
+import math
+class Class:
+    """ this is a docstring """
+    def __init__(self, arg): # one line comment
+        self.x = arg + math.cos(arg + arg)
+        s = 'a string'
+    
+    def display(self, value):
+        print value
+        
+    def increment(self, value):
+        value = value + 1
+        print value
+    
+xyz = Class('foo')
+xyz.increment(10)
+    </code></pre>
+    
+    <pre id="php" style="display: none"><code>
+&lt;?php
+class foo {
+    // a comment
+    var $a;
+    var $b;
+    function display() {
+        echo "This is class foo";
+        echo "a = ".$this-&gt;a."";
+        echo "b = {$this-&gt;b}";
+    }
+    function mul() {
+        return $this-&gt;a*$this-&gt;b;
+    }
+};
+
+$foo1 = new foo;
+$foo1-&gt;a = 2;
+$foo1-&gt;b = 5;
+$foo1-&gt;display();
+echo $foo1-&gt;mul()."";
+    </code></pre>
+    
+    <ul id="scheme-preview-selector">
+        <li>
+            <a href="#python">Python</a>
+        </li>
+        <li>
+            <a href="#php">PHP</a>
+        </li>
+    </ul>
+</div>
+
+<p style="text-align: center">
+    <strong>Warning:</strong> This preview is an approximation, the color scheme may look different within Komodo.
+</p>
+
+<div class="spacer"></div>
 
 <hr/>
 
@@ -304,7 +393,7 @@
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>380 downloads</span>
+            <span>383 downloads</span>
         </dd>
     
         <dt>
