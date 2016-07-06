@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 6 Jul 2016 06:04:05 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 6 Jul 2016 09:03:44 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo Extreme Makeover</title>
+                <link>http://komodoide.com/blog/komodo-extreme-makeover</link>
+                <pubDate>Wed, 6 Jul 2016 17:00:00 -0700</pubDate>
+                <description>If you installed Komodo X recently and you were not one of the users who participated in the Beta release phase then when you opened Komodo you might have thought you downloaded the wrong program (Chess any one?).  But you didn&#x27;t [...]</description>
+                <guid>http://komodoide.com/blog/komodo-extreme-makeover</guid>
+            </item>
             <item>
                 <title>10 Komodo Features Web Developers Will Love</title>
                 <link>http://komodoide.com/blog/10-komodo-features-web-developers-will-love</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 29 Mar 2016 17:00:00 -0700</pubDate>
                 <description>Komodo snippets and abbreviations are nothing new to code editing (they&#x27;ve been in Komodo almost since the beginning 15 years ago). But something that Komodo has that others may not...smart snippets [...]</description>
                 <guid>http://komodoide.com/blog/smart-snippets</guid>
-            </item>
-            <item>
-                <title>Komodo Quick Bookmarks</title>
-                <link>http://komodoide.com/blog/quick-bookmarks</link>
-                <pubDate>Thu, 10 Mar 2016 16:00:00 -0800</pubDate>
-                <description>Komodo&#x27;s quick bookmarks are a logical extension of the existing bookmarks.  They were implemented, once again, with our users&#x27; speed and concentration in mind.  They allow you to very quickly navigate to and from points of interest in your code [...]</description>
-                <guid>http://komodoide.com/blog/quick-bookmarks</guid>
             </item>
     </channel>
 </rss>
