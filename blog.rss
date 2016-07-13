@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 12 Jul 2016 00:03:37 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 13 Jul 2016 10:05:41 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Under the Hood: Komodo X and Chrome Debugging</title>
+                <link>http://komodoide.com/blog/under-the-hood-komodo-x-and-chrome-debugging</link>
+                <pubDate>Tue, 12 Jul 2016 17:00:00 -0700</pubDate>
+                <description>It is easy to take for granted Komodo IDE&#x27;s superb debugging support. Komodo excels at debugging common scripting languages like Perl, Python, Tcl, and Ruby. It can also debug PHP, Node.js, and XSLT. With Komodo X [...]</description>
+                <guid>http://komodoide.com/blog/under-the-hood-komodo-x-and-chrome-debugging</guid>
+            </item>
             <item>
                 <title>Komodo Extreme Makeover</title>
                 <link>http://komodoide.com/blog/komodo-extreme-makeover</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 31 Mar 2016 17:00:00 -0700</pubDate>
                 <description>Komodo has been written with the concept of &quot;make the best guess then allow custom changes&quot;.  For 90% of Komodo features, you should simply be able to start Komodo and use it, and it will just work.   At start up [...]</description>
                 <guid>http://komodoide.com/blog/configuring-komodo</guid>
-            </item>
-            <item>
-                <title>Smart Snippets</title>
-                <link>http://komodoide.com/blog/smart-snippets</link>
-                <pubDate>Tue, 29 Mar 2016 17:00:00 -0700</pubDate>
-                <description>Komodo snippets and abbreviations are nothing new to code editing (they&#x27;ve been in Komodo almost since the beginning 15 years ago). But something that Komodo has that others may not...smart snippets [...]</description>
-                <guid>http://komodoide.com/blog/smart-snippets</guid>
             </item>
     </channel>
 </rss>
