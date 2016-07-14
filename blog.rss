@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 14 Jul 2016 09:10:58 -0700</lastBuildDate>
+        <lastBuildDate>Thu, 14 Jul 2016 12:10:51 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>First Start Wizard</title>
+                <link>http://komodoide.com/blog/first-start-wizard</link>
+                <pubDate>Thu, 14 Jul 2016 17:00:00 -0700</pubDate>
+                <description>If you&#x27;ve never run Komodo before or if this is the first time you&#x27;re running a major version (eg. you were using Komodo 9.3 and have just upgraded to Komodo X), then Komodo will show you the First Start Wizard as it loads [...]</description>
+                <guid>http://komodoide.com/blog/first-start-wizard</guid>
+            </item>
             <item>
                 <title>Under the Hood: Komodo X and Chrome Debugging</title>
                 <link>http://komodoide.com/blog/under-the-hood-komodo-x-and-chrome-debugging</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 5 Apr 2016 17:00:00 -0700</pubDate>
                 <description>Komodo Go to Definition is a helpful tool to quickly see the definition of any construct in your code.  Whether it&#x27;s a function, a variable, a class, class member or global [...]</description>
                 <guid>http://komodoide.com/blog/go-to-definition</guid>
-            </item>
-            <item>
-                <title>Configuring Komodo</title>
-                <link>http://komodoide.com/blog/configuring-komodo</link>
-                <pubDate>Thu, 31 Mar 2016 17:00:00 -0700</pubDate>
-                <description>Komodo has been written with the concept of &quot;make the best guess then allow custom changes&quot;.  For 90% of Komodo features, you should simply be able to start Komodo and use it, and it will just work.   At start up [...]</description>
-                <guid>http://komodoide.com/blog/configuring-komodo</guid>
             </item>
     </channel>
 </rss>
