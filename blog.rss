@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 21 Jul 2016 09:03:46 -0700</lastBuildDate>
+        <lastBuildDate>Thu, 21 Jul 2016 12:03:43 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Filling the Gap with Commandline Integration - PhoneGap, Cordova, Grunt, Gulp</title>
+                <link>http://komodoide.com/blog/filling-the-gap-with-commandline-integration-phonegap-cordova-grunt-gulp</link>
+                <pubDate>Thu, 21 Jul 2016 17:00:00 -0700</pubDate>
+                <description>Something that has always been part of the Komodo design philosophy has been integration. Though Komodo should provide tooling to make our users more productive, it should NOT try to do EVERYTHING.  Integration, not imitation, is the key [...]</description>
+                <guid>http://komodoide.com/blog/filling-the-gap-with-commandline-integration-phonegap-cordova-grunt-gulp</guid>
+            </item>
             <item>
                 <title>First Start Wizard</title>
                 <link>http://komodoide.com/blog/first-start-wizard</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 7 Apr 2016 17:00:00 -0700</pubDate>
                 <description>The Komodo toolbox is where you can store all of your custom tools such as code snippets and abbreviations, userscripts, commands, etc.  The fresh Komodo install comes with a huge selection of tools and snippets already installed [...]</description>
                 <guid>http://komodoide.com/blog/komodo-toolbox</guid>
-            </item>
-            <item>
-                <title>Go-to-Definiton</title>
-                <link>http://komodoide.com/blog/go-to-definition</link>
-                <pubDate>Tue, 5 Apr 2016 17:00:00 -0700</pubDate>
-                <description>Komodo Go to Definition is a helpful tool to quickly see the definition of any construct in your code.  Whether it&#x27;s a function, a variable, a class, class member or global [...]</description>
-                <guid>http://komodoide.com/blog/go-to-definition</guid>
             </item>
     </channel>
 </rss>
