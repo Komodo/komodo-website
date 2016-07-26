@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>FontAwesome Pane | Komodo IDE</title>
+        <title>Github | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="FontAwesome Pane | Komodo IDE" />
+        <meta property="og:title" content="Github | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/addons">
-            Addons
+        <a href="/packages/schemes">
+            Color Schemes
         </a>
     </li>
     <li>
-        FontAwesome Pane
+        Github
     </li>
 </ul>
 
@@ -165,43 +165,104 @@
     </div>
 </div>
 
+<style type="text/css">
+
+#scheme-preview pre code
+{
+    background: #ffffff;
+    color: #333333;
+}
+
+#python .hl-keyword { color: #a71d5d }
+#python .ko-keyword { color: #0086b3 }
+#python .hl-string { color: #183691 }
+#python .hl-class .hl-title { color: #795da3 }
+#python .hl-function .hl-title { color: #795da3 }
+#python .hl-function .hl-params { color: #333333 }
+#python .hl-comment { color: #969896 }
+#python .ko-operator { color: #a71d5d }
+#python .hl-number { color: #0086b3 }
+
+
+#php .hl-keyword { color: #a71d5d }
+#php .ko-keyword { color: #0086b3 }
+#php .hl-string { color: #183691 }
+#php .hl-class .hl-title { color: #333333 }
+#php .hl-function .hl-title { color: #333333 }
+#php .hl-function .hl-params { color: #333333 }
+#php .hl-comment { color: #969896 }
+#php .ko-operator { color: #a71d5d }
+#php .hl-variable { color: #ed6a43 }
+#php .hl-number { color: #0086b3 }
+</style>
+
+<div id="scheme-preview" class="tabs">
+    <pre id="python"><code>
+import math
+class Class:
+    """ this is a docstring """
+    def __init__(self, arg): # one line comment
+        self.x = arg + math.cos(arg + arg)
+        s = 'a string'
+    
+    def display(self, value):
+        print value
+        
+    def increment(self, value):
+        value = value + 1
+        print value
+    
+xyz = Class('foo')
+xyz.increment(10)
+    </code></pre>
+    
+    <pre id="php" style="display: none"><code>
+&lt;?php
+class foo {
+    // a comment
+    var $a;
+    var $b;
+    function display() {
+        echo "This is class foo";
+        echo "a = ".$this-&gt;a."";
+        echo "b = {$this-&gt;b}";
+    }
+    function mul() {
+        return $this-&gt;a*$this-&gt;b;
+    }
+};
+
+$foo1 = new foo;
+$foo1-&gt;a = 2;
+$foo1-&gt;b = 5;
+$foo1-&gt;display();
+echo $foo1-&gt;mul()."";
+    </code></pre>
+    
+    <ul id="scheme-preview-selector">
+        <li>
+            <a href="#python">Python</a>
+        </li>
+        <li>
+            <a href="#php">PHP</a>
+        </li>
+    </ul>
+</div>
+
+<p style="text-align: center">
+    <strong>Warning:</strong> This preview is an approximation, the color scheme may look different within Komodo.
+</p>
+
+<div class="spacer"></div>
+
+<hr/>
 
     <div id="readme" class="readme user-input">
-    <h1>FontAwesome Pane</h1>
+    <h2>Github scheme</h2>
 
-<p>This addon adds a Font Awesome right-sidebar to Komodo edit/ide you can easily add font awesome to your projects.
-Just click on the icon of your choice and the icon will be inserted.</p>
+<p>GitHub scheme for Komodo. Very bright and very light.</p>
 
-<h2>screenshot</h2>
-
-<p><img src="https://github.com/babobski/FontAwesome/raw/master/screenshot.png" align="right" alt="">
-<strong>1. Add cdn</strong><br>
-This will insert the cdn<br>
-<pre>//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css</pre>
-<br><br>
-<strong>2. Insert font family</strong><br>
-<code>font-family: &#39;FontAwsome&#39;;</code>
-<br><br>
-<strong>3. Settings</strong><br>
-This will open the settings dialog,<br>
-the settings are described below<br>
-<strong>4. Search function</strong><br>
-Here you can search for your font awesome icon (without the fa-)</p>
-
-<h3>Settings</h3>
-
-<p><b>Auto: insert depending on file, on css,sass,scss,less files the escaped value is inserted.</b><br>
-This function will insert the html fontAwesome tag except when editing style-files (css, scss, sass, less) then the escaped value will be inserted.<br>
-So you can use the fontAwsome icons in <code>:before</code> and <code>:after</code> (examples can be found <a href="https://css-tricks.com/five-use-cases-for-icon-fonts/" target="_blank">here</a>).</p>
-
-<p><b>Full: Insert tag with class</b><br>
-This will insert the tag <code>&lt;i class=&quot;fa fa-icon&quot;&gt;&lt;/i&gt;</code></p>
-
-<p><b>Class: Insert only the class name</b><br>
-This will only insert the class <code>fa fa-icon</code></p>
-
-<p><b>CSS: Insert escaped css value</b><br>
-This will insert the escaped css value <code>\f25b</code></p>
+<p><img src="https://github.com/Defman21/komodo-github-scheme/raw/master/screen.png" alt="screen"></p>
 
     </div>
 
@@ -241,18 +302,18 @@ This will insert the escaped css value <code>\f25b</code></p>
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-3553835">
+            <div class="release  0" id="release-3740421">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/FontAwesome/releases/download/2.1/Fon-Awesome-side-pane-2.1.xpi" class="button big primary">
+                                    <a href="https://github.com/Defman21/komodo-github-scheme/releases/download/1.0.0/GitHub.ksf" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Fon-Awesome-side-pane-2.1.xpi
+                                        GitHub.ksf
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/FontAwesome/archive/Small bug fix.zip" class="button">
+                           <a href="https://github.com/Defman21/komodo-github-scheme/archive/Github.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -270,11 +331,11 @@ This will insert the escaped css value <code>\f25b</code></p>
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski">
-                <span>babobski</span>
+            <a href="https://github.com/Defman21">
+                <span>Defman21</span>
             </a>
-            <a href="https://github.com/babobski" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/3530262?v=3?s=18">
+            <a href="https://github.com/Defman21" class="preview">
+                <img src="https://avatars.githubusercontent.com/u/7100645?v=3?s=18">
             </a>
         </dd>
         
@@ -283,25 +344,25 @@ This will insert the escaped css value <code>\f25b</code></p>
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/FontAwesome">
-                    babobski/FontAwesome
+            <a href="https://github.com/Defman21/komodo-github-scheme">
+                    Defman21/komodo-github-scheme
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-06-29T21:08:24Z">
-            Updated 4 weeks ago
+        <dd title="2016-07-26T12:43:00Z">
+            Updated 3 hours ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/FontAwesome/releases/tag/2.1">
+            <a href="https://github.com/Defman21/komodo-github-scheme/releases/tag/1.0.0">
                 Version 
-                2.1
+                1.0.0
             </a>
         </dd>
 
@@ -309,7 +370,7 @@ This will insert the escaped css value <code>\f25b</code></p>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/FontAwesome/issues">
+            <a href="https://github.com/Defman21/komodo-github-scheme/issues">
                 0 issues
             </a>
         </dd>
@@ -318,7 +379,7 @@ This will insert the escaped css value <code>\f25b</code></p>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>12361 downloads</span>
+            <span>1 downloads</span>
         </dd>
     
         <dt>
