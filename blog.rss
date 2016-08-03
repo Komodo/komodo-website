@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 3 Aug 2016 09:03:48 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 3 Aug 2016 12:04:16 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>The Advantage of Komodo&#x27;s Editor Over JavaScript Based Editors</title>
+                <link>http://komodoide.com/blog/the-advantage-of-komodos-editor-over-javascript-based-editors</link>
+                <pubDate>Wed, 3 Aug 2016 17:00:00 -0700</pubDate>
+                <description>Nowadays, it seems that IDEs and text editors are to software developers as sports cars are to car enthusiasts. Ask any developer what tool they use to write their code and why, and you will get a million different answers [...]</description>
+                <guid>http://komodoide.com/blog/the-advantage-of-komodos-editor-over-javascript-based-editors</guid>
+            </item>
             <item>
                 <title>Go to Any Symbol With Komodo&#x27;s New Symbol Browser</title>
                 <link>http://komodoide.com/blog/go-to-any-symbol-with-komodos-new-symbol-browser</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 21 Apr 2016 17:00:00 -0700</pubDate>
                 <description>As you may have heard, we released our Komodo 10 alpha last week so the community can help us run it through its paces. We&#x27;ve already received a ton of helpful bug reports but we want MORE [...]</description>
                 <guid>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</guid>
-            </item>
-            <item>
-                <title>Komodo 10 Alpha Pre-release Now Available</title>
-                <link>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</link>
-                <pubDate>Mon, 11 Apr 2016 17:00:00 -0700</pubDate>
-                <description> Releasing an alpha&#x2F;beta of your product is like showing everyone your new baby. Everyone is excited, but he&#x27;s still very fragile, and you&#x27;re scared someone might look at them the wrong way. Komodo 10 has come a long way [...]</description>
-                <guid>http://komodoide.com/blog/komodo-10-alpha-pre-release-now-available</guid>
             </item>
     </channel>
 </rss>
