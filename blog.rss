@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 9 Aug 2016 09:12:41 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 9 Aug 2016 12:04:23 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Case Study: Lua Debugging in Komodo</title>
+                <link>http://komodoide.com/blog/case-study-lua-debugging-in-komodo</link>
+                <pubDate>Tue, 9 Aug 2016 17:00:00 -0700</pubDate>
+                <description>I had thoughts about trying something crazy with Komodo...so when ActiveState held its annual hackathon I saw it as a great opportunity for me to try out one of these ideas. Before I jump into what I did [...]</description>
+                <guid>http://komodoide.com/blog/case-study-lua-debugging-in-komodo</guid>
+            </item>
             <item>
                 <title>The Advantage of Komodo&#x27;s Editor Over JavaScript Based Editors</title>
                 <link>http://komodoide.com/blog/the-advantage-of-komodos-editor-over-javascript-based-editors</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 17 May 2016 17:00:00 -0700</pubDate>
                 <description>The moment is finally here, Komodo X (10) is released and it&#x27;s like 10 times better! The pun sounded so horrible when I came up with it, I just had to use it. But it really is a LOT better [...]</description>
                 <guid>http://komodoide.com/blog/komodo-x-released</guid>
-            </item>
-            <item>
-                <title>Help Us Test Komodo IDE 10 and We&#x27;ll Give You $50</title>
-                <link>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</link>
-                <pubDate>Thu, 21 Apr 2016 17:00:00 -0700</pubDate>
-                <description>As you may have heard, we released our Komodo 10 alpha last week so the community can help us run it through its paces. We&#x27;ve already received a ton of helpful bug reports but we want MORE [...]</description>
-                <guid>http://komodoide.com/blog/help-us-test-komodo-ide-10-and-well-give-you-usd50</guid>
             </item>
     </channel>
 </rss>
