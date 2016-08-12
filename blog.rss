@@ -6,15 +6,8 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Fri, 12 Aug 2016 09:03:51 -0700</lastBuildDate>
+        <lastBuildDate>Fri, 12 Aug 2016 09:27:33 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
-            <item>
-                <title>Komodo 10.1 Beta Now Available</title>
-                <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
-                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
-                <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
-                <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
-            </item>
             <item>
                 <title>HotKey Conundrum</title>
                 <link>http://komodoide.com/blog/hotkey-conundrum</link>
@@ -112,6 +105,13 @@
                 <pubDate>Wed, 1 Jun 2016 17:00:00 -0700</pubDate>
                 <description>The word *editor* and IDE (integrated development environments) are often mistakenly used interchangeably. However, there are some big differences between the two. The extra functionality you get with an IDE can provide significant time savings [...]</description>
                 <guid>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</guid>
+            </item>
+            <item>
+                <title>Chrome Debugging in Komodo X, Code and Debug in One Place</title>
+                <link>http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place</link>
+                <pubDate>Tue, 24 May 2016 17:00:00 -0700</pubDate>
+                <description>Let me set the stage: You are a web developer. You spend many hours a week writing javascript, running javascript and debugging javascript. You&#x27;re very adept at it, you write your code, fire up a web server and point Chrome at it [...]</description>
+                <guid>http://komodoide.com/blog/chrome-debugging-in-komodo-x-code-and-debug-in-one-place</guid>
             </item>
     </channel>
 </rss>
