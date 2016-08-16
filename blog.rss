@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 16 Aug 2016 09:03:53 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 16 Aug 2016 12:03:55 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Version Control Widget</title>
+                <link>http://komodoide.com/blog/version-control-widget</link>
+                <pubDate>Tue, 16 Aug 2016 17:00:00 -0700</pubDate>
+                <description>In Komodos bottom pane there is a widget call *Version Control*.  This tool is context driven and tries to include the most commonly used version control features into one easily accessed tool [...]</description>
+                <guid>http://komodoide.com/blog/version-control-widget</guid>
+            </item>
             <item>
                 <title>Komodo 10.1 Beta Now Available</title>
                 <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
@@ -105,13 +112,6 @@
                 <pubDate>Tue, 7 Jun 2016 17:00:00 -0700</pubDate>
                 <description> I would like to start this post by thanking those of you who have mild to severe OCD and yet still clicked our provocative title.   I realized while writing another blog post that we hadn’t written a Komodo Tips and Tricks post for over 3 years [...]</description>
                 <guid>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</guid>
-            </item>
-            <item>
-                <title>5 Reasons to use an IDE Instead of an Editor</title>
-                <link>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</link>
-                <pubDate>Wed, 1 Jun 2016 17:00:00 -0700</pubDate>
-                <description>The word *editor* and IDE (integrated development environments) are often mistakenly used interchangeably. However, there are some big differences between the two. The extra functionality you get with an IDE can provide significant time savings [...]</description>
-                <guid>http://komodoide.com/blog/5-reasons-to-use-an-ide-instead-of-an-editor</guid>
             </item>
     </channel>
 </rss>
