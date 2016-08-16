@@ -6,13 +6,13 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 16 Aug 2016 12:03:55 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 16 Aug 2016 15:04:21 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
             <item>
                 <title>Version Control Widget</title>
                 <link>http://komodoide.com/blog/version-control-widget</link>
                 <pubDate>Tue, 16 Aug 2016 17:00:00 -0700</pubDate>
-                <description>In Komodos bottom pane there is a widget call *Version Control*.  This tool is context driven and tries to include the most commonly used version control features into one easily accessed tool [...]</description>
+                <description>In Komodo&#x27;s bottom pane there is a widget call *Version Control*.  This tool is context driven and tries to include the most commonly used version control features into one easily accessed tool [...]</description>
                 <guid>http://komodoide.com/blog/version-control-widget</guid>
             </item>
             <item>
