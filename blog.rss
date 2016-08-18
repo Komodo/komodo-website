@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Thu, 18 Aug 2016 09:03:55 -0700</lastBuildDate>
+        <lastBuildDate>Thu, 18 Aug 2016 12:03:40 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>The History of Komodo, A Trip Down Memory Lane</title>
+                <link>http://komodoide.com/blog/the-history-of-komodo</link>
+                <pubDate>Thu, 18 Aug 2016 17:00:00 -0700</pubDate>
+                <description>     Jump To:                            Version 0.x - 2000 to 2001                               Version 1.x - 2001 to 2002                               Version 2.x - 2002 to 2004                               Version 3 [...]</description>
+                <guid>http://komodoide.com/blog/the-history-of-komodo</guid>
+            </item>
             <item>
                 <title>Version Control Widget</title>
                 <link>http://komodoide.com/blog/version-control-widget</link>
@@ -16,18 +23,18 @@
                 <guid>http://komodoide.com/blog/version-control-widget</guid>
             </item>
             <item>
-                <title>Komodo 10.1 Beta Now Available</title>
-                <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
-                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
-                <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
-                <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
-            </item>
-            <item>
                 <title>HotKey Conundrum</title>
                 <link>http://komodoide.com/blog/hotkey-conundrum</link>
                 <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
                 <description>As you may know by now (or maybe you don&#x27;t, which is ok since I&#x27;m going to follow up by stating the fact anyway...), Komodo has been in development for over 15 years now [...]</description>
                 <guid>http://komodoide.com/blog/hotkey-conundrum</guid>
+            </item>
+            <item>
+                <title>Komodo 10.1 Beta Now Available</title>
+                <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
+                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
+                <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
             </item>
             <item>
                 <title>Case Study: Lua Debugging in Komodo</title>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 9 Jun 2016 17:00:00 -0700</pubDate>
                 <description>On June 6, 2016 at 10 am PDT, NathanR and myself (CareyH) introduced Komodo X to the world (just under 100 people…) in a live webcast. Our goal was to show off some of the new features in action and let people ask questions about what they heard, saw [...]</description>
                 <guid>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</guid>
-            </item>
-            <item>
-                <title>Top 11 Tips and Tricks for Komodo X</title>
-                <link>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</link>
-                <pubDate>Tue, 7 Jun 2016 17:00:00 -0700</pubDate>
-                <description> I would like to start this post by thanking those of you who have mild to severe OCD and yet still clicked our provocative title.   I realized while writing another blog post that we hadn’t written a Komodo Tips and Tricks post for over 3 years [...]</description>
-                <guid>http://komodoide.com/blog/top-11-tips-and-tricks-for-komodo-x</guid>
             </item>
     </channel>
 </rss>

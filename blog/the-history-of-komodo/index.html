@@ -21,7 +21,7 @@
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
         
-        <meta property="og:image" content="http://komodoide.com/assets/images/screenshots/splash/mac-splash-php.png" />
+        <meta property="og:image" content="http://images.contentful.com/bj1g69m2935w/3cTULZgqcw6EgaQKswG8yi/c25733caac68ca8a24e75af13cf007bb/2.5_about.png" />
 
         <link rel="icon" href="/assets/images/favicon.ico">
 
@@ -137,7 +137,7 @@
             <div id="content" class="document-blog-entry
                          sidebar
                          
-                         blog blog_2014-09 blog_2014-09_the-history-of-komodo blog_2014-09_the-history-of-komodo_index">
+                         blog blog_the-history-of-komodo blog_the-history-of-komodo_index">
     <section role="main">
         <article class="normalize">
             <h1>The History of Komodo, A Trip Down Memory Lane</h1>
@@ -173,11 +173,19 @@
             <a href="#7.x">Version 7.x - 2012 to 2013</a>
         </li>
         <li>
-            <a href="#8.x">Version 8.x - 2013 to Present</a>
+            <a href="#8.x">Version 8.x - 2013 to 2015</a>
             <hr/>
         </li>
         <li>
-            <a href="#14ycommits">14 Years of Commits</a>
+            <a href="#9.x">Version 9.x - 2015 to 2016</a>
+            <hr/>
+        </li>
+        <li>
+            <a href="#10.x">Version 10.x - 2016 to present</a>
+            <hr/>
+        </li>
+        <li>
+            <a href="#16ycommits">16 Years of Commits</a>
         </li>
         <li>
             <a href="#back">Looking Back</a>
@@ -188,19 +196,11 @@
     </ul>
 </div>
 
-<p>The first version of Komodo was released roughly 14 years ago. This means Komodo
-is older than some of its users.. and yet its held up remarkably well. Yes
-it was starting to show signs of aging, but Komodo 8 came with some age-reversing
-serum so this dragon isn&#39;t going anywhere.</p>
+<p><em>This blog was originally published on September of 2014. It has since been updated to include the released of Komodo 9 and 10 and was subsequently republished.</em></p>
 
-<p>For a while now I&#39;ve been wanting to set up some virtual machines and
-run through all of the Komodo versions since its initial launch. Now I finally
-got to do just that; and to get the full authentic experience of what Komodo
-felt like when each version was released I ran it on the target platform of its
-time, which means I installed Windows 98 - oh the nostalgia.</p>
+<p>The first version of Komodo was released roughly 16 years ago. This means Komodo is older than some of its users.. and yet its held up remarkably well thanks to our continuous work on Komodo.</p>
 
-<p><hr id="0.x">
-<small><a href="#top" class="push-right">Back to Top</a></small></p>
+<p>With this blog we&#39;ll take a look at where Komodo came from, where it is and where it is going. </p>
 
 <h2>Version 0.x - 2000 to 2001</h2>
 
@@ -544,14 +544,13 @@ same between multiple Komodo installs.</p>
 <p><hr id="8.x">
 <small><a href="#top" class="push-right">Back to Top</a></small></p>
 
-<h2>Version 8.x - 2013 to Present</h2>
+<h2>Version 8.x - 2013 to 2015</h2>
 
 <p>Komodo 8 was the first Komodo version I contributed to directly, my main objective
 was to modernize the UI as I had always felt that Komodo needed a good looking
 UI to match its powerful feature set. As a result Komodo 8 looks significantly
 different from its earlier versions, introducing a completely new monochrome
-iconset and skin. The skinning system was built using modern web technologies
-and is available for anyone to use.</p>
+iconset and skin. The skinning system was built using modern web technologies. Looking back at this release I realize however well intended this skinning system was, it was fundamentally flawed because it shifted the complexity of writing CSS rules to a very complex variable system. While you could modify the entire skin just by setting variables, there were so many variables that they became practically useless.</p>
 
 <p>Other notable changes included:</p>
 
@@ -567,7 +566,7 @@ and is available for anyone to use.</p>
 <li>Custom Skins and Icons</li>
 </ul>
 
-<div class="lightbox-group centered" data-title="Komodo Version 8.x - 2013 to Present">
+<div class="lightbox-group centered" data-title="Komodo Version 8.x - 2013 to 2015">
     <a href="/assets/images/blog/2014-09/screenshots/8.5_setup.png" class="lightbox-entry" title="Setup">
         <img src="/assets/images/blog/2014-09/screenshots/thumb/8.5_setup.png"/>
     </a>
@@ -585,45 +584,118 @@ and is available for anyone to use.</p>
 <p><hr>
 <small><a href="#top" class="push-right">Back to Top</a></small></p>
 
-<p><a id="14ycommits"></a></p>
+<h2>Version 9.x - 2015 to 2016</h2>
 
-<h2>14 Years of Commits</h2>
+<p>Komodo 9 spanned essentially 4 releases. We released a Komodo 9, 9.1, 9.2 and 9.3, all of which including significant new features. We were quite ballsy with this release, making some changes that were very polarizing with our community; some LOVED it, others HATED it. We&#39;ve learned a lot from these releases. Particularly that it&#39;s ok to try new things, but to be more mindful of our loyal users (be more iterative with our changes). While the general UI changes in Komodo 9 were iterative and not very polarizing on their own, we also made UX changes like moving the find dialog into an embedded frame, and allowing for ulimited find results. This is also the release where we introduced the notification popups, which while well intended ended up failing for many reasons, primarily technical issues. Many of the negative concerns raised by 9 have been addressed in subsequent releases, but mainly by Komodo X.</p>
 
-<p>Mark Yen, one of the Komodo developers, experimented with <a href="https://code.google.com/p/gource/">gource</a> a while ago
-to get a representation of the work we&#39;ve done over 14 years. The result isn&#39;t
-really useful in any way, but it sure is cool to look at.</p>
+<p>This was also the release that introduced Commando (Go to Anything), which is a major component of Komodo today which facilitates many incredibly useful features.</p>
+
+<p>Some of the major features that were released in Komodo 9:</p>
+
+<ul>
+<li>Go language support</li>
+<li>Track Changes</li>
+<li>Commando was Introduced</li>
+<li>Markdown Viewer</li>
+<li>Notifications</li>
+<li>Package manager integration</li>
+<li>Workspace management</li>
+<li>Docker/Vagrant integration</li>
+<li>Spell checking</li>
+<li>Focus Mode</li>
+<li>Documentation Browser</li>
+<li>Quick Bookmarks</li>
+<li>In-line code runner</li>
+</ul>
+
+<div class="lightbox-group centered" data-title="Komodo Version 9.x - 2015 to 2016">
+    <a href="/assets/images/blog/history/ko9-install.png" class="lightbox-entry" title="Setup">
+        <img src="/assets/images/history/ko9-install.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/ko9-start.png" class="lightbox-entry" title="First Startup">
+        <img src="/assets/images/blog/history/ko9-start.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/ko9-use.png" class="lightbox-entry" title="Editing">
+        <img src="/assets/images/blog/history/ko9-use.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/ko9-about.png" class="lightbox-entry" title="About Dialog">
+        <img src="/assets/images/blog/ko9-about.png" width="115"/>
+    </a>
+</div>
+
+<p><hr>
+<small><a href="#top" class="push-right">Back to Top</a></small></p>
+
+<h2>Version 10.x - 2016 to present</h2>
+
+<p>Komodo 10 (Komodo X) was a BIG release. It came with a completely redone UI, which we kind of expected to be very polarizing, but luckily the vast majority of you LOVED it. The UI change wasn&#39;t just because we wanted something new, in fact that was the least of our concern in choosing to &quot;redo&quot; large parts of the UI. The reason for the UI change can be summarized in 2 keywords: maintainability and UX. </p>
+
+<p>First - maintainability: a problem with our old UI design was that it was very platform specific. Which while giving a very native looking UI on each platform made it very hard to maintain. Any UI change would need to be thoroughly tested on each platform and would likely need platform specific code to back it. This made for a lot of time spend on platform specific code that could have been spend on the features themselves or bug fixes / stability.</p>
+
+<p>Second - UX: Komodo had gotten really bogged down with confusing UX over the years, which mainly came to be from developers designing the UI/UX (ie: backend devs doing frontend work). This makes for bad UI and UX and it&#39;s something that we&#39;ve wanted to address for a while. Komodo X paves the way to a very consistant and easy to understand UX. Many parts of the UX had been completely redone or improved. </p>
+
+<p>Aside from a new UI we gave Komodo X a primary focus on web developer. Because of all the languages we support the one consistency between them is that almost all of the developers using Komodo use web technologies, and we wanted to add features that every developer would benefit from.</p>
+
+<p>Some of the most notable Komodo 10 features:</p>
+
+<ul>
+<li>New UI and UX</li>
+<li>First start wizard</li>
+<li>New default keybindings</li>
+<li>Chrome remote debugging</li>
+<li>Ruby 2.1+ Debugging</li>
+<li>Gulp, Grunt integration</li>
+<li>Phonegap, Cordova integration</li>
+<li>Symbol Browser</li>
+<li>Improved CodeIntel</li>
+<li>VCS Overhaul</li>
+<li>Significant performance improvements</li>
+</ul>
+
+<div class="lightbox-group centered" data-title="Komodo Version 10.x - 2016 to present">
+    <a href="/assets/images/blog/history/kox-install.png" class="lightbox-entry" title="Setup">
+        <img src="/assets/images/history/kox-install.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/kox-start.png" class="lightbox-entry" title="First Startup">
+        <img src="/assets/images/blog/history/kox-start.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/kox-use.png" class="lightbox-entry" title="Editing">
+        <img src="/assets/images/blog/history/kox-use.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/kox-use-classic.png" class="lightbox-entry" title="Editing with Classic mode">
+        <img src="/assets/images/blog/history/kox-use-classic.png" width="115"/>
+    </a>
+    <a href="/assets/images/blog/history/kox-about.png" class="lightbox-entry" title="About Dialog">
+        <img src="/assets/images/blog/kox-about.png" width="115"/>
+    </a>
+</div>
+
+<p><hr>
+<small><a href="#top" class="push-right">Back to Top</a></small></p>
+
+<p><a id="16ycommits"></a></p>
+
+<h2>16 Years of Commits</h2>
 
 <div class="centered">
 <iframe src="//player.vimeo.com/video/105804003" width="500" height="330" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-<p>14 years of commits spanning 3 version control systems (perforce, svn and git)
-and more committers than I care to count.</p>
+<p>16 years of commits spanning 3 version control systems (perforce, svn and git) and more committers than I care to count.</p>
 
 <p><a id="back"></a></p>
 
 <h2>Looking Back</h2>
 
-<p>I&#39;ve used Komodo for a long time, though I honestly cannot recall what year or
-version I started with.. it must have been version 4.x or 5.x. It&#39;s funny looking
-back through our changelogs and seeing so many vital features being introduced
-since the time I started using Komodo; it makes me wonder how on earth I was
-able to use Komodo without feature X and Y. But then again, like many programmers
-I started out in Notepad (I kid you not) so it&#39;s all relative.</p>
+<p>I&#39;ve used Komodo for a long time, though I honestly cannot recall what year or version I started with.. it must have been version 4.x or 5.x. It&#39;s funny looking back through our changelogs and seeing so many vital features being introduced since the time I started using Komodo; it makes me wonder how on earth I was able to use Komodo without feature X and Y. But then again, like many programmers I started out in Notepad (I kid you not) so it&#39;s all relative.</p>
 
-<p>As you may have been able to tell I looked at the history of Komodo mainly from
-UI and UX perspective, I did not spend a lot of time with individual features.
-If you would like to play around with earlier versions of Komodo yourself you
-can easily do so by <a href="http://downloads.activestate.com/Komodo/releases/archive/">visiting our Download Archive</a>.</p>
+<p>As you may have been able to tell I looked at the history of Komodo mainly from UI and UX perspective, I did not spend a lot of time with individual features. If you would like to play around with earlier versions of Komodo yourself you can easily do so by <a href="http://downloads.activestate.com/Komodo/releases/archive/">visiting our Download Archive</a>.</p>
 
 <p><a id="forward"></a></p>
 
 <h2>Looking Forward</h2>
 
-<p>For all the changes Komodo has gone through it is sometimes surprising we still
-have stuff to work on; but we do - for all the changes you see on these pages we
-have a thousand more in our minds. Komodo 9 will showcase some of the brightest
-of those ideas but we&#39;ve got plenty more for another 14 years, and then some.</p>
+<p>For all the changes Komodo has gone through it is sometimes surprising we still have stuff to work on; but we do - for all the changes you see on these pages we have a thousand more in our minds. Future releases will showcase some of the brightest of those ideas. We&#39;ve got plenty more for another 14 years, and then some.</p>
 
             </div>
             
@@ -682,20 +754,23 @@ of those ideas but we&#39;ve got plenty more for another 14 years, and then some
             <a href="/blog/tagged/features">features</a>
             <a href="/blog/tagged/changelog">changelog</a>
     </p>
-    <p><strong>Date Posted: </strong>Sep 10, 2014</p>
+    <p><strong>Date Posted: </strong>Aug 18, 2016</p>
 </div>
 <div class="clearfix"></div>
 <div class="blogs">
     <h1>Recent Blogs</h1>
     <ul>
         <li>
+            <a href="/blog/the-history-of-komodo">The History of Komodo, A Trip Down Memory Lane</a>
+        </li>
+        <li>
             <a href="/blog/version-control-widget">Version Control Widget</a>
         </li>
         <li>
-            <a href="/blog/komodo-10-1-beta-now-available">Komodo 10.1 Beta Now Available</a>
+            <a href="/blog/hotkey-conundrum">HotKey Conundrum</a>
         </li>
         <li>
-            <a href="/blog/hotkey-conundrum">HotKey Conundrum</a>
+            <a href="/blog/komodo-10-1-beta-now-available">Komodo 10.1 Beta Now Available</a>
         </li>
         <li>
             <a href="/blog/case-study-lua-debugging-in-komodo">Case Study: Lua Debugging in Komodo</a>
@@ -714,9 +789,6 @@ of those ideas but we&#39;ve got plenty more for another 14 years, and then some
         </li>
         <li>
             <a href="/blog/under-the-hood-komodo-x-and-chrome-debugging">Under the Hood: Komodo X and Chrome Debugging</a>
-        </li>
-        <li>
-            <a href="/blog/komodo-extreme-makeover">Komodo Extreme Makeover</a>
         </li>
     </ul>
 </div>
