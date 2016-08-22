@@ -173,11 +173,11 @@ jQuery ->
             siblings = shot.prevAll("figure")
             stop = false
             
-            maxWidth = 40 + (siblings.length * 40)
+            maxWidth = 150 + (siblings.length * 150)
             
             siblings.each ->
                 sibling = jq this
-                maxWidth = maxWidth - 40
+                maxWidth = maxWidth - 150
                 sibling.stop().animate({width: maxWidth}, 'easeInOutBack')
                 
             ignoreNext = true

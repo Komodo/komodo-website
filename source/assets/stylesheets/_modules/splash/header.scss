@@ -240,7 +240,7 @@
         
         & > figure.primary
         {
-            width: 960px;
+            width: 980px;
         }
         
         & > figure:not(.primary)
@@ -249,25 +249,11 @@
             position: absolute;
         }
         
-        & > figure.cupertino
-        {
-            z-index: 9;
-            background-image: url(../images/screenshots/splash/web-cupertino.png);
-            width: 1040px;
-        }
-        
-        & > figure.base16
-        {
-            z-index: 8;
-            background-image: url(../images/screenshots/splash/web-base16.png);
-            width: 1120px;
-        }
-        
-        & > figure.redmond
+        & > figure.classic
         {
             z-index: 7;
-            background-image: url(../images/screenshots/splash/web-redmond.png);
-            width: 1200px;
+            background-image: url(../images/screenshots/splash/web-classic.png);
+            width: 1130px;
         }
         
         & > figure.solarized
@@ -423,15 +409,15 @@
             &#selector-vcs
             {
                 margin-left: -390px;
-                bottom: 200px;
-                width: 113px;
+                bottom: 198px;
+                width: 122px;
                 height: 28px;
             }
             
             &#selector-unittesting
             {
-                margin-left: -50px;
-                bottom: 200px;
+                margin-left: -20px;
+                bottom: 198px;
                 width: 97px;
                 height: 28px;
             }
