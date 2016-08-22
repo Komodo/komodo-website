@@ -245,19 +245,77 @@
                 <h2>What's New</h2>
             </div>
             
-            <div class="no_tabs">
-                <!--
+            <div class="tabs">
                 <ul>
-                    < % group.groups.each() do |subgroup| %>
                     <li>
-                        <a href="#< %= subgroup.id %>">< %= subgroup.name %></a>
+                        <a href="#101">10.1</a>
                     </li>
-                    < % end %>
+                    <li>
+                        <a href="#10">10</a>
+                    </li>
                 </ul>
-                -->
+                <ul id="101" class="features">
+                    <li>
+                        <figure style="background-image: url(/assets/images/screenshots/features/tutorial.png)"></figure>
+                        <div class="inner">
+                            <strong>Tutorial Tool (IDE)</strong>
+                            <div class="description ">
+                                    <p>Write and use tutorials that will run in Komodo. We are using this mechanic ourselves with the <strong>introduction of some useful &quot;getting started&quot; tutorials</strong>. The possiblities here are endless, you could learn how to program in a new language or framework completely from Komodo, or use it as an <strong>educational tool</strong> for the classroom. We&#39;re excited to see where the community will take this. Tutorials <strong>can be accessed via your Toolbox</strong>.</p>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <figure style="background-image: url(/assets/images/screenshots/features/forcepush.png)"></figure>
+                        <div class="inner">
+                            <strong>Publishing Improvements (IDE)</strong>
+                            <div class="description ">
+                                    <p>You can now <strong>force push</strong> and <strong>force pull files</strong>, which is incredibly useful for workflows where all you ever do is upload changes. Additionally we&#39;re introducing a <strong>dynamic toolbar button</strong> for Publishing actions, letting you quickly access common publishing tasks.</p>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <strong>Language Updates</strong>
+                            <div class="description ">
+                                    <p>We&#39;ve added support for <strong>Mustache templating</strong> as well as support for <strong>syntax checking in Angular files</strong>. Additionally our <strong>Gulp integration</strong> has been extended to support <strong>Gulp.babel tasks</strong>.</p>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                    <li>
+                        <div class="inner">
+                            <strong>And tons of little things</strong>
+                            <div class="description extra markdown">
+                                    <ul>
+<li>Global font settings</li>
+<li>New branch switching statusbar widget for Git and Mercurial</li>
+<li>Various improvements to the commit dialog</li>
+<li>VSCode Keybinding set (for converts)</li>
+<li>Improved user experience for the color scheme editor</li>
+<li>Better HiDPI support for Linux</li>
+<li>Find results can now optionally open in file tabs</li>
+<li>Added missing Laravel Blade directives (<a href="https://github.com/Komodo/KomodoEdit/pull/1406">thanks to lagbox!</a>)</li>
+<li>Added RGBA support to our color picker (<a href="https://github.com/Komodo/KomodoEdit/pull/1883">thanks to Defman!</a>)</li>
+<li>Improved multi-caret behavior</li>
+<li>Various codeintel improvements</li>
+<li>Performance improvements</li>
+<li>Improved multi-window stability</li>
+<li>And tons more (see the <a href="http://komodoide.com/changelog/latest/">changelog</a>)</li>
+</ul>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
                 <ul id="10" class="features">
                     <li>
-                        <img src="/assets/images/screenshots/features/chromedebug.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/chromedebug.png)"></figure>
                         <div class="inner">
                             <strong>Chrome Remote Debugging (IDE)</strong>
                             <div class="description ">
@@ -267,7 +325,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/gulp.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/gulp.png)"></figure>
                         <div class="inner">
                             <strong>Gulp, Grunt, NPM task runner Integration (IDE)</strong>
                             <div class="description ">
@@ -277,7 +335,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/cordova.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/cordova.png)"></figure>
                         <div class="inner">
                             <strong>PhoneGap & Cordova Integration (IDE)</strong>
                             <div class="description ">
@@ -287,7 +345,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/react.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/react.png)"></figure>
                         <div class="inner">
                             <strong>Support For React, Ember, Angular, TypeScript, ES6</strong>
                             <div class="description ">
@@ -297,7 +355,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/rubydebug.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/rubydebug.png)"></figure>
                         <div class="inner">
                             <strong>Ruby 2.1+ Debugging (IDE)</strong>
                             <div class="description ">
@@ -307,7 +365,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/symbol.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/symbol.png)"></figure>
                         <div class="inner">
                             <strong>Symbol Browser (IDE)</strong>
                             <div class="description ">
@@ -317,7 +375,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/ui.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/ui.png)"></figure>
                         <div class="inner">
                             <strong>New Interface</strong>
                             <div class="description ">
@@ -327,7 +385,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/wizard.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/wizard.png)"></figure>
                         <div class="inner">
                             <strong>First Start Wizard</strong>
                             <div class="description ">
@@ -337,7 +395,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/keybinds.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/keybinds.png)"></figure>
                         <div class="inner">
                             <strong>New Default Keybindings</strong>
                             <div class="description ">
@@ -347,7 +405,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/keybinds2.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/keybinds2.png)"></figure>
                         <div class="inner">
                             <strong>Other Editor Keybindings</strong>
                             <div class="description ">
@@ -357,7 +415,7 @@
                         <div class="clearfix"></div>
                     </li>
                     <li>
-                        <img src="/assets/images/screenshots/features/vcs.png">
+                        <figure style="background-image: url(/assets/images/screenshots/features/vcs.png)"></figure>
                         <div class="inner">
                             <strong>New Version Control UX</strong>
                             <div class="description ">
