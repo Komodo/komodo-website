@@ -113,13 +113,20 @@
                 margin: 15px 0;
                 padding-bottom: 15px;
                 text-align: left;
-                display: flex;
                 align-items: center;
                 
-                & > img
+                @include media(min-width 760px)
                 {
-                    max-width: 400px;
+                    display: flex;
+                }
+                
+                & > figure
+                {
+                    min-width: 400px; /* cause width isnt being respected? */
+                    height: 200px;
                     margin-right: 15px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
                 
                 &:not(:last-child)

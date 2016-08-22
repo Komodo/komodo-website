@@ -4,6 +4,43 @@
   icon: star
   groups:
     -
+      name: 10.1
+      id: 101
+      items:
+        - 
+          name: Tutorial Tool (IDE)
+          markdown: true
+          description: Write and use tutorials that will run in Komodo. We are using this mechanic ourselves with the **introduction of some useful "getting started" tutorials**. The possiblities here are endless, you could learn how to program in a new language or framework completely from Komodo, or use it as an **educational tool** for the classroom. We're excited to see where the community will take this. Tutorials **can be accessed via your Toolbox**.
+          img: tutorial.png
+        - 
+          name: Publishing Improvements (IDE)
+          markdown: true
+          description: You can now **force push** and **force pull files**, which is incredibly useful for workflows where all you ever do is upload changes. Additionally we're introducing a **dynamic toolbar button** for Publishing actions, letting you quickly access common publishing tasks.
+          img: forcepush.png
+        - 
+          name: Language Updates
+          markdown: true
+          description: We've added support for **Mustache templating** as well as support for **syntax checking in Angular files**. Additionally our **Gulp integration** has been extended to support **Gulp.babel tasks**.
+        - 
+          name: And tons of little things
+          markdown: true
+          class_names: extra markdown
+          description: |
+            * Global font settings
+            * New branch switching statusbar widget for Git and Mercurial
+            * Various improvements to the commit dialog
+            * VSCode Keybinding set (for converts)
+            * Improved user experience for the color scheme editor
+            * Better HiDPI support for Linux
+            * Find results can now optionally open in file tabs
+            * Added missing Laravel Blade directives ([thanks to lagbox!](https://github.com/Komodo/KomodoEdit/pull/1406))
+            * Added RGBA support to our color picker ([thanks to Defman!](https://github.com/Komodo/KomodoEdit/pull/1883))
+            * Improved multi-caret behavior
+            * Various codeintel improvements
+            * Performance improvements
+            * Improved multi-window stability
+            * And tons more (see the [changelog](http://komodoide.com/changelog/latest/))
+    -
       name: 10
       id: 10
       items:
