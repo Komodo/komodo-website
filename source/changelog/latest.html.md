@@ -11,6 +11,49 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 10.1.0
+
+ * **Tutorial Tool (IDE only):**
+    Write and use tutorials that will run in Komodo. We are using this mechanic
+    ourselves with the introduction of some useful "getting started" tutorials.
+    The possiblities here are endless, you could learn how to program in a new
+    language or framework completely from Komodo, or use it as an educational
+    tool for the classroom. We're excited to see where the community will take
+    this. Tutorials can be accessed via your Toolbox.
+    
+ * **Publishing Improvements (IDE only):**
+    You can now force push and force pull files, which is incredibly useful for
+    workflows where all you ever do is upload changes. Additionally we're
+    introducing a dynamic toolbar button for Publishing actions, letting you
+    quickly access common publishing tasks.
+    
+ * **Language Updates:**
+    We've added support for Mustache templating as well as support for syntax
+    checking in Angular files. Additionally our Gulp integration has been
+    extended to support Gulp.babel tasks.
+    
+ * **Other Mentionables:**
+    * Support for Mustache templating
+    * Syntax checking for Angular.js HTML
+    * VSCode Keybinding set (for converts)
+    * Force push and force pull support for Publishing
+    * New dynamic button for Publishing
+    * New branch switching statusbar widget for Git and Mercurial
+    * Various improvements to the commit dialog
+    * Support for gulp.babel in our gulp integration
+    * Global font settings
+    * Improved user experience for the color scheme editor
+    * Better HiDPI support for Linux
+    * New preference to open find results in file tabs
+    * Added missing Laravel Blade directives (thanks to lagbox!)
+    * Added RGBA support to our color picker (thanks to Defman!)
+    * Improved multi-caret behavior
+    * Various codeintel improvements
+    * More performance improvements
+    * Improved multi-window stability
+    * And tons more ([See below](#details))
+
+
 ### 10.0.1
 
  [See below](#details)
@@ -123,7 +166,7 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 * Improved color picker UI and UX
 * New color scheme editor
 * New UI SDK (used in our new [First Start Wizard](https://github.com/Komodo/KomodoEdit/blob/10.0.0-alpha1/src/chrome/komodo/content/startupWizard/startupWizard.js#L53))
-* and much much more (see below) ..
+* and much much more ([See below](#details)) ..
 
 <a name="details"></a>
 
@@ -132,6 +175,122 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 10.1.0
+
+*   Analytics: Analytics are now opt-out instead of opt-in.
+*   Analytics: Track what features are popular by recording clicks on widgets and side toolbar buttons (only tracks the click, nothing else).
+*   Codeintel: Add ability to exclude folders from codeintel scans - fixes [#195](https://github.com/Komodo/KomodoEdit/issues/195).
+*   Codeintel: Auto-restart if the process exits for any reason - fixes [#1350](https://github.com/Komodo/KomodoEdit/issues/1350).
+*   Codeintel: JavaScript: Export members as variables to prior scopes in anonymous function calls - fixes [#1144](https://github.com/Komodo/KomodoEdit/issues/1144).
+*   Codeintel: Less: Better disambiguation of properties vs. nested selectors - fixes [#1370](https://github.com/Komodo/KomodoEdit/issues/1370).
+*   Codeintel: Normalize paths before storing them in the database - fixes [#1644](https://github.com/Komodo/KomodoEdit/issues/1644).
+*   Codeintel: Perl: Fixed goto-definition for various dereferences - fixes [#1514](https://github.com/Komodo/KomodoEdit/issues/1514).
+*   Codeintel: PHP: Actually ignore functions tagged with "@ignore" from being hits - fixes [#1672](https://github.com/Komodo/KomodoEdit/issues/1672).
+*   Codeintel: PHP: Fixed error showing inherited method calltips - fixes [#1638](https://github.com/Komodo/KomodoEdit/issues/1638).
+*   Codeintel: Ruby: Fixed stdlib generation to include left-out methods - fixes [#1389](https://github.com/Komodo/KomodoEdit/issues/1389).
+*   Codeintel: SCSS: Added SCSS-specific at rules (Sass too) - fixes [#1668](https://github.com/Komodo/KomodoEdit/issues/1668).
+*   ColorSchemes: Classic: Fix menupopup color not contrasting - fixes [#1930](https://github.com/Komodo/KomodoEdit/issues/1930).
+*   Console: You can now select a different context by typing /windows.
+*   CVS: Fix issue where status results were not making it into Komodo.
+*   Dbgp: Chrome: Fixed display of global variables and correctly watch closure variables - fixes [#1796](https://github.com/Komodo/KomodoEdit/issues/1796).
+*   Dbgp: Chrome: Fixed expanding multiple nested levels of objects in variables view - fixes [#1794](https://github.com/Komodo/KomodoEdit/issues/1794).
+*   Dbgp: Chrome: Support expressions for "property_get" along with unit tests - fixes [#1785](https://github.com/Komodo/KomodoEdit/issues/1785).
+*   Debug: Ruby: Do not save "./.byebug_history" files in the cwd - fixes [#1454](https://github.com/Komodo/KomodoEdit/issues/1454).
+*   Debug: Ruby: Redirected STDOUT plays nicely with libraries - fixes [#1453](https://github.com/Komodo/KomodoEdit/issues/1453).
+*   Django: Fix linting when DJANGO_SETTINGS_MODULE env variable exists - fixes [#1646](https://github.com/Komodo/KomodoEdit/issues/1646).
+*   Editing: Indent: Added new smart indent option to not line up continuing statements - fixes [#1427](https://github.com/Komodo/KomodoEdit/issues/1427).
+*   Editor: Added "wrap selection with multiple carets" command - fixes [#1780](https://github.com/Komodo/KomodoEdit/issues/1780).
+*   Editor: Added commands for remaining on the current line when moving/selecting by words/word parts - fixes [#1219](https://github.com/Komodo/KomodoEdit/issues/1219).
+*   Editor: Added in-line selection duplicate left/right commands.
+*   Editor: Added new command to add next word or substring to the caret set - fixes [#1131](https://github.com/Komodo/KomodoEdit/issues/1131).
+*   Editor: Allow color hyperlinks from any language (excluding color constants).
+*   Editor: Be more consistent when adding words or substrings to the caret set - fixes [#1903](https://github.com/Komodo/KomodoEdit/issues/1903).
+*   Editor: Do not show "go to definition" hyperlinks in comments and strings - fixes [#1869](https://github.com/Komodo/KomodoEdit/issues/1869).
+*   Editor: Fix color hyperlinks not working after initial use - fixes [#1876](https://github.com/Komodo/KomodoEdit/issues/1876).
+*   Editor: Fixed issue where history back/forward stopped working (stopped recording).
+*   Editor: indent: Added commands for indent/dedent that always work on single lines - fixes [#1323](https://github.com/Komodo/KomodoEdit/issues/1323).
+*   Editor: indent: Do not dedent by tab width if space indentation is used - fixes [#1744](https://github.com/Komodo/KomodoEdit/issues/1744).
+*   Editor: multi caret selection supports substring fixes [#1904](https://github.com/Komodo/KomodoEdit/issues/1904).
+*   Editor: Multiple select add next word works with non-word selections now - fixes [#1558](https://github.com/Komodo/KomodoEdit/issues/1558).
+*   Editor: Refactored line/selection duplicate up/down to handle selections correctly - fixes [#1353](https://github.com/Komodo/KomodoEdit/issues/1353).
+*   Editor: Show CSS color picker in Sass files - fixes [#1815](https://github.com/Komodo/KomodoEdit/issues/1815).
+*   Find: You can now choose to have find results open in file tabs (instead of bottom panel).
+*   Gulp: Added support for gulp.babel.
+*   Icons: Don't render two reload icons.
+*   Keybindings: Allow Shift+backspace fixes [#1723](https://github.com/Komodo/KomodoEdit/issues/1723).
+*   Keybindings: word select incorrect key binding.
+*   Lang: Initial support for Handlebars - fixes [#1449](https://github.com/Komodo/KomodoEdit/issues/1449).
+*   Lang: PHP: Fixed syntax highlighting of short PHP tags in HTML strings - fixes [#1773](https://github.com/Komodo/KomodoEdit/issues/1773).
+*   Languages: Associate `*.mustache` files with Mustache language - fixes [#1432](https://github.com/Komodo/KomodoEdit/issues/1432).
+*   Languages: Associate `*.ru` files with Ruby - fixes [#1435](https://github.com/Komodo/KomodoEdit/issues/1435).
+*   Languages: New Laravel Blade directives from lagbox.
+*   Lint: AngularJS: Lint AngularJS as HTML5 - fixes [#1448](https://github.com/Komodo/KomodoEdit/issues/1448).
+*   Lint: HTML5: Do not force HTML(4) checking on XHTML5 documents - fixes [#944](https://github.com/Komodo/KomodoEdit/issues/944).
+*   Lint: JavaScript: Do not report unused variables twice - fixes [#1725](https://github.com/Komodo/KomodoEdit/issues/1725).
+*   Lint: JavaScript: Respect JSHint linting preference - fixes [#1701](https://github.com/Komodo/KomodoEdit/issues/1701).
+*   Lint: SASS: Fixed incorrect word for SASS linter popup - fixes [#1823](https://github.com/Komodo/KomodoEdit/issues/1823).
+*   Lint: Sass: Properly recognize errors - fixes [#1821](https://github.com/Komodo/KomodoEdit/issues/1821).
+*   Main:ask to save dirty files once, fixes [#1718](https://github.com/Komodo/KomodoEdit/issues/1718).
+*   OSX: Ensure view is visible after un-hide - fixes [#564](https://github.com/Komodo/KomodoEdit/issues/564).
+*   Other: Improve multi-window stability - fixes [#1695](https://github.com/Komodo/KomodoEdit/issues/1695).
+*   Performance: Improve window activation detection, removing false positives.
+*   PHP: Added hidden preference for PHP interpreter output timeout - fixes [#1684](https://github.com/Komodo/KomodoEdit/issues/1684).
+*   Prefs: Fix help button link on project/file level prefs - fixes [#1838](https://github.com/Komodo/KomodoEdit/issues/1838).
+*   Profile: Ignore errors when asked and the source directory does not exist.
+*   Projects: Fixed project widget resizing not working to un-collapse - fixes [#1483](https://github.com/Komodo/KomodoEdit/issues/1483).
+*   Pub dialog:Allow Force Push/Pull [#148](https://github.com/Komodo/KomodoEdit/issues/148).
+*   Publishing: detect remote removed + local.edited conflict fixes [#1832](https://github.com/Komodo/KomodoEdit/issues/1832).
+*   Publishing: Pull/Force enabled in Place [#148](https://github.com/Komodo/KomodoEdit/issues/148).
+*   Publishing: Add dynamic button.
+*   Publishing: force-pull/push-all in dialog w/warning.
+*   Publishing: Force push from Places fixes [#148](https://github.com/Komodo/KomodoEdit/issues/148).
+*   Publishing: skin publishing UI.
+*   Rails: Fixed runtime errors in Rails userscripts - fixes [#1429](https://github.com/Komodo/KomodoEdit/issues/1429).
+*   Ruby: Fixed lexing of numbers and ranges in Ruby - fixes [#1375](https://github.com/Komodo/KomodoEdit/issues/1375), 1410.
+*   SCC: Added a new statusbar component for version control which shows the current branch and allows switching to other branches.
+*   SCC: Commit: Fixed keyboard navigation.
+*   SCC: Commit: Improve selection UX for the commit dialog.
+*   SCC: Commit: Made commit textbox taller, making multi-line commits easier.
+*   SCC: Commit: Made the selection panel resizable.
+*   SCC: Commit: You can now once again commit files using just your keyboard.
+*   SCC: Do not assume places selection as context for committing - fixes [#1757](https://github.com/Komodo/KomodoEdit/issues/1757).
+*   SCC: Remove flickering from commit widget when saving files.
+*   SCC: Version control is now contextual to the current file again.
+*   SCC: Widget: Made the SCC widgets lazy - only reload if they are visible.
+*   Scheme Editor: Fixed issue where it was impossible to read certain text - fixes [#1203](https://github.com/Komodo/KomodoEdit/issues/1203).
+*   Scheme Editor: Improve naming of color scheme properties, making them easier to understand - fixes [#1490](https://github.com/Komodo/KomodoEdit/issues/1490).
+*   Schemes: Adding VSCode key binding scheme.
+*   Scintilla: Do not re-scale mouse dwell xy coordinates on Linux - fixes [#1811](https://github.com/Komodo/KomodoEdit/issues/1811).
+*   Scintilla: Fix font-size calculation with larger DPI settings in Linux - fixes [#1531](https://github.com/Komodo/KomodoEdit/issues/1531).
+*   Scintilla: JavaScript: Fixed resetting of line states in ES6 literal syntax highlighting - fixes [#1809](https://github.com/Komodo/KomodoEdit/issues/1809).
+*   SDK: Added the filestatus SDK.
+*   Search: Only show the relative path (not full path) in search results - fixes [#1722](https://github.com/Komodo/KomodoEdit/issues/1722).
+*   Servers: Preserve configured servers on major upgrades - fixes [#1524](https://github.com/Komodo/KomodoEdit/issues/1524).
+*   Spellcheck: Added tooltip for misspelled words - fixes [#1688](https://github.com/Komodo/KomodoEdit/issues/1688).
+*   Spellcheck: Fix some cases of suggestions being inserted at the end of the document - fixes [#1593](https://github.com/Komodo/KomodoEdit/issues/1593).
+*   Stability: OSX: App nap has been disabled on Komodo IDE (not edit), as we suspect it has been causing Komodo to crash - fixes [#1007](https://github.com/Komodo/KomodoEdit/issues/1007).
+*   Tcl: Fixed incorrect case of '#' comment detection - fixes [#1570](https://github.com/Komodo/KomodoEdit/issues/1570).
+*   Tcl: Highlight "${var}"-style variables too when clicking on them - fixes [#1831](https://github.com/Komodo/KomodoEdit/issues/1831).
+*   Troubleshooting: Fix "reset everything" not working - fixes [#1571](https://github.com/Komodo/KomodoEdit/issues/1571).
+*   Tutorial-GS: Callout toolbar in step 1 fixes [#1864](https://github.com/Komodo/KomodoEdit/issues/1864).
+*   Tutorial-gs: Inst. to enable toolbar fixes [#1864](https://github.com/Komodo/KomodoEdit/issues/1864).
+*   Tutorials: Toolbox Tutorial.
+*   Tutorials: Version Control tutorial added.
+*   UI: Added a "Show Side Toolbar" menu entry to View > Toolbars.
+*   UI: Fix file dropdown menu showing inconsistent file status info - fixes [#1763](https://github.com/Komodo/KomodoEdit/issues/1763).
+*   UI: Icons can now be colored individually - fixes [#1552](https://github.com/Komodo/KomodoEdit/issues/1552).
+*   UI: Limit toolbox icon sizes - fixes [#1605](https://github.com/Komodo/KomodoEdit/issues/1605).
+*   UI: You can now change font face/size/spacing globally in appearance preferences.
+*   Unittest: PHP: Look for phpunit.phar in $PATH as well - fixes [#1422](https://github.com/Komodo/KomodoEdit/issues/1422).
+*   Userscripts: Respect global indentation settings in the userscript editor - fixes [#1786](https://github.com/Komodo/KomodoEdit/issues/1786).
+*   UX: Improved Dynamic button updating, this affects cordova, grunt, gulp, npm, phonegap.
+*   UX: indent: Mention that per-language indent changes do not reflect immediately - fixes [#1246](https://github.com/Komodo/KomodoEdit/issues/1246).
+*   UX:properly save/restore widget state. fixes [#1519](https://github.com/Komodo/KomodoEdit/issues/1519).
+*   Vi keys: Fixed '%' (brace matching) to match vi - fixes [#1879](https://github.com/Komodo/KomodoEdit/issues/1879).
+*   Vi keys: Handle visual block insert command better.
+*   Win-intgr: suppress error we are expecting fixes [#220](https://github.com/Komodo/KomodoEdit/issues/220).
+*   Workspace: Save window default layout fixes [#1769](https://github.com/Komodo/KomodoEdit/issues/1769).
 
 ### 10.0.1
 
