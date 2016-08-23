@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Mon, 22 Aug 2016 21:03:54 -0700</lastBuildDate>
+        <lastBuildDate>Mon, 22 Aug 2016 21:51:41 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 10.1 Released - Tutorial Tool, Publishing Improvements and More</title>
+                <link>http://komodoide.com/blog/komodo-10-1-released-tutorial-tool-publishing-improvements-and-more</link>
+                <pubDate>Mon, 22 Aug 2016 17:00:00 -0700</pubDate>
+                <description>Komodo 10.1 is here! This is a great little release because we spent almost all of it focusing on minor enhancement and bug fixes.  Head over to our download page to try Komodo 10.1 now [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-1-released-tutorial-tool-publishing-improvements-and-more</guid>
+            </item>
             <item>
                 <title>The History of Komodo, A Trip Down Memory Lane</title>
                 <link>http://komodoide.com/blog/the-history-of-komodo</link>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 15 Jun 2016 17:00:00 -0700</pubDate>
                 <description>We hope everyone has been enjoying Komodo X so far. Today we&#x27;re releasing our first update, which is focussed entirely on stability and primarily resolves bugs introduced in 10.0.0 as well as a few longer standing issues [...]</description>
                 <guid>http://komodoide.com/blog/komodo-10-0-1-released</guid>
-            </item>
-            <item>
-                <title>Komodo X Webinar: Questions and Answers</title>
-                <link>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</link>
-                <pubDate>Thu, 9 Jun 2016 17:00:00 -0700</pubDate>
-                <description>On June 6, 2016 at 10 am PDT, NathanR and myself (CareyH) introduced Komodo X to the world (just under 100 people…) in a live webcast. Our goal was to show off some of the new features in action and let people ask questions about what they heard, saw [...]</description>
-                <guid>http://komodoide.com/blog/komodo-x-webinar-questions-and-answers</guid>
             </item>
     </channel>
 </rss>
