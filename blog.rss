@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 6 Sep 2016 12:03:56 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 6 Sep 2016 13:18:18 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Komodo 10.1.1 Released</title>
+                <link>http://komodoide.com/blog/komodo-10-1-1-released</link>
+                <pubDate>Mon, 5 Sep 2016 17:00:00 -0700</pubDate>
+                <description>Hope everyone is enjoying the changes in 10.1! Virtually the only &quot;real&quot; bug we&#x27;ve seen reported by users was the issue where &quot;Find all&quot; was failing [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-1-1-released</guid>
+            </item>
             <item>
                 <title>Komodo 10.1 Released - Tutorial Tool, Publishing Improvements and More</title>
                 <link>http://komodoide.com/blog/komodo-10-1-released-tutorial-tool-publishing-improvements-and-more</link>
@@ -30,18 +37,18 @@
                 <guid>http://komodoide.com/blog/version-control-widget</guid>
             </item>
             <item>
-                <title>HotKey Conundrum</title>
-                <link>http://komodoide.com/blog/hotkey-conundrum</link>
-                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
-                <description>As you may know by now (or maybe you don&#x27;t, which is ok since I&#x27;m going to follow up by stating the fact anyway...), Komodo has been in development for over 15 years now [...]</description>
-                <guid>http://komodoide.com/blog/hotkey-conundrum</guid>
-            </item>
-            <item>
                 <title>Komodo 10.1 Beta Now Available</title>
                 <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
                 <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
                 <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
                 <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
+            </item>
+            <item>
+                <title>HotKey Conundrum</title>
+                <link>http://komodoide.com/blog/hotkey-conundrum</link>
+                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
+                <description>As you may know by now (or maybe you don&#x27;t, which is ok since I&#x27;m going to follow up by stating the fact anyway...), Komodo has been in development for over 15 years now [...]</description>
+                <guid>http://komodoide.com/blog/hotkey-conundrum</guid>
             </item>
             <item>
                 <title>Case Study: Lua Debugging in Komodo</title>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 23 Jun 2016 17:00:00 -0700</pubDate>
                 <description>Komodo has always been a very fast IDE. So much so that combined with its minimalistic UI many users tend to confuse Komodo IDE with an editor. Of course Komodo is an editor too, but to call it just an editor would be doing it a disservice [...]</description>
                 <guid>http://komodoide.com/blog/how-we-made-komodo-x-even-faster</guid>
-            </item>
-            <item>
-                <title>Komodo 10.0.1 Released</title>
-                <link>http://komodoide.com/blog/komodo-10-0-1-released</link>
-                <pubDate>Wed, 15 Jun 2016 17:00:00 -0700</pubDate>
-                <description>We hope everyone has been enjoying Komodo X so far. Today we&#x27;re releasing our first update, which is focussed entirely on stability and primarily resolves bugs introduced in 10.0.0 as well as a few longer standing issues [...]</description>
-                <guid>http://komodoide.com/blog/komodo-10-0-1-released</guid>
             </item>
     </channel>
 </rss>
