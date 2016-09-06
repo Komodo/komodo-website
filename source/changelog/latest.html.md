@@ -11,6 +11,10 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 <a name="whatsnew"></a>
 ## What's New in Komodo IDE/Edit
 
+### 10.1.1
+
+ [See below](#details)
+
 ### 10.1.0
 
  * **Tutorial Tool (IDE only):**
@@ -175,6 +179,21 @@ These Release Notes cover [what's new](#whatsnew), [detailed changes and bug fix
 Changes related to Debugging, Interactive Shells, Source Code
 Control, HTTP Inspector, Rx Toolkit, Code Browser, Database Explorer
 and the Sections List only apply to Komodo IDE only.
+
+### 10.1.1
+
+*   Colors: Fix side toolbar icon color not respecting color pref - fixes [#1962](https://github.com/Komodo/KomodoEdit/issues/1962).
+*   Elastic tabstops: Fix elastic tabstops no longer being packaged with Komodo - fixes [#1989](https://github.com/Komodo/KomodoEdit/issues/1989).
+*   Find: Fix "Find All" from failing - fixes [#1964](https://github.com/Komodo/KomodoEdit/issues/1964).
+*   Linting: AngularJS: Show HTML warnings when requested - fixes [#1952](https://github.com/Komodo/KomodoEdit/issues/1952).
+*   Logging: Increase robustness of error logging - possible fix for random crashes [#1007](https://github.com/Komodo/KomodoEdit/issues/1007).
+*   PDK/TDK: fix toolbar button not showing, fixes [#1956](https://github.com/Komodo/KomodoEdit/issues/1956).
+*   SCC: Fix history widget not automatically updating.
+*   Tutorials: Close callout if window is moved/resized - fixes [#1979](https://github.com/Komodo/KomodoEdit/issues/1979).
+*   Tutorials: Fix tutorial window undocking when another window is opened - fixes [#1971](https://github.com/Komodo/KomodoEdit/issues/1971).
+*   Tutorials: Fix window resizing when tutorial is opened.
+*   Tutorials: Fix wrong indentation in properties dialog - fixes [#1982](https://github.com/Komodo/KomodoEdit/issues/1982).
+*   UI: Notification pane toggle buttons don't reflex state - fixes [#1965](https://github.com/Komodo/KomodoEdit/issues/1965).
 
 ### 10.1.0
 
