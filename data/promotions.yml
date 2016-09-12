@@ -4,15 +4,15 @@ splash:
   tooltip: ""
   link: "/features"
 nav: 
-  enabled: false
+  enabled: true
   description: "ON SALE"
-  tooltip: ""
+  tooltip: Save $50 on Komodo until Sept 30th using code BTW50
   link: "/pricing"
 buttons:
   enabled: false
 pricing: 
-  enabled: false
-  description: Do you have a promo code?<br/>Enter the code during checkout to get your discount.
+  enabled: true
+  description: Save $50 on Komodo until Sept 30th using code BTW50
   tooltip: ""
 sale:
   prostudio: false
@@ -30,22 +30,22 @@ global:
   link: /pricing
 startpage: 
   latestEdit: 
-    enabled: true
+    enabled: false
     description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   latestIde: 
-    enabled: true
+    enabled: false
     description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   latestTrial: 
-    enabled: true
+    enabled: false
     description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
   old: 
-    enabled: true
+    enabled: false
     description: "Launch<br/>Sale!"
     tooltip: ""
     link: "http://komodoide.com/pricing"
