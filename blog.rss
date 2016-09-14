@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 14 Sep 2016 09:11:58 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 14 Sep 2016 12:11:11 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Carey in Cascadia(Fest)</title>
+                <link>http://komodoide.com/blog/carey-in-cascadia-fest</link>
+                <pubDate>Wed, 14 Sep 2016 17:00:00 -0700</pubDate>
+                <description>As none of you may know, I had the privilege of attending the CascadiaFest 2016 conference this year, the gathering of people working in software from the Cascade region in the North America as well as people from all over the world [...]</description>
+                <guid>http://komodoide.com/blog/carey-in-cascadia-fest</guid>
+            </item>
             <item>
                 <title>Komodo 10.1.1 Released</title>
                 <link>http://komodoide.com/blog/komodo-10-1-1-released</link>
@@ -37,18 +44,18 @@
                 <guid>http://komodoide.com/blog/version-control-widget</guid>
             </item>
             <item>
-                <title>Komodo 10.1 Beta Now Available</title>
-                <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
-                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
-                <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
-                <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
-            </item>
-            <item>
                 <title>HotKey Conundrum</title>
                 <link>http://komodoide.com/blog/hotkey-conundrum</link>
                 <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
                 <description>As you may know by now (or maybe you don&#x27;t, which is ok since I&#x27;m going to follow up by stating the fact anyway...), Komodo has been in development for over 15 years now [...]</description>
                 <guid>http://komodoide.com/blog/hotkey-conundrum</guid>
+            </item>
+            <item>
+                <title>Komodo 10.1 Beta Now Available</title>
+                <link>http://komodoide.com/blog/komodo-10-1-beta-now-available</link>
+                <pubDate>Thu, 11 Aug 2016 17:00:00 -0700</pubDate>
+                <description>The Komodo 10.1 beta is now available. This is a big update that focusses primarily on what our community has been asking us for. Over 100 bugs were fixed and more will be addressed before this release turns stable [...]</description>
+                <guid>http://komodoide.com/blog/komodo-10-1-beta-now-available</guid>
             </item>
             <item>
                 <title>Case Study: Lua Debugging in Komodo</title>
@@ -105,13 +112,6 @@
                 <pubDate>Wed, 29 Jun 2016 17:00:00 -0700</pubDate>
                 <description>Komodo IDE X adds a ton of new features, many of which targeted at web developers. We realize that while not everyone may consider themselves a web developer, most developers these days will be using web technologies to some degree [...]</description>
                 <guid>http://komodoide.com/blog/10-komodo-features-web-developers-will-love</guid>
-            </item>
-            <item>
-                <title>How We Made Komodo X Even Faster</title>
-                <link>http://komodoide.com/blog/how-we-made-komodo-x-even-faster</link>
-                <pubDate>Thu, 23 Jun 2016 17:00:00 -0700</pubDate>
-                <description>Komodo has always been a very fast IDE. So much so that combined with its minimalistic UI many users tend to confuse Komodo IDE with an editor. Of course Komodo is an editor too, but to call it just an editor would be doing it a disservice [...]</description>
-                <guid>http://komodoide.com/blog/how-we-made-komodo-x-even-faster</guid>
             </item>
     </channel>
 </rss>
