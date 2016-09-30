@@ -4,14 +4,14 @@ splash:
   tooltip: ""
   link: "/features"
 nav: 
-  enabled: true
+  enabled: false
   description: "ON SALE"
   tooltip: Save $50 on Komodo until Sept 30th using code BTW50
   link: "/pricing"
 buttons:
   enabled: false
 pricing: 
-  enabled: true
+  enabled: false
   description: Save $50 on Komodo until Sept 30th using code BTW50
   tooltip: ""
 sale:
