@@ -176,19 +176,37 @@ Based on the the <a href="http://jsbeautifier.org/" target="_blank">jsbeautifier
 
 <h2>Usage</h2>
 
-<p><b>Goto to Tools</b> -&gt; <b>Beautify js</b> and select an option, or right-click on your file</p>
+<p><b>Goto to Tools</b> -&gt; <b>Beautify js</b> and select an option, or right-click on your file (context menu)</p>
 
 <ul>
 <li><strong><em>Beautify (auto detect)</em></strong><br>
-Beautify selected HTML/CSS/javascript (this will be auto-detected).</li>
+Beautify HTML/CSS/javascript (this will be auto-detected).<br>  
+<em>Selection or document</em>
+</li>
 <li><strong><em>Beautify HTML</em></strong><br>
-Beautify selected HTML.</li>
+Beautify HTML.<br>
+<em>Selection or document</em>
+</li>
 <li><strong><em>Beautify CSS</em></strong><br>
-Beautify selected CSS.</li>
-<li><strong><em>Beautify Javascript</em></strong><br> 
-Beautify selected javascript.</li>
-<li><strong><em>Beautify Settings</em></strong><br> 
-This will open the settings window.</li>
+Beautify CSS.<br>
+<em>Selection or document</em>
+</li>
+<li><strong><em>Beautify Javascript</em></strong><br>
+Beautify javascript.<br>
+<em>Selection or document</em>
+</li>
+<li><strong><em>Minify Javascript</em></strong><br>
+Minify javascript.<br>
+<em>Selection or document</em>
+</li>
+<li><strong><em>Minify CSS</em></strong><br>
+Minify CSS.<br>
+<em>Selection or document</em>
+</li>
+<li><strong><em>Beautify Settings</em></strong><br>
+This will open the settings window.<br>
+<em>Selection or document</em>
+</li>
 </ul>
 
 <h3>Ide only</h3>
@@ -228,8 +246,19 @@ if (extensions.beautifyjs) {
 <p>// Javascript
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify_JS();
-}
-```</p>
+}</p>
+
+<p>// Minify Javascript
+if (extensions.beautifyjs) {
+    extensions.beautifyjs.jsMin();
+}</p>
+
+<p>// Minify CSS
+if (extensions.beautifyjs) {
+    extensions.beautifyjs.cssMin();
+}</p>
+
+<p>```</p>
 
     </div>
 
@@ -269,18 +298,18 @@ if (extensions.beautifyjs) {
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-3553881">
+            <div class="release  0" id="release-4284290">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/2.1/Beautify-js-2.1.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/3.0/Beautify-js-3.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Beautify-js-2.1.xpi
+                                        Beautify-js-3.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/Small bug fix.zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/Added minify functions for js and CSS.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -319,17 +348,17 @@ if (extensions.beautifyjs) {
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-09-30T17:26:59Z">
-            Updated 2 days ago
+        <dd title="2016-10-02T21:48:01Z">
+            Updated 31 minutes ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/2.1">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/3.0">
                 Version 
-                2.1
+                3.0
             </a>
         </dd>
 
@@ -346,7 +375,7 @@ if (extensions.beautifyjs) {
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>20599 downloads</span>
+            <span>20605 downloads</span>
         </dd>
     
         <dt>
