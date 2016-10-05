@@ -6,13 +6,13 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Wed, 5 Oct 2016 12:11:30 -0700</lastBuildDate>
+        <lastBuildDate>Wed, 5 Oct 2016 15:04:28 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
             <item>
                 <title>Creating Your First Android App With Cordova and Komodo IDE</title>
                 <link>http://komodoide.com/blog/creating-your-first-android-app-with-cordova-and-komodo-ide</link>
                 <pubDate>Tue, 4 Oct 2016 17:00:00 -0700</pubDate>
-                <description>We&#x27;ve been seeing a more of our users getting into mobile app development, so we added PhoneGap and Cordova integration in the Komodo X release. Although I&#x27;m not a mobile app developer [...]</description>
+                <description>We&#x27;ve been seeing more of our users getting into mobile app development, so we added PhoneGap and Cordova integration in the Komodo X release. Although I&#x27;m not a mobile app developer [...]</description>
                 <guid>http://komodoide.com/blog/creating-your-first-android-app-with-cordova-and-komodo-ide</guid>
             </item>
             <item>
