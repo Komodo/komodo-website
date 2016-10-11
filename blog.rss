@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Tue, 11 Oct 2016 09:12:13 -0700</lastBuildDate>
+        <lastBuildDate>Tue, 11 Oct 2016 12:04:03 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>Becoming a Regex Wizard with Komodo IDE&#x27;s Rx Toolkit</title>
+                <link>http://komodoide.com/blog/becoming-a-regex-wizard-with-komodo-ides-rx-toolkit</link>
+                <pubDate>Tue, 18 Oct 2016 17:00:00 -0700</pubDate>
+                <description>Quick! Write a regular expression that matches an unbroken sequence of alphanumeric characters and underscores, but does not start with a digit. Whoa, whoa, hold on. Wait a minute. If you are like me [...]</description>
+                <guid>http://komodoide.com/blog/becoming-a-regex-wizard-with-komodo-ides-rx-toolkit</guid>
+            </item>
             <item>
                 <title>Creating Your First Android App With Cordova and Komodo IDE</title>
                 <link>http://komodoide.com/blog/creating-your-first-android-app-with-cordova-and-komodo-ide</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 14 Jul 2016 17:00:00 -0700</pubDate>
                 <description>If you&#x27;ve never run Komodo before or if this is the first time you&#x27;re running a major version (eg. you were using Komodo 9.3 and have just upgraded to Komodo X), then Komodo will show you the First Start Wizard as it loads [...]</description>
                 <guid>http://komodoide.com/blog/first-start-wizard</guid>
-            </item>
-            <item>
-                <title>Under the Hood: Komodo X and Chrome Debugging</title>
-                <link>http://komodoide.com/blog/under-the-hood-komodo-x-and-chrome-debugging</link>
-                <pubDate>Tue, 12 Jul 2016 17:00:00 -0700</pubDate>
-                <description>It is easy to take for granted Komodo IDE&#x27;s superb debugging support. Komodo excels at debugging common scripting languages like Perl, Python, Tcl, and Ruby. It can also debug PHP, Node.js, and XSLT. With Komodo X [...]</description>
-                <guid>http://komodoide.com/blog/under-the-hood-komodo-x-and-chrome-debugging</guid>
             </item>
     </channel>
 </rss>
