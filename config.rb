@@ -3,53 +3,10 @@ helpers Helpers
 
 #activate :imageoptim
 
-set :url_root, "http://komodoide.com/"
+set :url_root, "http://community.komodoide.com/"
 activate :search_engine_sitemap
 
-contentful_space = {cntf: ENV['CONTENTFUL_SPACE']}
-contentful_token = ENV['CONTENTFUL_TOKEN']
-
-activate :contentful do |cntf|
-  cntf.space         = contentful_space
-  cntf.access_token  = contentful_token
-  cntf.cda_query     = { limit: 1000 }
-  cntf.content_types = { posts: '2wKn6yEnZewu2SCCkus4as',
-                         authors: '1kUEViTN4EmGiEaaeC6ouY',
-                         events: '15lufuGEz2oSe24m4eywmi' }
-  cntf.use_preview_api = ENV["KO_QA"] == "true"
-end
-
 pageable = {}
-
-if data.has_key? "cntf" and data.cntf.has_key? "posts"
-  data.cntf.posts.each do |id, post|
-    if /^\d{4}-\d{2}-/.match(post["slug"])
-      post["slug"] = post["slug"].sub(/^(\d{4}-\d{2})-/,'\1/')
-    end
-    
-    proxy "/blog/#{post["slug"]}/index.html", "templates/proxy/blog.html", :locals => { :post => post, :custom_meta => post, :page_title => post.title }, ignore: true
-  end
-  
-  pageable["blog"] = data.cntf.posts
-                      .reject { |k,v| v.tags.include? "press" }
-                      .sort_by { |k,v| v ? v["date"] : false }
-                      .reverse
-  
-  tags().each() do |name,posts|
-    proxy "/blog/tagged/#{name}/index.html", "templates/proxy/tag.html", :locals => { :tag_name => name, :posts => posts, :page_title => name }, ignore: true
-  end
-end
-
-if data.has_key? "cntf" and data.cntf.has_key? "events"
-  data.cntf.events.each do |id, event|
-    proxy "/events/#{event["slug"]}/index.html", "templates/proxy/event.html", :locals => { :event => event, :custom_meta => event, :page_title => event.title }, ignore: true
-  end
-  
-  present = DateTime.now
-  future = present + (365*10)
-  pageable["events"] = data.cntf.events
-                      .sort_by { |k,v| v.startDate < present ? future : v.startDate }
-end
 
 if data.has_key? "resources"
   data.resources.categories.each do |category|
@@ -150,7 +107,7 @@ end
 configure :build do
   is_qa = ENV["KO_QA"] == "true"
   set :is_live, ! is_qa
-  set :site_url, is_qa ? "http://qa.komodoide.com" : "http://komodoide.com"
+  set :site_url, is_qa ? "http://qa.komodoide.com" : "http://community.komodoide.com"
 end
 
 set :css_dir, 'assets/stylesheets'
@@ -164,13 +121,12 @@ page "*", :layout => "default"
 page "json/*", :layout => false
 page "assets/*", :layout => false
 
-set :title, "Komodo IDE"
+set :title, "Komodo IDE Community"
 
-set :description, "One IDE, All Your Favourite Languages. Komodo is the "\
-                  "professional IDE for major web languages, including Python,"\
-                  "PHP, Ruby, Perl, HTML, CSS and JavaScript."
+set :description, "Where the Komodo Community gathers. Participate on our forums,"\
+                  "download or contribute packages, find out how to make Komodo your own."
 
-set :social_description, "Check out @KomodoIDE! One IDE for all major web languages."
+set :social_description, "Check out the @KomodoIDE community!"
 
 set :keywords, "komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,"\
                 "activestate komodo,activestate ide,comodo ide,activestate"\

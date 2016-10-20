@@ -22,12 +22,6 @@
         
         <% post = defined?(post) ? post : false %>
         
-        <% if meta('image', post) %>
-        <meta property="og:image" content="<%= meta('image', post)  %>" />
-        <% else %>
-        <meta property="og:image" content="<%= site_url %>/assets/images/screenshots/splash/mac-splash-php.png" />
-        <% end %>
-
         <link rel="icon" href="/assets/images/favicon.ico">
 
         <!-- Styles -->
@@ -70,18 +64,7 @@
         <!-- Footer -->
         <footer>
             <div class="columns">
-                <div class="navigation">
-                    <h3>Navigation</h3>
-                    <%= get_list(data.footer.nav.navigation) %>
-                </div>
-                <div class="support">
-                    <h3>Support</h3>
-                    <%= get_list(data.footer.nav.support) %>
-
-                    <h3>ActiveState</h3>
-                    <%= get_list(data.footer.nav.activestate) %>
-                </div>
-                <div class="communicate">
+                <div class="social">
                     <%= get_list(data.footer.nav.social, "social") %>
 
                     <p>&nbsp;</p>
@@ -94,8 +77,8 @@
                     <script>
                         document.write('<div class="fb-like" data-href="'+location.href+'" data-layout="button" data-action="recommend" data-show-faces="false" data-share="true"></div>');
                     </script>
-
-                    <h3>Communicate</h3>
+                </div>
+                <div class="communicate">
                     <%= get_list(data.footer.nav.communicate) %>
                 </div>
                 <div class="newsletter">
@@ -106,19 +89,6 @@
                     </form>
                     -->
 
-                    <p>
-                        ActiveState Software Inc.
-                        Suite 1000-1177 West Hastings St.,
-                        Vancouver, BC,
-                        V6E 2K3, Canada
-                    </p>
-                    <p>&nbsp;</p>
-                    <p>
-                        General Enquiries: 778.786.1100 <br>
-                        Fax: 778.786.1133 <br>
-                        Sales: 1.866.631.4581
-                    </p>
-                    <p>&nbsp;</p>
                     <p class="copytrade">
                         © 2016 ActiveState Software Inc. All rights reserved. ActiveState®, Komodo®, ActivePerl®, ActivePython®, ActiveTcl® are registered trademarks of ActiveState. All other marks are property of their respective owners.
                     </p>

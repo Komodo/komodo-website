@@ -1,86 +1,18 @@
 nav: 
-  navigation: 
-    - 
-      name: "Home"
-      link: "/"
-    - 
-      name: "Features"
-    - 
-      name: "Buy & Upgrade"
-      link: "/pricing"
-    - 
-      name: "Try"
-      link: "/download"
-      sub: 
-        - 
-          name: "Archive"
-          link: "http://downloads.activestate.com/Komodo/"
-    - 
-      name: "Customize"
-      sub: 
-        - 
-          name: "Packages"
-          link: "/packages"
-        - 
-          name: "Get Involved"
-          link: "/customize"
-    - 
-      name: "Support"
-      link: "http://forum.komodoide.com/category/support"
-      sub: 
-        - 
-          name: "Documentation"
-          link: "http://docs.komodoide.com/"
-        - 
-          name: "Report Bug"
-          link: "https://github.com/Komodo/KomodoEdit/issues"
-          target: "_blank"
-  support: 
-    - 
-      name: "Documentation"
-      link: "http://docs.komodoide.com/"
-    - 
-      name: "API Reference"
-      link: "http://docs.komodoide.com/SDK/api/commonjs"
-    - 
-      name: "&nbsp;"
-      link: "#"
-    - 
-      name: "Report a Bug"
-      link: "https://github.com/Komodo/KomodoEdit/issues/new"
-      target: "_blank"
-    - 
-      name: "Ask the Community"
-      link: "http://forum.komodoide.com/"
-  activestate: 
-    - 
-      name: "About"
-      link: "http://www.activestate.com/company"
-      target: "_blank"
-    - 
-      name: "Contact"
-      link: "http://www.activestate.com/company/contact-us"
-      target: "_blank"
-    - 
-      name: "Careers"
-      link: "http://www.activestate.com/company/careers"
-      target: "_blank"
   communicate: 
     - 
       name: "Contact Us"
       link: "http://www.activestate.com/company/developer-sales-support-contact"
     - 
-      name: "Blog"
+      name: "Blog / News"
+      link: "http://www.activestate.com/blog"
     - 
-      name: "Forums"
-      link: "http://forum.komodoide.com/"
+      name: "Bug Tracker"
+      link: "https://github.com/Komodo/KomodoEdit/issues"
     - 
-      name: "IRC"
+      name: "IRC Chat"
       link: "http://kiwiirc.com/client/irc.mozilla.org/komodo?nick=komodo_visitor"
       target: "_blank"
-    - 
-      name: "Mailing Lists"
-      link: "http://code.activestate.com/lists#ActiveState"
   social: 
     - 
       name: "Twitter"
@@ -111,9 +43,4 @@ nav:
       name: "StackOverflow"
       img: "icons/sm/stackoverflow-24x24.png"
       link: "http://stackoverflow.com/questions/tagged/komodo"
-      target: "_blank"
-    - 
-      name: "RSS Feed"
-      img: "icons/sm/feed-24x24.png"
-      link: "/blog.rss"
       target: "_blank"

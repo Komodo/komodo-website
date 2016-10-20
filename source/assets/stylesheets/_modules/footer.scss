@@ -10,26 +10,19 @@ footer
     {
         @include outer-container;
 
-        & > .navigation
+        & > .social
         {
-            @include span-columns(2);
-        }
-
-        & > .support
-        {
-            @include shift(0.5);
-            @include span-columns(2);
+            @include span-columns(3);
         }
 
         & > .communicate
         {
-            @include shift(0.5);
-            @include span-columns(3);
+            @include span-columns(4);
         }
 
         & > .newsletter
         {
-            @include span-columns(4);
+            @include span-columns(5);
         }
     }
 

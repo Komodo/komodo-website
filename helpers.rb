@@ -57,6 +57,18 @@ module Helpers
     return File.basename(current_page.path, ".*" )
   end
   
+  def yaml(path)
+    require 'yaml'
+    return YAML.load_file(File.dirname(__FILE__) + path)
+  end
+  
+  def markitdown(source)
+    renderer = Redcarpet::Render::HTML.new(prettify: true)
+    md = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true, :smartypants => true)
+    return md.render(source)
+    #return Tilt['markdown'].new { source }.render()
+  end
+  
   def meta(name, post = false)
     if current_page.data.has_key?(name)
       return current_page.data[name]
@@ -68,17 +80,6 @@ module Helpers
       end
       return false
     end
-  end
-  
-  def get_pages_by_layout(layout)
-    pages = Array.new
-    sitemap.where(:layout.equal => layout).all().each() do |page|
-      pages.push page
-    end
-    pages = pages.sort_by do |page|
-      page.data.date
-    end
-    return pages.reverse()
   end
   
   def get_list(ob, classAttr = "")
@@ -126,79 +127,6 @@ module Helpers
     return r
   end
   
-  def summary(text, length = 250)
-    text = text.gsub(/^#+.*\n/,'') # Strip markdown headers
-    text = text.gsub(/\[(.*?)\](?:\[.*?\])?(?:\(.*?\))?/,'\1') # Strip markdown links
-    text = text.gsub(%r{</?[^>]+?>}, '').gsub(/\n+/,' ') # Strip html and line endings
-    text = text.gsub('Macro Monday - a new macro to dig into every Monday!','')
-    _text = text.split(/[!,.]/)
-    if _text.first().length > length
-      return text[0...250] + " [...]"
-    end
-    
-    summary = _text.shift + "."
-    _text.each() do |sentence|
-      if summary.length + sentence.length > 250
-        break
-      end
-      
-      summary += sentence + "."
-    end
-    
-    suffix = ""
-    if (summary.length != text.length)
-      summary = summary[0...summary.length-1]
-      suffix = " [...]"
-    end
-    
-    return text[0...summary.length] + suffix
-  end
-  
-  def yaml(path)
-    require 'yaml'
-    return YAML.load_file(File.dirname(__FILE__) + path)
-  end
-  
-  def markitdown(source)
-    renderer = Redcarpet::Render::HTML.new(prettify: true)
-    md = Redcarpet::Markdown.new(renderer, fenced_code_blocks: true, :smartypants => true)
-    return md.render(source)
-    #return Tilt['markdown'].new { source }.render()
-  end
-  
-  @@vimeo_cache = {}
-  
-  def vimeo_data(id, attr)
-    unless (@@vimeo_cache.has_key?(id))
-      api_url = "http://vimeo.com/api/v2/video/%s.json" % id
-      @@vimeo_cache[id] = JSON.parse(open(api_url).read).first
-    end
-    
-    data = @@vimeo_cache[id]
-    return data.has_key?(attr) ? data[attr] : nil
-  end
-  
-  def tags()
-    tags = {}
-    posts = data.cntf.posts.sort_by { |k,v| v["date"] }.reverse
-    posts.each() do |id,post|
-      post.tags.each() do |tag|
-        unless tags.has_key? tag
-          tags[tag] = [];
-        end
-        
-        tags[tag].push({
-          "title" => post.title,
-          "date" => post.date,
-          "author" => post.author,
-          "slug" => post.slug
-        })
-      end
-    end
-    
-    return tags
-  end
-  
   def get_resource_slug(resource)
     slug = resource.title
     slug = slug.gsub(/\s*/,'')
@@ -235,13 +163,6 @@ module Helpers
       when 518400..1036800 then 'a week ago'
       else ((a+180000)/(60*60*24*7)).to_i.to_s+' weeks ago'
     end
-  end
-  
-  def get_recent_blogs()
-    data.cntf.posts
-      .reject { |k,v| v.tags.include? "press" }
-      .sort_by { |k,v| v["date"] }
-      .reverse
   end
   
   def get_image(resource)

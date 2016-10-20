@@ -1,33 +1,40 @@
 navigation: 
   - 
-    name: "Home"
+    name: "Forums"
     link: "/"
   - 
-    name: "Features"
-  - 
     name: "Packages"
-    link: "{site.url}/packages"
-  - 
-    name: "Community"
-    link: "http://forum.komodoide.com/"
-    icon: "sort-down"
+    icon: "caret-down"
     sub:
       -
-        name: "Blog"
+        name: "Addons"
+        link: "{site.url}/packages/addons"
       -
-        name: "Events"
-        link: "{site.url}/events"
-      - 
-        name: "Forums"
-        link: "http://forum.komodoide.com/"
-      - 
-        name: "Screencasts"
-      - 
-        name: "Contribute"
-        link: "{site.url}/packages/submit-instructions/"
+        name: "Userscripts"
+        link: "{site.url}/packages/userscripts"
+      -
+        name: "Toolbox"
+        link: "{site.url}/packages/toolbox"
+      -
+        name: "Color Schemes"
+        link: "{site.url}/packages/schemes"
+      -
+        name: "Languages"
+        link: "{site.url}/packages/languages"
+      -
+        name: "Keybindings"
+        link: "{site.url}/packages/keybinds"
+      -
+        name: "Miscellaneous"
+        link: "{site.url}/packages/misc"
   - 
-    name: "Try"
-    link: "{site.url}/download"
+    name: "Contribute"
+    link: "{site.url}/packages/submit-instructions"
   - 
-    name: "Buy & Upgrade"
-    link: "{site.url}/pricing"
+    name: "Bug Tracker"
+    icon: "external-link"
+    link: "https://github.com/Komodo/KomodoEdit/issues"
+  - 
+    name: "Documentation"
+    icon: "external-link"
+    link: "http://docs.komodoide.com/"

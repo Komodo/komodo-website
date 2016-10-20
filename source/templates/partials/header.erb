@@ -1,25 +1,29 @@
 <header>
     <div class="outer">
         <div class="inner">
+            <!-- Logo -->
+            <a class="logo-link"><figure id="header-logo"></figure></a>
+            
             <div class="nav-wrap">
-                
-                <% if data.promotions.nav.enabled %>
-                    <div class="promotion badge">
-                        <%= data.promotions.nav.description %>
-                    </div>
-                <% end %>
                 
                 <span class="collapser button primary">
                     <i class="icon icon-bars fa fa-bars"></i>
                 </span>
+                
+                <ul class="left unstyled">
+                    <li>
+                        <a href="http://www.activestate.com/komodoide">
+                            <span>Komodo Information</span>
+                            <i class="icon icon-external-link"></i>
+                        </a>
+                    </li>
+                </ul>
+                
                 <!-- Navigation -->
                 <nav>
                     <%= get_list(data.header.navigation, "unstyled") %>
                 </nav>
             </div>
-
-            <!-- Logo -->
-            <a href="<%= site_url %>"><figure id="header-logo"></figure></a>
         </div>
     </div>
 </header>

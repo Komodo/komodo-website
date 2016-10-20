@@ -63,97 +63,118 @@ body.framed header
     {
         position: relative;
         float: right;
-        margin-top: 20px;
-
-        & > ul
+    }
+    
+    .nav-wrap > ul.left,
+    .logo-link
+    {
+        float: left;
+    }
+    
+    .nav-wrap > ul.left
+    {
+        a
         {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 3px;
+            padding: 0 5px;
+            margin-left: 15px;
+        }
+    }
+    
+    .nav-wrap
+    {
+        padding-top: 20px;
+    }
+    
+    nav > ul,
+    .nav-wrap > ul
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
 
-            & > li
+        & > li
+        {
+            display: inline-block;
+            position: relative;
+            text-transform: uppercase;
+
+            .badge
             {
-                display: inline-block;
+                position: absolute;
+                top: -10px;
+                right: 15px;
+            }
+
+            .icon
+            {
                 position: relative;
-                text-transform: uppercase;
+            }
 
-                .badge
+            ul
+            {
+                display: none;
+                position: absolute;
+                z-index: 15;
+                top: 20px;
+                left: 0;
+                padding: 0;
+                width: 150px;
+
+                li a
                 {
-                    position: absolute;
-                    top: -10px;
-                    right: 15px;
+                    display: block;
+                    padding: 5px;
+                    background: rgba(darken($color-header-background, 5%), 0.9);
+                    @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
+                    color: $color-header-menu-link;
+
+                    &:hover
+                    {
+                        background: rgba(darken($color-header-background, 10%), 0.9);
+                    }
                 }
+            }
 
-                .icon
+            &.has-sub:hover
+            {
+                background: rgba(darken($color-header-background, 5%), 0.9);
+                
+                a
                 {
-                    position: relative;
-                    top: -3px;
+                    color: $color-header-menu-link;
                 }
 
                 ul
                 {
-                    display: none;
-                    position: absolute;
-                    z-index: 15;
-                    top: 20px;
-                    left: 0;
-                    padding: 0;
-                    width: 150px;
-
-                    li a
-                    {
-                        display: block;
-                        padding: 5px;
-                        background: rgba(darken($color-header-background, 5%), 0.9);
-                        @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
-                        color: $color-header-menu-link;
-
-                        &:hover
-                        {
-                            background: rgba(darken($color-header-background, 10%), 0.9);
-                        }
-                    }
-                }
-
-                &.has-sub:hover
-                {
-                    background: rgba(darken($color-header-background, 5%), 0.9);
-                    
-                    a
-                    {
-                        color: $color-header-menu-link;
-                    }
-
-                    ul
-                    {
-                        display: block;
-                    }
+                    display: block;
                 }
             }
-            
-            li a
+        }
+        
+        li a
+        {
+            font-family: $font-header-nav;
+            font-weight: 600;
+            font-size: 12pt;
+            color: $color-header-nav-link;
+            text-decoration: none;
+            @include link($color-header-nav-link, $color-header-nav-link-hover);
+
+            &:hover
             {
-                font-family: $font-header-nav;
-                font-weight: 600;
-                font-size: 12pt;
-                color: $color-header-nav-link;
                 text-decoration: none;
-                @include link($color-header-nav-link, $color-header-nav-link-hover);
-
-                &:hover
-                {
-                    text-decoration: none;
-                }
             }
+        }
 
-            & > li > a
-            {
-                display: block;
-                line-height: 35px;
-                vertical-align: middle;
-                padding: 0 15px;
-                border: 0;
-            }
+        & > li > a
+        {
+            display: block;
+            line-height: 35px;
+            vertical-align: middle;
+            padding: 0 15px;
+            border: 0;
         }
     }
     
