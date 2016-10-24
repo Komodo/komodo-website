@@ -6,8 +6,15 @@
         <link>http://komodoide.com/blog/</link>
         <language>en</language>
         <webMaster>support@activestate.com (ActiveState Support)</webMaster>
-        <lastBuildDate>Sun, 16 Oct 2016 09:04:05 -0700</lastBuildDate>
+        <lastBuildDate>Mon, 24 Oct 2016 14:07:32 -0700</lastBuildDate>
         <generator>Middleman 3.3.10</generator>
+            <item>
+                <title>The Komodo Website is Returning ActiveState.com</title>
+                <link>http://komodoide.com/blog/the-komodo-website-is-returning-activestate-com</link>
+                <pubDate>Sun, 23 Oct 2016 17:00:00 -0700</pubDate>
+                <description>Hello community! We&#x27;ve been hard at work here at ActiveState--hard at work on Komodo, our languages, our websites, and maybe even a top secret project or two [...]</description>
+                <guid>http://komodoide.com/blog/the-komodo-website-is-returning-activestate-com</guid>
+            </item>
             <item>
                 <title>Becoming a Regex Wizard with Komodo IDE&#x27;s Rx Toolkit</title>
                 <link>http://komodoide.com/blog/becoming-a-regex-wizard-with-komodo-ides-rx-toolkit</link>
@@ -105,13 +112,6 @@
                 <pubDate>Thu, 21 Jul 2016 17:00:00 -0700</pubDate>
                 <description>Something that has always been part of the Komodo design philosophy has been integration. Though Komodo should provide tooling to make our users more productive, it should NOT try to do EVERYTHING.  Integration, not imitation, is the key [...]</description>
                 <guid>http://komodoide.com/blog/filling-the-gap-with-commandline-integration-phonegap-cordova-grunt-gulp</guid>
-            </item>
-            <item>
-                <title>First Start Wizard</title>
-                <link>http://komodoide.com/blog/first-start-wizard</link>
-                <pubDate>Thu, 14 Jul 2016 17:00:00 -0700</pubDate>
-                <description>If you&#x27;ve never run Komodo before or if this is the first time you&#x27;re running a major version (eg. you were using Komodo 9.3 and have just upgraded to Komodo X), then Komodo will show you the First Start Wizard as it loads [...]</description>
-                <guid>http://komodoide.com/blog/first-start-wizard</guid>
             </item>
     </channel>
 </rss>
