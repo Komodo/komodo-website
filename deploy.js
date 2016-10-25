@@ -18,7 +18,6 @@
         var commands = [
             "rvm use 2.3.1",
             "bundle install",
-            "bundle exec middleman contentful",
             "bundle exec middleman resources",
             "bundle exec middleman build"
         ];
