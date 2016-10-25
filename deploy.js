@@ -17,6 +17,7 @@
         var exec = require('child_process').exec;
         var commands = [
             "rvm use 2.3.1",
+            "rm -Rf " + __dirname + "/data/resources/*",
             "bundle install",
             "bundle exec middleman resources",
             "bundle exec middleman build",

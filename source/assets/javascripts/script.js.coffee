@@ -20,7 +20,6 @@
 #= require "helpers/localStorage"
 #= require "helpers/handlebars"
 #= require "helpers/easing"
-#= require "twitter"
 
 jQuery ->
 
