@@ -40,7 +40,7 @@
             environment.KO_QA = "true";
         }
 
-        environment.PATH = environment.PATH + ":/home/nathanr/.rvm/gems/ruby-2.3.1/bin:/home/nathanr/.rvm/gems/ruby-2.3.1@global/bin:/home/nathanr/.rvm/rubies/ruby-2.3.1/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
+        environment.PATH =  "/home/nathanr/.rvm/gems/ruby-2.3.1/bin:/home/nathanr/.rvm/gems/ruby-2.3.1@global/bin:/home/nathanr/.rvm/rubies/ruby-2.3.1/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin:" + environment.PATH;
         environment.GEM_HOME = "/home/nathanr/.rvm/gems/ruby-2.3.1";
         environment.GEM_PATH = "/home/nathanr/.rvm/gems/ruby-2.3.1:/home/nathanr/.rvm/gems/ruby-2.3.1@global";
 
