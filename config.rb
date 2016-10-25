@@ -106,16 +106,16 @@ configure :build do
   set :site_url, is_qa ? "http://qa.komodoide.com" : "http://community.komodoide.com"
 end
 
-set :css_dir, 'assets/stylesheets'
-set :js_dir, 'assets/javascripts'
-set :images_dir, 'assets/images'
-set :fonts_dir, 'assets/fonts'
+set :css_dir, 'asset/stylesheets'
+set :js_dir, 'asset/javascripts'
+set :images_dir, 'asset/images'
+set :fonts_dir, 'asset/fonts'
 set :layouts_dir, "templates/layouts"
 set :partials_dir, 'templates/partials'
 
 page "*", :layout => "default"
 page "json/*", :layout => false
-page "assets/*", :layout => false
+page "asset/*", :layout => false
 
 set :title, "Komodo IDE Community"
 
