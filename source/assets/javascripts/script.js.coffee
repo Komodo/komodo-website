@@ -31,32 +31,19 @@ jQuery ->
         fns = [
             rejectOldBrowsers
             highlightCode
-            loadBlackout
-            loadSplashCallouts
-            loadSplashScreenshots
-            loadTestimonials
             bindAnalytics
             bindTooltips
             bindLightbox
-            loadGithubCommits
             loadTabs
-            loadDownloadButtons
             loadNavmenu
-            #makeSplashResponsive
             loadSidebarCollapser
             loadDialogs
-            loadTwitterFeed
             forceOpenExternal
-            loadTags
-            animateElements
-            hideFooterOverlap
             disableLinks
             bindCheckboxEnablers
             bindPaneSelector
             loadFancySelector
-            bindPageShare
             loadStickyFloat
-            loadQuickNav
             loadSchemePreviews
             loadPackageSearch
         ]
@@ -87,158 +74,6 @@ jQuery ->
     # Highlight Code
     highlightCode = ->
         jq('pre code').each (i, e) ->  hljs.highlightBlock e
-        
-    loadBlackout = ->
-        blackout = jq("#blackout")
-        blackout.on "click", (e) ->
-            if e.target == blackout[0]
-                blackout.trigger "hide"
-                blackout.fadeOut(100)
-        
-    loadSplashCallouts = ->
-        return unless jq("#splash-screenshots").length
-    
-        animDurationTotal = 400
-        
-        $("#selectors > *").on "click", ->
-            selector = jq this
-            
-            children = selector.children().children()
-            offset = selector.offset()
-            
-            # sync with header.scss
-            if window.innerWidth > 650 and window.innerHeight > 800
-                childWidth = 600
-                childHeight = 200
-            else
-                childWidth = 400
-                childHeight = 110
-            
-            animDuration = Math.round(animDurationTotal / children.length)
-            delay = 0
-            childNo = 0
-            totalHeight = children.length * childHeight
-            
-            leftPos = Math.round((window.innerWidth/2) - (childWidth / 2))
-            topPos = Math.round((window.innerHeight/2) - (totalHeight / 2))
-            
-            jq("#blackout").fadeIn(children.length * animDuration)
-            
-            callouts = jq("#callouts")
-            callouts.show()
-            jq("#blackout").on "hide", (e) ->
-                
-                jq("#callouts > .callout").hide 100, ->
-                    jq(this).remove()
-                    callouts.hide()
-                    jq("#blackout").fadeOut(100)
-            
-            children.each ->
-                child = jq this
-                child = child.clone()
-                child.appendTo("#callouts")
-                child.addClass("callout")
-                child.css({opacity: 0, left: offset.left, top: offset.top})
-                child.children("img").css({opacity: 0})
-                child.delay(delay).animate({
-                    opacity: 1,
-                    left: leftPos,
-                    top: topPos + (childHeight * childNo)
-                }, animDuration, 'easeOutBack')
-                childNo++
-                delay+= animDuration
-                
-            setTimeout(
-                -> jq("#callouts > .callout > img").animate({opacity: 1}, 100),
-                delay)
-            
-                
-    # Splash Screenshots
-    loadSplashScreenshots = ->
-        ss = jq("#splash-screenshots figure")
-        return unless ss.length
-    
-        ignoreNext = false
-        
-        ss.each ->
-            shot = jq this
-            shot.data("original-width", shot.width())
-    
-        ss.on "mouseover", ->
-            if ignoreNext
-                ignoreNext = false
-                return
-            
-            shot = jq this
-            siblings = shot.prevAll("figure")
-            stop = false
-            
-            maxWidth = 150 + (siblings.length * 150)
-            
-            siblings.each ->
-                sibling = jq this
-                maxWidth = maxWidth - 150
-                sibling.stop().animate({width: maxWidth}, 'easeInOutBack')
-                
-            ignoreNext = true
-            
-        jq("#splash-screenshots").on "mouseout", (e) ->
-            ignoreNext = false
-            
-            t = jq e.relatedTarget
-            if t.attr("id") and t.attr("id").indexOf("selector") == 0
-                return
-            
-            ss.each ->
-                shot = jq this
-                if shot.data("original-width") and shot.data("original-width") != shot.width()
-                    shot.stop().animate({width: shot.data("original-width")})
-
-    # Load Testimonials
-    loadTestimonials = ->
-        return unless jq(".testimonial blockquote").length
-    
-        textFit(jq(".testimonial blockquote"), {minFontSize: 12, multiLine: true})
-            
-        if jq(".document-testimonials").length
-            textFit(jq(".testimonial h2"), {multiLine: false})
-            return
-        
-        jq.getJSON("/json/testimonials.json").done (data) ->
-            pos = 0
-            data = _.shuffle data
-            template = jq("#splash-news-testimonials .testimonial").clone()
-            setInterval (->
-                pos = 0 if pos == data.length
-
-                entry = _.clone data[pos]
-                currentEntry = jq("#splash-news-testimonials .testimonial")
-                newEntry = template.clone()
-
-                if entry.source_name
-                    if entry.source
-                        entry.source = '<a href="' + entry.source + '" target="_blank">' + entry.source_name + '</a>'
-                    else
-                        entry.source = entry.source_name
-
-                if entry.source_name == "Twitter"
-                    entry.name = '<a href="https://twitter.com/' + entry.name + '" target="_blank">' + entry.name + '</a>'
-
-                newEntry.find("*[data-field]").each ->
-                    elem = jq(this)
-                    elem.show()
-                    elem.hide() unless entry[elem.data("field")]
-                    elem.html(entry[elem.data("field")])
-
-                newEntry.hide().appendTo(currentEntry.parent())
-                currentEntry.fadeOut ->
-                    newEntry.fadeIn()
-                    textFit(newEntry.find("blockquote"), {alignVert: true})
-                    currentEntry.remove()
-                    currentEntry = newEntry
-
-                pos++
-            ), 10000
     
     # Analytics
     bindAnalytics = ->
@@ -306,66 +141,13 @@ jQuery ->
                 width: elem.data("width")
                 height: elem.data("height")
                 pauseSeconds: elem.data("pause") || 6
-
-    # Github commits widget
-    loadGithubCommits = ->
-        jq(".github-commits").each ->
-            el = jq this
-            el.githubInfoWidget
-                user: el.data("gh-user") || "Komodo"
-                repo: el.data("gh-repo") || "KomodoEdit"
-                branch: el.data("gh-branch") || "master"
-                last: el.data("gh-amount") || 5
-                avatarSize: el.data("gh-avatarSize") || 16
-
     # Tabs
     loadTabs = ->
         jq(".tabs").tabs()
 
-    # Download buttons
-    loadDownloadButtons = ->
-        return unless jq(".document-download").length
-        platform = window.navigator.platform.toLowerCase()
-
-        if platform.indexOf("linux") != -1 and platform.indexOf("86_64") != -1
-            platform = "linux-64"
-        else if platform.indexOf("linux") != -1 or platform.indexOf("x11") != -1
-            platform = "linux"
-        else if platform.indexOf("win") != -1
-            platform = "windows"
-        else if platform.indexOf("mac") != -1
-            platform = "mac"
-
-        jq(".dl-button.dl-" + platform + ":not(.primary)").each ->
-            el = jq this
-            oldPrimary = el.closest("div").find(".dl-button.primary")
-            oldPrimary.removeClass "big"
-            oldPrimary.removeClass "primary"
-            el.addClass "big primary"
-            el.parent().insertBefore(oldPrimary)
-
     # Nav Collapse
     loadNavmenu = ->
         jq("header .collapser").click -> jq("header nav").toggleClass "expanded"
-
-    # Responsive Scripts - TODO: Replace with pure CSS solution
-    makeSplashResponsive = ->
-        ss = jq("#splash-screenshots")
-        ssf = jq("#splash-screenshots figure.primary")
-
-        splashResizeHandler = ->
-            if (jq(document).width() < 1100)
-                ratio = jq(document).width()/1150
-                ss.css('transform','scale('+(ratio)+')')
-                ss.height(ssf[0].getBoundingClientRect().height + 25)
-
-            if (jq(document).width() > 1100)
-                jq("#splash-screenshots").css('transform','')
-                jq("#splash-screenshots").height("")
-
-        if ss.length
-            jq(window).resize splashResizeHandler
-            splashResizeHandler()
 
     # Sidebar collapser
     loadSidebarCollapser = ->
@@ -440,53 +222,12 @@ jQuery ->
 
             openModal._modal = elem
 
-    # Twitter Feed
-    loadTwitterFeed = ->
-        twitterTemplate = jq("#tweet-template")
-        if twitterTemplate.length
-            new TwitterFeed().renderWidget twitterTemplate, 4, -> bindTooltips()
-
     # Open external links in a new window
     forceOpenExternal = ->
         href = new RegExp('^' + window.location.protocol + '\\/\\/(?:[a-z]*?\.|)' + window.location.hostname)
         jq("a[href^='http']").filter( ->
             return ! jq(this).attr("href").match(href)
         ).attr("target", "_blank")
-
-    # Tagged Blogs
-    loadTags = ->
-        return unless jq("#content").hasClass "document-tagged"
-
-        tag = decodeURI(window.location.search.substr(1))
-        tagTemplate = Handlebars.compile( jq("#tag-template").html() )
-
-        jq.getJSON("/json/tags.json").done (tags) ->
-            if tags[tag]
-                html = tagTemplate({tags: tags, tag: tag, documents: tags[tag].documents})
-                jq(html).appendTo(jq("#content article"))
-                jq("#content article .loading").remove()
-
-    # Animate Elements
-    animateElements = ->
-        jq(".animateOnLoad").each ->
-            elem = jq this
-            elem.addClass("animate")
-            setTimeout ->
-                elem.removeClass("animate")
-                elem.addClass("animate-over")
-            , elem.data("animation-duration") || 400
-
-    # Hide footer overlap
-    hideFooterOverlap = ->
-        return unless jq('footer').length
-    
-        if jq(window).scrollTop() + jq(window).height() == jq(document).height()
-            jq(".document-pricing .promotion").hide()
-        else
-            jq(".document-pricing .promotion").show()
-
-    if jq('footer').length and jq(".document-pricing .promotion").length
-        jq(window).scroll hideFooterOverlap
 
     disableLinks = ->
         jq("a.disabled").click ->
@@ -538,12 +279,6 @@ jQuery ->
                         elem.trigger "change"
                     ), 0
             });
-
-    bindPageShare = ->
-        jq(document).on('pageShared', onPageShare);
-
-    onPageShare = (e) ->
-        ga('send', 'social', e.network, e.action) if ga?
             
     loadStickyFloat = ->
         jq('.sticky').stickyfloat {
@@ -551,41 +286,6 @@ jQuery ->
             delay: 50
             easing: 'swing'
         }
-        
-    loadQuickNav = ->
-        qn = jq(".quick-nav").length
-        return unless qn
-    
-        w = jq window
-    
-        updateSelected = ->
-            stop = w.scrollTop() + (w.height() / 2)
-            
-            jq(".quick-nav li").each ->
-                el = jq this
-                a = el.find("a")
-                target =jq a.attr("href")
-                start = target.offset().top
-                end = start + target.height()
-                
-                if stop >= start and stop < end
-                    unless el.is("[selected]")
-                        jq(".quick-nav li[selected]").removeAttr("selected")
-                        el.attr("selected", "true")
-                    return false # stop iteration
-        
-        timer = null
-        w.scroll ->
-            clearTimeout timer
-            timer = setTimeout updateSelected, 100
-            
-        jq(".quick-nav li a").click ->
-            jq('html, body').animate {
-                scrollTop: jq( jq(this).attr("href") ).offset().top
-            }
-            return false
-        
-        updateSelected()
         
     loadSchemePreviews = ->
         

@@ -1,23 +1,26 @@
 <header>
     <div class="outer">
+        
+        <div class="nav-wrap-global">
+            <div class="inner">
+                <a href="http://activestate.com/" class="as-link"><figure id="as-logo"></figure></a>
+                
+                <nav>
+                    <%= get_list(data.header.navigation_right, "unstyled right") %>
+                    <%= get_list(data.header.navigation_left, "unstyled left") %>
+                </nav>
+            </div>
+        </div>
+        
         <div class="inner">
-            <!-- Logo -->
-            <a class="logo-link"><figure id="header-logo"></figure></a>
-            
             <div class="nav-wrap">
+                
+                <!-- Logo -->
+                <a href="/" class="logo-link"><figure id="header-logo"></figure></a>
                 
                 <span class="collapser button primary">
                     <i class="icon icon-bars fa fa-bars"></i>
                 </span>
-                
-                <ul class="left unstyled">
-                    <li>
-                        <a href="http://www.activestate.com/komodoide">
-                            <span>Komodo Information</span>
-                            <i class="icon icon-external-link"></i>
-                        </a>
-                    </li>
-                </ul>
                 
                 <!-- Navigation -->
                 <nav>

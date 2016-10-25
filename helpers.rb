@@ -108,6 +108,9 @@ module Helpers
       if value.has_key?("img")
         r.push "<img src='#{image_path(value["img"])}' alt='#{value["name"]}'/>"
       end
+      if value.has_key?("icon_before")
+        r.push "<i class='icon icon-#{value["icon_before"]}'></i>"
+      end
       r.push "<span class='link-name'>#{value["name"]}</span>"
       if value.has_key?("icon")
         r.push "<i class='icon icon-#{value["icon"]}'></i>"

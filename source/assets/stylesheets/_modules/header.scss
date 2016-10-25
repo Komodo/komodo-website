@@ -19,8 +19,8 @@ body.framed header
     
     .outer
     {
-        background: #FFF;
-        border-bottom: 1px solid #dfdede;
+        background: url(/assets/images/layout/background-texture.png) repeat;
+        background-color: #BCBEC0;
         min-height: 75px;
 
         .inner
@@ -46,12 +46,26 @@ body.framed header
     figure#header-logo
     {
         display: inline-block;
+        width: 156px;
+        height: 50px;
+        margin-top: -7px;
+        margin-bottom: 7px;
         margin-left: 5px;
-        margin-top: 11.5px;
-        width: 157px;
-        height: 48px;
         background: url(../images/layout/komodo-logo.png) no-repeat;
         background-size: 100%;
+    }
+    
+    figure#as-logo
+    {
+        display: inline-block;
+        width: 134px;
+        height: 25px;
+        background: url(../images/layout/activestate.png) no-repeat;
+        background-size: 100%;
+        float: left;
+        margin-top: 5px;
+        margin-right: 15px;
+        margin-left: 5px;
     }
 
     .button.collapser
@@ -59,35 +73,79 @@ body.framed header
         display: none;
     }
     
-    nav
+    .nav-wrap-global
     {
-        position: relative;
-        float: right;
-    }
-    
-    .nav-wrap > ul.left,
-    .logo-link
-    {
-        float: left;
-    }
-    
-    .nav-wrap > ul.left
-    {
-        a
+        text-align: left;
+        background: #FFF;
+        
+        nav > ul
         {
-            border: 1px solid rgba(0,0,0,0.2);
-            border-radius: 3px;
-            padding: 0 5px;
-            margin-left: 15px;
+            list-style: none;
+            margin: 0;
+            padding: 10px 0;
+            
+            &.right
+            {
+                float: right;
+                
+                li
+                {
+                    margin-left: 15px;
+                }
+            }
+            
+            &.left
+            {
+                @include media(max-width 870px)
+                {
+                    display: none;
+                }
+                
+                li
+                {
+                    margin-right: 15px;
+                }
+            }
+            
+            & > li
+            {
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+                
+                img
+                {
+                    width: 16px;
+                    height: 16px;
+                    margin-bottom: -3px;
+                }
+                
+                .icon-external-link
+                {
+                    font-size: 10px;
+                    color: $color-base-link;
+                }
+                
+                a
+                {
+                    color: $color-header-nav-link;
+                }
+            }
         }
     }
     
     .nav-wrap
     {
         padding-top: 20px;
+        
+        nav
+        {
+            position: relative;
+            float: right;
+        }
     }
     
-    nav > ul,
+    .nav-wrap nav > ul,
     .nav-wrap > ul
     {
         list-style: none;
@@ -159,13 +217,7 @@ body.framed header
             font-weight: 600;
             font-size: 12pt;
             color: $color-header-nav-link;
-            text-decoration: none;
             @include link($color-header-nav-link, $color-header-nav-link-hover);
-
-            &:hover
-            {
-                text-decoration: none;
-            }
         }
 
         & > li > a
@@ -224,9 +276,8 @@ body.framed header
                 position: relative;
                 z-index: 110;
                 display: block;
-                font-size: 30px;
-                margin-top: 15px;
-                margin-right: 15px;
+                font-size: 30px !important;
+                margin-top: -7px;
                 float: right;
             }
 

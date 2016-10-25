@@ -94,10 +94,6 @@ activate :komodo_resources
 
 activate :directory_indexes
 
-activate :deploy do |deploy|
-  deploy.method = :git
-end
-
 configure :development do
   activate :livereload, :no_swf => true
   set :is_live, false
