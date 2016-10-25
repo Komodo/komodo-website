@@ -19,7 +19,9 @@
             "rvm use 2.3.1",
             "bundle install",
             "bundle exec middleman resources",
-            "bundle exec middleman build"
+            "bundle exec middleman build",
+            "rm -Rf " + __dirname + "/live",
+            "mv " + __dirname + "/build " + __dirname + "/live"
         ];
         
         var environment = process.env;
@@ -28,15 +30,10 @@
         // just compile it locally
         if (params.branch == "production")
         {
-            commands.push("bundle exec middleman deploy");
-            
             environment.KO_QA = "false";
         }
         else
         {
-            commands.push("rm -Rf " + __dirname + "/live");
-            commands.push("mv " + __dirname + "/build " + __dirname + "/live");
-            
             environment.KO_QA = "true";
         }
 
