@@ -11,7 +11,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 gem 'bourbon'
 gem 'neat'
-gem 'font-awesome-middleman'
+gem 'font-awesome-middleman', '~> 4.3.0'
 gem 'redcarpet'
 
 gem 'middleman-pagination'
