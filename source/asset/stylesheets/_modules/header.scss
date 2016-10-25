@@ -175,9 +175,9 @@ body.framed header
                 display: none;
                 position: absolute;
                 z-index: 15;
-                top: 20px;
                 left: 0;
                 padding: 0;
+                margin: 0;
                 width: 150px;
 
                 li a
@@ -186,7 +186,7 @@ body.framed header
                     padding: 5px;
                     background: rgba(darken($color-header-background, 5%), 0.9);
                     @include transition(color 0.2s ease-in-out, background 0.2s ease-in-out);
-                    color: $color-header-menu-link;
+                    color: $color-header-menu-link !important;
 
                     &:hover
                     {
@@ -262,9 +262,9 @@ body.framed header
             display: none;
         }
         
-        nav > ul li a
+        .nav-wrap nav > ul li a
         {
-            @include link($color-header-menu-link, $color-header-menu-link-hover);
+            @include link($color-header-menu-link !important, $color-header-menu-link-hover !important);
         }
         
         .nav-wrap
@@ -293,13 +293,13 @@ body.framed header
                 z-index: 999;
                 background: rgba(39, 45, 44, 0.9);
                 text-align: right;
-
-                right: 70px;
+                margin-top: -10px;
+                right: 0;
 
                 & > ul > li
                 {
                     display: block;
-                    width: 200px;
+                    width: 220px;
 
                     .badge
                     {

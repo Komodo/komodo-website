@@ -2,6 +2,7 @@
 
 @import "bourbon";
 @import "neat";
+@import "font-awesome";
 
 /* Include it again, cause Bourbon overrides some of our variables, grrr */
 @import "_modules/depend/variables";
@@ -168,7 +169,6 @@ strong
     nav.expanded
     {
         z-index: 9999;
-        right: 45px;
     }
 
     li.has-sub ul
