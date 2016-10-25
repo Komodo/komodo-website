@@ -29,7 +29,7 @@
 
         // Deploy to github pages if this is the production branch, otherwise
         // just compile it locally
-        if (params.branch == "production")
+        if (params.branch == "production" || params.branch == "community")
         {
             environment.KO_QA = "false";
         }
