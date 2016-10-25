@@ -16,7 +16,7 @@
 
         var exec = require('child_process').exec;
         var commands = [
-            "rvm use 1.9.3",
+            "rvm use 2.3.1",
             "bundle install",
             "bundle exec middleman contentful",
             "bundle exec middleman resources",
@@ -41,9 +41,9 @@
             environment.KO_QA = "true";
         }
 
-        environment.PATH = environment.PATH + ":/usr/local/bin:/usr/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global/bin:/home/nathanr/.rvm/rubies/ruby-1.9.3-p551/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
-        environment.GEM_HOME = "/home/nathanr/.rvm/gems/ruby-1.9.3-p551";
-        environment.GEM_PATH = "/home/nathanr/.rvm/gems/ruby-1.9.3-p551:/home/nathanr/.rvm/gems/ruby-1.9.3-p551@global";
+        environment.PATH = environment.PATH + ":/home/nathanr/.rvm/gems/ruby-2.3.1/bin:/home/nathanr/.rvm/gems/ruby-2.3.1@global/bin:/home/nathanr/.rvm/rubies/ruby-2.3.1/bin:/home/nathanr/.rvm/bin:/home/nathanr/.nvm/v0.10.25/bin";
+        environment.GEM_HOME = "/home/nathanr/.rvm/gems/ruby-2.3.1";
+        environment.GEM_PATH = "/home/nathanr/.rvm/gems/ruby-2.3.1:/home/nathanr/.rvm/gems/ruby-2.3.1@global";
 
         var envVars = require(__dirname + "/../komodo-website-" + params.branch + ".env.js");
         for (var env in envVars)
