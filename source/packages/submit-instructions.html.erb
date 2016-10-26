@@ -12,8 +12,6 @@ sidebar: resources
     <select class="selectize paneSelector" data-pane-prefix="pane-">
         <option value="">Select One..</option>
         <option value="packages">Packages (addons, macros, snippets, etc)</option>
-        <option value="blogs">Blogs</option>
-        <option value="screencasts">Screencasts</option>
         <option value="code">Code</option>
         <option value="bugs">Bug Reports</option>
         <option value="documentation">Documentation</option>
@@ -65,88 +63,6 @@ sidebar: resources
             Now that you have a github repository you can <a href="https://guides.github.com/introduction/getting-your-project-on-github/">push your code to your repository</a> and allow others to contribute to it. Your repository description and readme will show up on our Packages section.
         </p>
         
-    </div>
-
-    <div id="pane-blogs" class="hide">
-        <h1>Blogs</h1>
-        <p>
-            We accept blogs from anyone willing to submit content that is in some
-            way Komodo related. Your blog does not need to have Komodo as its main
-            topic, for example you can submit blogs for:
-        </p>
-        <ul class="disc">
-            <li>
-                How you created your website using technology X
-            </li>
-            <li>
-                What tools you're using to automate your workflow
-            </li>
-            <li>
-                What macro's / snippets / etc. you've developed to help you with your work
-            </li>
-            <li>
-                Etc.
-            </li>
-        </ul>
-
-        <h2>
-            Submitting a Blog
-        </h2>
-        <p>
-            Blogs can be written entirely in markdown, so you don't need to run
-            a copy of the Komodo Website just to test your blog - use any markdown
-            editor you prefer.
-        </p>
-        <p>
-            To submit your blog you need to:
-        </p>
-        <ol class="decimal">
-            <li>
-                Fork the
-                <a href="https://github.com/Komodo/komodo-website">Komodo-Website repository</a>
-            </li>
-            <li>
-                Create your blog under the
-                <a href="https://github.com/Komodo/komodo-website/tree/master/src/pages/blog">
-                    relevant date folder
-                </a><br>
-                <em>if the right date folder does not exist create it.</em>
-            </li>
-            <li>
-                Create your blog file using the format <code>title-of-my-blog.hmtl.md</code>
-            </li>
-            <li>
-                Use the following template for the start of your blog:
-                <pre>
-                    <code>---
-title: Title of My Blog
-author: My Name
-date: YYYY-MM-DD
-tags: [tag1, tag2, tag3]
-description: A short introduction to my blog, this will be visible on the blog list page. Do not include line breaks or any special markup.
-layout: blog
----</code>
-                </pre>
-            </li>
-            <li>
-                Write your blog underneath using Markdown or HTML
-            </li>
-            <li>
-                Once done, commit your changes and submit a
-                <a href="https://help.github.com/articles/creating-a-pull-request">pull request</a>
-            </li>
-        </ol>
-    </div>
-
-    <div id="pane-screencasts" class="hide">
-        <h1>Screencasts</h1>
-        <p>
-            We currently do not have a workflow set up yet to contribute screencasts.
-        </p>
-        <p>
-            If you would like to submit a screencast please email us at
-            <a href="mailto:komodo@activestate.com?subject=Screencast%20Submission">komodo@activestate.com</a> with a link to your video.
-        </p>
     </div>
 
     <div id="pane-code" class="hide">
@@ -224,13 +140,14 @@ layout: blog
         </p>
 
         <p>
-            To contribute to our documentation you can fork the
-            <a href="https://github.com/Komodo/komodo-documentation">
-                komodo-documentation repository
-            </a>
-            and start submitting
-            <a href="https://help.github.com/articles/creating-a-pull-request">pull requests</a>
-            .
+            To contribute to our documentation login to our documentation site,
+            for the login to work your github account needs an email address that
+            is publicly visible.
+        </p>
+        
+        <p>
+            Once logged in you can then request editing access via the navigation
+            bar at the top of the documentation site.
         </p>
     </div>
 
@@ -238,7 +155,7 @@ layout: blog
         <h1>Other</h1>
         <p>
             If you wish to contribute in some other way please
-            <a href="http://forum.komodoide.com/">post about it on our forums</a>.
+            <a href="http://community.komodoide.com/">post about it on our forums</a>.
             We will let you know what the best procedure is for getting your
             contributions used in our projects.
         </p>
