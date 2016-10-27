@@ -41,11 +41,11 @@ navigation:
 navigation_left: 
   -
     name: "Learn More About Komodo"
-    link: "http://www.activestate.com/komodoide"
+    link: "http://www.activestate.com/komodo-ide"
     icon: "external-link"
   - 
     name: "Try"
-    link: "http://www.activestate.com/komodoide"
+    link: "http://www.activestate.com/komodo-ide"
     icon: "external-link"
   - 
     name: "Buy"
