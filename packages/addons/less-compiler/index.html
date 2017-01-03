@@ -167,78 +167,136 @@
 
 
     <div id="readme" class="readme user-input">
-    <h1>Less Compiler for Komodo Edit/Ide</h1>
+    <h1>Komodo Less Compiler</h1>
 
-<p>a LESS 2.7.1 compiler for Komodo Edit/Ide.<br>
-This addon allows you to compile LESS files and will give auto completion on the LESS @vars.</p>
+<p><em>LESS 2.7.1 compiler for Komodo Edit/Ide.</em><br>
+This addon gives you the ability to compile Less files and gives a improved <a href="https://github.com/babobski/Komodo-LESS-Compiler#auto-completion">auto-completion</a> of Less variables (also includes imports).</p>
 
 <h2>Usage</h2>
 
 <p>If you install this addon. default the compiler is enabled.<br>
-When you edit a LESS file the file will be compiled to a CSS file.<br>
-The addon lets you set up a <em>File Watcher</em> or multiple <em>File Scopes</em> so you can work with imports and multiple less files in one project or multiple open projects( max. 3 ).<br>
-There are also some options available trough the menu.</p>
+When you edit a LESS file the file will be compiled to a CSS file.</p>
 
-<h3>Menu options</h3>
+<p>If you have imports in you&#39;re Less-file or you want to run multiple output-files.<br>
+You need to use a file scope this enables you to set up project based <a href="https://github.com/babobski/Komodo-LESS-Compiler#file-scopes">file scopes</a>, that will trigger output-files based on output-files and include-folders.<br>
+If you want to compile a file on the fly that has includes, you can also set up a single <a href="https://github.com/babobski/Komodo-LESS-Compiler#file-watcher">file watcher</a>.<br>
+This will trigger the selected output-file regardless of the Less-file you&#39;re working on.</p>
 
-<p><strong>Tools &gt; LESS &gt; ...</strong>
- * <strong>Compile Saved File into CSS</strong><br>
-Takes a .less file and creates a .css file with the same name in the same spot as the .less file.
- * <strong>Compile Current Buffer (including imports)</strong><br>
- into CSS. Takes the contents of the current buffer and turns it into CSS.
- * <strong>Compile Selection into CSS (including imports)</strong><br>
-Takes the current selection and turns it into CSS
- * <strong>Compile and Compress Saved File into CSS</strong><br>
- Takes a .less file and creates a .css file with the same name in the same spot as the .less file. The .less file will be compressed/minified.
- * <strong>Compile and Compress Current Buffer (including imports)</strong><br>
- into CSS. Takes the contents of the current buffer and turns it into compressed CSS.
- * <strong>Compile and Compress Selection into CSS (including imports)</strong><br>
- takes the current selection and turns it into compressed CSS.
- * <strong>Collect @vars</strong><br>
- collect all the LESS @vars for auto completion.
- * <strong>File Watcher</strong>
-  * <strong>Enable File Watcher for current file</strong><br>
-  Enables a file watcher for current LESS file 
-  * <strong>disable File Watcher</strong><br>
-  Disables the file watcher
- * <strong>Less Settings</strong><br>
- This will open the settings window.</p>
+<p>Trough the Tools-menu and file context-menu are <a href="https://github.com/babobski/Komodo-LESS-Compiler#menu-options">Less menu&#39;s</a> added, that allows you to trigger file based commands and a few commands concerning file-watchers, file-scopes and auto-completion commands/settings.
+Also is a <a href="https://github.com/babobski/Komodo-LESS-Compiler#status-bar-options">status-bar</a> added to the breadcrumb-bar that also has a context-menu that allows you to control various commands/settings.</p>
 
-<h3>Statusbar</h3>
+<h2>Less Status-bar</h2>
 
-<p>When editing Less files, a Less statusbar will be shown.<br>
-The statusbar well tell you, if the compiler is enabled/disabled, if a file watcher or file scope is active and it will show errors if present.<br>
-<img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot01.png" alt="Screensot"><br>
-Trough the statusbar you can easily configure the settings.</p>
+<p>When editing Less files, a Less status bar will be shown.<br>
+The status bar well tell you, if the compiler is enabled/disabled, if a file watcher or file scope is active and it will show errors if present.</p>
 
-<h4>Statusbar options</h4>
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot01.png" alt="Screensot"></p>
+
+<p>Trough the status-bar you can easily configure the settings.</p>
+
+<h3>Status-bar options</h3>
 
 <ul>
-<li><strong>Disable Compiler</strong><br>
-This will disable the compiler</li>
-<li><strong>Enable File Watcher</strong><br>
-This will enable a file watcher for the current file, when you edit less file&#39;s only the &quot;Watched file&quot; will be compiled</li>
+<li><strong>Disable/Enable Compiler</strong><br>
+This will enable/disable the compiler.</li>
+<li><strong>Disable/Enable File Watcher</strong><br>
+This will enable/disable a file watcher for the current file, when you edit less file&#39;s only the &quot;Watched file&quot; will be compiled.</li>
+<li><strong>Disable/Enable File Scopes</strong><br>
+This will enable the &quot;file scopes&quot; mode, that will trigger file scopes based on projects.</li>
 <li><strong>File Scopes</strong><br>
 This will open a window where you can set file scopes, so you can work with multiple output files in one project or work with multiple projects.</li>
 <li><strong>Settings</strong><br>
-This will open the settings window.</li>
+This will open the Less-settings window.</li>
 </ul>
 
-<h3>Autocompletion</h3>
+<h2>Auto-completion</h2>
 
-<p>This addon will provide you with LESS var auto completion.<br>
-The vars will be search automatically( on file open and after you pressed @ on save ).<br>
-You can also trigger the search trough the menu.<br>
-When you type @ a auto completion box will be shown.<br>
-<img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/Screenshot02.png" alt="Screenshot"></p>
+<p>This addon will provide you with a LESS variables auto-completion.<br>
+The vars will be search automatically( on file open and after you pressed @ on save ).</p>
 
-<h3>File Scopes</h3>
+<p>You can also trigger the search trough the menu.<br>
+When you type @ a auto completion box will be shown.</p>
 
-<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot03.png" alt="screenshot"><br>
-In the file scopes window, you can setup up to 3 file scopes.<br>
-For each file scope you can set a output file( this file will be triggered if a less file is in the current scope ) and set up to 3 include folders.<br>
-If a LESS file is inside(recursively) a file scope, the selected output file will be compiled on save.
-This allows you to work with multiple file scopes in one project or allows to work with multiple open projects( komodo windows )</p>
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/Screenshot02.png" alt="Screenshot"></p>
+
+<h2>Menu Options</h2>
+
+<p><strong>Tools &gt; LESS &gt; ...</strong>
+ * <strong>Compile Saved File into CSS</strong><br>
+ Takes a .less file and creates a .css file with the same name in the same spot as the .less file.
+ * <strong>Compile Current Buffer (including imports)</strong><br>
+ Takes the contents of the current buffer and turns it into CSS.
+ * <strong>Compile Selection into CSS (including imports)</strong><br>
+ Takes the current selection and turns it into CSS
+ * <strong>Compile and Compress Saved File into CSS</strong><br>
+ Takes a .less file and creates a .css file with the same name in the same spot as the .less file. The .less file will be compressed/minified.
+ * <strong>Compile and Compress Current Buffer (including imports)</strong><br>
+ Takes the contents of the current buffer and turns it into compressed CSS.
+ * <strong>Compile and Compress Selection into CSS (including imports)</strong><br>
+ Takes the current selection and turns it into compressed CSS.
+ * <strong>Collect @vars</strong><br>
+ Collect all the LESS @vars for auto-completion.
+ * <strong>File Watcher</strong>
+  - <strong>Enable File Watcher for current file</strong><br>
+  Enables a file watcher for current LESS file
+  - <strong>disable File Watcher</strong><br>
+  Disables the file watcher
+ * <strong>File Scopes</strong><br>
+  - <strong>Enable File Scopes</strong><br>
+  Enables the &quot;file-scopes&quot; mode.
+  - <strong>Disable File Scopes</strong><br>
+  Disables the &quot;file-scopes&quot; mode
+ * <strong>Less Settings</strong><br>
+ This will open the settings window.</p>
+
+<h2>File Scopes</h2>
+
+<p>File-scopes allow you to work with output-files and include-folders, these file scopes are set on a project level.<br>
+When you edit a file in the include-folder(s) the selected output-files(s) are triggered.<br>
+To create a new file-scope you will have to use the menu in the status-bar <strong>status-bar &gt; File Scopes</strong>.
+This will open the File scopes window, in this window you can edit, create or delete file scopes:</p>
+
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot03.png" alt="screenshot"></p>
+
+<p>If you click the &quot;Create new file scope&quot; menu item, the following popup will shown:</p>
+
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot04.png" alt="screenshot"></p>
+
+<p>In this window you can create you&#39;re project based file scopes, you can have multiple file scopes in one project.<br>
+You can set up file scopes with the following structures:</p>
+
+<p>```
+ Include folder/
+    ├─ Less file
+    ├─ Less file
+    ├─ Include folder/
+    ├── Less file
+    └── Less file<br>
+─ Less output-file</p>
+
+<p>```</p>
+
+<p>And:</p>
+
+<p>```
+ Include folder/
+    ├─ Less file
+    ├─ Less output-file
+    ├─ Include folder/
+    ├── Less file
+    └── Less file</p>
+
+<p>```</p>
+
+<p>You can select multiple output-files, but is not recommended to use more that two output-files for performance reasons.</p>
+
+<h2>File Watcher</h2>
+
+<p>If you want to edit a Less-file that has includes, on the fly.<br>
+You can set up a File watcher, when you enable the file Watcher the current file will be added as output-file.<br>
+When you now edit Less files only the output-file will be triggered.</p>
+
+<p><img src="https://github.com/babobski/Komodo-LESS-Compiler/raw/master/screenshot05.png" alt="screenshot"></p>
 
     </div>
 
@@ -278,18 +336,18 @@ This allows you to work with multiple file scopes in one project or allows to wo
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-4244943">
+            <div class="release  0" id="release-5009915">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/2.1.4/Komodo-Less-Compiler-2.1.4.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/download/3.0.0/Komodo-Less-Compiler-3.0.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Komodo-Less-Compiler-2.1.4.xpi
+                                        Komodo-Less-Compiler-3.0.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/Updated to latest Less version (2.7.1).zip" class="button">
+                           <a href="https://github.com/babobski/Komodo-LESS-Compiler/archive/Rebuild of the file-scopes function and added some overall improvements.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -328,17 +386,17 @@ This allows you to work with multiple file scopes in one project or allows to wo
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-12-02T07:16:12Z">
-            Updated 3 weeks ago
+        <dd title="2016-12-25T11:29:05Z">
+            Updated a week ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/2.1.4">
+            <a href="https://github.com/babobski/Komodo-LESS-Compiler/releases/tag/3.0.0">
                 Version 
-                2.1.4
+                3.0.0
             </a>
         </dd>
 
@@ -347,7 +405,7 @@ This allows you to work with multiple file scopes in one project or allows to wo
         </dt>
         <dd>
             <a href="https://github.com/babobski/Komodo-LESS-Compiler/issues">
-                2 issues
+                0 issues
             </a>
         </dd>
 
@@ -355,7 +413,7 @@ This allows you to work with multiple file scopes in one project or allows to wo
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>17216 downloads</span>
+            <span>17450 downloads</span>
         </dd>
     
         <dt>
