@@ -171,7 +171,7 @@
 
 <p>js beautify for komodo edit/ide.</p>
 
-<p>This little beautifier will reformat css, html and javascript.<br>
+<p>This little beautifier will reformat/minify css, html and javascript.<br>
 Based on the the <a href="http://jsbeautifier.org/" target="_blank">jsbeautifier.org</a>.</p>
 
 <h2>Usage</h2>
@@ -193,6 +193,10 @@ Beautify CSS.<br>
 </li>
 <li><strong><em>Beautify Javascript</em></strong><br>
 Beautify javascript.<br>
+<em>Selection or document</em>
+</li>
+<li><strong><em>Minify HTML</em></strong><br>
+Minify HTML.<br>
 <em>Selection or document</em>
 </li>
 <li><strong><em>Minify Javascript</em></strong><br>
@@ -223,7 +227,7 @@ This will open the settings window.<br>
 
 <h2>Options</h2>
 
-<p>The option panel is accessible true the add on screen.<br><br>
+<p>The option panel is accessible trough the addon screen.<br><br>
 <img src="https://raw.githubusercontent.com/babobski/Beautify-js/master/screenshot.png" alt="screenshot option panel"></p>
 
 <h2>Key Bindings</h2>
@@ -254,6 +258,11 @@ if (extensions.beautifyjs) {
 <p>// Javascript
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify_JS();
+}</p>
+
+<p>// Minify HTML
+if (extensions.beautifyjs) {
+    extensions.beautifyjs.htmlMin();
 }</p>
 
 <p>// Minify Javascript
@@ -316,18 +325,18 @@ if (extensions.beautifyjs) {
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-4460337">
+            <div class="release  0" id="release-5870804">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/3.1/Komodo-Beautify-JS-3.1.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/3.3.2/Beautify-JS-3.3.2.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Komodo-Beautify-JS-3.1.xpi
+                                        Beautify-JS-3.3.2.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/Added minify CSS/Javascript and save it as .min file.zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/Bugfix for beautify on selection not working.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -349,7 +358,7 @@ if (extensions.beautifyjs) {
                 <span>babobski</span>
             </a>
             <a href="https://github.com/babobski" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/3530262?v=3?s=18">
+                <img src="https://avatars0.githubusercontent.com/u/3530262?v=3?s=18">
             </a>
         </dd>
         
@@ -366,17 +375,17 @@ if (extensions.beautifyjs) {
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-10-23T14:15:47Z">
-            Updated 10 weeks ago
+        <dd title="2017-03-26T11:35:29Z">
+            Updated 4 weeks ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/3.1">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/3.3.2">
                 Version 
-                3.1
+                3.3.2
             </a>
         </dd>
 
@@ -385,7 +394,7 @@ if (extensions.beautifyjs) {
         </dt>
         <dd>
             <a href="https://github.com/babobski/Beautify-js/issues">
-                2 issues
+                3 issues
             </a>
         </dd>
 
@@ -393,7 +402,7 @@ if (extensions.beautifyjs) {
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>23295 downloads</span>
+            <span>25950 downloads</span>
         </dd>
     
         <dt>

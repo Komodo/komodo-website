@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>EditorConfig | Komodo IDE</title>
+        <title>Find Window | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="EditorConfig | Komodo IDE" />
+        <meta property="og:title" content="Find Window | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -150,7 +150,7 @@
         </a>
     </li>
     <li>
-        EditorConfig
+        Find Window
     </li>
 </ul>
 
@@ -167,23 +167,40 @@
 
 
     <div id="readme" class="readme user-input">
-    <p>Adds <a href="http://editorconfig.org/">.editorconfig</a> support for Komodo IDE and Edit.</p>
+    <h1>Find-Window</h1>
 
-<p>Simply drag the XPI on Komodo to install the addon, then restart Komodo.</p>
+<p>Opens the find window in a separate window.</p>
 
-<p>Your .editorconfig is applied whenever you open a file. It does not pick up changes
-to your .editorconfig while a file is opened, you would have to reopen the file
-to apply your .editorconfig changes.</p>
+<h2>Screenshot</h2>
 
-<p>Aside from the native .editorconfig properties you can also use any Komodo preference
-names. Mind you that this has not been thoroughly tested yet, so take caution.</p>
+<p><img src="https://github.com/babobski/Find-Window/raw/master/screenshot01.png" alt="Screenshot"><br>
+<em>Noticed there where some complains about the new find icons, so I replaced them by text buttons</em></p>
 
-<p>If you mess up your file Preferences in some way you can reset them by deleting
-the <a href="https://community.activestate.com/faq/komodo-profile-structure">doc-state.xmlc file from your profile folder</a>.
-Note that Komodo should not be running when you do this.</p>
+<h2>Key Bindings</h2>
 
-<p>This feature will be built-in to Komodo as of version 9.2, so please ensure you
-uninstall the addon when updating.</p>
+<p>This addon will replaces the default key bindings, so you don&#39;t have to configure any key bindings.</p>
+
+<h2>Available Commands</h2>
+
+<p>All the Availible commands are:<br>
+* Find
+* Replace
+* Find in Files
+* Replace in Files
+* Find in Current Project
+* Replace in Current Project</p>
+
+<p>Also all these command are also available through the tools menu:</p>
+
+<p><img src="https://github.com/babobski/Find-Window/raw/master/screenshot02.png" alt="Screenshot"></p>
+
+<h2>Settings</h2>
+
+<p>By default the Find Window is always raised, meaning the find window will always be on top of Komodo.<br>
+If you don&#39;t like this behavior, you can disable this through the settings.<br>
+<strong>Addons &gt; Find Window &gt; Options</strong></p>
+
+<p><img src="https://github.com/babobski/Find-Window/raw/master/screenshot03.png" alt="Screenshot"></p>
 
     </div>
 
@@ -223,18 +240,18 @@ uninstall the addon when updating.</p>
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-1505474">
+            <div class="release  0" id="release-5448241">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/Komodo/komodo-editorconfig/releases/download/1.0.1/editorconfig-1.0.1-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Find-Window/releases/download/1.0/Find-Window-1.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        editorconfig-1.0.1-ko.xpi
+                                        Find-Window-1.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/Komodo/komodo-editorconfig/archive/1.0.1.zip" class="button">
+                           <a href="https://github.com/babobski/Find-Window/archive/First release of the Find Window Addon.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -252,11 +269,11 @@ uninstall the addon when updating.</p>
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo">
-                <span>Komodo</span>
+            <a href="https://github.com/babobski">
+                <span>babobski</span>
             </a>
-            <a href="https://github.com/Komodo" class="preview">
-                <img src="https://avatars.githubusercontent.com/u/5132872?v=3?s=18">
+            <a href="https://github.com/babobski" class="preview">
+                <img src="https://avatars0.githubusercontent.com/u/3530262?v=3?s=18">
             </a>
         </dd>
         
@@ -265,25 +282,25 @@ uninstall the addon when updating.</p>
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/komodo-editorconfig">
-                    Komodo/komodo-editorconfig
+            <a href="https://github.com/babobski/Find-Window">
+                    babobski/Find-Window
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-03-30T20:55:42Z">
-            Updated 40 weeks ago
+        <dd title="2017-02-14T05:47:10Z">
+            Updated 9 weeks ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/komodo-editorconfig/releases/tag/1.0.1">
+            <a href="https://github.com/babobski/Find-Window/releases/tag/1.0">
                 Version 
-                1.0.1
+                1.0
             </a>
         </dd>
 
@@ -291,7 +308,7 @@ uninstall the addon when updating.</p>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/Komodo/komodo-editorconfig/issues">
+            <a href="https://github.com/babobski/Find-Window/issues">
                 0 issues
             </a>
         </dd>
@@ -300,14 +317,14 @@ uninstall the addon when updating.</p>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>16668 downloads</span>
+            <span>755 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>5 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>

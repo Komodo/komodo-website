@@ -4585,25 +4585,49 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/babobski--closetabstotheright/</loc>
+    <loc>http://komodoide.com/resources/addons/wakatime--wakatime/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/packages/addons/close-tabs-to-the-right/</loc>
+    <loc>http://komodoide.com/packages/addons/wakatime/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/htd--newsourcetree/</loc>
+    <loc>http://komodoide.com/resources/addons/babobski--komodogit/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/packages/addons/new-source-tree/</loc>
+    <loc>http://komodoide.com/packages/addons/komodo-git/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/1ec5--avim/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/avim/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/babobski--beautifyjs/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/beautify-js/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4621,13 +4645,73 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/babobski--komodogit/</loc>
+    <loc>http://komodoide.com/resources/addons/babobski--sidebyside/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/packages/addons/komodo-git/</loc>
+    <loc>http://komodoide.com/packages/addons/side-by-side/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/defman21--xemmet/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/xemmet/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/babobski--findwindow/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/find-window/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/lazierthanthou--sqlitemanager/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/sqlite-manager/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/htd--newsourcetree/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/new-source-tree/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/addons/babobski--closetabstotheright/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/close-tabs-to-the-right/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4652,30 +4736,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/rgba-colorpicker/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/lazierthanthou--sqlitemanager/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/sqlite-manager/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/defman21--xemmet/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/xemmet/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4741,42 +4801,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/babobski--beautifyjs/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/beautify-js/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/1ec5--avim/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/avim/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/babobski--sidebyside/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/side-by-side/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://komodoide.com/resources/addons/defman21--terminal/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -4832,18 +4856,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/projects-scope/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/wakatime--wakatime/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/wakatime/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4909,18 +4921,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://komodoide.com/resources/addons/komodo--focusmode/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/focus-mode/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://komodoide.com/resources/addons/babobski--shutdownsettings/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -4928,18 +4928,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/shutdown-settings/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/komodo--editorconfig/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/editorconfig/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -4964,18 +4952,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/sciviews-k/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/komodo--klint/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/klint/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -5089,6 +5065,18 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/addons/dafizilla--klint/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/addons/klint/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/addons/jdpaton--paster/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -5108,18 +5096,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/addons/perfect-python/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/addons/komodo--kopyiointegration/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/addons/kopyio-integration/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -5437,6 +5413,42 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://komodoide.com/resources/schemes/babobski--winifydark-dracula/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/winify-dark---dracula/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/schemes/babobski--winifydark-monokai/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/winify-dark---monokai/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/resources/schemes/defman21--github/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/github/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://komodoide.com/resources/schemes/naatan--arcreddark/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -5492,18 +5504,6 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/schemes/unikitty/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/resources/schemes/defman21--github/</loc>
-    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://komodoide.com/packages/schemes/github/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -6506,6 +6506,12 @@
   </url>
   <url>
     <loc>http://komodoide.com/packages/schemes/pages/5/</loc>
+    <lastmod>2015-11-03T16:59:38-08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://komodoide.com/packages/schemes/pages/6/</loc>
     <lastmod>2015-11-03T16:59:38-08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
