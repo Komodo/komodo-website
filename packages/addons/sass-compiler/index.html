@@ -167,17 +167,57 @@
 
 
     <div id="readme" class="readme user-input">
-    <h1>Komodo-sass-compiler</h1>
+    <h1>Komodo SASS/SCSS Compiler</h1>
 
-<p>Sass/Scss compiler for komodo edit/ide<br>
-This addon allows you to compile SASS/SCSS files and will give auto completion on the $vars.</p>
+<p><em>SASS/SCSS compiler for Komodo Edit/Ide.</em><br>
+This addon gives you the ability to compile SASS/SCSS files and gives a improved <a href="https://github.com/babobski/Komodo-SASS-Compiler#auto-completion">auto-completion</a> of Less variables (also includes imports).</p>
 
 <h2>Usage</h2>
 
 <p>If you install this addon. default the compiler is enabled.<br>
-When you edit a SASS/SCSS file the file will be compiled to a CSS file.<br>
-The addon lets you set up a <em>File Watcher</em> or multiple <em>File Scopes</em> so you can work with imports and multiple sass/scss files in one project or multiple open projects( max. 3 ).<br>
-There are also some options available trough the menu.</p>
+When you edit a SASS/SCSS file the file will be compiled to a CSS file.</p>
+
+<p>If you have imports in you&#39;re sass/scss-file or you want to run multiple output-files.<br>
+You need to use a file scope this enables you to set up project based <a href="https://github.com/babobski/Komodo-SASS-Compiler#file-scopes">file scopes</a>, that will trigger output-files based on output-files and include-folders.<br>
+If you want to compile a file on the fly that has includes, you can also set up a single <a href="https://github.com/babobski/Komodo-SASS-Compiler#file-watcher">file watcher</a>.<br>
+This will trigger the selected output-file regardless of the scss/scss-file you&#39;re working on.</p>
+
+<p>Trough the Tools-menu and file context-menu are <a href="https://github.com/babobski/Komodo-SASS-Compiler#menu-options">Sass menu&#39;s</a> added, that allows you to trigger file based commands and a few commands concerning file-watchers, file-scopes and auto-completion commands/settings.
+Also is a <a href="https://github.com/babobski/Komodo-SASS-Compiler#status-bar-options">status-bar</a> added to the breadcrumb-bar that also has a context-menu that allows you to control various commands/settings.</p>
+
+<h2>Sass Status-bar</h2>
+
+<p>When editing SASS/SCSS files, a Sass status bar will be shown.<br>
+The status bar well tell you, if the compiler is enabled/disabled, if a file watcher or file scope is active and it will show errors if present.</p>
+
+<p><img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot01.png" alt="Screensot"></p>
+
+<p>Trough the status-bar you can easily configure the settings.</p>
+
+<h3>Status-bar options</h3>
+
+<ul>
+<li><strong>Disable/Enable Compiler</strong><br>
+This will enable/disable the compiler.</li>
+<li><strong>Disable/Enable File Watcher</strong><br>
+This will enable/disable a file watcher for the current file, when you edit sass/scss file&#39;s only the &quot;Watched file&quot; will be compiled.</li>
+<li><strong>Disable/Enable File Scopes</strong><br>
+This will enable the &quot;file scopes&quot; mode, that will trigger file scopes based on projects.</li>
+<li><strong>File Scopes</strong><br>
+This will open a window where you can set file scopes, so you can work with multiple output files in one project or work with multiple projects.</li>
+<li><strong>Settings</strong><br>
+This will open the Sass-settings window.</li>
+</ul>
+
+<h2>Auto-completion</h2>
+
+<p>This addon will provide you with a SASS/SCSS variables auto-completion.<br>
+The vars will be search automatically( on file open and after you pressed $ on save ).</p>
+
+<p>You can also trigger the search trough the menu.<br>
+When you type $ a auto completion box will be shown.</p>
+
+<p><img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot02.png" alt="Screenshot"></p>
 
 <h3>Menu options</h3>
 
@@ -201,43 +241,60 @@ Takes the current selection and turns it into CSS
   Enables a file watcher for current SASS file 
   * <strong>disable File Watcher</strong><br>
   Disables the file watcher
+ * <strong>File Scopes</strong><br>
+  - <strong>Enable File Scopes</strong><br>
+  Enables the &quot;file-scopes&quot; mode.
+  - <strong>Disable File Scopes</strong><br>
+  Disables the &quot;file-scopes&quot; mode
  * <strong>Sass Settings</strong><br>
  This will open the settings window.</p>
 
-<p>### Statusbar
-When editing Sass or scss files, a Sass statusbar will be shown.<br>
-The statusbar well tell you, if the compiler is enabled/disabled, if a file watcher or file scope is active and it will show errors if present.<br>
-<img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot01.png" alt="Screensot"><br>
-Trough the statusbar you can easily configure the settings.</p>
+<h2>File Scopes</h2>
 
-<h4>Statusbar options</h4>
+<p>File-scopes allow you to work with output-files and include-folders, these file scopes are set on a project level.<br>
+When you edit a file in the include-folder(s) the selected output-files(s) are triggered.<br>
+To create a new file-scope you will have to use the menu in the status-bar <strong>status-bar &gt; File Scopes</strong>.
+This will open the File scopes window, in this window you can edit, create or delete file scopes:</p>
 
-<ul>
-<li><strong>Disable Compiler</strong><br>
-This will disable the compiler</li>
-<li><strong>Enable File Watcher</strong><br>
-This will enable a file watcher for the current file, when you edit sass or scss file&#39;s only the &quot;Watched file&quot; will be compiled</li>
-<li><strong>File Scopes</strong><br>
-This will open a window where you can set file scopes, so you can work with multiple output files in one project or work with multiple projects.</li>
-<li><strong>Settings</strong><br>
-This will open the settings window.</li>
-</ul>
+<p><img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot03.png" alt="screenshot"></p>
 
-<h3>Autocompletion</h3>
+<p>If you click the &quot;Create new file scope&quot; menu item, the following popup will shown:</p>
 
-<p>This addon will provide you with SASS or SCSS var auto completion.<br>
-The vars will be search automatically( on file open and after you pressed $ on save ).<br>
-You can also trigger the search trough the menu.<br>
-When you type $ a auto completion box will be shown.<br>
-<img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot02.png" alt="Screenshot"></p>
+<p><img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot04.png" alt="screenshot"></p>
 
-<h3>File Scopes</h3>
+<p>In this window you can create you&#39;re project based file scopes, you can have multiple file scopes in one project.<br>
+You can set up file scopes with the following structures:</p>
 
-<p><img src="https://github.com/babobski/Komodo-sass-compiler/raw/master/screenshot03.png" alt="screenshot"><br>
-In the file scopes window, you can setup up to 3 file scopes.<br>
-For each file scope you can set a output file( this file will be triggered if a sass or scss file is in the current scope ) and set up to 3 include folders.<br>
-If a SASS or SCSS file is inside(recursively) a file scope, the selected output file will be compiled on save.
-This allows you to work with multiple file scopes in one project or allows to work with multiple open projects( komodo windows )</p>
+<p>```
+ Include folder/
+    ├─ Sass file
+    ├─ Sass file
+    ├─ Include folder/
+    ├── Sass file
+    └── Sass file<br>
+─ Sass output-file</p>
+
+<p>```</p>
+
+<p>And:</p>
+
+<p>```
+ Include folder/
+    ├─ Sass file
+    ├─ Sass output-file
+    ├─ Include folder/
+    ├── Sass file
+    └── Sass file</p>
+
+<p>```</p>
+
+<p>You can select multiple output-files, but is not recommended to use more that two output-files for performance reasons.</p>
+
+<h2>File Watcher</h2>
+
+<p>If you want to edit a SASS/SCSS-files that has includes, on the fly.<br>
+You can set up a File watcher, when you enable the file Watcher the current file will be added as output-file.<br>
+When you now edit Less files only the output-file will be triggered.</p>
 
     </div>
 
@@ -277,18 +334,18 @@ This allows you to work with multiple file scopes in one project or allows to wo
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-3633349">
+            <div class="release  0" id="release-6235340">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Komodo-sass-compiler/releases/download/2.4/Komodo-Sass-Compiler-2.4.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Komodo-sass-compiler/releases/download/3.0/Komodo-SASS-compiler-3.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Komodo-Sass-Compiler-2.4.xpi
+                                        Komodo-SASS-compiler-3.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Komodo-sass-compiler/archive/Bug fix for Edit.zip" class="button">
+                           <a href="https://github.com/babobski/Komodo-sass-compiler/archive/Updated file scope logic and improved autocompletion.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -327,17 +384,17 @@ This allows you to work with multiple file scopes in one project or allows to wo
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2016-07-11T21:43:57Z">
-            Updated 40 weeks ago
+        <dd title="2017-04-30T14:16:23Z">
+            Updated 3 weeks ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Komodo-sass-compiler/releases/tag/2.4">
+            <a href="https://github.com/babobski/Komodo-sass-compiler/releases/tag/3.0">
                 Version 
-                2.4
+                3.0
             </a>
         </dd>
 
@@ -346,7 +403,7 @@ This allows you to work with multiple file scopes in one project or allows to wo
         </dt>
         <dd>
             <a href="https://github.com/babobski/Komodo-sass-compiler/issues">
-                3 issues
+                2 issues
             </a>
         </dd>
 
@@ -354,7 +411,7 @@ This allows you to work with multiple file scopes in one project or allows to wo
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>15196 downloads</span>
+            <span>15710 downloads</span>
         </dd>
     
         <dt>
