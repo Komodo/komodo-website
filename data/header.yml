@@ -37,7 +37,7 @@ navigation:
   - 
     name: "Documentation"
     icon: "external-link"
-    link: "http://docs.komodoide.com/"
+    link: "http://docs.activestate.com/komodo/11"
 navigation_left: 
   -
     name: "Learn More About Komodo"
