@@ -1,8 +1,5 @@
 navigation: 
   - 
-    name: "Forums"
-    link: "/"
-  - 
     name: "Packages"
     icon: "caret-down"
     sub:
@@ -30,6 +27,10 @@ navigation:
   - 
     name: "Contribute"
     link: "{site.url}/packages/submit-instructions"
+  - 
+    name: "Chat"
+    icon: "external-link"
+    link: "https://gitter.im/ActiveState/Komodo"
   - 
     name: "Bug Tracker"
     icon: "external-link"
