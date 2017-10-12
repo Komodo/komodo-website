@@ -103,7 +103,7 @@ end
 configure :build do
   is_qa = ENV["KO_QA"] == "true"
   set :is_live, ! is_qa
-  set :site_url, is_qa ? "http://qa.komodoide.com" : "http://community.komodoide.com"
+  set :site_url, is_qa ? "http://qa.komodoide.com" : "https://community.komodoide.com"
 end
 
 set :css_dir, 'asset/stylesheets'
