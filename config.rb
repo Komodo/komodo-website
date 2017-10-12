@@ -3,7 +3,7 @@ helpers Helpers
 
 #activate :imageoptim
 
-set :url_root, "http://community.komodoide.com/"
+set :url_root, "https://community.komodoide.com/"
 activate :search_engine_sitemap
 
 pageable = {}
