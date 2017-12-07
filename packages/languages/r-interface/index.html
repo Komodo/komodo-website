@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Komodo IDE | Komodo IDE</title>
+        <title>R Interface | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Komodo IDE" />
+        <meta property="og:title" content="R Interface | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -52,7 +52,7 @@
         <div id="callouts"></div>
 
         <!-- Main Container -->
-        <div id="container" class="container-index">
+        <div id="container" class="container-resource">
             <a name="top"></a>
             <header>
     <div class="outer">
@@ -134,19 +134,318 @@
     </div>
 </header>
 
-                <div id="content" class="document-index
-                             
-                             
-                             
-                             resources resources_schemes resources_schemes_babobski--k11winifydark-monokai resources_schemes_babobski--k11winifydark-monokai_index">
-        <section role="main">
-            <article class="normalize">
-                <meta http-equiv="refresh" content="0; url=/packages/schemes/k11-winify-dark---monokai/">
-<link rel="canonical" href="/packages/schemes/k11-winify-dark---monokai/" />
+            <div id="content" class="sidebar sidebar-left document-resource">
+    <section role="main">
+        <article class="normalize">
 
-            </article>
-        </section>
+<!-- Start Content -->
+
+<ul class="trail">
+    <li>
+        <a href="/packages">Packages</a>
+    </li>
+    <li>
+        <a href="/packages/languages">
+            Languages
+        </a>
+    </li>
+    <li>
+        R Interface
+    </li>
+</ul>
+
+<div class="try-buy-buttons">
+    <div class="inner">
+        <a class="button primary" href="/download">
+            <i class="icon icon-download"></i> Try Komodo IDE
+        </a>
+        <a class="button " href="/pricing">
+            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
+        </a>
     </div>
+</div>
+
+
+    <div id="readme" class="readme user-input">
+    <p><img align="left" src="https://raw.githubusercontent.com/k-barton/komodor/master/img/logo1.png"
+alt="KomodoR logo" style="float: left" /></p>
+
+<p>Provides <a href="https://www.r-project.org/">R language</a> support and interface between 
+R environment and Komodo. </p>
+
+<hr>
+
+<p>This extension has initially been a slimmed-down fork of
+<a href="https://community.komodoide.com/packages/addons/sciviews-k/">“Sciviews-K”</a> by 
+Philippe Grosjean, but since then it has been largely rewritten. 
+It is compatible with Komodo 9 to 11, and has been tested to work on Windows 
+and Linux.</p>
+
+<p><strong>Note:</strong> Komodo, since version 9.3, provides its own R syntax highlighting 
+not compatible with this add-on. Therefore “R” language provided by 
+this extension has been renamed to <em>“R_extended”</em> to avoid conflicts.</p>
+
+<p><strong>Features:</strong></p>
+
+<ul>
+<li>Start/close “R” session from Komodo</li>
+<li>Execution of R code from within editor:
+
+<ul>
+<li>output from R is shown in the <em>Command Output</em> pane</li>
+<li>execute (or <code>source</code>) the current line or selection, bookmark-delimited 
+block, function at cursor, or a whole file.</li>
+</ul></li>
+<li>Syntax highlighting:
+
+<ul>
+<li>R language including <a href="http://roxygen.org/">Roxygen</a> tags</li>
+<li>R documentation (.Rd files, partially implemented)</li>
+<li><a href="https://cran.r-project.org/package=rmarkdown">Rmarkdown</a> 
+(.Rmd files, partially implemented)</li>
+</ul></li>
+<li>Syntax checking</li>
+<li>Code completion (objects, argument names, list items)</li>
+<li>R object browser (sidebar)</li>
+<li>Toolbar with commonly used commands</li>
+<li>R help window</li>
+<li>R package manager</li>
+<li>R working directory can be changed from <em>Places</em> pane (in the context menu)</li>
+</ul>
+
+<p>A socket connection is used to communicate with R. No additional R packages 
+are required, however your R installation needs to have Tcl capability 
+(R: <code>capabilities(&quot;tcltk&quot;)</code>). See also <em>Known issues</em> below.</p>
+
+<p><strong>Main API functions</strong></p>
+
+<ul>
+<li> in Komodo: <code>sv.r.eval</code> and <code>sv.r.evalAsync</code> JavaScript functions execute a 
+command in R and return the output.</li>
+<li> in R: <code>koCmd</code> executes a JavaScript command in Komodo and returns the result 
+if any.</li>
+</ul>
+
+<p><strong>Some other obscure features:</strong></p>
+
+<ul>
+<li><em><em>Places</em> panel</em>:
+
+<ul>
+<li>load workspace from “.RData” files or source script from “.R” files: 
+select a command from the context menu.</li>
+</ul></li>
+<li><em>R browser</em>:
+
+<ul>
+<li>drag an item to the editor to insert R objects&#39; names,
+
+<ul>
+<li>hold &quot;Shift&quot; key during the drag start to drop quoted names,<br></li>
+<li>hold &quot;Ctrl&quot; key during the drag start to drop full object names
+(e.g. <code>list$data$column</code>. Non-syntactic names will be backtick-quoted).</li>
+<li>hold both to insert “name()” for functions, “name=” for function 
+arguments.</li>
+</ul></li>
+</ul></li>
+<li><em>R search path</em> box:
+
+<ul>
+<li>drop a package name onto it to load the package;</li>
+<li>press &quot;delete&quot; to unload the selected package; </li>
+<li>drag an item to the editor to insert package name.</li>
+</ul></li>
+<li><em>R help</em> window:
+
+<ul>
+<li>press Ctrl+R to run selected text as R code (or choose command from the 
+context menu).</li>
+</ul></li>
+<li>R language help (Shift+F1 while in an <em>R_extended</em> document):
+
+<ul>
+<li>the selected keyword is searched for in the loaded packages. If nothing is 
+found, press Shift+F1 again to search in all packages.</li>
+</ul></li>
+<li>The <em>R tools</em> toolbox has some more of less useful commands:
+
+<ul>
+<li>R markdown preview;</li>
+<li>Insert result of the selected text evaluated in R;</li>
+<li>Color picker (inserts hex code to the text);</li>
+<li>Duplicate line or selection (assign to e.g. Ctrl+D to restore the good old 
+pre-8 behaviour).</li>
+<li>“<em>Smart</em> highlight” marks all occurences of the word under the cursor in 
+the current document.</li>
+</ul></li>
+</ul>
+
+<p><strong>Debugging R code</strong></p>
+
+<p>The extension provides some debugging capabilities, see 
+<a href="https://github.com/k-barton/komodor/blob/master/debugging.md">Debugging R code</a>.   </p>
+
+<p><strong>Known issues:</strong></p>
+
+<ul>
+<li>Output from R is displayed in the command output pane only at the end of 
+operation (dynamic command output will be introduced in version 0.3)</li>
+<li>Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape 
+key in RGui)</li>
+<li>Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket 
+server and hence break the connection with Komodo. It may also cause R crash 
+(it happens sometimes on Windows).</li>
+<li>On Linux, Tk-Gui sometimes does not close properly. It is recommended not to 
+use it with Komodo.</li>
+<li>Problems with connection with Komodo server in R may cause R not exit 
+properly and need to kill the R process (it happens very rarely though - 
+perhaps a Windows-specific problem).</li>
+<li>If something went wrong and Komodo shows R is running when it is not, 
+run “R: check connection” macro in “R Tools” toolbox.</li>
+<li>Connection timeout on longer operations: a prompt is shown as if the calculation
+in R has finished and no output is shown. There does not seem to be a way
+to set socket timeout in Tcl. (no longer in version 0.3)</li>
+<li>R object browser has to be refreshed manually (click sidebar&#39;s refresh button)
+Automatic refreshing will be an option in future version.</li>
+<li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the 
+colouring dissappears occassionally. There is also some flickering inside
+Roxygen comments. This seems to be related to brace counting in UDL 
+(bug in Komodo?).</li>
+</ul>
+
+<p><strong><a href="https://github.com/k-barton/komodor/blob/master/improveKo9.md">Hacks for classic Windows styling in Komodo Edit</a></strong></p>
+
+    </div>
+
+<div id="comments" class="comments">
+    <hr>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+        var disqus_shortname = 'komodoide';
+
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+
+<!-- End Content -->
+
+        </article>
+    </section>
+    <aside class="sidebar-resources normalize">
+        <div id="side-border"></div>
+        <button id="side-collapse" class="button big">
+            <i class="icon icon-chevron-left"></i>
+            <i class="icon icon-chevron-right"></i>
+        </button>
+        <div class="inner">
+<!-- Start Sidebar -->
+
+<div class="download">
+        <div class="releases">
+        <!-- release = resource.releases.each_with_index() do |release,k| -->
+            <div class="release  0" id="release-8787253">
+                <div class="files centered">
+                       <div class="assets">
+                                <div>
+                                    <a href="https://github.com/k-barton/komodor/releases/download/0.2.126/komodor-0.2.126-ko.xpi" class="button big primary">
+                                        <i class="icon icon-download"></i>
+                                        komodor-0.2.126-ko.xpi
+                                    </a>
+                                </div>
+                       </div>
+                        <div class="source">
+                           <a href="https://github.com/k-barton/komodor/archive/komodor-0.2.126.zip" class="button">
+                               <i class="icon icon-download"></i>
+                               Download Source
+                           </a>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+        
+        <div class="spacer"></div>
+
+<div class="details-meta">
+    <dl>
+        <dt>
+            <i class="icon icon-user"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/k-barton">
+                <span>k-barton</span>
+            </a>
+            <a href="https://github.com/k-barton" class="preview">
+                <img src="https://avatars0.githubusercontent.com/u/9742898?v=4?s=18">
+            </a>
+        </dd>
+        
+
+        <dt>
+            <i class="icon icon-github"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/k-barton/komodor">
+                    k-barton/komodor
+            </a>
+        </dd>
+    
+        <dt>
+            <i class="icon icon-clock-o"></i>
+        </dt>
+        <dd title="2017-12-06T12:52:14Z">
+            Updated a day ago
+        </dd>
+        
+        <dt>
+            <i class="icon icon-code-fork"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/k-barton/komodor/releases/tag/0.2.126">
+                Version 
+                0.2.126
+            </a>
+        </dd>
+
+        <dt>
+            <i class="icon icon-bug"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/k-barton/komodor/issues">
+                0 issues
+            </a>
+        </dd>
+
+        <dt>
+            <i class="icon icon-cloud-download"></i>
+        </dt>
+        <dd>
+            <span>0 downloads</span>
+        </dd>
+    
+        <dt>
+            <i class="icon icon-star"></i>
+        </dt>
+        <dd>
+            <span>0 stars</span>
+        </dd>
+    </dl>
+</div>
+
+<!-- End Sidebar -->
+        </div>
+    </aside>
+</div>
 
             <div id="footer_push"></div>
         </div>

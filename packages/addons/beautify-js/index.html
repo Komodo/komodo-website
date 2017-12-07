@@ -167,81 +167,74 @@
 
 
     <div id="readme" class="readme user-input">
-    <h1>Beautify js</h1>
+    <h1>Beautify JS</h1>
 
 <p>js beautify for komodo edit/ide.</p>
 
 <p>This little beautifier will reformat/minify css, html and javascript.<br>
-Based on the the <a href="http://jsbeautifier.org/" target="_blank">jsbeautifier.org</a>.</p>
+Based on the the <a href="http://jsbeautifier.org/">jsbeautifier.org</a>.</p>
 
-<h2>Usage</h2>
-
-<p><b>Goto to Tools</b> -&gt; <b>Beautify js</b> and select an option, or right-click on your file (context menu)</p>
+<h2>options</h2>
 
 <ul>
-<li><strong><em>Beautify (auto detect)</em></strong><br>
-Beautify HTML/CSS/javascript (this will be auto-detected).<br>  
-<em>Selection or document</em>
-</li>
-<li><strong><em>Beautify HTML</em></strong><br>
+<li><strong>Beautify (auto detect)</strong><br>
+Beautify HTML/CSS/javascript (this will be auto-detected).<br>
+<em>Selection or document</em></li>
+<li><strong>Beautify HTML</strong><br>
 Beautify HTML.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Beautify CSS</em></strong><br>
+<em>Selection or document</em></li>
+<li><strong>Beautify CSS</strong><br>
 Beautify CSS.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Beautify Javascript</em></strong><br>
+<em>Selection or document</em><br></li>
+<li><strong>Beautify Javascript</strong><br>
 Beautify javascript.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Minify HTML</em></strong><br>
+<em>Selection or document</em></li>
+<li><strong>Minify HTML</strong><br>
 Minify HTML.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Minify Javascript</em></strong><br>
+<em>Selection or document</em><br></li>
+<li><strong>Minify Javascript</strong><br>
 Minify javascript.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Minify Javascript save as .min</em></strong><br>
+<em>Selection or document</em></li>
+<li><strong>Minify Javascript save as .min</strong><br>
 Minify javascript and save it as .min file.<br>
-<em>document</em>
-</li>
-<li><strong><em>Minify CSS</em></strong><br>
+<em>document</em><br></li>
+<li><strong>Minify CSS</strong><br>
 Minify CSS.<br>
-<em>Selection or document</em>
-</li>
-<li><strong><em>Minify CSS save as .min</em></strong><br>
+<em>Selection or document</em><br></li>
+<li><strong>Minify CSS save as .min</strong><br>
 Minify CSS and save it as .min file.<br>
-<em>document</em>
-</li>
-<li><strong><em>Beautify Settings</em></strong><br>
+<em>document</em><br></li>
+<li><strong>Beautify Settings</strong><br>
 This will open the settings window.<br>
-<em>Selection or document</em>
-</li>
+<em>Selection or document</em></li>
 </ul>
 
-<h3>Ide only</h3>
+<h2>Access</h2>
 
-<p>Same menu is availible under <strong>code &gt; format &gt; beautify js</strong></p>
+<p>These option are availible under <strong>Tools &gt; Beautify JS</strong> or in the context menu of the current file.  </p>
 
-<h2>Options</h2>
+<p>In Komodo Ide you also have a dynamic button and is Beautify JS added to the <strong>Code &gt; Format</strong> menu.  </p>
 
-<p>The option panel is accessible trough the addon screen.<br><br>
-<img src="https://raw.githubusercontent.com/babobski/Beautify-js/master/screenshot.png" alt="screenshot option panel"></p>
+<p><img src="https://github.com/babobski/Beautify-js/raw/master/access.jpg" alt="screenshot">  </p>
 
 <h2>Key Bindings</h2>
 
-<p>You can set up key bindings for all of the available beautify options.<br>
-<b>Preferences &gt; Key Bindings &gt; Beautify</b>
-<img src="https://github.com/babobski/Beautify-js/raw/master/screenshot2.png" alt="screenshot key bindings"></p>
+<p>You can set up key bindings for all of the available beautify options.</p>
+
+<p><img src="https://github.com/babobski/Beautify-js/raw/master/keybindings.jpg" alt="screenshot"></p>
+
+<h2>Beautify/minify Options</h2>
+
+<p>The option panel, for controlling the beautify and minify options is accessible trough the addon screen.</p>
+
+<p><img src="https://github.com/babobski/Beautify-js/raw/master/prefernces.jpg" alt="screenshot"></p>
 
 <h2>Userscripts</h2>
 
 <p>You can use beautify js inside a userscript, below are a few example&#39;s how to set up such userscript.</p>
 
 <p>```javascript
-// AUTO DETECT (JS/HTML/CSS)
+// Auto detect (JS/HTML/CSS)
 if (extensions.beautifyjs) {
     extensions.beautifyjs.beautify();
 }
@@ -325,18 +318,18 @@ if (extensions.beautifyjs) {
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-5870804">
+            <div class="release  0" id="release-8189871">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/babobski/Beautify-js/releases/download/3.3.2/Beautify-JS-3.3.2.xpi" class="button big primary">
+                                    <a href="https://github.com/babobski/Beautify-js/releases/download/4.0/Beautify-JS-4.0.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        Beautify-JS-3.3.2.xpi
+                                        Beautify-JS-4.0.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/babobski/Beautify-js/archive/Bugfix for beautify on selection not working.zip" class="button">
+                           <a href="https://github.com/babobski/Beautify-js/archive/K11 ready + dynamic toolbar added.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -375,17 +368,17 @@ if (extensions.beautifyjs) {
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2017-03-26T11:35:29Z">
-            Updated 28 weeks ago
+        <dd title="2017-10-19T23:05:06Z">
+            Updated 7 weeks ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/babobski/Beautify-js/releases/tag/3.3.2">
+            <a href="https://github.com/babobski/Beautify-js/releases/tag/4.0">
                 Version 
-                3.3.2
+                4.0
             </a>
         </dd>
 
@@ -394,7 +387,7 @@ if (extensions.beautifyjs) {
         </dt>
         <dd>
             <a href="https://github.com/babobski/Beautify-js/issues">
-                3 issues
+                2 issues
             </a>
         </dd>
 
@@ -402,7 +395,7 @@ if (extensions.beautifyjs) {
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>29581 downloads</span>
+            <span>30661 downloads</span>
         </dd>
     
         <dt>
