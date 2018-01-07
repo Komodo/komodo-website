@@ -175,15 +175,12 @@ R environment and Komodo. </p>
 
 <hr>
 
-<p>This extension has initially been a slimmed-down fork of
-<a href="https://community.komodoide.com/packages/addons/sciviews-k/">“Sciviews-K”</a> by 
-Philippe Grosjean, but since then it has been largely rewritten. 
-It is compatible with Komodo 9 to 11, and has been tested to work on Windows 
-and Linux.</p>
+<p>This extension forked from <a href="https://community.komodoide.com/packages/addons/sciviews-k/">“Sciviews-K”</a> by 
+Philippe Grosjean, and since then has been largely rewritten. </p>
 
-<p><strong>Note:</strong> Komodo, since version 9.3, provides its own R syntax highlighting 
-not compatible with this add-on. Therefore “R” language provided by 
-this extension has been renamed to <em>“R_extended”</em> to avoid conflicts.</p>
+<p>&quot;R&quot; language provided by this add-on is named <strong>“R_extended”</strong> to 
+avoid conflict with Komodo&#39;s own R syntax highlighter. Code completion 
+and syntax checking works only with “R_extended” not “R“.</p>
 
 <p><strong>Features:</strong></p>
 
@@ -200,9 +197,9 @@ block, function at cursor, or a whole file.</li>
 
 <ul>
 <li>R language including <a href="http://roxygen.org/">Roxygen</a> tags</li>
-<li>R documentation (.Rd files, partially implemented)</li>
+<li>R documentation (<em>.Rd</em> files, partially implemented.)</li>
 <li><a href="https://cran.r-project.org/package=rmarkdown">Rmarkdown</a> 
-(.Rmd files, partially implemented)</li>
+(<em>.Rmd</em> files, partially implemented.)</li>
 </ul></li>
 <li>Syntax checking</li>
 <li>Code completion (objects, argument names, list items)</li>
@@ -226,7 +223,7 @@ command in R and return the output.</li>
 if any.</li>
 </ul>
 
-<p><strong>Some other obscure features:</strong></p>
+<p><strong>Some other, obscure features:</strong></p>
 
 <ul>
 <li><em><em>Places</em> panel</em>:
@@ -282,7 +279,7 @@ the current document.</li>
 
 <p><strong>Debugging R code</strong></p>
 
-<p>The extension provides some debugging capabilities, see 
+<p>The extension provides some code debugging capabilities, see 
 <a href="https://github.com/k-barton/komodor/blob/master/debugging.md">Debugging R code</a>.   </p>
 
 <p><strong>Known issues:</strong></p>
@@ -305,12 +302,12 @@ run “R: check connection” macro in “R Tools” toolbox.</li>
 <li>Connection timeout on longer operations: a prompt is shown as if the calculation
 in R has finished and no output is shown. There does not seem to be a way
 to set socket timeout in Tcl. (no longer in version 0.3)</li>
-<li>R object browser has to be refreshed manually (click sidebar&#39;s refresh button)
-Automatic refreshing will be an option in future version.</li>
+<li>R object browser is refreshed manually (click sidebar&#39;s refresh button)
+Automatic refreshing may become an option in future version.</li>
 <li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the 
 colouring dissappears occassionally. There is also some flickering inside
 Roxygen comments. This seems to be related to brace counting in UDL 
-(bug in Komodo?).</li>
+(bug in Komodo).</li>
 </ul>
 
 <p><strong><a href="https://github.com/k-barton/komodor/blob/master/improveKo9.md">Hacks for classic Windows styling in Komodo Edit</a></strong></p>
@@ -353,18 +350,18 @@ Roxygen comments. This seems to be related to brace counting in UDL
 <div class="download">
         <div class="releases">
         <!-- release = resource.releases.each_with_index() do |release,k| -->
-            <div class="release  0" id="release-8787253">
+            <div class="release  0" id="release-9035324">
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/k-barton/komodor/releases/download/0.2.126/komodor-0.2.126-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/k-barton/komodor/releases/download/0.2.250/komodor-0.2.250-ko.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        komodor-0.2.126-ko.xpi
+                                        komodor-0.2.250-ko.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/k-barton/komodor/archive/komodor-0.2.126.zip" class="button">
+                           <a href="https://github.com/k-barton/komodor/archive/komodor-0.2.250.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -403,17 +400,17 @@ Roxygen comments. This seems to be related to brace counting in UDL
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2017-12-06T12:52:14Z">
-            Updated a day ago
+        <dd title="2018-01-03T22:42:51Z">
+            Updated 3 days ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/k-barton/komodor/releases/tag/0.2.126">
+            <a href="https://github.com/k-barton/komodor/releases/tag/0.2.250">
                 Version 
-                0.2.126
+                0.2.250
             </a>
         </dd>
 
@@ -430,7 +427,7 @@ Roxygen comments. This seems to be related to brace counting in UDL
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>0 downloads</span>
+            <span>487 downloads</span>
         </dd>
     
         <dt>
