@@ -175,13 +175,16 @@ R environment and Komodo. </p>
 
 <hr>
 
-<p>This extension forked from <a href="https://community.komodoide.com/packages/addons/sciviews-k/">“Sciviews-K”</a> by 
+<p><br clear="both" /></p>
+
+<p>This extension forked from 
+<a href="https://community.komodoide.com/packages/addons/sciviews-k/">“Sciviews-K”</a> by 
 Philippe Grosjean, and since then has been largely rewritten. </p>
 
 <p><strong>Features:</strong></p>
 
 <ul>
-<li>Connect to “R” session from Komodo</li>
+<li>Connect to “R” session from Komodo (R application runs independently)</li>
 <li>Execution of R code directly from within editor:
 
 <ul>
@@ -199,7 +202,7 @@ block, function at cursor, or a whole file.</li>
 </ul></li>
 <li>Code completion (objects, argument names, list items)</li>
 <li>Syntax checking</li>
-<li>R object browser pane</li>
+<li>R object browser pane with fully expandable tree allows for inspecting objects&#39; structure including attributes and hidden objects.</li>
 <li>Toolbar with commonly used commands</li>
 <li>R help window</li>
 <li>R package manager</li>
@@ -209,17 +212,8 @@ block, function at cursor, or a whole file.</li>
 <p>This add-on provides a file type named <strong>“R_extended”</strong> to avoid conflict with Komodo&#39;s 
 built-in R syntax highlighter. Code completion and syntax checking works only with “R_extended” not “R“.</p>
 
-<p>No additional R packages are required, however your R installation needs to have Tcl capability 
-(R: <code>capabilities(&quot;tcltk&quot;)</code>). See also <em>Known issues</em> below.</p>
-
-<p><strong>Main API functions</strong></p>
-
-<ul>
-<li> in Komodo: <code>kor.r.evalUserCmd</code> JavaScript function sends a command to R.</li>
-<li> in R: <code>koCmd</code> executes a JavaScript command in Komodo and returns the result 
-if any.</li>
-<li> For more advances uses, CommonJS module <code>&quot;kor/r&quot;</code> (or <code>kor.r</code> object in the main <code>window</code>) has functions to perform various tasks <em>via</em> R, and the <code>&quot;kor/connector&quot;</code> module has more low level functions for communication between R and Komodo, of which <code>require(&quot;kor/connector&quot;).evalAsync(command, callback)</code> is the most useful.</li>
-</ul>
+<p>No additional R packages are required, however your R installation needs to have
+Tcl capability (by default it does. Check in R with <code>capabilities(&quot;tcltk&quot;)</code>). See also <em>Known issues</em> below.</p>
 
 <p><strong>Some other, obscure features:</strong></p>
 
@@ -242,6 +236,7 @@ select a command from the context menu.</li>
 <li>hold both to insert “name()” for functions, “name=” for function 
 arguments.</li>
 </ul></li>
+<li>filter items either by object name or class name (toggle the &quot;filter by&quot; button next to the search box), using regular expressions. Prefix the search term with &quot;~&quot; to filter <em>out</em> matching names.</li>
 </ul></li>
 <li><em>R search path</em> box:
 
@@ -268,7 +263,7 @@ found, press Shift+F1 again to search in all packages.</li>
 <li>R markdown preview;</li>
 <li>Insert result of the selected text evaluated in R;</li>
 <li>Color picker (inserts hex code to the text);</li>
-<li>Duplicate line or selection (assign to e.g. Ctrl+D to restore the good old 
+<li>Duplicate line or selection (assign to Ctrl+D to restore the good old 
 pre-8 behaviour).</li>
 <li>“<em>Smart</em> highlight” marks all occurences of the word under the cursor in 
 the current document.</li>
@@ -280,11 +275,20 @@ the current document.</li>
 <p>The extension provides some code debugging capabilities, see 
 <a href="https://github.com/k-barton/komodor/blob/master/debugging.md">Debugging R code</a>.   </p>
 
+<p><strong>Main API functions</strong></p>
+
+<ul>
+<li> in Komodo: <code>kor.r.evalUserCmd</code> JavaScript function sends a command to R.</li>
+<li> in R: <code>koCmd</code> executes a JavaScript command in Komodo and returns the result 
+if any.</li>
+<li> For more advances uses, CommonJS module <code>&quot;kor/r&quot;</code> (or <code>kor.r</code> object in the main <code>window</code>) has functions to perform various tasks <em>via</em> R, and the <code>&quot;kor/connector&quot;</code> module has more low level functions for communication between R and Komodo, of which <code>require(&quot;kor/connector&quot;).evalAsync(command, callback)</code> is the most useful.</li>
+</ul>
+
 <p><strong>Known issues:</strong></p>
 
 <ul>
-<li>Output from R is displayed in the command output pane only at the end of 
-operation (real-time command output will be introduced in version 0.4)</li>
+<li>Output from R is displayed in the command output pane only <strong>at the end of 
+operation</strong> (real-time command output will be introduced in version 0.4)</li>
 <li>Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape 
 key in RGui)</li>
 <li>Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket 
@@ -295,14 +299,11 @@ use it with this add-on.</li>
 <li>Problems with connection with Komodo server in R may cause R not exit 
 properly and need to kill the R process (it happens rarely - perhaps a 
 Windows-specific problem).</li>
-<li>If something went wrong and Komodo shows R is running when it is not, 
-run “R: check connection” macro in “R Tools” toolbox.</li>
 <li>Connection timeout on longer operations: a prompt is shown as if the calculation
 in R has finished and no output is shown. (version &lt; 0.4)</li>
 <li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the 
 colouring dissappears occassionally. There is also some flickering inside
-Roxygen comments. This seems to be related to brace counting in UDL 
-(bug in Komodo).</li>
+Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
 </ul>
 
 <p><strong><a href="https://github.com/k-barton/komodor/blob/master/improveKo9.md">Hacks for classic Windows styling in Komodo Edit</a></strong></p>
@@ -349,14 +350,14 @@ Roxygen comments. This seems to be related to brace counting in UDL
                 <div class="files centered">
                        <div class="assets">
                                 <div>
-                                    <a href="https://github.com/k-barton/komodor/releases/download/0.3.10b/komodor-0.3.10b-ko.xpi" class="button big primary">
+                                    <a href="https://github.com/k-barton/komodor/releases/download/0.3.52b/komodor-0.3.52b-ko.xpi" class="button big primary">
                                         <i class="icon icon-download"></i>
-                                        komodor-0.3.10b-ko.xpi
+                                        komodor-0.3.52b-ko.xpi
                                     </a>
                                 </div>
                        </div>
                         <div class="source">
-                           <a href="https://github.com/k-barton/komodor/archive/komodor-0.3.10b.zip" class="button">
+                           <a href="https://github.com/k-barton/komodor/archive/komodor-0.3.52b.zip" class="button">
                                <i class="icon icon-download"></i>
                                Download Source
                            </a>
@@ -395,17 +396,17 @@ Roxygen comments. This seems to be related to brace counting in UDL
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2018-03-09T14:33:30Z">
-            Updated a day ago
+        <dd title="2018-04-24T10:29:52Z">
+            Updated 12 weeks ago
         </dd>
         
         <dt>
             <i class="icon icon-code-fork"></i>
         </dt>
         <dd>
-            <a href="https://github.com/k-barton/komodor/releases/tag/0.3.10b">
+            <a href="https://github.com/k-barton/komodor/releases/tag/0.3.52b">
                 Version 
-                0.3.10b
+                0.3.52b
                     (pre-release)
             </a>
         </dd>
@@ -415,7 +416,7 @@ Roxygen comments. This seems to be related to brace counting in UDL
         </dt>
         <dd>
             <a href="https://github.com/k-barton/komodor/issues">
-                0 issues
+                11 issues
             </a>
         </dd>
 
@@ -423,7 +424,7 @@ Roxygen comments. This seems to be related to brace counting in UDL
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>1317 downloads</span>
+            <span>1466 downloads</span>
         </dd>
     
         <dt>
