@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Magicalhobo's Macro's | Komodo IDE</title>
+        <title>Smart Tags Auto-completion | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Magicalhobo's Macro's | Komodo IDE" />
+        <meta property="og:title" content="Smart Tags Auto-completion | Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -145,12 +145,12 @@
         <a href="/packages">Packages</a>
     </li>
     <li>
-        <a href="/packages/userscripts">
-            Userscripts
+        <a href="/packages/addons">
+            Addons
         </a>
     </li>
     <li>
-        Magicalhobo's Macro's
+        Smart Tags Auto-completion
     </li>
 </ul>
 
@@ -167,13 +167,161 @@
 
 
     <div id="readme" class="readme user-input">
-    <p>Includes the macro&#39;s:</p>
+    <h1>Smart Tags Auto-completion</h1>
+
+<p>Get more done with less typing, emmet like auto completion for PHP and JavaScript.<br>
+Quickly create if else statements, foreach loops and more.</p>
+
+<h2>Installation</h2>
 
 <ul>
-<li>Duplicate Selection Up/Down</li>
-<li>Search By Selection</li>
-<li>Transpose Selection</li>
+<li>Install addon</li>
+<li>Configure Short Tags (optional)</li>
 </ul>
+
+<h1>Auto-completions</h1>
+
+<p>This addon will provide auto completion for common php tags.<br>
+Also is there support for short-tags, this can be enabled trough the settings.</p>
+
+<h2>PHP tag - <small>(php)</small></h2>
+
+<p>To insert a default php tag, type <code>&lt;?</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;? will expand to:</strong></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/php-tag.gif" alt="preview"></p>
+
+<h2>echo tag - <small>(php)</small></h2>
+
+<p>To instert a echo php tag, type <code>&lt;ec</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;ec will expand to:</strong></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/echo-tag.gif" alt="preview"></p>
+
+<h2>If tag - <small>(php/js)</small></h2>
+
+<p>To insert a if tag, type <code>&lt;if</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;if will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/if-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/if-tag-php-js.gif" alt="preview"></p>
+
+<h2>else tag - <small>(php/js)</small></h2>
+
+<p>To insert a else tag, type <code>&lt;el</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;el will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/esle-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/esle-tag-php-js.gif" alt="preview"></p>
+
+<h2>else if tags - <small>(php/js)</small></h2>
+
+<p>To insert a else tag, type <code>&lt;ei</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;ei will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/else-if-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/else-if-tag-php-js.gif" alt="preview"></p>
+
+<h2>If else tag - <small>(php/js)</small></h2>
+
+<p>To insert a if-else tag, type <code>&lt;il</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;il will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/if-else-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em>  </p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/if-else-tag-php-js.gif" alt="preview"></p>
+
+<h2>Foreach tag - <small>(php/js)</small></h2>
+
+<p>To insert a foreach tag, type <code>&lt;fo</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;fo will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/foreach-tag-html.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/foreach-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/foreach-tag-js.gif" alt="preview"></p>
+
+<h2>Switch tag - <small>(php/js)</small></h2>
+
+<p>To insert a switch tag, type <code>&lt;sw</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;sw will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/switch-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/switch-tag-php-js.gif" alt="preview"></p>
+
+<h2>Case tag - <small>(php/js)</small></h2>
+
+<p>To insert a case tag, type <code>&lt;ca</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;ca will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/case-tag.gif" alt="preview"></p>
+
+<p><em>PHP - sub-language: PHP</em><br>
+<em>PHP - sub-language: JavaScript</em><br>
+<em>JavaScript - sub-language: JavaScript</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/case-tag-php-js.gif" alt="preview"></p>
+
+<h2>Print tag - <small>(php)</small></h2>
+
+<p>To insert a print tag, type <code>&lt;pr</code> and the following snippet will be inserted:</p>
+
+<p><strong>&lt;pr will expand to:</strong><br>
+<em>PHP - sub-language: HTML</em></p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/print-tag.gif" alt="preview"></p>
+
+<h1>CheatSheet</h1>
+
+<p>In the right side pane you will find a cheat sheet so you can easily check witch abbreviations are available.</p>
+
+<p><img src="https://github.com/babobski/Smart-Tags-Auto-completion/raw/master/sidepane.jpg" alt="sidepane"></p>
 
     </div>
 
@@ -211,11 +359,26 @@
 <!-- Start Sidebar -->
 
 <div class="download">
-        <div class="files">
-            <a href="https://github.com/magicalhobo/KomodoMacros/archive/master.zip" class="button big primary">
-                <i class="icon icon-download"></i>
-                Download Source
-            </a>
+        <div class="releases">
+        <!-- release = resource.releases.each_with_index() do |release,k| -->
+            <div class="release  0" id="release-14252855">
+                <div class="files centered">
+                       <div class="assets">
+                                <div>
+                                    <a href="https://github.com/babobski/Smart-Tags-Auto-completion/releases/download/1.1/Smart-Tags-Auto-Completion-1.0.xpi" class="button big primary">
+                                        <i class="icon icon-download"></i>
+                                        Smart-Tags-Auto-Completion-1.0.xpi
+                                    </a>
+                                </div>
+                       </div>
+                        <div class="source">
+                           <a href="https://github.com/babobski/Smart-Tags-Auto-completion/archive/First release of the Smart Tags Auto-completion addon.zip" class="button">
+                               <i class="icon icon-download"></i>
+                               Download Source
+                           </a>
+                        </div>
+                </div>
+            </div>
         </div>
 </div>
         
@@ -227,11 +390,11 @@
             <i class="icon icon-user"></i>
         </dt>
         <dd>
-            <a href="https://github.com/magicalhobo">
-                <span>magicalhobo</span>
+            <a href="https://github.com/babobski">
+                <span>babobski</span>
             </a>
-            <a href="https://github.com/magicalhobo" class="preview">
-                <img src="https://avatars1.githubusercontent.com/u/304341?v=4?s=18">
+            <a href="https://github.com/babobski" class="preview">
+                <img src="https://avatars3.githubusercontent.com/u/3530262?v=4?s=18">
             </a>
         </dd>
         
@@ -240,25 +403,34 @@
             <i class="icon icon-github"></i>
         </dt>
         <dd>
-            <a href="https://github.com/magicalhobo/KomodoMacros">
-                    magicalhobo/KomodoMacros
+            <a href="https://github.com/babobski/Smart-Tags-Auto-completion">
+                    babobski/Smart-Tags-Auto-completion
             </a>
         </dd>
     
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2015-02-22T19:49:47Z">
-            Updated 177 weeks ago
+        <dd title="2018-11-29T10:46:10Z">
+            Updated 7 weeks ago
         </dd>
         
+        <dt>
+            <i class="icon icon-code-fork"></i>
+        </dt>
+        <dd>
+            <a href="https://github.com/babobski/Smart-Tags-Auto-completion/releases/tag/1.1">
+                Version 
+                1.1
+            </a>
+        </dd>
 
         <dt>
             <i class="icon icon-bug"></i>
         </dt>
         <dd>
-            <a href="https://github.com/magicalhobo/KomodoMacros/issues">
-                0 issues
+            <a href="https://github.com/babobski/Smart-Tags-Auto-completion/issues">
+                1 issues
             </a>
         </dd>
 
@@ -266,14 +438,14 @@
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>0 downloads</span>
+            <span>511 downloads</span>
         </dd>
     
         <dt>
             <i class="icon icon-star"></i>
         </dt>
         <dd>
-            <span>2 stars</span>
+            <span>0 stars</span>
         </dd>
     </dl>
 </div>

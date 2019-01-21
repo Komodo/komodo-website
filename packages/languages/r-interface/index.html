@@ -196,26 +196,29 @@ block, function at cursor, or a whole file.</li>
 
 <ul>
 <li>R language including <a href="http://roxygen.org/">Roxygen</a> tags</li>
-<li>R documentation (<em>.Rd</em> files, partially implemented.)</li>
+<li>R documentation (<em>.Rd</em> files, partially implemented. <strong>Help wanted!</strong>)</li>
 <li><a href="https://cran.r-project.org/package=rmarkdown">Rmarkdown</a> 
-(<em>.Rmd</em> files, partially implemented.)</li>
+(<em>.Rmd</em> files, partially implemented.  <strong>Help wanted!</strong>)</li>
 </ul></li>
 <li>Code completion (objects, argument names, list items)</li>
 <li>Syntax checking</li>
-<li>R object browser pane with fully expandable tree allows for inspecting objects&#39; structure including attributes and hidden objects.</li>
+<li>R object browser pane with fully expandable tree allows for inspecting
+objects&#39; structure including attributes and hidden objects.</li>
 <li>Toolbar with commonly used commands</li>
 <li>R help window</li>
 <li>R package manager</li>
 <li>R working directory can be changed from <em>Places</em> pane (in the context menu)</li>
 </ul>
 
-<p>This add-on provides a file type named <strong>“R_extended”</strong> to avoid conflict with Komodo&#39;s 
-built-in R syntax highlighter. Code completion and syntax checking works only with “R_extended” not “R“.</p>
+<p>This add-on provides a file type named <strong>“R_extended”</strong> to avoid conflict with
+Komodo&#39;s built-in R syntax highlighter. Code completion and syntax checking
+works only with “R_extended” not “R”.</p>
 
 <p>No additional R packages are required, however your R installation needs to have
-Tcl capability (by default it does. Check in R with <code>capabilities(&quot;tcltk&quot;)</code>). See also <em>Known issues</em> below.</p>
+Tcl capability (by default it does. In R, check it with <code>capabilities(&quot;tcltk&quot;)</code>).
+See also <em>Known issues</em> below.</p>
 
-<p><strong>Some other, obscure features:</strong></p>
+<p><strong>Other, obscure features:</strong></p>
 
 <ul>
 <li><em><em>Places</em> panel</em>:
@@ -232,11 +235,14 @@ select a command from the context menu.</li>
 <ul>
 <li>hold &quot;Shift&quot; key during the drag start to drop quoted names,<br></li>
 <li>hold &quot;Ctrl&quot; key during the drag start to drop full object names
-(e.g. <code>list$data$column</code>. Non-syntactic names will be backtick-quoted).</li>
+(e.g. <code>list$data$column</code>. Non-syntactic names will be
+backtick-quoted).</li>
 <li>hold both to insert “name()” for functions, “name=” for function 
 arguments.</li>
 </ul></li>
-<li>filter items either by object name or class name (toggle the &quot;filter by&quot; button next to the search box), using regular expressions. Prefix the search term with &quot;~&quot; to filter <em>out</em> matching names.</li>
+<li>filter items either by object name or class name (toggle the &quot;filter by&quot;
+button next to the search box), using regular expressions. Prefix the
+search term with &quot;~&quot; to filter <em>out</em> matching names.</li>
 </ul></li>
 <li><em>R search path</em> box:
 
@@ -248,14 +254,15 @@ arguments.</li>
 <li><em>R help</em> window:
 
 <ul>
-<li>press Ctrl+R to run selected text as R code (or choose command from the 
+<li>press Ctrl+R to run selected text in R (or choose the command from the 
 context menu).</li>
 </ul></li>
-<li>R language help (Shift+F1 while in an <em>R_extended</em> document):
+<li>R language help:
 
 <ul>
-<li>the selected keyword is searched for in the loaded packages. If nothing is 
-found, press Shift+F1 again to search in all packages.</li>
+<li>While in an <em>R_extended</em> document, press Shift+F1 once to search for the 
+selected keyword in the <strong>loaded</strong> packages.
+Press Shift+F1 again to search in <strong>all</strong> packages.</li>
 </ul></li>
 <li>The <em>R tools</em> toolbox has some more or less useful commands:
 
@@ -279,29 +286,34 @@ the current document.</li>
 
 <ul>
 <li> in Komodo: <code>kor.r.evalUserCmd</code> JavaScript function sends a command to R.</li>
-<li> in R: <code>koCmd</code> executes a JavaScript command in Komodo and returns the result 
+<li> in R: <code>koCmd</code> executes a JavaScript command in Komodo and returns the result
 if any.</li>
-<li> For more advances uses, CommonJS module <code>&quot;kor/r&quot;</code> (or <code>kor.r</code> object in the main <code>window</code>) has functions to perform various tasks <em>via</em> R, and the <code>&quot;kor/connector&quot;</code> module has more low level functions for communication between R and Komodo, of which <code>require(&quot;kor/connector&quot;).evalAsync(command, callback)</code> is the most useful.</li>
+<li> For more advances uses, CommonJS module <code>&quot;kor/r&quot;</code> (or <code>kor.r</code> object in the
+main <code>window</code>) has functions to perform various tasks <em>via</em> R, and the
+<code>&quot;kor/connector&quot;</code> module has more low level functions for communication
+between R and Komodo, of which <code>require(&quot;kor/connector&quot;).evalAsync(command,
+callback)</code> is the most useful.</li>
 </ul>
 
 <p><strong>Known issues:</strong></p>
 
 <ul>
-<li>Output from R is displayed in the command output pane only <strong>at the end of 
-operation</strong> (real-time command output will be introduced in version 0.4)</li>
-<li>Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape 
+<li>Output from R is displayed in the command output pane only <strong>at the end of
+operation</strong> (real-time output will be introduced in version 0.4)</li>
+<li>Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape
 key in RGui)</li>
-<li>Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket 
-server and hence break the connection with Komodo. It may also cause R crash 
+<li>On MAC OS X, problems with starting R.app and connection (<strong>Mac testers wanted</strong>)</li>
+<li>Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket
+server and hence break the connection with Komodo. It may also cause R crash
 (it happens sometimes on Windows).</li>
-<li>On Linux, Tk-Gui sometimes does not close properly. It is not recommended to 
+<li>On Linux, Tk-Gui sometimes does not close properly. It is not recommended to
 use it with this add-on.</li>
-<li>Problems with connection with Komodo server in R may cause R not exit 
-properly and need to kill the R process (it happens rarely - perhaps a 
-Windows-specific problem).</li>
-<li>Connection timeout on longer operations: a prompt is shown as if the calculation
-in R has finished and no output is shown. (version &lt; 0.4)</li>
-<li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the 
+<li>Problems with connection with Komodo server in R may cause R not exit properly
+and need to kill the R process (it happens rarely - perhaps a Windows-specific
+problem).</li>
+<li>Connection timeout on longer operations: a prompt is shown as if the
+calculation in R has finished and no output is shown. (version &lt; 0.4)</li>
+<li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the
 colouring dissappears occassionally. There is also some flickering inside
 Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
 </ul>
@@ -396,8 +408,8 @@ Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2018-04-24T10:29:52Z">
-            Updated 12 weeks ago
+        <dd title="2019-01-19T02:17:53Z">
+            Updated 2 days ago
         </dd>
         
         <dt>
@@ -416,7 +428,7 @@ Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
         </dt>
         <dd>
             <a href="https://github.com/k-barton/komodor/issues">
-                11 issues
+                16 issues
             </a>
         </dd>
 
@@ -424,7 +436,7 @@ Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>1466 downloads</span>
+            <span>2565 downloads</span>
         </dd>
     
         <dt>
