@@ -11,12 +11,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <!-- Site Properities -->
-        <title>Zurb Foundation Framework Snippet Collection | Komodo IDE</title>
+        <title>Komodo IDE | Komodo IDE</title>
         <meta name="description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         <meta name="keywords" content="komodo,komodo ide,activestate komodo ide,activestate komodo ide 6,activestate komodo,activestate ide,comodo ide,activestatecomodo,kumodo ide,active state komodo,perl komodo ide,idesoftware,perl ide,python ide,ide python,tcl ide,integrateddevelopment environment,development environment,activetstate,komodolinux,komodo mac" />
         
         <!-- Social Media Properties -->
-        <meta property="og:title" content="Zurb Foundation Framework Snippet Collection | Komodo IDE" />
+        <meta property="og:title" content="Komodo IDE" />
         <meta property="og:type" content="article" />
         <meta property="og:description" content="One IDE, All Your Favourite Languages. Komodo is the professional IDE for major web languages, including Python,PHP, Ruby, Perl, HTML, CSS and JavaScript." />
         
@@ -52,7 +52,7 @@
         <div id="callouts"></div>
 
         <!-- Main Container -->
-        <div id="container" class="container-resource">
+        <div id="container" class="container-index">
             <a name="top"></a>
             <header>
     <div class="outer">
@@ -134,280 +134,19 @@
     </div>
 </header>
 
-            <div id="content" class="sidebar sidebar-left document-resource">
-    <section role="main">
-        <article class="normalize">
+                <div id="content" class="document-index
+                             
+                             
+                             
+                             resources resources_schemes resources_schemes_rm-bergmann--uvdark resources_schemes_rm-bergmann--uvdark_index">
+        <section role="main">
+            <article class="normalize">
+                <meta http-equiv="refresh" content="0; url=/packages/schemes/uv-dark/">
+<link rel="canonical" href="/packages/schemes/uv-dark/" />
 
-<!-- Start Content -->
-
-<ul class="trail">
-    <li>
-        <a href="/packages">Packages</a>
-    </li>
-    <li>
-        <a href="/packages/toolbox">
-            Toolbox
-        </a>
-    </li>
-    <li>
-        Zurb Foundation Framework Snippet Collection
-    </li>
-</ul>
-
-<div class="try-buy-buttons">
-    <div class="inner">
-        <a class="button primary" href="/download">
-            <i class="icon icon-download"></i> Try Komodo IDE
-        </a>
-        <a class="button " href="/pricing">
-            <i class="icon icon-shopping-cart"></i> Buy Komodo IDE
-        </a>
+            </article>
+        </section>
     </div>
-</div>
-
-
-    <div id="readme" class="readme user-input">
-    <pre>Hi!
-
-This simple git repository stores komodo edit snippets i've created in order to make development of the zurb foundation framework easier.
-
-Contents: 
-
-+ Containers & Columns
-- 1_column.komodotool
-
-Usage: double-click the snippet to add it to your page.  You will be prompted to enter one or more variables.  Basically, you're setting up your framework DIV containers.  If you use 1_column, you are saying "I only want my content to be spaced in to one column."  The variable you enter is the width of your ONE column--so you can make it one column wide ("one"), etc.  Up to twelve, I believe.  
-
-You need to use the actual text of the number of columns, because this is how the CSS file is set up by curb.  
-
-Example:
-
-entering "one" will generate: 
-
-<div class="one columns">
-
-</div><!--one columns-->
-
-- 2_columns.komodotool
-
-Usage: same as above.  The difference here is that you're setting up two columns, and there are two variables--the # of columns wide each of your two columns should be.
-
-Example: 
-|  column A is six columns wide  |  column B is 4 columns wide |
-
-You would enter "six" for the first column variable, and "four" for the second column variable. 
-
-Your output, then, is: 
-
-<div class="six columns">
-
-</div>
-<div class="four columns">
-
-</div><!--six & four columns--> 
-
-And this produces in the UI a 10-column wide setup, split into 2 DIV containers, with a 60/40 split of that 10 column width.  
-
-- 3_columns.komodotool
-- 5_columns.komodotool
-- 6_columns.komodotool
-- base_generic_html.komodotool
-
-It is the required <head> section including all CSS file references, <title>, <meta> etc. Then there is a starting container (<div class="container">).  Finally, the container DIV is closed and the included JS files section is included.  Following the JS is the closing </body> and </html> tags.  
-
-- button.komodotool
-
-This one works a little differently than the previous items.  The button setup within Foundation has multiple options, and capitalization is (obviously) important.
-
-You'll be presented with 3 variables; the first is the size of the button--small, medium, or large.  The second is color--blue, white, red, black.  The third is button type--round or radius.
-
-Once you've selected your variables (leave a field blank if you don't want to use that styling option), it dumps in the code.  
-
-Example: I want a small blue button using radius.  Here is my output after entering "small", "blue", and "radius". 
-
-<a href="#" class="small blue button radius">Button »</a>
-
-- centered column.komodotool
-
-Usage is identical to 1_column above, except this snippet adds the 'centered' class.  
-
-- offset.komodotool
-
-Usage is identical to 1_column above, except this snippet has two variables.  The first variable is # of columns for width of this column.  The second variable is your offset-by amount.  So, if you want to have six columns that are offset by two columns, you'd type "six" and "two" respectively.  
-
-Output:
-
-<div class="six columns offset-by-two">
-
-</div><!--six Column offset by two-->
-
-- _container.komodotool
-
-Inserts:
-
-<div class="container">
-
-</div><!--container-->
-
-- _row.komodotool
-
-Inserts: 
-
-<div class="row">
-</div><!--row-->
-
-
-+ Tables
-
-I'm not going to type all of the files out. Here is the usage: 
-
-The 'list01col.komodotool' file adds a one-column table.  Here is the output:
-
-    <table>
-            <thead>
-                    <th>NAME</th>
-
-            </thead>
-
-    </table>
-
-The list02col.komodotool' file inserts a two-column table.  Here is the output: 
-
-    <table>
-            <thead>
-                    <th>NAME</th>
-                    <th>NAME</th>
-            </thead>
-
-    </table>
-
-The list(nn)ColRow.komodotool files give you your rows.  Remember that the 'col' and 'colRow' files are paired--so if you add a two-column table, you need to use the two-column row snippets!
-
-Output (two column row): 
-
-         <tr>
-                <td>DATA</td>
-                <td>DATA</td>
-        </tr>
-
-+ Tabs
-
-This is also straightforward.  Choose the snippet based on how many tabs you want to have.  The snippet is set up to (a) be a contained tab set (you can remove 'contained' if you don't want that styling).  It also sets the first tab to be the active tab.  Again, simple to change.  The hrefs, obviously, point to nowhere.  
-
-Output: 
-
-				<dl class="contained tabs">
-					<dd><a href="#nice1" class="active">NAME</a></dd>
-					<dd><a href="#nice2">NAME</a></dd>
-					<dd><a href="#nice3">NAME</a></dd>
-				</dl></pre>
-    </div>
-
-<div id="comments" class="comments">
-    <hr>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-        var disqus_shortname = 'komodoide';
-
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-</div>
-
-<!-- End Content -->
-
-        </article>
-    </section>
-    <aside class="sidebar-resources normalize">
-        <div id="side-border"></div>
-        <button id="side-collapse" class="button big">
-            <i class="icon icon-chevron-left"></i>
-            <i class="icon icon-chevron-right"></i>
-        </button>
-        <div class="inner">
-<!-- Start Sidebar -->
-
-<div class="download">
-        <div class="files">
-            <a href="https://github.com/mearleycf/zff_kes/archive/master.zip" class="button big primary">
-                <i class="icon icon-download"></i>
-                Download Source
-            </a>
-        </div>
-</div>
-        
-        <div class="spacer"></div>
-
-<div class="details-meta">
-    <dl>
-        <dt>
-            <i class="icon icon-user"></i>
-        </dt>
-        <dd>
-            <a href="https://github.com/mearleycf">
-                <span>mearleycf</span>
-            </a>
-            <a href="https://github.com/mearleycf" class="preview">
-                <img src="https://avatars0.githubusercontent.com/u/1252826?v=4?s=18">
-            </a>
-        </dd>
-        
-
-        <dt>
-            <i class="icon icon-github"></i>
-        </dt>
-        <dd>
-            <a href="https://github.com/mearleycf/zff_kes">
-                    mearleycf/zff_kes
-            </a>
-        </dd>
-    
-        <dt>
-            <i class="icon icon-clock-o"></i>
-        </dt>
-        <dd title="2012-01-09T15:07:08Z">
-            Updated 367 weeks ago
-        </dd>
-        
-
-        <dt>
-            <i class="icon icon-bug"></i>
-        </dt>
-        <dd>
-            <a href="https://github.com/mearleycf/zff_kes/issues">
-                0 issues
-            </a>
-        </dd>
-
-        <dt>
-            <i class="icon icon-cloud-download"></i>
-        </dt>
-        <dd>
-            <span>0 downloads</span>
-        </dd>
-    
-        <dt>
-            <i class="icon icon-star"></i>
-        </dt>
-        <dd>
-            <span>1 stars</span>
-        </dd>
-    </dl>
-</div>
-
-<!-- End Sidebar -->
-        </div>
-    </aside>
-</div>
 
             <div id="footer_push"></div>
         </div>
