@@ -239,7 +239,7 @@ select a command from the context menu.</li>
 <li>hold &quot;Ctrl&quot; key during the drag start to drop full object names
 (e.g. <code>list$data$column</code>. Non-syntactic names will be
 backtick-quoted).</li>
-<li>hold both to insert “name()” for functions, “name=” for function 
+<li>hold &quot;Ctrl+Shift&quot; to insert “name()” for functions, “name=” for function
 arguments.</li>
 </ul></li>
 <li>filter items either by object name or class name (toggle the &quot;filter by&quot;
@@ -297,30 +297,24 @@ between R and Komodo, of which <code>require(&quot;kor/connector&quot;).evalAsyn
 callback)</code> is the most useful.</li>
 </ul>
 
-<p><strong>Known issues:</strong></p>
-
-<ul>
-<li>Output from R is displayed in the command output pane only <strong>at the end of
-operation</strong> (real-time output will be introduced in version 0.4)</li>
-<li>Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape
-key in RGui)</li>
-<li>On MAC OS X, problems with starting R.app and connection (<strong>Mac testers wanted</strong>)</li>
-<li>Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket
-server and hence break the connection with Komodo. It may also cause R crash
-(it happens sometimes on Windows).</li>
-<li>On Linux, Tk-Gui sometimes does not close properly. It is not recommended to
-use it with this add-on.</li>
-<li>Problems with connection with Komodo server in R may cause R not exit properly
-and need to kill the R process (it happens rarely - perhaps a Windows-specific
-problem).</li>
-<li>Connection timeout on longer operations: a prompt is shown as if the
-calculation in R has finished and no output is shown. (version &lt; 0.4)</li>
-<li>Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the
-colouring dissappears occassionally. There is also some flickering inside
-Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
-</ul>
-
-<p><strong><a href="https://github.com/k-barton/komodor/blob/master/improveKo9.md">Hacks for classic Windows styling in Komodo Edit</a></strong></p>
+<p><strong>Known issues:</strong>
+* Output from R is displayed in the command output pane only <strong>at the end of
+  operation</strong> (real-time output will be introduced in version 0.4)
+* Connection timeout on longer operations: a prompt is shown as if the
+  calculation in R has finished and no output is shown (version &lt; 0.4)
+* Calculation can be interrupted only in R window (Ctrl+C in R terminal, Escape
+  key in RGui)
+* <strong>On MAC OS X</strong>: problems with starting R.app and connection with R 
+  (<strong>Mac developers/testers wanted!</strong>)
+* <strong>On Windows</strong>: Executing Rgui&#39;s command “Stop all computations” will also stop R&#39;s socket
+  server and hence break the connection with Komodo. In rare cases, tt may also cause R to crash.
+* <strong>On Linux</strong>: Tk-Gui sometimes does not close properly. It is not recommended to
+  use Tk-Gui with this add-on.
+* In rare cases, there may be problems with connection between R and Komodo server
+  which cause R not to exit properly and it is necessary to manually kill the R process.
+* Syntax highlighting: when R is a sub-language (in Rd or Rmarkdown files), the
+  colouring dissappears occassionally. There is also some flickering inside
+  Roxygen comments. This is due to a bug in Komodo related to brace counting.</p>
 
     </div>
 
@@ -410,8 +404,8 @@ Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
         <dt>
             <i class="icon icon-clock-o"></i>
         </dt>
-        <dd title="2019-03-21T14:05:28Z">
-            Updated 3 weeks ago
+        <dd title="2019-05-08T14:04:50Z">
+            Updated 3 days ago
         </dd>
         
         <dt>
@@ -438,7 +432,7 @@ Roxygen comments. This is due to a bug in Komodo related to brace counting.</li>
             <i class="icon icon-cloud-download"></i>
         </dt>
         <dd>
-            <span>3589 downloads</span>
+            <span>4074 downloads</span>
         </dd>
     
         <dt>
