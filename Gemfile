@@ -9,8 +9,8 @@ gem "middleman-livereload", "~> 3.1.0"
 
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
-gem 'bourbon'
-gem 'neat'
+gem 'bourbon', '~>4.2.6'
+gem 'neat', '>=1.0.0', '<2'
 gem 'font-awesome-middleman', '~> 4.3.0'
 gem 'redcarpet'
 
@@ -30,3 +30,5 @@ gem 'redcarpet'
 gem 'RedCloth'
 gem "mime-types"
 gem 'rubyzip'
+gem 'execjs'
+gem 'therubyracer'
