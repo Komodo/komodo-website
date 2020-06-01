@@ -16,7 +16,7 @@ middleman server
 
 You only need to run `middleman resources` when you want to pull in the latest resources/packages. 
 
-The export stuff for GITHUB is to authenticate witht he API, and only necessary if you intend to run `middleman resources`
+The export stuff for GITHUB is to authenticate with the API, and only necessary if you intend to run `middleman resources`
 
 When running `middleman server` you can access the site from `http://dev.komodoide.com:4567`
 
